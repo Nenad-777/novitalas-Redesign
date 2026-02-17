@@ -107,7 +107,7 @@ export default function SrbijaPage() {
                 </p>
 
                 <p className="mb-6">
-                  U Sjedinjenim Državama politički jaz između konzervativnog i liberalnog bloka prerastao je u duboko institucionalno nepovjerenje. U Francuskoj, rast desnog populizma dovodi u pitanje tradicionalne partijske strukture. U Nemačkoj i Italiji jačaju pokreti koji se oslanjaju na nacionalnu retoriku i kritiku evropskih integracija.
+                  U Sjedinjenim Državama politički jaz između konzervativnog i liberalnog bloka prerastao je u duboko institucionalno nepoverenje. U Francuskoj, rast desnog populizma dovodi u pitanje tradicionalne partijske strukture. U Nemačkoj i Italiji jačaju pokreti koji se oslanjaju na nacionalnu retoriku i kritiku evropskih integracija.
                 </p>
 
                 <p className="mb-6">
