@@ -1,6 +1,7 @@
 /*
- * DESIGN: "Diplomatska Klasika" — Srbija analysis page
- * Updated with dark mode support and new sidebar articles
+ * DESIGN: "Diplomatska Klasika" — Srbija article page
+ * Article: Podeljeno društvo: Srbija u ogledalu globalne polarizacije
+ * Image: Democracy/Autocracy illustration (user uploaded) — kept
  */
 
 import { Link } from "wouter";
@@ -31,7 +32,7 @@ export default function SrbijaPage() {
       >
         <img
           src={IMAGES.democracyAutocracy}
-          alt="Demokratija i autokratija"
+          alt="Podeljeno društvo — polarizacija"
           className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ opacity: isDark ? 0.6 : 0.9 }}
         />
@@ -71,7 +72,7 @@ export default function SrbijaPage() {
                   color: isDark ? "#e0ddd5" : "#111",
                 }}
               >
-                Vučić između demokratije i autokratije: pogled iz Vašington Posta
+                Podeljeno društvo: Srbija u ogledalu globalne polarizacije
               </h1>
 
               <p
@@ -81,7 +82,7 @@ export default function SrbijaPage() {
                   color: isDark ? "#9a978f" : "#555",
                 }}
               >
-                <em>The Washington Post</em> i drugi zapadni mediji u poslednjim analizama ističu Srbiju kao primer države koja balansira između formalnih demokratskih institucija i sve izraženijih autokratskih praksi.
+                Politička podela u savremenim društvima više nije izuzetak, već pravilo. Polarizacija koja oblikuje političku scenu u Sjedinjenim Američkim Državama, Francuskoj, Nemačkoj ili Italiji ima svoje paralele i u Srbiji. U tom smislu, domaća politička dinamika nije izolovani fenomen, već deo šireg globalnog procesa.
               </p>
 
               <div
@@ -91,16 +92,88 @@ export default function SrbijaPage() {
                   color: isDark ? "#c5c2ba" : "#222",
                 }}
               >
+                <h2
+                  className="mt-10 mb-4 text-[24px] md:text-[28px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Desnica i levica u novom obliku
+                </h2>
+
                 <p className="mb-6">
-                  Vašington Post podseća da je Srbija zvanično kandidat za članstvo u Evropskoj uniji, ali se istovremeno sve češće percipira kao država u kojoj se guši pluralizam. Vlast je koncentrisana u rukama jednog čoveka, dok opozicija deluje fragmentisano i medijski marginalizovano.
+                  Tradicionalne podele na levicu i desnicu više ne funkcionišu u klasičnom ideološkom smislu. Umesto ekonomskih modela, centralna linija razdvajanja postaje pitanje identiteta, bezbednosti i kulturnog suvereniteta.
                 </p>
 
                 <p className="mb-6">
-                  U tekstu se ističe Vučićeva strategija „dvostruke igre": održavanje dobrih odnosa sa Zapadom i istovremeno veze sa Moskvom i Pekingom. Upravo ova ambivalentnost postavlja Srbiju u centar geopolitičkog nadmetanja.
+                  U Sjedinjenim Državama politički jaz između konzervativnog i liberalnog bloka prerastao je u duboko institucionalno nepovjerenje. U Francuskoj, rast desnog populizma dovodi u pitanje tradicionalne partijske strukture. U Nemačkoj i Italiji jačaju pokreti koji se oslanjaju na nacionalnu retoriku i kritiku evropskih integracija.
                 </p>
 
                 <p className="mb-6">
-                  Analiza zaključuje da Srbija ostaje u „sivoj zoni" između deklarativne demokratije i funkcionalne autokratije. Za građane, to znači produženu političku neizvesnost, dok međunarodni partneri sve češće postavljaju pitanje: da li će Beograd izabrati jasan kurs, ili će nastaviti da balansira na ivici dveju orbita?
+                  Sličan obrazac prisutan je i u Srbiji, gde se politička scena polarizuje oko pitanja državnog identiteta, odnosa prema Zapadu i Rusiji, kao i uloge međunarodnih institucija.
+                </p>
+
+                <h2
+                  className="mt-10 mb-4 text-[24px] md:text-[28px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Institucije pod pritiskom
+                </h2>
+
+                <p className="mb-6">
+                  Jedan od ključnih pokazatelja polarizacije jeste nivo poverenja u institucije. U mnogim zapadnim demokratijama poverenje u medije, parlament i pravosuđe beleži pad. Srbija u tom smislu ne odstupa od globalnog trenda.
+                </p>
+
+                <p className="mb-6">
+                  Kada institucionalno poverenje oslabi, politička borba prelazi sa programskih razlika na borbu za legitimitet samog sistema.
+                </p>
+
+                <h2
+                  className="mt-10 mb-4 text-[24px] md:text-[28px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Spoljni uticaji i unutrašnje podele
+                </h2>
+
+                <p className="mb-6">
+                  U uslovima pojačanih geopolitičkih tenzija, unutrašnje političke podele postaju podložnije spoljnim interpretacijama. Srbija, zbog svog položaja između evropskih integracija i tradicionalnih veza sa Rusijom, često se nalazi u fokusu međunarodnih analiza.
+                </p>
+
+                <p className="mb-6">
+                  Međutim, suštinsko pitanje nije da li postoji spoljni uticaj, već da li domaće društvo poseduje dovoljno institucionalne stabilnosti da apsorbuje spoljne pritiske bez produbljivanja unutrašnjih podela.
+                </p>
+
+                <h2
+                  className="mt-10 mb-4 text-[24px] md:text-[28px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Polarizacija kao globalni simptom
+                </h2>
+
+                <p className="mb-6">
+                  Važno je primetiti da polarizacija nije samo politički proces. Ona je društveni i kulturni fenomen. Digitalne platforme, fragmentacija medijskog prostora i algoritamska distribucija sadržaja dodatno produbljuju razlike.
+                </p>
+
+                <p className="mb-6">
+                  U tom kontekstu Srbija nije izuzetak, već deo šire slike u kojoj su društva suočena sa izazovom očuvanja političkog pluralizma uz istovremeno očuvanje institucionalne stabilnosti.
+                </p>
+
+                <p className="mb-6">
+                  Srbija se danas može posmatrati kao ogledalo globalne tranzicije političkih sistema. Podela na desnicu i levicu više nije samo ideološka, već identitetska i geopolitička. Razumevanje tog procesa zahteva komparativni pogled.
+                </p>
+
+                <p className="mb-6">
+                  U svetu u kojem se političke ravnoteže ubrzano menjaju, sposobnost društva da održi institucionalni okvir i dijalog postaje ključna mera stabilnosti.
                 </p>
               </div>
 

@@ -226,7 +226,7 @@ export default function Home() {
                           }}
                         >
                           <Link href="/srbija" className="headline-link">
-                            Vučić između demokratije i autokratije: pogled iz Vašington Posta
+                            Podeljeno društvo: Srbija u ogledalu globalne polarizacije
                           </Link>
                         </h3>
                         <p
@@ -236,7 +236,7 @@ export default function Home() {
                             color: isDark ? "#7a7872" : "#666",
                           }}
                         >
-                          Srbija balansira između formalnih demokratskih institucija i sve izraženijih autokratskih praksi.
+                          Politička podela u savremenim društvima više nije izuzetak, već pravilo. Srbija kao ogledalo globalne tranzicije.
                         </p>
                       </div>
                       <img
