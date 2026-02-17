@@ -82,6 +82,63 @@
   --sidebar-accent-foreground: oklch(0.13 0.01 60);
   --sidebar-border: oklch(0.90 0.005 60);
   --sidebar-ring: oklch(0.35 0.12 25);
+
+  /* Novi Talas custom vars */
+  --nt-header-bg: #d6e8f0;
+  --nt-header-text: #1a2a3a;
+  --nt-header-accent: #8B0000;
+  --nt-body-bg: #ffffff;
+  --nt-body-text: #111111;
+  --nt-body-muted: #555555;
+  --nt-divider: #e5e5e5;
+  --nt-footer-bg: #0f1217;
+  --nt-footer-text: #c9c6cf;
+}
+
+.dark {
+  --primary: oklch(0.55 0.10 25);
+  --primary-foreground: oklch(0.98 0 0);
+  --sidebar-primary: oklch(0.55 0.10 25);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --background: oklch(0.13 0.005 250);
+  --foreground: oklch(0.90 0.005 60);
+  --card: oklch(0.17 0.006 250);
+  --card-foreground: oklch(0.90 0.005 60);
+  --popover: oklch(0.17 0.006 250);
+  --popover-foreground: oklch(0.90 0.005 60);
+  --secondary: oklch(0.22 0.006 250);
+  --secondary-foreground: oklch(0.75 0.005 60);
+  --muted: oklch(0.25 0.006 250);
+  --muted-foreground: oklch(0.65 0.01 250);
+  --accent: oklch(0.25 0.006 250);
+  --accent-foreground: oklch(0.95 0.005 60);
+  --destructive: oklch(0.65 0.18 22);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.55 0.10 25);
+  --chart-1: oklch(0.55 0.10 25);
+  --chart-2: oklch(0.50 0.08 25);
+  --chart-3: oklch(0.45 0.06 25);
+  --chart-4: oklch(0.40 0.04 25);
+  --chart-5: oklch(0.35 0.02 25);
+  --sidebar: oklch(0.17 0.006 250);
+  --sidebar-foreground: oklch(0.90 0.005 60);
+  --sidebar-accent: oklch(0.25 0.006 250);
+  --sidebar-accent-foreground: oklch(0.98 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.55 0.10 25);
+
+  /* Dark mode Novi Talas vars */
+  --nt-header-bg: #0d0d0f;
+  --nt-header-text: #c9c6cf;
+  --nt-header-accent: #d9bf7a;
+  --nt-body-bg: #111318;
+  --nt-body-text: #e0ddd5;
+  --nt-body-muted: #9a978f;
+  --nt-divider: #2a2a2e;
+  --nt-footer-bg: #0a0a0c;
+  --nt-footer-text: #8a8790;
 }
 
 @layer base {
@@ -153,6 +210,9 @@
     text-transform: uppercase;
     color: #8B0000;
   }
+  .dark .kicker {
+    color: #d9bf7a;
+  }
 
   /* Headline links */
   .headline-link {
@@ -163,11 +223,14 @@
   .headline-link:hover {
     color: #8B0000;
   }
+  .dark .headline-link:hover {
+    color: #d9bf7a;
+  }
 
   /* Thin divider lines */
   .editorial-divider {
     border: none;
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid var(--nt-divider);
     margin: 0;
   }
 

@@ -5,14 +5,16 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
-import Article from "./pages/Article";
+import GeopolitikaArticle from "./pages/GeopolitikaArticle";
+import ObavestajniArticle from "./pages/ObavestajniArticle";
 import SrbijaPage from "./pages/SrbijaPage";
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
-      <Route path={"/geopolitika-minhen-samit"} component={Article} />
+      <Route path={"/geopolitika/nova-bezbednosna-arhitektura"} component={GeopolitikaArticle} />
+      <Route path={"/obavestajni-izvori/rat-senki"} component={ObavestajniArticle} />
       <Route path={"/srbija"} component={SrbijaPage} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
@@ -23,7 +25,7 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider defaultTheme="light">
+      <ThemeProvider defaultTheme="light" switchable>
         <TooltipProvider>
           <Toaster />
           <Router />

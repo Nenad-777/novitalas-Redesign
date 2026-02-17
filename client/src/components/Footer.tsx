@@ -1,8 +1,7 @@
 /*
  * DESIGN: "Diplomatska Klasika" — Authoritative, minimal footer
- * - Dark background matching header
- * - Centered copyright with motto
- * - Thin top border
+ * Dark background, centered copyright with motto
+ * Removed: Kultura, Naša planeta
  */
 
 import { Link } from "wouter";
@@ -30,7 +29,7 @@ export default function Footer() {
 
           {/* Navigation */}
           <nav className="flex flex-wrap items-center justify-center gap-5">
-            {["Geopolitika", "Obaveštajni izvori", "Kultura", "Srbija", "Naša planeta"].map(
+            {["Geopolitika", "Obaveštajni izvori", "Srbija"].map(
               (item) => (
                 <span
                   key={item}
@@ -58,7 +57,7 @@ export default function Footer() {
           className="text-center text-[#6b6872] text-[12px]"
           style={{ fontFamily: "'Source Sans 3', sans-serif" }}
         >
-          © {new Date().getFullYear()} NOVI TALAS — Sva prava zadržana
+          &copy; {new Date().getFullYear()} NOVI TALAS &mdash; Sva prava zadržana
         </p>
       </div>
     </footer>
