@@ -6,6 +6,12 @@
 
 import { Link } from "wouter";
 
+const footerNav = [
+  { label: "Geopolitika", href: "/geopolitika/nova-bezbednosna-arhitektura" },
+  { label: "Obaveštajni izvori", href: "/obavestajni-izvori/rat-senki" },
+  { label: "Srbija", href: "/srbija" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-[#0f1217] border-t border-white/[0.08]">
@@ -29,17 +35,16 @@ export default function Footer() {
 
           {/* Navigation */}
           <nav className="flex flex-wrap items-center justify-center gap-5">
-            {["Geopolitika", "Obaveštajni izvori", "Srbija"].map(
-              (item) => (
-                <span
-                  key={item}
-                  className="text-[#8a8790] text-[11px] font-semibold tracking-[0.1em] uppercase hover:text-white transition-colors duration-200 cursor-pointer"
-                  style={{ fontFamily: "'Source Sans 3', sans-serif" }}
-                >
-                  {item}
-                </span>
-              )
-            )}
+            {footerNav.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="text-[#8a8790] text-[11px] font-semibold tracking-[0.1em] uppercase hover:text-white transition-colors duration-200 no-underline"
+                style={{ fontFamily: "'Source Sans 3', sans-serif" }}
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
           {/* Motto */}
