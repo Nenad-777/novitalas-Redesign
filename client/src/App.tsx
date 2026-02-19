@@ -8,11 +8,13 @@ import Home from "./pages/Home";
 import GeopolitikaArticle from "./pages/GeopolitikaArticle";
 import ObavestajniArticle from "./pages/ObavestajniArticle";
 import SrbijaPage from "./pages/SrbijaPage";
+import GeopolitikaIran from "@/pages/GeopolitikaIran";
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/geopolitika/iran"} component={GeopolitikaIran} />
       <Route path={"/geopolitika/nova-bezbednosna-arhitektura"} component={GeopolitikaArticle} />
       <Route path={"/obavestajni-izvori/rat-senki"} component={ObavestajniArticle} />
       <Route path={"/srbija"} component={SrbijaPage} />
