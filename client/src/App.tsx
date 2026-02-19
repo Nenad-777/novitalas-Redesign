@@ -7,10 +7,10 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 
 import Home from "./pages/Home";
 import GeopolitikaArticle from "./pages/GeopolitikaArticle";
-import ObavestajniArticle from "./pages/ObavestajniArticle";
-import SrbijaPage from "./pages/SrbijaPage";
 import GeopolitikaIran from "./pages/GeopolitikaIran";
 import GeopolitikaIndex from "./pages/GeopolitikaIndex";
+import ObavestajniArticle from "./pages/ObavestajniArticle";
+import SrbijaPage from "./pages/SrbijaPage";
 
 function Router() {
   return (
@@ -18,20 +18,33 @@ function Router() {
       <Route path={"/"} component={Home} />
 
       {/* Geopolitika */}
+      <Route path={"/geopolitika"} component={GeopolitikaIndex} />
+      <Route path={"/geopolitika/"} component={GeopolitikaIndex} />
+
       <Route path={"/geopolitika/iran"} component={GeopolitikaIran} />
+      <Route path={"/geopolitika/iran/"} component={GeopolitikaIran} />
+
       <Route
         path={"/geopolitika/nova-bezbednosna-arhitektura"}
         component={GeopolitikaArticle}
       />
-      <Route path={"/geopolitika"} component={GeopolitikaIndex} />
-      <Route path={"/geopolitika/"} component={GeopolitikaIndex} />
+      <Route
+        path={"/geopolitika/nova-bezbednosna-arhitektura/"}
+        component={GeopolitikaArticle}
+      />
 
-      {/* Ostale rubrike */}
+      {/* Ostalo */}
       <Route
         path={"/obavestajni-izvori/rat-senki"}
         component={ObavestajniArticle}
       />
+      <Route
+        path={"/obavestajni-izvori/rat-senki/"}
+        component={ObavestajniArticle}
+      />
+
       <Route path={"/srbija"} component={SrbijaPage} />
+      <Route path={"/srbija/"} component={SrbijaPage} />
 
       {/* Fallback */}
       <Route path={"/404"} component={NotFound} />
@@ -40,7 +53,7 @@ function Router() {
   );
 }
 
-function App() {
+export default function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light" switchable>
@@ -52,5 +65,3 @@ function App() {
     </ErrorBoundary>
   );
 }
-
-export default App;
