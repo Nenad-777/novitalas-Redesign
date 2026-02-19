@@ -148,7 +148,8 @@ export default function Home() {
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  <Link href="/geopolitika" className="headline-link">
+                  {/* ✅ FIX: headline should go to the FULL new article */}
+                  <Link href="/geopolitika/iran" className="headline-link">
                     Vašington u fazi odluke: američka vojska spremna za mogući udar
                     na Iran
                   </Link>
@@ -167,19 +168,22 @@ export default function Home() {
                 </p>
 
                 <figure className="mb-0">
-                  <div
-                    className="border"
-                    style={{
-                      borderColor: isDark ? "#2a2a2e" : "#eee",
-                      backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
-                    }}
-                  >
-                    <img
-                      src={IMAGES.carrier}
-                      alt="Američki nosač aviona u operativnoj misiji u Persijskom zalivu"
-                      className="w-full h-[280px] md:h-[380px] object-cover object-center block"
-                    />
-                  </div>
+                  {/* ✅ FIX: make image clickable too */}
+                  <Link href="/geopolitika/iran" className="block no-underline">
+                    <div
+                      className="border"
+                      style={{
+                        borderColor: isDark ? "#2a2a2e" : "#eee",
+                        backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                      }}
+                    >
+                      <img
+                        src={IMAGES.carrier}
+                        alt="Američki nosač aviona u operativnoj misiji u Persijskom zalivu"
+                        className="w-full h-[280px] md:h-[380px] object-cover object-center block"
+                      />
+                    </div>
+                  </Link>
                 </figure>
               </article>
             </FadeIn>
