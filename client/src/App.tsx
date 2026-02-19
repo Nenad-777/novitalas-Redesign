@@ -9,17 +9,24 @@ import GeopolitikaArticle from "./pages/GeopolitikaArticle";
 import ObavestajniArticle from "./pages/ObavestajniArticle";
 import SrbijaPage from "./pages/SrbijaPage";
 import GeopolitikaIran from "@/pages/GeopolitikaIran";
+import GeopolitikaIndex from "@/pages/GeopolitikaIndex";
 
 function Router() {
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/geopolitika/iran"} component={GeopolitikaIran} />
-      <Route path={"/geopolitika/nova-bezbednosna-arhitektura"} component={GeopolitikaArticle} />
-      <Route path={"/obavestajni-izvori/rat-senki"} component={ObavestajniArticle} />
-      <Route path={"/srbija"} component={SrbijaPage} />
-      <Route path={"/404"} component={NotFound} />
-      <Route component={NotFound} />
+    <Switch
+     <Switch>
+  <Route path={"/"} component={Home} />
+
+  <Route path={"/geopolitika/iran"} component={GeopolitikaIran} />
+  <Route path={"/geopolitika/nova-bezbednosna-arhitektura"} component={GeopolitikaArticle} />
+  <Route path={"/geopolitika"} component={GeopolitikaIndex} />
+
+  <Route path={"/obavestajni-izvori/rat-senki"} component={ObavestajniArticle} />
+  <Route path={"/srbija"} component={SrbijaPage} />
+
+  <Route path={"/404"} component={NotFound} />
+  <Route component={NotFound} />
+</Switch>
     </Switch>
   );
 }
