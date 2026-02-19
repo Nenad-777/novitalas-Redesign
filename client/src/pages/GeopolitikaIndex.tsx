@@ -49,7 +49,7 @@ export default function GeopolitikaIndex() {
                 color: isDark ? "#9a978f" : "#555",
               }}
             >
-              Najnovije i arhiva — oba teksta ostaju trajno dostupna u rubrici.
+              Najnovije i arhiva
             </p>
           </div>
 
@@ -79,7 +79,7 @@ export default function GeopolitikaIndex() {
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  Geopolitika Irana: zašto se linije sukoba šire
+                  Vašington u fazi odluke: američka vojska spremna za mogući udar na Iran
                 </h2>
 
                 <p
