@@ -4,29 +4,37 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+
 import Home from "./pages/Home";
 import GeopolitikaArticle from "./pages/GeopolitikaArticle";
 import ObavestajniArticle from "./pages/ObavestajniArticle";
 import SrbijaPage from "./pages/SrbijaPage";
-import GeopolitikaIran from "@/pages/GeopolitikaIran";
-import GeopolitikaIndex from "@/pages/GeopolitikaIndex";
+import GeopolitikaIran from "./pages/GeopolitikaIran";
+import GeopolitikaIndex from "./pages/GeopolitikaIndex";
 
 function Router() {
   return (
-    <Switch
-     <Switch>
-  <Route path={"/"} component={Home} />
+    <Switch>
+      <Route path={"/"} component={Home} />
 
-  <Route path={"/geopolitika/iran"} component={GeopolitikaIran} />
-  <Route path={"/geopolitika/nova-bezbednosna-arhitektura"} component={GeopolitikaArticle} />
-  <Route path={"/geopolitika"} component={GeopolitikaIndex} />
+      {/* Geopolitika */}
+      <Route path={"/geopolitika/iran"} component={GeopolitikaIran} />
+      <Route
+        path={"/geopolitika/nova-bezbednosna-arhitektura"}
+        component={GeopolitikaArticle}
+      />
+      <Route path={"/geopolitika"} component={GeopolitikaIndex} />
 
-  <Route path={"/obavestajni-izvori/rat-senki"} component={ObavestajniArticle} />
-  <Route path={"/srbija"} component={SrbijaPage} />
+      {/* Ostale rubrike */}
+      <Route
+        path={"/obavestajni-izvori/rat-senki"}
+        component={ObavestajniArticle}
+      />
+      <Route path={"/srbija"} component={SrbijaPage} />
 
-  <Route path={"/404"} component={NotFound} />
-  <Route component={NotFound} />
-</Switch>
+      {/* Fallback */}
+      <Route path={"/404"} component={NotFound} />
+      <Route component={NotFound} />
     </Switch>
   );
 }
