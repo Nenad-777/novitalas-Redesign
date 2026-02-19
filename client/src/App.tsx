@@ -24,6 +24,7 @@ function Router() {
         component={GeopolitikaArticle}
       />
       <Route path={"/geopolitika"} component={GeopolitikaIndex} />
+      <Route path={"/geopolitika/"} component={GeopolitikaIndex} />
 
       {/* Ostale rubrike */}
       <Route
