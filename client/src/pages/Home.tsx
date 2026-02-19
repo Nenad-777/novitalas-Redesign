@@ -14,9 +14,11 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
   hero: "https://private-us-east-1.manuscdn.com/sessionFile/6SqA6Ltpws9fwNQXZCXsiu/sandbox/VqzKWVZr2iULAAnWvkb1OW-img-1_1771300001000_na1fn_bm92aS10YWxhcy1oZXJv.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvNlNxQTZMdHB3czlmd05RWFpDWHNpdS9zYW5kYm94L1ZxektXVlpyMmlVTEFBbld2a2IxT1ctaW1nLTFfMTc3MTMwMDAwMTAwMF9uYTFmbl9ibTkyYVMxMFlXeGhjeTFvWlhKdi5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=vickhcvz4~YbTDCmOZhcH-ccU4yQa-vO1nYi1RLKmWenh~BaokXfByyTseqceDOn1X95WCs8wu7sSrWuIbTkJ6fguujMipq08NjRX1CToVLGeSsLojJufY422QdYrD9T1z6SshXDh~iExPwB4wgbaVzdMdV90Rr1KKKXfyMjDMM3CyteXDVgswhyX45ttKg8vzRwBDfhSUQC4bb82yVt7rMLjZxh9~1GCxqdL3mee1F3-~YRdsnOihaF0dNZr5bXlVerTFJSqX5Rc1IkCAb2fF0~1BeJ5HplAhZyX1BsckBjaIROXZaXBMebgoAgcgDaoVQ~fPIDb9NceHutx99iew__",
-  europeMap: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/IUipaYMrvJEhhnzZ.png",
-  intelligenceReport: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/acjhxldMBPFDSKKa.png",
-  democracyAutocracy: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/qZixjPORsEGCuRBV.png",
+  carrier: "/carrier.jpg",
+  intelligenceReport:
+    "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/acjhxldMBPFDSKKa.png",
+  democracyAutocracy:
+    "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/qZixjPORsEGCuRBV.png",
 };
 
 // Simple fade-in on scroll hook
@@ -41,7 +43,13 @@ function useFadeIn() {
   return ref;
 }
 
-function FadeIn({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+function FadeIn({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   const ref = useFadeIn();
   return (
     <div
@@ -103,7 +111,10 @@ export default function Home() {
       </section>
 
       {/* Main content */}
-      <main className="py-12 md:py-16 flex-1" style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}>
+      <main
+        className="py-12 md:py-16 flex-1"
+        style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
+      >
         <div className="max-w-[1200px] mx-auto px-5">
           {/* Issue label */}
           <FadeIn>
@@ -117,7 +128,10 @@ export default function Home() {
               >
                 Februar 2026
               </span>
-              <span className="flex-1 h-px" style={{ backgroundColor: isDark ? "#2a2a2e" : "#e5e5e5" }} />
+              <span
+                className="flex-1 h-px"
+                style={{ backgroundColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
+              />
             </div>
           </FadeIn>
 
@@ -134,11 +148,9 @@ export default function Home() {
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  <Link
-                    href="/geopolitika/nova-bezbednosna-arhitektura"
-                    className="headline-link"
-                  >
-                    Nova bezbednosna arhitektura Evrope: da li se rađa kontinent tvrde moći?
+                  <Link href="/geopolitika" className="headline-link">
+                    Vašington u fazi odluke: američka vojska spremna za mogući udar
+                    na Iran
                   </Link>
                 </h1>
                 <p
@@ -148,7 +160,10 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Evropa se nalazi u trenutku strateške transformacije. Proces koji je započeo kao reakcija na rat u Ukrajini prerasta u dubinsku rekonstrukciju bezbednosnog identiteta kontinenta.
+                  SAD su rasporedile dodatne vazdušne i pomorske kapacitete na
+                  Bliskom istoku, dok predsednik Trump još nije doneo konačnu odluku.
+                  Potencijalna eskalacija u zoni Ormuskog moreuza otvara energetski i
+                  bezbednosni rizik i za Evropu.
                 </p>
 
                 <figure className="mb-0">
@@ -160,8 +175,8 @@ export default function Home() {
                     }}
                   >
                     <img
-                      src={IMAGES.europeMap}
-                      alt="Mapa Evrope — bezbednosna arhitektura"
+                      src={IMAGES.carrier}
+                      alt="Američki nosač aviona u operativnoj misiji u Persijskom zalivu"
                       className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                     />
                   </div>
@@ -185,8 +200,12 @@ export default function Home() {
                             color: isDark ? "#e0ddd5" : "#111",
                           }}
                         >
-                          <Link href="/obavestajni-izvori/rat-senki" className="headline-link">
-                            Rat senki: povratak obaveštajnih službi u središte geopolitike
+                          <Link
+                            href="/obavestajni-izvori/rat-senki"
+                            className="headline-link"
+                          >
+                            Rat senki: povratak obaveštajnih službi u središte
+                            geopolitike
                           </Link>
                         </h3>
                         <p
@@ -196,7 +215,8 @@ export default function Home() {
                             color: isDark ? "#7a7872" : "#666",
                           }}
                         >
-                          Sajber operacije, uticajne kampanje i sabotaže infrastrukture postale su deo svakodnevnog arsenala država.
+                          Sajber operacije, uticajne kampanje i sabotaže infrastrukture
+                          postale su deo svakodnevnog arsenala država.
                         </p>
                       </div>
                       <img
@@ -236,7 +256,8 @@ export default function Home() {
                             color: isDark ? "#7a7872" : "#666",
                           }}
                         >
-                          Politička podela u savremenim društvima više nije izuzetak, već pravilo. Srbija kao ogledalo globalne tranzicije.
+                          Politička podela u savremenim društvima više nije izuzetak,
+                          već pravilo. Srbija kao ogledalo globalne tranzicije.
                         </p>
                       </div>
                       <img
@@ -272,7 +293,8 @@ export default function Home() {
                   className="text-white/70 text-[16px] max-w-[560px] mx-auto mb-6"
                   style={{ fontFamily: "'Crimson Pro', serif" }}
                 >
-                  Pratite Novi talas za ekskluzivne analize iz oblasti geopolitike i bezbednosti.
+                  Pratite Novi talas za ekskluzivne analize iz oblasti geopolitike i
+                  bezbednosti.
                 </p>
                 <span
                   className="inline-block bg-[#8B0000] text-white text-[12px] font-bold tracking-[0.12em] uppercase px-8 py-3 hover:bg-[#6B0000] transition-colors duration-200"
