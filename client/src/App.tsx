@@ -22,19 +22,36 @@ function Router() {
 
       {/* Geopolitika */}
       <Route path="/geopolitika/iran" component={GeopolitikaIran} />
+      <Route path="/geopolitika/iran/" component={GeopolitikaIran} />
+
       <Route
         path="/geopolitika/nova-bezbednosna-arhitektura"
         component={GeopolitikaArticle}
       />
+      <Route
+        path="/geopolitika/nova-bezbednosna-arhitektura/"
+        component={GeopolitikaArticle}
+      />
+
       <Route path="/geopolitika" component={GeopolitikaIndex} />
+      <Route path="/geopolitika/" component={GeopolitikaIndex} />
 
       {/* Obaveštajni izvori */}
-      <Route path="/obavestajni-izvori/rat-senki" component={ObavestajniArticle} />
-      {/* Ako želiš rubriku listing (da /obavestajni-izvori ne bude 404), moraš da imaš i tu stranu: */}
-      {/* <Route path="/obavestajni-izvori" component={ObavestajniIndex} /> */}
+      <Route path="/obavestajni-izvori" component={ObavestajniArticle} />
+      <Route path="/obavestajni-izvori/" component={ObavestajniArticle} />
+
+      <Route
+        path="/obavestajni-izvori/rat-senki"
+        component={ObavestajniArticle}
+      />
+      <Route
+        path="/obavestajni-izvori/rat-senki/"
+        component={ObavestajniArticle}
+      />
 
       {/* Srbija */}
       <Route path="/srbija" component={SrbijaPage} />
+      <Route path="/srbija/" component={SrbijaPage} />
 
       {/* 404 */}
       <Route path="/404" component={NotFound} />
