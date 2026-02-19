@@ -109,7 +109,7 @@ export default function GeopolitikaArticle() {
               značajan deo svetske trgovine naftom.
             </p>
 
-            {/* KOMENTAR */}
+            
             <h2
               className="mt-10 mb-4 text-[24px] md:text-[28px] font-bold leading-[1.2]"
               style={{
@@ -117,7 +117,7 @@ export default function GeopolitikaArticle() {
                 color: isDark ? "#e0ddd5" : "#111",
               }}
             >
-              Komentar
+              
             </h2>
 
             <p className="mb-6">
