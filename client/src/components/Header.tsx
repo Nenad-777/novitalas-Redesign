@@ -11,8 +11,8 @@ import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const navItems = [
-  { label: "Geopolitika", href: "/geopolitika/nova-bezbednosna-arhitektura" },
-  { label: "Obaveštajni izvori", href: "/obavestajni-izvori/rat-senki" },
+  { label: "Geopolitika", href: "/geopolitika" },
+  { label: "Obaveštajni izvori", href: "/obavestajni-izvori" },
   { label: "Srbija", href: "/srbija" },
 ];
 
