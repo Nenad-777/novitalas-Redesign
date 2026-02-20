@@ -78,6 +78,48 @@ export default function ObavestajniArticle() {
           {/* Article body */}
           <div
             className="text-[18px] md:text-[19px] leading-[1.75]"
+{/* Dnevni signal */}
+<div
+  className="mb-10 p-5 md:p-6 border"
+  style={{
+    borderColor: isDark ? "#2a2a2e" : "#e6e6e6",
+    backgroundColor: isDark ? "#151820" : "#fafafa",
+  }}
+>
+  <div
+    className="flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.12em] mb-3"
+    style={{
+      fontFamily: "'Source Sans 3', sans-serif",
+      color: isDark ? "#9a978f" : "#666",
+    }}
+  >
+    <span>Obaveštajni izvori</span>
+    <span>&bull;</span>
+    <span>20. februar 2026</span>
+  </div>
+
+  <h2
+    className="mb-3 text-[22px] md:text-[26px] font-bold leading-[1.2]"
+    style={{
+      fontFamily: "'Playfair Display', serif",
+      color: isDark ? "#e0ddd5" : "#111",
+    }}
+  >
+    Evropske obaveštajne službe skeptične: kraj rata u Ukrajini malo verovatan u 2026.
+  </h2>
+
+  <p className="mb-4">
+    Prema procenama vodećih evropskih obaveštajnih struktura, rat u Ukrajini verovatno neće biti okončan tokom 2026. godine, uprkos intenziviranju diplomatskih kontakata. Procena se zasniva na uverenju da Moskva trenutne pregovore posmatra pre svega kao taktički instrument — način da se konsoliduju pozicije i testira jedinstvo Zapada, a ne kao put ka trajnom kompromisu.
+  </p>
+
+  <p className="mb-4">
+    Čak i u scenariju formalnog prekida vatre, ključna pitanja ostaju otvorena: teritorijalni status, bezbednosne garancije i politički okvir budućeg poretka. U evropskim prestonicama sve češće se razmatra mogućnost dugotrajnog „zamrznutog“ konflikta koji bi oblikovao bezbednosnu i ekonomsku arhitekturu kontinenta godinama unapred.
+  </p>
+
+  <p className="mb-0">
+    <span className="font-semibold">Komentar:</span> Ovakve procene imaju posebnu težinu jer ne predstavljaju medijsku interpretaciju, već radne bezbednosne analize. Ako 2026. ne donese preokret, Evropa će ući u novu fazu strateškog prilagođavanja — uz povećane vojne budžete, dugoročnu energetsku disciplinu i produženu političku polarizaciju, dok „rat senki“ ostaje trajna pozadina globalne ravnoteže moći.
+  </p>
+</div>
             style={{
               fontFamily: "'Crimson Pro', serif",
               color: isDark ? "#c5c2ba" : "#222",
