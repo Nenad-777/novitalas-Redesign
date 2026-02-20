@@ -10,7 +10,8 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
-  intelligenceReport: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/acjhxldMBPFDSKKa.png",
+  intelligenceReport:
+    "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/acjhxldMBPFDSKKa.png",
 };
 
 export default function ObavestajniArticle() {
@@ -24,7 +25,10 @@ export default function ObavestajniArticle() {
     >
       <Header />
 
-      <main className="py-12 md:py-16 flex-1" style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}>
+      <main
+        className="py-12 md:py-16 flex-1"
+        style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
+      >
         <article className="max-w-[760px] mx-auto px-5">
           {/* Kicker */}
           <span className="kicker">Obaveštajni izvori</span>
@@ -78,64 +82,88 @@ export default function ObavestajniArticle() {
           {/* Article body */}
           <div
             className="text-[18px] md:text-[19px] leading-[1.75]"
-{/* Dnevni signal */}
-<div
-  className="mb-10 p-5 md:p-6 border"
-  style={{
-    borderColor: isDark ? "#2a2a2e" : "#e6e6e6",
-    backgroundColor: isDark ? "#151820" : "#fafafa",
-  }}
->
-  <div
-    className="flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.12em] mb-3"
-    style={{
-      fontFamily: "'Source Sans 3', sans-serif",
-      color: isDark ? "#9a978f" : "#666",
-    }}
-  >
-    <span>Obaveštajni izvori</span>
-    <span>&bull;</span>
-    <span>20. februar 2026</span>
-  </div>
-
-  <h2
-    className="mb-3 text-[22px] md:text-[26px] font-bold leading-[1.2]"
-    style={{
-      fontFamily: "'Playfair Display', serif",
-      color: isDark ? "#e0ddd5" : "#111",
-    }}
-  >
-    Evropske obaveštajne službe skeptične: kraj rata u Ukrajini malo verovatan u 2026.
-  </h2>
-
-  <p className="mb-4">
-    Prema procenama vodećih evropskih obaveštajnih struktura, rat u Ukrajini verovatno neće biti okončan tokom 2026. godine, uprkos intenziviranju diplomatskih kontakata. Procena se zasniva na uverenju da Moskva trenutne pregovore posmatra pre svega kao taktički instrument — način da se konsoliduju pozicije i testira jedinstvo Zapada, a ne kao put ka trajnom kompromisu.
-  </p>
-
-  <p className="mb-4">
-    Čak i u scenariju formalnog prekida vatre, ključna pitanja ostaju otvorena: teritorijalni status, bezbednosne garancije i politički okvir budućeg poretka. U evropskim prestonicama sve češće se razmatra mogućnost dugotrajnog „zamrznutog“ konflikta koji bi oblikovao bezbednosnu i ekonomsku arhitekturu kontinenta godinama unapred.
-  </p>
-
-  <p className="mb-0">
-    <span className="font-semibold">Komentar:</span> Ovakve procene imaju posebnu težinu jer ne predstavljaju medijsku interpretaciju, već radne bezbednosne analize. Ako 2026. ne donese preokret, Evropa će ući u novu fazu strateškog prilagođavanja — uz povećane vojne budžete, dugoročnu energetsku disciplinu i produženu političku polarizaciju, dok „rat senki“ ostaje trajna pozadina globalne ravnoteže moći.
-  </p>
-</div>
             style={{
               fontFamily: "'Crimson Pro', serif",
               color: isDark ? "#c5c2ba" : "#222",
             }}
           >
+            {/* Dnevni signal */}
+            <div
+              className="mb-10 p-5 md:p-6 border"
+              style={{
+                borderColor: isDark ? "#2a2a2e" : "#e6e6e6",
+                backgroundColor: isDark ? "#151820" : "#fafafa",
+              }}
+            >
+              <div
+                className="flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.12em] mb-3"
+                style={{
+                  fontFamily: "'Source Sans 3', sans-serif",
+                  color: isDark ? "#9a978f" : "#666",
+                }}
+              >
+                <span>Obaveštajni izvori</span>
+                <span>&bull;</span>
+                <span>20. februar 2026</span>
+              </div>
+
+              <h2
+                className="mb-3 text-[22px] md:text-[26px] font-bold leading-[1.2]"
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  color: isDark ? "#e0ddd5" : "#111",
+                }}
+              >
+                Evropske obaveštajne službe skeptične: kraj rata u Ukrajini malo
+                verovatan u 2026.
+              </h2>
+
+              <p className="mb-4">
+                Prema procenama vodećih evropskih obaveštajnih struktura, rat u
+                Ukrajini verovatno neće biti okončan tokom 2026. godine, uprkos
+                intenziviranju diplomatskih kontakata. Procena se zasniva na
+                uverenju da Moskva trenutne pregovore posmatra pre svega kao
+                taktički instrument — način da se konsoliduju pozicije i testira
+                jedinstvo Zapada, a ne kao put ka trajnom kompromisu.
+              </p>
+
+              <p className="mb-4">
+                Čak i u scenariju formalnog prekida vatre, ključna pitanja ostaju
+                otvorena: teritorijalni status, bezbednosne garancije i politički
+                okvir budućeg poretka. U evropskim prestonicama sve češće se
+                razmatra mogućnost dugotrajnog „zamrznutog“ konflikta koji bi
+                oblikovao bezbednosnu i ekonomsku arhitekturu kontinenta godinama
+                unapred.
+              </p>
+
+              <p className="mb-0">
+                <span className="font-semibold">Komentar:</span> Ovakve procene
+                imaju posebnu težinu jer ne predstavljaju medijsku interpretaciju,
+                već radne bezbednosne analize. Ako 2026. ne donese preokret,
+                Evropa će ući u novu fazu strateškog prilagođavanja — uz povećane
+                vojne budžete, dugoročnu energetsku disciplinu i produženu
+                političku polarizaciju, dok „rat senki“ ostaje trajna pozadina
+                globalne ravnoteže moći.
+              </p>
+            </div>
+
             <p className="mb-6">
-              U savremenim međunarodnim odnosima rat se retko objavljuje, ali se gotovo stalno vodi. Dok su oružani sukobi i dalje prisutni, sve je vidljivije da se ključne borbe odvijaju izvan frontova. U tom prostoru, između mira i otvorenog konflikta, obaveštajne službe ponovo zauzimaju centralno mesto.
+              U savremenim međunarodnim odnosima rat se retko objavljuje, ali se
+              gotovo stalno vodi. Dok su oružani sukobi i dalje prisutni, sve je
+              vidljivije da se ključne borbe odvijaju izvan frontova. U tom
+              prostoru, između mira i otvorenog konflikta, obaveštajne službe
+              ponovo zauzimaju centralno mesto.
             </p>
 
             <p className="mb-6">
-              Poslednje tri godine pokazale su da se tradicionalna diplomatija i obaveštajni rad više ne mogu posmatrati odvojeno. Sajber operacije, uticajne kampanje, infiltracija u političke i energetske sisteme, sabotaže infrastrukture i koordinisane dezinformacione mreže postale su deo svakodnevnog arsenala država.
+              Poslednje tri godine pokazale su da se tradicionalna diplomatija i
+              obaveštajni rad više ne mogu posmatrati odvojeno. Sajber operacije,
+              uticajne kampanje, infiltracija u političke i energetske sisteme,
+              sabotaže infrastrukture i koordinisane dezinformacione mreže
+              postale su deo svakodnevnog arsenala država.
             </p>
 
-            <p className="mb-6">
-              Ono što se nekada smatralo izuzetkom, danas je pravilo.
-            </p>
+            <p className="mb-6">Ono što se nekada smatralo izuzetkom, danas je pravilo.</p>
 
             <h2
               className="mt-10 mb-4 text-[24px] md:text-[28px] font-bold leading-[1.2]"
@@ -148,16 +176,21 @@ export default function ObavestajniArticle() {
             </h2>
 
             <p className="mb-6">
-              Savremeni sukobi ne počinju napadom tenkova. Počinju destabilizacijom energetskih tokova, kompromitovanjem komunikacionih mreža i narušavanjem poverenja u institucije. U tom smislu, obaveštajne službe više nisu samo instrument prikupljanja informacija. One su postale aktivni činilac oblikovanja političke realnosti.
+              Savremeni sukobi ne počinju napadom tenkova. Počinju destabilizacijom
+              energetskih tokova, kompromitovanjem komunikacionih mreža i
+              narušavanjem poverenja u institucije. U tom smislu, obaveštajne
+              službe više nisu samo instrument prikupljanja informacija. One su
+              postale aktivni činilac oblikovanja političke realnosti.
             </p>
 
             <p className="mb-6">
-              Evropa je u poslednjih nekoliko godina zabeležila porast sajber napada na energetsku infrastrukturu, državne institucije i medijske kuće. Paralelno sa tim, sve je izraženija zabrinutost zbog pokušaja uticaja na izbore i političke procese.
+              Evropa je u poslednjih nekoliko godina zabeležila porast sajber
+              napada na energetsku infrastrukturu, državne institucije i medijske
+              kuće. Paralelno sa tim, sve je izraženija zabrinutost zbog pokušaja
+              uticaja na izbore i političke procese.
             </p>
 
-            <p className="mb-6">
-              To nije fenomen ograničen na jednu državu ili jednu silu. To je obrazac.
-            </p>
+            <p className="mb-6">To nije fenomen ograničen na jednu državu ili jednu silu. To je obrazac.</p>
 
             <h2
               className="mt-10 mb-4 text-[24px] md:text-[28px] font-bold leading-[1.2]"
@@ -170,15 +203,22 @@ export default function ObavestajniArticle() {
             </h2>
 
             <p className="mb-6">
-              Sajber prostor postao je nova linija razdvajanja moći. Države ulažu značajna sredstva u ofanzivne i defanzivne digitalne kapacitete. Granica između vojnog i civilnog sektora sve je tanja, jer je kritična infrastruktura često u privatnom vlasništvu, ali od strateškog značaja.
+              Sajber prostor postao je nova linija razdvajanja moći. Države ulažu
+              značajna sredstva u ofanzivne i defanzivne digitalne kapacitete.
+              Granica između vojnog i civilnog sektora sve je tanja, jer je
+              kritična infrastruktura često u privatnom vlasništvu, ali od
+              strateškog značaja.
             </p>
 
             <p className="mb-6">
-              Napadi na energetske mreže, telekomunikacije i finansijske sisteme pokazuju da ranjivost više nije isključivo teritorijalna. Ona je tehnološka i sistemska.
+              Napadi na energetske mreže, telekomunikacije i finansijske sisteme
+              pokazuju da ranjivost više nije isključivo teritorijalna. Ona je
+              tehnološka i sistemska.
             </p>
 
             <p className="mb-6">
-              U tom ambijentu, obaveštajne agencije deluju na raskrsnici politike, bezbednosti i tehnologije.
+              U tom ambijentu, obaveštajne agencije deluju na raskrsnici politike,
+              bezbednosti i tehnologije.
             </p>
 
             <h2
@@ -192,11 +232,17 @@ export default function ObavestajniArticle() {
             </h2>
 
             <p className="mb-6">
-              Istovremeno, klasične metode obaveštajnog rada nisu nestale. Naprotiv, pojačana je aktivnost diplomatskih i vojnih atašea, intenzivirani su kontakti u političkim i akademskim krugovima, a protok poverljivih informacija ponovo je dobio težinu kakvu je imao tokom hladnog rata.
+              Istovremeno, klasične metode obaveštajnog rada nisu nestale.
+              Naprotiv, pojačana je aktivnost diplomatskih i vojnih atašea,
+              intenzivirani su kontakti u političkim i akademskim krugovima, a
+              protok poverljivih informacija ponovo je dobio težinu kakvu je imao
+              tokom hladnog rata.
             </p>
 
             <p className="mb-6">
-              Razlika je u brzini i opsegu. Današnji svet je umrežen, a informacije se kreću gotovo trenutno. Time se povećava i rizik od manipulacije.
+              Razlika je u brzini i opsegu. Današnji svet je umrežen, a
+              informacije se kreću gotovo trenutno. Time se povećava i rizik od
+              manipulacije.
             </p>
 
             <h2
@@ -210,11 +256,17 @@ export default function ObavestajniArticle() {
             </h2>
 
             <p className="mb-6">
-              Za Balkan, ovaj proces ima posebnu dimenziju. Region je tradicionalno bio prostor susreta različitih uticaja, a u savremenom kontekstu to znači i pojačano interesovanje bezbednosnih struktura velikih sila.
+              Za Balkan, ovaj proces ima posebnu dimenziju. Region je
+              tradicionalno bio prostor susreta različitih uticaja, a u savremenom
+              kontekstu to znači i pojačano interesovanje bezbednosnih struktura
+              velikih sila.
             </p>
 
             <p className="mb-6">
-              Energetski projekti, medijski pejzaž i političke polarizacije predstavljaju polja na kojima se prepliću različiti interesi. To ne znači da je region poprište otvorenog sukoba, ali ukazuje na činjenicu da je deo šireg strateškog okvira.
+              Energetski projekti, medijski pejzaž i političke polarizacije
+              predstavljaju polja na kojima se prepliću različiti interesi. To ne
+              znači da je region poprište otvorenog sukoba, ali ukazuje na
+              činjenicu da je deo šireg strateškog okvira.
             </p>
 
             <h2
@@ -228,15 +280,21 @@ export default function ObavestajniArticle() {
             </h2>
 
             <p className="mb-6">
-              U međunarodnim odnosima retko se javno priznaje uloga obaveštajnih službi. Ipak, u vremenu nestabilne ravnoteže, njihova funkcija postaje vidljivija. One deluju preventivno, ponekad ofanzivno, ali uvek u senci.
+              U međunarodnim odnosima retko se javno priznaje uloga obaveštajnih
+              službi. Ipak, u vremenu nestabilne ravnoteže, njihova funkcija
+              postaje vidljivija. One deluju preventivno, ponekad ofanzivno, ali
+              uvek u senci.
             </p>
 
             <p className="mb-6">
-              Svet se nalazi u fazi u kojoj otvoreni rat nije jedini oblik nadmetanja. Između diplomatije i oružja postoji prostor u kojem se odlučuje o ravnoteži moći.
+              Svet se nalazi u fazi u kojoj otvoreni rat nije jedini oblik
+              nadmetanja. Između diplomatije i oružja postoji prostor u kojem se
+              odlučuje o ravnoteži moći.
             </p>
 
             <p className="mb-6">
-              U tom prostoru, rat senki postaje trajna komponenta globalne politike.
+              U tom prostoru, rat senki postaje trajna komponenta globalne
+              politike.
             </p>
           </div>
 
