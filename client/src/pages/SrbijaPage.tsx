@@ -36,6 +36,15 @@ export default function SrbijaPage() {
           className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ opacity: isDark ? 0.6 : 0.9 }}
         />
+        {/* MASKA protiv belih slova dole */}
+<div
+  className="absolute bottom-0 left-0 right-0 h-[72px]"
+  style={{
+    background: isDark
+      ? "linear-gradient(to top, rgba(17,19,24,1) 0%, rgba(17,19,24,0.9) 60%, rgba(17,19,24,0) 100%)"
+      : "linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 60%, rgba(255,255,255,0) 100%)",
+  }}
+/>
         <div
           className="absolute inset-0"
           style={{
