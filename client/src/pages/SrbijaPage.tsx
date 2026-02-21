@@ -166,7 +166,7 @@ export default function SrbijaPage() {
                     Srbija
                   </span>
                   <span>&nbsp;&bull;&nbsp;</span>
-                  <span>Analiza nedelje 
+                  <span>Analiza nedelje</span>
                 </div>
 
                 <h2
