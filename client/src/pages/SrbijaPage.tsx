@@ -1,7 +1,6 @@
 /*
- * DESIGN: "Diplomatska Klasika" — Srbija article page
- * Article: Podeljeno društvo: Srbija u ogledalu globalne polarizacije
- * Image: Democracy/Autocracy illustration (user uploaded) — kept
+ * DESIGN: "Diplomatska Klasika" — Srbija INDEX page (2 analize)
+ * Shows two articles (stara + nova) with images + datumi
  */
 
 import { Link } from "wouter";
@@ -10,8 +9,9 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
-  democracyAutocracy: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/qZixjPORsEGCuRBV.png",
+  hero: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/qZixjPORsEGCuRBV.png",
   europeMap: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/IUipaYMrvJEhhnzZ.png",
+  analizaNedeljeMars: "/analiza-nedelje-mars.jpg",
 };
 
 export default function SrbijaPage() {
@@ -31,8 +31,8 @@ export default function SrbijaPage() {
         style={{ backgroundColor: isDark ? "#0d1117" : "#f0f4f7" }}
       >
         <img
-          src={IMAGES.democracyAutocracy}
-          alt="Podeljeno društvo — polarizacija"
+          src={IMAGES.hero}
+          alt="Srbija — Analiza nedelje"
           className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ opacity: isDark ? 0.6 : 0.9 }}
         />
@@ -62,120 +62,126 @@ export default function SrbijaPage() {
       <main className="py-12 md:py-16 flex-1" style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}>
         <div className="max-w-[1200px] mx-auto px-5">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14">
-            {/* Main article */}
-            <article>
+
+            {/* LISTA ANALIZA */}
+            <section>
               <span className="kicker">Srbija</span>
               <h1
-                className="mt-2 mb-4 text-[32px] md:text-[42px] font-bold leading-[1.1]"
+                className="mt-2 mb-6 text-[32px] md:text-[42px] font-bold leading-[1.1]"
                 style={{
                   fontFamily: "'Playfair Display', serif",
                   color: isDark ? "#e0ddd5" : "#111",
                 }}
               >
-                Podeljeno društvo: Srbija u ogledalu globalne polarizacije
+                Analiza nedelje
               </h1>
 
-              <p
-                className="text-[18px] md:text-[19px] leading-[1.6] mb-8 italic"
-                style={{
-                  fontFamily: "'Crimson Pro', serif",
-                  color: isDark ? "#9a978f" : "#555",
-                }}
-              >
-                Politička podela u savremenim društvima više nije izuzetak, već pravilo. Polarizacija koja oblikuje političku scenu u Sjedinjenim Američkim Državama, Francuskoj, Nemačkoj ili Italiji ima svoje paralele i u Srbiji. U tom smislu, domaća politička dinamika nije izolovani fenomen, već deo šireg globalnog procesa.
-              </p>
+              {/* NOVA ANALIZA (gore) */}
+              <article className="mb-10">
+                <div
+                  className="border"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.analizaNedeljeMars}
+                    alt="Marš za pravosuđe — analiza nedelje"
+                    className="w-full h-[260px] md:h-[360px] object-cover object-center block"
+                  />
+                </div>
 
-              <div
-                className="text-[18px] md:text-[19px] leading-[1.75]"
-                style={{
-                  fontFamily: "'Crimson Pro', serif",
-                  color: isDark ? "#c5c2ba" : "#222",
-                }}
-              >
+                <div
+                  className="mt-4 text-[13px]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#7a7872" : "#888",
+                  }}
+                >
+                  <span className="font-semibold uppercase tracking-[0.05em]" style={{ color: isDark ? "#9a978f" : "#555" }}>
+                    Srbija
+                  </span>
+                  <span>&nbsp;&bull;&nbsp;</span>
+                  <span>Analiza nedelje • 20. februar 2026</span>
+                </div>
+
                 <h2
-                  className="mt-10 mb-4 text-[24px] md:text-[28px] font-bold leading-[1.2]"
+                  className="mt-2 text-[26px] md:text-[32px] font-bold leading-[1.15]"
                   style={{
                     fontFamily: "'Playfair Display', serif",
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  Desnica i levica u novom obliku
+                  <Link href="/srbija/mars-za-pravosudje" className="headline-link">
+                    Održan Marš za pravosuđe: granice izvršne vlasti i pitanje nezavisnosti institucija
+                  </Link>
                 </h2>
 
-                <p className="mb-6">
-                  Tradicionalne podele na levicu i desnicu više ne funkcionišu u klasičnom ideološkom smislu. Umesto ekonomskih modela, centralna linija razdvajanja postaje pitanje identiteta, bezbednosti i kulturnog suvereniteta.
+                <p
+                  className="mt-2 text-[18px] md:text-[19px] leading-[1.65]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#c5c2ba" : "#222",
+                  }}
+                >
+                  Protestna šetnja otvorila je staro pitanje: koliko je pravosuđe u stanju da odoli političkom pritisku — i gde se završava legitimna politika, a počinje institucionalno potkopavanje.
                 </p>
+              </article>
 
-                <p className="mb-6">
-                  U Sjedinjenim Državama politički jaz između konzervativnog i liberalnog bloka prerastao je u duboko institucionalno nepoverenje. U Francuskoj, rast desnog populizma dovodi u pitanje tradicionalne partijske strukture. U Nemačkoj i Italiji jačaju pokreti koji se oslanjaju na nacionalnu retoriku i kritiku evropskih integracija.
-                </p>
+              {/* STARA ANALIZA */}
+              <article>
+                <div
+                  className="border"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.hero}
+                    alt="Podeljeno društvo — polarizacija"
+                    className="w-full h-[260px] md:h-[360px] object-cover object-center block"
+                    style={{ opacity: isDark ? 0.85 : 1 }}
+                  />
+                </div>
 
-                <p className="mb-6">
-                  Sličan obrazac prisutan je i u Srbiji, gde se politička scena polarizuje oko pitanja državnog identiteta, odnosa prema Zapadu i Rusiji, kao i uloge međunarodnih institucija.
-                </p>
+                <div
+                  className="mt-4 text-[13px]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#7a7872" : "#888",
+                  }}
+                >
+                  <span className="font-semibold uppercase tracking-[0.05em]" style={{ color: isDark ? "#9a978f" : "#555" }}>
+                    Srbija
+                  </span>
+                  <span>&nbsp;&bull;&nbsp;</span>
+                  <span>Analiza nedelje • Februar 2026</span>
+                </div>
 
                 <h2
-                  className="mt-10 mb-4 text-[24px] md:text-[28px] font-bold leading-[1.2]"
+                  className="mt-2 text-[26px] md:text-[32px] font-bold leading-[1.15]"
                   style={{
                     fontFamily: "'Playfair Display', serif",
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  Institucije pod pritiskom
+                  <Link href="/srbija/podeljeno-drustvo" className="headline-link">
+                    Podeljeno društvo: Srbija u ogledalu globalne polarizacije
+                  </Link>
                 </h2>
 
-                <p className="mb-6">
-                  Jedan od ključnih pokazatelja polarizacije jeste nivo poverenja u institucije. U mnogim zapadnim demokratijama poverenje u medije, parlament i pravosuđe beleži pad. Srbija u tom smislu ne odstupa od globalnog trenda.
-                </p>
-
-                <p className="mb-6">
-                  Kada institucionalno poverenje oslabi, politička borba prelazi sa programskih razlika na borbu za legitimitet samog sistema.
-                </p>
-
-                <h2
-                  className="mt-10 mb-4 text-[24px] md:text-[28px] font-bold leading-[1.2]"
+                <p
+                  className="mt-2 text-[18px] md:text-[19px] leading-[1.65]"
                   style={{
-                    fontFamily: "'Playfair Display', serif",
-                    color: isDark ? "#e0ddd5" : "#111",
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#c5c2ba" : "#222",
                   }}
                 >
-                  Spoljni uticaji i unutrašnje podele
-                </h2>
-
-                <p className="mb-6">
-                  U uslovima pojačanih geopolitičkih tenzija, unutrašnje političke podele postaju podložnije spoljnim interpretacijama. Srbija, zbog svog položaja između evropskih integracija i tradicionalnih veza sa Rusijom, često se nalazi u fokusu međunarodnih analiza.
+                  Polarizacija više nije izuzetak, već pravilo: od Vašingtona do Evrope, a zatim i u Srbiji — gde se politička borba sve češće pretvara u borbu za legitimitet sistema.
                 </p>
-
-                <p className="mb-6">
-                  Međutim, suštinsko pitanje nije da li postoji spoljni uticaj, već da li domaće društvo poseduje dovoljno institucionalne stabilnosti da apsorbuje spoljne pritiske bez produbljivanja unutrašnjih podela.
-                </p>
-
-                <h2
-                  className="mt-10 mb-4 text-[24px] md:text-[28px] font-bold leading-[1.2]"
-                  style={{
-                    fontFamily: "'Playfair Display', serif",
-                    color: isDark ? "#e0ddd5" : "#111",
-                  }}
-                >
-                  Polarizacija kao globalni simptom
-                </h2>
-
-                <p className="mb-6">
-                  Važno je primetiti da polarizacija nije samo politički proces. Ona je društveni i kulturni fenomen. Digitalne platforme, fragmentacija medijskog prostora i algoritamska distribucija sadržaja dodatno produbljuju razlike.
-                </p>
-
-                <p className="mb-6">
-                  U tom kontekstu Srbija nije izuzetak, već deo šire slike u kojoj su društva suočena sa izazovom očuvanja političkog pluralizma uz istovremeno očuvanje institucionalne stabilnosti.
-                </p>
-
-                <p className="mb-6">
-                  Srbija se danas može posmatrati kao ogledalo globalne tranzicije političkih sistema. Podela na desnicu i levicu više nije samo ideološka, već identitetska i geopolitička. Razumevanje tog procesa zahteva komparativni pogled.
-                </p>
-
-                <p className="mb-6">
-                  U svetu u kojem se političke ravnoteže ubrzano menjaju, sposobnost društva da održi institucionalni okvir i dijalog postaje ključna mera stabilnosti.
-                </p>
-              </div>
+              </article>
 
               {/* Back link */}
               <hr className="editorial-divider my-10" />
@@ -189,7 +195,7 @@ export default function SrbijaPage() {
               >
                 &larr; Nazad na naslovnu
               </Link>
-            </article>
+            </section>
 
             {/* Sidebar */}
             <aside>
@@ -211,10 +217,7 @@ export default function SrbijaPage() {
                   <span className="kicker">Geopolitika</span>
                   <h3
                     className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
-                    style={{
-                      fontFamily: "'Lora', serif",
-                      color: isDark ? "#e0ddd5" : "#111",
-                    }}
+                    style={{ fontFamily: "'Lora', serif", color: isDark ? "#e0ddd5" : "#111" }}
                   >
                     <Link href="/geopolitika/nova-bezbednosna-arhitektura" className="headline-link">
                       Nova bezbednosna arhitektura Evrope: da li se rađa kontinent tvrde moći?
@@ -222,10 +225,7 @@ export default function SrbijaPage() {
                   </h3>
                   <p
                     className="mt-1 text-[14px] leading-[1.5]"
-                    style={{
-                      fontFamily: "'Crimson Pro', serif",
-                      color: isDark ? "#7a7872" : "#666",
-                    }}
+                    style={{ fontFamily: "'Crimson Pro', serif", color: isDark ? "#7a7872" : "#666" }}
                   >
                     Evropa se sve otvorenije definiše kao akter tvrde moći u kontekstu strateške transformacije.
                   </p>
@@ -241,6 +241,7 @@ export default function SrbijaPage() {
                 />
               </div>
             </aside>
+
           </div>
         </div>
       </main>
