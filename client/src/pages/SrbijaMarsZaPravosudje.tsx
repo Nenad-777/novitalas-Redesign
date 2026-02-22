@@ -35,6 +35,26 @@ export default function SrbijaMarsZaPravosudje() {
           >
             Marš za pravosuđe: kada institucije postanu centralno političko pitanje
           </h1>
+</h1>
+
+<div
+  className="mt-3 text-[14px]"
+  style={{
+    fontFamily: "'Source Sans 3', sans-serif",
+    color: isDark ? "#9a978f" : "#666",
+  }}
+>
+  21. februar 2026.
+</div>
+
+<hr
+  className="my-6"
+  style={{
+    borderColor: isDark ? "#2a2a2e" : "#e5e5e5",
+  }}
+/>
+            
+</div>
 
           {/* Meta */}
           <div
