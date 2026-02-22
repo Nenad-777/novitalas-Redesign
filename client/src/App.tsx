@@ -12,9 +12,7 @@ import GeopolitikaIran from "./pages/GeopolitikaIran";
 import GeopolitikaArticle from "./pages/GeopolitikaArticle";
 
 import ObavestajniArticle from "./pages/ObavestajniArticle";
-
 import SrbijaPage from "./pages/SrbijaPage";
-import SrbijaPolirizacija from "./pages/SrbijaPolirizacija";  // ← DODATO
 
 function Router() {
   return (
@@ -55,15 +53,9 @@ function Router() {
       <Route path="/srbija" component={SrbijaPage} />
       <Route path="/srbija/" component={SrbijaPage} />
 
-      {/* OVO JE KLJUČNO – RUTA ZA VEST */}
-      <Route
-        path="/srbija/podeljeno-drustvo"
-        component={SrbijaPolirizacija}
-      />
-      <Route
-        path="/srbija/podeljeno-drustvo/"
-        component={SrbijaPolirizacija}
-      />
+      {/* ✅ KLJUČNO: hvata sve /srbija/neki-slug linkove da ne budu 404 */}
+      <Route path="/srbija/:slug" component={SrbijaPage} />
+      <Route path="/srbija/:slug/" component={SrbijaPage} />
 
       {/* 404 */}
       <Route path="/404" component={NotFound} />
