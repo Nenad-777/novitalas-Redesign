@@ -249,9 +249,9 @@ export default function Home() {
                             color: isDark ? "#e0ddd5" : "#111",
                           }}
                         >
-                          <Link href="/srbija" className="headline-link">
-                            Podeljeno društvo: Srbija u ogledalu globalne polarizacije
-                          </Link>
+                         <Link href="/srbija/mars-za-pravosudje" className="headline-link">
+  Marš za pravosuđe: kada institucije postanu centralno političko pitanje
+</Link>
                         </h3>
                         <p
                           className="mt-1 text-[14px] leading-[1.5]"
@@ -260,13 +260,13 @@ export default function Home() {
                             color: isDark ? "#7a7872" : "#666",
                           }}
                         >
-                          Politička podela u savremenim društvima više nije izuzetak,
-                          već pravilo. Srbija kao ogledalo globalne tranzicije.
+                         U Beogradu je održan „Marš za pravosuđe“, skup na kojem su
+sudije, tužioci i građani otvorili pitanje nezavisnosti institucija.
                         </p>
                       </div>
                       <img
-                        src={IMAGES.democracyAutocracy}
-                        alt="Demokratija i autokratija"
+                        src="/analiza-nedelje-mars.jpg"
+  alt="Marš za pravosuđe"
                         className="w-[100px] h-[75px] object-cover border"
                         style={{
                           borderColor: isDark ? "#2a2a2e" : "#eee",
