@@ -74,15 +74,14 @@ function Router() {
       {/* Srbija (index + 2 članka) */}
       <Route path="/srbija" component={SrbijaPage} />
       <Route path="/srbija/" component={SrbijaPage} />
+      <Route path="/srbija/mars-za-pravosudje" component={SrbijaMarsZaPravosudje} />
+<Route path="/srbija/mars-za-pravosudje/" component={SrbijaMarsZaPravosudje} />
 
       {/* 1) Podeljeno društvo */}
       <Route path="/srbija/podeljeno-drustvo" component={SrbijaPolarizacija} />
       <Route path="/srbija/podeljeno-drustvo/" component={SrbijaPolarizacija} />
 
-      {/* 2) Marš za pravosuđe */}
-      <Route path="/srbija/mars-za-pravosudje" component={SrbijaMarsZaPravosudje} />
-      <Route path="/srbija/mars-za-pravosudje/" component={SrbijaMarsZaPravosudje} />
-
+      
       {/* 404 */}
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
