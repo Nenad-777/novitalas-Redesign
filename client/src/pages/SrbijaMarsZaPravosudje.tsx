@@ -52,7 +52,7 @@ export default function SrbijaMarsZaPravosudje() {
             style={{ borderColor: isDark ? "rgba(255,255,255,0.12)" : "rgba(0,0,0,0.12)" }}
           >
             <img
-              src={IMAGES.hero}
+            src="/analiza-nedelje-mars.jpg"
               alt="Ilustracija: Marš za pravosuđe"
               className="w-full h-auto block"
             />
