@@ -1,6 +1,8 @@
 /*
- * DESIGN: "Diplomatska Klasika" — Srbija INDEX page (2 analize)
- * Shows two articles (stara + nova) with images + datumi
+ * DESIGN: "Diplomatska Klasika" — Srbija index (listing)
+ * CONCEPT: identično GeopolitikaIndex (čist grid sa 2 kartice)
+ * Title: Analiza nedelje
+ * Subtitle: Najnovije i arhiva
  */
 
 import { Link } from "wouter";
@@ -9,9 +11,9 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
-  hero: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/qZixjPORsEGCuRBV.png",
-  europeMap: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/IUipaYMrvJEhhnzZ.png",
   analizaNedeljeMars: "/analiza-nedelje-mars.jpg",
+  heroOld:
+    "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/qZixjPORsEGCuRBV.png",
 };
 
 export default function SrbijaPage() {
@@ -25,70 +27,41 @@ export default function SrbijaPage() {
     >
       <Header />
 
-      {/* Hero */}
-      <section
-        className="relative w-full h-[320px] md:h-[400px] overflow-hidden"
-        style={{ backgroundColor: isDark ? "#0d1117" : "#f0f4f7" }}
+      <main
+        className="py-12 md:py-16 flex-1"
+        style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
       >
-        <img
-          src={IMAGES.hero}
-          alt="Srbija — Analiza nedelje"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          style={{ opacity: isDark ? 0.6 : 0.9 }}
-        />
-        {/* MASKA protiv belih slova dole */}
-<div
-  className="absolute bottom-0 left-0 right-0 h-[72px]"
-  style={{
-    background: isDark
-      ? "linear-gradient(to top, rgba(17,19,24,1) 0%, rgba(17,19,24,0.9) 60%, rgba(17,19,24,0) 100%)"
-      : "linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 60%, rgba(255,255,255,0) 100%)",
-  }}
-/>
-        <div
-          className="absolute inset-0"
-          style={{
-            background: isDark
-              ? "linear-gradient(to top, rgba(17,19,24,0.9) 0%, rgba(17,19,24,0.3) 50%, transparent 100%)"
-              : "linear-gradient(to top, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.1) 50%, transparent 100%)",
-          }}
-        />
-        <div className="absolute bottom-8 left-0 right-0 text-center">
-          <p
-            className="text-[26px] md:text-[32px] italic tracking-wide"
-            style={{
-              fontFamily: "'Playfair Display', serif",
-              color: isDark ? "rgba(246,243,232,0.9)" : "#1a2a3a",
-              textShadow: isDark ? "0 2px 8px rgba(0,0,0,0.5)" : "0 2px 8px rgba(255,255,255,0.5)",
-            }}
-          >
-            Analiza nedelje
-          </p>
-        </div>
-      </section>
+        <section className="max-w-[1000px] mx-auto px-5">
+          {/* Title */}
+          <div className="mb-10">
+            <span className="kicker">Srbija</span>
+            <h1
+              className="mt-3 text-[30px] md:text-[40px] font-bold leading-[1.1]"
+              style={{
+                fontFamily: "'Playfair Display', serif",
+                color: isDark ? "#e0ddd5" : "#111",
+              }}
+            >
+              Analiza nedelje
+            </h1>
+            <p
+              className="mt-3 text-[16px] md:text-[18px] leading-[1.6] max-w-[760px]"
+              style={{
+                fontFamily: "'Crimson Pro', serif",
+                color: isDark ? "#9a978f" : "#555",
+              }}
+            >
+              Najnovije i arhiva
+            </p>
+          </div>
 
-      {/* Content */}
-      <main className="py-12 md:py-16 flex-1" style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}>
-        <div className="max-w-[1200px] mx-auto px-5">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14">
-
-            {/* LISTA ANALIZA */}
-            <section>
-              <span className="kicker">Srbija</span>
-              <h1
-                className="mt-2 mb-6 text-[32px] md:text-[42px] font-bold leading-[1.1]"
-                style={{
-                  fontFamily: "'Playfair Display', serif",
-                  color: isDark ? "#e0ddd5" : "#111",
-                }}
-              >
-                Analiza nedelje
-              </h1>
-
-              {/* NOVA ANALIZA (gore) */}
-              <article className="mb-10">
+          {/* LIST */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* 1) NOVA ANALIZA (Marš za pravosuđe) */}
+            <article>
+              <Link href="/srbija/mars-za-pravosudje" className="no-underline">
                 <div
-                  className="border"
+                  className="border mb-4 overflow-hidden"
                   style={{
                     borderColor: isDark ? "#2a2a2e" : "#eee",
                     backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
@@ -96,163 +69,109 @@ export default function SrbijaPage() {
                 >
                   <img
                     src={IMAGES.analizaNedeljeMars}
-                    alt="Marš za pravosuđe — analiza nedelje"
-                    className="w-full h-[260px] md:h-[360px] object-cover object-center block"
+                    alt="Marš za pravosuđe — ilustracija"
+                    className="w-full h-[220px] object-cover object-center block"
                   />
                 </div>
 
-                <div
-                  className="mt-4 text-[13px]"
-                  style={{
-                    fontFamily: "'Source Sans 3', sans-serif",
-                    color: isDark ? "#7a7872" : "#888",
-                  }}
-                >
-                  <span className="font-semibold uppercase tracking-[0.05em]" style={{ color: isDark ? "#9a978f" : "#555" }}>
-                    Srbija
-                  </span>
-                  <span>&nbsp;&bull;&nbsp;</span>
-                  <span>Analiza nedelje</span>
-                </div>
-
                 <h2
-                  className="mt-2 text-[26px] md:text-[32px] font-bold leading-[1.15]"
+                  className="text-[22px] md:text-[26px] font-bold leading-[1.2]"
                   style={{
                     fontFamily: "'Playfair Display', serif",
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  <Link href="/srbija/mars-za-pravosudje" className="headline-link">
-                    Održan Marš za pravosuđe: granice izvršne vlasti i pitanje nezavisnosti institucija
-                  </Link>
+                  Marš za pravosuđe: kada institucije postanu centralno političko pitanje
                 </h2>
 
                 <p
-                  className="mt-2 text-[18px] md:text-[19px] leading-[1.65]"
+                  className="mt-2 text-[15px] leading-[1.6]"
                   style={{
                     fontFamily: "'Crimson Pro', serif",
-                    color: isDark ? "#c5c2ba" : "#222",
+                    color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Protestna šetnja otvorila je staro pitanje: koliko je pravosuđe u stanju da odoli političkom pritisku — i gde se završava legitimna politika, a počinje institucionalno potkopavanje.
+                  Kada sudovi postanu tema politike, društvo raspravlja o sopstvenom
+                  ustavnom identitetu — i o granicama izvršne vlasti.
                 </p>
-              </article>
 
-              {/* STARA ANALIZA */}
-              <article>
                 <div
-                  className="border"
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
+
+            {/* 2) STARIJA ANALIZA (Podeljeno društvo) */}
+            <article>
+              <Link href="/srbija/podeljeno-drustvo" className="no-underline">
+                <div
+                  className="border mb-4 overflow-hidden"
                   style={{
                     borderColor: isDark ? "#2a2a2e" : "#eee",
                     backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
                   }}
                 >
                   <img
-                    src={IMAGES.hero}
-                    alt="Podeljeno društvo — polarizacija"
-                    className="w-full h-[260px] md:h-[360px] object-cover object-center block"
-                    style={{ opacity: isDark ? 0.85 : 1 }}
+                    src={IMAGES.heroOld}
+                    alt="Podeljeno društvo — ilustracija"
+                    className="w-full h-[220px] object-cover object-center block"
+                    style={{ opacity: isDark ? 0.9 : 1 }}
                   />
                 </div>
 
-                <div
-                  className="mt-4 text-[13px]"
-                  style={{
-                    fontFamily: "'Source Sans 3', sans-serif",
-                    color: isDark ? "#7a7872" : "#888",
-                  }}
-                >
-                  <span className="font-semibold uppercase tracking-[0.05em]" style={{ color: isDark ? "#9a978f" : "#555" }}>
-                    Srbija
-                  </span>
-                  <span>&nbsp;&bull;&nbsp;</span>
-                  <span>Analiza nedelje</span>
-                </div>
-
                 <h2
-                  className="mt-2 text-[26px] md:text-[32px] font-bold leading-[1.15]"
+                  className="text-[22px] md:text-[26px] font-bold leading-[1.2]"
                   style={{
                     fontFamily: "'Playfair Display', serif",
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  <Link href="/srbija/podeljeno-drustvo" className="headline-link">
-                    Podeljeno društvo: Srbija u ogledalu globalne polarizacije
-                  </Link>
+                  Podeljeno društvo: Srbija u ogledalu globalne polarizacije
                 </h2>
 
                 <p
-                  className="mt-2 text-[18px] md:text-[19px] leading-[1.65]"
+                  className="mt-2 text-[15px] leading-[1.6]"
                   style={{
                     fontFamily: "'Crimson Pro', serif",
-                    color: isDark ? "#c5c2ba" : "#222",
+                    color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Polarizacija više nije izuzetak, već pravilo: od Vašingtona do Evrope, a zatim i u Srbiji — gde se politička borba sve češće pretvara u borbu za legitimitet sistema.
+                  Polarizacija više nije izuzetak, već pravilo: od Vašingtona do Evrope,
+                  a zatim i u Srbiji — gde se politička borba pretvara u borbu za legitimitet.
                 </p>
-              </article>
 
-              {/* Back link */}
-              <hr className="editorial-divider my-10" />
-              <Link
-                href="/"
-                className="inline-flex items-center gap-2 text-[13px] font-semibold tracking-[0.08em] uppercase transition-colors duration-200 no-underline"
-                style={{
-                  fontFamily: "'Source Sans 3', sans-serif",
-                  color: isDark ? "#d9bf7a" : "#8B0000",
-                }}
-              >
-                &larr; Nazad na naslovnu
-              </Link>
-            </section>
-
-            {/* Sidebar */}
-            <aside>
-              <div className="flex items-center gap-3 mb-6">
-                <span
-                  className="text-[11px] font-bold tracking-[0.14em] uppercase"
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
                   style={{
                     fontFamily: "'Source Sans 3', sans-serif",
                     color: isDark ? "#d9bf7a" : "#8B0000",
                   }}
                 >
-                  Prateće vesti
-                </span>
-                <span className="flex-1 h-px" style={{ backgroundColor: isDark ? "#2a2a2e" : "#e5e5e5" }} />
-              </div>
-
-              <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
-                <div>
-                  <span className="kicker">Geopolitika</span>
-                  <h3
-                    className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
-                    style={{ fontFamily: "'Lora', serif", color: isDark ? "#e0ddd5" : "#111" }}
-                  >
-                    <Link href="/geopolitika/nova-bezbednosna-arhitektura" className="headline-link">
-                      Nova bezbednosna arhitektura Evrope: da li se rađa kontinent tvrde moći?
-                    </Link>
-                  </h3>
-                  <p
-                    className="mt-1 text-[14px] leading-[1.5]"
-                    style={{ fontFamily: "'Crimson Pro', serif", color: isDark ? "#7a7872" : "#666" }}
-                  >
-                    Evropa se sve otvorenije definiše kao akter tvrde moći u kontekstu strateške transformacije.
-                  </p>
+                  Otvori tekst →
                 </div>
-                <img
-                  src={IMAGES.europeMap}
-                  alt="Mapa Evrope"
-                  className="w-[100px] h-[75px] object-cover border"
-                  style={{
-                    borderColor: isDark ? "#2a2a2e" : "#eee",
-                    backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
-                  }}
-                />
-              </div>
-            </aside>
-
+              </Link>
+            </article>
           </div>
-        </div>
+
+          {/* Back */}
+          <hr className="editorial-divider my-12" />
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-[13px] font-semibold tracking-[0.08em] uppercase transition-colors duration-200 no-underline"
+            style={{
+              fontFamily: "'Source Sans 3', sans-serif",
+              color: isDark ? "#d9bf7a" : "#8B0000",
+            }}
+          >
+            &larr; Nazad na naslovnu
+          </Link>
+        </section>
       </main>
 
       <Footer />
