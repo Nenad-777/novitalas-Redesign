@@ -12,7 +12,12 @@ import GeopolitikaIran from "./pages/GeopolitikaIran";
 import GeopolitikaArticle from "./pages/GeopolitikaArticle";
 
 import ObavestajniArticle from "./pages/ObavestajniArticle";
+
 import SrbijaPage from "./pages/SrbijaPage";
+import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
+
+// Ako imaš (ili napraviš) drugi fajl za drugi tekst, otkomentariši:
+// import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 
 function Router() {
   return (
@@ -40,22 +45,23 @@ function Router() {
       <Route path="/obavestajni-izvori" component={ObavestajniArticle} />
       <Route path="/obavestajni-izvori/" component={ObavestajniArticle} />
 
-      <Route
-        path="/obavestajni-izvori/rat-senki"
-        component={ObavestajniArticle}
-      />
-      <Route
-        path="/obavestajni-izvori/rat-senki/"
-        component={ObavestajniArticle}
-      />
+      <Route path="/obavestajni-izvori/rat-senki" component={ObavestajniArticle} />
+      <Route path="/obavestajni-izvori/rat-senki/" component={ObavestajniArticle} />
 
-      {/* Srbija */}
+      {/* Srbija - INDEX */}
       <Route path="/srbija" component={SrbijaPage} />
       <Route path="/srbija/" component={SrbijaPage} />
 
-      {/* ✅ KLJUČNO: hvata sve /srbija/neki-slug linkove da ne budu 404 */}
-      <Route path="/srbija/:slug" component={SrbijaPage} />
-      <Route path="/srbija/:slug/" component={SrbijaPage} />
+      {/* Srbija - ČLANCI (ove rute rešavaju 404) */}
+      <Route path="/srbija/podeljeno-drustvo" component={SrbijaPolarizacija} />
+      <Route path="/srbija/podeljeno-drustvo/" component={SrbijaPolarizacija} />
+
+      // Ako imaš drugi page za drugi članak, otkomentariši ove dve:
+      // <Route path="/srbija/mars-za-pravosudje" component={SrbijaMarsZaPravosudje} />
+      // <Route path="/srbija/mars-za-pravosudje/" component={SrbijaMarsZaPravosudje} />
+
+      {/* Fallback: ako neko pogodi nepoznat Srbija slug, bar da ne pukne hard */}
+      <Route path="/srbija/:slug" component={NotFound} />
 
       {/* 404 */}
       <Route path="/404" component={NotFound} />
