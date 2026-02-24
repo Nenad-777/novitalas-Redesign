@@ -1,6 +1,6 @@
 /*
  * DESIGN: "Diplomatska Klasika" — Geopolitika index (listing)
- * Purpose: show BOTH articles (new + old)
+ * Purpose: show THREE articles (new + 2 old)
  */
 
 import { Link } from "wouter";
@@ -9,7 +9,11 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
-  iran: "/carrier.jpg", // ako si uploadovala carrier.jpg u /client/public (vidim da jesi)
+  // NOVA VEST (upload u /public, npr: /geopolitika-ukrajina.jpg)
+  ukrajina: "/geopolitika-ukrajina.jpg",
+
+  // POSTOJEĆE
+  iran: "/carrier.jpg",
   europeMap:
     "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/IUipaYMrvJEhhnzZ.png",
 };
@@ -17,6 +21,15 @@ const IMAGES = {
 export default function GeopolitikaIndex() {
   const { theme } = useTheme();
   const isDark = theme === "dark";
+
+  const metaStyle = {
+    fontFamily: "'Source Sans 3', sans-serif",
+    color: isDark ? "#7a7872" : "#888",
+  } as const;
+
+  const metaStrongStyle = {
+    color: isDark ? "#9a978f" : "#555",
+  } as const;
 
   return (
     <div
@@ -55,7 +68,72 @@ export default function GeopolitikaIndex() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* 1) NOVA VEST (Iran) */}
+            {/* 1) NOVA VEST (Ukrajina) */}
+            <article>
+              <Link
+                href="/geopolitika/ukrajina-cetiri-godine-rata"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.ukrajina}
+                    alt="Ukrajina — četiri godine rata"
+                    className="w-full h-[220px] object-cover object-center block"
+                  />
+                </div>
+
+                {/* Meta (rubrika + datum) */}
+                <div className="text-[13px]" style={metaStyle}>
+                  <span
+                    className="font-semibold uppercase tracking-[0.05em]"
+                    style={metaStrongStyle}
+                  >
+                    Geopolitika
+                  </span>
+                  <span>&nbsp;&bull;&nbsp;</span>
+                  <span>24. februar</span>
+                </div>
+
+                <h2
+                  className="mt-2 text-[22px] md:text-[26px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Četiri godine rata: šta sada određuje cenu mira
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Dve perspektive, jedan horizont: rat traje, ali se menja logika
+                  odluka — i pragovi rizika.
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
+
+            {/* 2) POSTOJEĆA VEST (Iran) */}
             <article>
               <Link href="/geopolitika/iran" className="no-underline">
                 <div
@@ -105,7 +183,7 @@ export default function GeopolitikaIndex() {
               </Link>
             </article>
 
-            {/* 2) STARA VEST (Evropa) */}
+            {/* 3) STARA VEST (Evropa) */}
             <article>
               <Link
                 href="/geopolitika/nova-bezbednosna-arhitektura"
