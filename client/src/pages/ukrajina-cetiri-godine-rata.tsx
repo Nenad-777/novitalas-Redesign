@@ -44,7 +44,7 @@ export default function UkrajinaCetiriGodine() {
           {/* Hero slika */}
           <div className="mt-8 mb-8">
             <img
-              src="/ukrajina-24-februar.jpg"
+              src="/geopolitika-ukrajina.jpg"
               alt="Četiri godine rata u Ukrajini"
               className="w-full object-cover"
             />
