@@ -7,17 +7,14 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
 import Home from "./pages/Home";
-
-// Geopolitika
 import GeopolitikaIndex from "./pages/GeopolitikaIndex";
 import GeopolitikaIran from "./pages/GeopolitikaIran";
 import GeopolitikaArticle from "./pages/GeopolitikaArticle";
-import UkrajinaCetiriGodine from "./pages/UkrajinaCetiriGodine";
 
-// Obaveštajni izvori
+// ✅ VAŽNO: import mora da pogodi TAČNO ime fajla u /pages
+import UkrajinaCetiriGodine from "./pages/ukrajina-cetiri-godine-rata";
+
 import ObavestajniArticle from "./pages/ObavestajniArticle";
-
-// Srbija
 import SrbijaPage from "./pages/SrbijaPage";
 import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
@@ -41,7 +38,7 @@ function Router() {
         component={GeopolitikaArticle}
       />
 
-      {/* Geopolitika — Ukrajina (nova vest) */}
+      {/* ✅ NOVA VEST: Ukrajina */}
       <Route
         path="/geopolitika/ukrajina-cetiri-godine-rata"
         component={UkrajinaCetiriGodine}
@@ -51,7 +48,6 @@ function Router() {
         component={UkrajinaCetiriGodine}
       />
 
-      {/* Geopolitika index */}
       <Route path="/geopolitika" component={GeopolitikaIndex} />
       <Route path="/geopolitika/" component={GeopolitikaIndex} />
 
@@ -65,7 +61,6 @@ function Router() {
       {/* Srbija */}
       <Route path="/srbija" component={SrbijaPage} />
       <Route path="/srbija/" component={SrbijaPage} />
-
       <Route path="/srbija/mars-za-pravosudje" component={SrbijaMarsZaPravosudje} />
       <Route path="/srbija/mars-za-pravosudje/" component={SrbijaMarsZaPravosudje} />
 
