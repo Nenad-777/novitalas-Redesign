@@ -1,6 +1,6 @@
 /*
  * DESIGN: "Diplomatska Klasika" — Geopolitika index (listing)
- * Purpose: show THREE articles (new + 2 old)
+ * Purpose: show articles (new + archive)
  */
 
 import { Link } from "wouter";
@@ -9,10 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
-  // NOVA VEST (upload u /public, npr: /geopolitika-ukrajina.jpg)
-  ukrajina: "/geopolitika-ukrajina.jpg",
-
-  // POSTOJEĆE
+  ukraine: "/geopolitika-ukrajina.jpg",
   iran: "/carrier.jpg",
   europeMap:
     "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/IUipaYMrvJEhhnzZ.png",
@@ -21,15 +18,6 @@ const IMAGES = {
 export default function GeopolitikaIndex() {
   const { theme } = useTheme();
   const isDark = theme === "dark";
-
-  const metaStyle = {
-    fontFamily: "'Source Sans 3', sans-serif",
-    color: isDark ? "#7a7872" : "#888",
-  } as const;
-
-  const metaStrongStyle = {
-    color: isDark ? "#9a978f" : "#555",
-  } as const;
 
   return (
     <div
@@ -82,26 +70,14 @@ export default function GeopolitikaIndex() {
                   }}
                 >
                   <img
-                    src={IMAGES.ukrajina}
-                    alt="Ukrajina — četiri godine rata"
+                    src={IMAGES.ukraine}
+                    alt="Geopolitika — Ukrajina"
                     className="w-full h-[220px] object-cover object-center block"
                   />
                 </div>
 
-                {/* Meta (rubrika + datum) */}
-                <div className="text-[13px]" style={metaStyle}>
-                  <span
-                    className="font-semibold uppercase tracking-[0.05em]"
-                    style={metaStrongStyle}
-                  >
-                    Geopolitika
-                  </span>
-                  <span>&nbsp;&bull;&nbsp;</span>
-                  <span>24. februar</span>
-                </div>
-
                 <h2
-                  className="mt-2 text-[22px] md:text-[26px] font-bold leading-[1.2]"
+                  className="text-[22px] md:text-[26px] font-bold leading-[1.2]"
                   style={{
                     fontFamily: "'Playfair Display', serif",
                     color: isDark ? "#e0ddd5" : "#111",
@@ -133,7 +109,7 @@ export default function GeopolitikaIndex() {
               </Link>
             </article>
 
-            {/* 2) POSTOJEĆA VEST (Iran) */}
+            {/* 2) NOVA VEST (Iran) */}
             <article>
               <Link href="/geopolitika/iran" className="no-underline">
                 <div
