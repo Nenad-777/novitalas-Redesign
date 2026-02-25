@@ -14,13 +14,10 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
   hero: "https://private-us-east-1.manuscdn.com/sessionFile/6SqA6Ltpws9fwNQXZCXsiu/sandbox/VqzKWVZr2iULAAnWvkb1OW-img-1_1771300001000_na1fn_bm92aS10YWxhcy1oZXJv.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvNlNxQTZMdHB3czlmd05RWFpDWHNpdS9zYW5kYm94L1ZxektXVlpyMmlVTEFBbld2a2IxT1ctaW1nLTFfMTc3MTMwMDAwMTAwMF9uYTFmbl9ibTkyYVMxMFlXeGhjeTFvWlhKdi5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=vickhcvz4~YbTDCmOZhcH-ccU4yQa-vO1nYi1RLKmWenh~BaokXfByyTseqceDOn1X95WCs8wu7sSrWuIbTkJ6fguujMipq08NjRX1CToVLGeSsLojJufY422QdYrD9T1z6SshXDh~iExPwB4wgbaVzdMdV90Rr1KKKXfyMjDMM3CyteXDVgswhyX45ttKg8vzRwBDfhSUQC4bb82yVt7rMLjZxh9~1GCxqdL3mee1F3-~YRdsnOihaF0dNZr5bXlVerTFJSqX5Rc1IkCAb2fF0~1BeJ5HplAhZyX1BsckBjaIROXZaXBMebgoAgcgDaoVQ~fPIDb9NceHutx99iew__",
-  carrier: "/carrier.jpg",
   ukraine: "/geopolitika-ukrajina.jpg",
   iranRiots: "/tehran-riots.jpg",
   intelligenceReport:
     "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/acjhxldMBPFDSKKa.png",
-  democracyAutocracy:
-    "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/qZixjPORsEGCuRBV.png",
 };
 
 // Simple fade-in on scroll hook
@@ -139,7 +136,7 @@ export default function Home() {
 
           {/* Two-column grid */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14">
-            {/* LEFT: Main feature article — Geopolitika (UKRAJINA) */}
+            {/* LEFT: Main feature — IRAN (PROTESTI) */}
             <FadeIn>
               <article>
                 <span className="kicker">Geopolitika</span>
@@ -151,10 +148,11 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/geopolitika/ukrajina-cetiri-godine-rata"
+                    href="/geopolitika/iran-protesti-2026"
                     className="headline-link"
                   >
-                    Četiri godine rata: šta sada određuje cenu mira
+                    Iran: protesti zahvatili najmanje 10 univerziteta, BBC potvrdio
+                    snimke sukoba
                   </Link>
                 </h1>
 
@@ -165,15 +163,14 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Dve perspektive, jedan horizont: rat traje, ali se menja logika odluka
-                  — i pragovi rizika. Ono što je nekada bilo pitanje fronta, danas je
-                  i pitanje budžeta, industrije, političke volje i kredibiliteta
-                  savezništava.
+                  Novi talas studentskih protesta širi se kroz glavne univerzitetske
+                  centre. Verifikovani snimci ukazuju na sukobe demonstranata i
+                  prorežimskih grupa, dok vlast pojačava represiju i pravosudni pritisak.
                 </p>
 
                 <figure className="mb-0">
                   <Link
-                    href="/geopolitika/ukrajina-cetiri-godine-rata"
+                    href="/geopolitika/iran-protesti-2026"
                     className="block no-underline"
                   >
                     <div
@@ -184,8 +181,8 @@ export default function Home() {
                       }}
                     >
                       <img
-                        src={IMAGES.ukraine}
-                        alt="Geopolitika — Ukrajina"
+                        src={IMAGES.iranRiots}
+                        alt="Geopolitika — Iran protesti"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                       />
                     </div>
@@ -194,7 +191,7 @@ export default function Home() {
               </article>
             </FadeIn>
 
-            {/* RIGHT: Sidebar with 2 other articles */}
+            {/* RIGHT: Sidebar */}
             <aside>
               <FadeIn>
                 <div className="flex flex-col">
@@ -289,7 +286,7 @@ export default function Home() {
 
                   <hr className="editorial-divider my-5" />
 
-                  {/* BONUS: Iran — protesti (nova vest) */}
+                  {/* BONUS: Ukrajina (prebačena u sidebar) */}
                   <div>
                     <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
                       <div>
@@ -302,11 +299,10 @@ export default function Home() {
                           }}
                         >
                           <Link
-                            href="/geopolitika/iran-protesti-2026"
+                            href="/geopolitika/ukrajina-cetiri-godine-rata"
                             className="headline-link"
                           >
-                            Iran: protesti zahvatili najmanje 10 univerziteta, BBC
-                            potvrdio snimke sukoba
+                            Četiri godine rata: šta sada određuje cenu mira
                           </Link>
                         </h3>
                         <p
@@ -316,13 +312,13 @@ export default function Home() {
                             color: isDark ? "#7a7872" : "#666",
                           }}
                         >
-                          Sukobi na kampusima i pojačana represija — relevantni izveštaji
-                          govore o stotinama ubijenih u ranijim talasima protesta.
+                          Dve perspektive, jedan horizont: rat traje, ali se menja logika
+                          odluka — i pragovi rizika.
                         </p>
                       </div>
                       <img
-                        src={IMAGES.iranRiots}
-                        alt="Iran protesti"
+                        src={IMAGES.ukraine}
+                        alt="Geopolitika — Ukrajina"
                         className="w-[100px] h-[75px] object-cover border"
                         style={{
                           borderColor: isDark ? "#2a2a2e" : "#eee",
