@@ -10,7 +10,7 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
   ukraine: "/geopolitika-ukrajina.jpg",
-  iran: "/carrier.jpg",
+  iran: "/tehran-riots.jpg", // <-- NOVA SLIKA
   europeMap:
     "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/IUipaYMrvJEhhnzZ.png",
 };
@@ -109,9 +109,9 @@ export default function GeopolitikaIndex() {
               </Link>
             </article>
 
-            {/* 2) NOVA VEST (Iran) */}
+            {/* 2) NOVA VEST (Iran — protesti) */}
             <article>
-              <Link href="/geopolitika/iran" className="no-underline">
+              <Link href="/geopolitika/iran-protesti-2026" className="no-underline">
                 <div
                   className="border mb-4 overflow-hidden"
                   style={{
@@ -121,7 +121,7 @@ export default function GeopolitikaIndex() {
                 >
                   <img
                     src={IMAGES.iran}
-                    alt="Geopolitika — Iran"
+                    alt="Geopolitika — Iran protesti"
                     className="w-full h-[220px] object-cover object-center block"
                   />
                 </div>
@@ -133,7 +133,7 @@ export default function GeopolitikaIndex() {
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  Vašington u fazi odluke: američka vojska spremna za mogući udar na Iran
+                  IRAN: Protesti zahvatili najmanje 10 univerziteta, BBC potvrdio snimke sukoba
                 </h2>
 
                 <p
@@ -143,8 +143,8 @@ export default function GeopolitikaIndex() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Nova analiza: regionalni pritisci, savezništva i strateške tačke
-                  koje menjaju mapu Bliskog istoka.
+                  Sukobi na kampusima i pojačana represija: relevantni izveštaji govore o stotinama ubijenih
+                  u prethodnim talasima protesta.
                 </p>
 
                 <div
