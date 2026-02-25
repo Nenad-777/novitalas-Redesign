@@ -16,6 +16,7 @@ const IMAGES = {
   hero: "https://private-us-east-1.manuscdn.com/sessionFile/6SqA6Ltpws9fwNQXZCXsiu/sandbox/VqzKWVZr2iULAAnWvkb1OW-img-1_1771300001000_na1fn_bm92aS10YWxhcy1oZXJv.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvNlNxQTZMdHB3czlmd05RWFpDWHNpdS9zYW5kYm94L1ZxektXVlpyMmlVTEFBbld2a2IxT1ctaW1nLTFfMTc3MTMwMDAwMTAwMF9uYTFmbl9ibTkyYVMxMFlXeGhjeTFvWlhKdi5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=vickhcvz4~YbTDCmOZhcH-ccU4yQa-vO1nYi1RLKmWenh~BaokXfByyTseqceDOn1X95WCs8wu7sSrWuIbTkJ6fguujMipq08NjRX1CToVLGeSsLojJufY422QdYrD9T1z6SshXDh~iExPwB4wgbaVzdMdV90Rr1KKKXfyMjDMM3CyteXDVgswhyX45ttKg8vzRwBDfhSUQC4bb82yVt7rMLjZxh9~1GCxqdL3mee1F3-~YRdsnOihaF0dNZr5bXlVerTFJSqX5Rc1IkCAb2fF0~1BeJ5HplAhZyX1BsckBjaIROXZaXBMebgoAgcgDaoVQ~fPIDb9NceHutx99iew__",
   carrier: "/carrier.jpg",
   ukraine: "/geopolitika-ukrajina.jpg",
+  iranRiots: "/tehran-riots.jpg",
   intelligenceReport:
     "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/acjhxldMBPFDSKKa.png",
   democracyAutocracy:
@@ -288,29 +289,47 @@ export default function Home() {
 
                   <hr className="editorial-divider my-5" />
 
-                  {/* BONUS: Iran kao dodatni link u sidebaru (mali, ali vidljiv) */}
+                  {/* BONUS: Iran — protesti (nova vest) */}
                   <div>
-                    <span className="kicker">Geopolitika</span>
-                    <h3
-                      className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
-                      style={{
-                        fontFamily: "'Lora', serif",
-                        color: isDark ? "#e0ddd5" : "#111",
-                      }}
-                    >
-                      <Link href="/geopolitika/iran" className="headline-link">
-                        Vašington u fazi odluke: američka vojska spremna za mogući udar na Iran
-                      </Link>
-                    </h3>
-                    <p
-                      className="mt-1 text-[14px] leading-[1.5]"
-                      style={{
-                        fontFamily: "'Crimson Pro', serif",
-                        color: isDark ? "#7a7872" : "#666",
-                      }}
-                    >
-                      Regionalni pritisci i strateške tačke koje menjaju mapu Bliskog istoka.
-                    </p>
+                    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
+                      <div>
+                        <span className="kicker">Geopolitika</span>
+                        <h3
+                          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
+                          style={{
+                            fontFamily: "'Lora', serif",
+                            color: isDark ? "#e0ddd5" : "#111",
+                          }}
+                        >
+                          <Link
+                            href="/geopolitika/iran-protesti-2026"
+                            className="headline-link"
+                          >
+                            Iran: protesti zahvatili najmanje 10 univerziteta, BBC
+                            potvrdio snimke sukoba
+                          </Link>
+                        </h3>
+                        <p
+                          className="mt-1 text-[14px] leading-[1.5]"
+                          style={{
+                            fontFamily: "'Crimson Pro', serif",
+                            color: isDark ? "#7a7872" : "#666",
+                          }}
+                        >
+                          Sukobi na kampusima i pojačana represija — relevantni izveštaji
+                          govore o stotinama ubijenih u ranijim talasima protesta.
+                        </p>
+                      </div>
+                      <img
+                        src={IMAGES.iranRiots}
+                        alt="Iran protesti"
+                        className="w-[100px] h-[75px] object-cover border"
+                        style={{
+                          borderColor: isDark ? "#2a2a2e" : "#eee",
+                          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
               </FadeIn>
