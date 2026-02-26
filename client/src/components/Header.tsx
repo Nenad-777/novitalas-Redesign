@@ -2,7 +2,7 @@
  * DESIGN: "Diplomatska Klasika" — Foreign Affairs-inspired header
  * Light mode: Light blue top bar (#d6e8f0) — Foreign Affairs style
  * Dark mode: Dark bar (#0d0d0f)
- * Removed: Kultura, Naša planeta
+ * Update: Added "Naša planeta" in top menu (right side, next to Srbija)
  */
 
 import { useState } from "react";
@@ -14,6 +14,7 @@ const navItems = [
   { label: "Geopolitika", href: "/geopolitika" },
   { label: "Obaveštajni izvori", href: "/obavestajni-izvori" },
   { label: "Srbija", href: "/srbija" },
+  { label: "Naša planeta", href: "/nasa-planeta" },
 ];
 
 export default function Header() {
@@ -26,7 +27,9 @@ export default function Header() {
       className="sticky top-0 z-50 transition-colors duration-300"
       style={{
         backgroundColor: isDark ? "#0d0d0f" : "#d6e8f0",
-        borderBottom: isDark ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(0,0,0,0.08)",
+        borderBottom: isDark
+          ? "1px solid rgba(255,255,255,0.08)"
+          : "1px solid rgba(0,0,0,0.08)",
       }}
     >
       <div className="max-w-[1200px] mx-auto px-5">
@@ -85,6 +88,7 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
+
             <span
               className="text-[12px] font-medium italic ml-2"
               style={{
@@ -100,7 +104,9 @@ export default function Header() {
               onClick={toggleTheme}
               className="ml-3 p-1.5 rounded-full transition-colors duration-200"
               style={{
-                backgroundColor: isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.06)",
+                backgroundColor: isDark
+                  ? "rgba(255,255,255,0.08)"
+                  : "rgba(0,0,0,0.06)",
                 color: isDark ? "#d9bf7a" : "#1a2a3a",
               }}
               aria-label={isDark ? "Svetli režim" : "Tamni režim"}
@@ -115,13 +121,16 @@ export default function Header() {
               onClick={toggleTheme}
               className="p-1.5 rounded-full transition-colors duration-200"
               style={{
-                backgroundColor: isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.06)",
+                backgroundColor: isDark
+                  ? "rgba(255,255,255,0.08)"
+                  : "rgba(0,0,0,0.06)",
                 color: isDark ? "#d9bf7a" : "#1a2a3a",
               }}
               aria-label={isDark ? "Svetli režim" : "Tamni režim"}
             >
               {isDark ? <Sun size={16} /> : <Moon size={16} />}
             </button>
+
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Meni"
@@ -139,7 +148,9 @@ export default function Header() {
           className="lg:hidden px-5 pb-5"
           style={{
             backgroundColor: isDark ? "#0d0d0f" : "#d6e8f0",
-            borderTop: isDark ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(0,0,0,0.08)",
+            borderTop: isDark
+              ? "1px solid rgba(255,255,255,0.08)"
+              : "1px solid rgba(0,0,0,0.08)",
           }}
         >
           <nav className="flex flex-col gap-3 pt-3">
@@ -158,6 +169,7 @@ export default function Header() {
               </Link>
             ))}
           </nav>
+
           <p
             className="text-[12px] italic mt-4"
             style={{
