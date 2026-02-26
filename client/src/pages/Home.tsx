@@ -19,7 +19,7 @@ const IMAGES = {
   iranRiots: "/tehran-riots.jpg",
 
   // ⬇️ promeni na TAČAN naziv fajla koji si ubacio u /public
-  alma: "/alma-skriveno-jezgro.jpg",
+  alma: "/alma-mlecni-put.jpg",
 
   srbijaThumb: "/analiza-nedelje-mars.jpg",
 };
