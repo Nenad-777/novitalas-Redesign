@@ -3,7 +3,9 @@
  * Light mode: white bg, light blue header, dark red accents
  * Dark mode: dark bg, dark header, gold accents
  * New hero: globe + planes illustration
- * 3 articles: Geopolitika, Obaveštajni izvori, Srbija
+ * Main feature: Iran protesti
+ * Sidebar: Obaveštajni izvori, Srbija, Ukrajina
+ * Added: "Naša planeta" block at bottom (index + featured link)
  */
 
 import { useEffect, useRef } from "react";
@@ -18,6 +20,9 @@ const IMAGES = {
   iranRiots: "/tehran-riots.jpg",
   intelligenceReport:
     "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/acjhxldMBPFDSKKa.png",
+  // ✅ Naša planeta: ALMA cover (ubaci u /public kao npr. alma-core.jpg)
+  // Ako si već ubacio sliku, samo promeni ime fajla ovde.
+  alma: "/alma-core.jpg",
 };
 
 // Simple fade-in on scroll hook
@@ -286,7 +291,7 @@ export default function Home() {
 
                   <hr className="editorial-divider my-5" />
 
-                  {/* BONUS: Ukrajina (prebačena u sidebar) */}
+                  {/* BONUS: Ukrajina (sidebar) */}
                   <div>
                     <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
                       <div>
@@ -360,6 +365,156 @@ export default function Home() {
                 </span>
               </div>
             </div>
+          </FadeIn>
+
+          {/* ✅ NEW: Naša planeta block */}
+          <FadeIn className="mt-16">
+            <section>
+              <div className="flex items-center gap-3 mb-8">
+                <span
+                  className="text-[11px] font-bold tracking-[0.14em] uppercase"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Naša planeta
+                </span>
+                <span
+                  className="flex-1 h-px"
+                  style={{ backgroundColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
+                />
+                <Link
+                  href="/nasa-planeta"
+                  className="text-[12px] font-semibold uppercase tracking-[0.08em] no-underline"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Sve →
+                </Link>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14">
+                {/* Featured ALMA */}
+                <article>
+                  <span className="kicker">SVET</span>
+                  <h2
+                    className="mt-2 mb-3 text-[26px] md:text-[32px] font-bold leading-[1.15]"
+                    style={{
+                      fontFamily: "'Playfair Display', serif",
+                      color: isDark ? "#e0ddd5" : "#111",
+                    }}
+                  >
+                    <Link
+                      href="/nasa-planeta/alma-skriveno-jezgro"
+                      className="headline-link"
+                    >
+                      Najveća ALMA mapa ikad: otkriveno „skriveno jezgro“ Mlečnog puta
+                    </Link>
+                  </h2>
+
+                  <p
+                    className="text-[16px] md:text-[17px] leading-[1.65] mb-5"
+                    style={{
+                      fontFamily: "'Crimson Pro', serif",
+                      color: isDark ? "#9a978f" : "#555",
+                    }}
+                  >
+                    „Karta hladnog svemira“: umesto zvezda, gledamo sirovinu od koje zvezde nastaju —
+                    gas, prašinu i hemiju u najturbulentnijem pojasu naše galaksije.
+                  </p>
+
+                  <Link
+                    href="/nasa-planeta/alma-skriveno-jezgro"
+                    className="block no-underline"
+                  >
+                    <div
+                      className="border"
+                      style={{
+                        borderColor: isDark ? "#2a2a2e" : "#eee",
+                        backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                      }}
+                    >
+                      <img
+                        src={IMAGES.alma}
+                        alt="ALMA — jezgro Mlečnog puta"
+                        className="w-full h-[240px] md:h-[320px] object-cover object-center block"
+                      />
+                    </div>
+                  </Link>
+                </article>
+
+                {/* Rubrike list */}
+                <aside>
+                  <div
+                    className="border p-6"
+                    style={{
+                      borderColor: isDark ? "#2a2a2e" : "#eee",
+                      backgroundColor: isDark ? "#0f1116" : "#fafafa",
+                    }}
+                  >
+                    <p
+                      className="text-[12px] font-bold tracking-[0.14em] uppercase mb-4"
+                      style={{
+                        fontFamily: "'Source Sans 3', sans-serif",
+                        color: isDark ? "#d9bf7a" : "#8B0000",
+                      }}
+                    >
+                      Rubrike
+                    </p>
+
+                    <ul
+                      className="space-y-3"
+                      style={{
+                        fontFamily: "'Crimson Pro', serif",
+                        color: isDark ? "#c9c6be" : "#333",
+                      }}
+                    >
+                      <li>
+                        <Link href="/nasa-planeta" className="headline-link">
+                          Nauka & kosmos
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/nasa-planeta" className="headline-link">
+                          Ekologija & klima
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/nasa-planeta" className="headline-link">
+                          Kultura & ideje
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/nasa-planeta" className="headline-link">
+                          Tehnologija
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/nasa-planeta" className="headline-link">
+                          Zanimljivosti
+                        </Link>
+                      </li>
+                    </ul>
+
+                    <div className="mt-6">
+                      <Link
+                        href="/nasa-planeta"
+                        className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.08em] no-underline"
+                        style={{
+                          fontFamily: "'Source Sans 3', sans-serif",
+                          color: isDark ? "#d9bf7a" : "#8B0000",
+                        }}
+                      >
+                        Otvori Naša planeta &rarr;
+                      </Link>
+                    </div>
+                  </div>
+                </aside>
+              </div>
+            </section>
           </FadeIn>
         </div>
       </main>
