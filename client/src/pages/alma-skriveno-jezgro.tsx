@@ -1,5 +1,5 @@
 /*
- * Naša planeta — Vest
+ * Naša planeta  -  Vest
  * ALMA “mega-slike” srca Mlečnog puta
  */
 
@@ -38,7 +38,7 @@ export default function AlmaSkrivenoJezgro() {
           >
             <img
               src={IMAGES.alma}
-              alt="ALMA — srce Mlečnog puta"
+              alt="ALMA  -  srce Mlečnog puta"
               className="w-full h-[240px] md:h-[420px] object-cover object-center block"
             />
           </div>
@@ -77,8 +77,8 @@ export default function AlmaSkrivenoJezgro() {
             }}
           >
             <p className="mb-5">
-              SANTIAGO / ESO — Međunarodni tim astronoma objavio je do sada najveću mapu
-              koju je napravio radio-teleskop ALMA, prikazujući Centralnu molekularnu zonu (CMZ) —
+              SANTIAGO / ESO  -  Međunarodni tim astronoma objavio je do sada najveću mapu
+              koju je napravio radio-teleskop ALMA, prikazujući Centralnu molekularnu zonu (CMZ)  - 
               najturbulentniji i najgušći pojas gasa i prašine u središtu naše galaksije,
               u blizini supermasivne crne rupe Sagittarius A*.
             </p>
@@ -95,7 +95,7 @@ export default function AlmaSkrivenoJezgro() {
               u kojem učestvuje više od 160 naučnika iz desetina institucija. Cilj je da se razume
               kako se zvezde rađaju u „nukleusu“ galaksije, gde su hemija, turbulencija i pritisci
               drugačiji nego u okolini Sunčevog sistema. Naučnici navode da CMZ ima osobine
-              koje podsećaju na uslove u ranom univerzumu — što ovu mapu čini svojevrsnim
+              koje podsećaju na uslove u ranom univerzumu  -  što ovu mapu čini svojevrsnim
               „laboratorijskim prozorom“ u prošlost kosmosa.
             </p>
 
@@ -118,7 +118,7 @@ export default function AlmaSkrivenoJezgro() {
               </div>
               <p className="m-0">
                 Ovakve „karte hladnog svemira“ su važne jer ALMA ne fotografiše svetlost koju vidimo okom,
-                već radio/podmilimetarske potpise hladnog gasa — sirovine od koje nastaju zvezde.
+                već radio/podmilimetarske potpise hladnog gasa  -  sirovine od koje nastaju zvezde.
                 Dok optičke fotografije često pokazuju posledicu (zvezde), ovde gledamo uzrok:
                 materijal i hemiju od kojih zvezde nastaju.
               </p>
@@ -128,7 +128,7 @@ export default function AlmaSkrivenoJezgro() {
               className="text-[14px] leading-[1.6]"
               style={{ color: isDark ? "#bdb9ae" : "#666" }}
             >
-              Izvor/credits: ALMA (ESO/NAOJ/NRAO) — prema objavljenim materijalima projekta ACES.
+              Izvor/credits: ALMA (ESO/NAOJ/NRAO)  -  prema objavljenim materijalima projekta ACES.
             </p>
           </div>
 
