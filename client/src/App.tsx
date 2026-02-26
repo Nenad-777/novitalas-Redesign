@@ -20,6 +20,9 @@ import SrbijaPage from "./pages/SrbijaPage";
 import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 
+import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
+import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
+
 function Router() {
   return (
     <Switch>
@@ -78,6 +81,7 @@ function Router() {
       {/* Srbija */}
       <Route path="/srbija" component={SrbijaPage} />
       <Route path="/srbija/" component={SrbijaPage} />
+
       <Route
         path="/srbija/mars-za-pravosudje"
         component={SrbijaMarsZaPravosudje}
@@ -91,6 +95,19 @@ function Router() {
       <Route
         path="/srbija/podeljeno-drustvo/"
         component={SrbijaPolarizacija}
+      />
+
+      {/* ✅ Naša planeta */}
+      <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
+      <Route path="/nasa-planeta/" component={NasaPlanetaIndex} />
+
+      <Route
+        path="/nasa-planeta/alma-skriveno-jezgro"
+        component={AlmaSkrivenoJezgro}
+      />
+      <Route
+        path="/nasa-planeta/alma-skriveno-jezgro/"
+        component={AlmaSkrivenoJezgro}
       />
 
       {/* 404 */}
