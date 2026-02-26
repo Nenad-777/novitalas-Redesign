@@ -10,7 +10,7 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
   ukraine: "/geopolitika-ukrajina.jpg",
-  iran: "/tehran-riots.jpg", // <-- NOVA SLIKA
+  iran: "/tehran-riots.jpg",
   europeMap:
     "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/IUipaYMrvJEhhnzZ.png",
 };
@@ -56,9 +56,12 @@ export default function GeopolitikaIndex() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-             {/* 2) NOVA VEST (Iran — protesti) */}
+            {/* 1) NOVA VEST (Iran — protesti) */}
             <article>
-              <Link href="/geopolitika/iran-protesti-2026" className="no-underline">
+              <Link
+                href="/geopolitika/iran-protesti-2026"
+                className="no-underline"
+              >
                 <div
                   className="border mb-4 overflow-hidden"
                   style={{
@@ -80,7 +83,8 @@ export default function GeopolitikaIndex() {
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  IRAN: Protesti zahvatili najmanje 10 univerziteta, BBC potvrdio snimke sukoba
+                  IRAN: Protesti zahvatili najmanje 10 univerziteta, BBC potvrdio
+                  snimke sukoba
                 </h2>
 
                 <p
@@ -90,8 +94,8 @@ export default function GeopolitikaIndex() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Sukobi na kampusima i pojačana represija: relevantni izveštaji govore o stotinama ubijenih
-                  u prethodnim talasima protesta.
+                  Sukobi na kampusima i pojačana represija: relevantni izveštaji
+                  govore o stotinama ubijenih u prethodnim talasima protesta.
                 </p>
 
                 <div
@@ -105,8 +109,8 @@ export default function GeopolitikaIndex() {
                 </div>
               </Link>
             </article>
-            
-            {/* 1) NOVA VEST (Ukrajina) */}
+
+            {/* 2) NOVA VEST (Ukrajina) */}
             <article>
               <Link
                 href="/geopolitika/ukrajina-cetiri-godine-rata"
@@ -158,13 +162,9 @@ export default function GeopolitikaIndex() {
                 </div>
               </Link>
             </article>
-            </div>
-            
-
-           
 
             {/* 3) STARA VEST (Evropa) */}
-            <article>
+            <article className="md:col-span-2">
               <Link
                 href="/geopolitika/nova-bezbednosna-arhitektura"
                 className="no-underline"
@@ -190,7 +190,8 @@ export default function GeopolitikaIndex() {
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  Nova bezbednosna arhitektura Evrope: da li se rađa kontinent tvrde moći?
+                  Nova bezbednosna arhitektura Evrope: da li se rađa kontinent
+                  tvrde moći?
                 </h2>
 
                 <p
