@@ -1,5 +1,5 @@
 /*
- * DESIGN: "Diplomatska Klasika" v2 — Foreign Affairs-inspired homepage
+ * DESIGN: "Diplomatska Klasika" v2  -  Foreign Affairs-inspired homepage
  * Update:
  * - Main feature: Iran (left)
  * - Sidebar: Srbija + Naša planeta (ALMA) + Ukrajina
@@ -87,7 +87,7 @@ export default function Home() {
       >
         <img
           src={IMAGES.hero}
-          alt="Globus sa avionima — Novi Talas"
+          alt="Globus sa avionima  -  Novi Talas"
           className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ opacity: isDark ? 0.6 : 0.9 }}
         />
@@ -140,7 +140,7 @@ export default function Home() {
 
           {/* Two-column grid */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14">
-            {/* LEFT: Main feature — IRAN */}
+            {/* LEFT: Main feature  -  IRAN */}
             <FadeIn>
               <article>
                 <span className="kicker">Geopolitika</span>
@@ -187,7 +187,7 @@ export default function Home() {
                     >
                       <img
                         src={IMAGES.iranRiots}
-                        alt="Geopolitika — Iran protesti"
+                        alt="Geopolitika  -  Iran protesti"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                       />
                     </div>
@@ -271,12 +271,12 @@ export default function Home() {
                             color: isDark ? "#7a7872" : "#666",
                           }}
                         >
-                          Umesto zvezda, gledamo sirovinu od koje nastaju — gas, prašinu i hemiju.
+                          Umesto zvezda, gledamo sirovinu od koje nastaju  -  gas, prašinu i hemiju.
                         </p>
                       </div>
                       <img
                         src={IMAGES.alma}
-                        alt="ALMA — jezgro Mlečnog puta"
+                        alt="ALMA  -  jezgro Mlečnog puta"
                         className="w-[100px] h-[75px] object-cover border"
                         style={{
                           borderColor: isDark ? "#2a2a2e" : "#eee",
@@ -327,12 +327,12 @@ export default function Home() {
                             color: isDark ? "#7a7872" : "#666",
                           }}
                         >
-                          Rat traje, ali se menja logika odluka — i pragovi rizika.
+                          Rat traje, ali se menja logika odluka  -  i pragovi rizika.
                         </p>
                       </div>
                       <img
                         src={IMAGES.ukraine}
-                        alt="Geopolitika — Ukrajina"
+                        alt="Geopolitika  -  Ukrajina"
                         className="w-[100px] h-[75px] object-cover border"
                         style={{
                           borderColor: isDark ? "#2a2a2e" : "#eee",
@@ -364,7 +364,7 @@ export default function Home() {
                   style={{ fontFamily: "'Crimson Pro', serif" }}
                 >
                   Pratite Novi talas za ekskluzivne analize iz oblasti geopolitike,
-                  bezbednosti — i od sada: Naše planete.
+                  bezbednosti  -  i od sada: Naše planete.
                 </p>
                 <span
                   className="inline-block bg-[#8B0000] text-white text-[12px] font-bold tracking-[0.12em] uppercase px-8 py-3 hover:bg-[#6B0000] transition-colors duration-200"
