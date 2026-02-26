@@ -1,11 +1,10 @@
 /*
  * DESIGN: "Diplomatska Klasika" v2 — Foreign Affairs-inspired homepage
- * Light mode: white bg, light blue header, dark red accents
- * Dark mode: dark bg, dark header, gold accents
- * New hero: globe + planes illustration
- * Main feature: Iran protesti
- * Sidebar: Obaveštajni izvori, Srbija, Ukrajina
- * Added: "Naša planeta" block at bottom (index + featured link)
+ * Update:
+ * - Main feature: Iran (left)
+ * - Sidebar: Srbija + Naša planeta (ALMA) + Ukrajina
+ * - Removed: Obaveštajni izvori block from homepage
+ * - Removed: bottom "rubrike" list (no sub-menu at bottom)
  */
 
 import { useEffect, useRef } from "react";
@@ -18,11 +17,11 @@ const IMAGES = {
   hero: "https://private-us-east-1.manuscdn.com/sessionFile/6SqA6Ltpws9fwNQXZCXsiu/sandbox/VqzKWVZr2iULAAnWvkb1OW-img-1_1771300001000_na1fn_bm92aS10YWxhcy1oZXJv.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvNlNxQTZMdHB3czlmd05RWFpDWHNpdS9zYW5kYm94L1ZxektXVlpyMmlVTEFBbld2a2IxT1ctaW1nLTFfMTc3MTMwMDAwMTAwMF9uYTFmbl9ibTkyYVMxMFlXeGhjeTFvWlhKdi5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=vickhcvz4~YbTDCmOZhcH-ccU4yQa-vO1nYi1RLKmWenh~BaokXfByyTseqceDOn1X95WCs8wu7sSrWuIbTkJ6fguujMipq08NjRX1CToVLGeSsLojJufY422QdYrD9T1z6SshXDh~iExPwB4wgbaVzdMdV90Rr1KKKXfyMjDMM3CyteXDVgswhyX45ttKg8vzRwBDfhSUQC4bb82yVt7rMLjZxh9~1GCxqdL3mee1F3-~YRdsnOihaF0dNZr5bXlVerTFJSqX5Rc1IkCAb2fF0~1BeJ5HplAhZyX1BsckBjaIROXZaXBMebgoAgcgDaoVQ~fPIDb9NceHutx99iew__",
   ukraine: "/geopolitika-ukrajina.jpg",
   iranRiots: "/tehran-riots.jpg",
-  intelligenceReport:
-    "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/acjhxldMBPFDSKKa.png",
-  // ✅ Naša planeta: ALMA cover (ubaci u /public kao npr. alma-core.jpg)
-  // Ako si već ubacio sliku, samo promeni ime fajla ovde.
-  alma: "/alma-core.jpg",
+
+  // ⬇️ promeni na TAČAN naziv fajla koji si ubacio u /public
+  alma: "/alma-skriveno-jezgro.jpg",
+
+  srbijaThumb: "/analiza-nedelje-mars.jpg",
 };
 
 // Simple fade-in on scroll hook
@@ -81,7 +80,7 @@ export default function Home() {
     >
       <Header />
 
-      {/* Hero section — globe + planes illustration */}
+      {/* Hero */}
       <section
         className="relative w-full h-[380px] md:h-[440px] overflow-hidden"
         style={{ backgroundColor: isDark ? "#0d1117" : "#f0f4f7" }}
@@ -114,7 +113,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Main content */}
+      {/* Main */}
       <main
         className="py-12 md:py-16 flex-1"
         style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
@@ -141,10 +140,11 @@ export default function Home() {
 
           {/* Two-column grid */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14">
-            {/* LEFT: Main feature — IRAN (PROTESTI) */}
+            {/* LEFT: Main feature — IRAN */}
             <FadeIn>
               <article>
                 <span className="kicker">Geopolitika</span>
+
                 <h1
                   className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
                   style={{
@@ -196,56 +196,11 @@ export default function Home() {
               </article>
             </FadeIn>
 
-            {/* RIGHT: Sidebar */}
+            {/* RIGHT: Sidebar (Srbija + Naša planeta + Ukrajina) */}
             <aside>
               <FadeIn>
                 <div className="flex flex-col">
-                  {/* Article 2: Obaveštajni izvori */}
-                  <div>
-                    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
-                      <div>
-                        <span className="kicker">Obaveštajni izvori</span>
-                        <h3
-                          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
-                          style={{
-                            fontFamily: "'Lora', serif",
-                            color: isDark ? "#e0ddd5" : "#111",
-                          }}
-                        >
-                          <Link
-                            href="/obavestajni-izvori/rat-senki"
-                            className="headline-link"
-                          >
-                            Rat senki: povratak obaveštajnih službi u središte
-                            geopolitike
-                          </Link>
-                        </h3>
-                        <p
-                          className="mt-1 text-[14px] leading-[1.5]"
-                          style={{
-                            fontFamily: "'Crimson Pro', serif",
-                            color: isDark ? "#7a7872" : "#666",
-                          }}
-                        >
-                          Sajber operacije, uticajne kampanje i sabotaže infrastrukture
-                          postale su deo svakodnevnog arsenala država.
-                        </p>
-                      </div>
-                      <img
-                        src={IMAGES.intelligenceReport}
-                        alt="Obaveštajni izveštaj"
-                        className="w-[100px] h-[75px] object-cover border"
-                        style={{
-                          borderColor: isDark ? "#2a2a2e" : "#eee",
-                          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
-                        }}
-                      />
-                    </div>
-                  </div>
-
-                  <hr className="editorial-divider my-5" />
-
-                  {/* Article 3: Srbija */}
+                  {/* Srbija */}
                   <div>
                     <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
                       <div>
@@ -272,13 +227,12 @@ export default function Home() {
                             color: isDark ? "#7a7872" : "#666",
                           }}
                         >
-                          U Beogradu je održan „Marš za pravosuđe“, skup na kojem su
-                          sudije, tužioci i građani otvorili pitanje nezavisnosti
+                          Sudije, tužioci i građani otvorili su pitanje nezavisnosti
                           institucija.
                         </p>
                       </div>
                       <img
-                        src="/analiza-nedelje-mars.jpg"
+                        src={IMAGES.srbijaThumb}
                         alt="Marš za pravosuđe"
                         className="w-[100px] h-[75px] object-cover border"
                         style={{
@@ -291,7 +245,63 @@ export default function Home() {
 
                   <hr className="editorial-divider my-5" />
 
-                  {/* BONUS: Ukrajina (sidebar) */}
+                  {/* Naša planeta (ALMA) */}
+                  <div>
+                    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
+                      <div>
+                        <span className="kicker">Naša planeta</span>
+                        <h3
+                          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
+                          style={{
+                            fontFamily: "'Lora', serif",
+                            color: isDark ? "#e0ddd5" : "#111",
+                          }}
+                        >
+                          <Link
+                            href="/nasa-planeta/alma-skriveno-jezgro"
+                            className="headline-link"
+                          >
+                            Najveća ALMA mapa ikad: otkriveno „skriveno jezgro“ Mlečnog puta
+                          </Link>
+                        </h3>
+                        <p
+                          className="mt-1 text-[14px] leading-[1.5]"
+                          style={{
+                            fontFamily: "'Crimson Pro', serif",
+                            color: isDark ? "#7a7872" : "#666",
+                          }}
+                        >
+                          Umesto zvezda, gledamo sirovinu od koje nastaju — gas, prašinu i hemiju.
+                        </p>
+                      </div>
+                      <img
+                        src={IMAGES.alma}
+                        alt="ALMA — jezgro Mlečnog puta"
+                        className="w-[100px] h-[75px] object-cover border"
+                        style={{
+                          borderColor: isDark ? "#2a2a2e" : "#eee",
+                          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
+                        }}
+                      />
+                    </div>
+
+                    <div className="mt-3">
+                      <Link
+                        href="/nasa-planeta"
+                        className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.08em] no-underline"
+                        style={{
+                          fontFamily: "'Source Sans 3', sans-serif",
+                          color: isDark ? "#d9bf7a" : "#8B0000",
+                        }}
+                      >
+                        Otvori Naša planeta →
+                      </Link>
+                    </div>
+                  </div>
+
+                  <hr className="editorial-divider my-5" />
+
+                  {/* Ukrajina */}
                   <div>
                     <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
                       <div>
@@ -317,8 +327,7 @@ export default function Home() {
                             color: isDark ? "#7a7872" : "#666",
                           }}
                         >
-                          Dve perspektive, jedan horizont: rat traje, ali se menja logika
-                          odluka — i pragovi rizika.
+                          Rat traje, ali se menja logika odluka — i pragovi rizika.
                         </p>
                       </div>
                       <img
@@ -337,7 +346,7 @@ export default function Home() {
             </aside>
           </div>
 
-          {/* Subscribe / CTA section */}
+          {/* CTA */}
           <FadeIn className="mt-16">
             <div
               className="relative overflow-hidden rounded-sm"
@@ -354,8 +363,8 @@ export default function Home() {
                   className="text-white/70 text-[16px] max-w-[560px] mx-auto mb-6"
                   style={{ fontFamily: "'Crimson Pro', serif" }}
                 >
-                  Pratite Novi talas za ekskluzivne analize iz oblasti geopolitike i
-                  bezbednosti.
+                  Pratite Novi talas za ekskluzivne analize iz oblasti geopolitike,
+                  bezbednosti — i od sada: Naše planete.
                 </p>
                 <span
                   className="inline-block bg-[#8B0000] text-white text-[12px] font-bold tracking-[0.12em] uppercase px-8 py-3 hover:bg-[#6B0000] transition-colors duration-200"
@@ -365,156 +374,6 @@ export default function Home() {
                 </span>
               </div>
             </div>
-          </FadeIn>
-
-          {/* ✅ NEW: Naša planeta block */}
-          <FadeIn className="mt-16">
-            <section>
-              <div className="flex items-center gap-3 mb-8">
-                <span
-                  className="text-[11px] font-bold tracking-[0.14em] uppercase"
-                  style={{
-                    fontFamily: "'Source Sans 3', sans-serif",
-                    color: isDark ? "#d9bf7a" : "#8B0000",
-                  }}
-                >
-                  Naša planeta
-                </span>
-                <span
-                  className="flex-1 h-px"
-                  style={{ backgroundColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
-                />
-                <Link
-                  href="/nasa-planeta"
-                  className="text-[12px] font-semibold uppercase tracking-[0.08em] no-underline"
-                  style={{
-                    fontFamily: "'Source Sans 3', sans-serif",
-                    color: isDark ? "#d9bf7a" : "#8B0000",
-                  }}
-                >
-                  Sve →
-                </Link>
-              </div>
-
-              <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14">
-                {/* Featured ALMA */}
-                <article>
-                  <span className="kicker">SVET</span>
-                  <h2
-                    className="mt-2 mb-3 text-[26px] md:text-[32px] font-bold leading-[1.15]"
-                    style={{
-                      fontFamily: "'Playfair Display', serif",
-                      color: isDark ? "#e0ddd5" : "#111",
-                    }}
-                  >
-                    <Link
-                      href="/nasa-planeta/alma-skriveno-jezgro"
-                      className="headline-link"
-                    >
-                      Najveća ALMA mapa ikad: otkriveno „skriveno jezgro“ Mlečnog puta
-                    </Link>
-                  </h2>
-
-                  <p
-                    className="text-[16px] md:text-[17px] leading-[1.65] mb-5"
-                    style={{
-                      fontFamily: "'Crimson Pro', serif",
-                      color: isDark ? "#9a978f" : "#555",
-                    }}
-                  >
-                    „Karta hladnog svemira“: umesto zvezda, gledamo sirovinu od koje zvezde nastaju —
-                    gas, prašinu i hemiju u najturbulentnijem pojasu naše galaksije.
-                  </p>
-
-                  <Link
-                    href="/nasa-planeta/alma-skriveno-jezgro"
-                    className="block no-underline"
-                  >
-                    <div
-                      className="border"
-                      style={{
-                        borderColor: isDark ? "#2a2a2e" : "#eee",
-                        backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
-                      }}
-                    >
-                      <img
-                        src={IMAGES.alma}
-                        alt="ALMA — jezgro Mlečnog puta"
-                        className="w-full h-[240px] md:h-[320px] object-cover object-center block"
-                      />
-                    </div>
-                  </Link>
-                </article>
-
-                {/* Rubrike list */}
-                <aside>
-                  <div
-                    className="border p-6"
-                    style={{
-                      borderColor: isDark ? "#2a2a2e" : "#eee",
-                      backgroundColor: isDark ? "#0f1116" : "#fafafa",
-                    }}
-                  >
-                    <p
-                      className="text-[12px] font-bold tracking-[0.14em] uppercase mb-4"
-                      style={{
-                        fontFamily: "'Source Sans 3', sans-serif",
-                        color: isDark ? "#d9bf7a" : "#8B0000",
-                      }}
-                    >
-                      Rubrike
-                    </p>
-
-                    <ul
-                      className="space-y-3"
-                      style={{
-                        fontFamily: "'Crimson Pro', serif",
-                        color: isDark ? "#c9c6be" : "#333",
-                      }}
-                    >
-                      <li>
-                        <Link href="/nasa-planeta" className="headline-link">
-                          Nauka & kosmos
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/nasa-planeta" className="headline-link">
-                          Ekologija & klima
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/nasa-planeta" className="headline-link">
-                          Kultura & ideje
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/nasa-planeta" className="headline-link">
-                          Tehnologija
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/nasa-planeta" className="headline-link">
-                          Zanimljivosti
-                        </Link>
-                      </li>
-                    </ul>
-
-                    <div className="mt-6">
-                      <Link
-                        href="/nasa-planeta"
-                        className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.08em] no-underline"
-                        style={{
-                          fontFamily: "'Source Sans 3', sans-serif",
-                          color: isDark ? "#d9bf7a" : "#8B0000",
-                        }}
-                      >
-                        Otvori Naša planeta &rarr;
-                      </Link>
-                    </div>
-                  </div>
-                </aside>
-              </div>
-            </section>
           </FadeIn>
         </div>
       </main>
