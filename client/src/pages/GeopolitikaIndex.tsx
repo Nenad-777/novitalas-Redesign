@@ -1,5 +1,5 @@
 /*
- * DESIGN: "Diplomatska Klasika" — Geopolitika index (listing)
+ * DESIGN: "Diplomatska Klasika"  -  Geopolitika index (listing)
  * Purpose: show articles (new + archive)
  */
 
@@ -72,7 +72,7 @@ export default function GeopolitikaIndex() {
                 >
                   <img
                     src={IMAGES.izraelIran}
-                    alt="Geopolitika — Izrael Iran"
+                    alt="Geopolitika  -  Izrael Iran"
                     className="w-full h-[220px] object-cover object-center block"
                   />
                 </div>
@@ -94,7 +94,7 @@ export default function GeopolitikaIndex() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Šta se menja na terenu, šta u diplomatiji — i gde su granice
+                  Šta se menja na terenu, šta u diplomatiji  -  i gde su granice
                   kontrole u spirali odgovora.
                 </p>
 
@@ -110,7 +110,7 @@ export default function GeopolitikaIndex() {
               </Link>
             </article>
 
-            {/* 2) NOVA VEST (Iran — protesti) */}
+            {/* 2) NOVA VEST (Iran  -  protesti) */}
             <article>
               <Link
                 href="/geopolitika/iran-protesti-2026"
@@ -125,7 +125,7 @@ export default function GeopolitikaIndex() {
                 >
                   <img
                     src={IMAGES.iran}
-                    alt="Geopolitika — Iran protesti"
+                    alt="Geopolitika  -  Iran protesti"
                     className="w-full h-[220px] object-cover object-center block"
                   />
                 </div>
@@ -179,7 +179,7 @@ export default function GeopolitikaIndex() {
                 >
                   <img
                     src={IMAGES.ukraine}
-                    alt="Geopolitika — Ukrajina"
+                    alt="Geopolitika  -  Ukrajina"
                     className="w-full h-[220px] object-cover object-center block"
                   />
                 </div>
@@ -202,7 +202,7 @@ export default function GeopolitikaIndex() {
                   }}
                 >
                   Dve perspektive, jedan horizont: rat traje, ali se menja logika
-                  odluka — i pragovi rizika.
+                  odluka  -  i pragovi rizika.
                 </p>
 
                 <div
@@ -255,7 +255,7 @@ export default function GeopolitikaIndex() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Rat u Ukrajini, energija i strateška autonomija — Evropa menja
+                  Rat u Ukrajini, energija i strateška autonomija  -  Evropa menja
                   bezbednosni identitet.
                 </p>
 
