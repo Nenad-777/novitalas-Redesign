@@ -11,8 +11,7 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   ukraine: "/geopolitika-ukrajina.jpg",
   iran: "/tehran-riots.jpg",
-  // ✅ privremeno: koristi Iran sliku dok ne ubaciš posebnu
-  izraelIran: "/tehran-riots.jpg",
+  izraelIran: "/f22-israel-iran-2026.jpg",
   europeMap:
     "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/IUipaYMrvJEhhnzZ.png",
 };
