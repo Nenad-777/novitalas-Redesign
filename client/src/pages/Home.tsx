@@ -104,16 +104,16 @@ export default function Home() {
           }}
         />
         <div className="absolute bottom-8 left-0 right-0 text-center">
-          <p
-            className="text-[28px] md:text-[36px] italic tracking-wide"
-            style={{
-              fontFamily: "'Playfair Display', serif",
-              color: isDark ? "rgba(246,243,232,0.9)" : "#1a2a3a",
-              textShadow: isDark ? "0 2px 8px rgba(0,0,0,0.5)" : "none",
-            }}
-          >
-            Vaš prozor u svet
-          </p>
+<p
+  className="hero-tagline text-[28px] md:text-[36px] italic tracking-wide"
+  style={{
+    fontFamily: "'Playfair Display', serif",
+    color: isDark ? "rgba(246,243,232,0.9)" : "#1a2a3a",
+    textShadow: isDark ? "0 2px 8px rgba(0,0,0,0.5)" : "none",
+  }}
+>
+  Vaš prozor u svet
+</p>
         </div>
       </section>
 
