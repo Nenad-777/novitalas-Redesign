@@ -23,6 +23,8 @@ import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
 import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
 
+import SukobiIzraelIran2026 from "./pages/sukobi-izrael-iran-2026";
+
 function Router() {
   return (
     <Switch>
@@ -60,6 +62,16 @@ function Router() {
       <Route
         path="/geopolitika/iran-protesti-2026/"
         component={IranProtesti2026}
+      />
+
+            {/* ✅ NOVA VEST: Izrael - Iran */}
+      <Route
+        path="/geopolitika/sukobi-izrael-iran-2026"
+        component={SukobiIzraelIran2026}
+      />
+      <Route
+        path="/geopolitika/sukobi-izrael-iran-2026/"
+        component={SukobiIzraelIran2026}
       />
 
       <Route path="/geopolitika" component={GeopolitikaIndex} />
