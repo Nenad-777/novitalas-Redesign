@@ -11,6 +11,9 @@ export default function SukobiIzraelIran2026() {
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
+  // ✅ promeni datum po potrebi (ovo je prikazni datum članka)
+  const dateLabel = "28. februar 2026";
+
   return (
     <div
       className="min-h-screen flex flex-col transition-colors duration-300"
@@ -20,17 +23,34 @@ export default function SukobiIzraelIran2026() {
 
       <main className="flex-1 py-12 md:py-16">
         <article className="max-w-[850px] mx-auto px-5">
-          {/* Kicker */}
+          {/* Kicker + Date */}
           <div className="mb-6">
-            <span
-              className="text-[12px] font-semibold uppercase tracking-[0.1em]"
-              style={{
-                fontFamily: "'Source Sans 3', sans-serif",
-                color: isDark ? "#d9bf7a" : "#8B0000",
-              }}
-            >
-              Geopolitika
-            </span>
+            <div className="flex items-baseline gap-3 flex-wrap">
+              <span
+                className="text-[12px] font-semibold uppercase tracking-[0.1em]"
+                style={{
+                  fontFamily: "'Source Sans 3', sans-serif",
+                  color: isDark ? "#d9bf7a" : "#8B0000",
+                }}
+              >
+                Geopolitika
+              </span>
+
+              <span
+                className="text-[12px] tracking-[0.06em]"
+                style={{
+                  fontFamily: "'Source Sans 3', sans-serif",
+                  color: isDark ? "#9a978f" : "#666",
+                }}
+              >
+                {dateLabel}
+              </span>
+            </div>
+
+            <div
+              className="mt-4 h-px w-full"
+              style={{ backgroundColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
+            />
           </div>
 
           {/* Naslov */}
