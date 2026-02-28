@@ -41,10 +41,13 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Custom Novi Talas colors */
+  /* Custom Novi Talas fonts */
   --font-display: 'Playfair Display', Georgia, serif;
   --font-heading: 'Lora', Georgia, serif;
-  --font-body: 'Crimson Pro', Georgia, serif;
+
+  /* ✅ NEW: Body font improved (FA feel) */
+  --font-body: 'Lora', Georgia, serif;
+
   --font-ui: 'Source Sans 3', -apple-system, sans-serif;
 }
 
@@ -145,14 +148,17 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  /* ✅ Global body text (all site text) */
   body {
     @apply bg-background text-foreground;
-    font-family: 'Crimson Pro', Georgia, serif;
+    font-family: var(--font-body);
     font-size: 18px;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [type="button"]:not(:disabled),
@@ -165,8 +171,9 @@
     @apply cursor-pointer;
   }
 
+  /* ✅ Headings stay as-is */
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: var(--font-display);
     line-height: 1.15;
     letter-spacing: -0.01em;
   }
@@ -203,7 +210,7 @@
 
   /* Kicker label — uppercase category tags */
   .kicker {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: var(--font-ui);
     font-weight: 700;
     font-size: 12px;
     letter-spacing: 0.14em;
@@ -236,7 +243,7 @@
 
   /* Photo credit */
   .photo-credit {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: var(--font-ui);
     font-size: 12px;
     color: #888;
     margin-top: 6px;
