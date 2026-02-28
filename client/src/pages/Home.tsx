@@ -1,8 +1,8 @@
 /*
  * DESIGN: "Diplomatska Klasika" v2  -  Foreign Affairs-inspired homepage
  * Update:
- * - Main feature: Iran (left)
- * - Sidebar: Srbija + Naša planeta (ALMA) + Ukrajina
+ * - Main feature: Izrael–Iran 2026 (left)
+ * - Sidebar: Srbija + Naša planeta (ALMA) + Iran protesti (umesto Ukrajine)
  * - Removed: Obaveštajni izvori block from homepage
  * - Removed: bottom "rubrike" list (no sub-menu at bottom)
  */
@@ -15,8 +15,12 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
   hero: "https://private-us-east-1.manuscdn.com/sessionFile/6SqA6Ltpws9fwNQXZCXsiu/sandbox/VqzKWVZr2iULAAnWvkb1OW-img-1_1771300001000_na1fn_bm92aS10YWxhcy1oZXJv.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvNlNxQTZMdHB3czlmd05RWFpDWHNpdS9zYW5kYm94L1ZxektXVlpyMmlVTEFBbld2a2IxT1ctaW1nLTFfMTc3MTMwMDAwMTAwMF9uYTFmbl9ibTkyYVMxMFlXeGhjeTFvWlhKdi5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=vickhcvz4~YbTDCmOZhcH-ccU4yQa-vO1nYi1RLKmWenh~BaokXfByyTseqceDOn1X95WCs8wu7sSrWuIbTkJ6fguujMipq08NjRX1CToVLGeSsLojJufY422QdYrD9T1z6SshXDh~iExPwB4wgbaVzdMdV90Rr1KKKXfyMjDMM3CyteXDVgswhyX45ttKg8vzRwBDfhSUQC4bb82yVt7rMLjZxh9~1GCxqdL3mee1F3-~YRdsnOihaF0dNZr5bXlVerTFJSqX5Rc1IkCAb2fF0~1BeJ5HplAhZyX1BsckBjaIROXZaXBMebgoAgcgDaoVQ~fPIDb9NceHutx99iew__",
+
   ukraine: "/geopolitika-ukrajina.jpg",
   iranRiots: "/tehran-riots.jpg",
+
+  // ✅ GLAVNA VEST slika
+  izraelIran: "/f22-israel-iran-2026.jpg",
 
   // ⬇️ promeni na TAČAN naziv fajla koji si ubacio u /public
   alma: "/alma-mlecni-put.jpg",
@@ -140,7 +144,7 @@ export default function Home() {
 
           {/* Two-column grid */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14">
-            {/* LEFT: Main feature  -  IRAN */}
+            {/* LEFT: Main feature  -  IZRAEL–IRAN */}
             <FadeIn>
               <article>
                 <span className="kicker">Geopolitika</span>
@@ -153,11 +157,10 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/geopolitika/iran-protesti-2026"
+                    href="/geopolitika/sukobi-izrael-iran-2026"
                     className="headline-link"
                   >
-                    Iran: protesti zahvatili najmanje 10 univerziteta, BBC potvrdio
-                    snimke sukoba
+                    Izrael–Iran 2026: nova eskalacija i crvene linije regiona
                   </Link>
                 </h1>
 
@@ -168,14 +171,15 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Novi talas studentskih protesta širi se kroz glavne univerzitetske
-                  centre. Verifikovani snimci ukazuju na sukobe demonstranata i
-                  prorežimskih grupa, dok vlast pojačava represiju i pravosudni pritisak.
+                  Spirala odgovora ponovo podiže cenu greške: vojni signali, diplomatske
+                  poruke i regionalni posrednici ulaze u istu jednačinu. Šta je sada
+                  drugačije — i gde su pragovi posle kojih se kriza više ne može vratiti
+                  na „kontrolisani konflikt“?
                 </p>
 
                 <figure className="mb-0">
                   <Link
-                    href="/geopolitika/iran-protesti-2026"
+                    href="/geopolitika/sukobi-izrael-iran-2026"
                     className="block no-underline"
                   >
                     <div
@@ -186,8 +190,8 @@ export default function Home() {
                       }}
                     >
                       <img
-                        src={IMAGES.iranRiots}
-                        alt="Geopolitika  -  Iran protesti"
+                        src={IMAGES.izraelIran}
+                        alt="Geopolitika  -  Izrael–Iran 2026"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                       />
                     </div>
@@ -196,7 +200,7 @@ export default function Home() {
               </article>
             </FadeIn>
 
-            {/* RIGHT: Sidebar (Srbija + Naša planeta + Ukrajina) */}
+            {/* RIGHT: Sidebar (Srbija + Naša planeta + Iran protesti) */}
             <aside>
               <FadeIn>
                 <div className="flex flex-col">
@@ -301,7 +305,7 @@ export default function Home() {
 
                   <hr className="editorial-divider my-5" />
 
-                  {/* Ukrajina */}
+                  {/* Iran protesti (premešteno iz glavne vesti) */}
                   <div>
                     <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
                       <div>
@@ -314,10 +318,10 @@ export default function Home() {
                           }}
                         >
                           <Link
-                            href="/geopolitika/ukrajina-cetiri-godine-rata"
+                            href="/geopolitika/iran-protesti-2026"
                             className="headline-link"
                           >
-                            Četiri godine rata: šta sada određuje cenu mira
+                            Iran: protesti zahvatili najmanje 10 univerziteta, BBC potvrdio snimke sukoba
                           </Link>
                         </h3>
                         <p
@@ -327,12 +331,12 @@ export default function Home() {
                             color: isDark ? "#7a7872" : "#666",
                           }}
                         >
-                          Rat traje, ali se menja logika odluka  -  i pragovi rizika.
+                          Kampusi ključaju, a pravosudni pritisak raste.
                         </p>
                       </div>
                       <img
-                        src={IMAGES.ukraine}
-                        alt="Geopolitika  -  Ukrajina"
+                        src={IMAGES.iranRiots}
+                        alt="Geopolitika  -  Iran protesti"
                         className="w-[100px] h-[75px] object-cover border"
                         style={{
                           borderColor: isDark ? "#2a2a2e" : "#eee",
