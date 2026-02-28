@@ -273,3 +273,9 @@ button, input, select, textarea,
 .kicker, .photo-credit {
   font-family: var(--nt-ui-font) !important;
 }
+/* ===== FIX: keep hero tagline elegant (Playfair italic) ===== */
+.hero-tagline {
+  font-family: var(--nt-display-font) !important;
+  font-style: italic !important;
+  letter-spacing: 0.01em;
+}
