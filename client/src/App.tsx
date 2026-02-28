@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
 
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
@@ -25,107 +25,102 @@ import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
 
 import SukobiIzraelIran2026 from "./pages/sukobi-izrael-iran-2026";
 
+/**
+ * ✅ Normalizuje URL:
+ * - /nešto/  -> /nešto
+ * - //...   -> /
+ * - ne dira root "/"
+ *
+ * Ovo ti zamenjuje potrebu da dupliraš sve rute sa i bez trailing slash.
+ */
+function NormalizePath() {
+  const [location, setLocation] = useLocation();
+
+  // ne diramo root
+  if (location === "/") return null;
+
+  // skini višak slash-eva na kraju
+  const normalized = location.replace(/\/+$/, "");
+
+  // ako se razlikuje, preusmeri
+  if (normalized !== location) {
+    // replace: true da ne pravi novu istoriju (wouter podržava objekat)
+    setLocation(normalized, { replace: true } as any);
+  }
+
+  return null;
+}
+
 function Router() {
   return (
-    <Switch>
-      {/* Home */}
-      <Route path="/" component={Home} />
+    <>
+      <NormalizePath />
 
-      {/* Geopolitika */}
-      <Route path="/geopolitika/iran" component={GeopolitikaIran} />
-      <Route path="/geopolitika/iran/" component={GeopolitikaIran} />
+      <Switch>
+        {/* Home */}
+        <Route path="/" component={Home} />
 
-      <Route
-        path="/geopolitika/nova-bezbednosna-arhitektura"
-        component={GeopolitikaArticle}
-      />
-      <Route
-        path="/geopolitika/nova-bezbednosna-arhitektura/"
-        component={GeopolitikaArticle}
-      />
+        {/* =========================
+            GEOPOLITIKA (specifično)
+           ========================= */}
+        <Route path="/geopolitika/iran" component={GeopolitikaIran} />
 
-      {/* ✅ NOVA VEST: Ukrajina */}
-      <Route
-        path="/geopolitika/ukrajina-cetiri-godine-rata"
-        component={UkrajinaCetiriGodine}
-      />
-      <Route
-        path="/geopolitika/ukrajina-cetiri-godine-rata/"
-        component={UkrajinaCetiriGodine}
-      />
+        <Route
+          path="/geopolitika/nova-bezbednosna-arhitektura"
+          component={GeopolitikaArticle}
+        />
 
-      {/* ✅ NOVA VEST: Iran – protesti */}
-      <Route
-        path="/geopolitika/iran-protesti-2026"
-        component={IranProtesti2026}
-      />
-      <Route
-        path="/geopolitika/iran-protesti-2026/"
-        component={IranProtesti2026}
-      />
+        <Route
+          path="/geopolitika/ukrajina-cetiri-godine-rata"
+          component={UkrajinaCetiriGodine}
+        />
 
-            {/* ✅ NOVA VEST: Izrael - Iran */}
-      <Route
-        path="/geopolitika/sukobi-izrael-iran-2026"
-        component={SukobiIzraelIran2026}
-      />
-      <Route
-        path="/geopolitika/sukobi-izrael-iran-2026/"
-        component={SukobiIzraelIran2026}
-      />
+        <Route
+          path="/geopolitika/iran-protesti-2026"
+          component={IranProtesti2026}
+        />
 
-      <Route path="/geopolitika" component={GeopolitikaIndex} />
-      <Route path="/geopolitika/" component={GeopolitikaIndex} />
+        <Route
+          path="/geopolitika/sukobi-izrael-iran-2026"
+          component={SukobiIzraelIran2026}
+        />
 
-      {/* Obaveštajni izvori */}
-      <Route path="/obavestajni-izvori" component={ObavestajniArticle} />
-      <Route path="/obavestajni-izvori/" component={ObavestajniArticle} />
+        {/* Geopolitika index (mora posle specifičnih ruta) */}
+        <Route path="/geopolitika" component={GeopolitikaIndex} />
 
-      <Route
-        path="/obavestajni-izvori/rat-senki"
-        component={ObavestajniArticle}
-      />
-      <Route
-        path="/obavestajni-izvori/rat-senki/"
-        component={ObavestajniArticle}
-      />
+        {/* =========================
+            OBAVEŠTAJNI IZVORI
+           ========================= */}
+        <Route path="/obavestajni-izvori" component={ObavestajniArticle} />
+        <Route path="/obavestajni-izvori/rat-senki" component={ObavestajniArticle} />
 
-      {/* Srbija */}
-      <Route path="/srbija" component={SrbijaPage} />
-      <Route path="/srbija/" component={SrbijaPage} />
+        {/* =========================
+            SRBIJA
+           ========================= */}
+        <Route path="/srbija" component={SrbijaPage} />
 
-      <Route
-        path="/srbija/mars-za-pravosudje"
-        component={SrbijaMarsZaPravosudje}
-      />
-      <Route
-        path="/srbija/mars-za-pravosudje/"
-        component={SrbijaMarsZaPravosudje}
-      />
+        <Route
+          path="/srbija/mars-za-pravosudje"
+          component={SrbijaMarsZaPravosudje}
+        />
 
-      <Route path="/srbija/podeljeno-drustvo" component={SrbijaPolarizacija} />
-      <Route
-        path="/srbija/podeljeno-drustvo/"
-        component={SrbijaPolarizacija}
-      />
+        <Route path="/srbija/podeljeno-drustvo" component={SrbijaPolarizacija} />
 
-      {/* ✅ Naša planeta */}
-      <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
-      <Route path="/nasa-planeta/" component={NasaPlanetaIndex} />
+        {/* =========================
+            NAŠA PLANETA
+           ========================= */}
+        <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
 
-      <Route
-        path="/nasa-planeta/alma-skriveno-jezgro"
-        component={AlmaSkrivenoJezgro}
-      />
-      <Route
-        path="/nasa-planeta/alma-skriveno-jezgro/"
-        component={AlmaSkrivenoJezgro}
-      />
+        <Route
+          path="/nasa-planeta/alma-skriveno-jezgro"
+          component={AlmaSkrivenoJezgro}
+        />
 
-      {/* 404 */}
-      <Route path="/404" component={NotFound} />
-      <Route component={NotFound} />
-    </Switch>
+        {/* 404 */}
+        <Route path="/404" component={NotFound} />
+        <Route component={NotFound} />
+      </Switch>
+    </>
   );
 }
 
