@@ -11,6 +11,8 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   ukraine: "/geopolitika-ukrajina.jpg",
   iran: "/tehran-riots.jpg",
+  // ✅ privremeno: koristi Iran sliku dok ne ubaciš posebnu
+  izraelIran: "/tehran-riots.jpg",
   europeMap:
     "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/IUipaYMrvJEhhnzZ.png",
 };
@@ -56,7 +58,60 @@ export default function GeopolitikaIndex() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* 1) NOVA VEST (Iran — protesti) */}
+            {/* ✅ 1) NOVA VEST (Izrael–Iran) */}
+            <article>
+              <Link
+                href="/geopolitika/sukobi-izrael-iran-2026"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.izraelIran}
+                    alt="Geopolitika — Izrael Iran"
+                    className="w-full h-[220px] object-cover object-center block"
+                  />
+                </div>
+
+                <h2
+                  className="text-[22px] md:text-[26px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  IZRAEL–IRAN: nova eskalacija i crvene linije regiona (2026)
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Šta se menja na terenu, šta u diplomatiji — i gde su granice
+                  kontrole u spirali odgovora.
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
+
+            {/* 2) NOVA VEST (Iran — protesti) */}
             <article>
               <Link
                 href="/geopolitika/iran-protesti-2026"
@@ -110,7 +165,7 @@ export default function GeopolitikaIndex() {
               </Link>
             </article>
 
-            {/* 2) NOVA VEST (Ukrajina) */}
+            {/* 3) NOVA VEST (Ukrajina) */}
             <article>
               <Link
                 href="/geopolitika/ukrajina-cetiri-godine-rata"
@@ -163,7 +218,7 @@ export default function GeopolitikaIndex() {
               </Link>
             </article>
 
-            {/* 3) STARA VEST (Evropa) */}
+            {/* 4) STARA VEST (Evropa) */}
             <article className="md:col-span-2">
               <Link
                 href="/geopolitika/nova-bezbednosna-arhitektura"
