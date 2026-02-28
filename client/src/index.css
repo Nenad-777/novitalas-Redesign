@@ -248,3 +248,28 @@ body {
     margin-top: 6px;
   }
 }
+/* ===== NT FORCE TYPOGRAPHY (overrides inline fontFamily) ===== */
+:root {
+  --nt-body-font: 'Lora', Georgia, serif;
+  --nt-ui-font: 'Source Sans 3', -apple-system, sans-serif;
+  --nt-display-font: 'Playfair Display', Georgia, serif;
+}
+
+/* Force reading text everywhere (beats inline styles) */
+body, main, article, section,
+p, li, blockquote, figcaption, dd, dt,
+span, div, a, em, strong, small {
+  font-family: var(--nt-body-font) !important;
+}
+
+/* Keep headings as display font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--nt-display-font) !important;
+}
+
+/* Keep UI elements in UI font */
+header, nav, footer,
+button, input, select, textarea,
+.kicker, .photo-credit {
+  font-family: var(--nt-ui-font) !important;
+}
