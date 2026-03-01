@@ -362,7 +362,7 @@ export default function Home() {
   style={{
     fontFamily: "'Playfair Display', serif",
     fontStyle: "italic",
-    fontWeight: 500,
+    fontWeight: 400,
     letterSpacing: "0.01em",
   }}
 >
