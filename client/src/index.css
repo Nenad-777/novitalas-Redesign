@@ -285,3 +285,16 @@ button, input, select, textarea,
   font-style: italic !important;
   font-family: 'Playfair Display', Georgia, serif !important;
 }
+@layer components {
+  .nt-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .nt-body {
+    font-family: 'Crimson Pro', Georgia, serif;
+  }
+
+  .nt-italic {
+    font-style: italic;
+  }
+}
