@@ -31,9 +31,11 @@ const IMAGES = {
 // Simple fade-in on scroll hook
 function useFadeIn() {
   const ref = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -44,9 +46,11 @@ function useFadeIn() {
       },
       { threshold: 0.1 }
     );
+
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
+
   return ref;
 }
 
@@ -58,6 +62,7 @@ function FadeIn({
   className?: string;
 }) {
   const ref = useFadeIn();
+
   return (
     <div
       ref={ref}
@@ -95,6 +100,7 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ opacity: isDark ? 0.6 : 0.9 }}
         />
+
         <div
           className="absolute inset-0"
           style={{
@@ -103,17 +109,18 @@ export default function Home() {
               : "linear-gradient(to top, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.2) 50%, transparent 100%)",
           }}
         />
+
         <div className="absolute bottom-8 left-0 right-0 text-center">
-<p
-  className="hero-tagline text-[28px] md:text-[36px] italic tracking-wide"
-  style={{
-    fontFamily: "'Playfair Display', serif",
-    color: isDark ? "rgba(246,243,232,0.9)" : "#1a2a3a",
-    textShadow: isDark ? "0 2px 8px rgba(0,0,0,0.5)" : "none",
-  }}
->
-  Vaš prozor u svet
-</p>
+          <p
+            className="hero-tagline text-[28px] md:text-[36px] italic tracking-wide"
+            style={{
+              fontFamily: "'Playfair Display', Georgia, serif",
+              color: isDark ? "rgba(246,243,232,0.9)" : "#1a2a3a",
+              textShadow: isDark ? "0 2px 8px rgba(0,0,0,0.5)" : "none",
+            }}
+          >
+            Vaš prozor u svet
+          </p>
         </div>
       </section>
 
@@ -129,7 +136,7 @@ export default function Home() {
               <span
                 className="text-[11px] font-bold tracking-[0.14em] uppercase"
                 style={{
-                  fontFamily: "'Source Sans 3', sans-serif",
+                  fontFamily: "'Source Sans 3', -apple-system, sans-serif",
                   color: isDark ? "#d9bf7a" : "#8B0000",
                 }}
               >
@@ -150,31 +157,31 @@ export default function Home() {
                 <span className="kicker">Geopolitika</span>
 
                 <h1
-  className="mt-2 mb-3 text-[32px] md:text-[42px] leading-[1.1]"
-  style={{
-    fontFamily: "'Playfair Display', serif",
-    fontWeight: 700,
-    color: isDark ? "#e0ddd5" : "#111",
-  }}
->
+                  className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
+                  style={{
+                    fontFamily: "'Playfair Display', Georgia, serif",
+                    fontWeight: 700,
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
                   <Link
                     href="/geopolitika/sukobi-izrael-iran-2026"
                     className="headline-link"
+                    style={{
+                      fontFamily: "'Playfair Display', Georgia, serif",
+                    }}
                   >
                     Izrael–Iran 2026: nova eskalacija i crvene linije regiona
                   </Link>
-               <h1
-  className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
-  style={{
-    fontFamily: "'Playfair Display', Georgia, serif",
-    fontWeight: 700,
-    color: isDark ? "#e0ddd5" : "#111",
-  }}
->
-  <Link href="/geopolitika/sukobi-izrael-iran-2026" className="headline-link">
-    Izrael–Iran 2026: nova eskalacija i crvene linije regiona
-  </Link>
-</h1>
+                </h1>
+
+                <p
+                  className="text-[18px] md:text-[19px] leading-[1.6] mb-5"
+                  style={{
+                    fontFamily: "'Lora', Georgia, serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
                   Spirala odgovora ponovo podiže cenu greške: vojni signali, diplomatske
                   poruke i regionalni posrednici ulaze u istu jednačinu. Šta je sada
                   drugačije — i gde su pragovi posle kojih se kriza više ne može vratiti
@@ -204,7 +211,7 @@ export default function Home() {
               </article>
             </FadeIn>
 
-            {/* RIGHT: Sidebar (Srbija + Naša planeta + Iran protesti) */}
+            {/* RIGHT: Sidebar */}
             <aside>
               <FadeIn>
                 <div className="flex flex-col">
@@ -216,29 +223,25 @@ export default function Home() {
                         <h3
                           className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
                           style={{
-                            fontFamily: "'Lora', serif",
+                            fontFamily: "'Lora', Georgia, serif",
                             color: isDark ? "#e0ddd5" : "#111",
                           }}
                         >
-                          <Link
-                            href="/srbija/mars-za-pravosudje"
-                            className="headline-link"
-                          >
-                            Marš za pravosuđe: kada institucije postanu centralno
-                            političko pitanje
+                          <Link href="/srbija/mars-za-pravosudje" className="headline-link">
+                            Marš za pravosuđe: kada institucije postanu centralno političko pitanje
                           </Link>
                         </h3>
                         <p
                           className="mt-1 text-[14px] leading-[1.5]"
                           style={{
-                            fontFamily: "'Crimson Pro', serif",
+                            fontFamily: "'Lora', Georgia, serif",
                             color: isDark ? "#7a7872" : "#666",
                           }}
                         >
-                          Sudije, tužioci i građani otvorili su pitanje nezavisnosti
-                          institucija.
+                          Sudije, tužioci i građani otvorili su pitanje nezavisnosti institucija.
                         </p>
                       </div>
+
                       <img
                         src={IMAGES.srbijaThumb}
                         alt="Marš za pravosuđe"
@@ -253,7 +256,7 @@ export default function Home() {
 
                   <hr className="editorial-divider my-5" />
 
-                  {/* Naša planeta (ALMA) */}
+                  {/* Naša planeta */}
                   <div>
                     <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
                       <div>
@@ -261,7 +264,7 @@ export default function Home() {
                         <h3
                           className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
                           style={{
-                            fontFamily: "'Lora', serif",
+                            fontFamily: "'Lora', Georgia, serif",
                             color: isDark ? "#e0ddd5" : "#111",
                           }}
                         >
@@ -272,16 +275,18 @@ export default function Home() {
                             Najveća ALMA mapa ikad: otkriveno „skriveno jezgro“ Mlečnog puta
                           </Link>
                         </h3>
+
                         <p
                           className="mt-1 text-[14px] leading-[1.5]"
                           style={{
-                            fontFamily: "'Crimson Pro', serif",
+                            fontFamily: "'Lora', Georgia, serif",
                             color: isDark ? "#7a7872" : "#666",
                           }}
                         >
-                          Umesto zvezda, gledamo sirovinu od koje nastaju  -  gas, prašinu i hemiju.
+                          Umesto zvezda, gledamo sirovinu od koje nastaju — gas, prašina i hemija.
                         </p>
                       </div>
+
                       <img
                         src={IMAGES.alma}
                         alt="ALMA  -  jezgro Mlečnog puta"
@@ -298,7 +303,7 @@ export default function Home() {
                         href="/nasa-planeta"
                         className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.08em] no-underline"
                         style={{
-                          fontFamily: "'Source Sans 3', sans-serif",
+                          fontFamily: "'Source Sans 3', -apple-system, sans-serif",
                           color: isDark ? "#d9bf7a" : "#8B0000",
                         }}
                       >
@@ -309,7 +314,7 @@ export default function Home() {
 
                   <hr className="editorial-divider my-5" />
 
-                  {/* Iran protesti (premešteno iz glavne vesti) */}
+                  {/* Iran protesti */}
                   <div>
                     <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
                       <div>
@@ -317,7 +322,7 @@ export default function Home() {
                         <h3
                           className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
                           style={{
-                            fontFamily: "'Lora', serif",
+                            fontFamily: "'Lora', Georgia, serif",
                             color: isDark ? "#e0ddd5" : "#111",
                           }}
                         >
@@ -328,16 +333,18 @@ export default function Home() {
                             Iran: protesti zahvatili najmanje 10 univerziteta, BBC potvrdio snimke sukoba
                           </Link>
                         </h3>
+
                         <p
                           className="mt-1 text-[14px] leading-[1.5]"
                           style={{
-                            fontFamily: "'Crimson Pro', serif",
+                            fontFamily: "'Lora', Georgia, serif",
                             color: isDark ? "#7a7872" : "#666",
                           }}
                         >
                           Kampusi ključaju, a pravosudni pritisak raste.
                         </p>
                       </div>
+
                       <img
                         src={IMAGES.iranRiots}
                         alt="Geopolitika  -  Iran protesti"
@@ -361,27 +368,29 @@ export default function Home() {
               style={{ backgroundColor: isDark ? "#0d0d0f" : "#1a2a3a" }}
             >
               <div className="py-16 px-8 text-center">
-<p
-  className="cta-title text-white/90 text-[28px] md:text-[34px] mb-3"
-  style={{
-    fontFamily: "'Playfair Display', serif",
-    fontStyle: "italic",
-    fontWeight: 400,
-    letterSpacing: "0.01em",
-  }}
->
-  Budite informisani.
-</p>
+                <p
+                  className="cta-title text-white/90 text-[28px] md:text-[34px] mb-3"
+                  style={{
+                    fontFamily: "'Playfair Display', Georgia, serif",
+                    fontStyle: "italic",
+                    fontWeight: 400,
+                    letterSpacing: "0.01em",
+                  }}
+                >
+                  Budite informisani.
+                </p>
+
                 <p
                   className="text-white/70 text-[16px] max-w-[560px] mx-auto mb-6"
-                  style={{ fontFamily: "'Crimson Pro', serif" }}
+                  style={{ fontFamily: "'Lora', Georgia, serif" }}
                 >
                   Pratite Novi talas za ekskluzivne analize iz oblasti geopolitike,
-                  bezbednosti  -  i od sada: Naše planete.
+                  bezbednosti — i od sada: Naše planete.
                 </p>
+
                 <span
                   className="inline-block bg-[#8B0000] text-white text-[12px] font-bold tracking-[0.12em] uppercase px-8 py-3 hover:bg-[#6B0000] transition-colors duration-200"
-                  style={{ fontFamily: "'Source Sans 3', sans-serif" }}
+                  style={{ fontFamily: "'Source Sans 3', -apple-system, sans-serif" }}
                 >
                   Pratite nas
                 </span>
