@@ -291,3 +291,30 @@
     letter-spacing: 0.01em;
   }
 }
+/* === NT READING SIZE FIX (global) === */
+/* vraća “Foreign Affairs” osećaj teksta: veći, prozračan, čitljiv */
+:root {
+  --nt-reading-size: 18px;
+  --nt-reading-line: 1.75;
+}
+
+body {
+  font-size: var(--nt-reading-size) !important;
+  line-height: var(--nt-reading-line) !important;
+  font-family: 'Lora', Georgia, serif !important;
+}
+
+/* svi paragrafi i “reading” elementi */
+p, li, blockquote, figcaption {
+  font-size: 1em !important;        /* 18px iz body */
+  line-height: inherit !important;  /* 1.75 */
+}
+
+/* mali UI tekst (kicker, meta, sitno) ostaje mali */
+.kicker,
+.photo-credit,
+header nav,
+footer,
+small {
+  font-family: 'Source Sans 3', -apple-system, sans-serif !important;
+}
