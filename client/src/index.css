@@ -3,6 +3,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* =========================================
+   THEME TOKENS (Tailwind v4 style)
+========================================= */
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -15,7 +18,6 @@
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
-
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
@@ -30,40 +32,16 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
-
-  /* Fonts (brand system) */
-  --font-display: "Playfair Display", Georgia, serif;     /* titles */
-  --font-body: "Lora", Georgia, serif;                   /* reading text */
-  --font-ui: "Source Sans 3", -apple-system, sans-serif; /* UI */
+  /* Novi Talas fonts */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Lora', Georgia, serif;
+  --font-ui: 'Source Sans 3', -apple-system, system-ui, sans-serif;
 }
 
+/* =========================================
+   LIGHT TOKENS
+========================================= */
 :root {
-  --primary: oklch(0.35 0.12 25);
-  --primary-foreground: oklch(0.98 0 0);
-
-  --sidebar-primary: oklch(0.35 0.12 25);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-
-  --chart-1: oklch(0.35 0.12 25);
-  --chart-2: oklch(0.45 0.10 25);
-  --chart-3: oklch(0.55 0.08 25);
-  --chart-4: oklch(0.65 0.06 25);
-  --chart-5: oklch(0.75 0.04 25);
-
   --radius: 0.25rem;
 
   --background: oklch(1 0 0);
@@ -74,6 +52,9 @@
 
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.13 0.01 60);
+
+  --primary: oklch(0.35 0.12 25);
+  --primary-foreground: oklch(0.98 0 0);
 
   --secondary: oklch(0.97 0.002 60);
   --secondary-foreground: oklch(0.35 0.01 60);
@@ -91,35 +72,24 @@
   --input: oklch(0.90 0.005 60);
   --ring: oklch(0.35 0.12 25);
 
-  --sidebar: oklch(0.98 0 0);
-  --sidebar-foreground: oklch(0.13 0.01 60);
-  --sidebar-accent: oklch(0.96 0.002 60);
-  --sidebar-accent-foreground: oklch(0.13 0.01 60);
-  --sidebar-border: oklch(0.90 0.005 60);
-  --sidebar-ring: oklch(0.35 0.12 25);
-
-  /* Novi Talas custom vars */
+  /* Novi Talas palette helpers */
   --nt-header-bg: #d6e8f0;
   --nt-header-text: #1a2a3a;
-  --nt-header-accent: #8b0000;
+  --nt-header-accent: #8B0000;
 
   --nt-body-bg: #ffffff;
   --nt-body-text: #111111;
   --nt-body-muted: #555555;
-
   --nt-divider: #e5e5e5;
 
   --nt-footer-bg: #0f1217;
   --nt-footer-text: #c9c6cf;
 }
 
+/* =========================================
+   DARK TOKENS
+========================================= */
 .dark {
-  --primary: oklch(0.55 0.10 25);
-  --primary-foreground: oklch(0.98 0 0);
-
-  --sidebar-primary: oklch(0.55 0.10 25);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-
   --background: oklch(0.13 0.005 250);
   --foreground: oklch(0.90 0.005 60);
 
@@ -128,6 +98,9 @@
 
   --popover: oklch(0.17 0.006 250);
   --popover-foreground: oklch(0.90 0.005 60);
+
+  --primary: oklch(0.55 0.10 25);
+  --primary-foreground: oklch(0.98 0 0);
 
   --secondary: oklch(0.22 0.006 250);
   --secondary-foreground: oklch(0.75 0.005 60);
@@ -145,20 +118,6 @@
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.55 0.10 25);
 
-  --chart-1: oklch(0.55 0.10 25);
-  --chart-2: oklch(0.50 0.08 25);
-  --chart-3: oklch(0.45 0.06 25);
-  --chart-4: oklch(0.40 0.04 25);
-  --chart-5: oklch(0.35 0.02 25);
-
-  --sidebar: oklch(0.17 0.006 250);
-  --sidebar-foreground: oklch(0.90 0.005 60);
-  --sidebar-accent: oklch(0.25 0.006 250);
-  --sidebar-accent-foreground: oklch(0.98 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.55 0.10 25);
-
-  /* Dark mode Novi Talas vars */
   --nt-header-bg: #0d0d0f;
   --nt-header-text: #c9c6cf;
   --nt-header-accent: #d9bf7a;
@@ -166,17 +125,17 @@
   --nt-body-bg: #111318;
   --nt-body-text: #e0ddd5;
   --nt-body-muted: #9a978f;
-
   --nt-divider: #2a2a2e;
 
   --nt-footer-bg: #0a0a0c;
   --nt-footer-text: #8a8790;
 }
 
+/* =========================================
+   BASE
+========================================= */
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
+  * { @apply border-border outline-ring/50; }
 
   body {
     @apply bg-background text-foreground;
@@ -187,89 +146,42 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Headings */
+  /* Display font for headings */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     line-height: 1.15;
     letter-spacing: -0.01em;
   }
-
-  /* Links default */
-  a {
-    color: inherit;
-  }
-
-  button:not(:disabled),
-  [role="button"]:not([aria-disabled="true"]),
-  [type="button"]:not(:disabled),
-  [type="submit"]:not(:disabled),
-  [type="reset"]:not(:disabled),
-  a[href],
-  select:not(:disabled),
-  input[type="checkbox"]:not(:disabled),
-  input[type="radio"]:not(:disabled) {
-    @apply cursor-pointer;
-  }
 }
 
+/* =========================================
+   COMPONENTS
+========================================= */
 @layer components {
-  .container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  @media (min-width: 640px) {
-    .container {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .container {
-      padding-left: 2rem;
-      padding-right: 2rem;
-      max-width: 1200px;
-    }
-  }
-
-  /* Kicker label — uppercase category tags */
   .kicker {
     font-family: var(--font-ui);
     font-weight: 700;
     font-size: 12px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #8b0000;
+    color: #8B0000;
   }
-  .dark .kicker {
-    color: #d9bf7a;
-  }
+  .dark .kicker { color: #d9bf7a; }
 
-  /* Headline links */
   .headline-link {
     color: inherit;
     text-decoration: none;
     transition: color 0.2s ease;
   }
-  .headline-link:hover {
-    color: #8b0000;
-  }
-  .dark .headline-link:hover {
-    color: #d9bf7a;
-  }
+  .headline-link:hover { color: #8B0000; }
+  .dark .headline-link:hover { color: #d9bf7a; }
 
-  /* Thin divider lines */
   .editorial-divider {
     border: none;
     border-top: 1px solid var(--nt-divider);
     margin: 0;
   }
 
-  /* Photo credit */
   .photo-credit {
     font-family: var(--font-ui);
     font-size: 12px;
@@ -277,78 +189,20 @@
     margin-top: 6px;
   }
 
-  /* HERO tagline */
-  .hero-tagline {
-    font-family: var(--font-display);
-    font-style: italic;
-    letter-spacing: 0.01em;
-  }
-
-  /* CTA title (Budite informisani.) */
+  /* Hero + CTA titles */
+  .hero-tagline,
   .cta-title {
     font-family: var(--font-display);
     font-style: italic;
     letter-spacing: 0.01em;
   }
-}
-/* === NT READING SIZE FIX (global) === */
-/* vraća “Foreign Affairs” osećaj teksta: veći, prozračan, čitljiv */
-:root {
-  --nt-reading-size: 18px;
-  --nt-reading-line: 1.75;
-}
 
-body {
-  font-size: var(--nt-reading-size) !important;
-  line-height: var(--nt-reading-line) !important;
-  font-family: 'Lora', Georgia, serif !important;
-}
-
-/* svi paragrafi i “reading” elementi */
-p, li, blockquote, figcaption {
-  font-size: 1em !important;        /* 18px iz body */
-  line-height: inherit !important;  /* 1.75 */
-}
-
-/* mali UI tekst (kicker, meta, sitno) ostaje mali */
-.kicker,
-.photo-credit,
-header nav,
-footer,
-small {
-  font-family: 'Source Sans 3', -apple-system, sans-serif !important;
-}
-/* === NT ARTICLE READING TYPO (fix: sitan tekst u otvorenim vestima) === */
-main article {
-  font-size: 19px !important;
-  line-height: 1.8 !important;
-  font-family: 'Lora', Georgia, serif !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Ne diramo naslove u članku */
-main article h1,
-main article h2,
-main article h3 {
-  font-family: 'Playfair Display', Georgia, serif !important;
-  line-height: 1.15 !important;
-}
-
-/* Kicker i sitna meta ostaju “UI” */
-main article .kicker,
-main article .photo-credit,
-main article time,
-main article small {
-  font-family: 'Source Sans 3', -apple-system, sans-serif !important;
-  font-size: 12px !important;
-  line-height: 1.4 !important;
-}
-
-/* Paragrafi da budu puni i “Foreign Affairs” čitljivi */
-main article p,
-main article li,
-main article blockquote {
-  font-size: 1em !important;   /* 19px iz main article */
-  line-height: inherit !important;
+  /* Optional: “reading comfort” utility for article pages */
+  .nt-reading {
+    font-size: 19px;
+    line-height: 1.8;
+  }
+  @media (min-width: 768px) {
+    .nt-reading { font-size: 20px; }
+  }
 }
