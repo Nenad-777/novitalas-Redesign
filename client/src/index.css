@@ -258,7 +258,7 @@ body {
 /* Force reading text everywhere (beats inline styles) */
 body, main, article, section,
 p, li, blockquote, figcaption, dd, dt,
-span, div, a, em, strong, small {
+span, div, em, strong, small {
   font-family: var(--nt-body-font) !important;
 }
 
