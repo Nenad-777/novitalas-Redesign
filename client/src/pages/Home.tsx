@@ -150,12 +150,13 @@ export default function Home() {
                 <span className="kicker">Geopolitika</span>
 
                 <h1
-                  className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
-                  style={{
-                    fontFamily: "'Playfair Display', serif",
-                    color: isDark ? "#e0ddd5" : "#111",
-                  }}
-                >
+  className="mt-2 mb-3 text-[32px] md:text-[42px] leading-[1.1]"
+  style={{
+    fontFamily: "'Playfair Display', serif",
+    fontWeight: 700,
+    color: isDark ? "#e0ddd5" : "#111",
+  }}
+>
                   <Link
                     href="/geopolitika/sukobi-izrael-iran-2026"
                     className="headline-link"
