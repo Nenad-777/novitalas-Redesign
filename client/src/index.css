@@ -8,12 +8,14 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
+
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
@@ -27,11 +29,13 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -41,44 +45,52 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Custom Novi Talas fonts */
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-heading: 'Lora', Georgia, serif;
-
-  /* ✅ NEW: Body font improved (FA feel) */
-  --font-body: 'Lora', Georgia, serif;
-
-  --font-ui: 'Source Sans 3', -apple-system, sans-serif;
+  /* Fonts (brand system) */
+  --font-display: "Playfair Display", Georgia, serif;     /* titles */
+  --font-body: "Lora", Georgia, serif;                   /* reading text */
+  --font-ui: "Source Sans 3", -apple-system, sans-serif; /* UI */
 }
 
 :root {
   --primary: oklch(0.35 0.12 25);
   --primary-foreground: oklch(0.98 0 0);
+
   --sidebar-primary: oklch(0.35 0.12 25);
   --sidebar-primary-foreground: oklch(0.98 0 0);
+
   --chart-1: oklch(0.35 0.12 25);
   --chart-2: oklch(0.45 0.10 25);
   --chart-3: oklch(0.55 0.08 25);
   --chart-4: oklch(0.65 0.06 25);
   --chart-5: oklch(0.75 0.04 25);
+
   --radius: 0.25rem;
+
   --background: oklch(1 0 0);
   --foreground: oklch(0.13 0.01 60);
+
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.13 0.01 60);
+
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.13 0.01 60);
+
   --secondary: oklch(0.97 0.002 60);
   --secondary-foreground: oklch(0.35 0.01 60);
+
   --muted: oklch(0.96 0.002 60);
   --muted-foreground: oklch(0.50 0.01 60);
+
   --accent: oklch(0.96 0.002 60);
   --accent-foreground: oklch(0.13 0.01 60);
+
   --destructive: oklch(0.35 0.12 25);
   --destructive-foreground: oklch(0.98 0 0);
+
   --border: oklch(0.90 0.005 60);
   --input: oklch(0.90 0.005 60);
   --ring: oklch(0.35 0.12 25);
+
   --sidebar: oklch(0.98 0 0);
   --sidebar-foreground: oklch(0.13 0.01 60);
   --sidebar-accent: oklch(0.96 0.002 60);
@@ -89,11 +101,14 @@
   /* Novi Talas custom vars */
   --nt-header-bg: #d6e8f0;
   --nt-header-text: #1a2a3a;
-  --nt-header-accent: #8B0000;
+  --nt-header-accent: #8b0000;
+
   --nt-body-bg: #ffffff;
   --nt-body-text: #111111;
   --nt-body-muted: #555555;
+
   --nt-divider: #e5e5e5;
+
   --nt-footer-bg: #0f1217;
   --nt-footer-text: #c9c6cf;
 }
@@ -101,30 +116,41 @@
 .dark {
   --primary: oklch(0.55 0.10 25);
   --primary-foreground: oklch(0.98 0 0);
+
   --sidebar-primary: oklch(0.55 0.10 25);
   --sidebar-primary-foreground: oklch(0.98 0 0);
+
   --background: oklch(0.13 0.005 250);
   --foreground: oklch(0.90 0.005 60);
+
   --card: oklch(0.17 0.006 250);
   --card-foreground: oklch(0.90 0.005 60);
+
   --popover: oklch(0.17 0.006 250);
   --popover-foreground: oklch(0.90 0.005 60);
+
   --secondary: oklch(0.22 0.006 250);
   --secondary-foreground: oklch(0.75 0.005 60);
+
   --muted: oklch(0.25 0.006 250);
   --muted-foreground: oklch(0.65 0.01 250);
+
   --accent: oklch(0.25 0.006 250);
   --accent-foreground: oklch(0.95 0.005 60);
+
   --destructive: oklch(0.65 0.18 22);
   --destructive-foreground: oklch(0.98 0 0);
+
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.55 0.10 25);
+
   --chart-1: oklch(0.55 0.10 25);
   --chart-2: oklch(0.50 0.08 25);
   --chart-3: oklch(0.45 0.06 25);
   --chart-4: oklch(0.40 0.04 25);
   --chart-5: oklch(0.35 0.02 25);
+
   --sidebar: oklch(0.17 0.006 250);
   --sidebar-foreground: oklch(0.90 0.005 60);
   --sidebar-accent: oklch(0.25 0.006 250);
@@ -136,10 +162,13 @@
   --nt-header-bg: #0d0d0f;
   --nt-header-text: #c9c6cf;
   --nt-header-accent: #d9bf7a;
+
   --nt-body-bg: #111318;
   --nt-body-text: #e0ddd5;
   --nt-body-muted: #9a978f;
+
   --nt-divider: #2a2a2e;
+
   --nt-footer-bg: #0a0a0c;
   --nt-footer-text: #8a8790;
 }
@@ -149,15 +178,27 @@
     @apply border-border outline-ring/50;
   }
 
-  /* ✅ Global body text (all site text) */
-body {
-  @apply bg-background text-foreground;
-  font-family: 'Lora', Georgia, serif;
-  font-size: 18px;
-  line-height: 1.75;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  /* Links default */
+  a {
+    color: inherit;
+  }
+
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [type="button"]:not(:disabled),
@@ -169,13 +210,6 @@ body {
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
   }
-
-  /* ✅ Headings stay as-is */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
-    line-height: 1.15;
-    letter-spacing: -0.01em;
-  }
 }
 
 @layer components {
@@ -185,11 +219,6 @@ body {
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  .flex {
-    min-height: 0;
-    min-width: 0;
   }
 
   @media (min-width: 640px) {
@@ -214,7 +243,7 @@ body {
     font-size: 12px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #8B0000;
+    color: #8b0000;
   }
   .dark .kicker {
     color: #d9bf7a;
@@ -227,7 +256,7 @@ body {
     transition: color 0.2s ease;
   }
   .headline-link:hover {
-    color: #8B0000;
+    color: #8b0000;
   }
   .dark .headline-link:hover {
     color: #d9bf7a;
@@ -247,54 +276,18 @@ body {
     color: #888;
     margin-top: 6px;
   }
-}
-/* ===== NT FORCE TYPOGRAPHY (overrides inline fontFamily) ===== */
-:root {
-  --nt-body-font: 'Lora', Georgia, serif;
-  --nt-ui-font: 'Source Sans 3', -apple-system, sans-serif;
-  --nt-display-font: 'Playfair Display', Georgia, serif;
-}
 
-/* Force reading text everywhere (beats inline styles) */
-body, main, article, section,
-p, li, blockquote, figcaption, dd, dt,
-span, div, em, strong, small {
-  font-family: var(--nt-body-font) !important;
-}
-
-/* Keep headings as display font */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--nt-display-font) !important;
-}
-
-/* Keep UI elements in UI font */
-header, nav, footer,
-button, input, select, textarea,
-.kicker, .photo-credit {
-  font-family: var(--nt-ui-font) !important;
-}
-/* ===== FIX: keep hero tagline elegant (Playfair italic) ===== */
-.hero-tagline {
-  font-family: var(--nt-display-font) !important;
-  font-style: italic !important;
-  letter-spacing: 0.01em;
-}
-/* Force elegant italic for key brand phrases */
-.hero-tagline,
-.cta-title {
-  font-style: italic !important;
-  font-family: 'Playfair Display', Georgia, serif !important;
-}
-@layer components {
-  .nt-display {
-    font-family: 'Playfair Display', Georgia, serif;
-  }
-
-  .nt-body {
-    font-family: 'Crimson Pro', Georgia, serif;
-  }
-
-  .nt-italic {
+  /* HERO tagline */
+  .hero-tagline {
+    font-family: var(--font-display);
     font-style: italic;
+    letter-spacing: 0.01em;
+  }
+
+  /* CTA title (Budite informisani.) */
+  .cta-title {
+    font-family: var(--font-display);
+    font-style: italic;
+    letter-spacing: 0.01em;
   }
 }
