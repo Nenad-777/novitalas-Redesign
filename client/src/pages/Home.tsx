@@ -357,12 +357,17 @@ export default function Home() {
               style={{ backgroundColor: isDark ? "#0d0d0f" : "#1a2a3a" }}
             >
               <div className="py-16 px-8 text-center">
-                <p
-                  className="text-white/90 text-[28px] md:text-[34px] italic mb-3"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  Budite informisani.
-                </p>
+<p
+  className="cta-title text-white/90 text-[28px] md:text-[34px] mb-3"
+  style={{
+    fontFamily: "'Playfair Display', serif",
+    fontStyle: "italic",
+    fontWeight: 500,
+    letterSpacing: "0.01em",
+  }}
+>
+  Budite informisani.
+</p>
                 <p
                   className="text-white/70 text-[16px] max-w-[560px] mx-auto mb-6"
                   style={{ fontFamily: "'Crimson Pro', serif" }}
