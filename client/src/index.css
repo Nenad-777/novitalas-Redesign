@@ -279,3 +279,9 @@ button, input, select, textarea,
   font-style: italic !important;
   letter-spacing: 0.01em;
 }
+/* Force elegant italic for key brand phrases */
+.hero-tagline,
+.cta-title {
+  font-style: italic !important;
+  font-family: 'Playfair Display', Georgia, serif !important;
+}
