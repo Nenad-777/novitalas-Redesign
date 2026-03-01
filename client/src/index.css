@@ -318,3 +318,37 @@ footer,
 small {
   font-family: 'Source Sans 3', -apple-system, sans-serif !important;
 }
+/* === NT ARTICLE READING TYPO (fix: sitan tekst u otvorenim vestima) === */
+main article {
+  font-size: 19px !important;
+  line-height: 1.8 !important;
+  font-family: 'Lora', Georgia, serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ne diramo naslove u članku */
+main article h1,
+main article h2,
+main article h3 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  line-height: 1.15 !important;
+}
+
+/* Kicker i sitna meta ostaju “UI” */
+main article .kicker,
+main article .photo-credit,
+main article time,
+main article small {
+  font-family: 'Source Sans 3', -apple-system, sans-serif !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+}
+
+/* Paragrafi da budu puni i “Foreign Affairs” čitljivi */
+main article p,
+main article li,
+main article blockquote {
+  font-size: 1em !important;   /* 19px iz main article */
+  line-height: inherit !important;
+}
