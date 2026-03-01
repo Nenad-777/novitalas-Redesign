@@ -163,15 +163,18 @@ export default function Home() {
                   >
                     Izrael–Iran 2026: nova eskalacija i crvene linije regiona
                   </Link>
-                </h1>
-
-                <p
-                  className="text-[18px] md:text-[19px] leading-[1.6] mb-5"
-                  style={{
-                    fontFamily: "'Crimson Pro', serif",
-                    color: isDark ? "#9a978f" : "#555",
-                  }}
-                >
+               <h1
+  className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
+  style={{
+    fontFamily: "'Playfair Display', Georgia, serif",
+    fontWeight: 700,
+    color: isDark ? "#e0ddd5" : "#111",
+  }}
+>
+  <Link href="/geopolitika/sukobi-izrael-iran-2026" className="headline-link">
+    Izrael–Iran 2026: nova eskalacija i crvene linije regiona
+  </Link>
+</h1>
                   Spirala odgovora ponovo podiže cenu greške: vojni signali, diplomatske
                   poruke i regionalni posrednici ulaze u istu jednačinu. Šta je sada
                   drugačije — i gde su pragovi posle kojih se kriza više ne može vratiti
