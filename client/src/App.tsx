@@ -14,6 +14,8 @@ import GeopolitikaArticle from "./pages/GeopolitikaArticle";
 // ✅ VAŽNO: import mora da pogodi TAČNO ime fajla u /pages
 import UkrajinaCetiriGodine from "./pages/ukrajina-cetiri-godine-rata";
 import IranProtesti2026 from "./pages/iran-protesti-2026";
+import SukobiIzraelIran2026 from "./pages/sukobi-izrael-iran-2026";
+import Ormuz from "./pages/ormuz";
 
 import ObavestajniArticle from "./pages/ObavestajniArticle";
 import SrbijaPage from "./pages/SrbijaPage";
@@ -22,8 +24,6 @@ import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 
 import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
 import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
-
-import SukobiIzraelIran2026 from "./pages/sukobi-izrael-iran-2026";
 
 /**
  * ✅ Normalizuje URL:
@@ -85,6 +85,8 @@ function Router() {
           component={SukobiIzraelIran2026}
         />
 
+        <Route path="/geopolitika/ormuz" component={Ormuz} />
+
         {/* Geopolitika index (mora posle specifičnih ruta) */}
         <Route path="/geopolitika" component={GeopolitikaIndex} />
 
@@ -92,7 +94,10 @@ function Router() {
             OBAVEŠTAJNI IZVORI
            ========================= */}
         <Route path="/obavestajni-izvori" component={ObavestajniArticle} />
-        <Route path="/obavestajni-izvori/rat-senki" component={ObavestajniArticle} />
+        <Route
+          path="/obavestajni-izvori/rat-senki"
+          component={ObavestajniArticle}
+        />
 
         {/* =========================
             SRBIJA
@@ -104,7 +109,10 @@ function Router() {
           component={SrbijaMarsZaPravosudje}
         />
 
-        <Route path="/srbija/podeljeno-drustvo" component={SrbijaPolarizacija} />
+        <Route
+          path="/srbija/podeljeno-drustvo"
+          component={SrbijaPolarizacija}
+        />
 
         {/* =========================
             NAŠA PLANETA
