@@ -36,9 +36,11 @@ export default function Ormuz() {
           </h1>
 
           <p
-           className="mt-3 text-[10px] md:text-[11px] uppercase tracking-[0.18em]"
+           className="mt-3 uppercase"
   style={{
     fontFamily: "'Source Sans 3', sans-serif",
+    fontSize: "9px",
+    letterSpacing: "0.20em",
     color: isDark ? "#7f7a72" : "#888",
   }}
 >
