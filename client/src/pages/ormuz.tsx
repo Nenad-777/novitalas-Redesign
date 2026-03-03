@@ -36,13 +36,13 @@ export default function Ormuz() {
           </h1>
 
           <p
-            className="mt-3 text-[13px] font-semibold uppercase tracking-[0.08em]"
-            style={{
-              fontFamily: "'Source Sans 3', sans-serif",
-              color: isDark ? "#9a978f" : "#666",
-            }}
-          >
-            2. mart 2026.
+            className="mt-3 text-[11px] md:text-[12px] uppercase tracking-[0.14em]"
+  style={{
+    fontFamily: "'Source Sans 3', sans-serif",
+    color: isDark ? "#8c887f" : "#777",
+  }}
+>
+  2. MART 2026.
           </p>
 
           <div
