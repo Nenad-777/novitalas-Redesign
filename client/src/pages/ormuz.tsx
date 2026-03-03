@@ -39,7 +39,7 @@ export default function Ormuz() {
           className="mt-3 uppercase"
   style={{
     fontFamily: "'Source Sans 3', sans-serif",
-    fontSize: "11px",
+    fontSize: "12px",
     letterSpacing: "0.16em",
     color: isDark ? "#7f7a72" : "#888",
   }}
