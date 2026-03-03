@@ -36,10 +36,10 @@ export default function Ormuz() {
           </h1>
 
           <p
-            className="mt-3 text-[11px] md:text-[12px] uppercase tracking-[0.14em]"
+           className="mt-3 text-[10px] md:text-[11px] uppercase tracking-[0.18em]"
   style={{
     fontFamily: "'Source Sans 3', sans-serif",
-    color: isDark ? "#8c887f" : "#777",
+    color: isDark ? "#7f7a72" : "#888",
   }}
 >
   2. MART 2026.
