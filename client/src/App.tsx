@@ -85,6 +85,7 @@ function Router() {
           component={SukobiIzraelIran2026}
         />
 
+        {/* ✅ NOVA VEST: Ormuski moreuz */}
         <Route path="/geopolitika/ormuz" component={Ormuz} />
 
         {/* Geopolitika index (mora posle specifičnih ruta) */}
