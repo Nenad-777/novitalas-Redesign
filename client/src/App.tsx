@@ -97,9 +97,15 @@ function Router() {
 
         <Route path="/srbija" component={SrbijaPage} />
 
-        {/* ✅ NOVA VEST */}
+        {/* ✅ NOVA VEST (OG link / canonical) */}
         <Route
           path="/srbija/selo-ne-prasta-poraz"
+          component={SeloNePrastaPoraz}
+        />
+
+        {/* ✅ ALIAS za ljude (da ne udara u public/index.html) */}
+        <Route
+          path="/srbija/selo-ne-prasta-poraz-vest"
           component={SeloNePrastaPoraz}
         />
 
