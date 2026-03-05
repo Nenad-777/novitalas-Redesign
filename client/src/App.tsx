@@ -53,7 +53,6 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
-
         <Route path="/geopolitika/iran" component={GeopolitikaIran} />
 
         <Route
@@ -83,7 +82,6 @@ function Router() {
         {/* =========================
             OBAVEŠTAJNI IZVORI
            ========================= */}
-
         <Route path="/obavestajni-izvori" component={ObavestajniArticle} />
 
         <Route
@@ -94,16 +92,9 @@ function Router() {
         {/* =========================
             SRBIJA
            ========================= */}
-
         <Route path="/srbija" component={SrbijaPage} />
 
-        {/* ✅ NOVA VEST (OG link / canonical) */}
-        <Route
-          path="/srbija/selo-ne-prasta-poraz"
-          component={SeloNePrastaPoraz}
-        />
-
-        {/* ✅ ALIAS za ljude (da ne udara u public/index.html) */}
+        {/* ✅ NOVA VEST (React/TSX ruta za ljude) */}
         <Route
           path="/srbija/selo-ne-prasta-poraz-vest"
           component={SeloNePrastaPoraz}
@@ -122,7 +113,6 @@ function Router() {
         {/* =========================
             NAŠA PLANETA
            ========================= */}
-
         <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
 
         <Route
