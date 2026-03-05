@@ -6,6 +6,14 @@ export default function SeloNePrastaPoraz() {
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
+  const titleColor = isDark ? "#e0ddd5" : "#111";
+  const deckColor = isDark ? "#9a978f" : "#555";
+  const bodyColor = isDark ? "#d4d0c8" : "#222";
+
+  // ✅ Ormuz “magazin” tipografija: Athelas/Georgia
+  const bodyFont = "Athelas, Georgia, serif";
+  const titleFont = "'Playfair Display', Georgia, serif";
+
   return (
     <div
       className="min-h-screen flex flex-col transition-colors duration-300"
@@ -18,24 +26,25 @@ export default function SeloNePrastaPoraz() {
         style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
       >
         <article className="max-w-[900px] mx-auto px-5 py-10 md:py-14">
+          {/* Header блока */}
           <div className="mb-8">
             <span className="kicker">Srbija</span>
 
             <h1
               className="mt-3 text-[34px] md:text-[52px] leading-[1.05] font-bold"
               style={{
-                fontFamily: "'Playfair Display', serif",
-                color: isDark ? "#e0ddd5" : "#111",
+                fontFamily: titleFont,
+                color: titleColor,
               }}
             >
               Selo ne prašta poraz
             </h1>
 
             <p
-              className="mt-4 text-[18px] md:text-[22px] leading-[1.55] max-w-[820px]"
+              className="mt-4 text-[18px] md:text-[22px] leading-[1.6] max-w-[780px]"
               style={{
-                fontFamily: "'Crimson Pro', serif",
-                color: isDark ? "#9a978f" : "#555",
+                fontFamily: bodyFont,
+                color: deckColor,
               }}
             >
               Blokade puteva su završene, ali poljoprivrednici odlaze sa protesta
@@ -44,7 +53,8 @@ export default function SeloNePrastaPoraz() {
             </p>
           </div>
 
-          <figure className="mb-8">
+          {/* Hero slika */}
+          <figure className="mb-10">
             <div
               className="border overflow-hidden"
               style={{
@@ -60,11 +70,12 @@ export default function SeloNePrastaPoraz() {
             </div>
           </figure>
 
+          {/* ✅ Telo teksta: identično “Ormuz osećaju” */}
           <div
-            className="space-y-6 text-[20px] leading-[1.85]"
+            className="max-w-[760px] mx-auto space-y-8 text-[20px] md:text-[22px] leading-[1.9]"
             style={{
-              fontFamily: "'Crimson Pro', serif",
-              color: isDark ? "#d4d0c8" : "#222",
+              fontFamily: bodyFont,
+              color: bodyColor,
             }}
           >
             <p>
