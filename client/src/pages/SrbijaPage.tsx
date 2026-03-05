@@ -58,10 +58,12 @@ export default function SrbijaPage() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-
             {/* NOVA ANALIZA — Selo ne prašta poraz */}
             <article>
-              <Link href="/srbija/selo-ne-prasta-poraz" className="no-underline">
+              <Link
+                href="/srbija/selo-ne-prasta-poraz-vest"
+                className="no-underline"
+              >
                 <div
                   className="border mb-4 overflow-hidden"
                   style={{
@@ -134,7 +136,8 @@ export default function SrbijaPage() {
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  Marš za pravosuđe: kada institucije postanu centralno političko pitanje
+                  Marš za pravosuđe: kada institucije postanu centralno političko
+                  pitanje
                 </h2>
 
                 <p
@@ -144,8 +147,8 @@ export default function SrbijaPage() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Kada sudovi postanu tema politike, društvo raspravlja o sopstvenom
-                  ustavnom identitetu — i o granicama izvršne vlasti.
+                  Kada sudovi postanu tema politike, društvo raspravlja o
+                  sopstvenom ustavnom identitetu — i o granicama izvršne vlasti.
                 </p>
 
                 <div
@@ -195,8 +198,9 @@ export default function SrbijaPage() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Polarizacija više nije izuzetak, već pravilo: od Vašingtona do Evrope,
-                  a zatim i u Srbiji — gde se politička borba pretvara u borbu za legitimitet.
+                  Polarizacija više nije izuzetak, već pravilo: od Vašingtona do
+                  Evrope, a zatim i u Srbiji — gde se politička borba pretvara u
+                  borbu za legitimitet.
                 </p>
 
                 <div
@@ -210,7 +214,6 @@ export default function SrbijaPage() {
                 </div>
               </Link>
             </article>
-
           </div>
 
           {/* Back */}
