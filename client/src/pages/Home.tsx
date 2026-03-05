@@ -340,7 +340,7 @@ export default function Home() {
                           }}
                         >
                           <Link
-                            href="/srbija/selo-ne-prasta-poraz"
+                            href="/srbija/selo-ne-prasta-poraz-vest"
                             className="headline-link"
                           >
                             Selo ne prašta poraz
@@ -406,7 +406,7 @@ export default function Home() {
                       <img
                         src={IMAGES.alma}
                         alt="ALMA  -  jezgro Mlečnog puta"
-                        className="w-[100px] h-[75px] object-cover border"
+                        className="w-[100px] h-[75px] object-cover object-center border"
                         style={{
                           borderColor: isDark ? "#2a2a2e" : "#eee",
                           backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
