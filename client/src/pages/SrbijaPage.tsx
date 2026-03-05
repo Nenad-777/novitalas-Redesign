@@ -1,6 +1,6 @@
 /*
  * DESIGN: "Diplomatska Klasika" — Srbija index (listing)
- * CONCEPT: identično GeopolitikaIndex (čist grid sa 2 kartice)
+ * CONCEPT: identično GeopolitikaIndex (čist grid sa karticama)
  * Title: Analiza nedelje
  * Subtitle: Najnovije i arhiva
  */
@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  traktori: "/traktori-beograd.jpg",
   analizaNedeljeMars: "/analiza-nedelje-mars.jpg",
   heroOld:
     "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/qZixjPORsEGCuRBV.png",
@@ -57,7 +58,59 @@ export default function SrbijaPage() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* 1) NOVA ANALIZA (Marš za pravosuđe) */}
+
+            {/* NOVA ANALIZA — Selo ne prašta poraz */}
+            <article>
+              <Link href="/srbija/selo-ne-prasta-poraz" className="no-underline">
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.traktori}
+                    alt="Kolona traktora ka Beogradu"
+                    className="w-full h-[220px] object-cover object-center block"
+                  />
+                </div>
+
+                <h2
+                  className="text-[22px] md:text-[26px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Selo ne prašta poraz
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Blokade su završene, ali poljoprivrednici odlaze sa protesta bez
+                  dogovora sa državom — što otvara pitanje političkih posledica u
+                  zemlji čiju stabilnost vekovima nosi selo.
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
+
+            {/* Marš za pravosuđe */}
             <article>
               <Link href="/srbija/mars-za-pravosudje" className="no-underline">
                 <div
@@ -107,7 +160,7 @@ export default function SrbijaPage() {
               </Link>
             </article>
 
-            {/* 2) STARIJA ANALIZA (Podeljeno društvo) */}
+            {/* Podeljeno društvo */}
             <article>
               <Link href="/srbija/podeljeno-drustvo" className="no-underline">
                 <div
@@ -157,10 +210,12 @@ export default function SrbijaPage() {
                 </div>
               </Link>
             </article>
+
           </div>
 
           {/* Back */}
           <hr className="editorial-divider my-12" />
+
           <Link
             href="/"
             className="inline-flex items-center gap-2 text-[13px] font-semibold tracking-[0.08em] uppercase transition-colors duration-200 no-underline"
