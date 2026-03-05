@@ -96,7 +96,7 @@ export default function SrbijaPage() {
                   }}
                 >
                   Blokade su završene, ali poljoprivrednici odlaze sa protesta bez
-                  dogovora sa državom — što otvara pitanje političkih posledica u
+                  dogovora sa državom, što otvara pitanje političkih posledica u
                   zemlji čiju stabilnost vekovima nosi selo.
                 </p>
 
@@ -147,8 +147,8 @@ export default function SrbijaPage() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Kada sudovi postanu tema politike, društvo raspravlja o
-                  sopstvenom ustavnom identitetu — i o granicama izvršne vlasti.
+                  Kada sudovi postanu tema politike, društvo raspravlja o sopstvenom
+                  ustavnom identitetu i o granicama izvršne vlasti.
                 </p>
 
                 <div
@@ -199,7 +199,7 @@ export default function SrbijaPage() {
                   }}
                 >
                   Polarizacija više nije izuzetak, već pravilo: od Vašingtona do
-                  Evrope, a zatim i u Srbiji — gde se politička borba pretvara u
+                  Evrope, a zatim i u Srbiji, gde se politička borba pretvara u
                   borbu za legitimitet.
                 </p>
 
