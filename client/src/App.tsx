@@ -11,7 +11,6 @@ import GeopolitikaIndex from "./pages/GeopolitikaIndex";
 import GeopolitikaIran from "./pages/GeopolitikaIran";
 import GeopolitikaArticle from "./pages/GeopolitikaArticle";
 
-// ✅ VAŽNO: import mora da pogodi TAČNO ime fajla u /pages
 import UkrajinaCetiriGodine from "./pages/ukrajina-cetiri-godine-rata";
 import IranProtesti2026 from "./pages/iran-protesti-2026";
 import SukobiIzraelIran2026 from "./pages/sukobi-izrael-iran-2026";
@@ -22,29 +21,20 @@ import SrbijaPage from "./pages/SrbijaPage";
 import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 
+/* ✅ NOVA VEST */
+import SeloNePrastaPoraz from "./pages/selo-ne-prasta-poraz";
+
 import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
 import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
 
-/**
- * ✅ Normalizuje URL:
- * - /nešto/  -> /nešto
- * - //...   -> /
- * - ne dira root "/"
- *
- * Ovo ti zamenjuje potrebu da dupliraš sve rute sa i bez trailing slash.
- */
 function NormalizePath() {
   const [location, setLocation] = useLocation();
 
-  // ne diramo root
   if (location === "/") return null;
 
-  // skini višak slash-eva na kraju
   const normalized = location.replace(/\/+$/, "");
 
-  // ako se razlikuje, preusmeri
   if (normalized !== location) {
-    // replace: true da ne pravi novu istoriju (wouter podržava objekat)
     setLocation(normalized, { replace: true } as any);
   }
 
@@ -61,8 +51,9 @@ function Router() {
         <Route path="/" component={Home} />
 
         {/* =========================
-            GEOPOLITIKA (specifično)
+            GEOPOLITIKA
            ========================= */}
+
         <Route path="/geopolitika/iran" component={GeopolitikaIran} />
 
         <Route
@@ -85,16 +76,16 @@ function Router() {
           component={SukobiIzraelIran2026}
         />
 
-        {/* ✅ NOVA VEST: Ormuski moreuz */}
         <Route path="/geopolitika/ormuz" component={Ormuz} />
 
-        {/* Geopolitika index (mora posle specifičnih ruta) */}
         <Route path="/geopolitika" component={GeopolitikaIndex} />
 
         {/* =========================
             OBAVEŠTAJNI IZVORI
            ========================= */}
+
         <Route path="/obavestajni-izvori" component={ObavestajniArticle} />
+
         <Route
           path="/obavestajni-izvori/rat-senki"
           component={ObavestajniArticle}
@@ -103,7 +94,14 @@ function Router() {
         {/* =========================
             SRBIJA
            ========================= */}
+
         <Route path="/srbija" component={SrbijaPage} />
+
+        {/* ✅ NOVA VEST */}
+        <Route
+          path="/srbija/selo-ne-prasta-poraz"
+          component={SeloNePrastaPoraz}
+        />
 
         <Route
           path="/srbija/mars-za-pravosudje"
@@ -118,6 +116,7 @@ function Router() {
         {/* =========================
             NAŠA PLANETA
            ========================= */}
+
         <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
 
         <Route
