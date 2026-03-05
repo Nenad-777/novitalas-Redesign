@@ -61,7 +61,7 @@ export default function SrbijaPage() {
             {/* NOVA ANALIZA — Selo ne prašta poraz */}
             <article>
               <Link
-                href="/srbija/selo-ne-prasta-poraz-vest"
+                href="/srbija/selo-ne-prasta-poraz"
                 className="no-underline"
               >
                 <div
