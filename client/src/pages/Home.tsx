@@ -28,7 +28,8 @@ const IMAGES = {
   // ⬇️ promeni na TAČAN naziv fajla koji si ubacio u /public
   alma: "/alma-mlecni-put.jpg",
 
-  srbijaThumb: "/analiza-nedelje-mars.jpg",
+  // ✅ SRBIJA thumbnail sada ide na novu vest
+  srbijaThumb: "/traktori-beograd.jpg",
 };
 
 // Simple fade-in on scroll hook
@@ -339,10 +340,10 @@ export default function Home() {
                           }}
                         >
                           <Link
-                            href="/srbija/mars-za-pravosudje"
+                            href="/srbija/selo-ne-prasta-poraz"
                             className="headline-link"
                           >
-                            Marš za pravosuđe: kada institucije postanu centralno političko pitanje
+                            Selo ne prašta poraz
                           </Link>
                         </h3>
                         <p
@@ -352,13 +353,14 @@ export default function Home() {
                             color: isDark ? "#7a7872" : "#666",
                           }}
                         >
-                          Sudije, tužioci i građani otvorili su pitanje nezavisnosti institucija.
+                          Blokade su završene, ali protest se završio bez dogovora sa državom.
+                          Selo se vraća na njive, a pitanje posledica ostaje otvoreno.
                         </p>
                       </div>
 
                       <img
                         src={IMAGES.srbijaThumb}
-                        alt="Marš za pravosuđe"
+                        alt="Selo ne prašta poraz"
                         className="w-[100px] h-[75px] object-cover border"
                         style={{
                           borderColor: isDark ? "#2a2a2e" : "#eee",
