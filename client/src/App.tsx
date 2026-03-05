@@ -94,9 +94,8 @@ function Router() {
            ========================= */}
         <Route path="/srbija" component={SrbijaPage} />
 
-        {/* ✅ NOVA VEST (React/TSX ruta za ljude) */}
         <Route
-          path="/srbija/selo-ne-prasta-poraz-vest"
+          path="/srbija/selo-ne-prasta-poraz"
           component={SeloNePrastaPoraz}
         />
 
