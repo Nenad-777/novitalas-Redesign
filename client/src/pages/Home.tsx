@@ -1,3 +1,13 @@
+/*
+ * DESIGN: "Diplomatska Klasika" v2  -  Foreign Affairs-inspired homepage
+ * Update:
+ * - NEW: Udarni blok Ormuski moreuz (Mart 2026)
+ * - Main feature: Izrael–Iran 2026 (Februar 2026)
+ * - Sidebar: Srbija + Naša planeta (ALMA) + Iran protesti
+ * - Removed: Obaveštajni izvori block from homepage
+ * - Removed: bottom "rubrike" list (no sub-menu at bottom)
+ */
+
 import { useEffect, useRef } from "react";
 import { Link } from "wouter";
 import Header from "@/components/Header";
@@ -5,19 +15,24 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
-  hero: "https://private-us-east-1.manuscdn.com/sessionFile/6SqA6Ltpws9fwNQXZCXsiu/sandbox/VqzKWVZr2iULAAnWvkb1OW-img-1_1771300001000_na1fn_bm92aS10YWxhcy1oZXJv.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80",
+  hero: "https://private-us-east-1.manuscdn.com/sessionFile/6SqA6Ltpws9fwNQXZCXsiu/sandbox/VqzKWVZr2iULAAnWvkb1OW-img-1_1771300001000_na1fn_bm92aS10YWxhcy1oZXJv.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvNlNxQTZMdHB3czlmd05RWFpDWHNpdS9zYW5kYm94L1ZxektXVlpyMmlVTEFBbld2a2IxT1ctaW1nLTFfMTc3MTMwMDAwMTAwMF9uYTFmbl9ibTkyYVMxMFlXeGhjeTFvWlhKdi5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=vickhcvz4~YbTDCmOZhcH-ccU4yQa-vO1nYi1RLKmWenh~BaokXfByyTseqceDOn1X95WCs8wu7sSrWuIbTkJ6fguujMipq08NjRX1CToVLGeSsLojJufY422QdYrD9T1z6SshXDh~iExPwB4wgbaVzdMdV90Rr1KKKXfyMjDMM3CyteXDVgswhyX45ttKg8vzRwBDfhSUQC4bb82yVt7rMLjZxh9~1GCxqdL3mee1F3-~YRdsnOihaF0dNZr5bXlVerTFJSqX5Rc1IkCAb2fF0~1BeJ5HplAhZyX1BsckBjaIROXZaXBMebgoAgcgDaoVQ~fPIDb9NceHutx99iew__",
 
   ormuz: "/ormuz.jpg",
+
   ukraine: "/geopolitika-ukrajina.jpg",
   iranRiots: "/tehran-riots.jpg",
 
+  // ✅ GLAVNA VEST slika
   izraelIran: "/f22-israel-iran-2026.jpg",
 
+  // ⬇️ promeni na TAČAN naziv fajla koji si ubacio u /public
   alma: "/alma-mlecni-put.jpg",
 
+  // ✅ SRBIJA thumbnail sada ide na novu vest
   srbijaThumb: "/traktori-beograd.jpg",
 };
 
+// Simple fade-in on scroll hook
 function useFadeIn() {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -78,15 +93,15 @@ export default function Home() {
     >
       <Header />
 
-      {/* HERO */}
+      {/* Hero */}
       <section
         className="relative w-full h-[380px] md:h-[440px] overflow-hidden"
         style={{ backgroundColor: isDark ? "#0d1117" : "#f0f4f7" }}
       >
         <img
           src={IMAGES.hero}
-          alt="Globus sa avionima"
-          className="absolute inset-0 w-full h-full object-cover"
+          alt="Globus sa avionima  -  Novi Talas"
+          className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ opacity: isDark ? 0.6 : 0.9 }}
         />
 
@@ -94,17 +109,18 @@ export default function Home() {
           className="absolute inset-0"
           style={{
             background: isDark
-              ? "linear-gradient(to top, rgba(17,19,24,0.9), transparent)"
-              : "linear-gradient(to top, rgba(255,255,255,0.85), transparent)",
+              ? "linear-gradient(to top, rgba(17,19,24,0.9) 0%, rgba(17,19,24,0.3) 50%, transparent 100%)"
+              : "linear-gradient(to top, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.2) 50%, transparent 100%)",
           }}
         />
 
         <div className="absolute bottom-8 left-0 right-0 text-center">
           <p
-            className="text-[28px] md:text-[36px] italic"
+            className="hero-tagline text-[28px] md:text-[36px] italic tracking-wide"
             style={{
-              fontFamily: "'Playfair Display', serif",
-              color: isDark ? "#f6f3e8" : "#1a2a3a",
+              fontFamily: "'Playfair Display', Georgia, serif",
+              color: isDark ? "rgba(246,243,232,0.9)" : "#1a2a3a",
+              textShadow: isDark ? "0 2px 8px rgba(0,0,0,0.5)" : "none",
             }}
           >
             Vaš prozor u svet
@@ -112,132 +128,393 @@ export default function Home() {
         </div>
       </section>
 
-      <main className="py-12 md:py-16 flex-1">
+      {/* Main */}
+      <main
+        className="py-12 md:py-16 flex-1"
+        style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
+      >
         <div className="max-w-[1200px] mx-auto px-5">
-
-          {/* MART */}
+          {/* ======================
+              MART 2026
+             ====================== */}
           <FadeIn>
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-[11px] font-bold uppercase tracking-[0.14em]">
+              <span
+                className="text-[11px] font-bold tracking-[0.14em] uppercase"
+                style={{
+                  fontFamily: "'Source Sans 3', -apple-system, sans-serif",
+                  color: isDark ? "#d9bf7a" : "#8B0000",
+                }}
+              >
                 Mart 2026
               </span>
-              <span className="flex-1 h-px bg-gray-300" />
+              <span
+                className="flex-1 h-px"
+                style={{ backgroundColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
+              />
             </div>
           </FadeIn>
 
-          {/* ORMUS */}
+          {/* BREAKING / UDARNA VEST */}
           <FadeIn className="mb-10">
-            <article className="border overflow-hidden">
+            <article
+              className="border overflow-hidden"
+              style={{
+                borderColor: isDark ? "#2a2a2e" : "#eee",
+                backgroundColor: isDark ? "#151820" : "#faf7f2",
+              }}
+            >
               <Link href="/geopolitika/ormuz" className="no-underline">
-                <div className="grid md:grid-cols-[1.2fr_0.8fr]">
-
-                  <div className="p-7">
-                    <span className="text-[11px] uppercase font-bold tracking-[0.16em]">
-                      Udarno · Geopolitika
-                    </span>
+                <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
+                  <div className="p-6 md:p-7">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span
+                        className="text-[11px] font-bold tracking-[0.16em] uppercase"
+                        style={{
+                          fontFamily:
+                            "'Source Sans 3', -apple-system, sans-serif",
+                          color: isDark ? "#d9bf7a" : "#8B0000",
+                        }}
+                      >
+                        Udarno
+                      </span>
+                      <span
+                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
+                        style={{
+                          fontFamily:
+                            "'Source Sans 3', -apple-system, sans-serif",
+                          color: isDark ? "#9a978f" : "#666",
+                        }}
+                      >
+                        Geopolitika
+                      </span>
+                    </div>
 
                     <h2
-                      className="mt-3 text-[30px] font-bold"
-                      style={{ fontFamily: "'Playfair Display', serif" }}
+                      className="text-[26px] md:text-[34px] font-bold leading-[1.1]"
+                      style={{
+                        fontFamily: "'Playfair Display', Georgia, serif",
+                        color: isDark ? "#e0ddd5" : "#111",
+                      }}
                     >
-                      Zatvoren Ormuski moreuz
+                      Zatvoren Ormuski moreuz: svet suočen sa energetskim šokom
                     </h2>
 
-                    <p className="mt-3 text-[17px]">
-                      Ključni prolaz kroz koji prolazi približno petina svetske trgovine naftom
-                      pod pritiskom je bezbednosnih poteza u regionu.
+                    <p
+                      className="mt-3 text-[16px] md:text-[17px] leading-[1.6]"
+                      style={{
+                        fontFamily: "'Lora', Georgia, serif",
+                        color: isDark ? "#9a978f" : "#555",
+                      }}
+                    >
+                      Ključni prolaz kroz koji prolazi približno petina svetske
+                      trgovine naftom pod pritiskom je bezbednosnih poteza u
+                      regionu, što već remeti transport energenata i podiže
+                      globalni rizik.
                     </p>
 
-                    <div className="mt-4 text-[12px] uppercase font-semibold">
+                    <div
+                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                      style={{
+                        fontFamily:
+                          "'Source Sans 3', -apple-system, sans-serif",
+                        color: isDark ? "#d9bf7a" : "#8B0000",
+                      }}
+                    >
                       Otvori tekst →
                     </div>
                   </div>
 
-                  <img
-                    src={IMAGES.ormuz}
-                    alt="Ormuski moreuz"
-                    className="w-full h-[220px] md:h-full object-cover"
-                  />
+                  <div
+                    className="border-l"
+                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
+                  >
+                    <img
+                      src={IMAGES.ormuz}
+                      alt="Ormuski moreuz"
+                      className="w-full h-[220px] md:h-full object-cover object-center block"
+                    />
+                  </div>
                 </div>
               </Link>
             </article>
           </FadeIn>
 
-          {/* GRID */}
-          <div className="grid lg:grid-cols-[1fr_380px] gap-12">
+          {/* ======================
+              FEBRUAR 2026
+             ====================== */}
+          <FadeIn className="mt-12 mb-8">
+            <div className="flex items-center gap-3">
+              <span
+                className="text-[11px] font-bold tracking-[0.14em] uppercase"
+                style={{
+                  fontFamily: "'Source Sans 3', -apple-system, sans-serif",
+                  color: isDark ? "#9a978f" : "#666",
+                }}
+              >
+                Februar 2026
+              </span>
+              <span
+                className="flex-1 h-px"
+                style={{ backgroundColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
+              />
+            </div>
+          </FadeIn>
 
-            {/* GLAVNA */}
+          {/* Two-column grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14">
+            {/* LEFT: Main feature  -  IZRAEL–IRAN */}
             <FadeIn>
               <article>
-
                 <span className="kicker">Geopolitika</span>
 
                 <h1
-                  className="mt-2 text-[38px] font-bold"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
+                  style={{
+                    fontFamily: "'Playfair Display', Georgia, serif",
+                    fontWeight: 700,
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
                 >
                   <Link
                     href="/geopolitika/sukobi-izrael-iran-2026"
                     className="headline-link"
+                    style={{
+                      fontFamily: "'Playfair Display', Georgia, serif",
+                    }}
                   >
-                    Izrael–Iran 2026
+                    Izrael–Iran 2026: nova eskalacija i crvene linije regiona
                   </Link>
                 </h1>
 
-                <p className="text-[18px] mt-3">
-                  Spirala odgovora ponovo podiže cenu greške.
+                <p
+                  className="text-[18px] md:text-[19px] leading-[1.6] mb-5"
+                  style={{
+                    fontFamily: "'Lora', Georgia, serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Spirala odgovora ponovo podiže cenu greške: vojni signali,
+                  diplomatske poruke i regionalni posrednici ulaze u istu jednačinu.
+                  Šta je sada drugačije — i gde su pragovi posle kojih se kriza
+                  više ne može vratiti na „kontrolisani konflikt“?
                 </p>
 
-                <figure className="mt-6">
-                  <img
-                    src={IMAGES.izraelIran}
-                    className="w-full h-[380px] object-cover"
-                  />
+                <figure className="mb-0">
+                  <Link
+                    href="/geopolitika/sukobi-izrael-iran-2026"
+                    className="block no-underline"
+                  >
+                    <div
+                      className="border"
+                      style={{
+                        borderColor: isDark ? "#2a2a2e" : "#eee",
+                        backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                      }}
+                    >
+                      <img
+                        src={IMAGES.izraelIran}
+                        alt="Geopolitika  -  Izrael–Iran 2026"
+                        className="w-full h-[280px] md:h-[380px] object-cover object-center block"
+                      />
+                    </div>
+                  </Link>
                 </figure>
-
               </article>
             </FadeIn>
 
-            {/* SIDEBAR */}
+            {/* RIGHT: Sidebar */}
             <aside>
               <FadeIn>
-
-                {/* SRBIJA */}
-                <div className="grid grid-cols-[1fr_100px] gap-4">
-
+                <div className="flex flex-col">
+                  {/* Srbija */}
                   <div>
-                    <span className="kicker">Srbija</span>
+                    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
+                      <div>
+                        <span className="kicker">Srbija</span>
+                        <h3
+                          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#e0ddd5" : "#111",
+                          }}
+                        >
+                          <Link
+                            href="/srbija/selo-ne-prasta-poraz"
+                            className="headline-link"
+                          >
+                            Selo ne prašta poraz
+                          </Link>
+                        </h3>
+                        <p
+                          className="mt-1 text-[14px] leading-[1.5]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#7a7872" : "#666",
+                          }}
+                        >
+                          Blokade su završene, ali protest se završio bez dogovora sa državom.
+                          Selo se vraća na njive, a pitanje posledica ostaje otvoreno.
+                        </p>
+                      </div>
 
-                    <h3
-                      className="mt-1 text-[20px] font-bold"
-                      style={{ fontFamily: "'Lora', serif" }}
-                    >
-                      <Link
-                        href="/srbija/selo-ne-prasta-poraz-vest"
-                        className="headline-link"
-                      >
-                        Selo ne prašta poraz
-                      </Link>
-                    </h3>
-
-                    <p className="text-[14px] mt-1">
-                      Blokade su završene, ali protest se završio bez dogovora sa državom.
-                    </p>
+                      <img
+                        src={IMAGES.srbijaThumb}
+                        alt="Selo ne prašta poraz"
+                        className="w-[100px] h-[75px] object-cover border"
+                        style={{
+                          borderColor: isDark ? "#2a2a2e" : "#eee",
+                          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
+                        }}
+                      />
+                    </div>
                   </div>
 
-                  <img
-                    src={IMAGES.srbijaThumb}
-                    alt="Srbija vest"
-                    className="w-[100px] h-[75px] object-cover border"
-                  />
+                  <hr className="editorial-divider my-5" />
 
+                  {/* Naša planeta */}
+                  <div>
+                    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
+                      <div>
+                        <span className="kicker">Naša planeta</span>
+                        <h3
+                          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#e0ddd5" : "#111",
+                          }}
+                        >
+                          <Link
+                            href="/nasa-planeta/alma-skriveno-jezgro"
+                            className="headline-link"
+                          >
+                            Najveća ALMA mapa ikad: otkriveno „skriveno jezgro“ Mlečnog puta
+                          </Link>
+                        </h3>
+
+                        <p
+                          className="mt-1 text-[14px] leading-[1.5]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#7a7872" : "#666",
+                          }}
+                        >
+                          Umesto zvezda, gledamo sirovinu od koje nastaju — gas, prašina i hemija.
+                        </p>
+                      </div>
+
+                      <img
+                        src={IMAGES.alma}
+                        alt="ALMA  -  jezgro Mlečnog puta"
+                        className="w-[100px] h-[75px] object-cover object-center border"
+                        style={{
+                          borderColor: isDark ? "#2a2a2e" : "#eee",
+                          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
+                        }}
+                      />
+                    </div>
+
+                    <div className="mt-3">
+                      <Link
+                        href="/nasa-planeta"
+                        className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.08em] no-underline"
+                        style={{
+                          fontFamily: "'Source Sans 3', -apple-system, sans-serif",
+                          color: isDark ? "#d9bf7a" : "#8B0000",
+                        }}
+                      >
+                        Otvori Naša planeta →
+                      </Link>
+                    </div>
+                  </div>
+
+                  <hr className="editorial-divider my-5" />
+
+                  {/* Iran protesti */}
+                  <div>
+                    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
+                      <div>
+                        <span className="kicker">Geopolitika</span>
+                        <h3
+                          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#e0ddd5" : "#111",
+                          }}
+                        >
+                          <Link
+                            href="/geopolitika/iran-protesti-2026"
+                            className="headline-link"
+                          >
+                            Iran: protesti zahvatili najmanje 10 univerziteta, BBC potvrdio snimke sukoba
+                          </Link>
+                        </h3>
+
+                        <p
+                          className="mt-1 text-[14px] leading-[1.5]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#7a7872" : "#666",
+                          }}
+                        >
+                          Kampusi ključaju, a pravosudni pritisak raste.
+                        </p>
+                      </div>
+
+                      <img
+                        src={IMAGES.iranRiots}
+                        alt="Geopolitika  -  Iran protesti"
+                        className="w-[100px] h-[75px] object-cover border"
+                        style={{
+                          borderColor: isDark ? "#2a2a2e" : "#eee",
+                          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
+                        }}
+                      />
+                    </div>
+                  </div>
                 </div>
-
               </FadeIn>
             </aside>
-
           </div>
 
+          {/* CTA */}
+          <FadeIn className="mt-16">
+            <div
+              className="relative overflow-hidden rounded-sm"
+              style={{ backgroundColor: isDark ? "#0d0d0f" : "#1a2a3a" }}
+            >
+              <div className="py-16 px-8 text-center">
+                <p
+                  className="cta-title text-white/90 text-[28px] md:text-[34px] mb-3"
+                  style={{
+                    fontFamily: "'Playfair Display', Georgia, serif",
+                    fontStyle: "italic",
+                    fontWeight: 400,
+                    letterSpacing: "0.01em",
+                  }}
+                >
+                  Budite informisani.
+                </p>
+
+                <p
+                  className="text-white/70 text-[16px] max-w-[560px] mx-auto mb-6"
+                  style={{ fontFamily: "'Lora', Georgia, serif" }}
+                >
+                  Pratite Novi talas za ekskluzivne analize iz oblasti geopolitike,
+                  bezbednosti — i od sada: Naše planete.
+                </p>
+
+                <span
+                  className="inline-block bg-[#8B0000] text-white text-[12px] font-bold tracking-[0.12em] uppercase px-8 py-3 hover:bg-[#6B0000] transition-colors duration-200"
+                  style={{
+                    fontFamily: "'Source Sans 3', -apple-system, sans-serif",
+                  }}
+                >
+                  Pratite nas
+                </span>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </main>
 
