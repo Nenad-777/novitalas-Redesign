@@ -110,7 +110,8 @@ export default function ArticleTemplate({
                 <p
                   className={
                     idx === 0
-                      ? "text-[18px] md:text-[20px] leading-[1.75]"
+                      ? // ✅ DROP CAP (prvo slovo velikoooo, magazinski)
+                        "text-[18px] md:text-[20px] leading-[1.75] first-letter:text-[64px] first-letter:font-bold first-letter:mr-2 first-letter:float-left first-letter:leading-[0.9]"
                       : "mt-5 text-[17px] md:text-[18px] leading-[1.8]"
                   }
                   style={{
@@ -120,13 +121,14 @@ export default function ArticleTemplate({
                         ? "#cfcac0"
                         : "#b7b2aa"
                       : idx === 0
-                        ? "#222"
-                        : "#333",
+                      ? "#222"
+                      : "#333",
                   }}
                 >
                   {p}
                 </p>
 
+                {/* Separator između pasusa */}
                 {idx !== paragraphs.length - 1 && (
                   <div
                     style={{
