@@ -22,7 +22,7 @@ import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 
 /* ✅ NOVA VEST */
-import SeloNePrastaPoraz from "./pages/selo-ne-prasta-poraz";
+import SeloNePrastaPoraz from "./pages/selo-ne-prasta-poraz-vest";
 
 import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
 import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
