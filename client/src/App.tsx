@@ -22,7 +22,7 @@ import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 
 /* ✅ NOVA VEST */
-import SeloNePrastaPoraz from "./pages/selo-ne-prasta-poraz-vest";
+import SeloNePrastaPoraz from "./pages/selo-ne-prasta-poraz";
 
 import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
 import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
@@ -95,7 +95,7 @@ function Router() {
         <Route path="/srbija" component={SrbijaPage} />
 
         <Route
-          path="/srbija/selo-ne-prasta-poraz"
+          path="/srbija/selo-ne-prasta-poraz-vest"
           component={SeloNePrastaPoraz}
         />
 
