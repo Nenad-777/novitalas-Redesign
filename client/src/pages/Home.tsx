@@ -340,7 +340,7 @@ export default function Home() {
                           }}
                         >
                           <Link
-                            href="/srbija/selo-ne-prasta-poraz"
+                            href="/srbija/selo-ne-prasta-poraz-vest"
                             className="headline-link"
                           >
                             Selo ne prašta poraz
