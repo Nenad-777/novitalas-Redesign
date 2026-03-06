@@ -133,7 +133,7 @@ export default function ArticleTemplate({
                       width: "40px",
                       height: "2px",
                       backgroundColor: isDark ? "#2a2a2e" : "#eee",
-                      margin: "18px 0",
+                      margin: "24px 0 24px 12px",
                     }}
                   />
                 )}
