@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  russiaChinaShadows: "/russia-china-shadows.jpg",
   ormuz: "/ormuz.jpg",
   ukraine: "/geopolitika-ukrajina.jpg",
   iran: "/tehran-riots.jpg",
@@ -58,7 +59,62 @@ export default function GeopolitikaIndex() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* ✅ 0) NOVA VEST (Ormuski moreuz) */}
+            {/* ✅ 0) NOVA VEST (Velike sile i kriza u Iranu) */}
+            <article className="md:col-span-2">
+              <Link
+                href="/geopolitika/velike-sile-i-kriza-u-iranu"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.russiaChinaShadows}
+                    alt="Rusija i Kina — senke velikih sila"
+                    className="w-full h-[260px] object-cover object-center block"
+                  />
+                </div>
+
+                <h2
+                  className="text-[22px] md:text-[28px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Velike sile i kriza u Iranu: oprezna ravnoteža Moskve i
+                  Pekinga
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Između podrške Teheranu i izbegavanja velikog rata: kako
+                  Rusija i Kina balansiraju strateška partnerstva i globalne
+                  interese.
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
+
+            {/* ✅ 1) NOVA VEST (Ormuski moreuz) */}
             <article className="md:col-span-2">
               <Link href="/geopolitika/ormuz" className="no-underline">
                 <div
