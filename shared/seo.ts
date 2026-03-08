@@ -21,10 +21,10 @@ export const seoData: Record<string, SEOData> = {
     ogDescription: "Između podrške Teheranu i izbegavanja velikog rata.",
     ogUrl:
       "https://novitalas.org/geopolitika/velike-sile-i-kriza-u-iranu",
-    ogImage: "https://novitalas.org/russia-china-shadows.jpg",
+    ogImage: "https://novitalas.org/og/velike-sile-i-kriza-u-iranu.jpg",
     twitterTitle:
       "Velike sile i kriza u Iranu: oprezna ravnoteža Moskve i Pekinga",
     twitterDescription: "Između podrške Teheranu i izbegavanja velikog rata.",
-    twitterImage: "https://novitalas.org/russia-china-shadows.jpg",
+    twitterImage: "https://novitalas.org/og/velike-sile-i-kriza-u-iranu.jpg",
   },
 };
