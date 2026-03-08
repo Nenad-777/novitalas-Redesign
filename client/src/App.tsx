@@ -15,6 +15,7 @@ import UkrajinaCetiriGodine from "./pages/ukrajina-cetiri-godine-rata";
 import IranProtesti2026 from "./pages/iran-protesti-2026";
 import SukobiIzraelIran2026 from "./pages/sukobi-izrael-iran-2026";
 import Ormuz from "./pages/ormuz";
+import VelikeSileIKrizaUIranu from "./pages/velike-sile-i-kriza-u-iranu";
 
 import ObavestajniArticle from "./pages/ObavestajniArticle";
 import SrbijaPage from "./pages/SrbijaPage";
@@ -76,6 +77,11 @@ function Router() {
         />
 
         <Route path="/geopolitika/ormuz" component={Ormuz} />
+
+        <Route
+          path="/geopolitika/velike-sile-i-kriza-u-iranu"
+          component={VelikeSileIKrizaUIranu}
+        />
 
         <Route path="/geopolitika" component={GeopolitikaIndex} />
 
