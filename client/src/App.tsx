@@ -18,6 +18,8 @@ import Ormuz from "./pages/ormuz";
 import VelikeSileIKrizaUIranu from "./pages/velike-sile-i-kriza-u-iranu";
 
 import ObavestajniArticle from "./pages/ObavestajniArticle";
+import ObavestajniIndex from "./pages/ObavestajniIndex";
+import KinaSpyBrodovi from "./pages/kina-spy-brodovi";
 import SrbijaPage from "./pages/SrbijaPage";
 import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
@@ -91,7 +93,12 @@ function Router() {
         {/* =========================
             OBAVEŠTAJNI IZVORI
            ========================= */}
-        <Route path="/obavestajni-izvori" component={ObavestajniArticle} />
+        <Route path="/obavestajni-izvori" component={ObavestajniIndex} />
+
+        <Route
+          path="/obavestajni-izvori/kina-spy-brodovi"
+          component={KinaSpyBrodovi}
+        />
 
         <Route
           path="/obavestajni-izvori/rat-senki"
