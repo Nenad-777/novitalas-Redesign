@@ -29,6 +29,9 @@ const IMAGES = {
   // ⬇️ promeni na TAČAN naziv fajla koji si ubacio u /public
   alma: "/alma-mlecni-put.jpg",
 
+  // ✅ Naša planeta — snovi
+  snovi: "/snovi-mozak.jpg",
+
   // ✅ SRBIJA thumbnail sada ide na novu vest
   srbijaThumb: "/traktori-beograd.jpg",
 };
@@ -238,6 +241,92 @@ export default function Home() {
                       alt="Rusija i Kina — senke velikih sila"
                       className="w-full h-[220px] md:h-full object-cover object-center block"
                     />
+                  </div>
+                </div>
+              </Link>
+            </article>
+          </FadeIn>
+
+          {/* NAŠA PLANETA — snovi (Mart 2026) */}
+          <FadeIn className="mb-10">
+            <article
+              className="border overflow-hidden"
+              style={{
+                borderColor: isDark ? "#2a2a2e" : "#eee",
+                backgroundColor: isDark ? "#151820" : "#faf7f2",
+              }}
+            >
+              <Link
+                href="/nasa-planeta/naucnici-poceli-da-usmeravaju-snove"
+                className="no-underline"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-[0.8fr_1.2fr] gap-0">
+                  <div
+                    className="border-r"
+                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
+                  >
+                    <img
+                      src={IMAGES.snovi}
+                      alt="Neuropsihologija sna — Naučnici usmeravaju snove"
+                      className="w-full h-[180px] md:h-full object-cover object-center block"
+                    />
+                  </div>
+
+                  <div className="p-5 md:p-6">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span
+                        className="text-[11px] font-bold tracking-[0.16em] uppercase"
+                        style={{
+                          fontFamily:
+                            "'Source Sans 3', -apple-system, sans-serif",
+                          color: isDark ? "#d9bf7a" : "#8B0000",
+                        }}
+                      >
+                        Naša planeta
+                      </span>
+                      <span
+                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
+                        style={{
+                          fontFamily:
+                            "'Source Sans 3', -apple-system, sans-serif",
+                          color: isDark ? "#9a978f" : "#666",
+                        }}
+                      >
+                        8. mart 2026.
+                      </span>
+                    </div>
+
+                    <h2
+                      className="text-[20px] md:text-[26px] font-bold leading-[1.15]"
+                      style={{
+                        fontFamily: "'Playfair Display', Georgia, serif",
+                        color: isDark ? "#e0ddd5" : "#111",
+                      }}
+                    >
+                      Naučnici počeli da usmeravaju snove: novo otkriće savremene psihologije
+                    </h2>
+
+                    <p
+                      className="mt-3 text-[15px] md:text-[16px] leading-[1.6]"
+                      style={{
+                        fontFamily: "'Lora', Georgia, serif",
+                        color: isDark ? "#9a978f" : "#555",
+                      }}
+                    >
+                      Novo istraživanje pokazuje da je moguće uticati na sadržaj snova i podstaći
+                      mozak da tokom sna kreativnije rešava probleme.
+                    </p>
+
+                    <div
+                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                      style={{
+                        fontFamily:
+                          "'Source Sans 3', -apple-system, sans-serif",
+                        color: isDark ? "#d9bf7a" : "#8B0000",
+                      }}
+                    >
+                      Otvori tekst →
+                    </div>
                   </div>
                 </div>
               </Link>
