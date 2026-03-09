@@ -33,6 +33,9 @@ const IMAGES = {
 
   // ✅ SRBIJA thumbnail sada ide na novu vest
   srbijaThumb: "/traktori-beograd.jpg",
+
+  // ✅ KINA — špijunski brodovi (Obaveštajni izvori, 9. mart 2026)
+  kinaSpyBrod: "/images/obavestajni-izvori/kina-spy-ship.jpg",
 };
 
 // Simple fade-in on scroll hook
@@ -158,7 +161,7 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          {/* BREAKING / UDARNA VEST */}
+          {/* BREAKING / UDARNA VEST — Kina špijunski brodovi */}
           <FadeIn className="mb-10">
             <article
               className="border overflow-hidden"
@@ -168,7 +171,7 @@ export default function Home() {
               }}
             >
               <Link
-                href="/geopolitika/velike-sile-i-kriza-u-iranu"
+                href="/obavestajni-izvori/kina-spy-brodovi"
                 className="no-underline"
               >
                 <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
@@ -184,6 +187,81 @@ export default function Home() {
                       >
                         Udarno
                       </span>
+                      <span
+                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
+                        style={{
+                          fontFamily:
+                            "'Source Sans 3', -apple-system, sans-serif",
+                          color: isDark ? "#9a978f" : "#666",
+                        }}
+                      >
+                        Obaveštajni izvori
+                      </span>
+                    </div>
+
+                    <h2
+                      className="text-[26px] md:text-[34px] font-bold leading-[1.1]"
+                      style={{
+                        fontFamily: "'Playfair Display', Georgia, serif",
+                        color: isDark ? "#e0ddd5" : "#111",
+                      }}
+                    >
+                      Kina prati američke snage na Bliskom istoku uz pomoć AI i špijunskih brodova
+                    </h2>
+
+                    <p
+                      className="mt-3 text-[16px] md:text-[17px] leading-[1.6]"
+                      style={{
+                        fontFamily: "'Lora', Georgia, serif",
+                        color: isDark ? "#9a978f" : "#555",
+                      }}
+                    >
+                      Nova analiza zapadnih bezbednosnih službi otkriva kineski nadzor američkih vojnih snaga u regionu Bliskog istoka uz pomoć AI i špijunskih brodova.
+                    </p>
+
+                    <div
+                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                      style={{
+                        fontFamily:
+                          "'Source Sans 3', -apple-system, sans-serif",
+                        color: isDark ? "#d9bf7a" : "#8B0000",
+                      }}
+                    >
+                      Otvori tekst →
+                    </div>
+                  </div>
+
+                  <div
+                    className="border-l"
+                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
+                  >
+                    <img
+                      src={IMAGES.kinaSpyBrod}
+                      alt="Kineski špijunski brod — nadzor u Persijskom zalivu"
+                      className="w-full h-[220px] md:h-full object-cover object-center block"
+                    />
+                  </div>
+                </div>
+              </Link>
+            </article>
+          </FadeIn>
+
+          {/* Geopolitika — Velike sile i kriza u Iranu */}
+          <FadeIn className="mb-10">
+            <article
+              className="border overflow-hidden"
+              style={{
+                borderColor: isDark ? "#2a2a2e" : "#eee",
+                backgroundColor: isDark ? "#151820" : "#faf7f2",
+              }}
+            >
+              <Link
+                href="/geopolitika/velike-sile-i-kriza-u-iranu"
+                className="no-underline"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
+                  <div className="p-6 md:p-7">
+                    <div className="flex items-center gap-3 mb-3">
                       <span
                         className="text-[11px] font-semibold tracking-[0.12em] uppercase"
                         style={{
