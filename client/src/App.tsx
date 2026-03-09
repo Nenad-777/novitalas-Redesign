@@ -28,6 +28,9 @@ import SeloNePrastaPoraz from "./pages/selo-ne-prasta-poraz";
 import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
 import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
 
+/* ✅ NOVA VEST — Naša planeta */
+import NaucniciPoceliDaUsmeravajuSnove from "./pages/naucnici-poceli-da-usmeravaju-snove";
+
 function NormalizePath() {
   const [location, setLocation] = useLocation();
 
@@ -123,6 +126,11 @@ function Router() {
         <Route
           path="/nasa-planeta/alma-skriveno-jezgro"
           component={AlmaSkrivenoJezgro}
+        />
+
+        <Route
+          path="/nasa-planeta/naucnici-poceli-da-usmeravaju-snove"
+          component={NaucniciPoceliDaUsmeravajuSnove}
         />
 
         {/* 404 */}

@@ -29,6 +29,8 @@ const IMAGES = {
   // ⬇️ promeni na TAČAN naziv fajla koji si ubacio u /public
   alma: "/alma-mlecni-put.jpg",
 
+  snovi: "/snovi-usmeravanje-snova.jpg",
+
   // ✅ SRBIJA thumbnail sada ide na novu vest
   srbijaThumb: "/traktori-beograd.jpg",
 };
@@ -389,10 +391,10 @@ export default function Home() {
                           }}
                         >
                           <Link
-                            href="/nasa-planeta/alma-skriveno-jezgro"
+                            href="/nasa-planeta/naucnici-poceli-da-usmeravaju-snove"
                             className="headline-link"
                           >
-                            Najveća ALMA mapa ikad: otkriveno „skriveno jezgro“ Mlečnog puta
+                            Naučnici počeli da usmeravaju snove: novo otkriće savremene psihologije
                           </Link>
                         </h3>
 
@@ -403,13 +405,13 @@ export default function Home() {
                             color: isDark ? "#7a7872" : "#666",
                           }}
                         >
-                          Umesto zvezda, gledamo sirovinu od koje nastaju — gas, prašina i hemija.
+                          Mozak tokom REM faze aktivno rešava probleme — istraživači to sada mogu da usmere.
                         </p>
                       </div>
 
                       <img
-                        src={IMAGES.alma}
-                        alt="ALMA  -  jezgro Mlečnog puta"
+                        src={IMAGES.snovi}
+                        alt="Naučnici usmeravaju snove"
                         className="w-[100px] h-[75px] object-cover object-center border"
                         style={{
                           borderColor: isDark ? "#2a2a2e" : "#eee",
