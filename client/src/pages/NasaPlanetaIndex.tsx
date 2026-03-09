@@ -10,6 +10,7 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
   alma: "/alma-mlecni-put.jpg",
+  sanMozak: "/san-mozak.jpg",
 };
 
 export default function NasaPlanetaIndex() {
@@ -53,7 +54,57 @@ export default function NasaPlanetaIndex() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* 1) ALMA */}
+            {/* 1) San i mozak */}
+            <article>
+              <Link href="/nasa-planeta/san-i-mozak" className="no-underline">
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.sanMozak}
+                    alt="San i mozak — neurologija spavanja"
+                    className="w-full h-[220px] object-cover object-center block"
+                  />
+                </div>
+
+                <h2
+                  className="text-[22px] md:text-[26px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Mozak dok spimo: kako san čisti toksine i gradi uspomene
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Glimfatički sistem, konsolidacija pamćenja i REM faza —
+                  nova otkrića otkrivaju zašto je san biološka nužnost, a ne luksuz.
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
+
+            {/* 2) ALMA */}
             <article>
               <Link href="/nasa-planeta/alma-skriveno-jezgro" className="no-underline">
                 <div

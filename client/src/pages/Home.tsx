@@ -26,8 +26,10 @@ const IMAGES = {
   // ✅ GLAVNA VEST slika
   izraelIran: "/f22-israel-iran-2026.jpg",
 
-  // ⬇️ promeni na TAČAN naziv fajla koji si ubacio u /public
   alma: "/alma-mlecni-put.jpg",
+
+  // ✅ San i mozak — nova vest iz Naša planeta
+  sanMozak: "/san-mozak.jpg",
 
   // ✅ SRBIJA thumbnail sada ide na novu vest
   srbijaThumb: "/traktori-beograd.jpg",
@@ -389,10 +391,10 @@ export default function Home() {
                           }}
                         >
                           <Link
-                            href="/nasa-planeta/alma-skriveno-jezgro"
+                            href="/nasa-planeta/san-i-mozak"
                             className="headline-link"
                           >
-                            Najveća ALMA mapa ikad: otkriveno „skriveno jezgro“ Mlečnog puta
+                            Mozak dok spimo: kako san čisti toksine i gradi uspomene
                           </Link>
                         </h3>
 
@@ -403,13 +405,13 @@ export default function Home() {
                             color: isDark ? "#7a7872" : "#666",
                           }}
                         >
-                          Umesto zvezda, gledamo sirovinu od koje nastaju — gas, prašina i hemija.
+                          Glimfatički sistem i REM faza otkrivaju zašto je san biološka nužnost.
                         </p>
                       </div>
 
                       <img
-                        src={IMAGES.alma}
-                        alt="ALMA  -  jezgro Mlečnog puta"
+                        src={IMAGES.sanMozak}
+                        alt="San i mozak  -  neurologija spavanja"
                         className="w-[100px] h-[75px] object-cover object-center border"
                         style={{
                           borderColor: isDark ? "#2a2a2e" : "#eee",
