@@ -324,6 +324,81 @@ export default function Home() {
             </article>
           </FadeIn>
 
+          {/* Geopolitika — Evropa razmatra vojnu misiju za otvaranje Ormuskog moreuza */}
+          <FadeIn className="mb-10">
+            <article
+              className="border overflow-hidden"
+              style={{
+                borderColor: isDark ? "#2a2a2e" : "#eee",
+                backgroundColor: isDark ? "#151820" : "#faf7f2",
+              }}
+            >
+              <Link
+                href="/geopolitika/francuska-odbrana-ormuza"
+                className="no-underline"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
+                  <div className="p-6 md:p-7">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span
+                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
+                        style={{
+                          fontFamily:
+                            "'Source Sans 3', -apple-system, sans-serif",
+                          color: isDark ? "#9a978f" : "#666",
+                        }}
+                      >
+                        Geopolitika
+                      </span>
+                    </div>
+
+                    <h2
+                      className="text-[26px] md:text-[34px] font-bold leading-[1.1]"
+                      style={{
+                        fontFamily: "'Playfair Display', Georgia, serif",
+                        color: isDark ? "#e0ddd5" : "#111",
+                      }}
+                    >
+                      Evropa razmatra vojnu misiju za otvaranje Ormuskog moreuza
+                    </h2>
+
+                    <p
+                      className="mt-3 text-[16px] md:text-[17px] leading-[1.6]"
+                      style={{
+                        fontFamily: "'Lora', Georgia, serif",
+                        color: isDark ? "#9a978f" : "#555",
+                      }}
+                    >
+                      Makron najavljuje odbrambenu pomorsku misiju za zaštitu slobodne plovidbe kroz ključni energetski prolaz.
+                    </p>
+
+                    <div
+                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                      style={{
+                        fontFamily:
+                          "'Source Sans 3', -apple-system, sans-serif",
+                        color: isDark ? "#d9bf7a" : "#8B0000",
+                      }}
+                    >
+                      Otvori tekst →
+                    </div>
+                  </div>
+
+                  <div
+                    className="border-l"
+                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
+                  >
+                    <img
+                      src="/hormuz-strait-tankers.jpg"
+                      alt="Tankeri u Ormuskom moreuzu"
+                      className="w-full h-[220px] md:h-full object-cover object-center block"
+                    />
+                  </div>
+                </div>
+              </Link>
+            </article>
+          </FadeIn>
+
           {/* ======================
               FEBRUAR 2026
              ====================== */}
