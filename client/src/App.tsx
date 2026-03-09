@@ -27,6 +27,7 @@ import SeloNePrastaPoraz from "./pages/selo-ne-prasta-poraz";
 
 import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
 import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
+import SanIMozak from "./pages/san-i-mozak";
 
 function NormalizePath() {
   const [location, setLocation] = useLocation();
@@ -123,6 +124,11 @@ function Router() {
         <Route
           path="/nasa-planeta/alma-skriveno-jezgro"
           component={AlmaSkrivenoJezgro}
+        />
+
+        <Route
+          path="/nasa-planeta/san-i-mozak"
+          component={SanIMozak}
         />
 
         {/* 404 */}
