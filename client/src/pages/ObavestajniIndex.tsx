@@ -64,15 +64,6 @@ export default function ObavestajniIndex() {
               BEZBEDNOST   OBAVEŠTAJNE OPERACIJE   ANALITIKA
             </p>
 
-            <p
-              className="mt-4 text-[17px] md:text-[19px] leading-[1.65] max-w-[680px]"
-              style={{
-                fontFamily: "'Crimson Pro', serif",
-                color: isDark ? "#9a978f" : "#555",
-              }}
-            >
-              Analize obaveštajnih operacija, bezbednosnih pretnji i geopolitičkih rivalstava iz senke.
-            </p>
           </div>
 
           {/* HERO ARTICLE — featured story */}
