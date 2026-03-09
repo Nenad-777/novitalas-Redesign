@@ -29,50 +29,59 @@ export default function NasaPlanetaIndex() {
         style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
       >
         <section className="max-w-[1000px] mx-auto px-5">
-          {/* Title */}
-          <div className="mb-10">
+
+          {/* Section header */}
+          <div className="mb-12">
             <span className="kicker">Naša planeta</span>
             <h1
-              className="mt-3 text-[30px] md:text-[40px] font-bold leading-[1.1]"
+              className="mt-3 text-[30px] md:text-[42px] font-bold leading-[1.1]"
               style={{
                 fontFamily: "'Playfair Display', serif",
                 color: isDark ? "#e0ddd5" : "#111",
               }}
             >
-              Nauka • ekologija • kultura
+              Naša planeta
             </h1>
             <p
-              className="mt-3 text-[16px] md:text-[18px] leading-[1.6] max-w-[760px]"
+              className="mt-4 text-[17px] md:text-[19px] leading-[1.65] max-w-[680px]"
               style={{
                 fontFamily: "'Crimson Pro', serif",
                 color: isDark ? "#9a978f" : "#555",
               }}
             >
-              Najnovije i arhiva
+              Otkrivamo naučna dostignuća, prirodne fenomene i ideje koje oblikuju budućnost naše planete.
             </p>
           </div>
 
-          {/* LIST */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* 1) Snovi */}
-            <article>
-              <Link href="/nasa-planeta/naucnici-poceli-da-usmeravaju-snove" className="no-underline">
+          {/* HERO ARTICLE */}
+          <article className="mb-14">
+            <Link
+              href="/nasa-planeta/naucnici-poceli-da-usmeravaju-snove"
+              className="no-underline block group"
+            >
+              {/* Full-width hero image */}
+              <div className="overflow-hidden mb-6">
+                <img
+                  src={IMAGES.snovi}
+                  alt="Naučnici usmeravaju snove"
+                  className="w-full h-[300px] md:h-[480px] object-cover object-center block transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
+
+              <div className="max-w-[760px]">
+                {/* Feature label */}
                 <div
-                  className="border mb-4 overflow-hidden"
+                  className="mb-3 text-[11px] font-semibold uppercase tracking-[0.14em]"
                   style={{
-                    borderColor: isDark ? "#2a2a2e" : "#eee",
-                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
                   }}
                 >
-                  <img
-                    src={IMAGES.snovi}
-                    alt="Naučnici usmeravaju snove"
-                    className="w-full h-[220px] object-cover object-center block"
-                  />
+                  Istaknuta priča
                 </div>
 
                 <h2
-                  className="text-[22px] md:text-[26px] font-bold leading-[1.2]"
+                  className="text-[26px] md:text-[40px] font-bold leading-[1.15]"
                   style={{
                     fontFamily: "'Playfair Display', serif",
                     color: isDark ? "#e0ddd5" : "#111",
@@ -82,7 +91,7 @@ export default function NasaPlanetaIndex() {
                 </h2>
 
                 <p
-                  className="mt-2 text-[15px] leading-[1.6]"
+                  className="mt-4 text-[17px] md:text-[19px] leading-[1.65]"
                   style={{
                     fontFamily: "'Crimson Pro', serif",
                     color: isDark ? "#9a978f" : "#555",
@@ -93,42 +102,47 @@ export default function NasaPlanetaIndex() {
                 </p>
 
                 <div
-                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  className="mt-5 text-[12px] font-semibold uppercase tracking-[0.08em]"
                   style={{
                     fontFamily: "'Source Sans 3', sans-serif",
                     color: isDark ? "#d9bf7a" : "#8B0000",
                   }}
                 >
-                  Otvori tekst →
+                  Čitaj dalje →
                 </div>
-              </Link>
-            </article>
+              </div>
+            </Link>
+          </article>
 
-            {/* 2) ALMA */}
+          <hr className="editorial-divider mb-12" />
+
+          {/* ARTICLE GRID (3 cols desktop / 1 col mobile) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+
+            {/* ALMA */}
             <article>
-              <Link href="/nasa-planeta/alma-skriveno-jezgro" className="no-underline">
+              <Link href="/nasa-planeta/alma-skriveno-jezgro" className="no-underline block group">
                 <div
-                  className="border mb-4 overflow-hidden"
+                  className="mb-4 overflow-hidden"
                   style={{
-                    borderColor: isDark ? "#2a2a2e" : "#eee",
-                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                    backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
                   }}
                 >
                   <img
                     src={IMAGES.alma}
                     alt="ALMA — srce Mlečnog puta"
-                    className="w-full h-[220px] object-cover object-center block"
+                    className="w-full h-[200px] object-cover object-center block transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                 </div>
 
                 <h2
-                  className="text-[22px] md:text-[26px] font-bold leading-[1.2]"
+                  className="text-[20px] md:text-[22px] font-bold leading-[1.2]"
                   style={{
                     fontFamily: "'Playfair Display', serif",
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  Najveća ALMA mapa ikad: otkriveno „skriveno jezgro“ Mlečnog puta
+                  Najveća ALMA mapa ikad: otkriveno „skriveno jezgro" Mlečnog puta
                 </h2>
 
                 <p
@@ -153,6 +167,7 @@ export default function NasaPlanetaIndex() {
                 </div>
               </Link>
             </article>
+
           </div>
 
           {/* Back */}
