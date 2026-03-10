@@ -7,12 +7,14 @@ import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useSEO } from "@/hooks/useSEO";
 
 const IMAGES = {
   alma: "/alma-mlecni-put.jpg",
 };
 
 export default function AlmaSkrivenoJezgro() {
+  useSEO("/nasa-planeta/alma-skriveno-jezgro");
   const { theme } = useTheme();
   const isDark = theme === "dark";
 

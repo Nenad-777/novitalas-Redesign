@@ -4,6 +4,7 @@
  */
 
 import ArticleTemplate from "@/components/ArticleTemplate";
+import { useSEO } from "@/hooks/useSEO";
 
 const PARAGRAPHS = [
   "Nova analiza zapadnih bezbednosnih službi ukazuje da Kina sve intenzivnije prati kretanje američkih vojnih snaga u regionu Bliskog istoka. U središtu pažnje nalaze se kineski nadzorni brodovi, ali i jedna tehnološka kompanija koja koristi veštačku inteligenciju i satelitske snimke kako bi analizirala raspored američkih baza i vojnih sistema.",
@@ -18,6 +19,7 @@ const PARAGRAPHS = [
 ];
 
 export default function KinaSpyBrodovi() {
+  useSEO("/obavestajni-izvori/kina-spy-brodovi");
   return (
     <ArticleTemplate
       sectionLabel="Obaveštajni izvori"

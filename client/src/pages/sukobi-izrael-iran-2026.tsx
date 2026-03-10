@@ -6,8 +6,10 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function SukobiIzraelIran2026() {
+  useSEO("/geopolitika/sukobi-izrael-iran-2026");
   const { theme } = useTheme();
   const isDark = theme === "dark";
 

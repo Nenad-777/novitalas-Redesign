@@ -6,8 +6,10 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function Ormuz() {
+  useSEO("/geopolitika/ormuz");
   const { theme } = useTheme();
   const isDark = theme === "dark";
 

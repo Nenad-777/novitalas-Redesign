@@ -1,6 +1,8 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function SeloNePrastaPoraz() {
+  useSEO("/srbija/selo-ne-prasta-poraz-vest");
   return (
     <ArticleTemplate
       sectionLabel="Srbija"
