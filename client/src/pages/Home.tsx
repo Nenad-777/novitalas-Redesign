@@ -171,7 +171,7 @@ export default function Home() {
               }}
             >
               <Link
-                href="/geopolitika/sad-razmatraju-specijalnu-operaciju-za-preuzimanje-iranskog-uranijuma"
+                href="/geopolitika/sad-specijalna-operacija-iran-uranijum"
                 className="no-underline"
               >
                 <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
