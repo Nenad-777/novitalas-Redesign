@@ -2,8 +2,10 @@ import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function IranProtesti2026() {
+  useSEO("/geopolitika/iran-protesti-2026");
   const { theme } = useTheme();
   const isDark = theme === "dark";
 

@@ -8,6 +8,7 @@ import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useSEO } from "@/hooks/useSEO";
 
 const IMAGES = {
   europeMap:
@@ -15,6 +16,7 @@ const IMAGES = {
 };
 
 export default function GeopolitikaArticle() {
+  useSEO("/geopolitika/nova-bezbednosna-arhitektura");
   const { theme } = useTheme();
   const isDark = theme === "dark";
 

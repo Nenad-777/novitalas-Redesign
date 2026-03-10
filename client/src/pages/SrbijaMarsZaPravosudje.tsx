@@ -6,12 +6,14 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useSEO } from "@/hooks/useSEO";
 
 const IMAGES = {
   hero: "/analiza-nedelje-mars.jpg", // već ti je u /client/public
 };
 
 export default function SrbijaMarsZaPravosudje() {
+  useSEO("/srbija/mars-za-pravosudje");
   const { theme } = useTheme();
   const isDark = theme === "dark";
 

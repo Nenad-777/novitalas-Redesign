@@ -2,12 +2,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/useSEO";
 
 const IMAGES = {
   hero: "/carrier.jpg",
 };
 
 export default function GeopolitikaIran() {
+  useSEO("/geopolitika/iran");
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
