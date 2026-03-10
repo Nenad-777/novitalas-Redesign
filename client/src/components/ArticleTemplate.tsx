@@ -1,3 +1,6 @@
+import { useEffect, useRef, useState } from "react";
+import { toast } from "sonner";
+import { useLocation } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -33,6 +36,49 @@ export default function ArticleTemplate({
 }: ArticleTemplateProps) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
+
+  const [shareOpen, setShareOpen] = useState(false);
+  const sharePanelRef = useRef<HTMLDivElement>(null);
+
+  const [location] = useLocation();
+  const slug = location.split("/").filter(Boolean).pop() ?? "";
+  const shareUrl = `https://novitalas.org/share/${slug}`;
+  const encodedShareUrl = encodeURIComponent(shareUrl);
+
+  useEffect(() => {
+    if (!shareOpen) return;
+    function handleClickOutside(e: MouseEvent) {
+      if (
+        sharePanelRef.current &&
+        !sharePanelRef.current.contains(e.target as Node)
+      ) {
+        setShareOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [shareOpen]);
+
+  const handleViber = () => {
+    window.open(`viber://forward?text=${encodedShareUrl}`, "_blank");
+    setShareOpen(false);
+  };
+
+  const handleWhatsApp = () => {
+    window.open(`https://wa.me/?text=${encodedShareUrl}`, "_blank");
+    setShareOpen(false);
+  };
+
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      toast("Link je kopiran!");
+    } catch (err) {
+      console.error("Failed to copy share link:", err);
+      toast.error("Greška pri kopiranju.");
+    }
+    setShareOpen(false);
+  };
 
   return (
     <div
@@ -74,6 +120,59 @@ export default function ArticleTemplate({
               {dateLabel}
             </p>
           ) : null}
+
+          {/* Podeli vest */}
+          <div className="mt-4 relative inline-block" ref={sharePanelRef}>
+            <button
+              onClick={() => setShareOpen((prev) => !prev)}
+              className="inline-flex items-center gap-2 border px-4 py-[7px] text-[11px] font-semibold tracking-[0.14em] uppercase transition-opacity hover:opacity-80"
+              style={{
+                fontFamily: "'Source Sans 3', sans-serif",
+                color: isDark ? "#d9bf7a" : "#8B0000",
+                borderColor: isDark ? "#d9bf7a" : "#8B0000",
+                backgroundColor: "transparent",
+              }}
+            >
+              ↑ Podeli vest
+            </button>
+
+            {shareOpen && (
+              <div
+                className="absolute left-0 top-full mt-1 z-50 flex border"
+                style={{
+                  backgroundColor: isDark ? "#1a1c22" : "#ffffff",
+                  borderColor: isDark ? "#2a2a2e" : "#e0e0e0",
+                  boxShadow: isDark
+                    ? "0 4px 18px rgba(0,0,0,0.45)"
+                    : "0 4px 18px rgba(0,0,0,0.10)",
+                }}
+              >
+                {[
+                  { label: "Viber", action: handleViber },
+                  { label: "WhatsApp", action: handleWhatsApp },
+                  { label: "Kopiraj link", action: handleCopyLink },
+                ].map(({ label, action }, i, arr) => (
+                  <button
+                    key={label}
+                    onClick={action}
+                    className="px-5 py-3 text-[11px] font-semibold tracking-[0.1em] uppercase transition-colors hover:opacity-80"
+                    style={{
+                      fontFamily: "'Source Sans 3', sans-serif",
+                      color: isDark ? "#cfcac0" : "#222",
+                      backgroundColor: "transparent",
+                      borderRight:
+                        i < arr.length - 1
+                          ? `1px solid ${isDark ? "#2a2a2e" : "#e0e0e0"}`
+                          : "none",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
 
           {/* Lead / deck */}
           {deck ? (
