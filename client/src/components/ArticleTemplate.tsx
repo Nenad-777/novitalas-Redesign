@@ -11,6 +11,7 @@ type ArticleTemplateProps = {
   deck?: string;
   imageSrc?: string;
   imageAlt?: string;
+  imageCredit?: string;
   imageHeightClass?: string;
   paragraphs: ArticleParagraph[];
   backHref: string;
@@ -24,6 +25,7 @@ export default function ArticleTemplate({
   deck,
   imageSrc,
   imageAlt = "",
+  imageCredit,
   imageHeightClass = "h-[260px] md:h-[420px]",
   paragraphs,
   backHref,
@@ -88,18 +90,31 @@ export default function ArticleTemplate({
 
           {/* Slika */}
           {imageSrc ? (
-            <div
-              className="mt-8 border overflow-hidden"
-              style={{
-                borderColor: isDark ? "#2a2a2e" : "#eee",
-                backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
-              }}
-            >
-              <img
-                src={imageSrc}
-                alt={imageAlt}
-                className={`w-full ${imageHeightClass} object-cover object-center block`}
-              />
+            <div className="mt-8">
+              <div
+                className="border overflow-hidden"
+                style={{
+                  borderColor: isDark ? "#2a2a2e" : "#eee",
+                  backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                }}
+              >
+                <img
+                  src={imageSrc}
+                  alt={imageAlt}
+                  className={`w-full ${imageHeightClass} object-cover object-center block`}
+                />
+              </div>
+              {imageCredit ? (
+                <p
+                  className="mt-1 text-[11px]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#6b6760" : "#999",
+                  }}
+                >
+                  {imageCredit}
+                </p>
+              ) : null}
             </div>
           ) : null}
 
