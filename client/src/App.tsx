@@ -16,6 +16,7 @@ import IranProtesti2026 from "./pages/iran-protesti-2026";
 import SukobiIzraelIran2026 from "./pages/sukobi-izrael-iran-2026";
 import Ormuz from "./pages/ormuz";
 import VelikeSileIKrizaUIranu from "./pages/velike-sile-i-kriza-u-iranu";
+import RezerveNafte from "./pages/rezerve-nafte";
 import FrancuskaOdbranaOrmuza from "./pages/francuska-odbrana-ormuza";
 import SadSpecijalnaOperacijaIranUranijum from "./pages/sad-specijalna-operacija-iran-uranijum";
 
@@ -94,6 +95,11 @@ function Router() {
         <Route
           path="/geopolitika/sad-specijalna-operacija-iran-uranijum"
           component={SadSpecijalnaOperacijaIranUranijum}
+        />
+
+        <Route
+          path="/geopolitika/rezerve-nafte"
+          component={RezerveNafte}
         />
 
         <Route
