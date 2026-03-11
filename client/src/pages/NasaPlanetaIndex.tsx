@@ -10,6 +10,14 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/nasa-planeta/ai-vest-svest",
+    img: "/ai-supercomputer-data-center.jpg",
+    alt: "AI supercomputer data center",
+    title: "Da li je veštačka inteligencija već svesna?",
+    description:
+      "Direktor kompanije Anthropic izjavio je da naučnici sve ozbiljnije razmatraju mogućnost da napredni AI sistemi razviju neku vrstu svesti.",
+  },
+  {
     href: "/nasa-planeta/naucnici-poceli-da-usmeravaju-snove",
     img: "/snovi-usmeravanje-snova.jpg",
     alt: "Naučnici usmeravaju snove",

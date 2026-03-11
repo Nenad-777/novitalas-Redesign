@@ -292,4 +292,22 @@ export const seoData: Record<string, SEOData> = {
       "Novo istraživanje pokazuje da je moguće uticati na sadržaj snova i podstaći mozak da tokom sna kreativnije rešava probleme.",
     twitterImage: "https://novitalas.org/og/snovi-usmeravanje-snova.jpg",
   },
+
+  "/nasa-planeta/ai-vest-svest": {
+    title:
+      "Da li je veštačka inteligencija već svesna? — Novi Talas",
+    description:
+      "Direktor kompanije Anthropic izjavio je da naučnici sve ozbiljnije razmatraju mogućnost da napredni AI sistemi razviju neku vrstu svesti.",
+    ogTitle:
+      "Da li je veštačka inteligencija već svesna?",
+    ogDescription:
+      "Direktor kompanije Anthropic izjavio je da naučnici sve ozbiljnije razmatraju mogućnost da napredni AI sistemi razviju neku vrstu svesti.",
+    ogUrl: "https://novitalas.org/nasa-planeta/ai-vest-svest",
+    ogImage: "https://novitalas.org/ai-supercomputer-data-center.jpg",
+    twitterTitle:
+      "Da li je veštačka inteligencija već svesna?",
+    twitterDescription:
+      "Direktor kompanije Anthropic izjavio je da naučnici sve ozbiljnije razmatraju mogućnost da napredni AI sistemi razviju neku vrstu svesti.",
+    twitterImage: "https://novitalas.org/ai-supercomputer-data-center.jpg",
+  },
 };
