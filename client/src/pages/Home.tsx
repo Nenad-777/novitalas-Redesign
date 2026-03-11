@@ -31,6 +31,9 @@ const IMAGES = {
 
   snovi: "/snovi-usmeravanje-snova.jpg",
 
+  // ✅ AI vest svest (Naša planeta, 10. mart 2026)
+  aiVestSvest: "/ai-supercomputer-data-center.jpg",
+
   // ✅ SRBIJA thumbnail sada ide na novu vest
   srbijaThumb: "/traktori-beograd.jpg",
 
@@ -619,10 +622,10 @@ export default function Home() {
                           }}
                         >
                           <Link
-                            href="/nasa-planeta/naucnici-poceli-da-usmeravaju-snove"
+                            href="/nasa-planeta/ai-vest-svest"
                             className="headline-link"
                           >
-                            Naučnici počeli da usmeravaju snove: novo otkriće savremene psihologije
+                            Da li je veštačka inteligencija već svesna?
                           </Link>
                         </h3>
 
@@ -633,13 +636,13 @@ export default function Home() {
                             color: isDark ? "#7a7872" : "#666",
                           }}
                         >
-                          Mozak tokom REM faze aktivno rešava probleme — istraživači to sada mogu da usmere.
+                          Direktor kompanije Anthropic izjavio je da naučnici sve ozbiljnije razmatraju mogućnost da napredni AI sistemi razviju neku vrstu svesti.
                         </p>
                       </div>
 
                       <img
-                        src={IMAGES.snovi}
-                        alt="Naučnici usmeravaju snove"
+                        src={IMAGES.aiVestSvest}
+                        alt="AI supercomputer data center"
                         className="w-[100px] h-[75px] object-cover object-center border"
                         style={{
                           borderColor: isDark ? "#2a2a2e" : "#eee",

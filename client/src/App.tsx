@@ -34,6 +34,7 @@ import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
 
 /* ✅ NOVA VEST — Naša planeta */
 import NaucniciPoceliDaUsmeravajuSnove from "./pages/naucnici-poceli-da-usmeravaju-snove";
+import AiVestSvest from "./pages/ai-vest-svest";
 
 function NormalizePath() {
   const [location, setLocation] = useLocation();
@@ -150,6 +151,11 @@ function Router() {
         <Route
           path="/nasa-planeta/naucnici-poceli-da-usmeravaju-snove"
           component={NaucniciPoceliDaUsmeravajuSnove}
+        />
+
+        <Route
+          path="/nasa-planeta/ai-vest-svest"
+          component={AiVestSvest}
         />
 
         {/* 404 */}
