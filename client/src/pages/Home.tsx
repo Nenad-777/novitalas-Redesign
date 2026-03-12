@@ -37,6 +37,9 @@ const IMAGES = {
   // ✅ AI vest svest (Naša planeta, 10. mart 2026)
   aiVestSvest: "/ai-supercomputer-data-center.jpg",
 
+  // ✅ Kubrick (Naša planeta, 12. mart 2026)
+  kubrick: "/kubrick.jpg",
+
   // ✅ SRBIJA thumbnail sada ide na novu vest
   srbijaThumb: "/traktori-beograd.jpg",
 
@@ -817,6 +820,51 @@ export default function Home() {
                       >
                         Otvori Naša planeta →
                       </Link>
+                    </div>
+                  </div>
+
+                  <hr className="editorial-divider my-5" />
+
+                  {/* Naša planeta — Kubrick */}
+                  <div>
+                    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
+                      <div>
+                        <span className="kicker">Naša planeta</span>
+                        <h3
+                          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#e0ddd5" : "#111",
+                          }}
+                        >
+                          <Link
+                            href="/nasa-planeta/kubrick"
+                            className="headline-link"
+                          >
+                            Stenli Kjubrik i tajna filma koji ne stari
+                          </Link>
+                        </h3>
+
+                        <p
+                          className="mt-1 text-[14px] leading-[1.5]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#7a7872" : "#666",
+                          }}
+                        >
+                          Dok se svet ponovo okreće ceremoniji Oskara, jedan reditelj i dalje stoji izvan logike nagrada i podseća nas da film može biti umetnost mišljenja.
+                        </p>
+                      </div>
+
+                      <img
+                        src={IMAGES.kubrick}
+                        alt="Stenli Kjubrik — reditelj koji je promenio film"
+                        className="w-[100px] h-[75px] object-cover object-center border"
+                        style={{
+                          borderColor: isDark ? "#2a2a2e" : "#eee",
+                          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
+                        }}
+                      />
                     </div>
                   </div>
 
