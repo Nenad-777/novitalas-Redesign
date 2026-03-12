@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
-import { useLocation } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -40,10 +39,6 @@ export default function ArticleTemplate({
   const [shareOpen, setShareOpen] = useState(false);
   const sharePanelRef = useRef<HTMLDivElement>(null);
 
-  const [location] = useLocation();
-  const shareUrl = `https://novitalas.org${location}`;
-  const encodedShareUrl = encodeURIComponent(shareUrl);
-
   useEffect(() => {
     if (!shareOpen) return;
     function handleClickOutside(e: MouseEvent) {
@@ -58,19 +53,43 @@ export default function ArticleTemplate({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [shareOpen]);
 
+  const VIBER_FALLBACK_DELAY_MS = 1500;
+
+  const getArticleUrl = () =>
+    `https://novitalas.org${window.location.pathname}`;
+
   const handleViber = () => {
-    window.open(`viber://forward?text=${encodedShareUrl}`, "_blank");
+    const articleUrl = getArticleUrl();
+    const encoded = encodeURIComponent(articleUrl);
+    const deepLink = `viber://forward?text=${encoded}`;
+    const fallbackUrl = `https://www.viber.com/en/share/?text=${encoded}`;
+
+    window.open(deepLink, "_blank");
+
+    // If Viber deep link fails (page stays visible), open web fallback
+    const cancelFallback = () => clearTimeout(timer);
+    const timer = setTimeout(() => {
+      window.removeEventListener("blur", cancelFallback);
+      if (!document.hidden) {
+        window.open(fallbackUrl, "_blank");
+      }
+    }, VIBER_FALLBACK_DELAY_MS);
+
+    window.addEventListener("blur", cancelFallback, { once: true });
+
     setShareOpen(false);
   };
 
   const handleWhatsApp = () => {
-    window.open(`https://wa.me/?text=${encodedShareUrl}`, "_blank");
+    const encoded = encodeURIComponent(getArticleUrl());
+    window.open(`https://wa.me/?text=${encoded}`, "_blank");
     setShareOpen(false);
   };
 
   const handleCopyLink = async () => {
+    const articleUrl = getArticleUrl();
     try {
-      await navigator.clipboard.writeText(shareUrl);
+      await navigator.clipboard.writeText(articleUrl);
       toast("Link je kopiran!");
     } catch (err) {
       console.error("Failed to copy share link:", err);
