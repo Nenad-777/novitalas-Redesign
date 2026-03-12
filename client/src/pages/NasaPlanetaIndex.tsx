@@ -33,6 +33,14 @@ const ARTICLES = [
     description:
       'Mozaik od brojnih posmatranja prikazuje Centralnu molekularnu zonu — najgušći i najturbulentniji pojas gasa i prašine u središtu naše galaksije.',
   },
+  {
+    href: "/nasa-planeta/kubrick",
+    img: "/kubrick.jpg",
+    alt: "Stenli Kjubrik — reditelj koji je promenio film",
+    title: "Stenli Kjubrik i tajna filma koji ne stari",
+    description:
+      "Dok se svet ponovo okreće ceremoniji Oskara, jedan reditelj i dalje stoji izvan logike nagrada i podseća nas da film može biti umetnost mišljenja.",
+  },
 ];
 
 export default function NasaPlanetaIndex() {
