@@ -70,15 +70,6 @@ export default function NasaPlanetaIndex() {
               NAUKA   PRIRODA   KULTURA
             </p>
 
-            <p
-              className="mt-4 text-[17px] md:text-[19px] leading-[1.65] max-w-[680px]"
-              style={{
-                fontFamily: "'Crimson Pro', serif",
-                color: isDark ? "#9a978f" : "#555",
-              }}
-            >
-              Otkrivamo naučna dostignuća, prirodne fenomene i ideje koje oblikuju budućnost naše planete.
-            </p>
           </div>
 
           {/* HERO ARTICLE — featured story */}
