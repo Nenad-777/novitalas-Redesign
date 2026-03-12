@@ -329,6 +329,24 @@ export const seoData: Record<string, SEOData> = {
     twitterImage: "https://novitalas.org/ai-supercomputer-data-center.jpg",
   },
 
+  "/geopolitika/rezerve-nafte": {
+    title:
+      "IEA pokreće najveće oslobađanje naftnih rezervi u istoriji — Novi Talas",
+    description:
+      "Države članice Međunarodne agencije za energiju puštaju 400 miliona barela nafte iz strateških rezervi kako bi ublažile globalni energetski šok izazvan krizom u Persijskom zalivu.",
+    ogTitle:
+      "IEA pokreće najveće oslobađanje naftnih rezervi u istoriji",
+    ogDescription:
+      "Države članice Međunarodne agencije za energiju puštaju 400 miliona barela nafte iz strateških rezervi kako bi ublažile globalni energetski šok.",
+    ogUrl: "https://novitalas.org/geopolitika/rezerve-nafte",
+    ogImage: "https://novitalas.org/rezerve-nafte.jpg",
+    twitterTitle:
+      "IEA pokreće najveće oslobađanje naftnih rezervi u istoriji",
+    twitterDescription:
+      "Države članice Međunarodne agencije za energiju puštaju 400 miliona barela nafte iz strateških rezervi kako bi ublažile globalni energetski šok.",
+    twitterImage: "https://novitalas.org/rezerve-nafte.jpg",
+  },
+
   "/geopolitika/refugees-iran-un": {
     title:
       "Rat u Iranu pokrenuo masovno raseljavanje: UN upozorava na 3,2 miliona izbeglica — Novi Talas",
