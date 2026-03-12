@@ -5,6 +5,7 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ShareButton from "@/components/ShareButton";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useSEO } from "@/hooks/useSEO";
 
@@ -65,6 +66,9 @@ export default function SukobiIzraelIran2026() {
           >
             Otvoreni sukobi Izraela i Irana: region ulazi u novu fazu nestabilnosti
           </h1>
+
+          {/* Podeli vest */}
+          <ShareButton />
 
           {/* Slika */}
           <div className="mb-8">

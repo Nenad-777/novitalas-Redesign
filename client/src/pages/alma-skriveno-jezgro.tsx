@@ -6,6 +6,7 @@
 import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ShareButton from "@/components/ShareButton";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useSEO } from "@/hooks/useSEO";
 
@@ -69,6 +70,9 @@ export default function AlmaSkrivenoJezgro() {
           >
             Najveća ALMA mapa ikad: otkriveno „skriveno jezgro“ Mlečnog puta
           </h1>
+
+          {/* Podeli vest */}
+          <ShareButton />
 
           {/* Body */}
           <div

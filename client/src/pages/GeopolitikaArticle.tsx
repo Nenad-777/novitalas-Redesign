@@ -7,6 +7,7 @@
 import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ShareButton from "@/components/ShareButton";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useSEO } from "@/hooks/useSEO";
 
@@ -63,6 +64,9 @@ export default function GeopolitikaArticle() {
             <span>&bull;</span>
             <span>Februar 2026</span>
           </div>
+
+          {/* Podeli vest */}
+          <ShareButton />
 
           {/* Feature image */}
           <figure className="mb-10">
