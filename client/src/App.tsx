@@ -27,6 +27,9 @@ import SrbijaPage from "./pages/SrbijaPage";
 import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 
+/* ✅ NOVA VEST — Geopolitika */
+import RefugeesIranUn from "./pages/refugees-iran-un";
+
 /* ✅ NOVA VEST */
 import SeloNePrastaPoraz from "./pages/selo-ne-prasta-poraz";
 
@@ -100,6 +103,11 @@ function Router() {
         <Route
           path="/geopolitika/rezerve-nafte"
           component={RezerveNafte}
+        />
+
+        <Route
+          path="/geopolitika/refugees-iran-un"
+          component={RefugeesIranUn}
         />
 
         <Route

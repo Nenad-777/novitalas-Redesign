@@ -310,4 +310,22 @@ export const seoData: Record<string, SEOData> = {
       "Direktor kompanije Anthropic izjavio je da naučnici sve ozbiljnije razmatraju mogućnost da napredni AI sistemi razviju neku vrstu svesti.",
     twitterImage: "https://novitalas.org/ai-supercomputer-data-center.jpg",
   },
+
+  "/geopolitika/refugees-iran-un": {
+    title:
+      "Rat u Iranu pokrenuo masovno raseljavanje: UN upozorava na 3,2 miliona izbeglica — Novi Talas",
+    description:
+      "Agencija UN za izbeglice upozorava da se humanitarna kriza ubrzano širi dok milioni ljudi napuštaju svoje domove.",
+    ogTitle:
+      "Rat u Iranu pokrenuo masovno raseljavanje: UN upozorava na 3,2 miliona izbeglica",
+    ogDescription:
+      "Agencija UN za izbeglice upozorava da se humanitarna kriza ubrzano širi dok milioni ljudi napuštaju svoje domove.",
+    ogUrl: "https://novitalas.org/geopolitika/refugees-iran-un",
+    ogImage: "https://novitalas.org/refugees-iran-un.jpg",
+    twitterTitle:
+      "Rat u Iranu pokrenuo masovno raseljavanje: UN upozorava na 3,2 miliona izbeglica",
+    twitterDescription:
+      "Agencija UN za izbeglice upozorava da se humanitarna kriza ubrzano širi dok milioni ljudi napuštaju svoje domove.",
+    twitterImage: "https://novitalas.org/refugees-iran-un.jpg",
+  },
 };
