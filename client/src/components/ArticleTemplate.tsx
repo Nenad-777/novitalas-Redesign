@@ -41,8 +41,7 @@ export default function ArticleTemplate({
   const sharePanelRef = useRef<HTMLDivElement>(null);
 
   const [location] = useLocation();
-  const slug = location.split("/").filter(Boolean).pop() ?? "";
-  const shareUrl = `https://novitalas.org/share/${slug}`;
+  const shareUrl = `https://novitalas.org${location}`;
   const encodedShareUrl = encodeURIComponent(shareUrl);
 
   useEffect(() => {

@@ -10,6 +10,14 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/nasa-planeta/kubrick",
+    img: "/kubrick.jpg",
+    alt: "Stenli Kjubrik — reditelj koji je promenio film",
+    title: "Stenli Kjubrik i tajna filma koji ne stari",
+    description:
+      "Dok se svet ponovo okreće ceremoniji Oskara, jedan reditelj i dalje stoji izvan logike nagrada i podseća nas da film može biti umetnost mišljenja.",
+  },
+  {
     href: "/nasa-planeta/ai-vest-svest",
     img: "/ai-supercomputer-data-center.jpg",
     alt: "AI supercomputer data center",
@@ -32,14 +40,6 @@ const ARTICLES = [
     title: 'Najveća ALMA mapa ikad: otkriveno „skriveno jezgro" Mlečnog puta',
     description:
       'Mozaik od brojnih posmatranja prikazuje Centralnu molekularnu zonu — najgušći i najturbulentniji pojas gasa i prašine u središtu naše galaksije.',
-  },
-  {
-    href: "/nasa-planeta/kubrick",
-    img: "/kubrick.jpg",
-    alt: "Stenli Kjubrik — reditelj koji je promenio film",
-    title: "Stenli Kjubrik i tajna filma koji ne stari",
-    description:
-      "Dok se svet ponovo okreće ceremoniji Oskara, jedan reditelj i dalje stoji izvan logike nagrada i podseća nas da film može biti umetnost mišljenja.",
   },
 ];
 
