@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ShareButton from "@/components/ShareButton";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useSEO } from "@/hooks/useSEO";
 
@@ -46,6 +47,9 @@ export default function IranProtesti2026() {
               25. februar 2026.
             </p>
           </div>
+
+          {/* Podeli vest */}
+          <ShareButton />
 
           {/* HERO IMAGE (web format, normal height) */}
           <div

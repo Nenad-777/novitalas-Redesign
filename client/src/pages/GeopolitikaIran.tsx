@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ShareButton from "@/components/ShareButton";
 import { useTheme } from "@/contexts/ThemeContext";
 import { Link } from "wouter";
 import { useSEO } from "@/hooks/useSEO";
@@ -46,6 +47,9 @@ export default function GeopolitikaIran() {
             dok predsednik Trump još nije doneo konačnu odluku. Potencijalna eskalacija u zoni
             Ormuskog moreuza otvara energetski i bezbednosni rizik i za Evropu.
           </p>
+
+          {/* Podeli vest */}
+          <ShareButton />
 
           <div className="mt-8 border overflow-hidden" style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}>
             <img

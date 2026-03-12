@@ -7,6 +7,7 @@
 import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ShareButton from "@/components/ShareButton";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useSEO } from "@/hooks/useSEO";
 
@@ -74,6 +75,9 @@ export default function SrbijaPolarizacija() {
           >
             Podeljeno društvo: Srbija u ogledalu globalne polarizacije
           </h1>
+
+          {/* Podeli vest */}
+          <ShareButton />
 
           <p
             className="text-[19px] leading-[1.7] mb-10 italic"

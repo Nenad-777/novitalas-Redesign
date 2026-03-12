@@ -5,6 +5,7 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ShareButton from "@/components/ShareButton";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useSEO } from "@/hooks/useSEO";
 
@@ -48,6 +49,9 @@ export default function Ormuz() {
 >
   2. MART 2026.
           </p>
+
+          {/* Podeli vest */}
+          <ShareButton />
 
           <div
             className="mt-8 border overflow-hidden"

@@ -5,6 +5,7 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ShareButton from "@/components/ShareButton";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useSEO } from "@/hooks/useSEO";
 
@@ -61,6 +62,9 @@ export default function SrbijaMarsZaPravosudje() {
               <span>&nbsp;&bull;&nbsp;</span>
               <span>21. februar 2026.</span>
             </div>
+
+            {/* Podeli vest */}
+            <ShareButton />
 
             <hr
               className="my-6"
