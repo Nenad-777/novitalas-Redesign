@@ -293,6 +293,24 @@ export const seoData: Record<string, SEOData> = {
     twitterImage: "https://novitalas.org/og/snovi-usmeravanje-snova.jpg",
   },
 
+  "/nasa-planeta/kubrick": {
+    title:
+      "Stenli Kjubrik i tajna filma koji ne stari — Novi Talas",
+    description:
+      "Dok se svet ponovo okreće ceremoniji Oskara, jedan reditelj i dalje stoji izvan logike nagrada i podseća nas da film može biti umetnost mišljenja.",
+    ogTitle:
+      "Stenli Kjubrik i tajna filma koji ne stari",
+    ogDescription:
+      "Dok se svet ponovo okreće ceremoniji Oskara, jedan reditelj i dalje stoji izvan logike nagrada i podseća nas da film može biti umetnost mišljenja.",
+    ogUrl: "https://novitalas.org/nasa-planeta/kubrick",
+    ogImage: "https://novitalas.org/kubrick.jpg",
+    twitterTitle:
+      "Stenli Kjubrik i tajna filma koji ne stari",
+    twitterDescription:
+      "Dok se svet ponovo okreće ceremoniji Oskara, jedan reditelj i dalje stoji izvan logike nagrada i podseća nas da film može biti umetnost mišljenja.",
+    twitterImage: "https://novitalas.org/kubrick.jpg",
+  },
+
   "/nasa-planeta/ai-vest-svest": {
     title:
       "Da li je veštačka inteligencija već svesna? — Novi Talas",
