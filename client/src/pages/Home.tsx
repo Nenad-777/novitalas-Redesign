@@ -118,6 +118,7 @@ export default function Home() {
           alt="Globus sa avionima  -  Novi Talas"
           className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ opacity: isDark ? 0.6 : 0.9 }}
+          fetchPriority="high"
         />
 
         <div
@@ -238,6 +239,8 @@ export default function Home() {
                       src={IMAGES.refugeesIranUn}
                       alt="Izbeglice iz Irana — humanitarna kriza"
                       className="w-full h-[220px] md:h-full object-cover object-center block"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 </div>
@@ -315,6 +318,8 @@ export default function Home() {
                       src="/rezerve-nafte.jpg"
                       alt="IEA — oslobađanje strateških naftnih rezervi"
                       className="w-full h-[220px] md:h-full object-cover object-center block"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 </div>
@@ -390,6 +395,8 @@ export default function Home() {
                       src="/us-special-forces-desert.jpg"
                       alt="Američke specijalne snage u pustinji"
                       className="w-full h-[220px] md:h-full object-cover object-center block"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 </div>
@@ -465,6 +472,8 @@ export default function Home() {
                       src="/hormuz-strait-tankers.jpg"
                       alt="Tankeri u Ormuskom moreuzu"
                       className="w-full h-[220px] md:h-full object-cover object-center block"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 </div>
@@ -550,6 +559,8 @@ export default function Home() {
                       src={IMAGES.kinaSpyBrod}
                       alt="Kineski špijunski brod — nadzor u Persijskom zalivu"
                       className="w-full h-[220px] md:h-full object-cover object-center block"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 </div>
@@ -628,6 +639,8 @@ export default function Home() {
                       src={IMAGES.russiaChinaShadows}
                       alt="Rusija i Kina — senke velikih sila"
                       className="w-full h-[220px] md:h-full object-cover object-center block"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 </div>
@@ -711,6 +724,8 @@ export default function Home() {
                         src={IMAGES.izraelIran}
                         alt="Geopolitika  -  Izrael–Iran 2026"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   </Link>
@@ -761,6 +776,8 @@ export default function Home() {
                           borderColor: isDark ? "#2a2a2e" : "#eee",
                           backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
                         }}
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   </div>
@@ -806,6 +823,8 @@ export default function Home() {
                           borderColor: isDark ? "#2a2a2e" : "#eee",
                           backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
                         }}
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
 
@@ -864,6 +883,8 @@ export default function Home() {
                           borderColor: isDark ? "#2a2a2e" : "#eee",
                           backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
                         }}
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   </div>
@@ -909,6 +930,8 @@ export default function Home() {
                           borderColor: isDark ? "#2a2a2e" : "#eee",
                           backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
                         }}
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   </div>

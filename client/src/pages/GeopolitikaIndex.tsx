@@ -80,6 +80,7 @@ export default function GeopolitikaIndex() {
                     src={IMAGES.refugeesIranUn}
                     alt="Izbeglice iz Irana — humanitarna kriza"
                     className="w-full h-[260px] object-cover object-center block"
+                    decoding="async"
                   />
                 </div>
 
@@ -132,6 +133,8 @@ export default function GeopolitikaIndex() {
                     src={IMAGES.rezerveNafte}
                     alt="IEA — oslobađanje strateških naftnih rezervi"
                     className="w-full h-[260px] object-cover object-center block"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 
@@ -186,6 +189,8 @@ export default function GeopolitikaIndex() {
                     src={IMAGES.usSpecialForces}
                     alt="Američke specijalne snage u pustinjskoj operaciji"
                     className="w-full h-[260px] object-cover object-center block"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 
@@ -239,6 +244,8 @@ export default function GeopolitikaIndex() {
                     src={IMAGES.hormuzTankers}
                     alt="Tankeri u Ormuskom moreuzu"
                     className="w-full h-[260px] object-cover object-center block"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 
@@ -292,6 +299,8 @@ export default function GeopolitikaIndex() {
                     src={IMAGES.russiaChinaShadows}
                     alt="Rusija i Kina — senke velikih sila"
                     className="w-full h-[260px] object-cover object-center block"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 
@@ -344,6 +353,8 @@ export default function GeopolitikaIndex() {
                     src={IMAGES.ormuz}
                     alt="Ormuski moreuz"
                     className="w-full h-[260px] object-cover object-center block"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 
@@ -397,6 +408,8 @@ export default function GeopolitikaIndex() {
                     src={IMAGES.izraelIran}
                     alt="Geopolitika  -  Izrael Iran"
                     className="w-full h-[220px] object-cover object-center block"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 
@@ -450,6 +463,8 @@ export default function GeopolitikaIndex() {
                     src={IMAGES.iran}
                     alt="Geopolitika  -  Iran protesti"
                     className="w-full h-[220px] object-cover object-center block"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 
@@ -504,6 +519,8 @@ export default function GeopolitikaIndex() {
                     src={IMAGES.ukraine}
                     alt="Geopolitika  -  Ukrajina"
                     className="w-full h-[220px] object-cover object-center block"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 
@@ -557,6 +574,8 @@ export default function GeopolitikaIndex() {
                     src={IMAGES.europeMap}
                     alt="Nova bezbednosna arhitektura Evrope"
                     className="w-full h-[220px] object-cover object-center block"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 

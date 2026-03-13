@@ -89,6 +89,7 @@ export default function NasaPlanetaIndex() {
                   src={hero.img}
                   alt={hero.alt}
                   className="w-full h-[300px] md:h-[480px] object-cover object-center block transition-transform duration-500 group-hover:scale-[1.02]"
+                  decoding="async"
                 />
               </div>
 
@@ -146,6 +147,8 @@ export default function NasaPlanetaIndex() {
                       src={article.img}
                       alt={article.alt}
                       className="w-full h-[240px] object-cover object-center block transition-transform duration-500 group-hover:scale-[1.03]"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
 
@@ -197,6 +200,8 @@ export default function NasaPlanetaIndex() {
                         src={article.img}
                         alt={article.alt}
                         className="w-full h-full object-cover object-center block transition-transform duration-500 group-hover:scale-[1.04]"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     <span
