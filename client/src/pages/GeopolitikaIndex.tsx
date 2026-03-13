@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
-  biennaleRusija: "/news/venice-biennale.jpg",
+  biennaleRusija: "/news/biennale-venice.jpg",
   refugeesIranUn: "/refugees-iran-un.jpg",
   rezerveNafte: "/rezerve-nafte.jpg",
   usSpecialForces: "/us-special-forces-desert.jpg",
