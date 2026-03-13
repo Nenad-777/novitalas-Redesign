@@ -17,6 +17,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "https://private-us-east-1.manuscdn.com/sessionFile/6SqA6Ltpws9fwNQXZCXsiu/sandbox/VqzKWVZr2iULAAnWvkb1OW-img-1_1771300001000_na1fn_bm92aS10YWxhcy1oZXJv.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvNlNxQTZMdHB3czlmd05RWFpDWHNpdS9zYW5kYm94L1ZxektXVlpyMmlVTEFBbld2a2IxT1ctaW1nLTFfMTc3MTMwMDAwMTAwMF9uYTFmbl9ibTkyYVMxMFlXeGhjeTFvWlhKdi5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=vickhcvz4~YbTDCmOZhcH-ccU4yQa-vO1nYi1RLKmWenh~BaokXfByyTseqceDOn1X95WCs8wu7sSrWuIbTkJ6fguujMipq08NjRX1CToVLGeSsLojJufY422QdYrD9T1z6SshXDh~iExPwB4wgbaVzdMdV90Rr1KKKXfyMjDMM3CyteXDVgswhyX45ttKg8vzRwBDfhSUQC4bb82yVt7rMLjZxh9~1GCxqdL3mee1F3-~YRdsnOihaF0dNZr5bXlVerTFJSqX5Rc1IkCAb2fF0~1BeJ5HplAhZyX1BsckBjaIROXZaXBMebgoAgcgDaoVQ~fPIDb9NceHutx99iew__",
 
+  // ✅ NOVA GLAVNA VEST — Biennale Rusija (13. mart 2026)
+  biennaleRusija: "/news/venice-biennale.jpg",
+
   // ✅ NOVA GLAVNA VEST — Izbeglice Iran UN (11. mart 2026)
   refugeesIranUn: "/refugees-iran-un.jpg",
 
@@ -171,7 +174,84 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          {/* Geopolitika — UN izbeglice Iran (GLAVNA VEST) */}
+          {/* Geopolitika — EU Biennale Rusija (GLAVNA VEST) */}
+          <FadeIn className="mb-10">
+            <article
+              className="border overflow-hidden"
+              style={{
+                borderColor: isDark ? "#2a2a2e" : "#eee",
+                backgroundColor: isDark ? "#151820" : "#faf7f2",
+              }}
+            >
+              <Link
+                href="/geopolitika/biennale-rusija"
+                className="no-underline"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
+                  <div className="p-6 md:p-7">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span
+                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
+                        style={{
+                          fontFamily:
+                            "'Source Sans 3', -apple-system, sans-serif",
+                          color: isDark ? "#9a978f" : "#666",
+                        }}
+                      >
+                        Geopolitika
+                      </span>
+                    </div>
+
+                    <h2
+                      className="text-[26px] md:text-[34px] font-bold leading-[1.1]"
+                      style={{
+                        fontFamily: "'Playfair Display', Georgia, serif",
+                        color: isDark ? "#e0ddd5" : "#111",
+                      }}
+                    >
+                      EU preti povlačenjem finansiranja Venecijanskog bijenala zbog mogućeg povratka Rusije
+                    </h2>
+
+                    <p
+                      className="mt-3 text-[16px] md:text-[17px] leading-[1.6]"
+                      style={{
+                        fontFamily: "'Lora', Georgia, serif",
+                        color: isDark ? "#9a978f" : "#555",
+                      }}
+                    >
+                      Evropska unija zapretila je mogućnošću povlačenja finansijske podrške Venecijanskom bijenalu ukoliko Rusiji bude dozvoljen povratak na ovu prestižnu međunarodnu umetničku manifestaciju.
+                    </p>
+
+                    <div
+                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                      style={{
+                        fontFamily:
+                          "'Source Sans 3', -apple-system, sans-serif",
+                        color: isDark ? "#d9bf7a" : "#8B0000",
+                      }}
+                    >
+                      Otvori tekst →
+                    </div>
+                  </div>
+
+                  <div
+                    className="border-l"
+                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
+                  >
+                    <img
+                      src={IMAGES.biennaleRusija}
+                      alt="Venecijansko bijenale — povratak Rusije"
+                      className="w-full h-[220px] md:h-full object-cover object-center block"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+              </Link>
+            </article>
+          </FadeIn>
+
+          {/* Geopolitika — UN izbeglice Iran */}
           <FadeIn className="mb-10">
             <article
               className="border overflow-hidden"
