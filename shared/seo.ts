@@ -357,12 +357,12 @@ export const seoData: Record<string, SEOData> = {
     ogDescription:
       "Evropska unija zapretila je mogućnošću povlačenja finansijske podrške Venecijanskom bijenalu ukoliko Rusiji bude dozvoljen povratak na ovu prestižnu međunarodnu umetničku manifestaciju.",
     ogUrl: "https://novitalas.org/geopolitika/biennale-rusija",
-    ogImage: "https://novitalas.org/news/venice-biennale.jpg",
+    ogImage: "https://novitalas.org/news/biennale-venice.jpg",
     twitterTitle:
       "EU preti povlačenjem finansiranja Venecijanskog bijenala zbog mogućeg povratka Rusije",
     twitterDescription:
       "Evropska unija zapretila je mogućnošću povlačenja finansijske podrške Venecijanskom bijenalu ukoliko Rusiji bude dozvoljen povratak na ovu prestižnu međunarodnu umetničku manifestaciju.",
-    twitterImage: "https://novitalas.org/news/venice-biennale.jpg",
+    twitterImage: "https://novitalas.org/news/biennale-venice.jpg",
   },
 
   "/geopolitika/refugees-iran-un": {
