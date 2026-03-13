@@ -207,6 +207,22 @@ export const seoData: Record<string, SEOData> = {
     twitterImage: "https://novitalas.org/carrier.jpg",
   },
 
+  "/srbija/tiho-gasenje-srpskih-univerziteta-na-kosovu": {
+    title: "Tiho gašenje srpskih univerziteta na Kosovu — Novi Talas",
+    description:
+      "Hiljade studenata i profesora mogle bi ostati bez univerziteta dok administrativne mere postepeno onemogućavaju rad srpskih fakulteta u Kosovskoj Mitrovici.",
+    ogTitle: "Tiho gašenje srpskih univerziteta na Kosovu",
+    ogDescription:
+      "Hiljade studenata i profesora mogle bi ostati bez univerziteta dok administrativne mere postepeno onemogućavaju rad srpskih fakulteta u Kosovskoj Mitrovici.",
+    ogUrl:
+      "https://novitalas.org/srbija/tiho-gasenje-srpskih-univerziteta-na-kosovu",
+    ogImage: "https://novitalas.org/news/kosovo-amfiteatar.jpg",
+    twitterTitle: "Tiho gašenje srpskih univerziteta na Kosovu",
+    twitterDescription:
+      "Hiljade studenata i profesora mogle bi ostati bez univerziteta dok administrativne mere postepeno onemogućavaju rad srpskih fakulteta u Kosovskoj Mitrovici.",
+    twitterImage: "https://novitalas.org/news/kosovo-amfiteatar.jpg",
+  },
+
   "/srbija/selo-ne-prasta-poraz-vest": {
     title: "Selo ne prašta poraz — Novi Talas",
     description:

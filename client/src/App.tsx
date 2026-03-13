@@ -34,6 +34,9 @@ import BiennaleRusija from "./pages/biennale-rusija";
 /* ✅ NOVA VEST */
 import SeloNePrastaPoraz from "./pages/selo-ne-prasta-poraz";
 
+/* ✅ NOVA VEST — Srbija */
+import TihoGasenjeSrpskihUniverzitetaNaKosovu from "./pages/tiho-gasenje-srpskih-univerziteta-na-kosovu";
+
 import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
 import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
 
@@ -143,6 +146,11 @@ function Router() {
             SRBIJA
            ========================= */}
         <Route path="/srbija" component={SrbijaPage} />
+
+        <Route
+          path="/srbija/tiho-gasenje-srpskih-univerziteta-na-kosovu"
+          component={TihoGasenjeSrpskihUniverzitetaNaKosovu}
+        />
 
         <Route
           path="/srbija/selo-ne-prasta-poraz-vest"
