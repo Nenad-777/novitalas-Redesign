@@ -26,7 +26,7 @@ export default function BiennaleRusija() {
       title="EU preti povlačenjem finansiranja Venecijanskog bijenala zbog mogućeg povratka Rusije"
       dateLabel="13. MART 2026."
       deck="Evropska unija zapretila je mogućnošću povlačenja finansijske podrške Venecijanskom bijenalu ukoliko Rusiji bude dozvoljen povratak na ovu prestižnu međunarodnu umetničku manifestaciju."
-      imageSrc="/news/venice-biennale.jpg"
+      imageSrc="/news/biennale-venice.jpg"
       imageAlt="Venecijansko bijenale — povratak Rusije"
       paragraphs={PARAGRAPHS}
       backHref="/geopolitika"
