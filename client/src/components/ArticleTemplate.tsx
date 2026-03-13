@@ -106,6 +106,7 @@ export default function ArticleTemplate({
                   src={imageSrc}
                   alt={imageAlt}
                   className={`w-full ${imageHeightClass} object-cover object-center block`}
+                  decoding="async"
                 />
               </div>
               {imageCredit ? (

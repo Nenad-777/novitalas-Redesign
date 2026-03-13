@@ -75,6 +75,7 @@ export default function SrbijaPage() {
                     src={IMAGES.traktori}
                     alt="Kolona traktora ka Beogradu"
                     className="w-full h-[220px] object-cover object-center block"
+                    decoding="async"
                   />
                 </div>
 
@@ -126,6 +127,8 @@ export default function SrbijaPage() {
                     src={IMAGES.analizaNedeljeMars}
                     alt="Marš za pravosuđe — ilustracija"
                     className="w-full h-[220px] object-cover object-center block"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 
@@ -178,6 +181,8 @@ export default function SrbijaPage() {
                     alt="Podeljeno društvo — ilustracija"
                     className="w-full h-[220px] object-cover object-center block"
                     style={{ opacity: isDark ? 0.9 : 1 }}
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 

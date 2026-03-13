@@ -74,6 +74,7 @@ export default function ObavestajniIndex() {
                   src={hero.img}
                   alt={hero.alt}
                   className="w-full h-[300px] md:h-[480px] object-cover object-center block transition-transform duration-500 group-hover:scale-[1.02]"
+                  decoding="async"
                 />
               </div>
 
@@ -144,6 +145,8 @@ export default function ObavestajniIndex() {
                         src={article.img}
                         alt={article.alt}
                         className="w-full h-[220px] object-cover object-center block transition-transform duration-500 group-hover:scale-[1.02]"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
 
