@@ -44,7 +44,7 @@ const IMAGES = {
   kubrick: "/kubrick.jpg",
 
   // ✅ SRBIJA thumbnail sada ide na novu vest
-  srbijaThumb: "/traktori-beograd.jpg",
+  srbijaThumb: "/news/kosovo-amfiteatar.jpg",
 
   // ✅ KINA — špijunski brodovi (Obaveštajni izvori, 9. mart 2026)
   kinaSpyBrod: "/images/obavestajni-izvori/kina-spy-ship.jpg",
@@ -172,6 +172,85 @@ export default function Home() {
                 style={{ backgroundColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
               />
             </div>
+          </FadeIn>
+
+          {/* Srbija — Tiho gašenje srpskih univerziteta na Kosovu (MAIN STORY) */}
+          <FadeIn className="mb-10">
+            <article
+              className="border overflow-hidden"
+              style={{
+                borderColor: isDark ? "#2a2a2e" : "#eee",
+                backgroundColor: isDark ? "#151820" : "#faf7f2",
+              }}
+            >
+              <Link
+                href="/srbija/tiho-gasenje-srpskih-univerziteta-na-kosovu"
+                className="no-underline"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
+                  <div className="p-6 md:p-7">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span
+                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
+                        style={{
+                          fontFamily:
+                            "'Source Sans 3', -apple-system, sans-serif",
+                          color: isDark ? "#9a978f" : "#666",
+                        }}
+                      >
+                        Srbija
+                      </span>
+                    </div>
+
+                    <h2
+                      className="text-[26px] md:text-[34px] font-bold leading-[1.1]"
+                      style={{
+                        fontFamily: "'Playfair Display', Georgia, serif",
+                        color: isDark ? "#e0ddd5" : "#111",
+                      }}
+                    >
+                      Tiho gašenje srpskih univerziteta na Kosovu
+                    </h2>
+
+                    <p
+                      className="mt-3 text-[16px] md:text-[17px] leading-[1.6]"
+                      style={{
+                        fontFamily: "'Lora', Georgia, serif",
+                        color: isDark ? "#9a978f" : "#555",
+                      }}
+                    >
+                      Hiljade studenata i profesora mogle bi ostati bez
+                      univerziteta dok administrativne mere postepeno
+                      onemogućavaju rad srpskih fakulteta u Kosovskoj Mitrovici.
+                    </p>
+
+                    <div
+                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                      style={{
+                        fontFamily:
+                          "'Source Sans 3', -apple-system, sans-serif",
+                        color: isDark ? "#d9bf7a" : "#8B0000",
+                      }}
+                    >
+                      Otvori tekst →
+                    </div>
+                  </div>
+
+                  <div
+                    className="border-l"
+                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
+                  >
+                    <img
+                      src={IMAGES.srbijaThumb}
+                      alt="Amfiteatar Univerziteta u Kosovskoj Mitrovici"
+                      className="w-full h-[220px] md:h-full object-cover object-center block"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+              </Link>
+            </article>
           </FadeIn>
 
           {/* Geopolitika — EU Biennale Rusija (GLAVNA VEST) */}
@@ -830,10 +909,10 @@ export default function Home() {
                           }}
                         >
                           <Link
-                            href="/srbija/selo-ne-prasta-poraz-vest"
+                            href="/srbija/tiho-gasenje-srpskih-univerziteta-na-kosovu"
                             className="headline-link"
                           >
-                            Selo ne prašta poraz
+                            Tiho gašenje srpskih univerziteta na Kosovu
                           </Link>
                         </h3>
                         <p
@@ -843,14 +922,15 @@ export default function Home() {
                             color: isDark ? "#7a7872" : "#666",
                           }}
                         >
-                          Blokade su završene, ali protest se završio bez dogovora sa državom.
-                          Selo se vraća na njive, a pitanje posledica ostaje otvoreno.
+                          Hiljade studenata i profesora mogle bi ostati bez
+                          univerziteta dok administrativne mere postepeno
+                          onemogućavaju rad srpskih fakulteta u Kosovskoj Mitrovici.
                         </p>
                       </div>
 
                       <img
                         src={IMAGES.srbijaThumb}
-                        alt="Selo ne prašta poraz"
+                        alt="Tiho gašenje srpskih univerziteta na Kosovu"
                         className="w-[100px] h-[75px] object-cover border"
                         style={{
                           borderColor: isDark ? "#2a2a2e" : "#eee",
