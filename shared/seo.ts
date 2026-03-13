@@ -347,6 +347,24 @@ export const seoData: Record<string, SEOData> = {
     twitterImage: "https://novitalas.org/rezerve-nafte.jpg",
   },
 
+  "/geopolitika/biennale-rusija": {
+    title:
+      "EU preti povlačenjem finansiranja Venecijanskog bijenala zbog mogućeg povratka Rusije — Novi Talas",
+    description:
+      "Evropska unija zapretila je mogućnošću povlačenja finansijske podrške Venecijanskom bijenalu ukoliko Rusiji bude dozvoljen povratak na ovu prestižnu međunarodnu umetničku manifestaciju.",
+    ogTitle:
+      "EU preti povlačenjem finansiranja Venecijanskog bijenala zbog mogućeg povratka Rusije",
+    ogDescription:
+      "Evropska unija zapretila je mogućnošću povlačenja finansijske podrške Venecijanskom bijenalu ukoliko Rusiji bude dozvoljen povratak na ovu prestižnu međunarodnu umetničku manifestaciju.",
+    ogUrl: "https://novitalas.org/geopolitika/biennale-rusija",
+    ogImage: "https://novitalas.org/news/venice-biennale.jpg",
+    twitterTitle:
+      "EU preti povlačenjem finansiranja Venecijanskog bijenala zbog mogućeg povratka Rusije",
+    twitterDescription:
+      "Evropska unija zapretila je mogućnošću povlačenja finansijske podrške Venecijanskom bijenalu ukoliko Rusiji bude dozvoljen povratak na ovu prestižnu međunarodnu umetničku manifestaciju.",
+    twitterImage: "https://novitalas.org/news/venice-biennale.jpg",
+  },
+
   "/geopolitika/refugees-iran-un": {
     title:
       "Rat u Iranu pokrenuo masovno raseljavanje: UN upozorava na 3,2 miliona izbeglica — Novi Talas",
