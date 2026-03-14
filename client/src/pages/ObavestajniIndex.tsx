@@ -10,6 +10,16 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/obavestajni-izvori/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira",
+    img: "/news/cia-china.jpg",
+    alt: "CIA kampanja za regrutovanje kineskih vojnih oficira",
+    title:
+      "CIA pokrenula kampanju za regrutovanje kineskih vojnih oficira",
+    description:
+      "Američka CIA pokrenula javnu kampanju usmerenu ka potencijalnim izvorima unutar kineske vojske, objavivši video na kineskom jeziku koji cilja nezadovoljne oficire.",
+    date: "14. mart 2026.",
+  },
+  {
     href: "/obavestajni-izvori/kina-spy-brodovi",
     img: "/images/obavestajni-izvori/kina-spy-ship.jpg",
     alt: "Kineski špijunski brod — nadzor u Persijskom zalivu",
