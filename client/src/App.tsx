@@ -45,6 +45,7 @@ import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
 import NaucniciPoceliDaUsmeravajuSnove from "./pages/naucnici-poceli-da-usmeravaju-snove";
 import AiVestSvest from "./pages/ai-vest-svest";
 import Kubrick from "./pages/kubrick";
+import KinaMozganiImplantat from "./pages/kina-mozgani-implantat";
 
 function NormalizePath() {
   const [location, setLocation] = useLocation();
@@ -196,6 +197,11 @@ function Router() {
         <Route
           path="/nasa-planeta/kubrick"
           component={Kubrick}
+        />
+
+        <Route
+          path="/nasa-planeta/kina-mozgani-implantat"
+          component={KinaMozganiImplantat}
         />
 
         {/* 404 */}

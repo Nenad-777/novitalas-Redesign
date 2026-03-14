@@ -345,6 +345,24 @@ export const seoData: Record<string, SEOData> = {
     twitterImage: "https://novitalas.org/ai-supercomputer-data-center.jpg",
   },
 
+  "/nasa-planeta/kina-mozgani-implantat": {
+    title:
+      "Kina odobrila prvi moždani implantat za komercijalnu upotrebu — Novi Talas",
+    description:
+      "Kineske vlasti odobrile su prvi moždani implantat namenjen komercijalnoj upotrebi, čime je napravljen značajan korak u razvoju tehnologije brain-computer interface.",
+    ogTitle:
+      "Kina odobrila prvi moždani implantat za komercijalnu upotrebu",
+    ogDescription:
+      "Kineske vlasti odobrile su prvi moždani implantat namenjen komercijalnoj upotrebi, čime je napravljen značajan korak u razvoju tehnologije brain-computer interface.",
+    ogUrl: "https://novitalas.org/nasa-planeta/kina-mozgani-implantat",
+    ogImage: "https://novitalas.org/news/china-brain.jpg",
+    twitterTitle:
+      "Kina odobrila prvi moždani implantat za komercijalnu upotrebu",
+    twitterDescription:
+      "Kineske vlasti odobrile su prvi moždani implantat namenjen komercijalnoj upotrebi, čime je napravljen značajan korak u razvoju tehnologije brain-computer interface.",
+    twitterImage: "https://novitalas.org/news/china-brain.jpg",
+  },
+
   "/geopolitika/rezerve-nafte": {
     title:
       "IEA pokreće najveće oslobađanje naftnih rezervi u istoriji — Novi Talas",

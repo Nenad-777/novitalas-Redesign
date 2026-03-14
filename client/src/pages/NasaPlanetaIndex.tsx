@@ -10,6 +10,14 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/nasa-planeta/kina-mozgani-implantat",
+    img: "/news/china-brain.jpg",
+    alt: "Kina — prvi moždani implantat za komercijalnu upotrebu",
+    title: "Kina odobrila prvi moždani implantat za komercijalnu upotrebu",
+    description:
+      "Kineske vlasti odobrile su prvi moždani implantat namenjen komercijalnoj upotrebi, čime je napravljen značajan korak u razvoju brain-computer interface tehnologije.",
+  },
+  {
     href: "/nasa-planeta/kubrick",
     img: "/kubrick.jpg",
     alt: "Stenli Kjubrik — reditelj koji je promenio film",
