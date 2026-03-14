@@ -398,4 +398,24 @@ export const seoData: Record<string, SEOData> = {
       "Agencija UN za izbeglice upozorava da se humanitarna kriza ubrzano širi dok milioni ljudi napuštaju svoje domove.",
     twitterImage: "https://novitalas.org/refugees-iran-un.jpg",
   },
+
+  "/obavestajni-izvori/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira":
+    {
+      title:
+        "CIA pokrenula kampanju za regrutovanje kineskih vojnih oficira — Novi Talas",
+      description:
+        "Američka CIA pokrenula javnu kampanju usmerenu ka potencijalnim izvorima unutar kineske vojske, objavivši video na kineskom jeziku koji cilja nezadovoljne oficire.",
+      ogTitle:
+        "CIA pokrenula kampanju za regrutovanje kineskih vojnih oficira",
+      ogDescription:
+        "Američka CIA pokrenula javnu kampanju usmerenu ka potencijalnim izvorima unutar kineske vojske, objavivši video na kineskom jeziku koji cilja nezadovoljne oficire.",
+      ogUrl:
+        "https://novitalas.org/obavestajni-izvori/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira",
+      ogImage: "https://novitalas.org/news/cia-china.jpg",
+      twitterTitle:
+        "CIA pokrenula kampanju za regrutovanje kineskih vojnih oficira",
+      twitterDescription:
+        "Američka CIA pokrenula javnu kampanju usmerenu ka potencijalnim izvorima unutar kineske vojske, objavivši video na kineskom jeziku koji cilja nezadovoljne oficire.",
+      twitterImage: "https://novitalas.org/news/cia-china.jpg",
+    },
 };

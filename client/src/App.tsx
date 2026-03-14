@@ -23,6 +23,7 @@ import SadSpecijalnaOperacijaIranUranijum from "./pages/sad-specijalna-operacija
 import ObavestajniArticle from "./pages/ObavestajniArticle";
 import ObavestajniIndex from "./pages/ObavestajniIndex";
 import KinaSpyBrodovi from "./pages/kina-spy-brodovi";
+import CiaPokrenulaKampanju from "./pages/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira";
 import SrbijaPage from "./pages/SrbijaPage";
 import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
@@ -131,6 +132,11 @@ function Router() {
             OBAVEŠTAJNI IZVORI
            ========================= */}
         <Route path="/obavestajni-izvori" component={ObavestajniIndex} />
+
+        <Route
+          path="/obavestajni-izvori/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira"
+          component={CiaPokrenulaKampanju}
+        />
 
         <Route
           path="/obavestajni-izvori/kina-spy-brodovi"
