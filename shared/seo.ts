@@ -207,6 +207,21 @@ export const seoData: Record<string, SEOData> = {
     twitterImage: "https://novitalas.org/carrier.jpg",
   },
 
+  "/srbija/ko-je-pucao-u-srbiju": {
+    title: "Ko je pucao u Srbiju? — Novi Talas",
+    description:
+      "Događaji od 15. marta i dalje predstavljaju jedno od najtežih otvorenih pitanja savremene srpske politike. Ko je i čime udario na demonstrante u centru Beograda?",
+    ogTitle: "Ko je pucao u Srbiju?",
+    ogDescription:
+      "Događaji od 15. marta i dalje predstavljaju jedno od najtežih otvorenih pitanja savremene srpske politike. Ko je i čime udario na demonstrante u centru Beograda?",
+    ogUrl: "https://novitalas.org/srbija/ko-je-pucao-u-srbiju",
+    ogImage: "https://novitalas.org/news/zvucni-top.jpg",
+    twitterTitle: "Ko je pucao u Srbiju?",
+    twitterDescription:
+      "Događaji od 15. marta i dalje predstavljaju jedno od najtežih otvorenih pitanja savremene srpske politike. Ko je i čime udario na demonstrante u centru Beograda?",
+    twitterImage: "https://novitalas.org/news/zvucni-top.jpg",
+  },
+
   "/srbija/tiho-gasenje-srpskih-univerziteta-na-kosovu": {
     title: "Tiho gašenje srpskih univerziteta na Kosovu — Novi Talas",
     description:
