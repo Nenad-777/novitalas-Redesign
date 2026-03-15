@@ -44,7 +44,7 @@ const IMAGES = {
   kubrick: "/kubrick.jpg",
 
   // ✅ SRBIJA thumbnail sada ide na novu vest
-  srbijaThumb: "/news/kosovo-amfiteatar.jpg",
+  srbijaThumb: "/news/zvucni-top.jpg",
 
   // ✅ KINA — špijunski brodovi (Obaveštajni izvori, 9. mart 2026)
   kinaSpyBrod: "/images/obavestajni-izvori/kina-spy-ship.jpg",
@@ -334,7 +334,7 @@ export default function Home() {
             </article>
           </FadeIn>
 
-          {/* Srbija — Tiho gašenje srpskih univerziteta na Kosovu (MAIN STORY) */}
+          {/* Srbija — Ko je pucao u Srbiju? (MAIN STORY) */}
           <FadeIn className="mb-10">
             <article
               className="border overflow-hidden"
@@ -344,7 +344,7 @@ export default function Home() {
               }}
             >
               <Link
-                href="/srbija/tiho-gasenje-srpskih-univerziteta-na-kosovu"
+                href="/srbija/ko-je-pucao-u-srbiju"
                 className="no-underline"
               >
                 <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
@@ -369,7 +369,7 @@ export default function Home() {
                         color: isDark ? "#e0ddd5" : "#111",
                       }}
                     >
-                      Tiho gašenje srpskih univerziteta na Kosovu
+                      Ko je pucao u Srbiju?
                     </h2>
 
                     <p
@@ -379,9 +379,9 @@ export default function Home() {
                         color: isDark ? "#9a978f" : "#555",
                       }}
                     >
-                      Hiljade studenata i profesora mogle bi ostati bez
-                      univerziteta dok administrativne mere postepeno
-                      onemogućavaju rad srpskih fakulteta u Kosovskoj Mitrovici.
+                      Događaji od 15. marta i dalje predstavljaju jedno od
+                      najtežih otvorenih pitanja savremene srpske politike — ko
+                      je i čime udario na demonstrante u centru Beograda?
                     </p>
 
                     <div
@@ -402,7 +402,7 @@ export default function Home() {
                   >
                     <img
                       src={IMAGES.srbijaThumb}
-                      alt="Amfiteatar Univerziteta u Kosovskoj Mitrovici"
+                      alt="Zvučni top — akustično oružje upotrebljeno na protestu u Beogradu"
                       className="w-full h-[220px] md:h-full object-cover object-center block"
                       loading="lazy"
                       decoding="async"
