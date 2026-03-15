@@ -37,6 +37,7 @@ import SeloNePrastaPoraz from "./pages/selo-ne-prasta-poraz";
 
 /* ✅ NOVA VEST — Srbija */
 import TihoGasenjeSrpskihUniverzitetaNaKosovu from "./pages/tiho-gasenje-srpskih-univerziteta-na-kosovu";
+import KoJePucaoUSrbiju from "./pages/ko-je-pucao-u-srbiju";
 
 import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
 import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
@@ -153,6 +154,11 @@ function Router() {
             SRBIJA
            ========================= */}
         <Route path="/srbija" component={SrbijaPage} />
+
+        <Route
+          path="/srbija/ko-je-pucao-u-srbiju"
+          component={KoJePucaoUSrbiju}
+        />
 
         <Route
           path="/srbija/tiho-gasenje-srpskih-univerziteta-na-kosovu"

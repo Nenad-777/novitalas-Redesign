@@ -417,6 +417,24 @@ export const seoData: Record<string, SEOData> = {
     twitterImage: "https://novitalas.org/refugees-iran-un.jpg",
   },
 
+  "/srbija/ko-je-pucao-u-srbiju": {
+    title:
+      "Ko je pucao u Srbiju? — Novi Talas",
+    description:
+      "Događaji od 15. marta i incident sa navodnim „zvučnim topom" pokrenuli su reakcije Evropskog suda za ljudska prava i specijalnih izvestilaca UN, dok pitanja o odgovornosti ostaju otvorena.",
+    ogTitle:
+      "Ko je pucao u Srbiju?",
+    ogDescription:
+      "Događaji od 15. marta i incident sa navodnim „zvučnim topom" pokrenuli su reakcije Evropskog suda za ljudska prava i specijalnih izvestilaca UN, dok pitanja o odgovornosti ostaju otvorena.",
+    ogUrl: "https://novitalas.org/srbija/ko-je-pucao-u-srbiju",
+    ogImage: "https://novitalas.org/news/ko-je-pucao-u-srbiju.jpg",
+    twitterTitle:
+      "Ko je pucao u Srbiju?",
+    twitterDescription:
+      "Događaji od 15. marta i incident sa navodnim „zvučnim topom" pokrenuli su reakcije Evropskog suda za ljudska prava i specijalnih izvestilaca UN, dok pitanja o odgovornosti ostaju otvorena.",
+    twitterImage: "https://novitalas.org/news/ko-je-pucao-u-srbiju.jpg",
+  },
+
   "/obavestajni-izvori/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira":
     {
       title:
