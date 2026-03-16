@@ -128,7 +128,7 @@ export default function Home() {
 
       {/* Hero */}
       <section
-        className="relative w-full overflow-hidden h-[30vh] md:h-[45vh] hero-section"
+        className="relative w-full overflow-hidden h-[24vh] md:h-[40vh] hero-section"
         style={{
           backgroundColor: isDark ? "#0d1117" : "#f0f4f7",
           backgroundImage: `url(${IMAGES.hero})`,
@@ -163,8 +163,8 @@ export default function Home() {
           }}
         />
 
-        <div className="absolute bottom-8 left-0 right-0">
-          <div className="max-w-[1200px] mx-auto px-5">
+        <div className="absolute bottom-[38%] left-0 right-0">
+          <div className="max-w-[1200px] mx-auto pl-3 md:pl-4 pr-5">
             <p
               className="hero-tagline text-[28px] md:text-[36px] italic tracking-wide"
               style={{
