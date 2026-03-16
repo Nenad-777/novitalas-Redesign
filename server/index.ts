@@ -4,9 +4,22 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { seoData } from "../shared/seo.js";
+import {
+  articleMeta,
+  buildSEOFromArticleMeta,
+} from "../shared/articleMeta.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// Build a merged lookup: seo.ts (explicit) takes priority over articleMeta.
+const mergedSeoLookup: Record<string, ReturnType<typeof buildSEOFromArticleMeta>> = {};
+for (const meta of articleMeta) {
+  mergedSeoLookup[meta.path] = buildSEOFromArticleMeta(meta);
+}
+for (const [route, data] of Object.entries(seoData)) {
+  mergedSeoLookup[route] = data;
+}
 
 function escapeHtml(str: string): string {
   return str
@@ -18,7 +31,7 @@ function escapeHtml(str: string): string {
 }
 
 function injectSEO(html: string, route: string): string {
-  const seo = seoData[route];
+  const seo = mergedSeoLookup[route];
   if (!seo) return html;
 
   return html
@@ -82,7 +95,7 @@ async function startServer() {
   app.get("*", (req, res) => {
     const route = req.path;
 
-    if (indexHtmlTemplate && seoData[route]) {
+    if (indexHtmlTemplate && mergedSeoLookup[route]) {
       const html = injectSEO(indexHtmlTemplate, route);
       res.type("html").send(html);
       return;

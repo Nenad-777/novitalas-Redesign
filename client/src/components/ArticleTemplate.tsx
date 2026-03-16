@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ShareButton from "@/components/ShareButton";
+import SeoMeta from "@/components/SeoMeta";
 import { useTheme } from "@/contexts/ThemeContext";
 
 type ArticleParagraph = string;
@@ -17,6 +18,8 @@ type InfoBox = {
 };
 
 type ArticleTemplateProps = {
+  /** Route path used for SEO meta tags, e.g. "/geopolitika/ormuz". */
+  path?: string;
   sectionLabel: string;
   title: string;
   dateLabel?: string;
@@ -32,6 +35,7 @@ type ArticleTemplateProps = {
 };
 
 export default function ArticleTemplate({
+  path,
   sectionLabel,
   title,
   dateLabel,
@@ -53,6 +57,14 @@ export default function ArticleTemplate({
       className="min-h-screen flex flex-col transition-colors duration-300"
       style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
     >
+      {path && (
+        <SeoMeta
+          path={path}
+          title={title}
+          description={deck}
+          imageSrc={imageSrc}
+        />
+      )}
       <Header />
 
       <main

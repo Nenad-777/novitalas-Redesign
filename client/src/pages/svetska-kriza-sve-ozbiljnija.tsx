@@ -4,7 +4,6 @@
  */
 
 import ArticleTemplate from "@/components/ArticleTemplate";
-import { useSEO } from "@/hooks/useSEO";
 
 const PARAGRAPHS = [
   "Kriza oko Ormuskog moreuza dodatno se produbljuje dok se rat između SAD, Izraela i Irana nastavlja treću nedelju. Ovaj pomorski prolaz između Persijskog zaliva i Omanskog zaliva nalazi se u središtu globalne energetske krize. Kroz njega prolazi oko 20% svetske trgovine naftom, pa svaka blokada ima direktan uticaj na globalna tržišta.",
@@ -31,9 +30,9 @@ const INFO_BOX = {
 };
 
 export default function SvetskaKrizaSveOzbiljnija() {
-  useSEO("/geopolitika/svetska-kriza-sve-ozbiljnija");
   return (
     <ArticleTemplate
+      path="/geopolitika/svetska-kriza-sve-ozbiljnija"
       sectionLabel="Geopolitika"
       title="SVETSKA KRIZA SVE OZBILJNIJA"
       dateLabel="16. MART 2026."

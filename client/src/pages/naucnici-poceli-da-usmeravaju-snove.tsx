@@ -4,7 +4,6 @@
  */
 
 import ArticleTemplate from "@/components/ArticleTemplate";
-import { useSEO } from "@/hooks/useSEO";
 
 const IMAGE_SRC = "/snovi-usmeravanje-snova.jpg";
 
@@ -20,9 +19,9 @@ const PARAGRAPHS = [
 ];
 
 export default function NaucniciPoceliDaUsmeravajuSnove() {
-  useSEO("/nasa-planeta/naucnici-poceli-da-usmeravaju-snove");
   return (
     <ArticleTemplate
+      path="/nasa-planeta/naucnici-poceli-da-usmeravaju-snove"
       sectionLabel="Naša planeta"
       title="Naučnici počeli da usmeravaju snove: novo otkriće savremene psihologije"
       dateLabel="8. MART 2026."

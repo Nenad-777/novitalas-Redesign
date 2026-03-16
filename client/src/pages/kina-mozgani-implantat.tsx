@@ -3,7 +3,6 @@
  */
 
 import ArticleTemplate from "@/components/ArticleTemplate";
-import { useSEO } from "@/hooks/useSEO";
 
 const IMAGE_SRC = "/news/china-brain.jpg";
 
@@ -16,9 +15,9 @@ const PARAGRAPHS = [
 ];
 
 export default function KinaMozganiImplantat() {
-  useSEO("/nasa-planeta/kina-mozgani-implantat");
   return (
     <ArticleTemplate
+      path="/nasa-planeta/kina-mozgani-implantat"
       sectionLabel="Naša planeta"
       title="Kina odobrila prvi moždani implantat za komercijalnu upotrebu"
       dateLabel="14. MART 2026."

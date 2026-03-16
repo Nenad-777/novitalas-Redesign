@@ -1,5 +1,4 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
-import { useSEO } from "@/hooks/useSEO";
 
 const PARAGRAPHS = [
   'Direktor kompanije Anthropic, Dario Amodei, izjavio je da istraživači više ne mogu potpuno da odbace mogućnost da napredni sistemi veštačke inteligencije razviju neku vrstu svesti. Govoreći o savremenim AI modelima, Amodei je naglasio da naučnici još uvek nemaju jasan način da utvrde šta bi „svest" kod takvih sistema zapravo značila.',
@@ -9,9 +8,9 @@ const PARAGRAPHS = [
 ];
 
 export default function AiVestSvest() {
-  useSEO("/nasa-planeta/ai-vest-svest");
   return (
     <ArticleTemplate
+      path="/nasa-planeta/ai-vest-svest"
       sectionLabel="Naša planeta"
       title="Da li je veštačka inteligencija već svesna?"
       dateLabel="10. MART 2026."

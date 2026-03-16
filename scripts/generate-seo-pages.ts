@@ -26,6 +26,10 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { seoData } from "../shared/seo.js";
+import {
+  articleMeta,
+  buildSEOFromArticleMeta,
+} from "../shared/articleMeta.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -39,15 +43,19 @@ function escapeHtml(str: string): string {
     .replace(/'/g, "&#39;");
 }
 
-function injectSEO(html: string, route: string): string {
-  const seo = seoData[route];
-  if (!seo) return html;
+function injectSEO(
+  html: string,
+  route: string,
+  seo?: ReturnType<typeof buildSEOFromArticleMeta>,
+): string {
+  const resolvedSeo = seo ?? seoData[route];
+  if (!resolvedSeo) return html;
 
   let result = html
-    .replace(/<title>.*?<\/title>/, `<title>${escapeHtml(seo.title)}</title>`)
+    .replace(/<title>.*?<\/title>/, `<title>${escapeHtml(resolvedSeo.title)}</title>`)
     .replace(
       /(<meta\s+name="description"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(seo.description)}$2`,
+      `$1${escapeHtml(resolvedSeo.description)}$2`,
     )
     .replace(
       /(<meta\s+property="og:type"\s+content=")[^"]*(")/,
@@ -55,35 +63,35 @@ function injectSEO(html: string, route: string): string {
     )
     .replace(
       /(<meta\s+property="og:title"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(seo.ogTitle)}$2`,
+      `$1${escapeHtml(resolvedSeo.ogTitle)}$2`,
     )
     .replace(
       /(<meta\s+property="og:description"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(seo.ogDescription)}$2`,
+      `$1${escapeHtml(resolvedSeo.ogDescription)}$2`,
     )
     .replace(
       /(<meta\s+property="og:url"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(seo.ogUrl)}$2`,
+      `$1${escapeHtml(resolvedSeo.ogUrl)}$2`,
     )
     .replace(
       /(<meta\s+property="og:image"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(seo.ogImage)}$2`,
+      `$1${escapeHtml(resolvedSeo.ogImage)}$2`,
     )
     .replace(
       /(<meta\s+name="twitter:title"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(seo.twitterTitle)}$2`,
+      `$1${escapeHtml(resolvedSeo.twitterTitle)}$2`,
     )
     .replace(
       /(<meta\s+name="twitter:description"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(seo.twitterDescription)}$2`,
+      `$1${escapeHtml(resolvedSeo.twitterDescription)}$2`,
     )
     .replace(
       /(<meta\s+name="twitter:image"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(seo.twitterImage)}$2`,
+      `$1${escapeHtml(resolvedSeo.twitterImage)}$2`,
     );
 
   // Derive the MIME type from the image URL's file extension.
-  const ext = seo.ogImage.split(".").pop()?.toLowerCase() ?? "jpg";
+  const ext = resolvedSeo.ogImage.split(".").pop()?.toLowerCase() ?? "jpg";
   const mimeTypes: Record<string, string> = {
     jpg: "image/jpeg",
     jpeg: "image/jpeg",
@@ -98,7 +106,7 @@ function injectSEO(html: string, route: string): string {
   // Dimensions default to the widely-supported 1200×630 recommendation; all
   // OG images in this project are expected to match those proportions.
   const extraOgImageTags = [
-    `    <meta property="og:image:secure_url" content="${escapeHtml(seo.ogImage)}" />`,
+    `    <meta property="og:image:secure_url" content="${escapeHtml(resolvedSeo.ogImage)}" />`,
     `    <meta property="og:image:type" content="${ogImageMime}" />`,
     `    <meta property="og:image:width" content="1200" />`,
     `    <meta property="og:image:height" content="630" />`,
@@ -110,7 +118,7 @@ function injectSEO(html: string, route: string): string {
   );
 
   // Add a canonical link element so crawlers know the authoritative URL.
-  const canonicalTag = `    <link rel="canonical" href="${escapeHtml(seo.ogUrl)}" />`;
+  const canonicalTag = `    <link rel="canonical" href="${escapeHtml(resolvedSeo.ogUrl)}" />`;
   result = result.replace(/(<\/head>)/, `${canonicalTag}\n  $1`);
 
   return result;
@@ -129,11 +137,30 @@ async function main() {
 
   const template = fs.readFileSync(indexHtmlPath, "utf-8");
 
-  const routes = Object.keys(seoData);
+  // Merge seo.ts routes with articleMeta routes.
+  // seo.ts entries (explicit) take priority; articleMeta provides the rest.
+  const mergedSeoData: Record<
+    string,
+    ReturnType<typeof buildSEOFromArticleMeta>
+  > = {};
+
+  // 1. Seed with auto-derived articleMeta entries
+  for (const meta of articleMeta) {
+    mergedSeoData[meta.path] = buildSEOFromArticleMeta(meta);
+  }
+
+  // 2. Override with explicit seo.ts entries (higher priority)
+  for (const [route, data] of Object.entries(seoData)) {
+    mergedSeoData[route] = data;
+  }
+
+  const routes = Object.keys(mergedSeoData);
   console.log(`Generating ${routes.length} pre-rendered SEO pages…`);
 
   for (const route of routes) {
-    const injectedHtml = injectSEO(template, route);
+    const seo = mergedSeoData[route];
+    // Build a temporary per-route seoData object for injectSEO
+    const injectedHtml = injectSEO(template, route, seo);
 
     // Strip leading slash and create the target directory.
     const routeSegment = route.replace(/^\//, "");

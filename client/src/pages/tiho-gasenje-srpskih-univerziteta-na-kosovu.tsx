@@ -1,10 +1,9 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
-import { useSEO } from "@/hooks/useSEO";
 
 export default function TihoGasenjeSrpskihUniverzitetaNaKosovu() {
-  useSEO("/srbija/tiho-gasenje-srpskih-univerziteta-na-kosovu");
   return (
     <ArticleTemplate
+      path="/srbija/tiho-gasenje-srpskih-univerziteta-na-kosovu"
       sectionLabel="Srbija"
       title="Tiho gašenje srpskih univerziteta na Kosovu"
       dateLabel="13. MART 2026."
