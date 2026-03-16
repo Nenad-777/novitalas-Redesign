@@ -197,16 +197,16 @@
     letter-spacing: 0.01em;
   }
 
-  /* Hero banner – responsive background image sizing */
+  /* Hero banner – full-width background image */
   .hero-section {
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: auto 80%;
+    background-size: cover;
   }
   @media (min-width: 768px) {
     .hero-section {
       background-position: right center;
-      background-size: auto 85%;
+      background-size: cover;
     }
   }
 
