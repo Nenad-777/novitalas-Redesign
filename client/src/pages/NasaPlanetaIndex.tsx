@@ -10,6 +10,14 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/nasa-planeta/ko-je-dobio-oskara",
+    img: "/news/oscar-world.jpg",
+    alt: "Ceremonija dodele Oskara — 98. dodela nagrada Američke filmske akademije",
+    title: "Ko je dobio Oskara?",
+    description:
+      "Dok svet tone u ratove, razaranja i očigledan pad civilizacijskih normi, ceremonija Oskara nastavlja da blista, gotovo ravnodušna prema vremenu koje izgleda poraženo.",
+  },
+  {
     href: "/nasa-planeta/kina-mozgani-implantat",
     img: "/news/china-brain.jpg",
     alt: "Kina — prvi moždani implantat za komercijalnu upotrebu",

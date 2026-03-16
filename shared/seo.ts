@@ -432,6 +432,24 @@ export const seoData: Record<string, SEOData> = {
     twitterImage: "https://novitalas.org/refugees-iran-un.jpg",
   },
 
+  "/nasa-planeta/ko-je-dobio-oskara": {
+    title:
+      "Ko je dobio Oskara? — Novi Talas",
+    description:
+      "Na 98. dodeli nagrada Američke filmske akademije najveći trijumf ostvario je film One Battle After Another. Dok svet tone u ratove, Oskar nastavlja da blista.",
+    ogTitle:
+      "Ko je dobio Oskara?",
+    ogDescription:
+      "Dok svet tone u ratove, razaranja i očigledan pad civilizacijskih normi, ceremonija Oskara nastavlja da blista, gotovo ravnodušna prema vremenu koje izgleda poraženo.",
+    ogUrl: "https://novitalas.org/nasa-planeta/ko-je-dobio-oskara",
+    ogImage: "https://novitalas.org/news/oscar-world.jpg",
+    twitterTitle:
+      "Ko je dobio Oskara?",
+    twitterDescription:
+      "Dok svet tone u ratove, razaranja i očigledan pad civilizacijskih normi, ceremonija Oskara nastavlja da blista, gotovo ravnodušna prema vremenu koje izgleda poraženo.",
+    twitterImage: "https://novitalas.org/news/oscar-world.jpg",
+  },
+
   "/obavestajni-izvori/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira":
     {
       title:

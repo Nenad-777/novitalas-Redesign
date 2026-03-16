@@ -45,6 +45,9 @@ import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
 import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
 
 /* ✅ NOVA VEST — Naša planeta */
+import KoJeDobioOskara from "./pages/ko-je-dobio-oskara";
+
+/* ✅ NOVA VEST — Naša planeta */
 import NaucniciPoceliDaUsmeravajuSnove from "./pages/naucnici-poceli-da-usmeravaju-snove";
 import AiVestSvest from "./pages/ai-vest-svest";
 import Kubrick from "./pages/kubrick";
@@ -186,6 +189,11 @@ function Router() {
             NAŠA PLANETA
            ========================= */}
         <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
+
+        <Route
+          path="/nasa-planeta/ko-je-dobio-oskara"
+          component={KoJeDobioOskara}
+        />
 
         <Route
           path="/nasa-planeta/alma-skriveno-jezgro"
