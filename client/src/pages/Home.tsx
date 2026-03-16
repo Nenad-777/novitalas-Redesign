@@ -128,22 +128,20 @@ export default function Home() {
 
       {/* Hero */}
       <section
-        className="relative w-full overflow-hidden"
+        className="relative w-full overflow-hidden h-[30vh] md:h-[45vh] hero-section"
         style={{
-          height: "clamp(300px, 62vh, 520px)",
           backgroundColor: isDark ? "#0d1117" : "#f0f4f7",
+          backgroundImage: `url(${IMAGES.hero})`,
         }}
       >
-        <img
-          src={IMAGES.hero}
-          alt="Globus sa avionima  -  Novi Talas"
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{
-            objectPosition: "right center",
-            opacity: isDark ? 0.6 : 0.9,
-          }}
-          fetchPriority="high"
-        />
+        {/* Dark-mode image dimming overlay */}
+        {isDark && (
+          <div
+            aria-hidden="true"
+            className="absolute inset-0"
+            style={{ backgroundColor: "rgba(13,17,23,0.35)" }}
+          />
+        )}
 
         {/* Left-to-right white gradient overlay for text readability */}
         <div
@@ -165,8 +163,8 @@ export default function Home() {
           }}
         />
 
-        <div className="absolute bottom-8 left-0 right-0 px-5">
-          <div className="max-w-[1200px] mx-auto">
+        <div className="absolute bottom-8 left-0 right-0">
+          <div className="max-w-[1200px] mx-auto px-5">
             <p
               className="hero-tagline text-[28px] md:text-[36px] italic tracking-wide"
               style={{

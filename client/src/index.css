@@ -197,6 +197,19 @@
     letter-spacing: 0.01em;
   }
 
+  /* Hero banner – responsive background image sizing */
+  .hero-section {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 80%;
+  }
+  @media (min-width: 768px) {
+    .hero-section {
+      background-position: right center;
+      background-size: auto 85%;
+    }
+  }
+
   /* Optional: “reading comfort” utility for article pages */
   .nt-reading {
     font-size: 19px;
