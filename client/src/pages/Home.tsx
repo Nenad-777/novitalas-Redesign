@@ -15,7 +15,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
-  hero: "/hero/world-network.jpg",
+  hero: "/hero/novitalas-hero.jpg",
 
   // ✅ NOVA GLAVNA VEST — Svetska kriza Ormuski moreuz (16. mart 2026)
   brodoviKriza: "/news/brodovi-kriza.jpg",
@@ -128,37 +128,56 @@ export default function Home() {
 
       {/* Hero */}
       <section
-        className="relative w-full h-[380px] md:h-[440px] overflow-hidden"
-        style={{ backgroundColor: isDark ? "#0d1117" : "#f0f4f7" }}
+        className="relative w-full overflow-hidden"
+        style={{
+          height: "clamp(300px, 62vh, 520px)",
+          backgroundColor: isDark ? "#0d1117" : "#f0f4f7",
+        }}
       >
         <img
           src={IMAGES.hero}
           alt="Globus sa avionima  -  Novi Talas"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          style={{ opacity: isDark ? 0.6 : 0.9 }}
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            objectPosition: "right center",
+            opacity: isDark ? 0.6 : 0.9,
+          }}
           fetchPriority="high"
         />
 
+        {/* Left-to-right white gradient overlay for text readability */}
         <div
           className="absolute inset-0"
           style={{
             background: isDark
-              ? "linear-gradient(to top, rgba(17,19,24,0.9) 0%, rgba(17,19,24,0.3) 50%, transparent 100%)"
-              : "linear-gradient(to top, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.2) 50%, transparent 100%)",
+              ? "linear-gradient(to right, rgba(17,19,24,0.85) 0%, rgba(17,19,24,0.4) 45%, transparent 75%)"
+              : "linear-gradient(to right, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.35) 45%, transparent 75%)",
           }}
         />
 
-        <div className="absolute bottom-8 left-0 right-0 text-center">
-          <p
-            className="hero-tagline text-[28px] md:text-[36px] italic tracking-wide"
-            style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              color: isDark ? "rgba(246,243,232,0.9)" : "#1a2a3a",
-              textShadow: isDark ? "0 2px 8px rgba(0,0,0,0.5)" : "none",
-            }}
-          >
-            Vaš prozor u svet
-          </p>
+        {/* Bottom fade for smooth transition to content */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: isDark
+              ? "linear-gradient(to top, rgba(17,19,24,0.7) 0%, transparent 40%)"
+              : "linear-gradient(to top, rgba(255,255,255,0.6) 0%, transparent 40%)",
+          }}
+        />
+
+        <div className="absolute bottom-8 left-0 right-0 px-5">
+          <div className="max-w-[1200px] mx-auto">
+            <p
+              className="hero-tagline text-[28px] md:text-[36px] italic tracking-wide"
+              style={{
+                fontFamily: "'Playfair Display', Georgia, serif",
+                color: isDark ? "rgba(246,243,232,0.9)" : "#1a2a3a",
+                textShadow: isDark ? "0 2px 8px rgba(0,0,0,0.5)" : "none",
+              }}
+            >
+              Vaš prozor u svet
+            </p>
+          </div>
         </div>
       </section>
 
