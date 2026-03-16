@@ -46,6 +46,9 @@ const IMAGES = {
   // ✅ SRBIJA thumbnail sada ide na novu vest
   srbijaThumb: "/news/zvucni-top.jpg",
 
+  // ✅ Kosovo — Tiho gašenje srpskih univerziteta
+  kosovAmfiteatar: "/news/kosovo-amfiteatar.jpg",
+
   // ✅ KINA — špijunski brodovi (Obaveštajni izvori, 9. mart 2026)
   kinaSpyBrod: "/images/obavestajni-izvori/kina-spy-ship.jpg",
 
@@ -1089,7 +1092,7 @@ export default function Home() {
                       </div>
 
                       <img
-                        src={IMAGES.srbijaThumb}
+                        src={IMAGES.kosovAmfiteatar}
                         alt="Tiho gašenje srpskih univerziteta na Kosovu"
                         className="w-[100px] h-[75px] object-cover border"
                         style={{
