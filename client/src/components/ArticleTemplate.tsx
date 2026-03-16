@@ -11,6 +11,11 @@ function normalizeEmDashes(text: string): string {
   return text.replace(/—/g, EM_DASH_REPLACEMENT);
 }
 
+type InfoBox = {
+  title: string;
+  items: string[];
+};
+
 type ArticleTemplateProps = {
   sectionLabel: string;
   title: string;
@@ -21,6 +26,7 @@ type ArticleTemplateProps = {
   imageCredit?: string;
   imageHeightClass?: string;
   paragraphs: ArticleParagraph[];
+  infoBox?: InfoBox;
   backHref: string;
   backLabel: string;
 };
@@ -35,6 +41,7 @@ export default function ArticleTemplate({
   imageCredit,
   imageHeightClass = "h-[260px] md:h-[420px]",
   paragraphs,
+  infoBox,
   backHref,
   backLabel,
 }: ArticleTemplateProps) {
@@ -168,6 +175,47 @@ export default function ArticleTemplate({
               </div>
             ))}
           </div>
+
+          {/* Info Box */}
+          {infoBox ? (
+            <div
+              className="mt-10 p-5 border-l-4"
+              style={{
+                borderLeftColor: isDark ? "#d9bf7a" : "#8B0000",
+                backgroundColor: isDark ? "#1a1c22" : "#f5f0e8",
+              }}
+            >
+              <p
+                className="text-[13px] font-bold uppercase tracking-[0.12em] mb-3"
+                style={{
+                  fontFamily: "'Source Sans 3', sans-serif",
+                  color: isDark ? "#d9bf7a" : "#8B0000",
+                }}
+              >
+                {infoBox.title}
+              </p>
+              <ul className="list-none p-0 m-0 space-y-2">
+                {infoBox.items.map((item, idx) => (
+                  <li
+                    key={idx}
+                    className="flex items-start gap-2 text-[16px] leading-[1.6]"
+                    style={{
+                      fontFamily: "'Lora', serif",
+                      color: isDark ? "#b7b2aa" : "#333",
+                    }}
+                  >
+                    <span
+                      style={{ color: isDark ? "#d9bf7a" : "#8B0000" }}
+                      className="mt-[2px] shrink-0"
+                    >
+                      ▪
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
 
           {/* Back */}
           <div className="mt-12">
