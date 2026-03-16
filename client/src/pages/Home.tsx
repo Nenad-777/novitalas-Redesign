@@ -180,6 +180,85 @@ export default function Home() {
             </div>
           </FadeIn>
 
+          {/* Srbija — Ko je pucao u Srbiju? (MAIN STORY) */}
+          <FadeIn className="mb-10">
+            <article
+              className="border overflow-hidden"
+              style={{
+                borderColor: isDark ? "#2a2a2e" : "#eee",
+                backgroundColor: isDark ? "#151820" : "#faf7f2",
+              }}
+            >
+              <Link
+                href="/srbija/ko-je-pucao-u-srbiju"
+                className="no-underline"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
+                  <div className="p-6 md:p-7">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span
+                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
+                        style={{
+                          fontFamily:
+                            "'Source Sans 3', -apple-system, sans-serif",
+                          color: isDark ? "#9a978f" : "#666",
+                        }}
+                      >
+                        Srbija
+                      </span>
+                    </div>
+
+                    <h2
+                      className="text-[26px] md:text-[34px] font-bold leading-[1.1]"
+                      style={{
+                        fontFamily: "'Playfair Display', Georgia, serif",
+                        color: isDark ? "#e0ddd5" : "#111",
+                      }}
+                    >
+                      Ko je pucao u Srbiju?
+                    </h2>
+
+                    <p
+                      className="mt-3 text-[16px] md:text-[17px] leading-[1.6]"
+                      style={{
+                        fontFamily: "'Lora', Georgia, serif",
+                        color: isDark ? "#9a978f" : "#555",
+                      }}
+                    >
+                      Događaji od 15. marta i dalje predstavljaju jedno od
+                      najtežih otvorenih pitanja savremene srpske politike, ko
+                      je i čime udario na demonstrante u centru Beograda?
+                    </p>
+
+                    <div
+                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                      style={{
+                        fontFamily:
+                          "'Source Sans 3', -apple-system, sans-serif",
+                        color: isDark ? "#d9bf7a" : "#8B0000",
+                      }}
+                    >
+                      Otvori tekst →
+                    </div>
+                  </div>
+
+                  <div
+                    className="border-l"
+                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
+                  >
+                    <img
+                      src={IMAGES.srbijaThumb}
+                      alt="Zvučni top, akustično oružje upotrebljeno na protestu u Beogradu"
+                      className="w-full h-[220px] md:h-full object-cover object-center block"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+              </Link>
+            </article>
+          </FadeIn>
+
           {/* Naša planeta — Kina moždani implantat */}
           <FadeIn className="mb-10">
             <article
@@ -326,85 +405,6 @@ export default function Home() {
                       alt="CIA kampanja za regrutovanje kineskih vojnih oficira"
                       className="w-full h-[220px] md:h-full object-cover object-center block"
                       fetchPriority="high"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-              </Link>
-            </article>
-          </FadeIn>
-
-          {/* Srbija — Ko je pucao u Srbiju? (MAIN STORY) */}
-          <FadeIn className="mb-10">
-            <article
-              className="border overflow-hidden"
-              style={{
-                borderColor: isDark ? "#2a2a2e" : "#eee",
-                backgroundColor: isDark ? "#151820" : "#faf7f2",
-              }}
-            >
-              <Link
-                href="/srbija/ko-je-pucao-u-srbiju"
-                className="no-underline"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
-                  <div className="p-6 md:p-7">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span
-                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
-                        style={{
-                          fontFamily:
-                            "'Source Sans 3', -apple-system, sans-serif",
-                          color: isDark ? "#9a978f" : "#666",
-                        }}
-                      >
-                        Srbija
-                      </span>
-                    </div>
-
-                    <h2
-                      className="text-[26px] md:text-[34px] font-bold leading-[1.1]"
-                      style={{
-                        fontFamily: "'Playfair Display', Georgia, serif",
-                        color: isDark ? "#e0ddd5" : "#111",
-                      }}
-                    >
-                      Ko je pucao u Srbiju?
-                    </h2>
-
-                    <p
-                      className="mt-3 text-[16px] md:text-[17px] leading-[1.6]"
-                      style={{
-                        fontFamily: "'Lora', Georgia, serif",
-                        color: isDark ? "#9a978f" : "#555",
-                      }}
-                    >
-                      Događaji od 15. marta i dalje predstavljaju jedno od
-                      najtežih otvorenih pitanja savremene srpske politike — ko
-                      je i čime udario na demonstrante u centru Beograda?
-                    </p>
-
-                    <div
-                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
-                      style={{
-                        fontFamily:
-                          "'Source Sans 3', -apple-system, sans-serif",
-                        color: isDark ? "#d9bf7a" : "#8B0000",
-                      }}
-                    >
-                      Otvori tekst →
-                    </div>
-                  </div>
-
-                  <div
-                    className="border-l"
-                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
-                  >
-                    <img
-                      src={IMAGES.srbijaThumb}
-                      alt="Zvučni top — akustično oružje upotrebljeno na protestu u Beogradu"
-                      className="w-full h-[220px] md:h-full object-cover object-center block"
-                      loading="lazy"
                       decoding="async"
                     />
                   </div>
