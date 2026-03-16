@@ -5,6 +5,12 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 type ArticleParagraph = string;
 
+const EM_DASH_REPLACEMENT = ",";
+
+function normalizeEmDashes(text: string): string {
+  return text.replace(/—/g, EM_DASH_REPLACEMENT);
+}
+
 type ArticleTemplateProps = {
   sectionLabel: string;
   title: string;
@@ -88,7 +94,7 @@ export default function ArticleTemplate({
                 color: isDark ? "#cfcac0" : "#222",
               }}
             >
-              {deck}
+              {normalizeEmDashes(deck)}
             </p>
           ) : null}
 
@@ -145,7 +151,7 @@ export default function ArticleTemplate({
                       : "#333",
                   }}
                 >
-                  {p}
+                  {normalizeEmDashes(p)}
                 </p>
 
                 {/* Separator između pasusa */}
