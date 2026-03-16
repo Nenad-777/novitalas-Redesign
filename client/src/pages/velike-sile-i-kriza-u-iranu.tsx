@@ -4,7 +4,6 @@
  */
 
 import ArticleTemplate from "@/components/ArticleTemplate";
-import { useSEO } from "@/hooks/useSEO";
 
 const PARAGRAPHS = [
   "Kriza oko Irana ponovo je otvorila pitanje uloge velikih sila u regionalnim sukobima Bliskog istoka. Dok tenzije između Teherana i zapadnih država rastu, pažnja međunarodne javnosti sve više se usmerava ka reakcijama Moskve i Pekinga.",
@@ -53,10 +52,10 @@ const PARAGRAPHS = [
 ];
 
 export default function VelikeSileIKrizaUIranu() {
-  useSEO("/geopolitika/velike-sile-i-kriza-u-iranu");
 
   return (
     <ArticleTemplate
+      path="/geopolitika/velike-sile-i-kriza-u-iranu"
       sectionLabel="Geopolitika"
       title="Velike sile i kriza u Iranu: oprezna ravnoteža Moskve i Pekinga"
       dateLabel="8. MART 2026."

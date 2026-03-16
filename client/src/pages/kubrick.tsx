@@ -3,7 +3,6 @@
  */
 
 import ArticleTemplate from "@/components/ArticleTemplate";
-import { useSEO } from "@/hooks/useSEO";
 
 const IMAGE_SRC = "/kubrick.jpg";
 
@@ -44,9 +43,9 @@ const PARAGRAPHS = [
 ];
 
 export default function Kubrick() {
-  useSEO("/nasa-planeta/kubrick");
   return (
     <ArticleTemplate
+      path="/nasa-planeta/kubrick"
       sectionLabel="Naša planeta"
       title="Stenli Kjubrik i tajna filma koji ne stari"
       dateLabel="12. MART 2026."

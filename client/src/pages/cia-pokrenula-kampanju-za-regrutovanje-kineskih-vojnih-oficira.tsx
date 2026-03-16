@@ -4,7 +4,6 @@
  */
 
 import ArticleTemplate from "@/components/ArticleTemplate";
-import { useSEO } from "@/hooks/useSEO";
 
 const IMAGE_SRC = "/news/cia-china.jpg";
 
@@ -21,11 +20,9 @@ const PARAGRAPHS = [
 ];
 
 export default function CiaPokrenulaKampanju() {
-  useSEO(
-    "/obavestajni-izvori/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira",
-  );
   return (
     <ArticleTemplate
+      path="/obavestajni-izvori/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira"
       sectionLabel="Obaveštajni izvori"
       title="CIA pokrenula kampanju za regrutovanje kineskih vojnih oficira"
       dateLabel="14. MART 2026."

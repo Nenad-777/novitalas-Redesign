@@ -4,7 +4,6 @@
  */
 
 import ArticleTemplate from "@/components/ArticleTemplate";
-import { useSEO } from "@/hooks/useSEO";
 
 const PARAGRAPHS = [
   "Prema izveštajima više zapadnih medija, američki bezbednosni krugovi razmatraju mogućnost ograničene vojne operacije čiji bi cilj bio preuzimanje iranskih zaliha visoko obogaćenog uranijuma.",
@@ -19,10 +18,10 @@ const PARAGRAPHS = [
 ];
 
 export default function SadSpecijalnaOperacijaIranUranijum() {
-  useSEO("/geopolitika/sad-specijalna-operacija-iran-uranijum");
 
   return (
     <ArticleTemplate
+      path="/geopolitika/sad-specijalna-operacija-iran-uranijum"
       sectionLabel="Geopolitika"
       title="SAD razmatraju specijalnu operaciju za preuzimanje iranskog uranijuma"
       dateLabel="10. MART 2026."

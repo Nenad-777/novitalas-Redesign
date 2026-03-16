@@ -4,7 +4,6 @@
  */
 
 import ArticleTemplate from "@/components/ArticleTemplate";
-import { useSEO } from "@/hooks/useSEO";
 
 const PARAGRAPHS = [
   "Međunarodna agencija za energiju (IEA) objavila je da će njene članice osloboditi oko 400 miliona barela nafte iz strateških rezervi, što predstavlja najveću koordinisanu energetsku intervenciju u istoriji. Odluka je doneta nakon naglog poremećaja na globalnom tržištu energije izazvanog krizom u Persijskom zalivu i ozbiljnim problemima u transportu nafte kroz Hormuški moreuz.",
@@ -17,10 +16,10 @@ const PARAGRAPHS = [
 ];
 
 export default function RezerveNafte() {
-  useSEO("/geopolitika/rezerve-nafte");
 
   return (
     <ArticleTemplate
+      path="/geopolitika/rezerve-nafte"
       sectionLabel="Geopolitika"
       title="IEA pokreće najveće oslobađanje naftnih rezervi u istoriji"
       dateLabel="11. MART 2026."

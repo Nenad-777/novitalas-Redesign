@@ -1,10 +1,9 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
-import { useSEO } from "@/hooks/useSEO";
 
 export default function KoJeDobioOskara() {
-  useSEO("/nasa-planeta/ko-je-dobio-oskara");
   return (
     <ArticleTemplate
+      path="/nasa-planeta/ko-je-dobio-oskara"
       sectionLabel="Naša planeta"
       title="Ko je dobio Oskara?"
       dateLabel="16. MART 2026."

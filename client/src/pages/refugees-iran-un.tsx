@@ -4,7 +4,6 @@
  */
 
 import ArticleTemplate from "@/components/ArticleTemplate";
-import { useSEO } from "@/hooks/useSEO";
 
 const PARAGRAPHS = [
   "Prema najnovijem izveštaju Agencije Ujedinjenih nacija za izbeglice (UNHCR), ratna dešavanja u Iranu mogla bi dovesti do raseljavanja čak 3,2 miliona ljudi, što predstavlja jednu od najvećih humanitarnih kriza u regionu poslednjih godina.",
@@ -17,9 +16,9 @@ const PARAGRAPHS = [
 ];
 
 export default function RefugeesIranUn() {
-  useSEO("/geopolitika/refugees-iran-un");
   return (
     <ArticleTemplate
+      path="/geopolitika/refugees-iran-un"
       sectionLabel="Geopolitika"
       title="Rat u Iranu pokrenuo masovno raseljavanje: UN upozorava na 3,2 miliona izbeglica"
       dateLabel="11. MART 2026."

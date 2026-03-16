@@ -1,10 +1,9 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
-import { useSEO } from "@/hooks/useSEO";
 
 export default function KoJePucaoUSrbiju() {
-  useSEO("/srbija/ko-je-pucao-u-srbiju");
   return (
     <ArticleTemplate
+      path="/srbija/ko-je-pucao-u-srbiju"
       sectionLabel="Srbija"
       title="Ko je pucao u Srbiju?"
       dateLabel="15. MART 2026."

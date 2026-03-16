@@ -4,7 +4,6 @@
  */
 
 import ArticleTemplate from "@/components/ArticleTemplate";
-import { useSEO } from "@/hooks/useSEO";
 
 const PARAGRAPHS = [
   "Francuski predsednik Emanuel Makron izjavio je da Francuska i njeni saveznici razmatraju mogućnost formiranja odbrambene pomorske misije čiji bi cilj bio obezbeđivanje slobodne plovidbe kroz Ormuski moreuz, jedan od najvažnijih energetskih prolaza na svetu.",
@@ -19,10 +18,10 @@ const PARAGRAPHS = [
 ];
 
 export default function FrancuskaOdbranaOrmuza() {
-  useSEO("/geopolitika/francuska-odbrana-ormuza");
 
   return (
     <ArticleTemplate
+      path="/geopolitika/francuska-odbrana-ormuza"
       sectionLabel="Geopolitika"
       title="Evropa razmatra vojnu misiju za otvaranje Ormuskog moreuza"
       dateLabel="9. MART 2026."

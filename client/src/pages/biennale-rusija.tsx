@@ -4,7 +4,6 @@
  */
 
 import ArticleTemplate from "@/components/ArticleTemplate";
-import { useSEO } from "@/hooks/useSEO";
 
 const PARAGRAPHS = [
   "Evropska unija zapretila je mogućnošću povlačenja finansijske podrške Venecijanskom bijenalu ukoliko Rusiji bude dozvoljen povratak na ovu prestižnu međunarodnu umetničku manifestaciju. Rasprava se otvorila nakon spekulacija da bi ruski umetnici i paviljon mogli ponovo biti uključeni u naredno izdanje događaja.",
@@ -19,9 +18,9 @@ const PARAGRAPHS = [
 ];
 
 export default function BiennaleRusija() {
-  useSEO("/geopolitika/biennale-rusija");
   return (
     <ArticleTemplate
+      path="/geopolitika/biennale-rusija"
       sectionLabel="Geopolitika"
       title="EU preti povlačenjem finansiranja Venecijanskog bijenala zbog mogućeg povratka Rusije"
       dateLabel="13. MART 2026."
