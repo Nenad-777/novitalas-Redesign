@@ -128,7 +128,7 @@ export default function Home() {
 
       {/* Hero */}
       <section
-        className="relative w-full overflow-hidden h-[24vh] md:h-[40vh] hero-section"
+        className="relative w-full overflow-hidden h-[20vh] md:h-[30vh] hero-section"
         style={{
           backgroundColor: isDark ? "#0d1117" : "#f0f4f7",
           backgroundImage: `url(${IMAGES.hero})`,
@@ -143,30 +143,21 @@ export default function Home() {
           />
         )}
 
-        {/* Left-to-right white gradient overlay for text readability */}
+        {/* Left-to-right gradient overlay for text readability */}
         <div
           className="absolute inset-0"
           style={{
             background: isDark
-              ? "linear-gradient(to right, rgba(17,19,24,0.85) 0%, rgba(17,19,24,0.4) 45%, transparent 75%)"
-              : "linear-gradient(to right, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.35) 45%, transparent 75%)",
+              ? "linear-gradient(to right, rgba(17,19,24,0.90) 0%, rgba(17,19,24,0.5) 40%, transparent 70%)"
+              : "linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.45) 40%, transparent 70%)",
           }}
         />
 
-        {/* Bottom fade for smooth transition to content */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background: isDark
-              ? "linear-gradient(to top, rgba(17,19,24,0.7) 0%, transparent 40%)"
-              : "linear-gradient(to top, rgba(255,255,255,0.6) 0%, transparent 40%)",
-          }}
-        />
-
-        <div className="absolute bottom-[38%] left-0 right-0">
-          <div className="max-w-[1200px] mx-auto pl-3 md:pl-4 pr-5">
+        {/* Vertically centered slogan */}
+        <div className="absolute inset-0 flex items-center">
+          <div className="max-w-[1200px] mx-auto w-full pl-3 md:pl-4 pr-5">
             <p
-              className="hero-tagline text-[28px] md:text-[36px] italic tracking-wide"
+              className="hero-tagline text-[22px] md:text-[32px] italic tracking-wide"
               style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
                 color: isDark ? "rgba(246,243,232,0.9)" : "#1a2a3a",
