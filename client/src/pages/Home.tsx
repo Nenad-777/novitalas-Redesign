@@ -194,949 +194,256 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          {/* Geopolitika — Svetska kriza Ormuski moreuz (MAIN STORY) */}
-          <FadeIn className="mb-10">
-            <article
-              className="border overflow-hidden"
-              style={{
-                borderColor: isDark ? "#2a2a2e" : "#eee",
-                backgroundColor: isDark ? "#151820" : "#faf7f2",
-              }}
-            >
-              <Link
-                href="/geopolitika/svetska-kriza-sve-ozbiljnija"
-                className="no-underline"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
-                  <div className="p-6 md:p-7">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span
-                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
-                        style={{
-                          fontFamily:
-                            "'Source Sans 3', -apple-system, sans-serif",
-                          color: isDark ? "#9a978f" : "#666",
-                        }}
-                      >
-                        Geopolitika
-                      </span>
-                    </div>
+          {/* Editorial two-column layout: main story + four supporting stories */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
+            {/* LEFT: Main story — SVETSKA KRIZA SVE OZBILJNIJA */}
+            <FadeIn>
+              <article>
+                <span className="kicker">Geopolitika</span>
 
-                    <h2
-                      className="text-[26px] md:text-[34px] font-bold leading-[1.1]"
-                      style={{
-                        fontFamily: "'Playfair Display', Georgia, serif",
-                        color: isDark ? "#e0ddd5" : "#111",
-                      }}
-                    >
-                      SVETSKA KRIZA SVE OZBILJNIJA
-                    </h2>
+                <h1
+                  className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
+                  style={{
+                    fontFamily: "'Playfair Display', Georgia, serif",
+                    fontWeight: 700,
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  <Link
+                    href="/geopolitika/svetska-kriza-sve-ozbiljnija"
+                    className="headline-link"
+                    style={{
+                      fontFamily: "'Playfair Display', Georgia, serif",
+                    }}
+                  >
+                    SVETSKA KRIZA SVE OZBILJNIJA
+                  </Link>
+                </h1>
 
-                    <p
-                      className="mt-3 text-[16px] md:text-[17px] leading-[1.6]"
-                      style={{
-                        fontFamily: "'Lora', Georgia, serif",
-                        color: isDark ? "#9a978f" : "#555",
-                      }}
-                    >
-                      Zašto je Ormuski moreuz tako važan
-                    </p>
+                <p
+                  className="text-[18px] md:text-[19px] leading-[1.6] mb-5"
+                  style={{
+                    fontFamily: "'Lora', Georgia, serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Zašto je Ormuski moreuz tako važan
+                </p>
 
+                <figure className="mb-0">
+                  <Link
+                    href="/geopolitika/svetska-kriza-sve-ozbiljnija"
+                    className="block no-underline"
+                  >
                     <div
-                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                      className="border"
                       style={{
-                        fontFamily:
-                          "'Source Sans 3', -apple-system, sans-serif",
-                        color: isDark ? "#d9bf7a" : "#8B0000",
+                        borderColor: isDark ? "#2a2a2e" : "#eee",
+                        backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
                       }}
                     >
-                      Otvori tekst →
+                      <img
+                        src={IMAGES.brodoviKriza}
+                        alt="Brodovi u Ormuskom moreuzu — globalna energetska kriza"
+                        className="w-full h-[280px] md:h-[380px] object-cover object-center block"
+                        fetchPriority="high"
+                        decoding="async"
+                      />
+                    </div>
+                  </Link>
+                </figure>
+              </article>
+            </FadeIn>
+
+            {/* RIGHT: Four supporting articles */}
+            <aside>
+              <FadeIn>
+                <div className="flex flex-col">
+                  {/* Ko je dobio Oskara? */}
+                  <div>
+                    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
+                      <div>
+                        <span className="kicker">Naša planeta</span>
+                        <h3
+                          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#e0ddd5" : "#111",
+                          }}
+                        >
+                          <Link
+                            href="/nasa-planeta/ko-je-dobio-oskara"
+                            className="headline-link"
+                          >
+                            Ko je dobio Oskara?
+                          </Link>
+                        </h3>
+                        <p
+                          className="mt-1 text-[14px] leading-[1.5]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#7a7872" : "#666",
+                          }}
+                        >
+                          Dok svet tone u ratove, razaranja i očigledan pad civilizacijskih normi, ceremonija Oskara nastavlja da blista.
+                        </p>
+                      </div>
+
+                      <img
+                        src={IMAGES.oscarWorld}
+                        alt="Ceremonija dodele Oskara"
+                        className="w-[100px] h-[75px] object-cover border"
+                        style={{
+                          borderColor: isDark ? "#2a2a2e" : "#eee",
+                          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
+                        }}
+                        loading="lazy"
+                        decoding="async"
+                      />
                     </div>
                   </div>
 
-                  <div
-                    className="border-l"
-                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
-                  >
-                    <img
-                      src={IMAGES.brodoviKriza}
-                      alt="Brodovi u Ormuskom moreuzu — globalna energetska kriza"
-                      className="w-full h-[220px] md:h-full object-cover object-center block"
-                      fetchPriority="high"
-                      decoding="async"
-                    />
+                  <hr className="editorial-divider my-5" />
+
+                  {/* Tiho gašenje srpskih univerziteta na Kosovu */}
+                  <div>
+                    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
+                      <div>
+                        <span className="kicker">Srbija</span>
+                        <h3
+                          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#e0ddd5" : "#111",
+                          }}
+                        >
+                          <Link
+                            href="/srbija/tiho-gasenje-srpskih-univerziteta-na-kosovu"
+                            className="headline-link"
+                          >
+                            Tiho gašenje srpskih univerziteta na Kosovu
+                          </Link>
+                        </h3>
+                        <p
+                          className="mt-1 text-[14px] leading-[1.5]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#7a7872" : "#666",
+                          }}
+                        >
+                          Hiljade studenata i profesora mogle bi ostati bez univerziteta dok administrativne mere postepeno onemogućavaju rad srpskih fakulteta u Kosovskoj Mitrovici.
+                        </p>
+                      </div>
+
+                      <img
+                        src={IMAGES.kosovAmfiteatar}
+                        alt="Tiho gašenje srpskih univerziteta na Kosovu"
+                        className="w-[100px] h-[75px] object-cover border"
+                        style={{
+                          borderColor: isDark ? "#2a2a2e" : "#eee",
+                          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
+                        }}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  </div>
+
+                  <hr className="editorial-divider my-5" />
+
+                  {/* Ko je pucao u Srbiju? */}
+                  <div>
+                    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
+                      <div>
+                        <span className="kicker">Srbija</span>
+                        <h3
+                          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#e0ddd5" : "#111",
+                          }}
+                        >
+                          <Link
+                            href="/srbija/ko-je-pucao-u-srbiju"
+                            className="headline-link"
+                          >
+                            Ko je pucao u Srbiju?
+                          </Link>
+                        </h3>
+                        <p
+                          className="mt-1 text-[14px] leading-[1.5]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#7a7872" : "#666",
+                          }}
+                        >
+                          Događaji od 15. marta i dalje predstavljaju jedno od najtežih otvorenih pitanja savremene srpske politike.
+                        </p>
+                      </div>
+
+                      <img
+                        src={IMAGES.srbijaThumb}
+                        alt="Zvučni top, akustično oružje upotrebljeno na protestu u Beogradu"
+                        className="w-[100px] h-[75px] object-cover border"
+                        style={{
+                          borderColor: isDark ? "#2a2a2e" : "#eee",
+                          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
+                        }}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  </div>
+
+                  <hr className="editorial-divider my-5" />
+
+                  {/* Kina odobrila prvi moždani implantat */}
+                  <div>
+                    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
+                      <div>
+                        <span className="kicker">Naša planeta</span>
+                        <h3
+                          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#e0ddd5" : "#111",
+                          }}
+                        >
+                          <Link
+                            href="/nasa-planeta/kina-mozgani-implantat"
+                            className="headline-link"
+                          >
+                            Kina odobrila prvi moždani implantat
+                          </Link>
+                        </h3>
+                        <p
+                          className="mt-1 text-[14px] leading-[1.5]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#7a7872" : "#666",
+                          }}
+                        >
+                          Kineske vlasti odobrile su prvi moždani implantat namenjen komercijalnoj upotrebi, čime je napravljen značajan korak u razvoju brain-computer interface tehnologije.
+                        </p>
+                      </div>
+
+                      <img
+                        src={IMAGES.chinaBrain}
+                        alt="Kina — prvi moždani implantat za komercijalnu upotrebu"
+                        className="w-[100px] h-[75px] object-cover border"
+                        style={{
+                          borderColor: isDark ? "#2a2a2e" : "#eee",
+                          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
+                        }}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
                   </div>
                 </div>
-              </Link>
-            </article>
-          </FadeIn>
-
-          {/* Naša planeta — Ko je dobio Oskara? (MAIN STORY) */}
-          <FadeIn className="mb-10">
-            <article
-              className="border overflow-hidden"
-              style={{
-                borderColor: isDark ? "#2a2a2e" : "#eee",
-                backgroundColor: isDark ? "#151820" : "#faf7f2",
-              }}
-            >
-              <Link
-                href="/nasa-planeta/ko-je-dobio-oskara"
-                className="no-underline"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
-                  <div className="p-6 md:p-7">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span
-                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
-                        style={{
-                          fontFamily:
-                            "'Source Sans 3', -apple-system, sans-serif",
-                          color: isDark ? "#9a978f" : "#666",
-                        }}
-                      >
-                        Naša planeta
-                      </span>
-                    </div>
-
-                    <h2
-                      className="text-[26px] md:text-[34px] font-bold leading-[1.1]"
-                      style={{
-                        fontFamily: "'Playfair Display', Georgia, serif",
-                        color: isDark ? "#e0ddd5" : "#111",
-                      }}
-                    >
-                      Ko je dobio Oskara?
-                    </h2>
-
-                    <p
-                      className="mt-3 text-[16px] md:text-[17px] leading-[1.6]"
-                      style={{
-                        fontFamily: "'Lora', Georgia, serif",
-                        color: isDark ? "#9a978f" : "#555",
-                      }}
-                    >
-                      Dok svet tone u ratove, razaranja i očigledan pad
-                      civilizacijskih normi, ceremonija Oskara nastavlja da
-                      blista, gotovo ravnodušna prema vremenu koje izgleda
-                      poraženo.
-                    </p>
-
-                    <div
-                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
-                      style={{
-                        fontFamily:
-                          "'Source Sans 3', -apple-system, sans-serif",
-                        color: isDark ? "#d9bf7a" : "#8B0000",
-                      }}
-                    >
-                      Otvori tekst →
-                    </div>
-                  </div>
-
-                  <div
-                    className="border-l"
-                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
-                  >
-                    <img
-                      src={IMAGES.oscarWorld}
-                      alt="Ceremonija dodele Oskara — 98. dodela nagrada Američke filmske akademije"
-                      className="w-full h-[220px] md:h-full object-cover object-center block"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-              </Link>
-            </article>
-          </FadeIn>
-
-          {/* Srbija — Ko je pucao u Srbiju? */}
-          <FadeIn className="mb-10">
-            <article
-              className="border overflow-hidden"
-              style={{
-                borderColor: isDark ? "#2a2a2e" : "#eee",
-                backgroundColor: isDark ? "#151820" : "#faf7f2",
-              }}
-            >
-              <Link
-                href="/srbija/ko-je-pucao-u-srbiju"
-                className="no-underline"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
-                  <div className="p-6 md:p-7">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span
-                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
-                        style={{
-                          fontFamily:
-                            "'Source Sans 3', -apple-system, sans-serif",
-                          color: isDark ? "#9a978f" : "#666",
-                        }}
-                      >
-                        Srbija
-                      </span>
-                    </div>
-
-                    <h2
-                      className="text-[26px] md:text-[34px] font-bold leading-[1.1]"
-                      style={{
-                        fontFamily: "'Playfair Display', Georgia, serif",
-                        color: isDark ? "#e0ddd5" : "#111",
-                      }}
-                    >
-                      Ko je pucao u Srbiju?
-                    </h2>
-
-                    <p
-                      className="mt-3 text-[16px] md:text-[17px] leading-[1.6]"
-                      style={{
-                        fontFamily: "'Lora', Georgia, serif",
-                        color: isDark ? "#9a978f" : "#555",
-                      }}
-                    >
-                      Događaji od 15. marta i dalje predstavljaju jedno od
-                      najtežih otvorenih pitanja savremene srpske politike, ko
-                      je i čime udario na demonstrante u centru Beograda?
-                    </p>
-
-                    <div
-                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
-                      style={{
-                        fontFamily:
-                          "'Source Sans 3', -apple-system, sans-serif",
-                        color: isDark ? "#d9bf7a" : "#8B0000",
-                      }}
-                    >
-                      Otvori tekst →
-                    </div>
-                  </div>
-
-                  <div
-                    className="border-l"
-                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
-                  >
-                    <img
-                      src={IMAGES.srbijaThumb}
-                      alt="Zvučni top, akustično oružje upotrebljeno na protestu u Beogradu"
-                      className="w-full h-[220px] md:h-full object-cover object-center block"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-              </Link>
-            </article>
-          </FadeIn>
-
-          {/* Naša planeta — Kina moždani implantat */}
-          <FadeIn className="mb-10">
-            <article
-              className="border overflow-hidden"
-              style={{
-                borderColor: isDark ? "#2a2a2e" : "#eee",
-                backgroundColor: isDark ? "#151820" : "#faf7f2",
-              }}
-            >
-              <Link
-                href="/nasa-planeta/kina-mozgani-implantat"
-                className="no-underline"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
-                  <div className="p-6 md:p-7">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span
-                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
-                        style={{
-                          fontFamily:
-                            "'Source Sans 3', -apple-system, sans-serif",
-                          color: isDark ? "#9a978f" : "#666",
-                        }}
-                      >
-                        Naša planeta
-                      </span>
-                    </div>
-
-                    <h2
-                      className="text-[26px] md:text-[34px] font-bold leading-[1.1]"
-                      style={{
-                        fontFamily: "'Playfair Display', Georgia, serif",
-                        color: isDark ? "#e0ddd5" : "#111",
-                      }}
-                    >
-                      Kina odobrila prvi moždani implantat za komercijalnu upotrebu
-                    </h2>
-
-                    <p
-                      className="mt-3 text-[16px] md:text-[17px] leading-[1.6]"
-                      style={{
-                        fontFamily: "'Lora', Georgia, serif",
-                        color: isDark ? "#9a978f" : "#555",
-                      }}
-                    >
-                      Kineske vlasti odobrile su prvi moždani implantat namenjen komercijalnoj upotrebi, čime je napravljen značajan korak u razvoju brain-computer interface tehnologije.
-                    </p>
-
-                    <div
-                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
-                      style={{
-                        fontFamily:
-                          "'Source Sans 3', -apple-system, sans-serif",
-                        color: isDark ? "#d9bf7a" : "#8B0000",
-                      }}
-                    >
-                      Otvori tekst →
-                    </div>
-                  </div>
-
-                  <div
-                    className="border-l"
-                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
-                  >
-                    <img
-                      src={IMAGES.chinaBrain}
-                      alt="Kina — prvi moždani implantat za komercijalnu upotrebu"
-                      className="w-full h-[220px] md:h-full object-cover object-center block"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-              </Link>
-            </article>
-          </FadeIn>
-
-          {/* Obaveštajni izvori — CIA kampanja za regrutovanje kineskih vojnih oficira (GLAVNA VEST) */}
-          <FadeIn className="mb-10">
-            <article
-              className="border overflow-hidden"
-              style={{
-                borderColor: isDark ? "#2a2a2e" : "#eee",
-                backgroundColor: isDark ? "#151820" : "#faf7f2",
-              }}
-            >
-              <Link
-                href="/obavestajni-izvori/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira"
-                className="no-underline"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
-                  <div className="p-6 md:p-7">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span
-                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
-                        style={{
-                          fontFamily:
-                            "'Source Sans 3', -apple-system, sans-serif",
-                          color: isDark ? "#9a978f" : "#666",
-                        }}
-                      >
-                        Obaveštajni izvori
-                      </span>
-                    </div>
-
-                    <h2
-                      className="text-[26px] md:text-[34px] font-bold leading-[1.1]"
-                      style={{
-                        fontFamily: "'Playfair Display', Georgia, serif",
-                        color: isDark ? "#e0ddd5" : "#111",
-                      }}
-                    >
-                      CIA pokrenula kampanju za regrutovanje kineskih vojnih oficira
-                    </h2>
-
-                    <p
-                      className="mt-3 text-[16px] md:text-[17px] leading-[1.6]"
-                      style={{
-                        fontFamily: "'Lora', Georgia, serif",
-                        color: isDark ? "#9a978f" : "#555",
-                      }}
-                    >
-                      Američka CIA pokrenula javnu kampanju usmerenu ka potencijalnim izvorima unutar kineske vojske, objavivši video na kineskom jeziku koji cilja nezadovoljne oficire.
-                    </p>
-
-                    <div
-                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
-                      style={{
-                        fontFamily:
-                          "'Source Sans 3', -apple-system, sans-serif",
-                        color: isDark ? "#d9bf7a" : "#8B0000",
-                      }}
-                    >
-                      Otvori tekst →
-                    </div>
-                  </div>
-
-                  <div
-                    className="border-l"
-                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
-                  >
-                    <img
-                      src={IMAGES.ciaChina}
-                      alt="CIA kampanja za regrutovanje kineskih vojnih oficira"
-                      className="w-full h-[220px] md:h-full object-cover object-center block"
-                      fetchPriority="high"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-              </Link>
-            </article>
-          </FadeIn>
-
-          {/* Geopolitika — EU Biennale Rusija (GLAVNA VEST) */}
-          <FadeIn className="mb-10">
-            <article
-              className="border overflow-hidden"
-              style={{
-                borderColor: isDark ? "#2a2a2e" : "#eee",
-                backgroundColor: isDark ? "#151820" : "#faf7f2",
-              }}
-            >
-              <Link
-                href="/geopolitika/biennale-rusija"
-                className="no-underline"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
-                  <div className="p-6 md:p-7">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span
-                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
-                        style={{
-                          fontFamily:
-                            "'Source Sans 3', -apple-system, sans-serif",
-                          color: isDark ? "#9a978f" : "#666",
-                        }}
-                      >
-                        Geopolitika
-                      </span>
-                    </div>
-
-                    <h2
-                      className="text-[26px] md:text-[34px] font-bold leading-[1.1]"
-                      style={{
-                        fontFamily: "'Playfair Display', Georgia, serif",
-                        color: isDark ? "#e0ddd5" : "#111",
-                      }}
-                    >
-                      EU preti povlačenjem finansiranja Venecijanskog bijenala zbog mogućeg povratka Rusije
-                    </h2>
-
-                    <p
-                      className="mt-3 text-[16px] md:text-[17px] leading-[1.6]"
-                      style={{
-                        fontFamily: "'Lora', Georgia, serif",
-                        color: isDark ? "#9a978f" : "#555",
-                      }}
-                    >
-                      Evropska unija zapretila je mogućnošću povlačenja finansijske podrške Venecijanskom bijenalu ukoliko Rusiji bude dozvoljen povratak na ovu prestižnu međunarodnu umetničku manifestaciju.
-                    </p>
-
-                    <div
-                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
-                      style={{
-                        fontFamily:
-                          "'Source Sans 3', -apple-system, sans-serif",
-                        color: isDark ? "#d9bf7a" : "#8B0000",
-                      }}
-                    >
-                      Otvori tekst →
-                    </div>
-                  </div>
-
-                  <div
-                    className="border-l"
-                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
-                  >
-                    <img
-                      src={IMAGES.biennaleRusija}
-                      alt="Venecijansko bijenale — povratak Rusije"
-                      className="w-full h-[220px] md:h-full object-cover object-center block"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-              </Link>
-            </article>
-          </FadeIn>
-
-          {/* Geopolitika — UN izbeglice Iran */}
-          <FadeIn className="mb-10">
-            <article
-              className="border overflow-hidden"
-              style={{
-                borderColor: isDark ? "#2a2a2e" : "#eee",
-                backgroundColor: isDark ? "#151820" : "#faf7f2",
-              }}
-            >
-              <Link
-                href="/geopolitika/refugees-iran-un"
-                className="no-underline"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
-                  <div className="p-6 md:p-7">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span
-                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
-                        style={{
-                          fontFamily:
-                            "'Source Sans 3', -apple-system, sans-serif",
-                          color: isDark ? "#9a978f" : "#666",
-                        }}
-                      >
-                        Geopolitika
-                      </span>
-                    </div>
-
-                    <h2
-                      className="text-[26px] md:text-[34px] font-bold leading-[1.1]"
-                      style={{
-                        fontFamily: "'Playfair Display', Georgia, serif",
-                        color: isDark ? "#e0ddd5" : "#111",
-                      }}
-                    >
-                      Rat u Iranu pokrenuo masovno raseljavanje: UN upozorava na 3,2 miliona izbeglica
-                    </h2>
-
-                    <p
-                      className="mt-3 text-[16px] md:text-[17px] leading-[1.6]"
-                      style={{
-                        fontFamily: "'Lora', Georgia, serif",
-                        color: isDark ? "#9a978f" : "#555",
-                      }}
-                    >
-                      Agencija UN za izbeglice upozorava da se humanitarna kriza ubrzano širi dok milioni ljudi napuštaju svoje domove.
-                    </p>
-
-                    <div
-                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
-                      style={{
-                        fontFamily:
-                          "'Source Sans 3', -apple-system, sans-serif",
-                        color: isDark ? "#d9bf7a" : "#8B0000",
-                      }}
-                    >
-                      Otvori tekst →
-                    </div>
-                  </div>
-
-                  <div
-                    className="border-l"
-                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
-                  >
-                    <img
-                      src={IMAGES.refugeesIranUn}
-                      alt="Izbeglice iz Irana — humanitarna kriza"
-                      className="w-full h-[220px] md:h-full object-cover object-center block"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-              </Link>
-            </article>
-          </FadeIn>
-
-          {/* Geopolitika — IEA rezerve nafte */}
-          <FadeIn className="mb-10">
-            <article
-              className="border overflow-hidden"
-              style={{
-                borderColor: isDark ? "#2a2a2e" : "#eee",
-                backgroundColor: isDark ? "#151820" : "#faf7f2",
-              }}
-            >
-              <Link
-                href="/geopolitika/rezerve-nafte"
-                className="no-underline"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
-                  <div className="p-6 md:p-7">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span
-                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
-                        style={{
-                          fontFamily:
-                            "'Source Sans 3', -apple-system, sans-serif",
-                          color: isDark ? "#9a978f" : "#666",
-                        }}
-                      >
-                        Geopolitika
-                      </span>
-                    </div>
-
-                    <h2
-                      className="text-[26px] md:text-[34px] font-bold leading-[1.1]"
-                      style={{
-                        fontFamily: "'Playfair Display', Georgia, serif",
-                        color: isDark ? "#e0ddd5" : "#111",
-                      }}
-                    >
-                      IEA pokreće najveće oslobađanje naftnih rezervi u istoriji
-                    </h2>
-
-                    <p
-                      className="mt-3 text-[16px] md:text-[17px] leading-[1.6]"
-                      style={{
-                        fontFamily: "'Lora', Georgia, serif",
-                        color: isDark ? "#9a978f" : "#555",
-                      }}
-                    >
-                      Države članice puštaju 400 miliona barela nafte iz
-                      strateških rezervi kako bi ublažile globalni energetski
-                      šok izazvan krizom u Persijskom zalivu.
-                    </p>
-
-                    <div
-                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
-                      style={{
-                        fontFamily:
-                          "'Source Sans 3', -apple-system, sans-serif",
-                        color: isDark ? "#d9bf7a" : "#8B0000",
-                      }}
-                    >
-                      Otvori tekst →
-                    </div>
-                  </div>
-
-                  <div
-                    className="border-l"
-                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
-                  >
-                    <img
-                      src="/rezerve-nafte.jpg"
-                      alt="IEA — oslobađanje strateških naftnih rezervi"
-                      className="w-full h-[220px] md:h-full object-cover object-center block"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-              </Link>
-            </article>
-          </FadeIn>
-
-          {/* Geopolitika — SAD razmatraju specijalnu operaciju za preuzimanje iranskog uranijuma */}
-          <FadeIn className="mb-10">
-            <article
-              className="border overflow-hidden"
-              style={{
-                borderColor: isDark ? "#2a2a2e" : "#eee",
-                backgroundColor: isDark ? "#151820" : "#faf7f2",
-              }}
-            >
-              <Link
-                href="/geopolitika/sad-specijalna-operacija-iran-uranijum"
-                className="no-underline"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
-                  <div className="p-6 md:p-7">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span
-                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
-                        style={{
-                          fontFamily:
-                            "'Source Sans 3', -apple-system, sans-serif",
-                          color: isDark ? "#9a978f" : "#666",
-                        }}
-                      >
-                        Geopolitika
-                      </span>
-                    </div>
-
-                    <h2
-                      className="text-[26px] md:text-[34px] font-bold leading-[1.1]"
-                      style={{
-                        fontFamily: "'Playfair Display', Georgia, serif",
-                        color: isDark ? "#e0ddd5" : "#111",
-                      }}
-                    >
-                      SAD razmatraju specijalnu operaciju za preuzimanje iranskog uranijuma
-                    </h2>
-
-                    <p
-                      className="mt-3 text-[16px] md:text-[17px] leading-[1.6]"
-                      style={{
-                        fontFamily: "'Lora', Georgia, serif",
-                        color: isDark ? "#9a978f" : "#555",
-                      }}
-                    >
-                      Vašington razmatra mogućnost specijalne operacije kojom bi preuzeo kontrolu nad iranskim nuklearnim materijalom usred rastuće tenzije oko iranskog nuklearnog programa.
-                    </p>
-
-                    <div
-                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
-                      style={{
-                        fontFamily:
-                          "'Source Sans 3', -apple-system, sans-serif",
-                        color: isDark ? "#d9bf7a" : "#8B0000",
-                      }}
-                    >
-                      Otvori tekst →
-                    </div>
-                  </div>
-
-                  <div
-                    className="border-l"
-                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
-                  >
-                    <img
-                      src="/us-special-forces-desert.jpg"
-                      alt="Američke specijalne snage u pustinji"
-                      className="w-full h-[220px] md:h-full object-cover object-center block"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-              </Link>
-            </article>
-          </FadeIn>
-
-          {/* Geopolitika — Evropa razmatra vojnu misiju za otvaranje Ormuskog moreuza */}
-          <FadeIn className="mb-10">
-            <article
-              className="border overflow-hidden"
-              style={{
-                borderColor: isDark ? "#2a2a2e" : "#eee",
-                backgroundColor: isDark ? "#151820" : "#faf7f2",
-              }}
-            >
-              <Link
-                href="/geopolitika/francuska-odbrana-ormuza"
-                className="no-underline"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
-                  <div className="p-6 md:p-7">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span
-                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
-                        style={{
-                          fontFamily:
-                            "'Source Sans 3', -apple-system, sans-serif",
-                          color: isDark ? "#9a978f" : "#666",
-                        }}
-                      >
-                        Geopolitika
-                      </span>
-                    </div>
-
-                    <h2
-                      className="text-[26px] md:text-[34px] font-bold leading-[1.1]"
-                      style={{
-                        fontFamily: "'Playfair Display', Georgia, serif",
-                        color: isDark ? "#e0ddd5" : "#111",
-                      }}
-                    >
-                      Evropa razmatra vojnu misiju za otvaranje Ormuskog moreuza
-                    </h2>
-
-                    <p
-                      className="mt-3 text-[16px] md:text-[17px] leading-[1.6]"
-                      style={{
-                        fontFamily: "'Lora', Georgia, serif",
-                        color: isDark ? "#9a978f" : "#555",
-                      }}
-                    >
-                      Makron najavljuje odbrambenu pomorsku misiju za zaštitu slobodne plovidbe kroz ključni energetski prolaz.
-                    </p>
-
-                    <div
-                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
-                      style={{
-                        fontFamily:
-                          "'Source Sans 3', -apple-system, sans-serif",
-                        color: isDark ? "#d9bf7a" : "#8B0000",
-                      }}
-                    >
-                      Otvori tekst →
-                    </div>
-                  </div>
-
-                  <div
-                    className="border-l"
-                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
-                  >
-                    <img
-                      src="/hormuz-strait-tankers.jpg"
-                      alt="Tankeri u Ormuskom moreuzu"
-                      className="w-full h-[220px] md:h-full object-cover object-center block"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-              </Link>
-            </article>
-          </FadeIn>
-
-          {/* BREAKING / UDARNA VEST — Kina špijunski brodovi */}
-          <FadeIn className="mb-10">
-            <article
-              className="border overflow-hidden"
-              style={{
-                borderColor: isDark ? "#2a2a2e" : "#eee",
-                backgroundColor: isDark ? "#151820" : "#faf7f2",
-              }}
-            >
-              <Link
-                href="/obavestajni-izvori/kina-spy-brodovi"
-                className="no-underline"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
-                  <div className="p-6 md:p-7">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span
-                        className="text-[11px] font-bold tracking-[0.16em] uppercase"
-                        style={{
-                          fontFamily:
-                            "'Source Sans 3', -apple-system, sans-serif",
-                          color: isDark ? "#d9bf7a" : "#8B0000",
-                        }}
-                      >
-                        Udarno
-                      </span>
-                      <span
-                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
-                        style={{
-                          fontFamily:
-                            "'Source Sans 3', -apple-system, sans-serif",
-                          color: isDark ? "#9a978f" : "#666",
-                        }}
-                      >
-                        Obaveštajni izvori
-                      </span>
-                    </div>
-
-                    <h2
-                      className="text-[26px] md:text-[34px] font-bold leading-[1.1]"
-                      style={{
-                        fontFamily: "'Playfair Display', Georgia, serif",
-                        color: isDark ? "#e0ddd5" : "#111",
-                      }}
-                    >
-                      Kina prati američke snage na Bliskom istoku uz pomoć AI i špijunskih brodova
-                    </h2>
-
-                    <p
-                      className="mt-3 text-[16px] md:text-[17px] leading-[1.6]"
-                      style={{
-                        fontFamily: "'Lora', Georgia, serif",
-                        color: isDark ? "#9a978f" : "#555",
-                      }}
-                    >
-                      Nova analiza zapadnih bezbednosnih službi otkriva kineski nadzor američkih vojnih snaga u regionu Bliskog istoka uz pomoć AI i špijunskih brodova.
-                    </p>
-
-                    <div
-                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
-                      style={{
-                        fontFamily:
-                          "'Source Sans 3', -apple-system, sans-serif",
-                        color: isDark ? "#d9bf7a" : "#8B0000",
-                      }}
-                    >
-                      Otvori tekst →
-                    </div>
-                  </div>
-
-                  <div
-                    className="border-l"
-                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
-                  >
-                    <img
-                      src={IMAGES.kinaSpyBrod}
-                      alt="Kineski špijunski brod — nadzor u Persijskom zalivu"
-                      className="w-full h-[220px] md:h-full object-cover object-center block"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-              </Link>
-            </article>
-          </FadeIn>
-
-          {/* Geopolitika — Velike sile i kriza u Iranu */}
-          <FadeIn className="mb-10">
-            <article
-              className="border overflow-hidden"
-              style={{
-                borderColor: isDark ? "#2a2a2e" : "#eee",
-                backgroundColor: isDark ? "#151820" : "#faf7f2",
-              }}
-            >
-              <Link
-                href="/geopolitika/velike-sile-i-kriza-u-iranu"
-                className="no-underline"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-0">
-                  <div className="p-6 md:p-7">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span
-                        className="text-[11px] font-semibold tracking-[0.12em] uppercase"
-                        style={{
-                          fontFamily:
-                            "'Source Sans 3', -apple-system, sans-serif",
-                          color: isDark ? "#9a978f" : "#666",
-                        }}
-                      >
-                        Geopolitika
-                      </span>
-                    </div>
-
-                    <h2
-                      className="text-[26px] md:text-[34px] font-bold leading-[1.1]"
-                      style={{
-                        fontFamily: "'Playfair Display', Georgia, serif",
-                        color: isDark ? "#e0ddd5" : "#111",
-                      }}
-                    >
-                      Velike sile i kriza u Iranu: oprezna ravnoteža Moskve i
-                      Pekinga
-                    </h2>
-
-                    <p
-                      className="mt-3 text-[16px] md:text-[17px] leading-[1.6]"
-                      style={{
-                        fontFamily: "'Lora', Georgia, serif",
-                        color: isDark ? "#9a978f" : "#555",
-                      }}
-                    >
-                      Između podrške Teheranu i izbegavanja velikog rata: kako
-                      Rusija i Kina balansiraju strateška partnerstva i globalne
-                      interese u aktuelnoj regionalnoj krizi.
-                    </p>
-
-                    <div
-                      className="mt-4 text-[12px] font-semibold uppercase tracking-[0.08em]"
-                      style={{
-                        fontFamily:
-                          "'Source Sans 3', -apple-system, sans-serif",
-                        color: isDark ? "#d9bf7a" : "#8B0000",
-                      }}
-                    >
-                      Otvori tekst →
-                    </div>
-                  </div>
-
-                  <div
-                    className="border-l"
-                    style={{ borderColor: isDark ? "#2a2a2e" : "#eee" }}
-                  >
-                    <img
-                      src={IMAGES.russiaChinaShadows}
-                      alt="Rusija i Kina — senke velikih sila"
-                      className="w-full h-[220px] md:h-full object-cover object-center block"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                </div>
-              </Link>
-            </article>
-          </FadeIn>
+              </FadeIn>
+            </aside>
+          </div>
 
           {/* ======================
               FEBRUAR 2026
