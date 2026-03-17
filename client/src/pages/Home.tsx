@@ -8,7 +8,7 @@
  * - Removed: bottom "rubrike" list (no sub-menu at bottom)
  */
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -68,6 +68,7 @@ const IMAGES = {
 // Simple fade-in on scroll hook
 function useFadeIn() {
   const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
@@ -76,8 +77,7 @@ function useFadeIn() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.style.opacity = "1";
-          el.style.transform = "translateY(0)";
+          setVisible(true);
           observer.unobserve(el);
         }
       },
@@ -88,7 +88,7 @@ function useFadeIn() {
     return () => observer.disconnect();
   }, []);
 
-  return ref;
+  return { ref, visible };
 }
 
 function FadeIn({
@@ -98,15 +98,15 @@ function FadeIn({
   children: React.ReactNode;
   className?: string;
 }) {
-  const ref = useFadeIn();
+  const { ref, visible } = useFadeIn();
 
   return (
     <div
       ref={ref}
       className={className}
       style={{
-        opacity: 0,
-        transform: "translateY(16px)",
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(16px)",
         transition: "opacity 0.7s ease, transform 0.7s ease",
       }}
     >

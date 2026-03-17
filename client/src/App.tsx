@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
@@ -57,13 +58,13 @@ import KinaMozganiImplantat from "./pages/kina-mozgani-implantat";
 function NormalizePath() {
   const [location, setLocation] = useLocation();
 
-  if (location === "/") return null;
-
-  const normalized = location.replace(/\/+$/, "");
-
-  if (normalized !== location) {
-    setLocation(normalized, { replace: true } as any);
-  }
+  useEffect(() => {
+    if (location === "/") return;
+    const normalized = location.replace(/\/+$/, "");
+    if (normalized !== location) {
+      setLocation(normalized, { replace: true } as any);
+    }
+  }, [location, setLocation]);
 
   return null;
 }
