@@ -130,8 +130,8 @@ export default function Home() {
       <section
         className="relative w-full overflow-hidden h-[22vh] md:h-[28vh] hero-section"
         style={{
-          backgroundImage: `url(${IMAGES.hero})`,
-          backgroundColor: isDark ? "#0d1117" : "#1a2a3a",
+          backgroundImage: `url(${IMAGES.hero}), linear-gradient(to bottom, var(--nt-hero-bg), var(--nt-hero-bg-end))`,
+          backgroundColor: "var(--nt-hero-bg)",
         }}
       >
         {/* Dark-mode image dimming overlay */}

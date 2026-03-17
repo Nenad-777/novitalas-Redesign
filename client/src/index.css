@@ -84,6 +84,9 @@
 
   --nt-footer-bg: #0f1217;
   --nt-footer-text: #c9c6cf;
+
+  --nt-hero-bg: #0f1e2e;
+  --nt-hero-bg-end: #1a2f45;
 }
 
 /* =========================================
@@ -199,6 +202,8 @@
 
   /* Hero banner – full-width background image */
   .hero-section {
+    background-color: var(--nt-hero-bg);
+    background-image: linear-gradient(to bottom, var(--nt-hero-bg), var(--nt-hero-bg-end));
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
