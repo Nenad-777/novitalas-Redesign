@@ -46,21 +46,12 @@ export default function GeopolitikaIndex() {
             <h1
               className="mt-3 text-[30px] md:text-[40px] font-bold leading-[1.1]"
               style={{
-                fontFamily: "'Playfair Display', serif",
+                fontFamily: "'Garamond', 'EB Garamond', Georgia, serif",
                 color: isDark ? "#e0ddd5" : "#111",
               }}
             >
-              Geopolitičke analize
+              SVET DANAS
             </h1>
-            <p
-              className="mt-3 text-[16px] md:text-[18px] leading-[1.6] max-w-[760px]"
-              style={{
-                fontFamily: "'Crimson Pro', serif",
-                color: isDark ? "#9a978f" : "#555",
-              }}
-            >
-              Najnovije i arhiva
-            </p>
           </div>
 
           {/* LIST */}
