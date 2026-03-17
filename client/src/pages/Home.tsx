@@ -15,7 +15,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
-  hero: "/hero/novitalas-hero.jpg",
+  hero: "/hero/naslovna-novitalas.jpg",
 
   // ✅ NOVA GLAVNA VEST — Svetska kriza Ormuski moreuz (16. mart 2026)
   brodoviKriza: "/news/brodovi-kriza.jpg",
@@ -128,10 +128,10 @@ export default function Home() {
 
       {/* Hero */}
       <section
-        className="relative w-full overflow-hidden h-[20vh] md:h-[30vh] hero-section"
+        className="relative w-full overflow-hidden h-[22vh] md:h-[28vh] hero-section"
         style={{
-          backgroundColor: isDark ? "#0d1117" : "#f0f4f7",
           backgroundImage: `url(${IMAGES.hero})`,
+          backgroundColor: isDark ? "#0d1117" : "#1a2a3a",
         }}
       >
         {/* Dark-mode image dimming overlay */}
@@ -143,30 +143,27 @@ export default function Home() {
           />
         )}
 
-        {/* Left-to-right gradient overlay for text readability */}
+        {/* Bottom gradient overlay for text readability */}
         <div
-          className="absolute inset-0"
+          aria-hidden="true"
+          className="absolute inset-x-0 bottom-0 h-1/2"
           style={{
-            background: isDark
-              ? "linear-gradient(to right, rgba(17,19,24,0.90) 0%, rgba(17,19,24,0.5) 40%, transparent 70%)"
-              : "linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.45) 40%, transparent 70%)",
+            background: "linear-gradient(to bottom, transparent, rgba(0,0,0,0.50))",
           }}
         />
 
-        {/* Vertically centered slogan */}
-        <div className="absolute inset-0 flex items-center">
-          <div className="max-w-[1200px] mx-auto w-full pl-3 md:pl-4 pr-5">
-            <p
-              className="hero-tagline text-[22px] md:text-[32px] italic tracking-wide"
-              style={{
-                fontFamily: "'Playfair Display', Georgia, serif",
-                color: isDark ? "rgba(246,243,232,0.9)" : "#1a2a3a",
-                textShadow: isDark ? "0 2px 8px rgba(0,0,0,0.5)" : "none",
-              }}
-            >
-              Vaš prozor u svet
-            </p>
-          </div>
+        {/* Slogan – horizontally centered, near the bottom */}
+        <div className="absolute inset-x-0 bottom-0 pb-4 md:pb-6 flex justify-center">
+          <p
+            className="hero-tagline text-[18px] md:text-[26px] italic tracking-wide"
+            style={{
+              fontFamily: "'Playfair Display', Georgia, serif",
+              color: "rgba(246,243,232,0.95)",
+              textShadow: "0 2px 8px rgba(0,0,0,0.60)",
+            }}
+          >
+            Vaš prozor u svet
+          </p>
         </div>
       </section>
 

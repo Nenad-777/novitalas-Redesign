@@ -200,13 +200,13 @@
   /* Hero banner – full-width background image */
   .hero-section {
     background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 58% auto;
+    background-position: center;
+    background-size: cover;
   }
   @media (min-width: 768px) {
     .hero-section {
-      background-position: 96% center;
-      background-size: 44% auto;
+      background-position: center;
+      background-size: cover;
     }
   }
 
