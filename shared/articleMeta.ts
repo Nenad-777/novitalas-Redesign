@@ -65,6 +65,13 @@ export function buildSEOFromArticleMeta(meta: ArticleStaticMeta) {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/srbija/akademija-novisad",
+    title: "Grad odlučuje, studenti na ulici: Akademiji umetnosti preti gubitak prostora",
+    description:
+      "Odbornici odlučuju o oduzimanju prostora Akademiji umetnosti u Novom Sadu, dok studenti i profesori protestuju i upozoravaju na posledice.",
+    imageSrc: "/news/akademija-novisad.jpg",
+  },
+  {
     path: "/geopolitika/svetska-kriza-sve-ozbiljnija",
     title: "SVETSKA KRIZA SVE OZBILJNIJA",
     description:
