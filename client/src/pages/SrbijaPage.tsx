@@ -38,15 +38,16 @@ export default function SrbijaPage() {
           {/* Title */}
           <div className="mb-10">
             <span className="kicker">Srbija</span>
-            <h1
-              className="mt-3 text-[30px] md:text-[40px] font-bold leading-[1.1]"
+            <p
+              className="mt-3 text-[12px] md:text-[13px] uppercase"
               style={{
-                fontFamily: "'Garamond', 'EB Garamond', Georgia, serif",
-                color: isDark ? "#e0ddd5" : "#111",
+                fontFamily: "'EB Garamond', 'Garamond', Georgia, serif",
+                letterSpacing: "0.28em",
+                color: isDark ? "#9a978f" : "#555",
               }}
             >
               ANALIZA NEDELJE
-            </h1>
+            </p>
           </div>
 
           {/* LIST */}
