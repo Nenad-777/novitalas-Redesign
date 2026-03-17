@@ -43,6 +43,9 @@ import TihoGasenjeSrpskihUniverzitetaNaKosovu from "./pages/tiho-gasenje-srpskih
 /* ✅ NOVA VEST — Srbija */
 import KoJePucaoUSrbiju from "./pages/ko-je-pucao-u-srbiju";
 
+/* ✅ NOVA VEST — Srbija */
+import AkademijaNovisad from "./pages/akademija-novisad";
+
 import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
 import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
 
@@ -166,6 +169,11 @@ function Router() {
             SRBIJA
            ========================= */}
         <Route path="/srbija" component={SrbijaPage} />
+
+        <Route
+          path="/srbija/akademija-novisad"
+          component={AkademijaNovisad}
+        />
 
         <Route
           path="/srbija/tiho-gasenje-srpskih-univerziteta-na-kosovu"
