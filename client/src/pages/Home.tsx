@@ -17,7 +17,10 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
-  // ✅ NOVA GLAVNA VEST — Svetska kriza Ormuski moreuz (16. mart 2026)
+  // ✅ NOVA GLAVNA VEST — Akademija umetnosti Novi Sad (18. mart 2026)
+  akademijaNovosad: "/news/akademija-novisad.jpg",
+
+  // ✅ Svetska kriza Ormuski moreuz (16. mart 2026)
   brodoviKriza: "/news/brodovi-kriza.jpg",
 
   // ✅ OSCAR — Ko je dobio Oskara? (Naša planeta, 16. mart 2026)
@@ -196,10 +199,10 @@ export default function Home() {
 
           {/* Editorial two-column layout: main story + four supporting stories */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
-            {/* LEFT: Main story — SVETSKA KRIZA SVE OZBILJNIJA */}
+            {/* LEFT: Main story — AKADEMIJA UMETNOSTI NOVI SAD */}
             <FadeIn>
               <article>
-                <span className="kicker">Geopolitika</span>
+                <span className="kicker">Srbija</span>
 
                 <h1
                   className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
@@ -210,13 +213,13 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/geopolitika/svetska-kriza-sve-ozbiljnija"
+                    href="/srbija/akademija-novisad"
                     className="headline-link"
                     style={{
                       fontFamily: "'Playfair Display', Georgia, serif",
                     }}
                   >
-                    SVETSKA KRIZA SVE OZBILJNIJA
+                    Grad odlučuje, studenti na ulici: Akademiji umetnosti preti gubitak prostora
                   </Link>
                 </h1>
 
@@ -227,12 +230,12 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Zašto je Ormuski moreuz tako važan
+                  Odbornici odlučuju o oduzimanju prostora Akademiji umetnosti u Novom Sadu, dok studenti i profesori protestuju i upozoravaju na posledice.
                 </p>
 
                 <figure className="mb-0">
                   <Link
-                    href="/geopolitika/svetska-kriza-sve-ozbiljnija"
+                    href="/srbija/akademija-novisad"
                     className="block no-underline"
                   >
                     <div
@@ -243,8 +246,8 @@ export default function Home() {
                       }}
                     >
                       <img
-                        src={IMAGES.brodoviKriza}
-                        alt="Brodovi u Ormuskom moreuzu — globalna energetska kriza"
+                        src={IMAGES.akademijaNovosad}
+                        alt="Protest studenata Akademije umetnosti u Novom Sadu — Ne damo vam Akademiju"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                         fetchPriority="high"
                         decoding="async"
@@ -259,6 +262,52 @@ export default function Home() {
             <aside>
               <FadeIn>
                 <div className="flex flex-col">
+                  {/* Svetska kriza sve ozbiljnija (was main) */}
+                  <div>
+                    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
+                      <div>
+                        <span className="kicker">Geopolitika</span>
+                        <h3
+                          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#e0ddd5" : "#111",
+                          }}
+                        >
+                          <Link
+                            href="/geopolitika/svetska-kriza-sve-ozbiljnija"
+                            className="headline-link"
+                          >
+                            SVETSKA KRIZA SVE OZBILJNIJA
+                          </Link>
+                        </h3>
+                        <p
+                          className="mt-1 text-[14px] leading-[1.5]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#7a7872" : "#666",
+                          }}
+                        >
+                          Zašto je Ormuski moreuz tako važan i kako kriza utiče na globalna energetska tržišta.
+                        </p>
+                      </div>
+
+                      <img
+                        src={IMAGES.brodoviKriza}
+                        alt="Brodovi u Ormuskom moreuzu — globalna energetska kriza"
+                        className="w-[100px] h-[75px] object-cover border"
+                        style={{
+                          borderColor: isDark ? "#2a2a2e" : "#eee",
+                          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
+                        }}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  </div>
+
+                  <hr className="editorial-divider my-5" />
+
                   {/* Ko je dobio Oskara? */}
                   <div>
                     <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
@@ -384,52 +433,6 @@ export default function Home() {
                       <img
                         src={IMAGES.srbijaThumb}
                         alt="Zvučni top, akustično oružje upotrebljeno na protestu u Beogradu"
-                        className="w-[100px] h-[75px] object-cover border"
-                        style={{
-                          borderColor: isDark ? "#2a2a2e" : "#eee",
-                          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
-                        }}
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                  </div>
-
-                  <hr className="editorial-divider my-5" />
-
-                  {/* Kina odobrila prvi moždani implantat */}
-                  <div>
-                    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
-                      <div>
-                        <span className="kicker">Naša planeta</span>
-                        <h3
-                          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
-                          style={{
-                            fontFamily: "'Lora', Georgia, serif",
-                            color: isDark ? "#e0ddd5" : "#111",
-                          }}
-                        >
-                          <Link
-                            href="/nasa-planeta/kina-mozgani-implantat"
-                            className="headline-link"
-                          >
-                            Kina odobrila prvi moždani implantat
-                          </Link>
-                        </h3>
-                        <p
-                          className="mt-1 text-[14px] leading-[1.5]"
-                          style={{
-                            fontFamily: "'Lora', Georgia, serif",
-                            color: isDark ? "#7a7872" : "#666",
-                          }}
-                        >
-                          Kineske vlasti odobrile su prvi moždani implantat namenjen komercijalnoj upotrebi, čime je napravljen značajan korak u razvoju brain-computer interface tehnologije.
-                        </p>
-                      </div>
-
-                      <img
-                        src={IMAGES.chinaBrain}
-                        alt="Kina — prvi moždani implantat za komercijalnu upotrebu"
                         className="w-[100px] h-[75px] object-cover border"
                         style={{
                           borderColor: isDark ? "#2a2a2e" : "#eee",
