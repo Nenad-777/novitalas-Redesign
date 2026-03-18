@@ -121,6 +121,67 @@ function FadeIn({
   );
 }
 
+interface SmallArticleCardProps {
+  category: string;
+  href: string;
+  title: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+}
+
+function SmallArticleCard({
+  category,
+  href,
+  title,
+  description,
+  imageSrc,
+  imageAlt,
+}: SmallArticleCardProps) {
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
+
+  return (
+    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
+      <div>
+        <span className="kicker">{category}</span>
+        <h3
+          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
+          style={{
+            fontFamily: "'Lora', Georgia, serif",
+            color: isDark ? "#e0ddd5" : "#111",
+          }}
+        >
+          <Link href={href} className="headline-link">
+            {title}
+          </Link>
+        </h3>
+        <p
+          className="mt-1 text-[14px] leading-[1.5]"
+          style={{
+            fontFamily: "'Lora', Georgia, serif",
+            color: isDark ? "#7a7872" : "#666",
+          }}
+        >
+          {description}
+        </p>
+      </div>
+
+      <img
+        src={imageSrc}
+        alt={imageAlt}
+        className="w-[100px] h-[75px] object-cover border"
+        style={{
+          borderColor: isDark ? "#2a2a2e" : "#eee",
+          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
+        }}
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  );
+}
+
 export default function Home() {
   const { theme } = useTheme();
   const isDark = theme === "dark";
@@ -258,187 +319,50 @@ export default function Home() {
             <aside>
               <FadeIn>
                 <div className="flex flex-col">
-                  {/* Akademija Novisad */}
-                  <div>
-                    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
-                      <div>
-                        <span className="kicker">Srbija</span>
-                        <h3
-                          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
-                          style={{
-                            fontFamily: "'Lora', Georgia, serif",
-                            color: isDark ? "#e0ddd5" : "#111",
-                          }}
-                        >
-                          <Link
-                            href="/srbija/akademija-novisad"
-                            className="headline-link"
-                          >
-                            Grad odlučuje, studenti na ulici: Akademiji umetnosti preti gubitak prostora
-                          </Link>
-                        </h3>
-                        <p
-                          className="mt-1 text-[14px] leading-[1.5]"
-                          style={{
-                            fontFamily: "'Lora', Georgia, serif",
-                            color: isDark ? "#7a7872" : "#666",
-                          }}
-                        >
-                          Odbornici odlučuju o oduzimanju prostora Akademiji umetnosti u Novom Sadu.
-                        </p>
-                      </div>
+                  {/* Mobile-only separator so first card matches the visual rhythm of cards 2–4 on small screens */}
+                  <hr className="editorial-divider my-5 lg:hidden" />
 
-                      <img
-                        src={IMAGES.akademijaNovisad}
-                        alt="Akademija umetnosti u Novom Sadu — studenti na ulici"
-                        className="w-[100px] h-[75px] object-cover border"
-                        style={{
-                          borderColor: isDark ? "#2a2a2e" : "#eee",
-                          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
-                        }}
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                  </div>
+                  <SmallArticleCard
+                    category="Srbija"
+                    href="/srbija/akademija-novisad"
+                    title="Grad odlučuje, studenti na ulici: Akademiji umetnosti preti gubitak prostora"
+                    description="Odbornici odlučuju o oduzimanju prostora Akademiji umetnosti u Novom Sadu."
+                    imageSrc={IMAGES.akademijaNovisad}
+                    imageAlt="Akademija umetnosti u Novom Sadu — studenti na ulici"
+                  />
 
                   <hr className="editorial-divider my-5" />
 
-                  {/* Svetska kriza sve ozbiljnija */}
-                  <div>
-                    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
-                      <div>
-                        <span className="kicker">Geopolitika</span>
-                        <h3
-                          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
-                          style={{
-                            fontFamily: "'Lora', Georgia, serif",
-                            color: isDark ? "#e0ddd5" : "#111",
-                          }}
-                        >
-                          <Link
-                            href="/geopolitika/svetska-kriza-sve-ozbiljnija"
-                            className="headline-link"
-                          >
-                            SVETSKA KRIZA SVE OZBILJNIJA
-                          </Link>
-                        </h3>
-                        <p
-                          className="mt-1 text-[14px] leading-[1.5]"
-                          style={{
-                            fontFamily: "'Lora', Georgia, serif",
-                            color: isDark ? "#7a7872" : "#666",
-                          }}
-                        >
-                          Zašto je Ormuski moreuz tako važan
-                        </p>
-                      </div>
-
-                      <img
-                        src={IMAGES.brodoviKriza}
-                        alt="Brodovi u Ormuskom moreuzu — globalna energetska kriza"
-                        className="w-[100px] h-[75px] object-cover border"
-                        style={{
-                          borderColor: isDark ? "#2a2a2e" : "#eee",
-                          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
-                        }}
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                  </div>
+                  <SmallArticleCard
+                    category="Geopolitika"
+                    href="/geopolitika/svetska-kriza-sve-ozbiljnija"
+                    title="SVETSKA KRIZA SVE OZBILJNIJA"
+                    description="Zašto je Ormuski moreuz tako važan"
+                    imageSrc={IMAGES.brodoviKriza}
+                    imageAlt="Brodovi u Ormuskom moreuzu — globalna energetska kriza"
+                  />
 
                   <hr className="editorial-divider my-5" />
 
-                  {/* Ko je dobio Oskara? */}
-                  <div>
-                    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
-                      <div>
-                        <span className="kicker">Naša planeta</span>
-                        <h3
-                          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
-                          style={{
-                            fontFamily: "'Lora', Georgia, serif",
-                            color: isDark ? "#e0ddd5" : "#111",
-                          }}
-                        >
-                          <Link
-                            href="/nasa-planeta/ko-je-dobio-oskara"
-                            className="headline-link"
-                          >
-                            Ko je dobio Oskara?
-                          </Link>
-                        </h3>
-                        <p
-                          className="mt-1 text-[14px] leading-[1.5]"
-                          style={{
-                            fontFamily: "'Lora', Georgia, serif",
-                            color: isDark ? "#7a7872" : "#666",
-                          }}
-                        >
-                          Dok svet tone u ratove, razaranja i očigledan pad civilizacijskih normi, ceremonija Oskara nastavlja da blista.
-                        </p>
-                      </div>
-
-                      <img
-                        src={IMAGES.oscarWorld}
-                        alt="Ceremonija dodele Oskara"
-                        className="w-[100px] h-[75px] object-cover border"
-                        style={{
-                          borderColor: isDark ? "#2a2a2e" : "#eee",
-                          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
-                        }}
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                  </div>
+                  <SmallArticleCard
+                    category="Naša planeta"
+                    href="/nasa-planeta/ko-je-dobio-oskara"
+                    title="Ko je dobio Oskara?"
+                    description="Dok svet tone u ratove, razaranja i očigledan pad civilizacijskih normi, ceremonija Oskara nastavlja da blista."
+                    imageSrc={IMAGES.oscarWorld}
+                    imageAlt="Ceremonija dodele Oskara"
+                  />
 
                   <hr className="editorial-divider my-5" />
 
-                  {/* Tiho gašenje srpskih univerziteta na Kosovu */}
-                  <div>
-                    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
-                      <div>
-                        <span className="kicker">Srbija</span>
-                        <h3
-                          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
-                          style={{
-                            fontFamily: "'Lora', Georgia, serif",
-                            color: isDark ? "#e0ddd5" : "#111",
-                          }}
-                        >
-                          <Link
-                            href="/srbija/tiho-gasenje-srpskih-univerziteta-na-kosovu"
-                            className="headline-link"
-                          >
-                            Tiho gašenje srpskih univerziteta na Kosovu
-                          </Link>
-                        </h3>
-                        <p
-                          className="mt-1 text-[14px] leading-[1.5]"
-                          style={{
-                            fontFamily: "'Lora', Georgia, serif",
-                            color: isDark ? "#7a7872" : "#666",
-                          }}
-                        >
-                          Hiljade studenata i profesora mogle bi ostati bez univerziteta dok administrativne mere postepeno onemogućavaju rad srpskih fakulteta u Kosovskoj Mitrovici.
-                        </p>
-                      </div>
-
-                      <img
-                        src={IMAGES.kosovAmfiteatar}
-                        alt="Tiho gašenje srpskih univerziteta na Kosovu"
-                        className="w-[100px] h-[75px] object-cover border"
-                        style={{
-                          borderColor: isDark ? "#2a2a2e" : "#eee",
-                          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
-                        }}
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                  </div>
+                  <SmallArticleCard
+                    category="Srbija"
+                    href="/srbija/tiho-gasenje-srpskih-univerziteta-na-kosovu"
+                    title="Tiho gašenje srpskih univerziteta na Kosovu"
+                    description="Hiljade studenata i profesora mogle bi ostati bez univerziteta dok administrativne mere postepeno onemogućavaju rad srpskih fakulteta u Kosovskoj Mitrovici."
+                    imageSrc={IMAGES.kosovAmfiteatar}
+                    imageAlt="Tiho gašenje srpskih univerziteta na Kosovu"
+                  />
                 </div>
               </FadeIn>
             </aside>
