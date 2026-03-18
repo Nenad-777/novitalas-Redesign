@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
-  svetDnevni: "/news/svet-dnevni.jpg",
+  westAgainstIsrael: "/news/west-against-israel.jpg",
   brodoviKriza: "/news/brodovi-kriza.jpg",
   biennaleRusija: "/news/biennale-venice.jpg",
   refugeesIranUn: "/refugees-iran-un.jpg",
@@ -58,10 +58,10 @@ export default function GeopolitikaIndex() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* ✅ NAJNOVIJA VEST (SVET - 18. MART) */}
+            {/* ✅ NAJNOVIJA VEST (Zapadne sile upozorile Izrael) */}
             <article className="md:col-span-2">
               <Link
-                href="/geopolitika/svet-18-mart"
+                href="/geopolitika/zapadne-sile-upozorile-izrael"
                 className="no-underline"
               >
                 <div
@@ -72,8 +72,8 @@ export default function GeopolitikaIndex() {
                   }}
                 >
                   <img
-                    src={IMAGES.svetDnevni}
-                    alt="Svet - 18. mart 2026. — globalni pregled"
+                    src={IMAGES.westAgainstIsrael}
+                    alt="Zapadne sile upozorile Izrael - kopnena ofanziva u Libanu"
                     className="w-full h-[260px] object-cover object-center block"
                     decoding="async"
                   />
@@ -86,7 +86,7 @@ export default function GeopolitikaIndex() {
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  SVET - 18. MART
+                  Zapadne sile upozorile Izrael - ne pokretati kopnenu ofanzivu u Libanu
                 </h2>
 
                 <p
@@ -96,7 +96,7 @@ export default function GeopolitikaIndex() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Pregled najvažnijih globalnih događaja dana: Iran, Liban, nuklearni rizik i širenje regionalne nestabilnosti.
+                  Zapadne zemlje upozoravaju Izrael da ne pokreće kopnenu operaciju u Libanu, uz rastući rizik regionalne eskalacije.
                 </p>
 
                 <div
