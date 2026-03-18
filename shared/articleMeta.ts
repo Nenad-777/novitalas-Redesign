@@ -65,6 +65,13 @@ export function buildSEOFromArticleMeta(meta: ArticleStaticMeta) {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/svet-18-mart",
+    title: "SVET - 18. MART",
+    description:
+      "Pregled najvažnijih globalnih događaja dana: Iran, Liban, nuklearni rizik i širenje regionalne nestabilnosti.",
+    imageSrc: "/news/svet-dnevni.jpg",
+  },
+  {
     path: "/srbija/akademija-novisad",
     title:
       "Grad odlučuje, studenti na ulici: Akademiji umetnosti preti gubitak prostora",
