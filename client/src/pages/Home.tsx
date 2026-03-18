@@ -258,6 +258,7 @@ export default function Home() {
             <aside>
               <FadeIn>
                 <div className="flex flex-col">
+                  <hr className="editorial-divider my-5 lg:hidden" />
                   {/* Akademija Novisad */}
                   <div>
                     <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
