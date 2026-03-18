@@ -32,6 +32,10 @@ type ArticleTemplateProps = {
   infoBox?: InfoBox;
   backHref: string;
   backLabel: string;
+  /** Optional background colour for the page content area (light mode only).
+   *  Use for special article types that require a distinct visual identity,
+   *  e.g. "#D6E6F5" for the SVET daily-digest format. */
+  pageBackground?: string;
 };
 
 export default function ArticleTemplate({
@@ -48,14 +52,17 @@ export default function ArticleTemplate({
   infoBox,
   backHref,
   backLabel,
+  pageBackground,
 }: ArticleTemplateProps) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
+  const pageBg = isDark ? "#111318" : (pageBackground ?? "#ffffff");
+
   return (
     <div
       className="min-h-screen flex flex-col transition-colors duration-300"
-      style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
+      style={{ backgroundColor: pageBg }}
     >
       {path && (
         <SeoMeta
@@ -69,7 +76,7 @@ export default function ArticleTemplate({
 
       <main
         className="py-12 md:py-16 flex-1"
-        style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
+        style={{ backgroundColor: pageBg }}
       >
         <article className="max-w-[860px] mx-auto px-5">
           {/* Rubrika */}

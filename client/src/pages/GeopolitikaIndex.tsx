@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  svetDnevni: "/news/svet-dnevni.jpg",
   brodoviKriza: "/news/brodovi-kriza.jpg",
   biennaleRusija: "/news/biennale-venice.jpg",
   refugeesIranUn: "/refugees-iran-un.jpg",
@@ -57,6 +58,59 @@ export default function GeopolitikaIndex() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* ✅ NAJNOVIJA VEST (Svet — 18. mart) */}
+            <article className="md:col-span-2">
+              <Link
+                href="/geopolitika/svet-18-mart"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#D6E6F5",
+                  }}
+                >
+                  <img
+                    src={IMAGES.svetDnevni}
+                    alt="Svet — dnevni pregled globalnih događaja"
+                    className="w-full h-[260px] object-cover object-center block"
+                    decoding="async"
+                  />
+                </div>
+
+                <h2
+                  className="text-[22px] md:text-[28px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  SVET — 18. MART
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Pregled najvažnijih globalnih događaja dana: Iran, Liban, nuklearni rizik i širenje regionalne nestabilnosti.
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
+
             {/* ✅ NAJNOVIJA VEST (Svetska kriza Ormuski moreuz) */}
             <article className="md:col-span-2">
               <Link
