@@ -146,25 +146,16 @@ export default function Home() {
           />
         )}
 
-        {/* Subtle bottom gradient — improves text readability without gray haze */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 bottom-0"
-          style={{
-            height: "60%",
-            background:
-              "linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.25) 100%)",
-          }}
-        />
-
         {/* Slogan – horizontally centered, near the bottom */}
         <div className="absolute inset-x-0 bottom-0 pb-4 md:pb-6 flex justify-center">
           <p
             className="hero-tagline text-[18px] md:text-[26px] italic tracking-wide"
             style={{
               fontFamily: "'Playfair Display', Georgia, serif",
-              color: "#f5f5f5",
-              textShadow: "0 2px 10px rgba(0,0,0,0.6)",
+              color: isDark ? "#e0ddd5" : "#1a1a1a",
+              textShadow: isDark
+                ? "0 1px 2px rgba(0,0,0,0.3)"
+                : "0 1px 2px rgba(0,0,0,0.15)",
             }}
           >
             Vaš prozor u svet
