@@ -30,7 +30,6 @@ export default function WestAgainstIsraelLiban() {
       paragraphs={PARAGRAPHS}
       backHref="/geopolitika"
       backLabel="← Nazad na Geopolitiku"
-      contentBackground="#D6E6F5"
     />
   );
 }
