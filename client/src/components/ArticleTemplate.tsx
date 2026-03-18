@@ -32,8 +32,6 @@ type ArticleTemplateProps = {
   infoBox?: InfoBox;
   backHref: string;
   backLabel: string;
-  /** Optional background color for the article content wrapper (image + text). */
-  contentBackground?: string;
 };
 
 export default function ArticleTemplate({
@@ -50,7 +48,6 @@ export default function ArticleTemplate({
   infoBox,
   backHref,
   backLabel,
-  contentBackground,
 }: ArticleTemplateProps) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
@@ -74,13 +71,6 @@ export default function ArticleTemplate({
         className="py-12 md:py-16 flex-1"
         style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
       >
-        <div
-          style={
-            contentBackground && !isDark
-              ? { backgroundColor: contentBackground, padding: "24px 0" }
-              : undefined
-          }
-        >
         <article className="max-w-[860px] mx-auto px-5">
           {/* Rubrika */}
           <span className="kicker">{sectionLabel}</span>
@@ -253,7 +243,6 @@ export default function ArticleTemplate({
             </a>
           </div>
         </article>
-        </div>
       </main>
 
       <Footer />
