@@ -61,6 +61,9 @@ import KinaMozganiImplantat from "./pages/kina-mozgani-implantat";
 /* ✅ ARHIVSKA STRANICA — Februar 2026 */
 import ArhivaFebruar2026 from "./pages/ArhivaFebruar2026";
 
+/* ✅ IZDANJE — Februar 2026 (nova, odvojena stranica) */
+import IzdanjeFebruar2026 from "./pages/IzdanjeFebruar2026";
+
 function NormalizePath() {
   const [location, setLocation] = useLocation();
 
@@ -242,6 +245,7 @@ function Router() {
             ARHIVA
            ========================= */}
         <Route path="/arhiva/februar-2026" component={ArhivaFebruar2026} />
+        <Route path="/izdanje/februar-2026" component={IzdanjeFebruar2026} />
 
         {/* 404 */}
         <Route path="/404" component={NotFound} />
