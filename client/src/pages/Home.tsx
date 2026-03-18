@@ -17,8 +17,8 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
-  // ✅ NOVA GLAVNA VEST — SVET 18. MART (18. mart 2026)
-  svetDnevni: "/news/svet-dnevni.jpg",
+  // ✅ NOVA GLAVNA VEST — Zapadne sile upozorile Izrael (18. mart 2026)
+  westAgainstIsrael: "/news/west-against-israel.jpg",
 
   // ✅ NOVA GLAVNA VEST — Akademija umetnosti Novi Sad (18. mart 2026)
   akademijaNovisad: "/news/akademija-novisad.jpg",
@@ -195,7 +195,7 @@ export default function Home() {
 
           {/* Editorial two-column layout: main story + four supporting stories */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
-            {/* LEFT: Main story — SVET 18. MART */}
+            {/* LEFT: Main story — Zapadne sile upozorile Izrael */}
             <FadeIn>
               <article>
                 <span className="kicker">Geopolitika</span>
@@ -209,13 +209,13 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/geopolitika/svet-18-mart"
+                    href="/geopolitika/zapadne-sile-upozorile-izrael"
                     className="headline-link"
                     style={{
                       fontFamily: "'Playfair Display', Georgia, serif",
                     }}
                   >
-                    SVET - 18. MART
+                    Zapadne sile upozorile Izrael - ne pokretati kopnenu ofanzivu u Libanu
                   </Link>
                 </h1>
 
@@ -226,12 +226,12 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Pregled najvažnijih globalnih događaja dana: Iran, Liban, nuklearni rizik i širenje regionalne nestabilnosti.
+                  Zapadne zemlje upozoravaju Izrael da ne pokreće kopnenu operaciju u Libanu, uz rastući rizik regionalne eskalacije.
                 </p>
 
                 <figure className="mb-0">
                   <Link
-                    href="/geopolitika/svet-18-mart"
+                    href="/geopolitika/zapadne-sile-upozorile-izrael"
                     className="block no-underline"
                   >
                     <div
@@ -242,8 +242,8 @@ export default function Home() {
                       }}
                     >
                       <img
-                        src={IMAGES.svetDnevni}
-                        alt="Svet - 18. mart 2026. — globalni pregled"
+                        src={IMAGES.westAgainstIsrael}
+                        alt="Zapadne sile upozorile Izrael - kopnena ofanziva u Libanu"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                         fetchPriority="high"
                         decoding="async"

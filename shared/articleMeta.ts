@@ -65,11 +65,12 @@ export function buildSEOFromArticleMeta(meta: ArticleStaticMeta) {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
-    path: "/geopolitika/svet-18-mart",
-    title: "SVET - 18. MART",
+    path: "/geopolitika/zapadne-sile-upozorile-izrael",
+    title:
+      "Zapadne sile upozorile Izrael - ne pokretati kopnenu ofanzivu u Libanu",
     description:
-      "Pregled najvažnijih globalnih događaja dana: Iran, Liban, nuklearni rizik i širenje regionalne nestabilnosti.",
-    imageSrc: "/news/svet-dnevni.jpg",
+      "Zapadne zemlje upozoravaju Izrael da ne pokreće kopnenu operaciju u Libanu, uz rastući rizik regionalne eskalacije.",
+    imageSrc: "/news/west-against-israel.jpg",
   },
   {
     path: "/srbija/akademija-novisad",

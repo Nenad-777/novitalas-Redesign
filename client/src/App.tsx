@@ -35,7 +35,7 @@ import BiennaleRusija from "./pages/biennale-rusija";
 import SvetskaKrizaSveOzbiljnija from "./pages/svetska-kriza-sve-ozbiljnija";
 
 /* ✅ NOVA VEST — Geopolitika */
-import Svet18Mart from "./pages/svet-18-mart";
+import WestAgainstIsraelLiban from "./pages/west-against-israel-liban";
 
 /* ✅ NOVA VEST */
 import SeloNePrastaPoraz from "./pages/selo-ne-prasta-poraz";
@@ -143,8 +143,8 @@ function Router() {
         />
 
         <Route
-          path="/geopolitika/svet-18-mart"
-          component={Svet18Mart}
+          path="/geopolitika/zapadne-sile-upozorile-izrael"
+          component={WestAgainstIsraelLiban}
         />
 
         <Route
