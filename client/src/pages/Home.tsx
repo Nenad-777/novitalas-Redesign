@@ -146,15 +146,6 @@ export default function Home() {
           />
         )}
 
-        {/* Bottom gradient overlay for text readability */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 h-1/2"
-          style={{
-            background: "linear-gradient(to bottom, transparent, rgba(0,0,0,0.50))",
-          }}
-        />
-
         {/* Slogan – horizontally centered, near the bottom */}
         <div className="absolute inset-x-0 bottom-0 pb-4 md:pb-6 flex justify-center">
           <p
@@ -162,7 +153,7 @@ export default function Home() {
             style={{
               fontFamily: "'Playfair Display', Georgia, serif",
               color: "rgba(246,243,232,0.95)",
-              textShadow: "0 2px 8px rgba(0,0,0,0.60)",
+              textShadow: "0 2px 8px rgba(0,0,0,0.4)",
             }}
           >
             Vaš prozor u svet
