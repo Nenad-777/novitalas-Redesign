@@ -58,6 +58,9 @@ import AiVestSvest from "./pages/ai-vest-svest";
 import Kubrick from "./pages/kubrick";
 import KinaMozganiImplantat from "./pages/kina-mozgani-implantat";
 
+/* ✅ ARHIVSKA STRANICA — Februar 2026 */
+import ArhivaFebruar2026 from "./pages/ArhivaFebruar2026";
+
 function NormalizePath() {
   const [location, setLocation] = useLocation();
 
@@ -234,6 +237,11 @@ function Router() {
           path="/nasa-planeta/kina-mozgani-implantat"
           component={KinaMozganiImplantat}
         />
+
+        {/* =========================
+            ARHIVA
+           ========================= */}
+        <Route path="/arhiva/februar-2026" component={ArhivaFebruar2026} />
 
         {/* 404 */}
         <Route path="/404" component={NotFound} />
