@@ -18,7 +18,7 @@ export default function AkademijaNovisad() {
         "Akademija upozorava da bi oduzimanje prostora bez trajnog rešenja ozbiljno ugrozilo njen rad.",
         "Kada studenti drže nastavu na ulici, a predstavnicima institucije nije omogućeno da govore u prostoru u kojem se odlučuje o njihovoj sudbini, problem prestaje da bude administrativni.",
         "Postaje politički.",
-        "Da li umetnost u ovom društvu ima prostor ili ga mora da ga brani?",
+        "Da li umetnost u ovom društvu ima prostor ili mora da ga brani?",
       ]}
       backHref="/srbija"
       backLabel="← Nazad na Srbiju"
