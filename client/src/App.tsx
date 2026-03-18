@@ -33,6 +33,7 @@ import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 import RefugeesIranUn from "./pages/refugees-iran-un";
 import BiennaleRusija from "./pages/biennale-rusija";
 import SvetskaKrizaSveOzbiljnija from "./pages/svetska-kriza-sve-ozbiljnija";
+import Svet18Mart from "./pages/svet-18-mart";
 
 /* ✅ NOVA VEST */
 import SeloNePrastaPoraz from "./pages/selo-ne-prasta-poraz";
@@ -137,6 +138,11 @@ function Router() {
         <Route
           path="/geopolitika/refugees-iran-un"
           component={RefugeesIranUn}
+        />
+
+        <Route
+          path="/geopolitika/svet-18-mart"
+          component={Svet18Mart}
         />
 
         <Route

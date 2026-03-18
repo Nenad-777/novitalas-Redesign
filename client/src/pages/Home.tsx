@@ -17,7 +17,10 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
-  // ✅ NOVA GLAVNA VEST — Akademija umetnosti Novi Sad (18. mart 2026)
+  // ✅ NOVA GLAVNA VEST — Svet 18. mart 2026
+  svetDnevni: "/news/svet-dnevni.jpg",
+
+  // ✅ Akademija umetnosti Novi Sad (18. mart 2026)
   akademijaNovisad: "/news/akademija-novisad.jpg",
 
   // ✅ NOVA GLAVNA VEST — Svetska kriza Ormuski moreuz (16. mart 2026)
@@ -192,10 +195,10 @@ export default function Home() {
 
           {/* Editorial two-column layout: main story + four supporting stories */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
-            {/* LEFT: Main story — AKADEMIJA NOVISAD */}
+            {/* LEFT: Main story — SVET 18. MART */}
             <FadeIn>
               <article>
-                <span className="kicker">Srbija</span>
+                <span className="kicker">Geopolitika</span>
 
                 <h1
                   className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
@@ -206,13 +209,13 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/srbija/akademija-novisad"
+                    href="/geopolitika/svet-18-mart"
                     className="headline-link"
                     style={{
                       fontFamily: "'Playfair Display', Georgia, serif",
                     }}
                   >
-                    Grad odlučuje, studenti na ulici: Akademiji umetnosti preti gubitak prostora
+                    SVET — 18. MART
                   </Link>
                 </h1>
 
@@ -223,24 +226,24 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Odbornici odlučuju o oduzimanju prostora Akademiji umetnosti u Novom Sadu, dok studenti i profesori protestuju i upozoravaju na posledice.
+                  Pregled najvažnijih globalnih događaja dana: Iran, Liban, nuklearni rizik i širenje regionalne nestabilnosti.
                 </p>
 
                 <figure className="mb-0">
                   <Link
-                    href="/srbija/akademija-novisad"
+                    href="/geopolitika/svet-18-mart"
                     className="block no-underline"
                   >
                     <div
                       className="border"
                       style={{
                         borderColor: isDark ? "#2a2a2e" : "#eee",
-                        backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                        backgroundColor: isDark ? "#1a1c22" : "#D6E6F5",
                       }}
                     >
                       <img
-                        src={IMAGES.akademijaNovisad}
-                        alt="Akademija umetnosti u Novom Sadu — studenti na ulici"
+                        src={IMAGES.svetDnevni}
+                        alt="Svet — dnevni pregled globalnih događaja"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                         fetchPriority="high"
                         decoding="async"
@@ -255,6 +258,52 @@ export default function Home() {
             <aside>
               <FadeIn>
                 <div className="flex flex-col">
+                  {/* Akademija umetnosti Novi Sad */}
+                  <div>
+                    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
+                      <div>
+                        <span className="kicker">Srbija</span>
+                        <h3
+                          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#e0ddd5" : "#111",
+                          }}
+                        >
+                          <Link
+                            href="/srbija/akademija-novisad"
+                            className="headline-link"
+                          >
+                            Grad odlučuje, studenti na ulici: Akademiji umetnosti preti gubitak prostora
+                          </Link>
+                        </h3>
+                        <p
+                          className="mt-1 text-[14px] leading-[1.5]"
+                          style={{
+                            fontFamily: "'Lora', Georgia, serif",
+                            color: isDark ? "#7a7872" : "#666",
+                          }}
+                        >
+                          Odbornici odlučuju o oduzimanju prostora Akademiji umetnosti u Novom Sadu.
+                        </p>
+                      </div>
+
+                      <img
+                        src={IMAGES.akademijaNovisad}
+                        alt="Akademija umetnosti u Novom Sadu — studenti na ulici"
+                        className="w-[100px] h-[75px] object-cover border"
+                        style={{
+                          borderColor: isDark ? "#2a2a2e" : "#eee",
+                          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
+                        }}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  </div>
+
+                  <hr className="editorial-divider my-5" />
+
                   {/* Svetska kriza sve ozbiljnija */}
                   <div>
                     <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
@@ -380,52 +429,6 @@ export default function Home() {
                       <img
                         src={IMAGES.kosovAmfiteatar}
                         alt="Tiho gašenje srpskih univerziteta na Kosovu"
-                        className="w-[100px] h-[75px] object-cover border"
-                        style={{
-                          borderColor: isDark ? "#2a2a2e" : "#eee",
-                          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
-                        }}
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                  </div>
-
-                  <hr className="editorial-divider my-5" />
-
-                  {/* Ko je pucao u Srbiju? */}
-                  <div>
-                    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
-                      <div>
-                        <span className="kicker">Srbija</span>
-                        <h3
-                          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
-                          style={{
-                            fontFamily: "'Lora', Georgia, serif",
-                            color: isDark ? "#e0ddd5" : "#111",
-                          }}
-                        >
-                          <Link
-                            href="/srbija/ko-je-pucao-u-srbiju"
-                            className="headline-link"
-                          >
-                            Ko je pucao u Srbiju?
-                          </Link>
-                        </h3>
-                        <p
-                          className="mt-1 text-[14px] leading-[1.5]"
-                          style={{
-                            fontFamily: "'Lora', Georgia, serif",
-                            color: isDark ? "#7a7872" : "#666",
-                          }}
-                        >
-                          Događaji od 15. marta i dalje predstavljaju jedno od najtežih otvorenih pitanja savremene srpske politike.
-                        </p>
-                      </div>
-
-                      <img
-                        src={IMAGES.srbijaThumb}
-                        alt="Zvučni top, akustično oružje upotrebljeno na protestu u Beogradu"
                         className="w-[100px] h-[75px] object-cover border"
                         style={{
                           borderColor: isDark ? "#2a2a2e" : "#eee",
