@@ -717,21 +717,24 @@ export default function Home() {
               />
             </div>
 
-            {/* Cover image */}
+            {/* Cover image — klikabilna, vodi na arhivsku stranicu februara 2026 */}
             <figure className="mb-12">
-              <img
-                src="/issue/arhiv-februar.jpg"
-                alt="Izdanje — Februar 2026"
-                className="w-full h-auto block"
-                style={{
-                  borderRadius: "3px",
-                  boxShadow: isDark
-                    ? "0 4px 24px rgba(0,0,0,0.45)"
-                    : "0 4px 20px rgba(0,0,0,0.10)",
-                }}
-                loading="lazy"
-                decoding="async"
-              />
+              <Link href="/arhiva/februar-2026" className="block overflow-hidden" style={{ borderRadius: "3px" }}>
+                <img
+                  src="/issue/arhiv-februar.jpg"
+                  alt="Izdanje — Februar 2026"
+                  className="w-full h-auto block transition-transform duration-300 ease-in-out hover:scale-[1.03]"
+                  style={{
+                    borderRadius: "3px",
+                    boxShadow: isDark
+                      ? "0 4px 24px rgba(0,0,0,0.45)"
+                      : "0 4px 20px rgba(0,0,0,0.10)",
+                    cursor: "pointer",
+                  }}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </Link>
             </figure>
 
             {/* Archive list */}
