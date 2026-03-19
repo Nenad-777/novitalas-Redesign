@@ -87,7 +87,7 @@ export default function GeopolitikaIndex() {
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  EVROPA U UTRCI SA VREMENOM: tanker bez pogona preti ekološkom katastrofom
+                  EVROPA U TRCI SA VREMENOM: tanker bez pogona preti ekološkom katastrofom
                 </h2>
 
                 <p

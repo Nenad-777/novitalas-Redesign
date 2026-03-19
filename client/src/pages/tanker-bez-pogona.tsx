@@ -22,7 +22,7 @@ export default function TankerBezPogona() {
     <ArticleTemplate
       path="/geopolitika/tanker-bez-pogona"
       sectionLabel="Geopolitika"
-      title="EVROPA U UTRCI SA VREMENOM: tanker bez pogona preti ekološkom katastrofom"
+      title="EVROPA U TRCI SA VREMENOM: tanker bez pogona preti ekološkom katastrofom"
       dateLabel="18. MART 2026."
       deck="Tanker bez pogona koji prevozi naftu nekontrolisano pluta u evropskim vodama, dok evropski lideri upozoravaju na rizik ekološke katastrofe i traže hitnu koordinisanu reakciju."
       imageSrc="/news/tanker.jpg"
