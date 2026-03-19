@@ -17,6 +17,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA VEST — Mars reka (19. mart 2026)
+  marsReka: "/news/mars-reka.jpg",
+
   // ✅ NOVA GLAVNA VEST — Energetski rat (19. mart 2026)
   naftaKriza: "/news/nafta-kriza.jpg",
 
@@ -333,6 +336,17 @@ export default function Home() {
                   <hr className="editorial-divider my-5 lg:hidden" />
 
                   <SmallArticleCard
+                    category="Naša planeta"
+                    href="/nasa-planeta/mars-reka"
+                    title="Na Marsu otkriveni tragovi drevne reke: nova faza u potrazi za životom"
+                    description="NASA-in rover otkrio je nove dokaze koji ukazuju da je na površini Marsa nekada postojala reka."
+                    imageSrc={IMAGES.marsReka}
+                    imageAlt="Površina Marsa sa tragovima drevnog rečnog korita"
+                  />
+
+                  <hr className="editorial-divider my-5" />
+
+                  <SmallArticleCard
                     category="Geopolitika"
                     href="/geopolitika/tanker-bez-pogona"
                     title="EVROPA U TRCI SA VREMENOM: tanker bez pogona preti ekološkom katastrofom"
@@ -361,17 +375,6 @@ export default function Home() {
                     description="Odbornici odlučuju o oduzimanju prostora Akademiji umetnosti u Novom Sadu."
                     imageSrc={IMAGES.akademijaNovisad}
                     imageAlt="Akademija umetnosti u Novom Sadu — studenti na ulici"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Geopolitika"
-                    href="/geopolitika/svetska-kriza-sve-ozbiljnija"
-                    title="SVETSKA KRIZA SVE OZBILJNIJA"
-                    description="Zašto je Ormuski moreuz tako važan"
-                    imageSrc={IMAGES.brodoviKriza}
-                    imageAlt="Brodovi u Ormuskom moreuzu — globalna energetska kriza"
                   />
                 </div>
               </FadeIn>

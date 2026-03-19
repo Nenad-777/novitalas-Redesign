@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/mars-reka",
+    title:
+      "Na Marsu otkriveni tragovi drevne reke: nova faza u potrazi za životom",
+    description:
+      "NASA rover pronašao dokaze o drevnoj reci na Marsu i mogućim uslovima za život.",
+    imageSrc: "/news/mars-reka.jpg",
+    datePublished: "2026-03-19",
+  },
+  {
     path: "/geopolitika/energetski-rat",
     title:
       "Bliski istok ulazi u energetski rat: posle napada u Zalivu nafta skače, tržišta u panici",

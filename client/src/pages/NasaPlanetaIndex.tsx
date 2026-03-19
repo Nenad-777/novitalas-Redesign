@@ -10,6 +10,14 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/nasa-planeta/mars-reka",
+    img: "/news/mars-reka.jpg",
+    alt: "Površina Marsa sa tragovima drevnog rečnog korita",
+    title: "Na Marsu otkriveni tragovi drevne reke: nova faza u potrazi za životom",
+    description:
+      "NASA-in rover otkrio je nove dokaze koji ukazuju da je na površini Marsa nekada postojala reka, što dodatno menja dosadašnje razumevanje istorije Crvene planete.",
+  },
+  {
     href: "/nasa-planeta/ko-je-dobio-oskara",
     img: "/news/oscar-world.jpg",
     alt: "Ceremonija dodele Oskara — 98. dodela nagrada Američke filmske akademije",
