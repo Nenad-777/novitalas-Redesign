@@ -37,6 +37,9 @@ import SvetskaKrizaSveOzbiljnija from "./pages/svetska-kriza-sve-ozbiljnija";
 /* ✅ NOVA VEST — Geopolitika */
 import WestAgainstIsraelLiban from "./pages/west-against-israel-liban";
 
+/* ✅ NOVA VEST — Geopolitika */
+import TankerBezPogona from "./pages/tanker-bez-pogona";
+
 /* ✅ NOVA VEST */
 import SeloNePrastaPoraz from "./pages/selo-ne-prasta-poraz";
 
@@ -140,6 +143,11 @@ function Router() {
         <Route
           path="/geopolitika/refugees-iran-un"
           component={RefugeesIranUn}
+        />
+
+        <Route
+          path="/geopolitika/tanker-bez-pogona"
+          component={TankerBezPogona}
         />
 
         <Route
