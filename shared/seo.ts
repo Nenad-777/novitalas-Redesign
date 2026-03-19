@@ -8,6 +8,10 @@ export interface SEOData {
   twitterTitle: string;
   twitterDescription: string;
   twitterImage: string;
+  /** ISO 8601 publish date, e.g. "2026-03-18". Used for JSON-LD and og:article:published_time. */
+  datePublished?: string;
+  /** Author display name. Defaults to "Novi Talas" when omitted. */
+  author?: string;
 }
 
 export const seoData: Record<string, SEOData> = {
@@ -27,6 +31,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "SAD su rasporedile dodatne vazdušne i pomorske kapacitete na Bliskom istoku, dok predsednik Trump još nije doneo konačnu odluku.",
     twitterImage: "https://novitalas.org/carrier.jpg",
+    datePublished: "2026-02-21",
   },
 
   "/geopolitika/nova-bezbednosna-arhitektura": {
@@ -63,6 +68,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "Analiza stanja posle četiri godine rata u Ukrajini, sa akcentom na ekonomskim sankcijama i koheziji evropskih saveznika.",
     twitterImage: "https://novitalas.org/geopolitika-ukrajina.jpg",
+    datePublished: "2026-02-24",
   },
 
   "/geopolitika/iran-protesti-2026": {
@@ -81,6 +87,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "Novi talas nemira na iranskim univerzitetima. BBC je potvrdio autentičnost snimaka nasilnih sukoba.",
     twitterImage: "https://novitalas.org/tehran-riots.jpg",
+    datePublished: "2026-02-25",
   },
 
   "/geopolitika/sukobi-izrael-iran-2026": {
@@ -99,6 +106,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "Eskalacija između Izraela i Irana 2026. uvodi region u novu fazu otvorenih vojnih sukoba i diplomatske nestabilnosti.",
     twitterImage: "https://novitalas.org/f22-israel-iran-2026.jpg",
+    datePublished: "2026-02-28",
   },
 
   "/geopolitika/ormuz": {
@@ -115,6 +123,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "Ormuski moreuz, kroz koji prolazi petina svetske trgovine naftom, zatvoren — sa trenutnim posledicama po globalna energetska tržišta.",
     twitterImage: "https://novitalas.org/ormuz.jpg",
+    datePublished: "2026-02-28",
   },
 
   "/geopolitika/francuska-odbrana-ormuza": {
@@ -131,6 +140,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "Francuski predsednik Makron predlaže formiranje odbrambene pomorske misije za zaštitu slobodne plovidbe kroz Ormuski moreuz.",
     twitterImage: "https://novitalas.org/hormuz-strait-tankers.jpg",
+    datePublished: "2026-03-09",
   },
 
   "/geopolitika/sad-specijalna-operacija-iran-uranijum": {
@@ -150,6 +160,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "Američki bezbednosni krugovi razmatraju ograničenu vojnu operaciju za kontrolu iranskih zaliha visoko obogaćenog uranijuma.",
     twitterImage: "https://novitalas.org/us-special-forces-desert.jpg",
+    datePublished: "2026-03-10",
   },
 
   "/geopolitika/velike-sile-i-kriza-u-iranu": {
@@ -167,6 +178,7 @@ export const seoData: Record<string, SEOData> = {
       "Velike sile i kriza u Iranu: oprezna ravnoteža Moskve i Pekinga",
     twitterDescription: "Između podrške Teheranu i izbegavanja velikog rata.",
     twitterImage: "https://novitalas.org/og/velike-sile-i-kriza-u-iranu.jpg",
+    datePublished: "2026-03-08",
   },
 
   "/obavestajni-izvori/kina-spy-brodovi": {
@@ -187,6 +199,7 @@ export const seoData: Record<string, SEOData> = {
       "Nova analiza zapadnih bezbednosnih službi otkriva kineske nadzorne operacije u regionu Bliskog istoka.",
     twitterImage:
       "https://novitalas.org/images/obavestajni-izvori/kina-spy-ship.jpg",
+    datePublished: "2026-03-09",
   },
 
   "/obavestajni-izvori/rat-senki": {
@@ -220,6 +233,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "Događaji od 15. marta i dalje predstavljaju jedno od najtežih otvorenih pitanja savremene srpske politike. Ko je i čime udario na demonstrante u centru Beograda?",
     twitterImage: "https://novitalas.org/news/zvucni-top.jpg",
+    datePublished: "2026-03-15",
   },
 
   "/srbija/tiho-gasenje-srpskih-univerziteta-na-kosovu": {
@@ -236,6 +250,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "Hiljade studenata i profesora mogle bi ostati bez univerziteta dok administrativne mere postepeno onemogućavaju rad srpskih fakulteta u Kosovskoj Mitrovici.",
     twitterImage: "https://novitalas.org/news/kosovo-amfiteatar.jpg",
+    datePublished: "2026-03-13",
   },
 
   "/srbija/selo-ne-prasta-poraz-vest": {
@@ -251,6 +266,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "Blokade puteva su završene, ali poljoprivrednici odlaze sa protesta bez dogovora sa državom.",
     twitterImage: "https://novitalas.org/traktori-beograd.jpg",
+    datePublished: "2026-03-06",
   },
 
   "/srbija/mars-za-pravosudje": {
@@ -269,6 +285,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "Protest koji je naterao institucije da postanu centralno pitanje srpske politike.",
     twitterImage: "https://novitalas.org/analiza-nedelje-mars.jpg",
+    datePublished: "2026-02-21",
   },
 
   "/srbija/podeljeno-drustvo": {
@@ -303,6 +320,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "Radio-teleskop ALMA napravio je najtačniju mapu Centralne molekularne zone Mlečnog puta, otkrivajući njegovo skriveno jezgro.",
     twitterImage: "https://novitalas.org/alma-mlecni-put.jpg",
+    datePublished: "2026-02-26",
   },
 
   "/nasa-planeta/naucnici-poceli-da-usmeravaju-snove": {
@@ -322,6 +340,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "Novo istraživanje pokazuje da je moguće uticati na sadržaj snova i podstaći mozak da tokom sna kreativnije rešava probleme.",
     twitterImage: "https://novitalas.org/og/snovi-usmeravanje-snova.jpg",
+    datePublished: "2026-03-08",
   },
 
   "/nasa-planeta/kubrick": {
@@ -340,6 +359,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "Dok se svet ponovo okreće ceremoniji Oskara, jedan reditelj i dalje stoji izvan logike nagrada i podseća nas da film može biti umetnost mišljenja.",
     twitterImage: "https://novitalas.org/kubrick.jpg",
+    datePublished: "2026-03-12",
   },
 
   "/nasa-planeta/ai-vest-svest": {
@@ -358,6 +378,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "Direktor kompanije Anthropic izjavio je da naučnici sve ozbiljnije razmatraju mogućnost da napredni AI sistemi razviju neku vrstu svesti.",
     twitterImage: "https://novitalas.org/ai-supercomputer-data-center.jpg",
+    datePublished: "2026-03-10",
   },
 
   "/nasa-planeta/kina-mozgani-implantat": {
@@ -376,6 +397,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "Kineske vlasti odobrile su prvi moždani implantat namenjen komercijalnoj upotrebi, čime je napravljen značajan korak u razvoju tehnologije brain-computer interface.",
     twitterImage: "https://novitalas.org/news/china-brain.jpg",
+    datePublished: "2026-03-14",
   },
 
   "/geopolitika/rezerve-nafte": {
@@ -394,6 +416,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "Države članice Međunarodne agencije za energiju puštaju 400 miliona barela nafte iz strateških rezervi kako bi ublažile globalni energetski šok.",
     twitterImage: "https://novitalas.org/rezerve-nafte.jpg",
+    datePublished: "2026-03-11",
   },
 
   "/geopolitika/biennale-rusija": {
@@ -412,6 +435,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "Evropska unija zapretila je mogućnošću povlačenja finansijske podrške Venecijanskom bijenalu ukoliko Rusiji bude dozvoljen povratak na ovu prestižnu međunarodnu umetničku manifestaciju.",
     twitterImage: "https://novitalas.org/news/biennale-venice.jpg",
+    datePublished: "2026-03-13",
   },
 
   "/geopolitika/refugees-iran-un": {
@@ -430,6 +454,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "Agencija UN za izbeglice upozorava da se humanitarna kriza ubrzano širi dok milioni ljudi napuštaju svoje domove.",
     twitterImage: "https://novitalas.org/refugees-iran-un.jpg",
+    datePublished: "2026-03-11",
   },
 
   "/nasa-planeta/ko-je-dobio-oskara": {
@@ -448,6 +473,7 @@ export const seoData: Record<string, SEOData> = {
     twitterDescription:
       "Dok svet tone u ratove, razaranja i očigledan pad civilizacijskih normi, ceremonija Oskara nastavlja da blista, gotovo ravnodušna prema vremenu koje izgleda poraženo.",
     twitterImage: "https://novitalas.org/news/oscar-world.jpg",
+    datePublished: "2026-03-16",
   },
 
   "/obavestajni-izvori/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira":
@@ -468,5 +494,6 @@ export const seoData: Record<string, SEOData> = {
       twitterDescription:
         "Američka CIA pokrenula javnu kampanju usmerenu ka potencijalnim izvorima unutar kineske vojske, objavivši video na kineskom jeziku koji cilja nezadovoljne oficire.",
       twitterImage: "https://novitalas.org/news/cia-china.jpg",
+      datePublished: "2026-03-14",
     },
 };
