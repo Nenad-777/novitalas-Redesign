@@ -17,6 +17,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA GLAVNA VEST — Energetski rat (19. mart 2026)
+  naftaKriza: "/news/nafta-kriza.jpg",
+
   // ✅ NOVA GLAVNA VEST — Tanker bez pogona (18. mart 2026)
   tanker: "/news/tanker.jpg",
 
@@ -263,7 +266,7 @@ export default function Home() {
 
           {/* Editorial two-column layout: main story + four supporting stories */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
-            {/* LEFT: Main story — Tanker bez pogona */}
+            {/* LEFT: Main story — Energetski rat / nafta kriza */}
             <FadeIn>
               <article>
                 <span className="kicker">Geopolitika</span>
@@ -277,13 +280,13 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/geopolitika/tanker-bez-pogona"
+                    href="/geopolitika/energetski-rat"
                     className="headline-link"
                     style={{
                       fontFamily: "'Playfair Display', Georgia, serif",
                     }}
                   >
-                    EVROPA U TRCI SA VREMENOM: tanker bez pogona preti ekološkom katastrofom
+                    Bliski istok ulazi u energetski rat: posle napada u Zalivu nafta skače, tržišta u panici
                   </Link>
                 </h2>
 
@@ -294,12 +297,12 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Tanker bez pogona koji prevozi naftu nekontrolisano pluta u evropskim vodama, dok evropski lideri upozoravaju na rizik ekološke katastrofe i traže hitnu koordinisanu reakciju.
+                  Napadi na energetsku infrastrukturu u Zalivu podižu cenu nafte i šire krizu na Evropu.
                 </p>
 
                 <figure className="mb-0">
                   <Link
-                    href="/geopolitika/tanker-bez-pogona"
+                    href="/geopolitika/energetski-rat"
                     className="block no-underline"
                   >
                     <div
@@ -310,8 +313,8 @@ export default function Home() {
                       }}
                     >
                       <img
-                        src={IMAGES.tanker}
-                        alt="Tanker bez pogona u evropskim vodama"
+                        src={IMAGES.naftaKriza}
+                        alt="Minimalistička ilustracija točilice za gorivo kao simbol energetske krize na Bliskom istoku"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                         fetchPriority="high"
                         decoding="async"
@@ -328,6 +331,17 @@ export default function Home() {
                 <div className="flex flex-col">
                   {/* Mobile-only separator so first card matches the visual rhythm of cards 2–4 on small screens */}
                   <hr className="editorial-divider my-5 lg:hidden" />
+
+                  <SmallArticleCard
+                    category="Geopolitika"
+                    href="/geopolitika/tanker-bez-pogona"
+                    title="EVROPA U TRCI SA VREMENOM: tanker bez pogona preti ekološkom katastrofom"
+                    description="Tanker bez pogona koji prevozi naftu nekontrolisano pluta u evropskim vodama, dok evropski lideri upozoravaju na rizik ekološke katastrofe."
+                    imageSrc={IMAGES.tanker}
+                    imageAlt="Tanker bez pogona u evropskim vodama"
+                  />
+
+                  <hr className="editorial-divider my-5" />
 
                   <SmallArticleCard
                     category="Geopolitika"
@@ -358,17 +372,6 @@ export default function Home() {
                     description="Zašto je Ormuski moreuz tako važan"
                     imageSrc={IMAGES.brodoviKriza}
                     imageAlt="Brodovi u Ormuskom moreuzu — globalna energetska kriza"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Naša planeta"
-                    href="/nasa-planeta/ko-je-dobio-oskara"
-                    title="Ko je dobio Oskara?"
-                    description="Dok svet tone u ratove, razaranja i očigledan pad civilizacijskih normi, ceremonija Oskara nastavlja da blista."
-                    imageSrc={IMAGES.oscarWorld}
-                    imageAlt="Ceremonija dodele Oskara"
                   />
                 </div>
               </FadeIn>

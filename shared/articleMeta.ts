@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/energetski-rat",
+    title:
+      "Bliski istok ulazi u energetski rat: posle napada u Zalivu nafta skače, tržišta u panici",
+    description:
+      "Napadi na energetsku infrastrukturu u Zalivu podižu cenu nafte i šire krizu na Evropu.",
+    imageSrc: "/news/nafta-kriza.jpg",
+    datePublished: "2026-03-19",
+  },
+  {
     path: "/geopolitika/tanker-bez-pogona",
     title:
       "EVROPA U TRCI SA VREMENOM: tanker bez pogona preti ekološkom katastrofom",
