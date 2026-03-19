@@ -29,6 +29,7 @@ import { seoData } from "../shared/seo.js";
 import {
   articleMeta,
   buildSEOFromArticleMeta,
+  buildJsonLd,
 } from "../shared/articleMeta.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -117,9 +118,27 @@ function injectSEO(
     `$1\n${extraOgImageTags}`,
   );
 
+  // Add og:article:published_time when a publish date is available.
+  if (resolvedSeo.datePublished) {
+    const publishedTimeTag = `    <meta property="og:article:published_time" content="${escapeHtml(resolvedSeo.datePublished)}T00:00:00+01:00" />`;
+    result = result.replace(/(<\/head>)/, `${publishedTimeTag}\n  $1`);
+  }
+
   // Add a canonical link element so crawlers know the authoritative URL.
   const canonicalTag = `    <link rel="canonical" href="${escapeHtml(resolvedSeo.ogUrl)}" />`;
   result = result.replace(/(<\/head>)/, `${canonicalTag}\n  $1`);
+
+  // Inject NewsArticle JSON-LD structured data before </body>.
+  const jsonLdData = buildJsonLd({
+    title: resolvedSeo.ogTitle,
+    description: resolvedSeo.description,
+    ogUrl: resolvedSeo.ogUrl,
+    ogImage: resolvedSeo.ogImage,
+    datePublished: resolvedSeo.datePublished,
+    author: resolvedSeo.author,
+  });
+  const jsonLdScript = `  <script type="application/ld+json">\n    ${JSON.stringify(jsonLdData, null, 2).replace(/\n/g, "\n    ")}\n  </script>`;
+  result = result.replace(/(<\/body>)/, `${jsonLdScript}\n  $1`);
 
   return result;
 }

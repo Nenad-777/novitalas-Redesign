@@ -31,6 +31,13 @@ export interface ArticleStaticMeta {
    * Gets prefixed with SITE_BASE to produce the absolute OG image URL.
    */
   imageSrc: string;
+  /**
+   * ISO 8601 publish date, e.g. "2026-03-18".
+   * Used for JSON-LD datePublished and og:article:published_time.
+   */
+  datePublished?: string;
+  /** Article author name. Defaults to "Novi Talas" if omitted. */
+  author?: string;
 }
 
 /** Convert a relative image path to an absolute URL suitable for og:image. */
@@ -54,7 +61,59 @@ export function buildSEOFromArticleMeta(meta: ArticleStaticMeta) {
     twitterTitle: meta.title,
     twitterDescription: meta.description,
     twitterImage: ogImage,
+    datePublished: meta.datePublished,
+    author: meta.author,
   };
+}
+
+/**
+ * Build a JSON-LD NewsArticle structured-data object for a given article.
+ * Returns a plain object ready to be serialised with JSON.stringify().
+ */
+export function buildJsonLd(meta: {
+  title: string;
+  description: string;
+  ogUrl: string;
+  ogImage: string;
+  datePublished?: string;
+  author?: string;
+}) {
+  const authorName = meta.author ?? "Novi Talas";
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const jsonLd: Record<string, any> = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline: meta.title,
+    description: meta.description,
+    image: [meta.ogImage],
+    author: [
+      {
+        "@type": authorName === "Novi Talas" ? "Organization" : "Person",
+        name: authorName,
+        url: SITE_BASE,
+      },
+    ],
+    publisher: {
+      "@type": "Organization",
+      name: "Novi Talas",
+      url: SITE_BASE,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_BASE}/logo.svg`,
+      },
+    },
+    url: meta.ogUrl,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": meta.ogUrl,
+    },
+  };
+
+  if (meta.datePublished) {
+    jsonLd["datePublished"] = `${meta.datePublished}T00:00:00+01:00`;
+  }
+
+  return jsonLd;
 }
 
 /**
@@ -71,6 +130,7 @@ export const articleMeta: ArticleStaticMeta[] = [
     description:
       "Tanker bez pogona koji prevozi naftu nekontrolisano pluta u evropskim vodama, dok evropski lideri upozoravaju na rizik ekološke katastrofe i traže hitnu koordinisanu reakciju.",
     imageSrc: "/news/tanker.jpg",
+    datePublished: "2026-03-18",
   },
   {
     path: "/geopolitika/zapadne-sile-upozorile-izrael",
@@ -79,6 +139,7 @@ export const articleMeta: ArticleStaticMeta[] = [
     description:
       "Zapadne zemlje upozoravaju Izrael da ne pokreće kopnenu operaciju u Libanu, uz rastući rizik regionalne eskalacije.",
     imageSrc: "/news/west-against-israel.jpg",
+    datePublished: "2026-03-18",
   },
   {
     path: "/srbija/akademija-novisad",
@@ -87,6 +148,7 @@ export const articleMeta: ArticleStaticMeta[] = [
     description:
       "Odbornici odlučuju o oduzimanju prostora Akademiji umetnosti u Novom Sadu, dok studenti i profesori protestuju i upozoravaju na posledice.",
     imageSrc: "/news/akademija-novisad.jpg",
+    datePublished: "2026-03-18",
   },
   {
     path: "/geopolitika/svetska-kriza-sve-ozbiljnija",
@@ -94,5 +156,6 @@ export const articleMeta: ArticleStaticMeta[] = [
     description:
       "Kriza oko Ormuskog moreuza produbljuje se dok rat između SAD, Izraela i Irana ulazi u treću nedelju. Cena nafte prešla 100 dolara po barelu.",
     imageSrc: "/news/brodovi-kriza.jpg",
+    datePublished: "2026-03-16",
   },
 ];
