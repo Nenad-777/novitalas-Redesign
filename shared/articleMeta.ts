@@ -67,6 +67,25 @@ export function buildSEOFromArticleMeta(meta: ArticleStaticMeta) {
 }
 
 /**
+ * Reusable SEO helper — alias for buildSEOFromArticleMeta.
+ *
+ * Given a minimal article descriptor it returns the full set of meta tag
+ * values (title, description, og:*, twitter:*, canonical URL, JSON-LD) so
+ * that every article page automatically gets complete SEO without any
+ * per-article manual work.
+ *
+ * Usage (add entry to articleMeta array):
+ *   generateSEO({
+ *     path: "/sekcija/slug-clanka",
+ *     title: "Naslov članka",
+ *     description: "Kratki opis za meta description i og:description.",
+ *     imageSrc: "/news/slika.jpg",
+ *     datePublished: "2026-03-19",
+ *   })
+ */
+export const generateSEO = buildSEOFromArticleMeta;
+
+/**
  * Build a JSON-LD NewsArticle structured-data object for a given article.
  * Returns a plain object ready to be serialised with JSON.stringify().
  */
