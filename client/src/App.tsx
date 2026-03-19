@@ -67,6 +67,9 @@ import AiVestSvest from "./pages/ai-vest-svest";
 import Kubrick from "./pages/kubrick";
 import KinaMozganiImplantat from "./pages/kina-mozgani-implantat";
 
+/* ✅ NOVA VEST — Naša planeta */
+import MarsReka from "./pages/mars-reka";
+
 /* ✅ ARHIVSKA STRANICA — Februar 2026 */
 import ArhivaFebruar2026 from "./pages/ArhivaFebruar2026";
 
@@ -234,6 +237,11 @@ function Router() {
             NAŠA PLANETA
            ========================= */}
         <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
+
+        <Route
+          path="/nasa-planeta/mars-reka"
+          component={MarsReka}
+        />
 
         <Route
           path="/nasa-planeta/ko-je-dobio-oskara"
