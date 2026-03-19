@@ -415,45 +415,64 @@ export default function Home() {
           </FadeIn>
 
           {/* ======================
-              IZDANJE — FEBRUAR 2026
+              IZDANJE — FEBRUAR 2026 (compact archive preview)
              ====================== */}
-          <FadeIn className="mt-20 mb-4">
-            {/* Section heading */}
-            <div className="flex items-center gap-3 mb-10">
-              <span
-                className="text-[11px] font-bold tracking-[0.18em] uppercase"
-                style={{
-                  fontFamily: "'Source Sans 3', -apple-system, sans-serif",
-                  color: isDark ? "#d9bf7a" : "#8B0000",
-                }}
-              >
-                Izdanje &mdash; Februar 2026
-              </span>
-              <span
-                className="flex-1 h-px"
-                style={{ backgroundColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
-              />
-            </div>
+          <FadeIn className="mt-12 mb-4">
+            {/* Thin divider above section */}
+            <span
+              className="block h-px mb-6"
+              style={{ backgroundColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
+            />
 
-            {/* Cover image — klikabilna, vodi na stranicu izdanja februar 2026 */}
-            <figure className="mb-12">
-              <Link href="/izdanje/februar-2026" className="block overflow-hidden" style={{ borderRadius: "3px" }}>
-                <img
-                  src="/issue/arhiv-februar.jpg"
-                  alt="Izdanje — Februar 2026"
-                  className="w-full h-auto block transition-transform duration-300 ease-in-out hover:scale-[1.03]"
-                  style={{
-                    borderRadius: "3px",
-                    boxShadow: isDark
-                      ? "0 4px 24px rgba(0,0,0,0.45)"
-                      : "0 4px 20px rgba(0,0,0,0.10)",
-                    cursor: "pointer",
-                  }}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </Link>
-            </figure>
+            {/* Compact archive entry — full block is clickable */}
+            <Link
+              href="/izdanje/februar-2026"
+              className="flex items-center gap-5 group"
+              style={{ textDecoration: "none" }}
+            >
+              {/* Thumbnail */}
+              <img
+                src="/issue/arhiv-februar.jpg"
+                alt="Izdanje — Februar 2026"
+                style={{
+                  width: "120px",
+                  height: "auto",
+                  borderRadius: "4px",
+                  objectFit: "cover",
+                  flexShrink: 0,
+                  boxShadow: isDark
+                    ? "0 2px 10px rgba(0,0,0,0.40)"
+                    : "0 2px 8px rgba(0,0,0,0.10)",
+                }}
+                loading="lazy"
+                decoding="async"
+              />
+
+              {/* Text content */}
+              <div
+                className="transition-opacity duration-200 group-hover:opacity-70"
+                style={{ fontFamily: "'Source Sans 3', -apple-system, sans-serif" }}
+              >
+                <span
+                  className="block text-[10px] font-bold tracking-[0.20em] uppercase mb-1"
+                  style={{ color: isDark ? "#d9bf7a" : "#8B0000" }}
+                >
+                  Izdanje
+                </span>
+                <span
+                  className="block text-[15px] font-semibold tracking-[0.04em]"
+                  style={{ color: isDark ? "#f0ece4" : "#1a1a1a" }}
+                >
+                  Februar 2026
+                </span>
+                <span
+                  className="block text-[11px] mt-1"
+                  style={{ color: isDark ? "#888" : "#999" }}
+                >
+                  Pregled svih tekstova
+                </span>
+              </div>
+            </Link>
           </FadeIn>
         </div>
       </main>
