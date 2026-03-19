@@ -65,6 +65,14 @@ export function buildSEOFromArticleMeta(meta: ArticleStaticMeta) {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/tanker-bez-pogona",
+    title:
+      "EVROPA U UTRCI SA VREMENOM: tanker bez pogona preti ekološkom katastrofom",
+    description:
+      "Tanker bez pogona koji prevozi naftu nekontrolisano pluta u evropskim vodama, dok evropski lideri upozoravaju na rizik ekološke katastrofe i traže hitnu koordinisanu reakciju.",
+    imageSrc: "/news/tanker.jpg",
+  },
+  {
     path: "/geopolitika/zapadne-sile-upozorile-izrael",
     title:
       "Zapadne sile upozorile Izrael - ne pokretati kopnenu ofanzivu u Libanu",

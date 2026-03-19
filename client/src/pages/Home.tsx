@@ -17,6 +17,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA GLAVNA VEST — Tanker bez pogona (18. mart 2026)
+  tanker: "/news/tanker.jpg",
+
   // ✅ NOVA GLAVNA VEST — Zapadne sile upozorile Izrael (18. mart 2026)
   westAgainstIsrael: "/news/west-against-israel.jpg",
 
@@ -256,7 +259,7 @@ export default function Home() {
 
           {/* Editorial two-column layout: main story + four supporting stories */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
-            {/* LEFT: Main story — Zapadne sile upozorile Izrael */}
+            {/* LEFT: Main story — Tanker bez pogona */}
             <FadeIn>
               <article>
                 <span className="kicker">Geopolitika</span>
@@ -270,13 +273,13 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/geopolitika/zapadne-sile-upozorile-izrael"
+                    href="/geopolitika/tanker-bez-pogona"
                     className="headline-link"
                     style={{
                       fontFamily: "'Playfair Display', Georgia, serif",
                     }}
                   >
-                    Zapadne sile upozorile Izrael - ne pokretati kopnenu ofanzivu u Libanu
+                    EVROPA U UTRCI SA VREMENOM: tanker bez pogona preti ekološkom katastrofom
                   </Link>
                 </h1>
 
@@ -287,12 +290,12 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Zapadne zemlje upozoravaju Izrael da ne pokreće kopnenu operaciju u Libanu, uz rastući rizik regionalne eskalacije.
+                  Tanker bez pogona koji prevozi naftu nekontrolisano pluta u evropskim vodama, dok evropski lideri upozoravaju na rizik ekološke katastrofe i traže hitnu koordinisanu reakciju.
                 </p>
 
                 <figure className="mb-0">
                   <Link
-                    href="/geopolitika/zapadne-sile-upozorile-izrael"
+                    href="/geopolitika/tanker-bez-pogona"
                     className="block no-underline"
                   >
                     <div
@@ -303,8 +306,8 @@ export default function Home() {
                       }}
                     >
                       <img
-                        src={IMAGES.westAgainstIsrael}
-                        alt="Zapadne sile upozorile Izrael - kopnena ofanziva u Libanu"
+                        src={IMAGES.tanker}
+                        alt="Tanker bez pogona u evropskim vodama"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                         fetchPriority="high"
                         decoding="async"
@@ -321,6 +324,17 @@ export default function Home() {
                 <div className="flex flex-col">
                   {/* Mobile-only separator so first card matches the visual rhythm of cards 2–4 on small screens */}
                   <hr className="editorial-divider my-5 lg:hidden" />
+
+                  <SmallArticleCard
+                    category="Geopolitika"
+                    href="/geopolitika/zapadne-sile-upozorile-izrael"
+                    title="Zapadne sile upozorile Izrael - ne pokretati kopnenu ofanzivu u Libanu"
+                    description="Zapadne zemlje upozoravaju Izrael da ne pokreće kopnenu operaciju u Libanu, uz rastući rizik regionalne eskalacije."
+                    imageSrc={IMAGES.westAgainstIsrael}
+                    imageAlt="Zapadne sile upozorile Izrael - kopnena ofanziva u Libanu"
+                  />
+
+                  <hr className="editorial-divider my-5" />
 
                   <SmallArticleCard
                     category="Srbija"
@@ -351,17 +365,6 @@ export default function Home() {
                     description="Dok svet tone u ratove, razaranja i očigledan pad civilizacijskih normi, ceremonija Oskara nastavlja da blista."
                     imageSrc={IMAGES.oscarWorld}
                     imageAlt="Ceremonija dodele Oskara"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Srbija"
-                    href="/srbija/tiho-gasenje-srpskih-univerziteta-na-kosovu"
-                    title="Tiho gašenje srpskih univerziteta na Kosovu"
-                    description="Hiljade studenata i profesora mogle bi ostati bez univerziteta dok administrativne mere postepeno onemogućavaju rad srpskih fakulteta u Kosovskoj Mitrovici."
-                    imageSrc={IMAGES.kosovAmfiteatar}
-                    imageAlt="Tiho gašenje srpskih univerziteta na Kosovu"
                   />
                 </div>
               </FadeIn>
