@@ -145,7 +145,7 @@ export const articleMeta: ArticleStaticMeta[] = [
   {
     path: "/geopolitika/tanker-bez-pogona",
     title:
-      "EVROPA U UTRCI SA VREMENOM: tanker bez pogona preti ekološkom katastrofom",
+      "EVROPA U TRCI SA VREMENOM: tanker bez pogona preti ekološkom katastrofom",
     description:
       "Tanker bez pogona koji prevozi naftu nekontrolisano pluta u evropskim vodama, dok evropski lideri upozoravaju na rizik ekološke katastrofe i traže hitnu koordinisanu reakciju.",
     imageSrc: "/news/tanker.jpg",

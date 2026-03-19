@@ -283,7 +283,7 @@ export default function Home() {
                       fontFamily: "'Playfair Display', Georgia, serif",
                     }}
                   >
-                    EVROPA U UTRCI SA VREMENOM: tanker bez pogona preti ekološkom katastrofom
+                    EVROPA U TRCI SA VREMENOM: tanker bez pogona preti ekološkom katastrofom
                   </Link>
                 </h2>
 
