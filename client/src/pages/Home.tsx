@@ -213,6 +213,10 @@ export default function Home() {
           />
         )}
 
+        {/* SEO: visually hidden H1 and intro paragraph for "Novi Talas" keyword */}
+        <h1 className="sr-only">Novi Talas</h1>
+        <p className="sr-only">Novi Talas je digitalni nedeljnik koji donosi analize geopolitike, Srbije i sveta, uz fokus na najvažnije događaje dana.</p>
+
         {/* Slogan – horizontally centered, near the bottom */}
         <div className="absolute inset-x-0 bottom-0 pb-4 md:pb-6 flex justify-center">
           <p
@@ -264,7 +268,7 @@ export default function Home() {
               <article>
                 <span className="kicker">Geopolitika</span>
 
-                <h1
+                <h2
                   className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
                   style={{
                     fontFamily: "'Playfair Display', Georgia, serif",
@@ -281,7 +285,7 @@ export default function Home() {
                   >
                     EVROPA U UTRCI SA VREMENOM: tanker bez pogona preti ekološkom katastrofom
                   </Link>
-                </h1>
+                </h2>
 
                 <p
                   className="text-[18px] md:text-[19px] leading-[1.6] mb-5"
