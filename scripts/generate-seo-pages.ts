@@ -1,8 +1,11 @@
 /**
  * generate-seo-pages.ts
  *
- * Post-build script that pre-generates a static index.html for every
- * article route defined in shared/seo.ts.
+ * Post-build script that:
+ *   1. Pre-generates a static index.html for every article route with full
+ *      OG / Twitter meta tags, canonical URL, and JSON-LD NewsArticle markup.
+ *   2. Generates a complete sitemap.xml that includes all static pages AND
+ *      every article registered in shared/seo.ts or shared/articleMeta.ts.
  *
  * Why this is needed:
  *   The project is deployed as a static SPA on Vercel. vercel.json rewrites
@@ -19,6 +22,13 @@
  *   Vercel's static-file serving takes precedence over rewrites, so these
  *   pre-generated files are served directly to crawlers while the React SPA
  *   still loads correctly for regular users (all asset paths are absolute).
+ *
+ * Adding a new article:
+ *   Add one entry to shared/articleMeta.ts (or shared/seo.ts for custom copy).
+ *   On the next `npm run build` the article will automatically get:
+ *     - A pre-rendered index.html with full SEO meta tags
+ *     - An entry in sitemap.xml
+ *   No other files need to be changed.
  */
 
 import fs from "node:fs";
@@ -31,6 +41,23 @@ import {
   buildSEOFromArticleMeta,
   buildJsonLd,
 } from "../shared/articleMeta.js";
+
+const SITE_BASE = "https://novitalas.org";
+
+/** Static pages that are always included in the sitemap regardless of article registries. */
+const STATIC_SITEMAP_ENTRIES: Array<{
+  loc: string;
+  lastmod?: string;
+  changefreq: string;
+  priority: string;
+}> = [
+  { loc: "/", changefreq: "daily", priority: "1.0" },
+  { loc: "/geopolitika", changefreq: "daily", priority: "0.8" },
+  { loc: "/srbija", changefreq: "daily", priority: "0.8" },
+  { loc: "/nasa-planeta", changefreq: "daily", priority: "0.8" },
+  { loc: "/obavestajni-izvori", changefreq: "daily", priority: "0.8" },
+  { loc: "/kultura", changefreq: "weekly", priority: "0.8" },
+];
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -143,6 +170,73 @@ function injectSEO(
   return result;
 }
 
+/**
+ * Generate a sitemap.xml that covers both static category pages and every
+ * article registered in shared/seo.ts or shared/articleMeta.ts.
+ *
+ * The file is written to dist/public/sitemap.xml so it is served by the
+ * static file server (Vercel, Express) and discovered by search engines.
+ * Adding a new article to either registry automatically includes it here
+ * on the next build — no manual editing required.
+ */
+function generateSitemap(
+  distPublicPath: string,
+  mergedSeoData: Record<string, ReturnType<typeof buildSEOFromArticleMeta>>,
+): void {
+  const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+
+  const urlElements: string[] = [];
+
+  // 1. Static / category pages
+  for (const entry of STATIC_SITEMAP_ENTRIES) {
+    urlElements.push(
+      [
+        `  <url>`,
+        `    <loc>${SITE_BASE}${entry.loc}</loc>`,
+        `    <lastmod>${entry.lastmod ?? today}</lastmod>`,
+        `    <changefreq>${entry.changefreq}</changefreq>`,
+        `    <priority>${entry.priority}</priority>`,
+        `  </url>`,
+      ].join("\n"),
+    );
+  }
+
+  // 2. Individual article pages (sorted by datePublished descending, then path)
+  const articleEntries = Object.entries(mergedSeoData).sort(
+    ([, a], [, b]) => {
+      const dateA = a.datePublished ?? "0000-00-00";
+      const dateB = b.datePublished ?? "0000-00-00";
+      return dateB.localeCompare(dateA);
+    },
+  );
+
+  for (const [route, seo] of articleEntries) {
+    const lastmod = seo.datePublished ?? today;
+    urlElements.push(
+      [
+        `  <url>`,
+        `    <loc>${escapeHtml(seo.ogUrl ?? `${SITE_BASE}${route}`)}</loc>`,
+        `    <lastmod>${lastmod}</lastmod>`,
+        `    <changefreq>monthly</changefreq>`,
+        `    <priority>0.7</priority>`,
+        `  </url>`,
+      ].join("\n"),
+    );
+  }
+
+  const xml = [
+    `<?xml version="1.0" encoding="UTF-8"?>`,
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`,
+    ...urlElements,
+    `</urlset>`,
+    ``,
+  ].join("\n");
+
+  const sitemapPath = path.join(distPublicPath, "sitemap.xml");
+  fs.writeFileSync(sitemapPath, xml, "utf-8");
+  console.log(`\n✅ Sitemap written to dist/public/sitemap.xml (${articleEntries.length} articles + ${STATIC_SITEMAP_ENTRIES.length} static pages)`);
+}
+
 async function main() {
   const distPublicPath = path.resolve(__dirname, "../dist/public");
   const indexHtmlPath = path.join(distPublicPath, "index.html");
@@ -194,6 +288,9 @@ async function main() {
   }
 
   console.log(`\n✅ Done — ${routes.length} SEO pages written to dist/public/`);
+
+  // Generate the dynamic sitemap covering all known article routes.
+  generateSitemap(distPublicPath, mergedSeoData);
 }
 
 main().catch((err) => {
