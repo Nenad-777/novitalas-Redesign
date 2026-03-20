@@ -17,6 +17,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA VEST — AI superaplikacija (20. mart 2026)
+  aiSuperapp: "/news/ai-superapp.jpg",
+
   // ✅ NOVA VEST — Ormuski moreuz (20. mart 2026)
   ormuzKriza: "/news/ormuz-kriza.jpg",
 
@@ -269,10 +272,10 @@ export default function Home() {
 
           {/* Editorial two-column layout: main story + four supporting stories */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
-            {/* LEFT: Main story — Ormuski moreuz */}
+            {/* LEFT: Main story — AI superaplikacija */}
             <FadeIn>
               <article>
-                <span className="kicker">Geopolitika</span>
+                <span className="kicker">Naša planeta</span>
 
                 <h2
                   className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
@@ -283,13 +286,13 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/geopolitika/ormuz-moreuz"
+                    href="/nasa-planeta/ai-superaplikacija"
                     className="headline-link"
                     style={{
                       fontFamily: "'Playfair Display', Georgia, serif",
                     }}
                   >
-                    Evropske zemlje i Japan o bezbednosti Ormuskog moreuza
+                    OpenAI razvija „superaplikaciju" koja objedinjuje ChatGPT, Codex i browser
                   </Link>
                 </h2>
 
@@ -300,12 +303,12 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Evropske zemlje i Japan objavili su zajedničko saopštenje o bezbednosti Ormuskog moreuza i zaštiti pomorskih ruta za snabdevanje energentima.
+                  OpenAI planira razvoj jedinstvene desktop aplikacije koja bi objedinjavala ChatGPT, programerski alat Codex i AI browser u jedan integrisani sistem.
                 </p>
 
                 <figure className="mb-0">
                   <Link
-                    href="/geopolitika/ormuz-moreuz"
+                    href="/nasa-planeta/ai-superaplikacija"
                     className="block no-underline"
                   >
                     <div
@@ -316,8 +319,8 @@ export default function Home() {
                       }}
                     >
                       <img
-                        src={IMAGES.ormuzKriza}
-                        alt="Naftni tanker prolazi kroz uski Ormuski moreuz kao simbol globalne energetske napetosti"
+                        src={IMAGES.aiSuperapp}
+                        alt="Minimalistički prikaz veštačke inteligencije kao centralnog sistema koji povezuje digitalne funkcije računara"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                         fetchPriority="high"
                         decoding="async"
@@ -334,6 +337,17 @@ export default function Home() {
                 <div className="flex flex-col">
                   {/* Mobile-only separator so first card matches the visual rhythm of cards 2–4 on small screens */}
                   <hr className="editorial-divider my-5 lg:hidden" />
+
+                  <SmallArticleCard
+                    category="Geopolitika"
+                    href="/geopolitika/ormuz-moreuz"
+                    title="Evropske zemlje i Japan o bezbednosti Ormuskog moreuza"
+                    description="Evropske zemlje i Japan objavili su zajedničko saopštenje o bezbednosti Ormuskog moreuza i zaštiti pomorskih ruta za snabdevanje energentima."
+                    imageSrc={IMAGES.ormuzKriza}
+                    imageAlt="Naftni tanker prolazi kroz uski Ormuski moreuz kao simbol globalne energetske napetosti"
+                  />
+
+                  <hr className="editorial-divider my-5" />
 
                   <SmallArticleCard
                     category="Geopolitika"
@@ -364,17 +378,6 @@ export default function Home() {
                     description="Tanker bez pogona koji prevozi naftu nekontrolisano pluta u evropskim vodama, dok evropski lideri upozoravaju na rizik ekološke katastrofe."
                     imageSrc={IMAGES.tanker}
                     imageAlt="Tanker bez pogona u evropskim vodama"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Geopolitika"
-                    href="/geopolitika/zapadne-sile-upozorile-izrael"
-                    title="Zapadne sile upozorile Izrael - ne pokretati kopnenu ofanzivu u Libanu"
-                    description="Zapadne zemlje upozoravaju Izrael da ne pokreće kopnenu operaciju u Libanu, uz rastući rizik regionalne eskalacije."
-                    imageSrc={IMAGES.westAgainstIsrael}
-                    imageAlt="Zapadne sile upozorile Izrael - kopnena ofanziva u Libanu"
                   />
                 </div>
               </FadeIn>
