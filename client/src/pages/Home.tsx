@@ -17,6 +17,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA VEST — Ormuski moreuz (20. mart 2026)
+  ormuzKriza: "/news/ormuz-kriza.jpg",
+
   // ✅ NOVA VEST — Mars reka (19. mart 2026)
   marsReka: "/news/mars-reka.jpg",
 
@@ -28,9 +31,6 @@ const IMAGES = {
 
   // ✅ NOVA GLAVNA VEST — Zapadne sile upozorile Izrael (18. mart 2026)
   westAgainstIsrael: "/news/west-against-israel.jpg",
-
-  // ✅ NOVA GLAVNA VEST — Akademija umetnosti Novi Sad (18. mart 2026)
-  akademijaNovisad: "/news/akademija-novisad.jpg",
 
   // ✅ NOVA GLAVNA VEST — Svetska kriza Ormuski moreuz (16. mart 2026)
   brodoviKriza: "/news/brodovi-kriza.jpg",
@@ -269,7 +269,7 @@ export default function Home() {
 
           {/* Editorial two-column layout: main story + four supporting stories */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
-            {/* LEFT: Main story — Energetski rat / nafta kriza */}
+            {/* LEFT: Main story — Ormuski moreuz */}
             <FadeIn>
               <article>
                 <span className="kicker">Geopolitika</span>
@@ -283,13 +283,13 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/geopolitika/energetski-rat"
+                    href="/geopolitika/ormuz-moreuz"
                     className="headline-link"
                     style={{
                       fontFamily: "'Playfair Display', Georgia, serif",
                     }}
                   >
-                    Bliski istok ulazi u energetski rat: posle napada u Zalivu nafta skače, tržišta u panici
+                    Evropske zemlje i Japan o bezbednosti Ormuskog moreuza
                   </Link>
                 </h2>
 
@@ -300,12 +300,12 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Napadi na energetsku infrastrukturu u Zalivu podižu cenu nafte i šire krizu na Evropu.
+                  Evropske zemlje i Japan objavili su zajedničko saopštenje o bezbednosti Ormuskog moreuza i zaštiti pomorskih ruta za snabdevanje energentima.
                 </p>
 
                 <figure className="mb-0">
                   <Link
-                    href="/geopolitika/energetski-rat"
+                    href="/geopolitika/ormuz-moreuz"
                     className="block no-underline"
                   >
                     <div
@@ -316,8 +316,8 @@ export default function Home() {
                       }}
                     >
                       <img
-                        src={IMAGES.naftaKriza}
-                        alt="Minimalistička ilustracija točilice za gorivo kao simbol energetske krize na Bliskom istoku"
+                        src={IMAGES.ormuzKriza}
+                        alt="Naftni tanker prolazi kroz uski Ormuski moreuz kao simbol globalne energetske napetosti"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                         fetchPriority="high"
                         decoding="async"
@@ -334,6 +334,17 @@ export default function Home() {
                 <div className="flex flex-col">
                   {/* Mobile-only separator so first card matches the visual rhythm of cards 2–4 on small screens */}
                   <hr className="editorial-divider my-5 lg:hidden" />
+
+                  <SmallArticleCard
+                    category="Geopolitika"
+                    href="/geopolitika/energetski-rat"
+                    title="Bliski istok ulazi u energetski rat: posle napada u Zalivu nafta skače, tržišta u panici"
+                    description="Napadi na energetsku infrastrukturu u Zalivu podižu cenu nafte i šire krizu na Evropu."
+                    imageSrc={IMAGES.naftaKriza}
+                    imageAlt="Minimalistička ilustracija točilice za gorivo kao simbol energetske krize na Bliskom istoku"
+                  />
+
+                  <hr className="editorial-divider my-5" />
 
                   <SmallArticleCard
                     category="Naša planeta"
@@ -364,17 +375,6 @@ export default function Home() {
                     description="Zapadne zemlje upozoravaju Izrael da ne pokreće kopnenu operaciju u Libanu, uz rastući rizik regionalne eskalacije."
                     imageSrc={IMAGES.westAgainstIsrael}
                     imageAlt="Zapadne sile upozorile Izrael - kopnena ofanziva u Libanu"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Srbija"
-                    href="/srbija/akademija-novisad"
-                    title="Grad odlučuje, studenti na ulici: Akademiji umetnosti preti gubitak prostora"
-                    description="Odbornici odlučuju o oduzimanju prostora Akademiji umetnosti u Novom Sadu."
-                    imageSrc={IMAGES.akademijaNovisad}
-                    imageAlt="Akademija umetnosti u Novom Sadu — studenti na ulici"
                   />
                 </div>
               </FadeIn>
