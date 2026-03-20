@@ -13,7 +13,7 @@ const ARTICLES = [
     href: "/nasa-planeta/ai-superaplikacija",
     img: "/news/ai-superapp.jpg",
     alt: "Minimalistički prikaz veštačke inteligencije kao centralnog sistema koji povezuje digitalne funkcije računara",
-    title: "OpenAI razvija „superaplikaciju" koja objedinjuje ChatGPT, Codex i browser",
+    title: "OpenAI razvija „superaplikaciju“ koja objedinjuje ChatGPT, Codex i browser",
     description:
       "OpenAI planira razvoj jedinstvene desktop aplikacije koja bi objedinjavala ChatGPT, programerski alat Codex i AI browser u jedan integrisani sistem.",
   },

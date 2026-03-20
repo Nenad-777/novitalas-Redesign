@@ -16,7 +16,7 @@ export default function AiSuperaplikacija() {
     <ArticleTemplate
       path="/nasa-planeta/ai-superaplikacija"
       sectionLabel="Naša planeta"
-      title="OpenAI razvija „superaplikaciju" koja objedinjuje ChatGPT, Codex i browser"
+      title="OpenAI razvija „superaplikaciju“ koja objedinjuje ChatGPT, Codex i browser"
       dateLabel="20. MART 2026."
       deck="OpenAI razvija novu desktop superaplikaciju koja objedinjuje ChatGPT, Codex i browser u jedinstveni AI sistem."
       imageSrc={IMAGE_SRC}
