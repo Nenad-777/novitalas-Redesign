@@ -73,6 +73,9 @@ import KinaMozganiImplantat from "./pages/kina-mozgani-implantat";
 /* ✅ NOVA VEST — Naša planeta */
 import MarsReka from "./pages/mars-reka";
 
+/* ✅ NOVA VEST — Naša planeta */
+import AiSuperaplikacija from "./pages/ai-superaplikacija";
+
 /* ✅ ARHIVSKA STRANICA — Februar 2026 */
 import ArhivaFebruar2026 from "./pages/ArhivaFebruar2026";
 
@@ -249,6 +252,11 @@ function Router() {
         <Route
           path="/nasa-planeta/mars-reka"
           component={MarsReka}
+        />
+
+        <Route
+          path="/nasa-planeta/ai-superaplikacija"
+          component={AiSuperaplikacija}
         />
 
         <Route

@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/ai-superaplikacija",
+    title:
+      "OpenAI razvija „superaplikaciju" koja objedinjuje ChatGPT, Codex i browser",
+    description:
+      "OpenAI razvija novu desktop superaplikaciju koja objedinjuje ChatGPT, Codex i browser u jedinstveni AI sistem.",
+    imageSrc: "/news/ai-superapp.jpg",
+    datePublished: "2026-03-20",
+  },
+  {
     path: "/geopolitika/ormuz-moreuz",
     title: "Evropske zemlje i Japan o bezbednosti Ormuskog moreuza",
     description:
