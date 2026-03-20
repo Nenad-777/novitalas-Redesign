@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/ormuz-moreuz",
+    title: "Evropske zemlje i Japan o bezbednosti Ormuskog moreuza",
+    description:
+      "Evropske zemlje i Japan objavili su zajedničko saopštenje o bezbednosti Ormuskog moreuza i zaštiti pomorskih ruta za snabdevanje energentima.",
+    imageSrc: "/news/ormuz-kriza.jpg",
+    datePublished: "2026-03-20",
+  },
+  {
     path: "/nasa-planeta/mars-reka",
     title:
       "Na Marsu otkriveni tragovi drevne reke: nova faza u potrazi za životom",

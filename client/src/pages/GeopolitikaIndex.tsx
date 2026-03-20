@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  ormuzKriza: "/news/ormuz-kriza.jpg",
   naftaKriza: "/news/nafta-kriza.jpg",
   tanker: "/news/tanker.jpg",
   westAgainstIsrael: "/news/west-against-israel.jpg",
@@ -60,6 +61,59 @@ export default function GeopolitikaIndex() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* ✅ NAJNOVIJA VEST (Ormuski moreuz — 20. mart 2026) */}
+            <article className="md:col-span-2">
+              <Link
+                href="/geopolitika/ormuz-moreuz"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.ormuzKriza}
+                    alt="Naftni tanker prolazi kroz uski Ormuski moreuz kao simbol globalne energetske napetosti"
+                    className="w-full h-[260px] object-cover object-center block"
+                    decoding="async"
+                  />
+                </div>
+
+                <h2
+                  className="text-[22px] md:text-[28px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Evropske zemlje i Japan o bezbednosti Ormuskog moreuza
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Evropske zemlje i Japan objavili su zajedničko saopštenje o bezbednosti Ormuskog moreuza i zaštiti pomorskih ruta za snabdevanje energentima.
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
+
             {/* ✅ NAJNOVIJA VEST (Energetski rat — nafta kriza) */}
             <article className="md:col-span-2">
               <Link
