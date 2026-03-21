@@ -17,6 +17,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA VEST — Psihologija dosada (20. mart 2026)
+  psihologijaDosada: "/news/psihologija-dosada.jpg",
+
   // ✅ NOVA VEST — AI superaplikacija (20. mart 2026)
   aiSuperapp: "/news/ai-superapp.jpg",
 
@@ -339,6 +342,17 @@ export default function Home() {
                   <hr className="editorial-divider my-5 lg:hidden" />
 
                   <SmallArticleCard
+                    category="Naša planeta"
+                    href="/nasa-planeta/psihologija-dosada"
+                    title="Otkriće psihologije: zašto je najbolja stvar koju možete da uradite da ne radite ništa"
+                    description="Savremena psihologija otkriva da vaš mozak najbolje radi kada ga ostavite na miru — i da je dosada možda najproduktivnija stvar koju ćete danas uraditi."
+                    imageSrc={IMAGES.psihologijaDosada}
+                    imageAlt="Čovek koji sedi u tišini i gleda u daljinu — simbol mentalne odmorenosti i dosade"
+                  />
+
+                  <hr className="editorial-divider my-5" />
+
+                  <SmallArticleCard
                     category="Geopolitika"
                     href="/geopolitika/ormuz-moreuz"
                     title="Evropske zemlje i Japan o bezbednosti Ormuskog moreuza"
@@ -367,17 +381,6 @@ export default function Home() {
                     description="NASA-in rover otkrio je nove dokaze koji ukazuju da je na površini Marsa nekada postojala reka."
                     imageSrc={IMAGES.marsReka}
                     imageAlt="Površina Marsa sa tragovima drevnog rečnog korita"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Geopolitika"
-                    href="/geopolitika/tanker-bez-pogona"
-                    title="EVROPA U TRCI SA VREMENOM: tanker bez pogona preti ekološkom katastrofom"
-                    description="Tanker bez pogona koji prevozi naftu nekontrolisano pluta u evropskim vodama, dok evropski lideri upozoravaju na rizik ekološke katastrofe."
-                    imageSrc={IMAGES.tanker}
-                    imageAlt="Tanker bez pogona u evropskim vodama"
                   />
                 </div>
               </FadeIn>
