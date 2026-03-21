@@ -10,6 +10,14 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/nasa-planeta/psihologija-dosada",
+    img: "/news/psihologija-dosada.jpg",
+    alt: "Čovek koji sedi u tišini i gleda u daljinu — simbol mentalne odmorenosti i dosade kao produktivnog stanja",
+    title: "Otkriće psihologije: zašto je najbolja stvar koju možete da uradite da ne radite ništa",
+    description:
+      "Savremena psihologija otkriva da vaš mozak najbolje radi kada ga ostavite na miru — i da je dosada možda najproduktivnija stvar koju ćete danas uraditi.",
+  },
+  {
     href: "/nasa-planeta/ai-superaplikacija",
     img: "/news/ai-superapp.jpg",
     alt: "Minimalistički prikaz veštačke inteligencije kao centralnog sistema koji povezuje digitalne funkcije računara",

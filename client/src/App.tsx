@@ -75,6 +75,7 @@ import MarsReka from "./pages/mars-reka";
 
 /* ✅ NOVA VEST — Naša planeta */
 import AiSuperaplikacija from "./pages/ai-superaplikacija";
+import PsihologijaDosada from "./pages/psihologija-dosada";
 
 /* ✅ ARHIVSKA STRANICA — Februar 2026 */
 import ArhivaFebruar2026 from "./pages/ArhivaFebruar2026";
@@ -287,6 +288,11 @@ function Router() {
         <Route
           path="/nasa-planeta/kina-mozgani-implantat"
           component={KinaMozganiImplantat}
+        />
+
+        <Route
+          path="/nasa-planeta/psihologija-dosada"
+          component={PsihologijaDosada}
         />
 
         {/* =========================

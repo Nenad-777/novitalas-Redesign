@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/psihologija-dosada",
+    title:
+      "Otkriće psihologije: zašto je najbolja stvar koju možete da uradite da ne radite ništa",
+    description:
+      "Savremena psihologija otkriva da vaš mozak najbolje radi kada ga ostavite na miru — i da je dosada možda najproduktivnija stvar koju ćete danas uraditi.",
+    imageSrc: "/news/psihologija-dosada.jpg",
+    datePublished: "2026-03-20",
+  },
+  {
     path: "/nasa-planeta/ai-superaplikacija",
     title:
       "OpenAI razvija „superaplikaciju“ koja objedinjuje ChatGPT, Codex i browser",
