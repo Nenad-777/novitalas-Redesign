@@ -17,6 +17,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA GLAVNA VEST — Lokalni izbori (21. mart 2026)
+  lokalniIzbori: "/news/lokalni-izbori.jpg",
+
   // ✅ NOVA VEST — Psihologija dosada (20. mart 2026)
   psihologijaDosada: "/news/psihologija-dosada.jpg",
 
@@ -275,10 +278,10 @@ export default function Home() {
 
           {/* Editorial two-column layout: main story + four supporting stories */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
-            {/* LEFT: Main story — AI superaplikacija */}
+            {/* LEFT: Main story — Lokalni izbori analiza */}
             <FadeIn>
               <article>
-                <span className="kicker">Naša planeta</span>
+                <span className="kicker">Srbija</span>
 
                 <h2
                   className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
@@ -289,13 +292,13 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/nasa-planeta/ai-superaplikacija"
+                    href="/srbija/lokalni-izbori-analiza"
                     className="headline-link"
                     style={{
                       fontFamily: "'Playfair Display', Georgia, serif",
                     }}
                   >
-                    OpenAI razvija „superaplikaciju" koja objedinjuje ChatGPT, Codex i browser
+                    Analiza predstojećih izbora: da li je moguć početak promena?
                   </Link>
                 </h2>
 
@@ -306,12 +309,12 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  OpenAI planira razvoj jedinstvene desktop aplikacije koja bi objedinjavala ChatGPT, programerski alat Codex i AI browser u jedan integrisani sistem.
+                  Ovi lokalni izbori u Srbiji deluju mali samo na prvi pogled. U stvarnosti, oni jasno pokazuju kako danas izgleda politička borba u zemlji.
                 </p>
 
                 <figure className="mb-0">
                   <Link
-                    href="/nasa-planeta/ai-superaplikacija"
+                    href="/srbija/lokalni-izbori-analiza"
                     className="block no-underline"
                   >
                     <div
@@ -322,8 +325,8 @@ export default function Home() {
                       }}
                     >
                       <img
-                        src={IMAGES.aiSuperapp}
-                        alt="Minimalistički prikaz veštačke inteligencije kao centralnog sistema koji povezuje digitalne funkcije računara"
+                        src={IMAGES.lokalniIzbori}
+                        alt="Minimalistička ilustracija glasačke kutije sa bojama srpske zastave u pozadini, simbol lokalnih izbora i političkog sistema"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                         fetchPriority="high"
                         decoding="async"
@@ -340,6 +343,17 @@ export default function Home() {
                 <div className="flex flex-col">
                   {/* Mobile-only separator so first card matches the visual rhythm of cards 2–4 on small screens */}
                   <hr className="editorial-divider my-5 lg:hidden" />
+
+                  <SmallArticleCard
+                    category="Naša planeta"
+                    href="/nasa-planeta/ai-superaplikacija"
+                    title={"OpenAI razvija \u201Esuperaplikaciju\u201C koja objedinjuje ChatGPT, Codex i browser"}
+                    description="OpenAI planira razvoj jedinstvene desktop aplikacije koja bi objedinjavala ChatGPT, programerski alat Codex i AI browser u jedan integrisani sistem."
+                    imageSrc={IMAGES.aiSuperapp}
+                    imageAlt="Minimalistički prikaz veštačke inteligencije kao centralnog sistema koji povezuje digitalne funkcije računara"
+                  />
+
+                  <hr className="editorial-divider my-5" />
 
                   <SmallArticleCard
                     category="Naša planeta"
@@ -370,17 +384,6 @@ export default function Home() {
                     description="Napadi na energetsku infrastrukturu u Zalivu podižu cenu nafte i šire krizu na Evropu."
                     imageSrc={IMAGES.naftaKriza}
                     imageAlt="Minimalistička ilustracija točilice za gorivo kao simbol energetske krize na Bliskom istoku"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Naša planeta"
-                    href="/nasa-planeta/mars-reka"
-                    title="Na Marsu otkriveni tragovi drevne reke: nova faza u potrazi za životom"
-                    description="NASA-in rover otkrio je nove dokaze koji ukazuju da je na površini Marsa nekada postojala reka."
-                    imageSrc={IMAGES.marsReka}
-                    imageAlt="Površina Marsa sa tragovima drevnog rečnog korita"
                   />
                 </div>
               </FadeIn>
