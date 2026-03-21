@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/srbija/lokalni-izbori-analiza",
+    title:
+      "Analiza predstojećih izbora: da li je moguć početak promena?",
+    description:
+      "Analiza predstojećih lokalnih izbora u Srbiji: uslovi, kontrola procesa i nova energija na terenu.",
+    imageSrc: "/news/lokalni-izbori.jpg",
+    datePublished: "2026-03-21",
+  },
+  {
     path: "/nasa-planeta/psihologija-dosada",
     title:
       "Otkriće psihologije: zašto je najbolja stvar koju možete da uradite da ne radite ništa",
