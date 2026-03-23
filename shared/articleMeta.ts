@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/iran-trump-ormuski-moreuz",
+    title:
+      "Iran preti zatvaranjem Ormuskog moreuza kao odgovor na Trampov ultimatum",
+    description:
+      "Iran preti zatvaranjem Ormuskog moreuza kao odgovor na američki ultimatum, uz rizik globalne energetske krize.",
+    imageSrc: "/news/trump-iran.jpg",
+    datePublished: "2026-03-23",
+  },
+  {
     path: "/srbija/lokalni-izbori-analiza",
     title:
       "Analiza predstojećih izbora: da li je moguć početak promena?",
