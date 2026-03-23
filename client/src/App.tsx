@@ -30,6 +30,9 @@ import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 
 /* ✅ NOVA VEST — Geopolitika */
+import IranTrumpOrmuskirMoreuz from "./pages/iran-trump-ormuski-moreuz";
+
+/* ✅ NOVA VEST — Geopolitika */
 import EnergetskiRat from "./pages/energetski-rat";
 
 /* ✅ NOVA VEST — Geopolitika */
@@ -112,6 +115,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/iran-trump-ormuski-moreuz"
+          component={IranTrumpOrmuskirMoreuz}
+        />
+
         <Route
           path="/geopolitika/ormuz-moreuz"
           component={OrmuzMoreuz}

@@ -17,6 +17,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA GLAVNA VEST — Iran Tramp Ormuski moreuz (23. mart 2026)
+  trumpIran: "/news/trump-iran.jpg",
+
   // ✅ NOVA GLAVNA VEST — Lokalni izbori (21. mart 2026)
   lokalniIzbori: "/news/lokalni-izbori.jpg",
 
@@ -278,10 +281,10 @@ export default function Home() {
 
           {/* Editorial two-column layout: main story + four supporting stories */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
-            {/* LEFT: Main story — Lokalni izbori analiza */}
+            {/* LEFT: Main story — Iran Tramp Ormuski moreuz */}
             <FadeIn>
               <article>
-                <span className="kicker">Srbija</span>
+                <span className="kicker">Geopolitika</span>
 
                 <h2
                   className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
@@ -292,13 +295,13 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/srbija/lokalni-izbori-analiza"
+                    href="/geopolitika/iran-trump-ormuski-moreuz"
                     className="headline-link"
                     style={{
                       fontFamily: "'Playfair Display', Georgia, serif",
                     }}
                   >
-                    Analiza predstojećih izbora: da li je moguć početak promena?
+                    Iran preti zatvaranjem Ormuskog moreuza kao odgovor na Trampov ultimatum
                   </Link>
                 </h2>
 
@@ -309,12 +312,12 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Ovi lokalni izbori u Srbiji deluju mali samo na prvi pogled. U stvarnosti, oni jasno pokazuju kako danas izgleda politička borba u zemlji.
+                  Iran preti zatvaranjem Ormuskog moreuza kao odgovor na američki ultimatum, uz rizik globalne energetske krize.
                 </p>
 
                 <figure className="mb-0">
                   <Link
-                    href="/srbija/lokalni-izbori-analiza"
+                    href="/geopolitika/iran-trump-ormuski-moreuz"
                     className="block no-underline"
                   >
                     <div
@@ -325,8 +328,8 @@ export default function Home() {
                       }}
                     >
                       <img
-                        src={IMAGES.lokalniIzbori}
-                        alt="Minimalistička ilustracija glasačke kutije sa bojama srpske zastave u pozadini, simbol lokalnih izbora i političkog sistema"
+                        src={IMAGES.trumpIran}
+                        alt="Ilustracija sukoba između Donalda Trampa i Irana sa simboličnom kapljom nafte u centru, koja predstavlja globalnu energetsku i političku napetost"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                         fetchPriority="high"
                         decoding="async"
@@ -343,6 +346,17 @@ export default function Home() {
                 <div className="flex flex-col">
                   {/* Mobile-only separator so first card matches the visual rhythm of cards 2–4 on small screens */}
                   <hr className="editorial-divider my-5 lg:hidden" />
+
+                  <SmallArticleCard
+                    category="Srbija"
+                    href="/srbija/lokalni-izbori-analiza"
+                    title="Analiza predstojećih izbora: da li je moguć početak promena?"
+                    description="Ovi lokalni izbori u Srbiji deluju mali samo na prvi pogled. U stvarnosti, oni jasno pokazuju kako danas izgleda politička borba u zemlji."
+                    imageSrc={IMAGES.lokalniIzbori}
+                    imageAlt="Minimalistička ilustracija glasačke kutije sa bojama srpske zastave u pozadini, simbol lokalnih izbora i političkog sistema"
+                  />
+
+                  <hr className="editorial-divider my-5" />
 
                   <SmallArticleCard
                     category="Naša planeta"
@@ -373,17 +387,6 @@ export default function Home() {
                     description="Evropske zemlje i Japan objavili su zajedničko saopštenje o bezbednosti Ormuskog moreuza i zaštiti pomorskih ruta za snabdevanje energentima."
                     imageSrc={IMAGES.ormuzKriza}
                     imageAlt="Naftni tanker prolazi kroz uski Ormuski moreuz kao simbol globalne energetske napetosti"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Geopolitika"
-                    href="/geopolitika/energetski-rat"
-                    title="Bliski istok ulazi u energetski rat: posle napada u Zalivu nafta skače, tržišta u panici"
-                    description="Napadi na energetsku infrastrukturu u Zalivu podižu cenu nafte i šire krizu na Evropu."
-                    imageSrc={IMAGES.naftaKriza}
-                    imageAlt="Minimalistička ilustracija točilice za gorivo kao simbol energetske krize na Bliskom istoku"
                   />
                 </div>
               </FadeIn>
