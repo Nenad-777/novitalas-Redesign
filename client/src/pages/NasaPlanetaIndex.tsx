@@ -18,6 +18,14 @@ const ARTICLES = [
       "Savremena psihologija otkriva da vaš mozak najbolje radi kada ga ostavite na miru — i da je dosada možda najproduktivnija stvar koju ćete danas uraditi.",
   },
   {
+    href: "/nasa-planeta/najtoplija-decenija-planeta-un",
+    img: "/news/world-heat.jpg",
+    alt: "Zemlja sa tankom crvenom linijom koja simbolizuje rast globalne temperature",
+    title: "UN potvrdio: planeta iza sebe ima najtopliju deceniju u istoriji merenja",
+    description:
+      "Svetska meteorološka organizacija UN potvrdila je da je period od 2015. do 2025. bio najtopliji otkad se vodi moderna evidencija o temperaturama.",
+  },
+  {
     href: "/nasa-planeta/ai-superaplikacija",
     img: "/news/ai-superapp.jpg",
     alt: "Minimalistički prikaz veštačke inteligencije kao centralnog sistema koji povezuje digitalne funkcije računara",
