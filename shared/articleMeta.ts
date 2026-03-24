@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/najtoplija-decenija-planeta-un",
+    title:
+      "UN potvrdio: planeta iza sebe ima najtopliju deceniju u istoriji merenja",
+    description:
+      "UN potvrđuje da je poslednjih jedanaest godina najtopliji period u istoriji merenja globalne temperature.",
+    imageSrc: "/news/world-heat.jpg",
+    datePublished: "2026-03-24",
+  },
+  {
     path: "/geopolitika/meloni-referendum-italija",
     title: "Meloni priznala poraz: Italijani odbacili reformu pravosuđa",
     description:

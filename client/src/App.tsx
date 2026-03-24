@@ -80,6 +80,7 @@ import Kubrick from "./pages/kubrick";
 import KinaMozganiImplantat from "./pages/kina-mozgani-implantat";
 
 /* ✅ NOVA VEST — Naša planeta */
+import NajtoplijaDecenijaPlanetaUn from "./pages/najtoplija-decenija-planeta-un";
 import MarsReka from "./pages/mars-reka";
 
 /* ✅ NOVA VEST — Naša planeta */
@@ -273,6 +274,11 @@ function Router() {
             NAŠA PLANETA
            ========================= */}
         <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
+
+        <Route
+          path="/nasa-planeta/najtoplija-decenija-planeta-un"
+          component={NajtoplijaDecenijaPlanetaUn}
+        />
 
         <Route
           path="/nasa-planeta/mars-reka"

@@ -17,6 +17,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA VEST — UN najtoplija decenija (24. mart 2026)
+  worldHeat: "/news/world-heat.jpg",
+
   // ✅ NOVA VEST — Meloni referendum Italija (24. mart 2026)
   meloniReferendum: "/news/meloni-referendum.jpg",
 
@@ -351,6 +354,17 @@ export default function Home() {
                   <hr className="editorial-divider my-5 lg:hidden" />
 
                   <SmallArticleCard
+                    category="Naša planeta"
+                    href="/nasa-planeta/najtoplija-decenija-planeta-un"
+                    title="UN potvrdio: planeta iza sebe ima najtopliju deceniju u istoriji merenja"
+                    description="Svetska meteorološka organizacija UN potvrdila je da je period od 2015. do 2025. bio najtopliji otkad se vodi moderna evidencija o temperaturama."
+                    imageSrc={IMAGES.worldHeat}
+                    imageAlt="Zemlja sa tankom crvenom linijom koja simbolizuje rast globalne temperature"
+                  />
+
+                  <hr className="editorial-divider my-5" />
+
+                  <SmallArticleCard
                     category="Geopolitika"
                     href="/geopolitika/meloni-referendum-italija"
                     title="Meloni priznala poraz: Italijani odbacili reformu pravosuđa"
@@ -379,17 +393,6 @@ export default function Home() {
                     description="OpenAI planira razvoj jedinstvene desktop aplikacije koja bi objedinjavala ChatGPT, programerski alat Codex i AI browser u jedan integrisani sistem."
                     imageSrc={IMAGES.aiSuperapp}
                     imageAlt="Minimalistički prikaz veštačke inteligencije kao centralnog sistema koji povezuje digitalne funkcije računara"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Naša planeta"
-                    href="/nasa-planeta/psihologija-dosada"
-                    title="Otkriće psihologije: zašto je najbolja stvar koju možete da uradite da ne radite ništa"
-                    description="Savremena psihologija otkriva da vaš mozak najbolje radi kada ga ostavite na miru — i da je dosada možda najproduktivnija stvar koju ćete danas uraditi."
-                    imageSrc={IMAGES.psihologijaDosada}
-                    imageAlt="Čovek koji sedi u tišini i gleda u daljinu — simbol mentalne odmorenosti i dosade"
                   />
                 </div>
               </FadeIn>
