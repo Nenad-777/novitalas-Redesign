@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/moon-ring",
+    title: "Plan iz Japana: solarni prsten oko Meseca za energiju Zemlje",
+    description:
+      "Japanski istraživački tim predstavio je koncept izgradnje ogromnog solarnog sistema na Mesecu, koji bi mogao neprekidno da proizvodi energiju i šalje je na Zemlju.",
+    imageSrc: "/news/moon-ring.jpg",
+    datePublished: "2026-03-24",
+  },
+  {
     path: "/nasa-planeta/najtoplija-decenija-planeta-un",
     title:
       "UN potvrdio: planeta iza sebe ima najtopliju deceniju u istoriji merenja",

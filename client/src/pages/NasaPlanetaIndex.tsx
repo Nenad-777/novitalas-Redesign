@@ -10,6 +10,14 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/nasa-planeta/moon-ring",
+    img: "/news/moon-ring.jpg",
+    alt: "Solarni prsten oko Meseca — japanski koncept svemirske energije",
+    title: "Plan iz Japana: solarni prsten oko Meseca za energiju Zemlje",
+    description:
+      "Japanski istraživački tim predstavio je koncept izgradnje ogromnog solarnog sistema na Mesecu, koji bi mogao neprekidno da proizvodi energiju i šalje je na Zemlju.",
+  },
+  {
     href: "/nasa-planeta/psihologija-dosada",
     img: "/news/psihologija-dosada.jpg",
     alt: "Čovek koji sedi u tišini i gleda u daljinu — simbol mentalne odmorenosti i dosade kao produktivnog stanja",
@@ -80,14 +88,6 @@ const ARTICLES = [
     title: "Naučnici počeli da usmeravaju snove: novo otkriće savremene psihologije",
     description:
       "Novo istraživanje pokazuje da je moguće uticati na sadržaj snova i podstaći mozak da tokom sna kreativnije rešava probleme.",
-  },
-  {
-    href: "/nasa-planeta/alma-skriveno-jezgro",
-    img: "/alma-mlecni-put.jpg",
-    alt: "ALMA — srce Mlečnog puta",
-    title: 'Najveća ALMA mapa ikad: otkriveno „skriveno jezgro" Mlečnog puta',
-    description:
-      'Mozaik od brojnih posmatranja prikazuje Centralnu molekularnu zonu — najgušći i najturbulentniji pojas gasa i prašine u središtu naše galaksije.',
   },
 ];
 

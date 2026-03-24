@@ -17,6 +17,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA VEST — Moon ring solarni prsten (24. mart 2026)
+  moonRing: "/news/moon-ring.jpg",
+
   // ✅ NOVA GLAVNA VEST — Nemacka kritika rata (24. mart 2026)
   steinmeier: "/news/Frank-Walter Steinmeier.jpg",
 
@@ -357,6 +360,17 @@ export default function Home() {
                   <hr className="editorial-divider my-5 lg:hidden" />
 
                   <SmallArticleCard
+                    category="Naša planeta"
+                    href="/nasa-planeta/moon-ring"
+                    title="Plan iz Japana: solarni prsten oko Meseca za energiju Zemlje"
+                    description="Japanski istraživački tim predstavio je koncept izgradnje ogromnog solarnog sistema na Mesecu, koji bi mogao neprekidno da proizvodi energiju i šalje je na Zemlju."
+                    imageSrc={IMAGES.moonRing}
+                    imageAlt="Solarni prsten oko Meseca — japanski koncept svemirske energije"
+                  />
+
+                  <hr className="editorial-divider my-5" />
+
+                  <SmallArticleCard
                     category="Geopolitika"
                     href="/geopolitika/iran-trump-ormuski-moreuz"
                     title="Iran preti zatvaranjem Ormuskog moreuza kao odgovor na Trampov ultimatum"
@@ -385,17 +399,6 @@ export default function Home() {
                     description="Italijani su na referendumu odbacili reformu pravosuđa, a premijerka Giorgia Meloni priznala poraz."
                     imageSrc={IMAGES.meloniReferendum}
                     imageAlt="Giorgia Meloni tokom obraćanja nakon referenduma o reformi pravosuđa u Italiji"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Srbija"
-                    href="/srbija/lokalni-izbori-analiza"
-                    title="Analiza predstojećih izbora: da li je moguć početak promena?"
-                    description="Ovi lokalni izbori u Srbiji deluju mali samo na prvi pogled. U stvarnosti, oni jasno pokazuju kako danas izgleda politička borba u zemlji."
-                    imageSrc={IMAGES.lokalniIzbori}
-                    imageAlt="Minimalistička ilustracija glasačke kutije sa bojama srpske zastave u pozadini, simbol lokalnih izbora i političkog sistema"
                   />
                 </div>
               </FadeIn>
