@@ -87,6 +87,9 @@ import NajtoplijaDecenijaPlanetaUn from "./pages/najtoplija-decenija-planeta-un"
 import MarsReka from "./pages/mars-reka";
 
 /* ✅ NOVA VEST — Naša planeta */
+import MoonRing from "./pages/moon-ring";
+
+/* ✅ NOVA VEST — Naša planeta */
 import AiSuperaplikacija from "./pages/ai-superaplikacija";
 import PsihologijaDosada from "./pages/psihologija-dosada";
 
@@ -282,6 +285,11 @@ function Router() {
             NAŠA PLANETA
            ========================= */}
         <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
+
+        <Route
+          path="/nasa-planeta/moon-ring"
+          component={MoonRing}
+        />
 
         <Route
           path="/nasa-planeta/najtoplija-decenija-planeta-un"
