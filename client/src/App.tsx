@@ -30,6 +30,9 @@ import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 
 /* ✅ NOVA VEST — Geopolitika */
+import NemackaKritikaRatIran from "./pages/nemacka-kritika-rat-iran";
+
+/* ✅ NOVA VEST — Geopolitika */
 import MeloniReferendumItalija from "./pages/meloni-referendum-italija";
 
 /* ✅ NOVA VEST — Geopolitika */
@@ -119,6 +122,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/nemacka-kritika-rat-iran"
+          component={NemackaKritikaRatIran}
+        />
+
         <Route
           path="/geopolitika/meloni-referendum-italija"
           component={MeloniReferendumItalija}

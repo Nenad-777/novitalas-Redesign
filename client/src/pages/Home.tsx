@@ -17,6 +17,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA GLAVNA VEST — Nemacka kritika rata (24. mart 2026)
+  steinmeier: "/news/Frank-Walter Steinmeier.jpg",
+
   // ✅ NOVA VEST — UN najtoplija decenija (24. mart 2026)
   worldHeat: "/news/world-heat.jpg",
 
@@ -287,7 +290,7 @@ export default function Home() {
 
           {/* Editorial two-column layout: main story + four supporting stories */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
-            {/* LEFT: Main story — Iran Tramp Ormuski moreuz */}
+            {/* LEFT: Main story — Nemacka kritika rata */}
             <FadeIn>
               <article>
                 <span className="kicker">Geopolitika</span>
@@ -301,13 +304,13 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/geopolitika/iran-trump-ormuski-moreuz"
+                    href="/geopolitika/nemacka-kritika-rat-iran"
                     className="headline-link"
                     style={{
                       fontFamily: "'Playfair Display', Georgia, serif",
                     }}
                   >
-                    Iran preti zatvaranjem Ormuskog moreuza kao odgovor na Trampov ultimatum
+                    {`Nemačka oštro kritikovala rat: \u201EKatastrofalna greška\u201C i kršenje međunarodnog prava`}
                   </Link>
                 </h2>
 
@@ -318,12 +321,12 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Iran preti zatvaranjem Ormuskog moreuza kao odgovor na američki ultimatum, uz rizik globalne energetske krize.
+                  Nemački predsednik ocenio rat protiv Irana kao katastrofalnu grešku i upozorio na kršenje međunarodnog prava.
                 </p>
 
                 <figure className="mb-0">
                   <Link
-                    href="/geopolitika/iran-trump-ormuski-moreuz"
+                    href="/geopolitika/nemacka-kritika-rat-iran"
                     className="block no-underline"
                   >
                     <div
@@ -334,8 +337,8 @@ export default function Home() {
                       }}
                     >
                       <img
-                        src={IMAGES.trumpIran}
-                        alt="Ilustracija sukoba između Donalda Trampa i Irana sa simboličnom kapljom nafte u centru, koja predstavlja globalnu energetsku i političku napetost"
+                        src={IMAGES.steinmeier}
+                        alt="Frank-Valter Štajnmajer tokom obraćanja povodom rata sa Iranom"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                         fetchPriority="high"
                         decoding="async"
@@ -352,6 +355,17 @@ export default function Home() {
                 <div className="flex flex-col">
                   {/* Mobile-only separator so first card matches the visual rhythm of cards 2–4 on small screens */}
                   <hr className="editorial-divider my-5 lg:hidden" />
+
+                  <SmallArticleCard
+                    category="Geopolitika"
+                    href="/geopolitika/iran-trump-ormuski-moreuz"
+                    title="Iran preti zatvaranjem Ormuskog moreuza kao odgovor na Trampov ultimatum"
+                    description="Iran preti zatvaranjem Ormuskog moreuza kao odgovor na američki ultimatum, uz rizik globalne energetske krize."
+                    imageSrc={IMAGES.trumpIran}
+                    imageAlt="Ilustracija sukoba između Donalda Trampa i Irana sa simboličnom kapljom nafte u centru, koja predstavlja globalnu energetsku i političku napetost"
+                  />
+
+                  <hr className="editorial-divider my-5" />
 
                   <SmallArticleCard
                     category="Naša planeta"
@@ -382,17 +396,6 @@ export default function Home() {
                     description="Ovi lokalni izbori u Srbiji deluju mali samo na prvi pogled. U stvarnosti, oni jasno pokazuju kako danas izgleda politička borba u zemlji."
                     imageSrc={IMAGES.lokalniIzbori}
                     imageAlt="Minimalistička ilustracija glasačke kutije sa bojama srpske zastave u pozadini, simbol lokalnih izbora i političkog sistema"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Naša planeta"
-                    href="/nasa-planeta/ai-superaplikacija"
-                    title={"OpenAI razvija \u201Esuperaplikaciju\u201C koja objedinjuje ChatGPT, Codex i browser"}
-                    description="OpenAI planira razvoj jedinstvene desktop aplikacije koja bi objedinjavala ChatGPT, programerski alat Codex i AI browser u jedan integrisani sistem."
-                    imageSrc={IMAGES.aiSuperapp}
-                    imageAlt="Minimalistički prikaz veštačke inteligencije kao centralnog sistema koji povezuje digitalne funkcije računara"
                   />
                 </div>
               </FadeIn>

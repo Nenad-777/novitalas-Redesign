@@ -496,4 +496,23 @@ export const seoData: Record<string, SEOData> = {
       twitterImage: "https://novitalas.org/news/cia-china.jpg",
       datePublished: "2026-03-14",
     },
+
+  "/geopolitika/nemacka-kritika-rat-iran": {
+    title:
+      "Nemačka oštro kritikovala rat: Katastrofalna greška i kršenje međunarodnog prava — Novi Talas",
+    description:
+      "Nemački predsednik ocenio rat protiv Irana kao katastrofalnu grešku i upozorio na kršenje međunarodnog prava.",
+    ogTitle:
+      "Nemačka oštro kritikovala rat: Katastrofalna greška i kršenje međunarodnog prava",
+    ogDescription:
+      "Nemački predsednik ocenio rat protiv Irana kao katastrofalnu grešku i upozorio na kršenje međunarodnog prava.",
+    ogUrl: "https://novitalas.org/geopolitika/nemacka-kritika-rat-iran",
+    ogImage: "https://novitalas.org/news/Frank-Walter%20Steinmeier.jpg",
+    twitterTitle:
+      "Nemačka oštro kritikovala rat: Katastrofalna greška i kršenje međunarodnog prava",
+    twitterDescription:
+      "Nemački predsednik ocenio rat protiv Irana kao katastrofalnu grešku i upozorio na kršenje međunarodnog prava.",
+    twitterImage: "https://novitalas.org/news/Frank-Walter%20Steinmeier.jpg",
+    datePublished: "2026-03-24",
+  },
 };
