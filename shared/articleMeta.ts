@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/meloni-referendum-italija",
+    title: "Meloni priznala poraz: Italijani odbacili reformu pravosuđa",
+    description:
+      "Italijani su na referendumu odbacili reformu pravosuđa, a premijerka Giorgia Meloni priznala poraz.",
+    imageSrc: "/news/meloni-referendum.jpg",
+    datePublished: "2026-03-24",
+  },
+  {
     path: "/geopolitika/iran-trump-ormuski-moreuz",
     title:
       "Iran preti zatvaranjem Ormuskog moreuza kao odgovor na Trampov ultimatum",
