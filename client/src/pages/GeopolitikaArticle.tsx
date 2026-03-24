@@ -7,6 +7,7 @@
 import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ImageCaption from "@/components/ImageCaption";
 import ShareButton from "@/components/ShareButton";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useSEO } from "@/hooks/useSEO";
@@ -83,6 +84,7 @@ export default function GeopolitikaArticle() {
                 className="w-full h-[300px] md:h-[420px] object-cover object-center block"
               />
             </div>
+            <ImageCaption />
           </figure>
 
           {/* Article body */}

@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ImageCaption from "@/components/ImageCaption";
 import ShareButton from "@/components/ShareButton";
 import SeoMeta from "@/components/SeoMeta";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -134,17 +135,7 @@ export default function ArticleTemplate({
                   decoding="async"
                 />
               </div>
-              {imageCredit ? (
-                <p
-                  className="mt-1 text-[11px]"
-                  style={{
-                    fontFamily: "'Source Sans 3', sans-serif",
-                    color: isDark ? "#6b6760" : "#999",
-                  }}
-                >
-                  {imageCredit}
-                </p>
-              ) : null}
+              <ImageCaption credit={imageCredit} />
             </div>
           ) : null}
 
