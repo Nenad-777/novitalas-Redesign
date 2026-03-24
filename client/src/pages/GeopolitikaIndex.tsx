@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  meloniReferendum: "/news/meloni-referendum.jpg",
   trumpIran: "/news/trump-iran.jpg",
   ormuzKriza: "/news/ormuz-kriza.jpg",
   naftaKriza: "/news/nafta-kriza.jpg",
@@ -101,6 +102,59 @@ export default function GeopolitikaIndex() {
                   }}
                 >
                   Iran preti zatvaranjem Ormuskog moreuza kao odgovor na američki ultimatum, uz rizik globalne energetske krize.
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
+
+            {/* ✅ NOVA VEST (Meloni referendum Italija — 24. mart 2026) */}
+            <article className="md:col-span-2">
+              <Link
+                href="/geopolitika/meloni-referendum-italija"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.meloniReferendum}
+                    alt="Giorgia Meloni tokom obraćanja nakon referenduma o reformi pravosuđa u Italiji"
+                    className="w-full h-[260px] object-cover object-center block"
+                    decoding="async"
+                  />
+                </div>
+
+                <h2
+                  className="text-[22px] md:text-[28px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Meloni priznala poraz: Italijani odbacili reformu pravosuđa
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Italijani su na referendumu odbacili reformu pravosuđa, a premijerka Giorgia Meloni priznala poraz.
                 </p>
 
                 <div

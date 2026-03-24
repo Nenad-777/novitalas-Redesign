@@ -17,6 +17,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA VEST — Meloni referendum Italija (24. mart 2026)
+  meloniReferendum: "/news/meloni-referendum.jpg",
+
   // ✅ NOVA GLAVNA VEST — Iran Tramp Ormuski moreuz (23. mart 2026)
   trumpIran: "/news/trump-iran.jpg",
 
@@ -348,6 +351,17 @@ export default function Home() {
                   <hr className="editorial-divider my-5 lg:hidden" />
 
                   <SmallArticleCard
+                    category="Geopolitika"
+                    href="/geopolitika/meloni-referendum-italija"
+                    title="Meloni priznala poraz: Italijani odbacili reformu pravosuđa"
+                    description="Italijani su na referendumu odbacili reformu pravosuđa, a premijerka Giorgia Meloni priznala poraz."
+                    imageSrc={IMAGES.meloniReferendum}
+                    imageAlt="Giorgia Meloni tokom obraćanja nakon referenduma o reformi pravosuđa u Italiji"
+                  />
+
+                  <hr className="editorial-divider my-5" />
+
+                  <SmallArticleCard
                     category="Srbija"
                     href="/srbija/lokalni-izbori-analiza"
                     title="Analiza predstojećih izbora: da li je moguć početak promena?"
@@ -376,17 +390,6 @@ export default function Home() {
                     description="Savremena psihologija otkriva da vaš mozak najbolje radi kada ga ostavite na miru — i da je dosada možda najproduktivnija stvar koju ćete danas uraditi."
                     imageSrc={IMAGES.psihologijaDosada}
                     imageAlt="Čovek koji sedi u tišini i gleda u daljinu — simbol mentalne odmorenosti i dosade"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Geopolitika"
-                    href="/geopolitika/ormuz-moreuz"
-                    title="Evropske zemlje i Japan o bezbednosti Ormuskog moreuza"
-                    description="Evropske zemlje i Japan objavili su zajedničko saopštenje o bezbednosti Ormuskog moreuza i zaštiti pomorskih ruta za snabdevanje energentima."
-                    imageSrc={IMAGES.ormuzKriza}
-                    imageAlt="Naftni tanker prolazi kroz uski Ormuski moreuz kao simbol globalne energetske napetosti"
                   />
                 </div>
               </FadeIn>
