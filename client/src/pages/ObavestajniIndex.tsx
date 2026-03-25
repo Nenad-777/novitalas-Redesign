@@ -10,6 +10,16 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/obavestajni-izvori/nemacka-curenje-informacija",
+    img: "/news/germany-intelligence.jpg",
+    alt: "Poverljiva fascikla na stolu u nemačkom parlamentu",
+    title:
+      "Nemačka ograničava pristup poverljivim podacima zbog straha od curenja",
+    description:
+      "Nemačke vlasti počele su da ograničavaju pristup poverljivim informacijama čak i pojedinim poslanicima, usled zabrinutosti da bi osetljivi podaci mogli da procure ka stranim akterima.",
+    date: "25. mart 2026.",
+  },
+  {
     href: "/obavestajni-izvori/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira",
     img: "/news/cia-china.jpg",
     alt: "CIA kampanja za regrutovanje kineskih vojnih oficira",

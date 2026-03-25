@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/obavestajni-izvori/nemacka-curenje-informacija",
+    title:
+      "Nemačka ograničava pristup poverljivim podacima zbog straha od curenja",
+    description:
+      "Nemačka ograničava pristup poverljivim podacima zbog straha od curenja ka stranim akterima i moguće infiltracije unutar sistema.",
+    imageSrc: "/news/germany-intelligence.jpg",
+    datePublished: "2026-03-25",
+  },
+  {
     path: "/geopolitika/orban-prekid-gas-ukrajina",
     title: "Orban najavio prekid isporuke gasa Ukrajini",
     description:
