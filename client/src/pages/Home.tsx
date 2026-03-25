@@ -17,6 +17,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA GLAVNA VEST — Orban prekid gasa Ukrajina (25. mart 2026)
+  orbanOil: "/news/orban-oil.jpg",
+
   // ✅ NOVA VEST — Moon ring solarni prsten (24. mart 2026)
   moonRing: "/news/moon-ring.jpg",
 
@@ -293,7 +296,7 @@ export default function Home() {
 
           {/* Editorial two-column layout: main story + four supporting stories */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
-            {/* LEFT: Main story — Nemacka kritika rata */}
+            {/* LEFT: Main story — Orban prekid gasa Ukrajina */}
             <FadeIn>
               <article>
                 <span className="kicker">Geopolitika</span>
@@ -307,13 +310,13 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/geopolitika/nemacka-kritika-rat-iran"
+                    href="/geopolitika/orban-prekid-gas-ukrajina"
                     className="headline-link"
                     style={{
                       fontFamily: "'Playfair Display', Georgia, serif",
                     }}
                   >
-                    {`Nemačka oštro kritikovala rat: \u201EKatastrofalna greška\u201C i kršenje međunarodnog prava`}
+                    Orban najavio prekid isporuke gasa Ukrajini
                   </Link>
                 </h2>
 
@@ -324,12 +327,12 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Nemački predsednik ocenio rat protiv Irana kao katastrofalnu grešku i upozorio na kršenje međunarodnog prava.
+                  {`Mađarski premijer Viktor Orban najavio postepeni prekid isporuke gasa Ukrajini, uz nove tenzije unutar Evropske unije.`}
                 </p>
 
                 <figure className="mb-0">
                   <Link
-                    href="/geopolitika/nemacka-kritika-rat-iran"
+                    href="/geopolitika/orban-prekid-gas-ukrajina"
                     className="block no-underline"
                   >
                     <div
@@ -340,8 +343,8 @@ export default function Home() {
                       }}
                     >
                       <img
-                        src={IMAGES.steinmeier}
-                        alt="Frank-Valter Štajnmajer tokom obraćanja povodom rata sa Iranom"
+                        src={IMAGES.orbanOil}
+                        alt="Viktor Orban tokom obraćanja na sastanku Evropskog saveta"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                         fetchPriority="high"
                         decoding="async"
@@ -358,6 +361,17 @@ export default function Home() {
                 <div className="flex flex-col">
                   {/* Mobile-only separator so first card matches the visual rhythm of cards 2–4 on small screens */}
                   <hr className="editorial-divider my-5 lg:hidden" />
+
+                  <SmallArticleCard
+                    category="Geopolitika"
+                    href="/geopolitika/nemacka-kritika-rat-iran"
+                    title={`Nemačka oštro kritikovala rat: „Katastrofalna greška“ i kršenje međunarodnog prava`}
+                    description="Nemački predsednik ocenio rat protiv Irana kao katastrofalnu grešku i upozorio na kršenje međunarodnog prava."
+                    imageSrc={IMAGES.steinmeier}
+                    imageAlt="Frank-Valter Štajnmajer tokom obraćanja povodom rata sa Iranom"
+                  />
+
+                  <hr className="editorial-divider my-5" />
 
                   <SmallArticleCard
                     category="Naša planeta"
@@ -388,17 +402,6 @@ export default function Home() {
                     description="Svetska meteorološka organizacija UN potvrdila je da je period od 2015. do 2025. bio najtopliji otkad se vodi moderna evidencija o temperaturama."
                     imageSrc={IMAGES.worldHeat}
                     imageAlt="Zemlja sa tankom crvenom linijom koja simbolizuje rast globalne temperature"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Geopolitika"
-                    href="/geopolitika/meloni-referendum-italija"
-                    title="Meloni priznala poraz: Italijani odbacili reformu pravosuđa"
-                    description="Italijani su na referendumu odbacili reformu pravosuđa, a premijerka Giorgia Meloni priznala poraz."
-                    imageSrc={IMAGES.meloniReferendum}
-                    imageAlt="Giorgia Meloni tokom obraćanja nakon referenduma o reformi pravosuđa u Italiji"
                   />
                 </div>
               </FadeIn>
