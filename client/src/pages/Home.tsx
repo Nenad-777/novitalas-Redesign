@@ -17,6 +17,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA VEST — Nemačka curenje informacija (25. mart 2026)
+  germanyIntelligence: "/news/germany-intelligence.jpg",
+
   // ✅ NOVA GLAVNA VEST — Orban prekid gasa Ukrajina (25. mart 2026)
   orbanOil: "/news/orban-oil.jpg",
 
@@ -363,9 +366,20 @@ export default function Home() {
                   <hr className="editorial-divider my-5 lg:hidden" />
 
                   <SmallArticleCard
+                    category="Obaveštajni izvori"
+                    href="/obavestajni-izvori/nemacka-curenje-informacija"
+                    title="Nemačka ograničava pristup poverljivim podacima zbog straha od curenja"
+                    description="Nemačke vlasti počele su da ograničavaju pristup poverljivim informacijama čak i pojedinim poslanicima, usled zabrinutosti da bi podaci procureli ka stranim akterima."
+                    imageSrc={IMAGES.germanyIntelligence}
+                    imageAlt="Poverljiva fascikla na stolu u nemačkom parlamentu"
+                  />
+
+                  <hr className="editorial-divider my-5" />
+
+                  <SmallArticleCard
                     category="Geopolitika"
                     href="/geopolitika/nemacka-kritika-rat-iran"
-                    title={`Nemačka oštro kritikovala rat: „Katastrofalna greška“ i kršenje međunarodnog prava`}
+                    title={`Nemačka oštro kritikovala rat: „Katastrofalna greška" i kršenje međunarodnog prava`}
                     description="Nemački predsednik ocenio rat protiv Irana kao katastrofalnu grešku i upozorio na kršenje međunarodnog prava."
                     imageSrc={IMAGES.steinmeier}
                     imageAlt="Frank-Valter Štajnmajer tokom obraćanja povodom rata sa Iranom"
@@ -391,17 +405,6 @@ export default function Home() {
                     description="Iran preti zatvaranjem Ormuskog moreuza kao odgovor na američki ultimatum, uz rizik globalne energetske krize."
                     imageSrc={IMAGES.trumpIran}
                     imageAlt="Ilustracija sukoba između Donalda Trampa i Irana sa simboličnom kapljom nafte u centru, koja predstavlja globalnu energetsku i političku napetost"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Naša planeta"
-                    href="/nasa-planeta/najtoplija-decenija-planeta-un"
-                    title="UN potvrdio: planeta iza sebe ima najtopliju deceniju u istoriji merenja"
-                    description="Svetska meteorološka organizacija UN potvrdila je da je period od 2015. do 2025. bio najtopliji otkad se vodi moderna evidencija o temperaturama."
-                    imageSrc={IMAGES.worldHeat}
-                    imageAlt="Zemlja sa tankom crvenom linijom koja simbolizuje rast globalne temperature"
                   />
                 </div>
               </FadeIn>

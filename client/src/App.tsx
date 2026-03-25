@@ -21,6 +21,9 @@ import RezerveNafte from "./pages/rezerve-nafte";
 import FrancuskaOdbranaOrmuza from "./pages/francuska-odbrana-ormuza";
 import SadSpecijalnaOperacijaIranUranijum from "./pages/sad-specijalna-operacija-iran-uranijum";
 
+/* ✅ NOVA VEST — Obaveštajni izvori */
+import NemackaCurenjeInformacija from "./pages/nemacka-curenje-informacija";
+
 import ObavestajniArticle from "./pages/ObavestajniArticle";
 import ObavestajniIndex from "./pages/ObavestajniIndex";
 import KinaSpyBrodovi from "./pages/kina-spy-brodovi";
@@ -233,6 +236,11 @@ function Router() {
             OBAVEŠTAJNI IZVORI
            ========================= */}
         <Route path="/obavestajni-izvori" component={ObavestajniIndex} />
+
+        <Route
+          path="/obavestajni-izvori/nemacka-curenje-informacija"
+          component={NemackaCurenjeInformacija}
+        />
 
         <Route
           path="/obavestajni-izvori/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira"

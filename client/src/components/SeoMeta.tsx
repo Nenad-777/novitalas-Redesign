@@ -24,6 +24,7 @@ import {
 const SITE_BASE = "https://novitalas.org";
 const BRAND_SUFFIX = " — Novi Talas";
 const JSON_LD_ID = "article-json-ld";
+const CANONICAL_ID = "article-canonical";
 
 type SeoMetaProps = {
   /** Route path, e.g. "/geopolitika/svetska-kriza-sve-ozbiljnija" */
@@ -71,6 +72,18 @@ export default function SeoMeta({
       el.textContent = JSON.stringify(data);
     };
 
+    /** Inject or update a <link rel="canonical"> element. */
+    const setCanonical = (href: string) => {
+      let el = document.getElementById(CANONICAL_ID) as HTMLLinkElement | null;
+      if (!el) {
+        el = document.createElement("link");
+        el.id = CANONICAL_ID;
+        el.setAttribute("rel", "canonical");
+        document.head.appendChild(el);
+      }
+      el.setAttribute("href", href);
+    };
+
     // ── Priority 1: explicit seo.ts entry ──────────────────────────────────
     const explicit = seoData[path];
     if (explicit) {
@@ -87,6 +100,7 @@ export default function SeoMeta({
       setMeta("name", "twitter:title", explicit.twitterTitle);
       setMeta("name", "twitter:description", explicit.twitterDescription);
       setMeta("name", "twitter:image", explicit.twitterImage);
+      setCanonical(explicit.ogUrl);
       setJsonLd(
         buildJsonLd({
           title: explicit.ogTitle,
@@ -116,6 +130,7 @@ export default function SeoMeta({
         setMeta("name", "twitter:title", registered.title);
         setMeta("name", "twitter:description", registered.description);
         setMeta("name", "twitter:image", ogImage);
+        setCanonical(ogUrl);
         setJsonLd(
           buildJsonLd({
             title: registered.title,
@@ -144,6 +159,7 @@ export default function SeoMeta({
           setMeta("property", "og:image", ogImage);
           setMeta("name", "twitter:image", ogImage);
         }
+        setCanonical(ogUrl);
         setJsonLd(
           buildJsonLd({
             title,
@@ -155,11 +171,13 @@ export default function SeoMeta({
       }
     }
 
-    // Cleanup: restore default title and remove JSON-LD when navigating away.
+    // Cleanup: restore default title and remove JSON-LD and canonical when navigating away.
     return () => {
       document.title = "NOVI TALAS — Vaš prozor u svet";
       const ldEl = document.getElementById(JSON_LD_ID);
       if (ldEl) ldEl.remove();
+      const canonEl = document.getElementById(CANONICAL_ID);
+      if (canonEl) canonEl.remove();
     };
   }, [path, title, description, imageSrc]);
 
