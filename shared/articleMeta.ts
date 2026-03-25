@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/orban-prekid-gas-ukrajina",
+    title: "Orban najavio prekid isporuke gasa Ukrajini",
+    description:
+      "Mađarski premijer Viktor Orban najavio postepeni prekid isporuke gasa Ukrajini, uz nove tenzije unutar Evropske unije.",
+    imageSrc: "/news/orban-oil.jpg",
+    datePublished: "2026-03-25",
+  },
+  {
     path: "/nasa-planeta/moon-ring",
     title: "Plan iz Japana: solarni prsten oko Meseca za energiju Zemlje",
     description:

@@ -30,6 +30,9 @@ import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 
 /* ✅ NOVA VEST — Geopolitika */
+import OrbanPrekidGasUkrajina from "./pages/orban-prekid-gas-ukrajina";
+
+/* ✅ NOVA VEST — Geopolitika */
 import NemackaKritikaRatIran from "./pages/nemacka-kritika-rat-iran";
 
 /* ✅ NOVA VEST — Geopolitika */
@@ -125,6 +128,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/orban-prekid-gas-ukrajina"
+          component={OrbanPrekidGasUkrajina}
+        />
+
         <Route
           path="/geopolitika/nemacka-kritika-rat-iran"
           component={NemackaKritikaRatIran}
