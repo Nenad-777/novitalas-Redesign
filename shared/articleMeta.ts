@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/un-istraga-skola-iran",
+    title: "UN traži pravdu nakon bombardovanja škole u Iranu",
+    description:
+      "Ujedinjene nacije traže hitnu istragu nakon bombardovanja škole u Iranu u kojem je stradalo više od 150 civila.",
+    imageSrc: "/news/un-investigation.jpg",
+    datePublished: "2026-03-27",
+  },
+  {
     path: "/obavestajni-izvori/nemacka-curenje-informacija",
     title:
       "Nemačka ograničava pristup poverljivim podacima zbog straha od curenja",

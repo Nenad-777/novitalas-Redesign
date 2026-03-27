@@ -17,6 +17,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA GLAVNA VEST — UN istraga škola Iran (27. mart 2026)
+  unInvestigation: "/news/un-investigation.jpg",
+
   // ✅ NOVA VEST — Nemačka curenje informacija (25. mart 2026)
   germanyIntelligence: "/news/germany-intelligence.jpg",
 
@@ -299,7 +302,7 @@ export default function Home() {
 
           {/* Editorial two-column layout: main story + four supporting stories */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
-            {/* LEFT: Main story — Orban prekid gasa Ukrajina */}
+            {/* LEFT: Main story — UN istraga škola Iran */}
             <FadeIn>
               <article>
                 <span className="kicker">Geopolitika</span>
@@ -313,13 +316,13 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/geopolitika/orban-prekid-gas-ukrajina"
+                    href="/geopolitika/un-istraga-skola-iran"
                     className="headline-link"
                     style={{
                       fontFamily: "'Playfair Display', Georgia, serif",
                     }}
                   >
-                    Orban najavio prekid isporuke gasa Ukrajini
+                    UN traži pravdu nakon bombardovanja škole u Iranu
                   </Link>
                 </h2>
 
@@ -330,12 +333,12 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  {`Mađarski premijer Viktor Orban najavio postepeni prekid isporuke gasa Ukrajini, uz nove tenzije unutar Evropske unije.`}
+                  {`Ujedinjene nacije traže hitnu istragu nakon bombardovanja škole u Iranu u kojem je stradalo više od 150 civila.`}
                 </p>
 
                 <figure className="mb-0">
                   <Link
-                    href="/geopolitika/orban-prekid-gas-ukrajina"
+                    href="/geopolitika/un-istraga-skola-iran"
                     className="block no-underline"
                   >
                     <div
@@ -346,8 +349,8 @@ export default function Home() {
                       }}
                     >
                       <img
-                        src={IMAGES.orbanOil}
-                        alt="Viktor Orban tokom obraćanja na sastanku Evropskog saveta"
+                        src={IMAGES.unInvestigation}
+                        alt="Zastava Ujedinjenih nacija ispred sedišta UN"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                         fetchPriority="high"
                         decoding="async"
@@ -364,6 +367,17 @@ export default function Home() {
                 <div className="flex flex-col">
                   {/* Mobile-only separator so first card matches the visual rhythm of cards 2–4 on small screens */}
                   <hr className="editorial-divider my-5 lg:hidden" />
+
+                  <SmallArticleCard
+                    category="Geopolitika"
+                    href="/geopolitika/orban-prekid-gas-ukrajina"
+                    title="Orban najavio prekid isporuke gasa Ukrajini"
+                    description="Mađarski premijer Viktor Orban najavio postepeni prekid isporuke gasa Ukrajini, uz nove tenzije unutar Evropske unije."
+                    imageSrc={IMAGES.orbanOil}
+                    imageAlt="Viktor Orban tokom obraćanja na sastanku Evropskog saveta"
+                  />
+
+                  <hr className="editorial-divider my-5" />
 
                   <SmallArticleCard
                     category="Obaveštajni izvori"
@@ -394,17 +408,6 @@ export default function Home() {
                     description="Japanski istraživački tim predstavio je koncept izgradnje ogromnog solarnog sistema na Mesecu, koji bi mogao neprekidno da proizvodi energiju i šalje je na Zemlju."
                     imageSrc={IMAGES.moonRing}
                     imageAlt="Solarni prsten oko Meseca — japanski koncept svemirske energije"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Geopolitika"
-                    href="/geopolitika/iran-trump-ormuski-moreuz"
-                    title="Iran preti zatvaranjem Ormuskog moreuza kao odgovor na Trampov ultimatum"
-                    description="Iran preti zatvaranjem Ormuskog moreuza kao odgovor na američki ultimatum, uz rizik globalne energetske krize."
-                    imageSrc={IMAGES.trumpIran}
-                    imageAlt="Ilustracija sukoba između Donalda Trampa i Irana sa simboličnom kapljom nafte u centru, koja predstavlja globalnu energetsku i političku napetost"
                   />
                 </div>
               </FadeIn>
