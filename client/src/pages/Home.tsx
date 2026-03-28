@@ -17,7 +17,10 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
-  // ✅ NOVA GLAVNA VEST — UN istraga škola Iran (27. mart 2026)
+  // ✅ NOVA GLAVNA VEST — Vens Netanjahu Iran rat (28. mart 2026)
+  vanceNetanyahu: "/news/vance-netanyahu.jpg",
+
+  // ✅ VEST — UN istraga škola Iran (27. mart 2026)
   unInvestigation: "/news/un-investigation.jpg",
 
   // ✅ NOVA VEST — Nemačka curenje informacija (25. mart 2026)
@@ -302,7 +305,7 @@ export default function Home() {
 
           {/* Editorial two-column layout: main story + four supporting stories */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
-            {/* LEFT: Main story — UN istraga škola Iran */}
+            {/* LEFT: Main story — Vens Netanjahu Iran rat */}
             <FadeIn>
               <article>
                 <span className="kicker">Geopolitika</span>
@@ -316,13 +319,13 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/geopolitika/un-istraga-skola-iran"
+                    href="/geopolitika/vens-netanjahu-iran-rat"
                     className="headline-link"
                     style={{
                       fontFamily: "'Playfair Display', Georgia, serif",
                     }}
                   >
-                    UN traži pravdu nakon bombardovanja škole u Iranu
+                    Vens kritikovao Netanjahua zbog procena rata sa Iranom
                   </Link>
                 </h2>
 
@@ -333,12 +336,12 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  {`Ujedinjene nacije traže hitnu istragu nakon bombardovanja škole u Iranu u kojem je stradalo više od 150 civila.`}
+                  {`JD Vens kritikovao Benjamina Netanjahua zbog procena rata sa Iranom, ukazujući na rastuće razlike unutar savezništva.`}
                 </p>
 
                 <figure className="mb-0">
                   <Link
-                    href="/geopolitika/un-istraga-skola-iran"
+                    href="/geopolitika/vens-netanjahu-iran-rat"
                     className="block no-underline"
                   >
                     <div
@@ -349,8 +352,8 @@ export default function Home() {
                       }}
                     >
                       <img
-                        src={IMAGES.unInvestigation}
-                        alt="Zastava Ujedinjenih nacija ispred sedišta UN"
+                        src={IMAGES.vanceNetanyahu}
+                        alt="JD Vens i Benjamin Netanjahu tokom sastanka u Jerusalimu"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                         fetchPriority="high"
                         decoding="async"
@@ -367,6 +370,17 @@ export default function Home() {
                 <div className="flex flex-col">
                   {/* Mobile-only separator so first card matches the visual rhythm of cards 2–4 on small screens */}
                   <hr className="editorial-divider my-5 lg:hidden" />
+
+                  <SmallArticleCard
+                    category="Geopolitika"
+                    href="/geopolitika/un-istraga-skola-iran"
+                    title="UN traži pravdu nakon bombardovanja škole u Iranu"
+                    description="Ujedinjene nacije traže hitnu istragu nakon bombardovanja škole u Iranu u kojem je stradalo više od 150 civila."
+                    imageSrc={IMAGES.unInvestigation}
+                    imageAlt="Zastava Ujedinjenih nacija ispred sedišta UN"
+                  />
+
+                  <hr className="editorial-divider my-5" />
 
                   <SmallArticleCard
                     category="Geopolitika"
@@ -397,17 +411,6 @@ export default function Home() {
                     description="Nemački predsednik ocenio rat protiv Irana kao katastrofalnu grešku i upozorio na kršenje međunarodnog prava."
                     imageSrc={IMAGES.steinmeier}
                     imageAlt="Frank-Valter Štajnmajer tokom obraćanja povodom rata sa Iranom"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Naša planeta"
-                    href="/nasa-planeta/moon-ring"
-                    title="Plan iz Japana: solarni prsten oko Meseca za energiju Zemlje"
-                    description="Japanski istraživački tim predstavio je koncept izgradnje ogromnog solarnog sistema na Mesecu, koji bi mogao neprekidno da proizvodi energiju i šalje je na Zemlju."
-                    imageSrc={IMAGES.moonRing}
-                    imageAlt="Solarni prsten oko Meseca — japanski koncept svemirske energije"
                   />
                 </div>
               </FadeIn>

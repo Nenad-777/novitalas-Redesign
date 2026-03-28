@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  vanceNetanyahu: "/news/vance-netanyahu.jpg",
   orbanOil: "/news/orban-oil.jpg",
   steinmeier: "/news/Frank-Walter Steinmeier.jpg",
   meloniReferendum: "/news/meloni-referendum.jpg",
@@ -65,7 +66,60 @@ export default function GeopolitikaIndex() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* ✅ NAJNOVIJA VEST (UN istraga škola Iran — 27. mart 2026) */}
+            {/* ✅ NAJNOVIJA VEST (Vens Netanjahu Iran rat — 28. mart 2026) */}
+            <article className="md:col-span-2">
+              <Link
+                href="/geopolitika/vens-netanjahu-iran-rat"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.vanceNetanyahu}
+                    alt="JD Vens i Benjamin Netanjahu tokom sastanka u Jerusalimu"
+                    className="w-full h-[260px] object-cover object-center block"
+                    decoding="async"
+                  />
+                </div>
+
+                <h2
+                  className="text-[22px] md:text-[28px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Vens kritikovao Netanjahua zbog procena rata sa Iranom
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  {"JD Vens kritikovao Benjamina Netanjahua zbog procena rata sa Iranom, ukazujući na rastuće razlike unutar savezništva."}
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
+
+            {/* ✅ VEST (UN istraga škola Iran — 27. mart 2026) */}
             <article className="md:col-span-2">
               <Link
                 href="/geopolitika/un-istraga-skola-iran"

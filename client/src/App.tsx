@@ -33,6 +33,9 @@ import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 
 /* ✅ NOVA VEST — Geopolitika */
+import VensNetanjahuIranRat from "./pages/vens-netanjahu-iran-rat";
+
+/* ✅ NOVA VEST — Geopolitika */
 import UnIstragaSkolaIran from "./pages/un-istraga-skola-iran";
 
 /* ✅ NOVA VEST — Geopolitika */
@@ -134,6 +137,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/vens-netanjahu-iran-rat"
+          component={VensNetanjahuIranRat}
+        />
+
         <Route
           path="/geopolitika/un-istraga-skola-iran"
           component={UnIstragaSkolaIran}
