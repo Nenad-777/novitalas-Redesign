@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/vens-netanjahu-iran-rat",
+    title: "Vens kritikovao Netanjahua zbog procena rata sa Iranom",
+    description:
+      "JD Vens kritikovao Benjamina Netanjahua zbog procena rata sa Iranom, ukazujući na rastuće razlike unutar savezništva.",
+    imageSrc: "/news/vance-netanyahu.jpg",
+    datePublished: "2026-03-28",
+  },
+  {
     path: "/geopolitika/un-istraga-skola-iran",
     title: "UN traži pravdu nakon bombardovanja škole u Iranu",
     description:
