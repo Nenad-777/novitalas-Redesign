@@ -17,6 +17,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA GLAVNA VEST — Izbori nepravilnosti krivična odgovornost (29. mart 2026)
+  izboriOdgovornost: "/news/izbori-odgovornost.jpg",
+
   // ✅ NOVA GLAVNA VEST — Vens Netanjahu Iran rat (28. mart 2026)
   vanceNetanyahu: "/news/vance-netanyahu.jpg",
 
@@ -305,10 +308,10 @@ export default function Home() {
 
           {/* Editorial two-column layout: main story + four supporting stories */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
-            {/* LEFT: Main story — Vens Netanjahu Iran rat */}
+            {/* LEFT: Main story — Izbori nepravilnosti krivična odgovornost */}
             <FadeIn>
               <article>
-                <span className="kicker">Geopolitika</span>
+                <span className="kicker">Srbija</span>
 
                 <h2
                   className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
@@ -319,13 +322,13 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/geopolitika/vens-netanjahu-iran-rat"
+                    href="/srbija/izbori-nepravilnosti-krivicna-odgovornost"
                     className="headline-link"
                     style={{
                       fontFamily: "'Playfair Display', Georgia, serif",
                     }}
                   >
-                    Vens kritikovao Netanjahua zbog procena rata sa Iranom
+                    Nepravilnosti na izborima: zakon predviđa krivičnu odgovornost za manipulacije
                   </Link>
                 </h2>
 
@@ -336,12 +339,12 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  {`JD Vens kritikovao Benjamina Netanjahua zbog procena rata sa Iranom, ukazujući na rastuće razlike unutar savezništva.`}
+                  {`Prijavljene nepravilnosti tokom izbora u Srbiji otvaraju pitanje krivične odgovornosti za manipulacije i zloupotrebe izbornog procesa.`}
                 </p>
 
                 <figure className="mb-0">
                   <Link
-                    href="/geopolitika/vens-netanjahu-iran-rat"
+                    href="/srbija/izbori-nepravilnosti-krivicna-odgovornost"
                     className="block no-underline"
                   >
                     <div
@@ -352,8 +355,8 @@ export default function Home() {
                       }}
                     >
                       <img
-                        src={IMAGES.vanceNetanyahu}
-                        alt="JD Vens i Benjamin Netanjahu tokom sastanka u Jerusalimu"
+                        src={IMAGES.izboriOdgovornost}
+                        alt="Ilustracija biračkog mesta u Srbiji tokom izbornog dana"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                         fetchPriority="high"
                         decoding="async"
@@ -370,6 +373,17 @@ export default function Home() {
                 <div className="flex flex-col">
                   {/* Mobile-only separator so first card matches the visual rhythm of cards 2–4 on small screens */}
                   <hr className="editorial-divider my-5 lg:hidden" />
+
+                  <SmallArticleCard
+                    category="Geopolitika"
+                    href="/geopolitika/vens-netanjahu-iran-rat"
+                    title="Vens kritikovao Netanjahua zbog procena rata sa Iranom"
+                    description="JD Vens kritikovao Benjamina Netanjahua zbog procena rata sa Iranom, ukazujući na rastuće razlike unutar savezništva."
+                    imageSrc={IMAGES.vanceNetanyahu}
+                    imageAlt="JD Vens i Benjamin Netanjahu tokom sastanka u Jerusalimu"
+                  />
+
+                  <hr className="editorial-divider my-5" />
 
                   <SmallArticleCard
                     category="Geopolitika"
@@ -400,17 +414,6 @@ export default function Home() {
                     description="Nemačke vlasti počele su da ograničavaju pristup poverljivim informacijama čak i pojedinim poslanicima, usled zabrinutosti da bi podaci procureli ka stranim akterima."
                     imageSrc={IMAGES.germanyIntelligence}
                     imageAlt="Poverljiva fascikla na stolu u nemačkom parlamentu"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Geopolitika"
-                    href="/geopolitika/nemacka-kritika-rat-iran"
-                    title={`Nemačka oštro kritikovala rat: „Katastrofalna greška" i kršenje međunarodnog prava`}
-                    description="Nemački predsednik ocenio rat protiv Irana kao katastrofalnu grešku i upozorio na kršenje međunarodnog prava."
-                    imageSrc={IMAGES.steinmeier}
-                    imageAlt="Frank-Valter Štajnmajer tokom obraćanja povodom rata sa Iranom"
                   />
                 </div>
               </FadeIn>

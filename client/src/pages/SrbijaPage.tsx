@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  izboriOdgovornost: "/news/izbori-odgovornost.jpg",
   lokalniIzbori: "/news/lokalni-izbori.jpg",
   akademijaNovisad: "/news/akademija-novisad.jpg",
   zvucniTop: "/news/zvucni-top.jpg",
@@ -54,6 +55,60 @@ export default function SrbijaPage() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* NOVA VEST — Nepravilnosti na izborima */}
+            <article>
+              <Link
+                href="/srbija/izbori-nepravilnosti-krivicna-odgovornost"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.izboriOdgovornost}
+                    alt="Ilustracija biračkog mesta u Srbiji tokom izbornog dana"
+                    className="w-full h-[220px] object-cover object-center block"
+                    decoding="async"
+                  />
+                </div>
+
+                <h2
+                  className="text-[22px] md:text-[26px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Nepravilnosti na izborima: zakon predviđa krivičnu odgovornost za manipulacije
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Prijavljene nepravilnosti tokom izbora u Srbiji otvaraju pitanje
+                  krivične odgovornosti za manipulacije i zloupotrebe izbornog procesa.
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
+
             {/* NOVA ANALIZA — Lokalni izbori */}
             <article>
               <Link

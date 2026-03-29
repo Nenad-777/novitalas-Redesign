@@ -515,4 +515,23 @@ export const seoData: Record<string, SEOData> = {
     twitterImage: "https://novitalas.org/news/Frank-Walter%20Steinmeier.jpg",
     datePublished: "2026-03-24",
   },
+
+  "/srbija/izbori-nepravilnosti-krivicna-odgovornost": {
+    title:
+      "Nepravilnosti na izborima: zakon predviđa krivičnu odgovornost za manipulacije — Novi Talas",
+    description:
+      "Prijavljene nepravilnosti tokom izbora u Srbiji otvaraju pitanje krivične odgovornosti za manipulacije i zloupotrebe izbornog procesa.",
+    ogTitle:
+      "Nepravilnosti na izborima: zakon predviđa krivičnu odgovornost za manipulacije",
+    ogDescription:
+      "Prijavljene nepravilnosti tokom izbora u Srbiji otvaraju pitanje krivične odgovornosti za manipulacije i zloupotrebe izbornog procesa.",
+    ogUrl: "https://novitalas.org/srbija/izbori-nepravilnosti-krivicna-odgovornost",
+    ogImage: "https://novitalas.org/news/izbori-odgovornost.jpg",
+    twitterTitle:
+      "Nepravilnosti na izborima: zakon predviđa krivičnu odgovornost za manipulacije",
+    twitterDescription:
+      "Prijavljene nepravilnosti tokom izbora u Srbiji otvaraju pitanje krivične odgovornosti za manipulacije i zloupotrebe izbornog procesa.",
+    twitterImage: "https://novitalas.org/news/izbori-odgovornost.jpg",
+    datePublished: "2026-03-29",
+  },
 };
