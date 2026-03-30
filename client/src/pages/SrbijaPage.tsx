@@ -12,6 +12,7 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
   izboriOdgovornost: "/news/izbori-odgovornost.jpg",
+  izboriRezultati: "/news/izbori-rezultati.jpg",
   lokalniIzbori: "/news/lokalni-izbori.jpg",
   akademijaNovisad: "/news/akademija-novisad.jpg",
   zvucniTop: "/news/zvucni-top.jpg",
@@ -95,6 +96,61 @@ export default function SrbijaPage() {
                 >
                   Prijavljene nepravilnosti tokom izbora u Srbiji otvaraju pitanje
                   krivične odgovornosti za manipulacije i zloupotrebe izbornog procesa.
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
+
+            {/* NOVA VEST — Rezultati izbora */}
+            <article>
+              <Link
+                href="/srbija/izbori-rezultati"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.izboriRezultati}
+                    alt="Ilustracija izbornih rezultata u Srbiji"
+                    className="w-full h-[220px] object-cover object-center block"
+                    decoding="async"
+                  />
+                </div>
+
+                <h2
+                  className="text-[22px] md:text-[26px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Rezultati izbora: vladajuća stranka zadržala većinu, ali uz gubitke u gradovima
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Lokalni izbori u Srbiji doneli su pobede vladajuće stranke u
+                  većini opština, ali uz porast podrške opoziciji u urbanim
+                  centrima i prigovore na nepravilnosti.
                 </p>
 
                 <div
