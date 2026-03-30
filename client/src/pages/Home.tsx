@@ -17,6 +17,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA VEST — Preliminarni rezultati izbora (30. mart 2026)
+  izboriRezultati: "/news/izbori-rezultati.jpg",
+
   // ✅ NOVA GLAVNA VEST — Izbori nepravilnosti krivična odgovornost (29. mart 2026)
   izboriOdgovornost: "/news/izbori-odgovornost.jpg",
 
@@ -414,6 +417,17 @@ export default function Home() {
                     description="Nemačke vlasti počele su da ograničavaju pristup poverljivim informacijama čak i pojedinim poslanicima, usled zabrinutosti da bi podaci procureli ka stranim akterima."
                     imageSrc={IMAGES.germanyIntelligence}
                     imageAlt="Poverljiva fascikla na stolu u nemačkom parlamentu"
+                  />
+
+                  <hr className="editorial-divider my-5" />
+
+                  <SmallArticleCard
+                    category="Srbija"
+                    href="/srbija/izbori-rezultati"
+                    title="Tesne razlike i smanjenje prednosti vlasti: preliminarni rezultati u deset opština"
+                    description="Preliminarni rezultati lokalnih izbora od 29. marta pokazuju da je vladajuća koalicija zadržala vlast u svim opštinama, ali uz vidljivo smanjene razlike i tesne odnose snaga."
+                    imageSrc={IMAGES.izboriRezultati}
+                    imageAlt="Preliminarni rezultati lokalnih izbora u Srbiji 29. marta 2026."
                   />
                 </div>
               </FadeIn>
