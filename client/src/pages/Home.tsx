@@ -17,7 +17,10 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
-  // ✅ NOVA GLAVNA VEST — Izbori nepravilnosti krivična odgovornost (29. mart 2026)
+  // ✅ NOVA GLAVNA VEST — Izbori rezultati (30. mart 2026)
+  izboriRezultati: "/news/izbori-rezultati.jpg",
+
+  // ✅ NOVA VEST — Izbori nepravilnosti krivična odgovornost (29. mart 2026)
   izboriOdgovornost: "/news/izbori-odgovornost.jpg",
 
   // ✅ NOVA GLAVNA VEST — Vens Netanjahu Iran rat (28. mart 2026)
@@ -308,7 +311,7 @@ export default function Home() {
 
           {/* Editorial two-column layout: main story + four supporting stories */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
-            {/* LEFT: Main story — Izbori nepravilnosti krivična odgovornost */}
+            {/* LEFT: Main story — Izbori rezultati */}
             <FadeIn>
               <article>
                 <span className="kicker">Srbija</span>
@@ -322,13 +325,13 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/srbija/izbori-nepravilnosti-krivicna-odgovornost"
+                    href="/srbija/izbori-rezultati"
                     className="headline-link"
                     style={{
                       fontFamily: "'Playfair Display', Georgia, serif",
                     }}
                   >
-                    Nepravilnosti na izborima: zakon predviđa krivičnu odgovornost za manipulacije
+                    Tesne razlike i smanjenje prednosti vlasti: preliminarni rezultati u deset opština
                   </Link>
                 </h2>
 
@@ -339,12 +342,12 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  {`Prijavljene nepravilnosti tokom izbora u Srbiji otvaraju pitanje krivične odgovornosti za manipulacije i zloupotrebe izbornog procesa.`}
+                  {`Preliminarni rezultati lokalnih izbora održanih 29. marta u deset opština u Srbiji pokazuju da je vladajuća koalicija zadržala vlast u svim sredinama, ali uz vidljivo smanjene razlike i tesne odnose snaga u više opština.`}
                 </p>
 
                 <figure className="mb-0">
                   <Link
-                    href="/srbija/izbori-nepravilnosti-krivicna-odgovornost"
+                    href="/srbija/izbori-rezultati"
                     className="block no-underline"
                   >
                     <div
@@ -355,8 +358,8 @@ export default function Home() {
                       }}
                     >
                       <img
-                        src={IMAGES.izboriOdgovornost}
-                        alt="Ilustracija biračkog mesta u Srbiji tokom izbornog dana"
+                        src={IMAGES.izboriRezultati}
+                        alt="Ilustracija izbornih rezultata u Srbiji"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                         fetchPriority="high"
                         decoding="async"
@@ -375,12 +378,12 @@ export default function Home() {
                   <hr className="editorial-divider my-5 lg:hidden" />
 
                   <SmallArticleCard
-                    category="Geopolitika"
-                    href="/geopolitika/vens-netanjahu-iran-rat"
-                    title="Vens kritikovao Netanjahua zbog procena rata sa Iranom"
-                    description="JD Vens kritikovao Benjamina Netanjahua zbog procena rata sa Iranom, ukazujući na rastuće razlike unutar savezništva."
-                    imageSrc={IMAGES.vanceNetanyahu}
-                    imageAlt="JD Vens i Benjamin Netanjahu tokom sastanka u Jerusalimu"
+                    category="Srbija"
+                    href="/srbija/izbori-nepravilnosti-krivicna-odgovornost"
+                    title="Nepravilnosti na izborima: zakon predviđa krivičnu odgovornost za manipulacije"
+                    description="Prijavljene nepravilnosti tokom izbora u Srbiji otvaraju pitanje krivične odgovornosti za manipulacije i zloupotrebe izbornog procesa."
+                    imageSrc={IMAGES.izboriOdgovornost}
+                    imageAlt="Ilustracija biračkog mesta u Srbiji tokom izbornog dana"
                   />
 
                   <hr className="editorial-divider my-5" />

@@ -138,7 +138,7 @@ export default function SrbijaPage() {
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  Rezultati izbora: vladajuća stranka zadržala većinu, ali uz gubitke u gradovima
+                  Tesne razlike i smanjenje prednosti vlasti: preliminarni rezultati u deset opština
                 </h2>
 
                 <p
@@ -148,9 +148,7 @@ export default function SrbijaPage() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Lokalni izbori u Srbiji doneli su pobede vladajuće stranke u
-                  većini opština, ali uz porast podrške opoziciji u urbanim
-                  centrima i prigovore na nepravilnosti.
+                  Preliminarni rezultati lokalnih izbora u deset opština u Srbiji: vladajuća koalicija zadržala vlast uz vidljivo smanjene razlike i tesne odnose snaga.
                 </p>
 
                 <div
