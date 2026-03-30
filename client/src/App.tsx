@@ -83,6 +83,9 @@ import AkademijaNovisad from "./pages/akademija-novisad";
 import LokalniIzboriAnaliza from "./pages/lokalni-izbori-analiza";
 
 /* ✅ NOVA VEST — Srbija */
+import IzboriRezultati from "./pages/izbori-rezultati";
+
+/* ✅ NOVA VEST — Srbija */
 import IzboriNepravilnostiKrivicnaOdgovornost from "./pages/izbori-nepravilnosti-krivicna-odgovornost";
 
 import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
@@ -289,6 +292,11 @@ function Router() {
         <Route
           path="/srbija/lokalni-izbori-analiza"
           component={LokalniIzboriAnaliza}
+        />
+
+        <Route
+          path="/srbija/izbori-rezultati"
+          component={IzboriRezultati}
         />
 
         <Route

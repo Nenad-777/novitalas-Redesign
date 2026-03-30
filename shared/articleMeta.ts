@@ -290,6 +290,15 @@ export const articleMeta: ArticleStaticMeta[] = [
     datePublished: "2026-03-18",
   },
   {
+    path: "/srbija/izbori-rezultati",
+    title:
+      "Tesne razlike i smanjenje prednosti vlasti: preliminarni rezultati u deset opština",
+    description:
+      "Preliminarni rezultati lokalnih izbora od 29. marta pokazuju da je vladajuća koalicija zadržala vlast u svim opštinama, ali uz vidljivo smanjene razlike i tesne odnose snaga.",
+    imageSrc: "/news/izbori-rezultati.jpg",
+    datePublished: "2026-03-30",
+  },
+  {
     path: "/geopolitika/svetska-kriza-sve-ozbiljnija",
     title: "SVETSKA KRIZA SVE OZBILJNIJA",
     description:
