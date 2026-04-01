@@ -17,6 +17,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA GLAVNA VEST — ECB inflacija evrozona (1. april 2026)
+  ecbFrankfurtInflation: "/ecb-frankfurt-inflation.jpg",
+
   // ✅ NOVA GLAVNA VEST — Izbori rezultati (30. mart 2026)
   izboriRezultati: "/news/izbori-rezultati.jpg",
 
@@ -311,10 +314,10 @@ export default function Home() {
 
           {/* Editorial two-column layout: main story + four supporting stories */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
-            {/* LEFT: Main story — Izbori rezultati */}
+            {/* LEFT: Main story — ECB inflacija evrozona */}
             <FadeIn>
               <article>
-                <span className="kicker">Srbija</span>
+                <span className="kicker">Geopolitika</span>
 
                 <h2
                   className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
@@ -325,13 +328,13 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/srbija/izbori-rezultati"
+                    href="/geopolitika/inflacija-evrozona-ecb-mart"
                     className="headline-link"
                     style={{
                       fontFamily: "'Playfair Display', Georgia, serif",
                     }}
                   >
-                    Tesne razlike i smanjenje prednosti vlasti: preliminarni rezultati u deset opština
+                    Inflacija u evrozoni ponovo iznad cilja Evropske centralne banke
                   </Link>
                 </h2>
 
@@ -342,12 +345,12 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  {`Preliminarni rezultati lokalnih izbora održanih 29. marta u deset opština u Srbiji pokazuju da je vladajuća koalicija zadržala vlast u svim sredinama, ali uz vidljivo smanjene razlike i tesne odnose snaga u više opština.`}
+                  {`Rast cena energije pogurao inflaciju na 2,5 odsto, dok monetarne vlasti razmatraju sledeće korake`}
                 </p>
 
                 <figure className="mb-0">
                   <Link
-                    href="/srbija/izbori-rezultati"
+                    href="/geopolitika/inflacija-evrozona-ecb-mart"
                     className="block no-underline"
                   >
                     <div
@@ -358,8 +361,8 @@ export default function Home() {
                       }}
                     >
                       <img
-                        src={IMAGES.izboriRezultati}
-                        alt="Ilustracija izbornih rezultata u Srbiji"
+                        src={IMAGES.ecbFrankfurtInflation}
+                        alt="Sedište Evropske centralne banke u Frankfurtu, Nemačka"
                         className="w-full h-[280px] md:h-[380px] object-cover object-center block"
                         fetchPriority="high"
                         decoding="async"
@@ -379,11 +382,11 @@ export default function Home() {
 
                   <SmallArticleCard
                     category="Srbija"
-                    href="/srbija/izbori-nepravilnosti-krivicna-odgovornost"
-                    title="Nepravilnosti na izborima: zakon predviđa krivičnu odgovornost za manipulacije"
-                    description="Prijavljene nepravilnosti tokom izbora u Srbiji otvaraju pitanje krivične odgovornosti za manipulacije i zloupotrebe izbornog procesa."
-                    imageSrc={IMAGES.izboriOdgovornost}
-                    imageAlt="Ilustracija biračkog mesta u Srbiji tokom izbornog dana"
+                    href="/srbija/izbori-rezultati"
+                    title="Tesne razlike i smanjenje prednosti vlasti: preliminarni rezultati u deset opština"
+                    description="Preliminarni rezultati lokalnih izbora u Srbiji pokazuju da je vladajuća koalicija zadržala vlast, ali uz vidljivo smanjene razlike u više opština."
+                    imageSrc={IMAGES.izboriRezultati}
+                    imageAlt="Ilustracija izbornih rezultata u Srbiji"
                   />
 
                   <hr className="editorial-divider my-5" />
