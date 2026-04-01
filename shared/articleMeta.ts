@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/inflacija-evrozona-ecb-mart",
+    title: "Inflacija u evrozoni ponovo iznad cilja Evropske centralne banke",
+    description:
+      "Rast cena energije pogurao inflaciju na 2,5 odsto, dok monetarne vlasti razmatraju sledeće korake",
+    imageSrc: "https://novitalas.org/ecb-frankfurt-inflation.jpg",
+    datePublished: "2026-04-01",
+  },
+  {
     path: "/geopolitika/vens-netanjahu-iran-rat",
     title: "Vens kritikovao Netanjahua zbog procena rata sa Iranom",
     description:

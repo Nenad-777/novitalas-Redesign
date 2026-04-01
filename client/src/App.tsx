@@ -33,6 +33,9 @@ import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 
 /* ✅ NOVA VEST — Geopolitika */
+import InflacijaEvrozonaEcbMart from "./pages/inflacija-evrozona-ecb-mart";
+
+/* ✅ NOVA VEST — Geopolitika */
 import VensNetanjahuIranRat from "./pages/vens-netanjahu-iran-rat";
 
 /* ✅ NOVA VEST — Geopolitika */
@@ -143,6 +146,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/inflacija-evrozona-ecb-mart"
+          component={InflacijaEvrozonaEcbMart}
+        />
+
         <Route
           path="/geopolitika/vens-netanjahu-iran-rat"
           component={VensNetanjahuIranRat}
