@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 
-const IMAGE_SRC = "/ecb-frankfurt-inflation.jpg";
+const IMAGE_SRC = "/news/ecb-frankfurt-inflation.jpg";
 
 const PARAGRAPHS = [
   "Inflacija u evrozoni porasla je u martu na 2,5 odsto, premašivši cilj Evropske centralne banke od 2 odsto, usled rasta cena energije. Bazna inflacija ostala je relativno stabilna, ali ukupni pritisci ukazuju na nastavak nestabilnosti u energetskom sektoru.",
