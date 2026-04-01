@@ -107,6 +107,9 @@ import KinaMozganiImplantat from "./pages/kina-mozgani-implantat";
 import NajtoplijaDecenijaPlanetaUn from "./pages/najtoplija-decenija-planeta-un";
 import MarsReka from "./pages/mars-reka";
 
+/* ✅ BREAKING VEST — Naša planeta */
+import BreakingNasaArtemisII from "./pages/breaking-nasa-artemis-ii-mesec-posle-50-godina";
+
 /* ✅ NOVA VEST — Naša planeta */
 import MoonRing from "./pages/moon-ring";
 
@@ -341,6 +344,11 @@ function Router() {
             NAŠA PLANETA
            ========================= */}
         <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
+
+        <Route
+          path="/nasa-planeta/breaking-nasa-artemis-ii-mesec-posle-50-godina"
+          component={BreakingNasaArtemisII}
+        />
 
         <Route
           path="/nasa-planeta/moon-ring"
