@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
-  ecbFrankfurtInflation: "/ecb-frankfurt-inflation.jpg",
+  ecbFrankfurtInflation: "/news/ecb-frankfurt-inflation.jpg",
   vanceNetanyahu: "/news/vance-netanyahu.jpg",
   orbanOil: "/news/orban-oil.jpg",
   steinmeier: "/news/Frank-Walter Steinmeier.jpg",

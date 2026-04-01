@@ -18,7 +18,7 @@ const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
   // ✅ NOVA GLAVNA VEST — ECB inflacija evrozona (1. april 2026)
-  ecbFrankfurtInflation: "/ecb-frankfurt-inflation.jpg",
+  ecbFrankfurtInflation: "/news/ecb-frankfurt-inflation.jpg",
 
   // ✅ NOVA GLAVNA VEST — Izbori rezultati (30. mart 2026)
   izboriRezultati: "/news/izbori-rezultati.jpg",
