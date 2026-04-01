@@ -17,7 +17,7 @@ export default function InflacijaEvrozonaEcbMart() {
       deck="Rast cena energije pogurao inflaciju na 2,5 odsto, dok monetarne vlasti razmatraju sledeće korake"
       imageSrc={IMAGE_SRC}
       imageAlt="Sedište Evropske centralne banke u Frankfurtu, Nemačka"
-      imageCredit="Sedište Evropske centralne banke u Frankfurtu, Nemačka. Vizual: Novi talas (AI generisano)"
+      imageCredit="Vizual: Novi talas (AI generisano)"
       paragraphs={PARAGRAPHS}
       backHref="/geopolitika"
       backLabel="← Nazad na Geopolitiku"
