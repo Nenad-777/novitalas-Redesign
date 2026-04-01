@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/breaking-nasa-artemis-ii-mesec-posle-50-godina",
+    title: "🚨 BREAKING: NASA ponovo šalje ljude ka Mesecu posle više od 50 godina",
+    description:
+      "NASA je lansirala Artemis II, prvu ljudsku misiju ka Mesecu posle više od pola veka.",
+    imageSrc: "https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg",
+    datePublished: "2026-04-02",
+  },
+  {
     path: "/geopolitika/inflacija-evrozona-ecb-mart",
     title: "Inflacija u evrozoni ponovo iznad cilja Evropske centralne banke",
     description:

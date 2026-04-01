@@ -10,6 +10,14 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/nasa-planeta/breaking-nasa-artemis-ii-mesec-posle-50-godina",
+    img: "https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg",
+    alt: "NASA Artemis II — prva ljudska misija ka Mesecu posle 50 godina",
+    title: "🚨 BREAKING: NASA ponovo šalje ljude ka Mesecu posle više od 50 godina",
+    description:
+      "Artemis II označava povratak čovečanstva u duboki svemir — prvi put od 1972. godine.",
+  },
+  {
     href: "/nasa-planeta/moon-ring",
     img: "/news/moon-ring.jpg",
     alt: "Solarni prsten oko Meseca — japanski koncept svemirske energije",

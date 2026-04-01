@@ -247,6 +247,34 @@ export default function Home() {
     >
       <Header />
 
+      {/* ===== BREAKING NEWS TRAKA ===== */}
+      <a
+        href="/nasa-planeta/breaking-nasa-artemis-ii-mesec-posle-50-godina"
+        className="block no-underline"
+        style={{ backgroundColor: "#8B0000" }}
+      >
+        <div className="max-w-[1200px] mx-auto px-5 py-2 flex items-center gap-3">
+          <span
+            className="text-[11px] font-bold tracking-[0.14em] uppercase text-white shrink-0"
+            style={{ fontFamily: "'Source Sans 3', sans-serif" }}
+          >
+            🚨 BREAKING
+          </span>
+          <span
+            className="text-[13px] text-white/90 truncate"
+            style={{ fontFamily: "'Source Sans 3', sans-serif" }}
+          >
+            NASA lansirala Artemis II, prvu ljudsku misiju ka Mesecu posle 50+ godina
+          </span>
+          <span
+            className="text-[12px] text-white/70 shrink-0 hidden sm:inline"
+            style={{ fontFamily: "'Source Sans 3', sans-serif" }}
+          >
+            Čitaj →
+          </span>
+        </div>
+      </a>
+
       {/* Hero */}
       <section
         className="relative w-full overflow-hidden h-[22vh] md:h-[28vh] hero-section"
@@ -291,6 +319,120 @@ export default function Home() {
         style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
       >
         <div className="max-w-[1200px] mx-auto px-5">
+          {/* ======================
+              APRIL 2026 — BREAKING
+             ====================== */}
+          <FadeIn>
+            <div className="flex items-center gap-3 mb-6">
+              <span
+                className="text-[11px] font-bold tracking-[0.14em] uppercase"
+                style={{
+                  fontFamily: "'Source Sans 3', -apple-system, sans-serif",
+                  color: isDark ? "#d9bf7a" : "#8B0000",
+                }}
+              >
+                April 2026
+              </span>
+              <span
+                className="flex-1 h-px"
+                style={{ backgroundColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
+              />
+            </div>
+          </FadeIn>
+
+          {/* BREAKING: Artemis II — main featured story */}
+          <FadeIn className="mb-14">
+            <article>
+              {/* BREAKING badge */}
+              <div
+                className="inline-flex items-center gap-2 mb-3 px-3 py-1 rounded-sm"
+                style={{ backgroundColor: "#8B0000" }}
+              >
+                <span
+                  className="text-[11px] font-bold tracking-[0.14em] uppercase text-white"
+                  style={{ fontFamily: "'Source Sans 3', sans-serif" }}
+                >
+                  🚨 BREAKING
+                </span>
+              </div>
+
+              <span className="kicker block mb-2">Naša planeta</span>
+
+              <h2
+                className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
+                style={{
+                  fontFamily: "'Playfair Display', Georgia, serif",
+                  fontWeight: 700,
+                  color: isDark ? "#e0ddd5" : "#111",
+                }}
+              >
+                <Link
+                  href="/nasa-planeta/breaking-nasa-artemis-ii-mesec-posle-50-godina"
+                  className="headline-link"
+                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                >
+                  NASA ponovo šalje ljude ka Mesecu posle više od 50 godina
+                </Link>
+              </h2>
+
+              <p
+                className="text-[18px] md:text-[19px] leading-[1.6] mb-5"
+                style={{
+                  fontFamily: "'Lora', Georgia, serif",
+                  color: isDark ? "#9a978f" : "#555",
+                }}
+              >
+                Artemis II označava povratak čovečanstva u duboki svemir — prvi put od 1972. godine
+              </p>
+
+              {/* YouTube video thumbnail → article */}
+              <Link
+                href="/nasa-planeta/breaking-nasa-artemis-ii-mesec-posle-50-godina"
+                className="block no-underline"
+              >
+                <div
+                  className="relative w-full overflow-hidden rounded-xl aspect-video"
+                  style={{
+                    border: isDark ? "1px solid #2a2a2e" : "1px solid #e5e5e5",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src="https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg"
+                    alt="NASA Artemis II lansiranje — thumbnail"
+                    className="w-full h-full object-cover block"
+                    fetchPriority="high"
+                    decoding="async"
+                  />
+                  {/* Play button overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div
+                      className="flex items-center justify-center rounded-full"
+                      style={{
+                        width: "72px",
+                        height: "72px",
+                        backgroundColor: "rgba(139,0,0,0.88)",
+                      }}
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="white"
+                        style={{ width: "32px", height: "32px", marginLeft: "4px" }}
+                      >
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </article>
+          </FadeIn>
+
+          <span
+            className="block h-px mb-12"
+            style={{ backgroundColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
+          />
+
           {/* ======================
               MART 2026
              ====================== */}
