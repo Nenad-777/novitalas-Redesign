@@ -198,43 +198,6 @@ export default function BreakingNasaArtemisII() {
             <p>
               Mesec više nije simbol prošlosti, već teritorija budućnosti.
             </p>
-
-            {/* KOMENTAR — divider + italic block */}
-            <div
-              className="mt-8 pt-8"
-              style={{
-                borderTop: isDark ? "1px solid #2a2a2e" : "1px solid #e5e5e5",
-              }}
-            >
-              <p
-                className="text-[19px] leading-[1.7]"
-                style={{
-                  fontFamily: "'Lora', Georgia, serif",
-                  color: isDark ? "#9a978f" : "#555",
-                }}
-              >
-                Ovo nije nostalgija.
-              </p>
-              <p
-                className="mt-3 text-[19px] leading-[1.7]"
-                style={{
-                  fontFamily: "'Lora', Georgia, serif",
-                  color: isDark ? "#9a978f" : "#555",
-                }}
-              >
-                Ovo je početak.
-              </p>
-              <p
-                className="mt-3 text-[17px] leading-[1.8]"
-                style={{
-                  fontFamily: "'Lora', Georgia, serif",
-                  color: isDark ? "#cfcac2" : "#222",
-                }}
-              >
-                Ako je Apollo bio dokaz da čovek može da stigne do Meseca,
-                Artemis je dokaz da želi da se tamo vrati, i ostane.
-              </p>
-            </div>
           </div>
 
           {/* Povratak */}
