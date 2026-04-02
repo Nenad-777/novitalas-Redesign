@@ -88,7 +88,7 @@ export default function BreakingNasaArtemisII() {
               fontStyle: "italic",
             }}
           >
-            Artemis II označava povratak čovečanstva u duboki svemir — prvi put od 1972. godine
+            Artemis II označava povratak čovečanstva u duboki svemir, prvi put od 1972. godine
           </p>
 
           {/* Podeli vest */}
@@ -103,7 +103,7 @@ export default function BreakingNasaArtemisII() {
           >
             <iframe
               src="https://www.youtube.com/embed/m3kR2KK8TEs"
-              title="NASA Artemis II — lansiranje uživo"
+              title="NASA Artemis II, lansiranje uživo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               style={{
@@ -121,14 +121,14 @@ export default function BreakingNasaArtemisII() {
           <div
             className="space-y-6 text-[17px] leading-[1.8]"
             style={{
-              fontFamily: "'Crimson Pro', serif",
+              fontFamily: "'Lora', Georgia, serif",
               color: isDark ? "#cfcac2" : "#222",
             }}
           >
             {/* UVOD */}
             <p>
               U istorijskom trenutku koji vraća čovečanstvo na putanju velikih
-              svemirskih poduhvata, NASA je lansirala misiju Artemis II — prvu
+              svemirskih poduhvata, NASA je lansirala misiju Artemis II, prvu
               ljudsku misiju ka Mesecu nakon više od pola veka.
             </p>
 
@@ -156,7 +156,7 @@ export default function BreakingNasaArtemisII() {
               </p>
               <ul
                 className="space-y-2 text-[16px]"
-                style={{ fontFamily: "'Source Sans 3', sans-serif" }}
+                style={{ fontFamily: "'Lora', Georgia, serif" }}
               >
                 {[
                   "Lansiranje uspešno izvedeno",
@@ -196,7 +196,7 @@ export default function BreakingNasaArtemisII() {
             </p>
 
             <p>
-              Mesec više nije simbol prošlosti — već teritorija budućnosti.
+              Mesec više nije simbol prošlosti, već teritorija budućnosti.
             </p>
 
             {/* KOMENTAR — divider + italic block */}
@@ -207,7 +207,7 @@ export default function BreakingNasaArtemisII() {
               }}
             >
               <p
-                className="text-[19px] leading-[1.7] italic"
+                className="text-[19px] leading-[1.7]"
                 style={{
                   fontFamily: "'Lora', Georgia, serif",
                   color: isDark ? "#9a978f" : "#555",
@@ -216,7 +216,7 @@ export default function BreakingNasaArtemisII() {
                 Ovo nije nostalgija.
               </p>
               <p
-                className="mt-3 text-[19px] leading-[1.7] italic"
+                className="mt-3 text-[19px] leading-[1.7]"
                 style={{
                   fontFamily: "'Lora', Georgia, serif",
                   color: isDark ? "#9a978f" : "#555",
@@ -227,12 +227,12 @@ export default function BreakingNasaArtemisII() {
               <p
                 className="mt-3 text-[17px] leading-[1.8]"
                 style={{
-                  fontFamily: "'Crimson Pro', serif",
+                  fontFamily: "'Lora', Georgia, serif",
                   color: isDark ? "#cfcac2" : "#222",
                 }}
               >
                 Ako je Apollo bio dokaz da čovek može da stigne do Meseca,
-                Artemis je dokaz da želi da se tamo vrati — i ostane.
+                Artemis je dokaz da želi da se tamo vrati, i ostane.
               </p>
             </div>
           </div>
