@@ -224,6 +224,16 @@
     .nt-reading { font-size: 20px; }
   }
 }
+/* ===== LIVE BRIEFING — pulsing indicator dot ===== */
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+.live-pulse-dot {
+  animation: live-pulse 1.8s ease-in-out infinite;
+}
+
 /* ===== GLOBAL ARTICLE FIX (ne dira Home layout) ===== */
 
 main article {
