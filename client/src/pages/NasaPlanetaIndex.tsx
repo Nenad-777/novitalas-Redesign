@@ -7,6 +7,7 @@ import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
+import LiveBriefingBlock from "@/components/LiveBriefingBlock";
 
 const ARTICLES = [
   {
@@ -135,6 +136,9 @@ export default function NasaPlanetaIndex() {
             </p>
 
           </div>
+
+          {/* 🔴 LIVE BRIEFING — Artemis II stack izveštaj */}
+          <LiveBriefingBlock isDark={isDark} />
 
           {/* HERO ARTICLE — featured story */}
           <article className="mb-14">

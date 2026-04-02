@@ -13,6 +13,7 @@ import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
+import LiveBriefingBlock from "@/components/LiveBriefingBlock";
 
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
@@ -338,6 +339,11 @@ export default function Home() {
                 style={{ backgroundColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
               />
             </div>
+          </FadeIn>
+
+          {/* 🔴 LIVE BRIEFING — Artemis II stack izveštaj */}
+          <FadeIn className="mb-10">
+            <LiveBriefingBlock isDark={isDark} />
           </FadeIn>
 
           {/* BREAKING: Artemis II — main featured story */}
