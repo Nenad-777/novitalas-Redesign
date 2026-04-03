@@ -25,13 +25,15 @@ interface LiveBriefingBlockProps {
 // Izveštaji — najnoviji na vrhu. Dodaj nove na početak niza.
 const LIVE_REPORTS: LiveReport[] = [
   {
-    id: "report-2218",
-    time: "22:18",
+    id: "report-2250",
+    time: "22:50",
     text: [
-      "Letelica Orion nalazi se u dubokom svemiru.",
-      "Posada je već prešla više od 100.000 milja od Zemlje.",
-      "Nalazi se na putu ka Mesecu nakon ključnog manevra.",
-      "Let protiče stabilno, bez većih problema.",
+      "Letelica Orion nalazi se u cislunarnom prostoru na putu ka Mesecu.",
+      "Posada je prešla više od 160.000 kilometara od Zemlje.",
+      "Let se odvija brzinom od oko 35.000 kilometara na sat.",
+      "Planiran je prolazak na oko 6.000 kilometara od površine Meseca.",
+      "Misija ulazi u fazu dubokog svemirskog krstarenja.",
+      "Svi sistemi funkcionišu stabilno, bez većih problema.",
     ],
     images: [
       {
