@@ -152,7 +152,7 @@ export default function LiveBriefingBlock({ isDark }: LiveBriefingBlockProps) {
         ))}
       </div>
 
-      {/* Link na dnu */}
+      {/* YouTube embed na dnu */}
       <div
         style={{
           marginTop: "20px",
@@ -160,21 +160,22 @@ export default function LiveBriefingBlock({ isDark }: LiveBriefingBlockProps) {
           borderTop: `1px solid ${isDark ? "#2a1a1a" : "#f0d0d0"}`,
         }}
       >
-        <a
-          href="https://www.youtube.com/live/m3kR2KK8TEs?si=AErq-jwu3OO2jkU5"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            fontFamily: "'Source Sans 3', sans-serif",
-            fontSize: "13px",
-            fontWeight: 600,
-            color: "#cc0000",
-            textDecoration: "none",
-            letterSpacing: "0.04em",
-          }}
-        >
-          Gledaj uživo →
-        </a>
+        <div className="relative w-full overflow-hidden rounded-lg aspect-video">
+          <iframe
+            src="https://www.youtube.com/embed/m3kR2KK8TEs"
+            title="NASA Artemis II, lansiranje uživo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              border: "none",
+            }}
+          />
+        </div>
       </div>
     </div>
   );
