@@ -18,21 +18,24 @@ interface LiveBriefingBlockProps {
 // Izveštaji — najnoviji na vrhu. Dodaj nove na početak niza.
 const LIVE_REPORTS: LiveReport[] = [
   {
+    id: "report-0400",
+    time: "04:00",
+    text: [
+      "Letelica Orion napustila je Zemljinu orbitu.",
+      "Nalazi se na putu ka Mesecu.",
+      "Izveden je ključni manevar za ulazak u duboki svemir.",
+      "Let protiče stabilno, bez većih problema.",
+    ],
+  },
+  {
     id: "report-2145",
-    time: "21:45",
+    time: "raniji update",
     text: [
       "Misija Artemis II je u toku nakon uspešnog lansiranja.",
       "Let protiče stabilno, bez većih problema.",
       "Posada testira ključne sisteme za buduće misije.",
       "Zabeleženi manji tehnički problemi brzo su rešeni.",
       "Let se odvija prema planiranoj putanji ka Mesecu.",
-    ],
-  },
-  {
-    id: "report-raniji",
-    time: "raniji izveštaj",
-    text: [
-      "Pratite ovaj blok za najnovije informacije o toku misije Artemis II.",
     ],
   },
 ];
