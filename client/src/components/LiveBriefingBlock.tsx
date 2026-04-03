@@ -5,10 +5,17 @@
  * Najnoviji izveštaj je uvek na vrhu. Koristi se na Home i NasaPlanetaIndex.
  */
 
+interface LiveReportImage {
+  src: string;
+  caption: string;
+  credit: string;
+}
+
 interface LiveReport {
   id: string;
   time: string;
   text: string[];
+  images?: LiveReportImage[];
 }
 
 interface LiveBriefingBlockProps {
@@ -17,6 +24,28 @@ interface LiveBriefingBlockProps {
 
 // Izveštaji — najnoviji na vrhu. Dodaj nove na početak niza.
 const LIVE_REPORTS: LiveReport[] = [
+  {
+    id: "report-2218",
+    time: "22:18",
+    text: [
+      "Letelica Orion nalazi se u dubokom svemiru.",
+      "Posada je već prešla više od 100.000 milja od Zemlje.",
+      "Nalazi se na putu ka Mesecu nakon ključnog manevra.",
+      "Let protiče stabilno, bez većih problema.",
+    ],
+    images: [
+      {
+        src: "/news/artemis-view2.jpg",
+        caption: "Pogled na Zemlju iz kapsule Orion tokom misije Artemis II",
+        credit: "Foto: NASA / Artemis II",
+      },
+      {
+        src: "/news/artemis-view1.jpg",
+        caption: "Zemlja viđena iz dubokog svemira tokom misije Artemis II",
+        credit: "Foto: NASA / Orion spacecraft",
+      },
+    ],
+  },
   {
     id: "report-0400",
     time: "04:00",
@@ -151,6 +180,37 @@ export default function LiveBriefingBlock({ isDark }: LiveBriefingBlockProps) {
                 </p>
               ))}
             </div>
+
+            {/* Slike ispod teksta (opciono) */}
+            {report.images && report.images.length > 0 && (
+              <div style={{ marginTop: "16px", display: "flex", flexDirection: "column", gap: "16px" }}>
+                {report.images.map((img) => (
+                  <figure key={img.src} style={{ margin: 0, padding: 0 }}>
+                    <img
+                      src={img.src}
+                      alt={img.caption}
+                      style={{
+                        width: "100%",
+                        display: "block",
+                        borderRadius: "4px",
+                      }}
+                    />
+                    <figcaption
+                      style={{
+                        fontFamily: "'Source Sans 3', sans-serif",
+                        fontSize: "13px",
+                        lineHeight: 1.5,
+                        color: isDark ? "#7a7872" : "#777",
+                        marginTop: "6px",
+                      }}
+                    >
+                      {img.caption}{" "}
+                      <span style={{ fontStyle: "italic" }}>{img.credit}</span>
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            )}
           </div>
         ))}
       </div>
