@@ -13,6 +13,7 @@ import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
+import ObavestajniBrifingBlock from "@/components/ObavestajniBrifingBlock";
 
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
@@ -319,6 +320,13 @@ export default function Home() {
         style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
       >
         <div className="max-w-[1200px] mx-auto px-5">
+          {/* ======================
+              OBAVEŠTAJNI BRIFING
+             ====================== */}
+          <FadeIn className="mb-10">
+            <ObavestajniBrifingBlock />
+          </FadeIn>
+
           {/* ======================
               APRIL 2026 — BREAKING
              ====================== */}

@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/obavestajni-izvori/prvi-brifing",
+    title: "OBAVEŠTAJNI BRIFING | 2–4. april 2026.",
+    description:
+      "Faktička blokada Ormuskog moreuza, regionalna eskalacija u Persijskom zalivu i globalni energetski pritisak — obaveštajni pregled za period 2–4. april 2026.",
+    imageSrc: "/news/prvi-brifing.jpg",
+    datePublished: "2026-04-04",
+  },
+  {
     path: "/nasa-planeta/breaking-nasa-artemis-ii-mesec-posle-50-godina",
     title: "🚨 BREAKING: NASA ponovo šalje ljude ka Mesecu posle više od 50 godina",
     description:
