@@ -103,7 +103,7 @@ export default function ObavestajniBrifingBlock() {
               marginBottom: "10px",
             }}
           >
-            Hormuz: faktička blokada i pad saobraćaja
+            Ormuz: faktička blokada i pad saobraćaja
           </h3>
 
           <p
@@ -220,7 +220,7 @@ export default function ObavestajniBrifingBlock() {
               margin: "0 0 10px",
             }}
           >
-            Poremećaji u Hormuzu već imaju vidljiv uticaj na cene energenata i
+            Poremećaji u Ormuzu već imaju vidljiv uticaj na cene energenata i
             logistiku transporta. Rast troškova osiguranja i preusmeravanje
             ruta dodatno opterećuju tržište.
           </p>
@@ -292,7 +292,7 @@ export default function ObavestajniBrifingBlock() {
               margin: "0",
             }}
           >
-            Kontrola Hormuza ostaje ključni strateški instrument koji utiče na
+            Kontrola Ormuza ostaje ključni strateški instrument koji utiče na
             globalnu stabilnost.
           </p>
         </section>
