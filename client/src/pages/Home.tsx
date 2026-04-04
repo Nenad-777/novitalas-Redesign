@@ -13,7 +13,6 @@ import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
-import LiveBriefingBlock from "@/components/LiveBriefingBlock";
 
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
@@ -250,7 +249,7 @@ export default function Home() {
 
       {/* ===== BREAKING NEWS TRAKA ===== */}
       <a
-        href="/nasa-planeta/breaking-nasa-artemis-ii-mesec-posle-50-godina"
+        href="/geopolitika/oboren-f15e-iran-2026"
         className="block no-underline"
         style={{ backgroundColor: "#8B0000" }}
       >
@@ -265,7 +264,7 @@ export default function Home() {
             className="text-[13px] text-white/90 truncate"
             style={{ fontFamily: "'Source Sans 3', sans-serif" }}
           >
-            NASA lansirala Artemis II, prvu ljudsku misiju ka Mesecu posle 50+ godina
+            Oboren američki F-15E iznad Irana: jedan član posade spašen, drugi nestao
           </span>
           <span
             className="text-[12px] text-white/70 shrink-0 hidden sm:inline"
@@ -341,12 +340,7 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          {/* 🔴 LIVE BRIEFING — Artemis II stack izveštaj */}
-          <FadeIn className="mb-10">
-            <LiveBriefingBlock isDark={isDark} />
-          </FadeIn>
-
-          {/* BREAKING: Artemis II — main featured story */}
+          {/* BREAKING: F-15E iznad Irana — main featured story */}
           <FadeIn className="mb-14">
             <article>
               {/* BREAKING badge */}
@@ -362,7 +356,7 @@ export default function Home() {
                 </span>
               </div>
 
-              <span className="kicker block mb-2">Naša planeta</span>
+              <span className="kicker block mb-2">Geopolitika</span>
 
               <h2
                 className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
@@ -373,11 +367,11 @@ export default function Home() {
                 }}
               >
                 <Link
-                  href="/nasa-planeta/breaking-nasa-artemis-ii-mesec-posle-50-godina"
+                  href="/geopolitika/oboren-f15e-iran-2026"
                   className="headline-link"
                   style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                 >
-                  NASA ponovo šalje ljude ka Mesecu posle više od 50 godina
+                  Oboren američki F-15E iznad Irana: jedan član posade spašen, drugi nestao
                 </Link>
               </h2>
 
@@ -388,47 +382,27 @@ export default function Home() {
                   color: isDark ? "#9a978f" : "#555",
                 }}
               >
-                Artemis II označava povratak čovečanstva u duboki svemir — prvi put od 1972. godine
+                Incident predstavlja prvi potvrđeni slučaj obaranja američkog aviona sa posadom u aktuelnom sukobu
               </p>
 
-              {/* YouTube video thumbnail → article */}
               <Link
-                href="/nasa-planeta/breaking-nasa-artemis-ii-mesec-posle-50-godina"
+                href="/geopolitika/oboren-f15e-iran-2026"
                 className="block no-underline"
               >
                 <div
-                  className="relative w-full overflow-hidden rounded-xl aspect-video"
+                  className="relative w-full overflow-hidden rounded-xl"
                   style={{
                     border: isDark ? "1px solid #2a2a2e" : "1px solid #e5e5e5",
                     backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
                   }}
                 >
                   <img
-                    src="https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg"
-                    alt="NASA Artemis II lansiranje — thumbnail"
-                    className="w-full h-full object-cover block"
+                    src="/news/f15e-iran.jpg"
+                    alt="F-15E Strike Eagle u letu"
+                    className="w-full h-[280px] md:h-[420px] object-cover block"
                     fetchPriority="high"
                     decoding="async"
                   />
-                  {/* Play button overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div
-                      className="flex items-center justify-center rounded-full"
-                      style={{
-                        width: "72px",
-                        height: "72px",
-                        backgroundColor: "rgba(139,0,0,0.88)",
-                      }}
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="white"
-                        style={{ width: "32px", height: "32px", marginLeft: "4px" }}
-                      >
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </div>
-                  </div>
                 </div>
               </Link>
             </article>

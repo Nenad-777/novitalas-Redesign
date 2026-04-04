@@ -151,6 +151,14 @@ export const articleMeta: ArticleStaticMeta[] = [
     datePublished: "2026-04-02",
   },
   {
+    path: "/geopolitika/oboren-f15e-iran-2026",
+    title: "Oboren američki F-15E iznad Irana: jedan član posade spašen, drugi nestao",
+    description:
+      "Incident predstavlja prvi potvrđeni slučaj obaranja američkog aviona sa posadom u aktuelnom sukobu",
+    imageSrc: "https://novitalas.org/news/f15e-iran.jpg",
+    datePublished: "2026-04-04",
+  },
+  {
     path: "/geopolitika/inflacija-evrozona-ecb-mart",
     title: "Inflacija u evrozoni ponovo iznad cilja Evropske centralne banke",
     description:
