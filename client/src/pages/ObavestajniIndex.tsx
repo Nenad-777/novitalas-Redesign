@@ -7,6 +7,7 @@ import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
+import ObavestajniBrifingBlock from "@/components/ObavestajniBrifingBlock";
 
 const ARTICLES = [
   {
@@ -85,6 +86,9 @@ export default function ObavestajniIndex() {
             </p>
 
           </div>
+
+          {/* OBAVEŠTAJNI BRIFING — first element in section */}
+          <ObavestajniBrifingBlock />
 
           {/* HERO ARTICLE — featured story */}
           <article className="mb-14">
