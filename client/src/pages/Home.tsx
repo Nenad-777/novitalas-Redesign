@@ -293,6 +293,11 @@ export default function Home() {
         style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
       >
         <div className="max-w-[1200px] mx-auto px-5">
+          {/* LIVE blok — NASA Artemis II */}
+          <FadeIn className="mb-10">
+            <LiveBriefingBlock isDark={isDark} />
+          </FadeIn>
+
           {/* ======================
               OBAVEŠTAJNI BRIFING
              ====================== */}
@@ -373,11 +378,6 @@ export default function Home() {
                 </div>
               </Link>
             </article>
-          </FadeIn>
-
-          {/* LIVE blok — NASA Artemis II */}
-          <FadeIn className="mb-10">
-            <LiveBriefingBlock isDark={isDark} />
           </FadeIn>
 
           {/* BREAKING: F-15E iznad Irana — main featured story */}
