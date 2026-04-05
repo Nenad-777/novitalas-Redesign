@@ -25,6 +25,24 @@ interface LiveBriefingBlockProps {
 // Izveštaji — najnoviji na vrhu. Dodaj nove na početak niza.
 const LIVE_REPORTS: LiveReport[] = [
   {
+    id: "report-1930",
+    time: "19:30",
+    text: [
+      "Posada misije Artemis II zapocela je peti dan leta demonstracijom Orion odela.",
+      "NASA navodi da astronauti vec vide delove daleke strane Meseca.",
+      "Na najnovijim snimcima vidi se i basen Orientale na ivici lunarnog diska, koji ce posada nastaviti da posmatra tokom prilaska Mesecu i lunarnog preleta.",
+      "Misija se odvija stabilno i nastavlja putanju ka Mesecu.",
+    ],
+    images: [
+      {
+        src: "/news/moon-nasa.jpg",
+        caption:
+          "Delovi daleke strane Meseca vidjeni iz misije Artemis II tokom petog dana leta",
+        credit: "Foto: NASA / Artemis II",
+      },
+    ],
+  },
+  {
     id: "report-2250",
     time: "22:50",
     text: [
