@@ -534,4 +534,23 @@ export const seoData: Record<string, SEOData> = {
     twitterImage: "https://novitalas.org/news/izbori-odgovornost.jpg",
     datePublished: "2026-03-29",
   },
+
+  "/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca": {
+    title:
+      "Orion više od polovine puta do Meseca | NOVI TALAS",
+    description:
+      "Misija Artemis II nalazi se u dubokom svemiru nakon što je Orion prešao više od 160.000 kilometara od Zemlje.",
+    ogTitle:
+      "Orion više od polovine puta do Meseca: misija Artemis II u dubokom svemiru",
+    ogDescription:
+      "Misija Artemis II nalazi se u dubokom svemiru nakon što je Orion prešao više od 160.000 kilometara od Zemlje.",
+    ogUrl: "https://novitalas.org/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca",
+    ogImage: "https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg",
+    twitterTitle:
+      "Orion više od polovine puta do Meseca: misija Artemis II u dubokom svemiru",
+    twitterDescription:
+      "Misija Artemis II nalazi se u dubokom svemiru nakon što je Orion prešao više od 160.000 kilometara od Zemlje.",
+    twitterImage: "https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg",
+    datePublished: "2026-04-05",
+  },
 };

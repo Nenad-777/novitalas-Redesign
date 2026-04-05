@@ -11,6 +11,15 @@ import LiveBriefingBlock from "@/components/LiveBriefingBlock";
 
 const ARTICLES = [
   {
+    href: "/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca",
+    img: "https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg",
+    alt: "Orion letelica na putu ka Mesecu — misija Artemis II",
+    title:
+      "Orion više od polovine puta do Meseca: misija Artemis II u dubokom svemiru",
+    description:
+      "Orion je više od polovine puta do Meseca. Misija Artemis II ulazi u fazu dubokog svemirskog krstarenja.",
+  },
+  {
     href: "/nasa-planeta/breaking-nasa-artemis-ii-mesec-posle-50-godina",
     img: "https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg",
     alt: "NASA Artemis II — prva ljudska misija ka Mesecu posle 50 godina",
