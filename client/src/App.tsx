@@ -114,6 +114,9 @@ import MarsReka from "./pages/mars-reka";
 import BreakingNasaArtemisII from "./pages/breaking-nasa-artemis-ii-mesec-posle-50-godina";
 
 /* ✅ NOVA VEST — Naša planeta */
+import ArtemisIIOrionPolovinaPuta from "./pages/artemis-ii-orion-polovina-puta-do-meseca";
+
+/* ✅ NOVA VEST — Naša planeta */
 import MoonRing from "./pages/moon-ring";
 
 /* ✅ NOVA VEST — Naša planeta */
@@ -356,6 +359,11 @@ function Router() {
         <Route
           path="/nasa-planeta/breaking-nasa-artemis-ii-mesec-posle-50-godina"
           component={BreakingNasaArtemisII}
+        />
+
+        <Route
+          path="/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca"
+          component={ArtemisIIOrionPolovinaPuta}
         />
 
         <Route
