@@ -14,6 +14,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import ObavestajniBrifingBlock from "@/components/ObavestajniBrifingBlock";
+import LiveBriefingBlock from "@/components/LiveBriefingBlock";
 
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
@@ -372,6 +373,11 @@ export default function Home() {
                 </div>
               </Link>
             </article>
+          </FadeIn>
+
+          {/* LIVE blok — NASA Artemis II */}
+          <FadeIn className="mb-10">
+            <LiveBriefingBlock isDark={isDark} />
           </FadeIn>
 
           {/* BREAKING: F-15E iznad Irana — main featured story */}
