@@ -434,7 +434,6 @@ export default function Home() {
                     src="/news/f15e-iran.jpg"
                     alt="F-15E Strike Eagle u letu"
                     className="w-full h-[280px] md:h-[420px] object-cover block"
-                    loading="lazy"
                     decoding="async"
                   />
                 </div>
