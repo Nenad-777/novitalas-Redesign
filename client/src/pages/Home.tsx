@@ -300,7 +300,7 @@ export default function Home() {
           </FadeIn>
 
           {/* ======================
-              APRIL 2026 — BREAKING
+              APRIL 2026
              ====================== */}
           <FadeIn>
             <div className="flex items-center gap-3 mb-6">
@@ -318,6 +318,60 @@ export default function Home() {
                 style={{ backgroundColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
               />
             </div>
+          </FadeIn>
+
+          {/* Artemis II — Naša planeta */}
+          <FadeIn className="mb-14">
+            <article>
+              <span className="kicker block mb-2">Naša planeta</span>
+
+              <h2
+                className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
+                style={{
+                  fontFamily: "'Playfair Display', Georgia, serif",
+                  fontWeight: 700,
+                  color: isDark ? "#e0ddd5" : "#111",
+                }}
+              >
+                <Link
+                  href="/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca"
+                  className="headline-link"
+                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                >
+                  Orion više od polovine puta do Meseca: misija Artemis II u dubokom svemiru
+                </Link>
+              </h2>
+
+              <p
+                className="text-[18px] md:text-[19px] leading-[1.6] mb-5"
+                style={{
+                  fontFamily: "'Lora', Georgia, serif",
+                  color: isDark ? "#9a978f" : "#555",
+                }}
+              >
+                Orion je više od polovine puta do Meseca. Misija Artemis II ulazi u fazu dubokog svemirskog krstarenja.
+              </p>
+
+              <Link
+                href="/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca"
+                className="block no-underline"
+              >
+                <div
+                  className="relative w-full overflow-hidden rounded-xl aspect-video"
+                  style={{
+                    border: isDark ? "1px solid #2a2a2e" : "1px solid #e5e5e5",
+                  }}
+                >
+                  <img
+                    src="https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg"
+                    alt="Orion letelica na putu ka Mesecu — misija Artemis II"
+                    className="w-full h-full object-cover block"
+                    fetchPriority="high"
+                    decoding="async"
+                  />
+                </div>
+              </Link>
+            </article>
           </FadeIn>
 
           {/* BREAKING: F-15E iznad Irana — main featured story */}
@@ -339,7 +393,7 @@ export default function Home() {
               <span className="kicker block mb-2">Geopolitika</span>
 
               <h2
-                className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
+                className="mt-2 mb-3 text-[28px] md:text-[36px] font-bold leading-[1.15]"
                 style={{
                   fontFamily: "'Playfair Display', Georgia, serif",
                   fontWeight: 700,
@@ -356,7 +410,7 @@ export default function Home() {
               </h2>
 
               <p
-                className="text-[18px] md:text-[19px] leading-[1.6] mb-5"
+                className="text-[17px] md:text-[18px] leading-[1.6] mb-5"
                 style={{
                   fontFamily: "'Lora', Georgia, serif",
                   color: isDark ? "#9a978f" : "#555",
@@ -380,61 +434,6 @@ export default function Home() {
                     src="/news/f15e-iran.jpg"
                     alt="F-15E Strike Eagle u letu"
                     className="w-full h-[280px] md:h-[420px] object-cover block"
-                    fetchPriority="high"
-                    decoding="async"
-                  />
-                </div>
-              </Link>
-            </article>
-          </FadeIn>
-
-          {/* Artemis II — Naša planeta */}
-          <FadeIn className="mb-14">
-            <article>
-              <span className="kicker block mb-2">Naša planeta</span>
-
-              <h2
-                className="mt-2 mb-3 text-[28px] md:text-[36px] font-bold leading-[1.15]"
-                style={{
-                  fontFamily: "'Playfair Display', Georgia, serif",
-                  fontWeight: 700,
-                  color: isDark ? "#e0ddd5" : "#111",
-                }}
-              >
-                <Link
-                  href="/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca"
-                  className="headline-link"
-                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-                >
-                  Orion više od polovine puta do Meseca: misija Artemis II u dubokom svemiru
-                </Link>
-              </h2>
-
-              <p
-                className="text-[17px] md:text-[18px] leading-[1.6] mb-5"
-                style={{
-                  fontFamily: "'Lora', Georgia, serif",
-                  color: isDark ? "#9a978f" : "#555",
-                }}
-              >
-                Orion je više od polovine puta do Meseca. Misija Artemis II ulazi u fazu dubokog svemirskog krstarenja.
-              </p>
-
-              <Link
-                href="/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca"
-                className="block no-underline"
-              >
-                <div
-                  className="relative w-full overflow-hidden rounded-xl aspect-video"
-                  style={{
-                    border: isDark ? "1px solid #2a2a2e" : "1px solid #e5e5e5",
-                  }}
-                >
-                  <img
-                    src="https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg"
-                    alt="Orion letelica na putu ka Mesecu — misija Artemis II"
-                    className="w-full h-full object-cover block"
-                    loading="lazy"
                     decoding="async"
                   />
                 </div>
