@@ -6,9 +6,14 @@
  * Used on: Home (top of main content), ObavestajniIndex (first element).
  */
 
+import { Link } from "wouter";
 import { useTheme } from "@/contexts/ThemeContext";
 
-export default function ObavestajniBrifingBlock() {
+interface ObavestajniBrifingBlockProps {
+  compact?: boolean;
+}
+
+export default function ObavestajniBrifingBlock({ compact = false }: ObavestajniBrifingBlockProps) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
@@ -19,6 +24,80 @@ export default function ObavestajniBrifingBlock() {
   const textMuted = "#9ab8d0";
   const accentColor = "#7ab0d0";
   const assessmentBg = isDark ? "#091525" : "#0c1c2e";
+
+  if (compact) {
+    return (
+      <div
+        style={{
+          border: `2px solid ${borderColor}`,
+          borderRadius: "4px",
+          backgroundColor: bg,
+          marginBottom: "32px",
+          overflow: "hidden",
+          padding: "20px 20px 22px",
+        }}
+      >
+        <span
+          style={{
+            fontFamily: "'Source Sans 3', sans-serif",
+            fontSize: "11px",
+            fontWeight: 700,
+            letterSpacing: "0.14em",
+            textTransform: "uppercase",
+            color: accentColor,
+          }}
+        >
+          Obaveštajni izvori
+        </span>
+
+        <h2
+          style={{
+            fontFamily: "'Playfair Display', Georgia, serif",
+            fontSize: "clamp(18px, 3vw, 26px)",
+            fontWeight: 700,
+            color: textMain,
+            lineHeight: 1.25,
+            marginTop: "6px",
+            marginBottom: "12px",
+          }}
+        >
+          OBAVEŠTAJNI BRIFING | 2–4. april 2026.
+        </h2>
+
+        <p
+          style={{
+            fontFamily: "'Lora', Georgia, serif",
+            fontSize: "16px",
+            lineHeight: 1.75,
+            color: textMuted,
+            margin: "0 0 18px",
+          }}
+        >
+          U poslednja tri dana potvrđeno je da je prolaz kroz Ormuski moreuz
+          ozbiljno ograničen, uz nagli pad pomorskog saobraćaja. Operativna zona
+          sukoba širi se izvan inicijalnih granica, uključujući pomorske rute i
+          teritorije susednih država.
+        </p>
+
+        <Link
+          href="/obavestajni-izvori"
+          style={{
+            display: "inline-block",
+            fontFamily: "'Source Sans 3', sans-serif",
+            fontSize: "13px",
+            fontWeight: 700,
+            letterSpacing: "0.06em",
+            textDecoration: "none",
+            color: accentColor,
+            borderBottom: `1px solid ${accentColor}`,
+            paddingBottom: "1px",
+          }}
+        >
+          Pročitaj više →
+        </Link>
+      </div>
+    );
+  }
 
   return (
     <div

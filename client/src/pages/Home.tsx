@@ -293,192 +293,16 @@ export default function Home() {
         style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
       >
         <div className="max-w-[1200px] mx-auto px-5">
-          {/* LIVE blok — NASA Artemis II */}
-          <FadeIn className="mb-10">
-            <LiveBriefingBlock isDark={isDark} />
-          </FadeIn>
 
           {/* ======================
-              OBAVEŠTAJNI BRIFING
+              EDITORIAL LAYOUT: HERO + SIDEBAR
              ====================== */}
-          <FadeIn className="mb-10">
-            <ObavestajniBrifingBlock />
-          </FadeIn>
-
-          {/* ======================
-              APRIL 2026
-             ====================== */}
-          <FadeIn>
-            <div className="flex items-center gap-3 mb-6">
-              <span
-                className="text-[11px] font-bold tracking-[0.14em] uppercase"
-                style={{
-                  fontFamily: "'Source Sans 3', -apple-system, sans-serif",
-                  color: isDark ? "#d9bf7a" : "#8B0000",
-                }}
-              >
-                April 2026
-              </span>
-              <span
-                className="flex-1 h-px"
-                style={{ backgroundColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
-              />
-            </div>
-          </FadeIn>
-
-          {/* Artemis II — Naša planeta */}
-          <FadeIn className="mb-14">
-            <article>
-              <span className="kicker block mb-2">Naša planeta</span>
-
-              <h2
-                className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
-                style={{
-                  fontFamily: "'Playfair Display', Georgia, serif",
-                  fontWeight: 700,
-                  color: isDark ? "#e0ddd5" : "#111",
-                }}
-              >
-                <Link
-                  href="/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca"
-                  className="headline-link"
-                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-                >
-                  Orion više od polovine puta do Meseca: misija Artemis II u dubokom svemiru
-                </Link>
-              </h2>
-
-              <p
-                className="text-[18px] md:text-[19px] leading-[1.6] mb-5"
-                style={{
-                  fontFamily: "'Lora', Georgia, serif",
-                  color: isDark ? "#9a978f" : "#555",
-                }}
-              >
-                Orion je više od polovine puta do Meseca. Misija Artemis II ulazi u fazu dubokog svemirskog krstarenja.
-              </p>
-
-              <Link
-                href="/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca"
-                className="block no-underline"
-              >
-                <div
-                  className="relative w-full overflow-hidden rounded-xl aspect-video"
-                  style={{
-                    border: isDark ? "1px solid #2a2a2e" : "1px solid #e5e5e5",
-                  }}
-                >
-                  <img
-                    src="https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg"
-                    alt="Orion letelica na putu ka Mesecu — misija Artemis II"
-                    className="w-full h-full object-cover block"
-                    fetchPriority="high"
-                    decoding="async"
-                  />
-                </div>
-              </Link>
-            </article>
-          </FadeIn>
-
-          {/* BREAKING: F-15E iznad Irana — main featured story */}
-          <FadeIn className="mb-14">
-            <article>
-              {/* BREAKING badge */}
-              <div
-                className="inline-flex items-center gap-2 mb-3 px-3 py-1 rounded-sm"
-                style={{ backgroundColor: "#8B0000" }}
-              >
-                <span
-                  className="text-[11px] font-bold tracking-[0.14em] uppercase text-white"
-                  style={{ fontFamily: "'Source Sans 3', sans-serif" }}
-                >
-                  🚨 BREAKING
-                </span>
-              </div>
-
-              <span className="kicker block mb-2">Geopolitika</span>
-
-              <h2
-                className="mt-2 mb-3 text-[28px] md:text-[36px] font-bold leading-[1.15]"
-                style={{
-                  fontFamily: "'Playfair Display', Georgia, serif",
-                  fontWeight: 700,
-                  color: isDark ? "#e0ddd5" : "#111",
-                }}
-              >
-                <Link
-                  href="/geopolitika/oboren-f15e-iran-2026"
-                  className="headline-link"
-                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-                >
-                  Oboren američki F-15E iznad Irana: jedan član posade spašen, drugi nestao
-                </Link>
-              </h2>
-
-              <p
-                className="text-[17px] md:text-[18px] leading-[1.6] mb-5"
-                style={{
-                  fontFamily: "'Lora', Georgia, serif",
-                  color: isDark ? "#9a978f" : "#555",
-                }}
-              >
-                Incident predstavlja prvi potvrđeni slučaj obaranja američkog aviona sa posadom u aktuelnom sukobu
-              </p>
-
-              <Link
-                href="/geopolitika/oboren-f15e-iran-2026"
-                className="block no-underline"
-              >
-                <div
-                  className="relative w-full overflow-hidden rounded-xl"
-                  style={{
-                    border: isDark ? "1px solid #2a2a2e" : "1px solid #e5e5e5",
-                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
-                  }}
-                >
-                  <img
-                    src="/news/f15e-iran.jpg"
-                    alt="F-15E Strike Eagle u letu"
-                    className="w-full h-[280px] md:h-[420px] object-cover block"
-                    decoding="async"
-                  />
-                </div>
-              </Link>
-            </article>
-          </FadeIn>
-
-          <span
-            className="block h-px mb-12"
-            style={{ backgroundColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
-          />
-
-          {/* ======================
-              MART 2026
-             ====================== */}
-          <FadeIn>
-            <div className="flex items-center gap-3 mb-6">
-              <span
-                className="text-[11px] font-bold tracking-[0.14em] uppercase"
-                style={{
-                  fontFamily: "'Source Sans 3', -apple-system, sans-serif",
-                  color: isDark ? "#d9bf7a" : "#8B0000",
-                }}
-              >
-                Mart 2026
-              </span>
-              <span
-                className="flex-1 h-px"
-                style={{ backgroundColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
-              />
-            </div>
-          </FadeIn>
-
-          {/* Editorial two-column layout: main story + four supporting stories */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
-            {/* LEFT: Main story — ECB inflacija evrozona */}
+
+            {/* LEFT: HERO — Artemis II (Naša planeta) */}
             <FadeIn>
               <article>
-                <span className="kicker">Geopolitika</span>
+                <span className="kicker block mb-2">Naša planeta</span>
 
                 <h2
                   className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
@@ -489,13 +313,11 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/geopolitika/inflacija-evrozona-ecb-mart"
+                    href="/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca"
                     className="headline-link"
-                    style={{
-                      fontFamily: "'Playfair Display', Georgia, serif",
-                    }}
+                    style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                   >
-                    Inflacija u evrozoni ponovo iznad cilja Evropske centralne banke
+                    Orion više od polovine puta do Meseca: misija Artemis II u dubokom svemiru
                   </Link>
                 </h2>
 
@@ -506,46 +328,43 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  {`Rast cena energije pogurao inflaciju na 2,5 odsto, dok monetarne vlasti razmatraju sledeće korake`}
+                  Orion je više od polovine puta do Meseca. Misija Artemis II ulazi u fazu dubokog svemirskog krstarenja.
                 </p>
 
-                <figure className="mb-0">
-                  <Link
-                    href="/geopolitika/inflacija-evrozona-ecb-mart"
-                    className="block no-underline"
+                <Link
+                  href="/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca"
+                  className="block no-underline"
+                >
+                  <div
+                    className="relative w-full overflow-hidden rounded-xl aspect-video"
+                    style={{
+                      border: isDark ? "1px solid #2a2a2e" : "1px solid #e5e5e5",
+                    }}
                   >
-                    <div
-                      className="border"
-                      style={{
-                        borderColor: isDark ? "#2a2a2e" : "#eee",
-                        backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
-                      }}
-                    >
-                      <img
-                        src={IMAGES.ecbFrankfurtInflation}
-                        alt="Sedište Evropske centralne banke u Frankfurtu, Nemačka"
-                        className="w-full h-[280px] md:h-[380px] object-cover object-center block"
-                        fetchPriority="high"
-                        decoding="async"
-                      />
-                    </div>
-                  </Link>
-                </figure>
+                    <img
+                      src="https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg"
+                      alt="Orion letelica na putu ka Mesecu — misija Artemis II"
+                      className="w-full h-full object-cover block"
+                      fetchPriority="high"
+                      decoding="async"
+                    />
+                  </div>
+                </Link>
               </article>
             </FadeIn>
 
-            {/* RIGHT: Four supporting articles */}
+            {/* RIGHT: Sidebar — secondary articles */}
             <aside>
               <FadeIn>
                 <div className="flex flex-col">
-                  {/* Mobile-only separator so first card matches the visual rhythm of cards 2–4 on small screens */}
+                  {/* Mobile-only separator */}
                   <hr className="editorial-divider my-5 lg:hidden" />
 
                   <SmallArticleCard
                     category="Srbija"
                     href="/srbija/izbori-rezultati"
                     title="Tesne razlike i smanjenje prednosti vlasti: preliminarni rezultati u deset opština"
-                    description="Preliminarni rezultati lokalnih izbora u Srbiji pokazuju da je vladajuća koalicija zadržala vlast, ali uz vidljivo smanjene razlike u više opština."
+                    description="Preliminarni rezultati lokalnih izbora u Srbiji pokazuju da je vladajuća koalicija zadržala vlast, ali uz vidljivo smanjene razlike."
                     imageSrc={IMAGES.izboriRezultati}
                     imageAlt="Ilustracija izbornih rezultata u Srbiji"
                   />
@@ -578,7 +397,7 @@ export default function Home() {
                     category="Obaveštajni izvori"
                     href="/obavestajni-izvori/nemacka-curenje-informacija"
                     title="Nemačka ograničava pristup poverljivim podacima zbog straha od curenja"
-                    description="Nemačke vlasti počele su da ograničavaju pristup poverljivim informacijama čak i pojedinim poslanicima, usled zabrinutosti da bi podaci procureli ka stranim akterima."
+                    description="Nemačke vlasti počele su da ograničavaju pristup poverljivim informacijama čak i pojedinim poslanicima, usled zabrinutosti da bi podaci procureli."
                     imageSrc={IMAGES.germanyIntelligence}
                     imageAlt="Poverljiva fascikla na stolu u nemačkom parlamentu"
                   />
@@ -587,105 +406,20 @@ export default function Home() {
             </aside>
           </div>
 
-          {/* CTA */}
-          <FadeIn className="mt-16">
-            <div
-              className="relative overflow-hidden rounded-sm"
-              style={{ backgroundColor: isDark ? "#0d0d0f" : "#1a2a3a" }}
-            >
-              <div className="py-16 px-8 text-center">
-                <p
-                  className="cta-title text-white/90 text-[28px] md:text-[34px] mb-3"
-                  style={{
-                    fontFamily: "'Playfair Display', Georgia, serif",
-                    fontStyle: "italic",
-                    fontWeight: 400,
-                    letterSpacing: "0.01em",
-                  }}
-                >
-                  Budite informisani.
-                </p>
-
-                <p
-                  className="text-white/70 text-[16px] max-w-[560px] mx-auto mb-6"
-                  style={{ fontFamily: "'Lora', Georgia, serif" }}
-                >
-                  Pratite Novi talas za ekskluzivne analize iz oblasti geopolitike,
-                  bezbednosti — i od sada: Naše planete.
-                </p>
-
-                <span
-                  className="inline-block bg-[#8B0000] text-white text-[12px] font-bold tracking-[0.12em] uppercase px-8 py-3 hover:bg-[#6B0000] transition-colors duration-200"
-                  style={{
-                    fontFamily: "'Source Sans 3', -apple-system, sans-serif",
-                  }}
-                >
-                  Pratite nas
-                </span>
-              </div>
-            </div>
+          {/* ======================
+              LIVE BLOK — NASA Artemis II
+             ====================== */}
+          <FadeIn className="mb-10">
+            <LiveBriefingBlock isDark={isDark} />
           </FadeIn>
 
           {/* ======================
-              IZDANJE — FEBRUAR 2026 (compact archive preview)
+              OBAVEŠTAJNI BRIFING — compact preview
              ====================== */}
-          <FadeIn className="mt-12 mb-4">
-            {/* Thin divider above section */}
-            <span
-              className="block h-px mb-6"
-              style={{ backgroundColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
-            />
-
-            {/* Compact archive entry — full block is clickable */}
-            <Link
-              href="/izdanje/februar-2026"
-              className="flex items-center gap-5 group"
-              style={{ textDecoration: "none" }}
-            >
-              {/* Thumbnail */}
-              <img
-                src="/issue/arhiv-februar.jpg"
-                alt="Izdanje — Februar 2026"
-                style={{
-                  width: "120px",
-                  height: "auto",
-                  borderRadius: "4px",
-                  objectFit: "cover",
-                  flexShrink: 0,
-                  boxShadow: isDark
-                    ? "0 2px 10px rgba(0,0,0,0.40)"
-                    : "0 2px 8px rgba(0,0,0,0.10)",
-                }}
-                loading="lazy"
-                decoding="async"
-              />
-
-              {/* Text content */}
-              <div
-                className="transition-opacity duration-200 group-hover:opacity-70"
-                style={{ fontFamily: "'Source Sans 3', -apple-system, sans-serif" }}
-              >
-                <span
-                  className="block text-[10px] font-bold tracking-[0.20em] uppercase mb-1"
-                  style={{ color: isDark ? "#d9bf7a" : "#8B0000" }}
-                >
-                  Izdanje
-                </span>
-                <span
-                  className="block text-[15px] font-semibold tracking-[0.04em]"
-                  style={{ color: isDark ? "#f0ece4" : "#1a1a1a" }}
-                >
-                  Februar 2026
-                </span>
-                <span
-                  className="block text-[11px] mt-1"
-                  style={{ color: isDark ? "#888" : "#999" }}
-                >
-                  Pregled svih tekstova
-                </span>
-              </div>
-            </Link>
+          <FadeIn className="mb-10">
+            <ObavestajniBrifingBlock compact />
           </FadeIn>
+
         </div>
       </main>
 
