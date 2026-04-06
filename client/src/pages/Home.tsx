@@ -19,6 +19,9 @@ import LiveBriefingBlock from "@/components/LiveBriefingBlock";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA GLAVNA VEST — Kina vodoničnog avion (6. april 2026)
+  hydrogenLight: "/news/hydrogen-light.jpg",
+
   // ✅ NOVA GLAVNA VEST — ECB inflacija evrozona (1. april 2026)
   ecbFrankfurtInflation: "/news/ecb-frankfurt-inflation.jpg",
 
@@ -299,10 +302,10 @@ export default function Home() {
              ====================== */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
 
-            {/* LEFT: HERO — Artemis II (Naša planeta) */}
+            {/* LEFT: HERO — Kina vodoničnog avion (Geopolitika) */}
             <FadeIn>
               <article>
-                <span className="kicker block mb-2">Naša planeta</span>
+                <span className="kicker block mb-2">Geopolitika</span>
 
                 <h2
                   className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
@@ -313,11 +316,11 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca"
+                    href="/geopolitika/kina-testira-vodonicni-avion-pocetak-nove-energetske-trke-u-avijaciji"
                     className="headline-link"
                     style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                   >
-                    Orion više od polovine puta do Meseca: misija Artemis II u dubokom svemiru
+                    Kina testira vodonični avion: početak nove energetske trke u avijaciji
                   </Link>
                 </h2>
 
@@ -328,11 +331,11 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Orion je više od polovine puta do Meseca. Misija Artemis II ulazi u fazu dubokog svemirskog krstarenja.
+                  Kina je izvela prvi uspešan test megavatnog vodoničnog turboprop motora, što ukazuje na ubrzanje globalne energetske i tehnološke trke u avijaciji.
                 </p>
 
                 <Link
-                  href="/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca"
+                  href="/geopolitika/kina-testira-vodonicni-avion-pocetak-nove-energetske-trke-u-avijaciji"
                   className="block no-underline"
                 >
                   <div
@@ -342,8 +345,8 @@ export default function Home() {
                     }}
                   >
                     <img
-                      src="https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg"
-                      alt="Orion letelica na putu ka Mesecu — misija Artemis II"
+                      src={IMAGES.hydrogenLight}
+                      alt="Vodoničnim gorivnim ćelijama pogonjen avion na poletištu tokom testiranja"
                       className="w-full h-full object-cover block"
                       fetchPriority="high"
                       decoding="async"
@@ -359,6 +362,17 @@ export default function Home() {
                 <div className="flex flex-col">
                   {/* Mobile-only separator */}
                   <hr className="editorial-divider my-5 lg:hidden" />
+
+                  <SmallArticleCard
+                    category="Naša planeta"
+                    href="/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca"
+                    title="Orion više od polovine puta do Meseca: misija Artemis II u dubokom svemiru"
+                    description="Orion je više od polovine puta do Meseca. Misija Artemis II ulazi u fazu dubokog svemirskog krstarenja."
+                    imageSrc="https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg"
+                    imageAlt="Orion letelica na putu ka Mesecu — misija Artemis II"
+                  />
+
+                  <hr className="editorial-divider my-5" />
 
                   <SmallArticleCard
                     category="Srbija"
@@ -389,17 +403,6 @@ export default function Home() {
                     description="Mađarski premijer Viktor Orban najavio postepeni prekid isporuke gasa Ukrajini, uz nove tenzije unutar Evropske unije."
                     imageSrc={IMAGES.orbanOil}
                     imageAlt="Viktor Orban tokom obraćanja na sastanku Evropskog saveta"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Obaveštajni izvori"
-                    href="/obavestajni-izvori/nemacka-curenje-informacija"
-                    title="Nemačka ograničava pristup poverljivim podacima zbog straha od curenja"
-                    description="Nemačke vlasti počele su da ograničavaju pristup poverljivim informacijama čak i pojedinim poslanicima, usled zabrinutosti da bi podaci procureli."
-                    imageSrc={IMAGES.germanyIntelligence}
-                    imageAlt="Poverljiva fascikla na stolu u nemačkom parlamentu"
                   />
                 </div>
               </FadeIn>
