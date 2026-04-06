@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/kina-testira-vodonicni-avion-pocetak-nove-energetske-trke-u-avijaciji",
+    title: "Kina testira vodonični avion: početak nove energetske trke u avijaciji",
+    description:
+      "Kina je izvela prvi uspešan test megavatnog vodoničnog turboprop motora, što ukazuje na ubrzanje globalne energetske i tehnološke trke u avijaciji.",
+    imageSrc: "/news/hydrogen-light.jpg",
+    datePublished: "2026-04-06",
+  },
+  {
     path: "/obavestajni-izvori/prvi-brifing",
     title: "OBAVEŠTAJNI BRIFING | 2–4. april 2026.",
     description:

@@ -33,6 +33,9 @@ import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 
 /* ✅ NOVA VEST — Geopolitika */
+import KinaTestiraVodonicniAvion from "./pages/kina-testira-vodonicni-avion-pocetak-nove-energetske-trke-u-avijaciji";
+
+/* ✅ NOVA VEST — Geopolitika */
 import OborenF15eIran2026 from "./pages/oboren-f15e-iran-2026";
 
 /* ✅ NOVA VEST — Geopolitika */
@@ -155,6 +158,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/kina-testira-vodonicni-avion-pocetak-nove-energetske-trke-u-avijaciji"
+          component={KinaTestiraVodonicniAvion}
+        />
+
         <Route
           path="/geopolitika/oboren-f15e-iran-2026"
           component={OborenF15eIran2026}
