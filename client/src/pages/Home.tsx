@@ -19,7 +19,7 @@ import LiveBriefingBlock from "@/components/LiveBriefingBlock";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
-  // ✅ NOVA GLAVNA VEST — Kina vodoničnog avion (6. april 2026)
+  // ✅ NOVA GLAVNA VEST — Kina vodonični avion (6. april 2026.)
   hydrogenLight: "/news/hydrogen-light.jpg",
 
   // ✅ NOVA GLAVNA VEST — ECB inflacija evrozona (1. april 2026)
@@ -302,7 +302,7 @@ export default function Home() {
              ====================== */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
 
-            {/* LEFT: HERO — Kina vodoničnog avion (Geopolitika) */}
+            {/* LEFT: HERO — Kina vodonični avion (Geopolitika) */}
             <FadeIn>
               <article>
                 <span className="kicker block mb-2">Geopolitika</span>
