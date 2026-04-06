@@ -553,4 +553,42 @@ export const seoData: Record<string, SEOData> = {
     twitterImage: "https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg",
     datePublished: "2026-04-05",
   },
+
+  "/nasa-planeta/artemis-ii-rekord-udaljenosti": {
+    title:
+      "Čovečanstvo najdalje od Zemlje u istoriji: Artemis II nadmašio rekord Apola 13 | NOVI TALAS",
+    description:
+      "Posada misije Artemis II dostigla je najveću udaljenost od Zemlje ikada zabeleženu za ljudsku posadu, premašivši rekord misije Apollo 13.",
+    ogTitle:
+      "Čovečanstvo najdalje od Zemlje u istoriji: Artemis II nadmašio rekord Apola 13",
+    ogDescription:
+      "Posada misije Artemis II dostigla je najveću udaljenost od Zemlje ikada zabeleženu za ljudsku posadu, premašivši rekord misije Apollo 13.",
+    ogUrl: "https://novitalas.org/nasa-planeta/artemis-ii-rekord-udaljenosti",
+    ogImage: "https://novitalas.org/news/moon-nasa.jpg",
+    twitterTitle:
+      "Čovečanstvo najdalje od Zemlje u istoriji: Artemis II nadmašio rekord Apola 13",
+    twitterDescription:
+      "Posada misije Artemis II dostigla je najveću udaljenost od Zemlje ikada zabeleženu za ljudsku posadu, premašivši rekord misije Apollo 13.",
+    twitterImage: "https://novitalas.org/news/moon-nasa.jpg",
+    datePublished: "2026-04-06",
+  },
+
+  "/nasa-planeta/artemis-ii-uzivo-prenos-rekord": {
+    title:
+      "Uživo: Artemis II obara istorijski rekord — prenos iz dubokog svemira | NOVI TALAS",
+    description:
+      "NASA uživo prenosi misiju Artemis II u trenutku kada posada dostiže najveću udaljenost od Zemlje u istoriji čovečanstva.",
+    ogTitle:
+      "Uživo: Artemis II obara istorijski rekord — prenos iz dubokog svemira",
+    ogDescription:
+      "NASA uživo prenosi misiju Artemis II u trenutku kada posada dostiže najveću udaljenost od Zemlje u istoriji čovečanstva.",
+    ogUrl: "https://novitalas.org/nasa-planeta/artemis-ii-uzivo-prenos-rekord",
+    ogImage: "https://novitalas.org/news/moon-nasa.jpg",
+    twitterTitle:
+      "Uživo: Artemis II obara istorijski rekord — prenos iz dubokog svemira",
+    twitterDescription:
+      "NASA uživo prenosi misiju Artemis II u trenutku kada posada dostiže najveću udaljenost od Zemlje u istoriji čovečanstva.",
+    twitterImage: "https://novitalas.org/news/moon-nasa.jpg",
+    datePublished: "2026-04-06",
+  },
 };

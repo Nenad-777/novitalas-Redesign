@@ -302,10 +302,23 @@ export default function Home() {
              ====================== */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
 
-            {/* LEFT: HERO — Kina vodonični avion (Geopolitika) */}
+            {/* LEFT: HERO — Artemis II rekord udaljenosti (Naša planeta) */}
             <FadeIn>
               <article>
-                <span className="kicker block mb-2">Geopolitika</span>
+                {/* BREAKING badge */}
+                <div
+                  className="inline-flex items-center gap-2 mb-3 px-3 py-1.5 rounded-sm"
+                  style={{ backgroundColor: "#8B0000" }}
+                >
+                  <span
+                    className="text-[11px] font-bold tracking-[0.14em] uppercase text-white"
+                    style={{ fontFamily: "'Source Sans 3', sans-serif" }}
+                  >
+                    🚨 BREAKING
+                  </span>
+                </div>
+
+                <span className="kicker block mb-2">Naša planeta</span>
 
                 <h2
                   className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
@@ -316,11 +329,11 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/geopolitika/kina-testira-vodonicni-avion-pocetak-nove-energetske-trke-u-avijaciji"
+                    href="/nasa-planeta/artemis-ii-rekord-udaljenosti"
                     className="headline-link"
                     style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                   >
-                    Kina testira vodonični avion: početak nove energetske trke u avijaciji
+                    Čovečanstvo najdalje od Zemlje u istoriji: Artemis II nadmašio rekord Apola 13
                   </Link>
                 </h2>
 
@@ -331,11 +344,11 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Kina je izvela prvi uspešan test megavatnog vodoničnog turboprop motora, što ukazuje na ubrzanje globalne energetske i tehnološke trke u avijaciji.
+                  Posada misije Artemis II dostigla je najveću udaljenost od Zemlje ikada zabeleženu za ljudsku posadu, premašivši rekord misije Apollo 13.
                 </p>
 
                 <Link
-                  href="/geopolitika/kina-testira-vodonicni-avion-pocetak-nove-energetske-trke-u-avijaciji"
+                  href="/nasa-planeta/artemis-ii-rekord-udaljenosti"
                   className="block no-underline"
                 >
                   <div
@@ -345,8 +358,8 @@ export default function Home() {
                     }}
                   >
                     <img
-                      src={IMAGES.hydrogenLight}
-                      alt="Vodoničnim gorivnim ćelijama pogonjen avion na poletištu tokom testiranja"
+                      src="/news/moon-nasa.jpg"
+                      alt="Letelica Orion u dubokom svemiru tokom misije Artemis II"
                       className="w-full h-full object-cover block"
                       fetchPriority="high"
                       decoding="async"
@@ -364,12 +377,12 @@ export default function Home() {
                   <hr className="editorial-divider my-5 lg:hidden" />
 
                   <SmallArticleCard
-                    category="Naša planeta"
-                    href="/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca"
-                    title="Orion više od polovine puta do Meseca: misija Artemis II u dubokom svemiru"
-                    description="Orion je više od polovine puta do Meseca. Misija Artemis II ulazi u fazu dubokog svemirskog krstarenja."
-                    imageSrc="https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg"
-                    imageAlt="Orion letelica na putu ka Mesecu — misija Artemis II"
+                    category="Geopolitika"
+                    href="/geopolitika/kina-testira-vodonicni-avion-pocetak-nove-energetske-trke-u-avijaciji"
+                    title="Kina testira vodonični avion: početak nove energetske trke u avijaciji"
+                    description="Kina je izvela prvi uspešan test megavatnog vodoničnog turboprop motora, što ukazuje na ubrzanje globalne energetske i tehnološke trke u avijaciji."
+                    imageSrc={IMAGES.hydrogenLight}
+                    imageAlt="Vodoničnim gorivnim ćelijama pogonjen avion na poletištu tokom testiranja"
                   />
 
                   <hr className="editorial-divider my-5" />

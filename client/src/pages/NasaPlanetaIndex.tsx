@@ -11,6 +11,24 @@ import LiveBriefingBlock from "@/components/LiveBriefingBlock";
 
 const ARTICLES = [
   {
+    href: "/nasa-planeta/artemis-ii-rekord-udaljenosti",
+    img: "/news/moon-nasa.jpg",
+    alt: "Letelica Orion u dubokom svemiru tokom misije Artemis II",
+    title:
+      "🚨 Čovečanstvo najdalje od Zemlje u istoriji: Artemis II nadmašio rekord Apola 13",
+    description:
+      "Posada misije Artemis II dostigla je najveću udaljenost od Zemlje ikada zabeleženu za ljudsku posadu, premašivši rekord misije Apollo 13.",
+  },
+  {
+    href: "/nasa-planeta/artemis-ii-uzivo-prenos-rekord",
+    img: "https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg",
+    alt: "NASA Artemis II — uživo prenos iz dubokog svemira",
+    title:
+      "Uživo: Artemis II obara istorijski rekord — prenos iz dubokog svemira",
+    description:
+      "NASA uživo prenosi misiju Artemis II u trenutku kada posada dostiže najveću udaljenost od Zemlje u istoriji čovečanstva.",
+  },
+  {
     href: "/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca",
     img: "https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg",
     alt: "Orion letelica na putu ka Mesecu — misija Artemis II",
