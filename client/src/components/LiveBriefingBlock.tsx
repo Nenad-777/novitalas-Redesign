@@ -25,6 +25,16 @@ interface LiveBriefingBlockProps {
 // Izveštaji — najnoviji na vrhu. Dodaj nove na početak niza.
 const LIVE_REPORTS: LiveReport[] = [
   {
+    id: "report-2000",
+    time: "20:00",
+    text: [
+      "Misija Artemis II upravo je oborila istorijski rekord udaljenosti od Zemlje.",
+      "Posada je nadmašila granicu postavljenu tokom misije Apollo 13, čime su astronauti postali ljudi koji su se najviše udaljili od naše planete u istoriji.",
+      "NASA u ovom trenutku emituje uživo prenos iz svemira, dok letelica Orion nastavlja putanju ka Mesecu.",
+      "👇 U nastavku pogledajte direktan prenos misije",
+    ],
+  },
+  {
     id: "report-1930",
     time: "19:30",
     text: [

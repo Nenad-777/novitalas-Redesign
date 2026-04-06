@@ -116,6 +116,12 @@ import MarsReka from "./pages/mars-reka";
 /* ✅ BREAKING VEST — Naša planeta */
 import BreakingNasaArtemisII from "./pages/breaking-nasa-artemis-ii-mesec-posle-50-godina";
 
+/* ✅ BREAKING VEST — Naša planeta — Rekord udaljenosti */
+import ArtemisIIRekordUdaljenosti from "./pages/artemis-ii-rekord-udaljenosti";
+
+/* ✅ BREAKING VEST — Naša planeta — Uživo prenos */
+import ArtemisIIUzivoPrenosRekord from "./pages/artemis-ii-uzivo-prenos-rekord";
+
 /* ✅ NOVA VEST — Naša planeta */
 import ArtemisIIOrionPolovinaPuta from "./pages/artemis-ii-orion-polovina-puta-do-meseca";
 
@@ -367,6 +373,16 @@ function Router() {
         <Route
           path="/nasa-planeta/breaking-nasa-artemis-ii-mesec-posle-50-godina"
           component={BreakingNasaArtemisII}
+        />
+
+        <Route
+          path="/nasa-planeta/artemis-ii-rekord-udaljenosti"
+          component={ArtemisIIRekordUdaljenosti}
+        />
+
+        <Route
+          path="/nasa-planeta/artemis-ii-uzivo-prenos-rekord"
+          component={ArtemisIIUzivoPrenosRekord}
         />
 
         <Route
