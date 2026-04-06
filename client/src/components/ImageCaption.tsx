@@ -1,7 +1,5 @@
 import { useTheme } from "@/contexts/ThemeContext";
 
-export const DEFAULT_IMAGE_CREDIT = "Foto: Getty Images";
-
 type ImageCaptionProps = {
   credit?: string;
 };
@@ -9,6 +7,8 @@ type ImageCaptionProps = {
 export default function ImageCaption({ credit }: ImageCaptionProps) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
+
+  if (!credit) return null;
 
   return (
     <p
@@ -18,7 +18,7 @@ export default function ImageCaption({ credit }: ImageCaptionProps) {
         color: isDark ? "#6b6760" : "#777",
       }}
     >
-      {credit ?? DEFAULT_IMAGE_CREDIT}
+      {credit}
     </p>
   );
 }
