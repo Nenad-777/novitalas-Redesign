@@ -19,6 +19,7 @@ export default function KinaTestiraVodonicniAvion() {
       deck="Kina je izvela prvi uspešan test megavatnog vodoničnog turboprop motora, što ukazuje na ubrzanje globalne energetske i tehnološke trke u avijaciji."
       imageSrc={IMAGE_SRC}
       imageAlt="Vodoničnim gorivnim ćelijama pogonjen avion na poletištu tokom testiranja"
+      imageCredit="Foto: Ilustracija"
       paragraphs={PARAGRAPHS}
       backHref="/geopolitika"
       backLabel="← Nazad na Geopolitiku"
