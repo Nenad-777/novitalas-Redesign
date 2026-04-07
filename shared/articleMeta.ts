@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/harg-srce-iranskog-izvoza-nafte",
+    title: "Harg – srce iranskog izvoza nafte",
+    description:
+      "Sjedinjene Američke Države, prema dostupnim izveštajima, izvele su udare na vojne ciljeve na ostrvu Harg, ključnom energetskom čvorištu Irana u Persijskom zalivu. Reč je o tački od izuzetnog strateškog značaja za izvoz iranske nafte i za stabilnost čitavog regiona.",
+    imageSrc: "/news/harg-oil-terminal.jpg",
+    datePublished: "2026-04-07",
+  },
+  {
     path: "/geopolitika/kina-testira-vodonicni-avion-pocetak-nove-energetske-trke-u-avijaciji",
     title: "Kina testira vodonični avion: početak nove energetske trke u avijaciji",
     description:

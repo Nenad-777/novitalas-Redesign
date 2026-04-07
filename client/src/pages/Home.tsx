@@ -19,6 +19,9 @@ import LiveBriefingBlock from "@/components/LiveBriefingBlock";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA GLAVNA VEST — Harg ostrvo (7. april 2026.)
+  hargOilTerminal: "/news/harg-oil-terminal.jpg",
+
   // ✅ NOVA GLAVNA VEST — Kina vodonični avion (6. april 2026.)
   hydrogenLight: "/news/hydrogen-light.jpg",
 
@@ -128,6 +131,9 @@ const IMAGES = {
 
   // ✅ Kina moždani implantat (Naša planeta, 14. mart 2026)
   chinaBrain: "/news/china-brain.jpg",
+
+  // ✅ Artemis II rekord udaljenosti (Naša planeta, 6. april 2026)
+  moonNasa: "/news/moon-nasa.jpg",
 };
 
 // Simple fade-in on scroll hook
@@ -302,7 +308,7 @@ export default function Home() {
              ====================== */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
 
-            {/* LEFT: HERO — Artemis II rekord udaljenosti (Naša planeta) */}
+            {/* LEFT: HERO — Harg – srce iranskog izvoza nafte (Geopolitika) */}
             <FadeIn>
               <article>
                 {/* BREAKING badge */}
@@ -318,7 +324,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                <span className="kicker block mb-2">Naša planeta</span>
+                <span className="kicker block mb-2">Geopolitika</span>
 
                 <h2
                   className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
@@ -329,11 +335,11 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/nasa-planeta/artemis-ii-rekord-udaljenosti"
+                    href="/geopolitika/harg-srce-iranskog-izvoza-nafte"
                     className="headline-link"
                     style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                   >
-                    Čovečanstvo najdalje od Zemlje u istoriji: Artemis II nadmašio rekord Apola 13
+                    Harg – srce iranskog izvoza nafte
                   </Link>
                 </h2>
 
@@ -344,11 +350,11 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Posada misije Artemis II dostigla je najveću udaljenost od Zemlje ikada zabeleženu za ljudsku posadu, premašivši rekord misije Apollo 13.
+                  Sjedinjene Američke Države, prema dostupnim izveštajima, izvele su udare na vojne ciljeve na ostrvu Harg, ključnom energetskom čvorištu Irana u Persijskom zalivu.
                 </p>
 
                 <Link
-                  href="/nasa-planeta/artemis-ii-rekord-udaljenosti"
+                  href="/geopolitika/harg-srce-iranskog-izvoza-nafte"
                   className="block no-underline"
                 >
                   <div
@@ -358,8 +364,8 @@ export default function Home() {
                     }}
                   >
                     <img
-                      src="/news/moon-nasa.jpg"
-                      alt="Letelica Orion u dubokom svemiru tokom misije Artemis II"
+                      src={IMAGES.hargOilTerminal}
+                      alt="Naftni terminal na ostrvu Harg, jednom od najvažnijih energetskih čvorišta Irana."
                       className="w-full h-full object-cover block"
                       fetchPriority="high"
                       decoding="async"
@@ -375,6 +381,17 @@ export default function Home() {
                 <div className="flex flex-col">
                   {/* Mobile-only separator */}
                   <hr className="editorial-divider my-5 lg:hidden" />
+
+                  <SmallArticleCard
+                    category="Naša planeta"
+                    href="/nasa-planeta/artemis-ii-rekord-udaljenosti"
+                    title="Čovečanstvo najdalje od Zemlje u istoriji: Artemis II nadmašio rekord Apola 13"
+                    description="Posada misije Artemis II dostigla je najveću udaljenost od Zemlje ikada zabeleženu za ljudsku posadu, premašivši rekord misije Apollo 13."
+                    imageSrc={IMAGES.moonNasa}
+                    imageAlt="Letelica Orion u dubokom svemiru tokom misije Artemis II"
+                  />
+
+                  <hr className="editorial-divider my-5" />
 
                   <SmallArticleCard
                     category="Geopolitika"
@@ -405,17 +422,6 @@ export default function Home() {
                     description="Ujedinjene nacije traže hitnu istragu nakon bombardovanja škole u Iranu u kojem je stradalo više od 150 civila."
                     imageSrc={IMAGES.unInvestigation}
                     imageAlt="Zastava Ujedinjenih nacija ispred sedišta UN"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Geopolitika"
-                    href="/geopolitika/orban-prekid-gas-ukrajina"
-                    title="Orban najavio prekid isporuke gasa Ukrajini"
-                    description="Mađarski premijer Viktor Orban najavio postepeni prekid isporuke gasa Ukrajini, uz nove tenzije unutar Evropske unije."
-                    imageSrc={IMAGES.orbanOil}
-                    imageAlt="Viktor Orban tokom obraćanja na sastanku Evropskog saveta"
                   />
                 </div>
               </FadeIn>

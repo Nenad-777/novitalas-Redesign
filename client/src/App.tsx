@@ -33,6 +33,9 @@ import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 
 /* ✅ NOVA VEST — Geopolitika */
+import HargSrceIranskogIzvozaNafte from "./pages/harg-srce-iranskog-izvoza-nafte";
+
+/* ✅ NOVA VEST — Geopolitika */
 import KinaTestiraVodonicniAvion from "./pages/kina-testira-vodonicni-avion-pocetak-nove-energetske-trke-u-avijaciji";
 
 /* ✅ NOVA VEST — Geopolitika */
@@ -164,6 +167,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/harg-srce-iranskog-izvoza-nafte"
+          component={HargSrceIranskogIzvozaNafte}
+        />
+
         <Route
           path="/geopolitika/kina-testira-vodonicni-avion-pocetak-nove-energetske-trke-u-avijaciji"
           component={KinaTestiraVodonicniAvion}
