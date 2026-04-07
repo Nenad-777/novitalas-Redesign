@@ -25,6 +25,28 @@ interface LiveBriefingBlockProps {
 // Izveštaji — najnoviji na vrhu. Dodaj nove na početak niza.
 const LIVE_REPORTS: LiveReport[] = [
   {
+    id: "report-2000-artemis-fotografije-0407",
+    time: "20:00",
+    text: [
+      "NASA objavila nove fotografije iz misije Artemis II.",
+      "• pogled na Zemlju iz letelice Orion",
+      "• zabeleženo pomračenje Sunca tokom lunarnog preleta",
+      "• misija u stabilnoj fazi povratka",
+    ],
+    images: [
+      {
+        src: "/news/orion-earth-view.jpg",
+        caption: "Pogled na Zemlju iz letelice Orion tokom misije Artemis II",
+        credit: "Foto: NASA / Artemis II",
+      },
+      {
+        src: "/news/artemis-eclipse.jpg",
+        caption: "Pomračenje Sunca zabeleženo tokom lunarnog preleta misije Artemis II",
+        credit: "Foto: NASA / Artemis II",
+      },
+    ],
+  },
+  {
     id: "report-2000",
     time: "20:00",
     text: [

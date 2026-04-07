@@ -134,6 +134,9 @@ const IMAGES = {
 
   // ✅ Artemis II rekord udaljenosti (Naša planeta, 6. april 2026)
   moonNasa: "/news/moon-nasa.jpg",
+
+  // ✅ Artemis II fotografije dubokog svemira (Naša planeta, 7. april 2026)
+  orionEarthView: "/news/orion-earth-view.jpg",
 };
 
 // Simple fade-in on scroll hook
@@ -416,12 +419,12 @@ export default function Home() {
                   <hr className="editorial-divider my-5" />
 
                   <SmallArticleCard
-                    category="Geopolitika"
-                    href="/geopolitika/un-istraga-skola-iran"
-                    title="UN traži pravdu nakon bombardovanja škole u Iranu"
-                    description="Ujedinjene nacije traže hitnu istragu nakon bombardovanja škole u Iranu u kojem je stradalo više od 150 civila."
-                    imageSrc={IMAGES.unInvestigation}
-                    imageAlt="Zastava Ujedinjenih nacija ispred sedišta UN"
+                    category="Naša planeta"
+                    href="/nasa-planeta/artemis-ii-fotografije-dubokog-svemira"
+                    title="Fotografije iz dubokog svemira: Artemis II beleži prizore sa lunarnog preleta"
+                    description="NASA objavila nove snimke Zemlje i pomračenja iz perspektive misije Artemis II."
+                    imageSrc={IMAGES.orionEarthView}
+                    imageAlt="Pogled na Zemlju iz letelice Orion tokom misije Artemis II"
                   />
                 </div>
               </FadeIn>

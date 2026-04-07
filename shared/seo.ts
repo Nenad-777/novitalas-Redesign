@@ -591,4 +591,23 @@ export const seoData: Record<string, SEOData> = {
     twitterImage: "https://novitalas.org/news/moon-nasa.jpg",
     datePublished: "2026-04-06",
   },
+
+  "/nasa-planeta/artemis-ii-fotografije-dubokog-svemira": {
+    title:
+      "Fotografije iz dubokog svemira: Artemis II beleži prizore sa lunarnog preleta | NOVI TALAS",
+    description:
+      "NASA objavila nove snimke Zemlje i pomračenja iz perspektive misije Artemis II.",
+    ogTitle:
+      "Fotografije iz dubokog svemira: Artemis II beleži prizore sa lunarnog preleta",
+    ogDescription:
+      "NASA objavila nove snimke Zemlje i pomračenja iz perspektive misije Artemis II.",
+    ogUrl: "https://novitalas.org/nasa-planeta/artemis-ii-fotografije-dubokog-svemira",
+    ogImage: "https://novitalas.org/news/orion-earth-view.jpg",
+    twitterTitle:
+      "Fotografije iz dubokog svemira: Artemis II beleži prizore sa lunarnog preleta",
+    twitterDescription:
+      "NASA objavila nove snimke Zemlje i pomračenja iz perspektive misije Artemis II.",
+    twitterImage: "https://novitalas.org/news/orion-earth-view.jpg",
+    datePublished: "2026-04-07",
+  },
 };
