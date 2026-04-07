@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/rusija-kina-francuska-blokirale-rezoluciju-o-otvaranju-ormuskog-moreuza",
+    title:
+      "Rusija, Kina i Francuska blokirale rezoluciju o otvaranju Ormuskog moreuza",
+    description:
+      "Rusija, Kina i Francuska blokirale su u Savetu bezbednosti UN rezoluciju o ponovnom otvaranju Ormuskog moreuza, jednog od ključnih svetskih energetskih prolaza. Odluka dodatno produbljuje neizvesnost u regionu Persijskog zaliva i pojačava pritisak na globalne energetske tokove.",
+    imageSrc: "/news/un-security-council.jpg",
+    datePublished: "2026-04-07",
+  },
+  {
     path: "/geopolitika/harg-srce-iranskog-izvoza-nafte",
     title: "Harg – srce iranskog izvoza nafte",
     description:

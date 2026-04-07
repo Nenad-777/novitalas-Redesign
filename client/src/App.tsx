@@ -33,6 +33,9 @@ import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 
 /* ✅ NOVA VEST — Geopolitika */
+import RusijaKinaFrancuskaBlokada from "./pages/rusija-kina-francuska-blokirale-rezoluciju-o-otvaranju-ormuskog-moreuza";
+
+/* ✅ NOVA VEST — Geopolitika */
 import HargSrceIranskogIzvozaNafte from "./pages/harg-srce-iranskog-izvoza-nafte";
 
 /* ✅ NOVA VEST — Geopolitika */
@@ -170,6 +173,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/rusija-kina-francuska-blokirale-rezoluciju-o-otvaranju-ormuskog-moreuza"
+          component={RusijaKinaFrancuskaBlokada}
+        />
+
         <Route
           path="/geopolitika/harg-srce-iranskog-izvoza-nafte"
           component={HargSrceIranskogIzvozaNafte}

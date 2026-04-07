@@ -19,6 +19,9 @@ import LiveBriefingBlock from "@/components/LiveBriefingBlock";
 const IMAGES = {
   hero: "/hero/naslovna-novitalas.jpg",
 
+  // ✅ NOVA GLAVNA VEST — Rusija, Kina, Francuska blokirale rezoluciju (7. april 2026.)
+  unSecurityCouncil: "/news/un-security-council.jpg",
+
   // ✅ NOVA GLAVNA VEST — Harg ostrvo (7. april 2026.)
   hargOilTerminal: "/news/harg-oil-terminal.jpg",
 
@@ -318,7 +321,7 @@ export default function Home() {
              ====================== */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
 
-            {/* LEFT: HERO — Harg – srce iranskog izvoza nafte (Geopolitika) */}
+            {/* LEFT: HERO — Rusija, Kina i Francuska blokirale rezoluciju (Geopolitika) */}
             <FadeIn>
               <article>
                 {/* BREAKING badge */}
@@ -345,11 +348,11 @@ export default function Home() {
                   }}
                 >
                   <Link
-                    href="/geopolitika/harg-srce-iranskog-izvoza-nafte"
+                    href="/geopolitika/rusija-kina-francuska-blokirale-rezoluciju-o-otvaranju-ormuskog-moreuza"
                     className="headline-link"
                     style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                   >
-                    Harg – srce iranskog izvoza nafte
+                    Rusija, Kina i Francuska blokirale rezoluciju o otvaranju Ormuskog moreuza
                   </Link>
                 </h2>
 
@@ -360,11 +363,11 @@ export default function Home() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Sjedinjene Američke Države, prema dostupnim izveštajima, izvele su udare na vojne ciljeve na ostrvu Harg, ključnom energetskom čvorištu Irana u Persijskom zalivu.
+                  Rusija, Kina i Francuska blokirale su u Savetu bezbednosti UN rezoluciju o ponovnom otvaranju Ormuskog moreuza. Odluka dodatno produbljuje neizvesnost u regionu Persijskog zaliva i pojačava pritisak na globalne energetske tokove.
                 </p>
 
                 <Link
-                  href="/geopolitika/harg-srce-iranskog-izvoza-nafte"
+                  href="/geopolitika/rusija-kina-francuska-blokirale-rezoluciju-o-otvaranju-ormuskog-moreuza"
                   className="block no-underline"
                 >
                   <div
@@ -374,8 +377,8 @@ export default function Home() {
                     }}
                   >
                     <img
-                      src={IMAGES.hargOilTerminal}
-                      alt="Naftni terminal na ostrvu Harg, jednom od najvažnijih energetskih čvorišta Irana."
+                      src={IMAGES.unSecurityCouncil}
+                      alt="Savet bezbednosti Ujedinjenih nacija u Njujorku, gde je blokirana rezolucija o otvaranju Ormuskog moreuza."
                       className="w-full h-full object-cover block"
                       fetchPriority="high"
                       decoding="async"
@@ -391,6 +394,17 @@ export default function Home() {
                 <div className="flex flex-col">
                   {/* Mobile-only separator */}
                   <hr className="editorial-divider my-5 lg:hidden" />
+
+                  <SmallArticleCard
+                    category="Geopolitika"
+                    href="/geopolitika/harg-srce-iranskog-izvoza-nafte"
+                    title="Harg – srce iranskog izvoza nafte"
+                    description="Sjedinjene Američke Države, prema dostupnim izveštajima, izvele su udare na vojne ciljeve na ostrvu Harg, ključnom energetskom čvorištu Irana u Persijskom zalivu."
+                    imageSrc={IMAGES.hargOilTerminal}
+                    imageAlt="Naftni terminal na ostrvu Harg, jednom od najvažnijih energetskih čvorišta Irana."
+                  />
+
+                  <hr className="editorial-divider my-5" />
 
                   <SmallArticleCard
                     category="Naša planeta"
