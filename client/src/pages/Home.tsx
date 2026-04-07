@@ -2,10 +2,11 @@
  * DESIGN: "Diplomatska Klasika" v2  -  Foreign Affairs-inspired homepage
  * Update:
  * - NEW: Udarni blok Ormuski moreuz (Mart 2026)
- * - Main feature: Izrael–Iran 2026 (Februar 2026)
- * - Sidebar: Srbija + Naša planeta (ALMA) + Iran protesti
- * - Removed: Obaveštajni izvori block from homepage
+ * - Main feature: Harg – srce iranskog izvoza nafte (April 2026)
+ * - Sidebar: Naša planeta (newest first) + Kina avion
+ * - Removed: Obaveštajni brifing block from homepage (keep in section only)
  * - Removed: bottom "rubrike" list (no sub-menu at bottom)
+ * - Live block: compact, directly below hero, above articles
  */
 
 import { useEffect, useRef, useState } from "react";
@@ -13,7 +14,6 @@ import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
-import ObavestajniBrifingBlock from "@/components/ObavestajniBrifingBlock";
 import LiveBriefingBlock from "@/components/LiveBriefingBlock";
 
 const IMAGES = {
@@ -307,6 +307,13 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-5">
 
           {/* ======================
+              LIVE BLOK — NASA Artemis II (compact, directly below hero)
+             ====================== */}
+          <FadeIn className="mb-10">
+            <LiveBriefingBlock isDark={isDark} />
+          </FadeIn>
+
+          {/* ======================
               EDITORIAL LAYOUT: HERO + SIDEBAR
              ====================== */}
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
@@ -387,6 +394,17 @@ export default function Home() {
 
                   <SmallArticleCard
                     category="Naša planeta"
+                    href="/nasa-planeta/artemis-ii-fotografije-dubokog-svemira"
+                    title="Fotografije iz dubokog svemira: Artemis II beleži prizore sa lunarnog preleta"
+                    description="NASA objavila nove snimke Zemlje i pomračenja iz perspektive misije Artemis II."
+                    imageSrc={IMAGES.orionEarthView}
+                    imageAlt="Pogled na Zemlju iz letelice Orion tokom misije Artemis II"
+                  />
+
+                  <hr className="editorial-divider my-5" />
+
+                  <SmallArticleCard
+                    category="Naša planeta"
                     href="/nasa-planeta/artemis-ii-rekord-udaljenosti"
                     title="Čovečanstvo najdalje od Zemlje u istoriji: Artemis II nadmašio rekord Apola 13"
                     description="Posada misije Artemis II dostigla je najveću udaljenost od Zemlje ikada zabeleženu za ljudsku posadu, premašivši rekord misije Apollo 13."
@@ -404,46 +422,10 @@ export default function Home() {
                     imageSrc={IMAGES.hydrogenLight}
                     imageAlt="Vodoničnim gorivnim ćelijama pogonjen avion na poletištu tokom testiranja"
                   />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Srbija"
-                    href="/srbija/izbori-rezultati"
-                    title="Tesne razlike i smanjenje prednosti vlasti: preliminarni rezultati u deset opština"
-                    description="Preliminarni rezultati lokalnih izbora u Srbiji pokazuju da je vladajuća koalicija zadržala vlast, ali uz vidljivo smanjene razlike."
-                    imageSrc={IMAGES.izboriRezultati}
-                    imageAlt="Ilustracija izbornih rezultata u Srbiji"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Naša planeta"
-                    href="/nasa-planeta/artemis-ii-fotografije-dubokog-svemira"
-                    title="Fotografije iz dubokog svemira: Artemis II beleži prizore sa lunarnog preleta"
-                    description="NASA objavila nove snimke Zemlje i pomračenja iz perspektive misije Artemis II."
-                    imageSrc={IMAGES.orionEarthView}
-                    imageAlt="Pogled na Zemlju iz letelice Orion tokom misije Artemis II"
-                  />
                 </div>
               </FadeIn>
             </aside>
           </div>
-
-          {/* ======================
-              LIVE BLOK — NASA Artemis II
-             ====================== */}
-          <FadeIn className="mb-10">
-            <LiveBriefingBlock isDark={isDark} />
-          </FadeIn>
-
-          {/* ======================
-              OBAVEŠTAJNI BRIFING — compact preview
-             ====================== */}
-          <FadeIn className="mb-10">
-            <ObavestajniBrifingBlock compact />
-          </FadeIn>
 
         </div>
       </main>
