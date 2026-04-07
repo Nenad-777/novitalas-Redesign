@@ -143,12 +143,12 @@ export default function ObavestajniBrifingBlock({ compact = false }: Obavestajni
         />
       </div>
 
-      {/* Hero image — full-width, 16:9 ratio */}
+      {/* Hero image — full-width, reduced height (~40% ratio instead of 56.25%) */}
       <div
         style={{
           position: "relative",
           width: "100%",
-          paddingTop: "56.25%", /* 16:9 */
+          paddingTop: "39%", /* ~30% reduction from 56.25% */
         }}
       >
         <img
@@ -168,7 +168,7 @@ export default function ObavestajniBrifingBlock({ compact = false }: Obavestajni
       </div>
 
       {/* Content sections */}
-      <div style={{ padding: "20px 20px 24px" }}>
+      <div style={{ padding: "14px 16px 16px" }}>
 
         {/* SUBSECTION 1 */}
         <section>
@@ -179,7 +179,7 @@ export default function ObavestajniBrifingBlock({ compact = false }: Obavestajni
               fontWeight: 700,
               color: textMain,
               lineHeight: 1.3,
-              marginBottom: "10px",
+              marginBottom: "8px",
             }}
           >
             Ormuz: faktička blokada i pad saobraćaja
@@ -188,30 +188,19 @@ export default function ObavestajniBrifingBlock({ compact = false }: Obavestajni
           <p
             style={{
               fontFamily: "'Lora', Georgia, serif",
-              fontSize: "16px",
-              lineHeight: 1.75,
-              color: textMuted,
-              margin: "0 0 10px",
-            }}
-          >
-            U poslednja tri dana potvrđeno je da je prolaz kroz Ormuski moreuz
-            ozbiljno ograničen, uz nagli pad pomorskog saobraćaja. Prema
-            dostupnim podacima, deo tankera ostaje van zone prolaza, dok se
-            transport odvija uz povećanu kontrolu i rizik.
-          </p>
-
-          <p
-            style={{
-              fontFamily: "'Lora', Georgia, serif",
-              fontSize: "16px",
-              lineHeight: 1.75,
+              fontSize: "15px",
+              lineHeight: 1.65,
               color: textMuted,
               margin: "0",
-            }}
+              overflow: "hidden",
+              display: "-webkit-box",
+              WebkitLineClamp: 3,
+              WebkitBoxOrient: "vertical",
+            } as React.CSSProperties}
           >
-            Oko 20% globalnog transporta nafte prolazi kroz ovaj koridor, što
-            svaku destabilizaciju direktno prenosi na svetsko tržište
-            energenata.
+            U poslednja tri dana potvrđeno je da je prolaz kroz Ormuski moreuz
+            ozbiljno ograničen, uz nagli pad pomorskog saobraćaja. Oko 20% globalnog transporta nafte prolazi kroz ovaj koridor, što
+            svaku destabilizaciju direktno prenosi na svetsko tržište energenata.
           </p>
         </section>
 
@@ -219,7 +208,7 @@ export default function ObavestajniBrifingBlock({ compact = false }: Obavestajni
           style={{
             height: "1px",
             backgroundColor: dividerColor,
-            margin: "20px 0",
+            margin: "14px 0",
           }}
         />
 
@@ -232,7 +221,7 @@ export default function ObavestajniBrifingBlock({ compact = false }: Obavestajni
               fontWeight: 700,
               color: textMain,
               lineHeight: 1.3,
-              marginBottom: "10px",
+              marginBottom: "8px",
             }}
           >
             Regionalna eskalacija: udari i širenje fronta
@@ -241,27 +230,18 @@ export default function ObavestajniBrifingBlock({ compact = false }: Obavestajni
           <p
             style={{
               fontFamily: "'Lora', Georgia, serif",
-              fontSize: "16px",
-              lineHeight: 1.75,
-              color: textMuted,
-              margin: "0 0 10px",
-            }}
-          >
-            U istom periodu zabeleženi su napadi na pomorsku i energetsku
-            infrastrukturu u regionu Persijskog zaliva. Incidenti uključuju
-            oštećenja trgovačkih brodova i poremećaje u snabdevanju.
-          </p>
-
-          <p
-            style={{
-              fontFamily: "'Lora', Georgia, serif",
-              fontSize: "16px",
-              lineHeight: 1.75,
+              fontSize: "15px",
+              lineHeight: 1.65,
               color: textMuted,
               margin: "0",
-            }}
+              overflow: "hidden",
+              display: "-webkit-box",
+              WebkitLineClamp: 3,
+              WebkitBoxOrient: "vertical",
+            } as React.CSSProperties}
           >
-            Operativna zona sukoba širi se izvan inicijalnih granica,
+            U istom periodu zabeleženi su napadi na pomorsku i energetsku
+            infrastrukturu u regionu Persijskog zaliva. Operativna zona sukoba širi se izvan inicijalnih granica,
             uključujući pomorske rute i teritorije susednih država, što ukazuje
             na prelazak u regionalno umrežen konflikt.
           </p>
@@ -271,7 +251,7 @@ export default function ObavestajniBrifingBlock({ compact = false }: Obavestajni
           style={{
             height: "1px",
             backgroundColor: dividerColor,
-            margin: "20px 0",
+            margin: "14px 0",
           }}
         />
 
@@ -284,7 +264,7 @@ export default function ObavestajniBrifingBlock({ compact = false }: Obavestajni
               fontWeight: 700,
               color: textMain,
               lineHeight: 1.3,
-              marginBottom: "10px",
+              marginBottom: "8px",
             }}
           >
             Energetski i ekonomski udar: globalni efekti
@@ -293,27 +273,18 @@ export default function ObavestajniBrifingBlock({ compact = false }: Obavestajni
           <p
             style={{
               fontFamily: "'Lora', Georgia, serif",
-              fontSize: "16px",
-              lineHeight: 1.75,
-              color: textMuted,
-              margin: "0 0 10px",
-            }}
-          >
-            Poremećaji u Ormuzu već imaju vidljiv uticaj na cene energenata i
-            logistiku transporta. Rast troškova osiguranja i preusmeravanje
-            ruta dodatno opterećuju tržište.
-          </p>
-
-          <p
-            style={{
-              fontFamily: "'Lora', Georgia, serif",
-              fontSize: "16px",
-              lineHeight: 1.75,
+              fontSize: "15px",
+              lineHeight: 1.65,
               color: textMuted,
               margin: "0",
-            }}
+              overflow: "hidden",
+              display: "-webkit-box",
+              WebkitLineClamp: 3,
+              WebkitBoxOrient: "vertical",
+            } as React.CSSProperties}
           >
-            Energetski sektor postaje centralni faktor sukoba, sa direktnim
+            Poremećaji u Ormuzu već imaju vidljiv uticaj na cene energenata i
+            logistiku transporta. Energetski sektor postaje centralni faktor sukoba, sa direktnim
             posledicama po ekonomsku stabilnost Evrope i globalnih tržišta.
           </p>
         </section>
@@ -322,7 +293,7 @@ export default function ObavestajniBrifingBlock({ compact = false }: Obavestajni
           style={{
             height: "1px",
             backgroundColor: dividerColor,
-            margin: "20px 0",
+            margin: "14px 0",
           }}
         />
 
@@ -331,7 +302,7 @@ export default function ObavestajniBrifingBlock({ compact = false }: Obavestajni
           style={{
             backgroundColor: assessmentBg,
             borderRadius: "4px",
-            padding: "16px 18px",
+            padding: "12px 14px",
           }}
         >
           <span
@@ -343,7 +314,7 @@ export default function ObavestajniBrifingBlock({ compact = false }: Obavestajni
               letterSpacing: "0.14em",
               textTransform: "uppercase",
               color: accentColor,
-              marginBottom: "10px",
+              marginBottom: "8px",
             }}
           >
             Obaveštajna procena
@@ -352,30 +323,44 @@ export default function ObavestajniBrifingBlock({ compact = false }: Obavestajni
           <p
             style={{
               fontFamily: "'Lora', Georgia, serif",
-              fontSize: "16px",
-              lineHeight: 1.75,
+              fontSize: "15px",
+              lineHeight: 1.65,
               color: textMuted,
-              margin: "0 0 10px",
-            }}
+              margin: "0",
+              overflow: "hidden",
+              display: "-webkit-box",
+              WebkitLineClamp: 4,
+              WebkitBoxOrient: "vertical",
+            } as React.CSSProperties}
           >
             U poslednja tri dana dolazi do pomeranja fokusa sa direktnih vojnih
             operacija ka kontroli energetskih tokova i ekonomskom pritisku.
-          </p>
-
-          <p
-            style={{
-              fontFamily: "'Lora', Georgia, serif",
-              fontSize: "16px",
-              lineHeight: 1.75,
-              color: textMuted,
-              margin: "0",
-            }}
-          >
             Kontrola Ormuza ostaje ključni strateški instrument koji utiče na
             globalnu stabilnost.
           </p>
         </section>
+
+        {/* Pročitaj više link */}
+        <div style={{ marginTop: "16px" }}>
+          <Link
+            href="/obavestajni-izvori/nemacka-curenje-informacija"
+            style={{
+              display: "inline-block",
+              fontFamily: "'Source Sans 3', sans-serif",
+              fontSize: "13px",
+              fontWeight: 700,
+              letterSpacing: "0.06em",
+              textDecoration: "none",
+              color: accentColor,
+              borderBottom: `1px solid ${accentColor}`,
+              paddingBottom: "1px",
+            }}
+          >
+            Pročitaj više →
+          </Link>
+        </div>
       </div>
     </div>
   );
 }
+

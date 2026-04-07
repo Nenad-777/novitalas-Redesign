@@ -1,28 +1,22 @@
 /*
  * LiveBriefingBlock — 🔴 UŽIVO stack sistem za NASA Artemis II misiju
  *
- * Prikazuje više izveštaja sa vremenskim oznakama (lokalno vreme Srbije).
- * Najnoviji izveštaj je uvek na vrhu. Koristi se na Home i NasaPlanetaIndex.
+ * Prikazuje kompaktne izveštaje sa vremenskim oznakama (lokalno vreme Srbije).
+ * Najnoviji izveštaj je uvek na vrhu. Prikazuju se max 3 unosa.
+ * Koristi se na Home i NasaPlanetaIndex.
  */
-
-interface LiveReportImage {
-  src: string;
-  caption: string;
-  credit: string;
-}
 
 interface LiveReport {
   id: string;
   time: string;
   text: string[];
-  images?: LiveReportImage[];
 }
 
 interface LiveBriefingBlockProps {
   isDark: boolean;
 }
 
-// Izveštaji — najnoviji na vrhu. Dodaj nove na početak niza.
+// Izveštaji — najnoviji na vrhu. Prikazuju se samo prva 3.
 const LIVE_REPORTS: LiveReport[] = [
   {
     id: "report-2000-artemis-fotografije-0407",
@@ -30,20 +24,23 @@ const LIVE_REPORTS: LiveReport[] = [
     text: [
       "NASA objavila nove fotografije iz misije Artemis II.",
       "• pogled na Zemlju iz letelice Orion",
-      "• zabeleženo pomračenje Sunca tokom lunarnog preleta",
-      "• misija u stabilnoj fazi povratka",
+      "• solarno pomračenje zabeleženo tokom lunarnog preleta",
     ],
-    images: [
-      {
-        src: "/news/orion-earth-view.jpg",
-        caption: "Pogled na Zemlju iz letelice Orion tokom misije Artemis II",
-        credit: "Foto: NASA / Artemis II",
-      },
-      {
-        src: "/news/artemis-eclipse.jpg",
-        caption: "Pomračenje Sunca zabeleženo tokom lunarnog preleta misije Artemis II",
-        credit: "Foto: NASA / Artemis II",
-      },
+  },
+  {
+    id: "report-1930",
+    time: "19:30",
+    text: [
+      "Posada testira Orion odela.",
+      "NASA navodi da astronauti već vide delove daleke strane Meseca.",
+    ],
+  },
+  {
+    id: "report-ranije",
+    time: "ranije",
+    text: [
+      "Misija stabilna na putanji.",
+      "Svi sistemi funkcionišu bez većih problema.",
     ],
   },
   {
@@ -51,27 +48,7 @@ const LIVE_REPORTS: LiveReport[] = [
     time: "20:00",
     text: [
       "Misija Artemis II upravo je oborila istorijski rekord udaljenosti od Zemlje.",
-      "Posada je nadmašila granicu postavljenu tokom misije Apollo 13, čime su astronauti postali ljudi koji su se najviše udaljili od naše planete u istoriji.",
-      "NASA u ovom trenutku emituje uživo prenos iz svemira, dok letelica Orion nastavlja putanju ka Mesecu.",
-      "👇 U nastavku pogledajte direktan prenos misije",
-    ],
-  },
-  {
-    id: "report-1930",
-    time: "19:30",
-    text: [
-      "Posada misije Artemis II započela je peti dan leta demonstracijom Orion odela.",
-      "NASA navodi da astronauti već vide delove daleke strane Meseca.",
-      "Na najnovijim snimcima vidi se i basen Orientale na ivici lunarnog diska, koji će posada nastaviti da posmatra tokom prilaska Mesecu i lunarnog preleta.",
-      "Misija se odvija stabilno i nastavlja putanju ka Mesecu.",
-    ],
-    images: [
-      {
-        src: "/news/moon-nasa.jpg",
-        caption:
-          "Delovi daleke strane Meseca viđeni iz misije Artemis II tokom petog dana leta",
-        credit: "Foto: NASA / Artemis II",
-      },
+      "Posada je nadmašila granicu postavljenu tokom misije Apollo 13.",
     ],
   },
   {
@@ -80,22 +57,6 @@ const LIVE_REPORTS: LiveReport[] = [
     text: [
       "Letelica Orion nalazi se u cislunarnom prostoru na putu ka Mesecu.",
       "Posada je prešla više od 160.000 kilometara od Zemlje.",
-      "Let se odvija brzinom od oko 35.000 kilometara na sat.",
-      "Planiran je prolazak na oko 6.000 kilometara od površine Meseca.",
-      "Misija ulazi u fazu dubokog svemirskog krstarenja.",
-      "Svi sistemi funkcionišu stabilno, bez većih problema.",
-    ],
-    images: [
-      {
-        src: "/news/artemis-view2.jpg",
-        caption: "Pogled na Zemlju iz kapsule Orion tokom misije Artemis II",
-        credit: "Foto: NASA / Artemis II",
-      },
-      {
-        src: "/news/artemis-view1.jpg",
-        caption: "Zemlja viđena iz dubokog svemira tokom misije Artemis II",
-        credit: "Foto: NASA / Orion spacecraft",
-      },
     ],
   },
   {
@@ -103,31 +64,21 @@ const LIVE_REPORTS: LiveReport[] = [
     time: "04:00",
     text: [
       "Letelica Orion napustila je Zemljinu orbitu.",
-      "Nalazi se na putu ka Mesecu.",
-      "Izveden je ključni manevar za ulazak u duboki svemir.",
       "Let protiče stabilno, bez većih problema.",
-    ],
-  },
-  {
-    id: "report-2145",
-    time: "raniji update",
-    text: [
-      "Misija Artemis II je u toku nakon uspešnog lansiranja.",
-      "Let protiče stabilno, bez većih problema.",
-      "Posada testira ključne sisteme za buduće misije.",
-      "Zabeleženi manji tehnički problemi brzo su rešeni.",
-      "Let se odvija prema planiranoj putanji ka Mesecu.",
     ],
   },
 ];
 
 export default function LiveBriefingBlock({ isDark }: LiveBriefingBlockProps) {
+  // Show only the 3 most recent reports
+  const visibleReports = LIVE_REPORTS.slice(0, 3);
+
   return (
     <div
       style={{
         border: "2px solid #8B0000",
         borderRadius: "4px",
-        padding: "20px 20px 16px",
+        padding: "12px 16px 14px",
         backgroundColor: isDark ? "#14100f" : "#fff9f9",
         marginBottom: "32px",
       }}
@@ -137,8 +88,8 @@ export default function LiveBriefingBlock({ isDark }: LiveBriefingBlockProps) {
         style={{
           display: "flex",
           alignItems: "center",
-          gap: "10px",
-          marginBottom: "16px",
+          gap: "8px",
+          marginBottom: "10px",
         }}
       >
         {/* Pulsing live dot */}
@@ -147,8 +98,8 @@ export default function LiveBriefingBlock({ isDark }: LiveBriefingBlockProps) {
           aria-hidden="true"
           style={{
             display: "inline-block",
-            width: "10px",
-            height: "10px",
+            width: "8px",
+            height: "8px",
             borderRadius: "50%",
             backgroundColor: "#cc0000",
             flexShrink: 0,
@@ -171,13 +122,13 @@ export default function LiveBriefingBlock({ isDark }: LiveBriefingBlockProps) {
         <span
           style={{
             fontFamily: "'Playfair Display', Georgia, serif",
-            fontSize: "15px",
+            fontSize: "14px",
             fontWeight: 700,
             color: isDark ? "#e0ddd5" : "#111",
             lineHeight: 1.3,
           }}
         >
-          Pratite prenos NASA misije Artemis II
+          Artemis II
         </span>
       </div>
 
@@ -186,18 +137,18 @@ export default function LiveBriefingBlock({ isDark }: LiveBriefingBlockProps) {
         style={{
           height: "1px",
           backgroundColor: isDark ? "#2a1a1a" : "#f0d0d0",
-          marginBottom: "16px",
+          marginBottom: "10px",
         }}
       />
 
-      {/* Stack izveštaja */}
+      {/* Stack izveštaja — max 3 */}
       <div>
-        {LIVE_REPORTS.map((report, index) => (
+        {visibleReports.map((report, index) => (
           <div
             key={report.id}
             style={{
-              marginTop: index > 0 ? "20px" : "0",
-              paddingTop: index > 0 ? "20px" : "0",
+              marginTop: index > 0 ? "10px" : "0",
+              paddingTop: index > 0 ? "10px" : "0",
               borderTop:
                 index > 0
                   ? `1px solid ${isDark ? "#2a1a1a" : "#f0d0d0"}`
@@ -208,9 +159,9 @@ export default function LiveBriefingBlock({ isDark }: LiveBriefingBlockProps) {
             <div
               style={{
                 fontFamily: "'Source Sans 3', sans-serif",
-                fontSize: "12px",
+                fontSize: "11px",
                 color: isDark ? "#7a7872" : "#999",
-                marginBottom: "8px",
+                marginBottom: "4px",
                 letterSpacing: "0.04em",
               }}
             >
@@ -221,76 +172,44 @@ export default function LiveBriefingBlock({ isDark }: LiveBriefingBlockProps) {
             <div
               style={{
                 fontFamily: "'Lora', Georgia, serif",
-                fontSize: "16px",
-                lineHeight: 1.7,
-                color: isDark ? "#cfcac2" : "#222",
+                fontSize: "14px",
+                lineHeight: 1.55,
+                color: isDark ? "#cfcac2" : "#333",
               }}
             >
               {report.text.map((line, i) => (
-                <p key={i} style={{ margin: i > 0 ? "6px 0 0" : "0" }}>
+                <p key={i} style={{ margin: i > 0 ? "3px 0 0" : "0" }}>
                   {line}
                 </p>
               ))}
             </div>
-
-            {/* Slike ispod teksta (opciono) */}
-            {report.images && report.images.length > 0 && (
-              <div style={{ marginTop: "16px", display: "flex", flexDirection: "column", gap: "16px" }}>
-                {report.images.map((img) => (
-                  <figure key={img.src} style={{ margin: 0, padding: 0 }}>
-                    <img
-                      src={img.src}
-                      alt={img.caption}
-                      style={{
-                        width: "100%",
-                        display: "block",
-                        borderRadius: "4px",
-                      }}
-                    />
-                    <figcaption
-                      style={{
-                        fontFamily: "'Source Sans 3', sans-serif",
-                        fontSize: "13px",
-                        lineHeight: 1.5,
-                        color: isDark ? "#7a7872" : "#777",
-                        marginTop: "6px",
-                      }}
-                    >
-                      {img.caption}{" "}
-                      <span style={{ fontStyle: "italic" }}>{img.credit}</span>
-                    </figcaption>
-                  </figure>
-                ))}
-              </div>
-            )}
           </div>
         ))}
       </div>
 
-      {/* YouTube embed na dnu */}
+      {/* Link ka punom izveštaju */}
       <div
         style={{
-          marginTop: "20px",
-          paddingTop: "14px",
+          marginTop: "10px",
+          paddingTop: "10px",
           borderTop: `1px solid ${isDark ? "#2a1a1a" : "#f0d0d0"}`,
         }}
       >
-        <div className="relative w-full overflow-hidden rounded-lg aspect-video">
-          <iframe
-            src="https://www.youtube.com/embed/m3kR2KK8TEs"
-            title="NASA Artemis II, lansiranje uživo"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              border: "none",
-            }}
-          />
-        </div>
+        <a
+          href="/nasa-planeta/artemis-ii-fotografije-dubokog-svemira"
+          style={{
+            fontFamily: "'Source Sans 3', sans-serif",
+            fontSize: "12px",
+            fontWeight: 700,
+            letterSpacing: "0.06em",
+            color: "#cc0000",
+            textDecoration: "none",
+            borderBottom: "1px solid #cc0000",
+            paddingBottom: "1px",
+          }}
+        >
+          Čitaj ceo izveštaj →
+        </a>
       </div>
     </div>
   );
