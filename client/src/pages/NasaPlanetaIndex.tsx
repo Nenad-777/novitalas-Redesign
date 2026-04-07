@@ -11,6 +11,15 @@ import LiveBriefingBlock from "@/components/LiveBriefingBlock";
 
 const ARTICLES = [
   {
+    href: "/nasa-planeta/artemis-ii-fotografije-dubokog-svemira",
+    img: "/news/orion-earth-view.jpg",
+    alt: "Pogled na Zemlju iz letelice Orion tokom misije Artemis II",
+    title:
+      "Fotografije iz dubokog svemira: Artemis II beleži prizore sa lunarnog preleta",
+    description:
+      "NASA objavila nove snimke Zemlje i pomračenja iz perspektive misije Artemis II.",
+  },
+  {
     href: "/nasa-planeta/artemis-ii-rekord-udaljenosti",
     img: "/news/moon-nasa.jpg",
     alt: "Letelica Orion u dubokom svemiru tokom misije Artemis II",

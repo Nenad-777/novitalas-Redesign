@@ -129,6 +129,9 @@ import ArtemisIIUzivoPrenosRekord from "./pages/artemis-ii-uzivo-prenos-rekord";
 import ArtemisIIOrionPolovinaPuta from "./pages/artemis-ii-orion-polovina-puta-do-meseca";
 
 /* ✅ NOVA VEST — Naša planeta */
+import ArtemisIIFotografijeDubokogSvemira from "./pages/artemis-ii-fotografije-dubokog-svemira";
+
+/* ✅ NOVA VEST — Naša planeta */
 import MoonRing from "./pages/moon-ring";
 
 /* ✅ NOVA VEST — Naša planeta */
@@ -396,6 +399,11 @@ function Router() {
         <Route
           path="/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca"
           component={ArtemisIIOrionPolovinaPuta}
+        />
+
+        <Route
+          path="/nasa-planeta/artemis-ii-fotografije-dubokog-svemira"
+          component={ArtemisIIFotografijeDubokogSvemira}
         />
 
         <Route
