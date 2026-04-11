@@ -33,6 +33,9 @@ import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 
 /* ✅ NOVA VEST — Geopolitika */
+import PrimirjeVaskrs from "./pages/rusija-i-ukrajina-dogovorile-privremeno-primirje-za-pravoslavni-uskrs";
+
+/* ✅ NOVA VEST — Geopolitika */
 import RusijaKinaFrancuskaBlokada from "./pages/rusija-kina-francuska-blokirale-rezoluciju-o-otvaranju-ormuskog-moreuza";
 
 /* ✅ NOVA VEST — Geopolitika */
@@ -176,6 +179,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/rusija-i-ukrajina-dogovorile-privremeno-primirje-za-pravoslavni-uskrs"
+          component={PrimirjeVaskrs}
+        />
+
         <Route
           path="/geopolitika/rusija-kina-francuska-blokirale-rezoluciju-o-otvaranju-ormuskog-moreuza"
           component={RusijaKinaFrancuskaBlokada}

@@ -179,11 +179,11 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-5">
 
           {/* ======================
-              1. HERO — Artemis II splashdown
+              1. HERO — Primirje za Uskrs
              ====================== */}
           <FadeIn className="mb-10">
             <article>
-              <span className="kicker block mb-2">Naša planeta</span>
+              <span className="kicker block mb-2">Geopolitika</span>
 
               <h2
                 className="mt-2 mb-3 text-[32px] md:text-[46px] font-bold leading-[1.1]"
@@ -194,11 +194,11 @@ export default function Home() {
                 }}
               >
                 <Link
-                  href="/nasa-planeta/artemis-ii-splashdown"
+                  href="/geopolitika/rusija-i-ukrajina-dogovorile-privremeno-primirje-za-pravoslavni-uskrs"
                   className="headline-link"
                   style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                 >
-                  Artemis II uspešno okončan: Orion se vratio na Zemlju nakon istorijskog leta oko Meseca
+                  Rusija i Ukrajina dogovorile privremeno primirje za pravoslavni Uskrs
                 </Link>
               </h2>
 
@@ -209,11 +209,11 @@ export default function Home() {
                   color: isDark ? "#9a978f" : "#555",
                 }}
               >
-                Kapsula sa četvoročlanom posadom bezbedno je sletela u Tihi okean, završivši prvu ljudsku misiju ka Mesecu posle više od 50 godina.
+                Rusija i Ukrajina dogovorile su privremeni prekid vatre povodom pravoslavnog Uskrsa. Primirje je vremenski ograničeno i vezano za trajanje praznika, uz obostrane rezerve o njegovom sprovođenju na terenu.
               </p>
 
               <Link
-                href="/nasa-planeta/artemis-ii-splashdown"
+                href="/geopolitika/rusija-i-ukrajina-dogovorile-privremeno-primirje-za-pravoslavni-uskrs"
                 className="block no-underline"
               >
                 <div
@@ -223,8 +223,8 @@ export default function Home() {
                   }}
                 >
                   <img
-                    src="/news/artemis-landing.jpg"
-                    alt="Letelica Orion tokom povratka na Zemlju — misija Artemis II"
+                    src="/news/primirje-vaskrs.jpg"
+                    alt="Ilustracija uskršnjeg primirja u ratu između Rusije i Ukrajine."
                     className="w-full h-full object-cover block"
                     fetchPriority="high"
                     decoding="async"
@@ -237,7 +237,7 @@ export default function Home() {
                     color: isDark ? "#7a7872" : "#777",
                   }}
                 >
-                  Foto: NASA / Artemis II
+                  Novi Talas / digital art
                 </p>
               </Link>
             </article>
@@ -253,6 +253,17 @@ export default function Home() {
              ====================== */}
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
+              <SmallArticleCard
+                category="Naša planeta"
+                href="/nasa-planeta/artemis-ii-splashdown"
+                title="Artemis II uspešno okončan: Orion se vratio na Zemlju nakon istorijskog leta oko Meseca"
+                description="Kapsula sa četvoročlanom posadom bezbedno je sletela u Tihi okean, završivši prvu ljudsku misiju ka Mesecu posle više od 50 godina."
+                imageSrc="/news/artemis-landing.jpg"
+                imageAlt="Letelica Orion tokom povratka na Zemlju — misija Artemis II"
+              />
+
+              <hr className="editorial-divider" />
+
               <SmallArticleCard
                 category="Naša planeta"
                 href="/nasa-planeta/artemis-ii-fotografije-dubokog-svemira"
@@ -282,17 +293,6 @@ export default function Home() {
                 description="Incident predstavlja prvi potvrđeni slučaj obaranja američkog aviona sa posadom u aktuelnom sukobu."
                 imageSrc="/news/f15e-iran.jpg"
                 imageAlt="F-15E Strike Eagle u letu"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/inflacija-evrozona-ecb-mart"
-                title="Inflacija u evrozoni pada, ECB spreman za nove rezove kamatnih stopa"
-                description="Godišnja inflacija u evrozoni nastavila je pad u martu 2026, što otvara prostor za dalje smanjenje kamatnih stopa ECB."
-                imageSrc="/news/ecb-frankfurt-inflation.jpg"
-                imageAlt="Evropska centralna banka u Frankfurtu"
               />
             </div>
           </FadeIn>
