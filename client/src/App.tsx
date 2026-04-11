@@ -101,6 +101,9 @@ import AkademijaNovisad from "./pages/akademija-novisad";
 import LokalniIzboriAnaliza from "./pages/lokalni-izbori-analiza";
 
 /* ✅ NOVA VEST — Srbija */
+import SenkeNadEkranom from "./pages/senke-nad-ekranom-tiho-preuzimanje-ili-kontrolisano-gasenje-istine";
+
+/* ✅ NOVA VEST — Srbija */
 import IzboriNepravilnostiKrivicnaOdgovornost from "./pages/izbori-nepravilnosti-krivicna-odgovornost";
 
 /* ✅ NOVA VEST — Srbija */
@@ -349,6 +352,11 @@ function Router() {
             SRBIJA
            ========================= */}
         <Route path="/srbija" component={SrbijaPage} />
+
+        <Route
+          path="/srbija/senke-nad-ekranom-tiho-preuzimanje-ili-kontrolisano-gasenje-istine"
+          component={SenkeNadEkranom}
+        />
 
         <Route
           path="/srbija/izbori-nepravilnosti-krivicna-odgovornost"

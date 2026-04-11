@@ -15,6 +15,26 @@ export interface SEOData {
 }
 
 export const seoData: Record<string, SEOData> = {
+  "/srbija/senke-nad-ekranom-tiho-preuzimanje-ili-kontrolisano-gasenje-istine": {
+    title:
+      "SENKE NAD EKRANOM: Tiho preuzimanje ili kontrolisano gašenje istine — Novi Talas",
+    description:
+      "Proces pritiska na nezavisne medije retko je otvoren i nagao. Mnogo češće odvija se postepeno, kroz smene, promene uređivačke politike i sužavanje prostora javne reči. Slučaj N1 otvara pitanje granica takvog procesa u savremenom društvu.",
+    ogTitle:
+      "SENKE NAD EKRANOM: Tiho preuzimanje ili kontrolisano gašenje istine",
+    ogDescription:
+      "Proces pritiska na nezavisne medije retko je otvoren i nagao. Mnogo češće odvija se postepeno, kroz smene, promene uređivačke politike i sužavanje prostora javne reči. Slučaj N1 otvara pitanje granica takvog procesa u savremenom društvu.",
+    ogUrl:
+      "https://novitalas.org/srbija/senke-nad-ekranom-tiho-preuzimanje-ili-kontrolisano-gasenje-istine",
+    ogImage: "https://novitalas.org/news/iscezavanje-N1.jpg",
+    twitterTitle:
+      "SENKE NAD EKRANOM: Tiho preuzimanje ili kontrolisano gašenje istine",
+    twitterDescription:
+      "Proces pritiska na nezavisne medije retko je otvoren i nagao. Mnogo češće odvija se postepeno, kroz smene, promene uređivačke politike i sužavanje prostora javne reči.",
+    twitterImage: "https://novitalas.org/news/iscezavanje-N1.jpg",
+    datePublished: "2026-04-11",
+  },
+
   "/geopolitika/iran": {
     title:
       "Vašington u fazi odluke: američka vojska spremna za mogući udar na Iran — Novi Talas",
