@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 
-const IMAGE_SRC = "/news/orion-earth-view.jpg";
+const IMAGE_SRC = "/news/artemis-landing.jpg";
 
 const PARAGRAPHS = [
   "Misija Artemis II uspešno je završena bezbednim povratkom letelice Orion na Zemlju, nakon desetodnevnog putovanja kroz duboki svemir i preleta oko Meseca.",
