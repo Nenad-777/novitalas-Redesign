@@ -134,6 +134,9 @@ import ArtemisIIOrionPolovinaPuta from "./pages/artemis-ii-orion-polovina-puta-d
 /* ✅ NOVA VEST — Naša planeta */
 import ArtemisIIFotografijeDubokogSvemira from "./pages/artemis-ii-fotografije-dubokog-svemira";
 
+/* ✅ GLAVNA VEST — Naša planeta — Artemis II splashdown */
+import ArtemisIISplashdown from "./pages/artemis-ii-splashdown";
+
 /* ✅ NOVA VEST — Naša planeta */
 import MoonRing from "./pages/moon-ring";
 
@@ -407,6 +410,11 @@ function Router() {
         <Route
           path="/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca"
           component={ArtemisIIOrionPolovinaPuta}
+        />
+
+        <Route
+          path="/nasa-planeta/artemis-ii-splashdown"
+          component={ArtemisIISplashdown}
         />
 
         <Route
