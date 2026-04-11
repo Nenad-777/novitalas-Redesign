@@ -12,7 +12,7 @@ import LiveBriefingBlock from "@/components/LiveBriefingBlock";
 const ARTICLES = [
   {
     href: "/nasa-planeta/artemis-ii-splashdown",
-    img: "/news/orion-earth-view.jpg",
+    img: "/news/artemis-landing.jpg",
     alt: "Letelica Orion tokom povratka na Zemlju — misija Artemis II",
     title:
       "Artemis II uspešno okončan: Orion se vratio na Zemlju nakon istorijskog leta oko Meseca",

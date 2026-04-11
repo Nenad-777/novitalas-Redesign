@@ -223,7 +223,7 @@ export default function Home() {
                   }}
                 >
                   <img
-                    src="/news/orion-earth-view.jpg"
+                    src="/news/artemis-landing.jpg"
                     alt="Letelica Orion tokom povratka na Zemlju — misija Artemis II"
                     className="w-full h-full object-cover block"
                     fetchPriority="high"

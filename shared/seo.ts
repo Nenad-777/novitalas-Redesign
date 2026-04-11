@@ -592,6 +592,25 @@ export const seoData: Record<string, SEOData> = {
     datePublished: "2026-04-06",
   },
 
+  "/nasa-planeta/artemis-ii-splashdown": {
+    title:
+      "Artemis II uspešno okončan: Orion se vratio na Zemlju nakon istorijskog leta oko Meseca | NOVI TALAS",
+    description:
+      "Kapsula sa četvoročlanom posadom bezbedno je sletela u Tihi okean, završivši prvu ljudsku misiju ka Mesecu posle više od 50 godina.",
+    ogTitle:
+      "Artemis II uspešno okončan: Orion se vratio na Zemlju nakon istorijskog leta oko Meseca",
+    ogDescription:
+      "Kapsula sa četvoročlanom posadom bezbedno je sletela u Tihi okean, završivši prvu ljudsku misiju ka Mesecu posle više od 50 godina.",
+    ogUrl: "https://novitalas.org/nasa-planeta/artemis-ii-splashdown",
+    ogImage: "https://novitalas.org/news/artemis-landing.jpg",
+    twitterTitle:
+      "Artemis II uspešno okončan: Orion se vratio na Zemlju nakon istorijskog leta oko Meseca",
+    twitterDescription:
+      "Kapsula sa četvoročlanom posadom bezbedno je sletela u Tihi okean, završivši prvu ljudsku misiju ka Mesecu posle više od 50 godina.",
+    twitterImage: "https://novitalas.org/news/artemis-landing.jpg",
+    datePublished: "2026-04-11",
+  },
+
   "/nasa-planeta/artemis-ii-fotografije-dubokog-svemira": {
     title:
       "Fotografije iz dubokog svemira: Artemis II beleži prizore sa lunarnog preleta | NOVI TALAS",
