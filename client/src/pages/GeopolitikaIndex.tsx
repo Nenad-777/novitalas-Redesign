@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  primirjeVaskrs: "/news/primirje-vaskrs.jpg",
   unSecurityCouncil: "/news/un-security-council.jpg",
   hargOilTerminal: "/news/harg-oil-terminal.jpg",
   f15eIran: "/news/f15e-iran.jpg",
@@ -70,7 +71,60 @@ export default function GeopolitikaIndex() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* ✅ NAJNOVIJA VEST (Rusija, Kina i Francuska blokirale rezoluciju — 7. april 2026) */}
+            {/* ✅ NAJNOVIJA VEST (Primirje za Uskrs — 11. april 2026) */}
+            <article className="md:col-span-2">
+              <Link
+                href="/geopolitika/rusija-i-ukrajina-dogovorile-privremeno-primirje-za-pravoslavni-uskrs"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.primirjeVaskrs}
+                    alt="Ilustracija uskršnjeg primirja u ratu između Rusije i Ukrajine."
+                    className="w-full h-[260px] object-cover object-center block"
+                    decoding="async"
+                  />
+                </div>
+
+                <h2
+                  className="text-[22px] md:text-[28px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Rusija i Ukrajina dogovorile privremeno primirje za pravoslavni Uskrs
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  {"Rusija i Ukrajina dogovorile su privremeni prekid vatre povodom pravoslavnog Uskrsa. Primirje je vremenski ograničeno i vezano za trajanje praznika, uz obostrane rezerve o njegovom sprovođenju na terenu."}
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
+
+            {/* ✅ VEST (Rusija, Kina i Francuska blokirale rezoluciju — 7. april 2026) */}
             <article className="md:col-span-2">
               <Link
                 href="/geopolitika/rusija-kina-francuska-blokirale-rezoluciju-o-otvaranju-ormuskog-moreuza"

@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/rusija-i-ukrajina-dogovorile-privremeno-primirje-za-pravoslavni-uskrs",
+    title:
+      "Rusija i Ukrajina dogovorile privremeno primirje za pravoslavni Uskrs",
+    description:
+      "Rusija i Ukrajina dogovorile su privremeni prekid vatre povodom pravoslavnog Uskrsa. Primirje je vremenski ograničeno i vezano za trajanje praznika, uz obostrane rezerve o njegovom sprovođenju na terenu.",
+    imageSrc: "/news/primirje-vaskrs.jpg",
+    datePublished: "2026-04-11",
+  },
+  {
     path: "/geopolitika/rusija-kina-francuska-blokirale-rezoluciju-o-otvaranju-ormuskog-moreuza",
     title:
       "Rusija, Kina i Francuska blokirale rezoluciju o otvaranju Ormuskog moreuza",
