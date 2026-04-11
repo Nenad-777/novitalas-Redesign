@@ -179,11 +179,11 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-5">
 
           {/* ======================
-              1. HERO — Primirje za Uskrs
+              1. HERO — N1 pritisci (Analiza nedelje)
              ====================== */}
           <FadeIn className="mb-10">
             <article>
-              <span className="kicker block mb-2">Geopolitika</span>
+              <span className="kicker block mb-2">Srbija</span>
 
               <h2
                 className="mt-2 mb-3 text-[32px] md:text-[46px] font-bold leading-[1.1]"
@@ -194,11 +194,11 @@ export default function Home() {
                 }}
               >
                 <Link
-                  href="/geopolitika/rusija-i-ukrajina-dogovorile-privremeno-primirje-za-pravoslavni-uskrs"
+                  href="/srbija/senke-nad-ekranom-tiho-preuzimanje-ili-kontrolisano-gasenje-istine"
                   className="headline-link"
                   style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                 >
-                  Rusija i Ukrajina dogovorile privremeno primirje za pravoslavni Uskrs
+                  SENKE NAD EKRANOM: Tiho preuzimanje ili kontrolisano gašenje istine
                 </Link>
               </h2>
 
@@ -209,11 +209,11 @@ export default function Home() {
                   color: isDark ? "#9a978f" : "#555",
                 }}
               >
-                Rusija i Ukrajina dogovorile su privremeni prekid vatre povodom pravoslavnog Uskrsa. Primirje je vremenski ograničeno i vezano za trajanje praznika, uz obostrane rezerve o njegovom sprovođenju na terenu.
+                Proces pritiska na nezavisne medije retko je otvoren i nagao. Mnogo češće odvija se postepeno, kroz smene, promene uređivačke politike i sužavanje prostora javne reči. Slučaj N1 otvara pitanje granica takvog procesa u savremenom društvu.
               </p>
 
               <Link
-                href="/geopolitika/rusija-i-ukrajina-dogovorile-privremeno-primirje-za-pravoslavni-uskrs"
+                href="/srbija/senke-nad-ekranom-tiho-preuzimanje-ili-kontrolisano-gasenje-istine"
                 className="block no-underline"
               >
                 <div
@@ -223,8 +223,8 @@ export default function Home() {
                   }}
                 >
                   <img
-                    src="/news/primirje-vaskrs.jpg"
-                    alt="Ilustracija uskršnjeg primirja u ratu između Rusije i Ukrajine."
+                    src="/news/iscezavanje-N1.jpg"
+                    alt="Ilustracija procesa nestajanja javnog prostora kroz pritisak na medije."
                     className="w-full h-full object-cover block"
                     fetchPriority="high"
                     decoding="async"
@@ -254,6 +254,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Geopolitika"
+                href="/geopolitika/rusija-i-ukrajina-dogovorile-privremeno-primirje-za-pravoslavni-uskrs"
+                title="Rusija i Ukrajina dogovorile privremeno primirje za pravoslavni Uskrs"
+                description="Rusija i Ukrajina dogovorile su privremeni prekid vatre povodom pravoslavnog Uskrsa. Primirje je vremenski ograničeno i vezano za trajanje praznika, uz obostrane rezerve o njegovom sprovođenju na terenu."
+                imageSrc="/news/primirje-vaskrs.jpg"
+                imageAlt="Ilustracija uskršnjeg primirja u ratu između Rusije i Ukrajine."
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Naša planeta"
                 href="/nasa-planeta/artemis-ii-splashdown"
                 title="Artemis II uspešno okončan: Orion se vratio na Zemlju nakon istorijskog leta oko Meseca"
@@ -282,17 +293,6 @@ export default function Home() {
                 description="Kina je izvela prvi uspešan test megavatnog vodoničnog turboprop motora."
                 imageSrc="/news/hydrogen-light.jpg"
                 imageAlt="Vodoničnim gorivnim ćelijama pogonjen avion na poletištu tokom testiranja"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/oboren-f15e-iran-2026"
-                title="Oboren američki F-15E iznad Irana: jedan član posade spašen, drugi nestao"
-                description="Incident predstavlja prvi potvrđeni slučaj obaranja američkog aviona sa posadom u aktuelnom sukobu."
-                imageSrc="/news/f15e-iran.jpg"
-                imageAlt="F-15E Strike Eagle u letu"
               />
             </div>
           </FadeIn>
