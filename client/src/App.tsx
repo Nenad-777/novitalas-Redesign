@@ -100,7 +100,7 @@ import AkademijaNovisad from "./pages/akademija-novisad";
 /* ✅ NOVA VEST — Srbija */
 import LokalniIzboriAnaliza from "./pages/lokalni-izbori-analiza";
 
-/* ✅ NOVA VEST — Srbija */
+/* ✅ NOVA ANALIZA — Srbija */
 import SenkeNadEkranom from "./pages/senke-nad-ekranom-tiho-preuzimanje-ili-kontrolisano-gasenje-istine";
 
 /* ✅ NOVA VEST — Srbija */
