@@ -1,12 +1,9 @@
 /*
- * DESIGN: "Diplomatska Klasika" v2  -  Foreign Affairs-inspired homepage
- * Update:
- * - NEW: Udarni blok Ormuski moreuz (Mart 2026)
- * - Main feature: Harg – srce iranskog izvoza nafte (April 2026)
- * - Sidebar: Naša planeta (newest first) + Kina avion
- * - Removed: Obaveštajni brifing block from homepage (keep in section only)
- * - Removed: bottom "rubrike" list (no sub-menu at bottom)
- * - Live block: compact, directly below hero, above articles
+ * DESIGN: "Diplomatska Klasika" v3  -  Foreign Affairs-inspired homepage
+ * Structure (final):
+ * 1. HERO — Artemis II splashdown (full-width, large)
+ * 2. SMALL NEWS GRID (4 cards)
+ * 3. LIVE BLOCK (compact, max 3 entries)
  */
 
 import { useEffect, useRef, useState } from "react";
@@ -15,132 +12,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import LiveBriefingBlock from "@/components/LiveBriefingBlock";
-
-const IMAGES = {
-  hero: "/hero/naslovna-novitalas.jpg",
-
-  // ✅ NOVA GLAVNA VEST — Rusija, Kina, Francuska blokirale rezoluciju (7. april 2026.)
-  unSecurityCouncil: "/news/un-security-council.jpg",
-
-  // ✅ NOVA GLAVNA VEST — Harg ostrvo (7. april 2026.)
-  hargOilTerminal: "/news/harg-oil-terminal.jpg",
-
-  // ✅ NOVA GLAVNA VEST — Kina vodonični avion (6. april 2026.)
-  hydrogenLight: "/news/hydrogen-light.jpg",
-
-  // ✅ NOVA GLAVNA VEST — ECB inflacija evrozona (1. april 2026)
-  ecbFrankfurtInflation: "/news/ecb-frankfurt-inflation.jpg",
-
-  // ✅ NOVA GLAVNA VEST — Izbori rezultati (30. mart 2026)
-  izboriRezultati: "/news/izbori-rezultati.jpg",
-
-  // ✅ NOVA VEST — Izbori nepravilnosti krivična odgovornost (29. mart 2026)
-  izboriOdgovornost: "/news/izbori-odgovornost.jpg",
-
-  // ✅ NOVA GLAVNA VEST — Vens Netanjahu Iran rat (28. mart 2026)
-  vanceNetanyahu: "/news/vance-netanyahu.jpg",
-
-  // ✅ VEST — UN istraga škola Iran (27. mart 2026)
-  unInvestigation: "/news/un-investigation.jpg",
-
-  // ✅ NOVA VEST — Nemačka curenje informacija (25. mart 2026)
-  germanyIntelligence: "/news/germany-intelligence.jpg",
-
-  // ✅ NOVA GLAVNA VEST — Orban prekid gasa Ukrajina (25. mart 2026)
-  orbanOil: "/news/orban-oil.jpg",
-
-  // ✅ NOVA VEST — Moon ring solarni prsten (24. mart 2026)
-  moonRing: "/news/moon-ring.jpg",
-
-  // ✅ NOVA GLAVNA VEST — Nemacka kritika rata (24. mart 2026)
-  steinmeier: "/news/Frank-Walter Steinmeier.jpg",
-
-  // ✅ NOVA VEST — UN najtoplija decenija (24. mart 2026)
-  worldHeat: "/news/world-heat.jpg",
-
-  // ✅ NOVA VEST — Meloni referendum Italija (24. mart 2026)
-  meloniReferendum: "/news/meloni-referendum.jpg",
-
-  // ✅ NOVA GLAVNA VEST — Iran Tramp Ormuski moreuz (23. mart 2026)
-  trumpIran: "/news/trump-iran.jpg",
-
-  // ✅ NOVA GLAVNA VEST — Lokalni izbori (21. mart 2026)
-  lokalniIzbori: "/news/lokalni-izbori.jpg",
-
-  // ✅ NOVA VEST — Psihologija dosada (20. mart 2026)
-  psihologijaDosada: "/news/psihologija-dosada.jpg",
-
-  // ✅ NOVA VEST — AI superaplikacija (20. mart 2026)
-  aiSuperapp: "/news/ai-superapp.jpg",
-
-  // ✅ NOVA VEST — Ormuski moreuz (20. mart 2026)
-  ormuzKriza: "/news/ormuz-kriza.jpg",
-
-  // ✅ NOVA VEST — Mars reka (19. mart 2026)
-  marsReka: "/news/mars-reka.jpg",
-
-  // ✅ NOVA GLAVNA VEST — Energetski rat (19. mart 2026)
-  naftaKriza: "/news/nafta-kriza.jpg",
-
-  // ✅ NOVA GLAVNA VEST — Tanker bez pogona (18. mart 2026)
-  tanker: "/news/tanker.jpg",
-
-  // ✅ NOVA GLAVNA VEST — Zapadne sile upozorile Izrael (18. mart 2026)
-  westAgainstIsrael: "/news/west-against-israel.jpg",
-
-  // ✅ NOVA GLAVNA VEST — Svetska kriza Ormuski moreuz (16. mart 2026)
-  brodoviKriza: "/news/brodovi-kriza.jpg",
-
-  // ✅ OSCAR — Ko je dobio Oskara? (Naša planeta, 16. mart 2026)
-  oscarWorld: "/news/oscar-world.jpg",
-
-  // ✅ NOVA GLAVNA VEST — Biennale Rusija (13. mart 2026)
-  biennaleRusija: "/news/biennale-venice.jpg",
-
-  // ✅ NOVA GLAVNA VEST — Izbeglice Iran UN (11. mart 2026)
-  refugeesIranUn: "/refugees-iran-un.jpg",
-
-  ormuz: "/ormuz.jpg",
-  russiaChinaShadows: "/russia-china-shadows.jpg",
-
-  ukraine: "/geopolitika-ukrajina.jpg",
-  iranRiots: "/tehran-riots.jpg",
-
-  // ✅ GLAVNA VEST slika
-  izraelIran: "/f22-israel-iran-2026.jpg",
-
-  // ⬇️ promeni na TAČAN naziv fajla koji si ubacio u /public
-  alma: "/alma-mlecni-put.jpg",
-
-  snovi: "/snovi-usmeravanje-snova.jpg",
-
-  // ✅ AI vest svest (Naša planeta, 10. mart 2026)
-  aiVestSvest: "/ai-supercomputer-data-center.jpg",
-
-  // ✅ Kubrick (Naša planeta, 12. mart 2026)
-  kubrick: "/kubrick.jpg",
-
-  // ✅ SRBIJA thumbnail sada ide na novu vest
-  srbijaThumb: "/news/zvucni-top.jpg",
-
-  // ✅ Kosovo — Tiho gašenje srpskih univerziteta
-  kosovAmfiteatar: "/news/kosovo-amfiteatar.jpg",
-
-  // ✅ KINA — špijunski brodovi (Obaveštajni izvori, 9. mart 2026)
-  kinaSpyBrod: "/images/obavestajni-izvori/kina-spy-ship.jpg",
-
-  // ✅ CIA — regrutovanje kineskih vojnih oficira (Obaveštajni izvori, 14. mart 2026)
-  ciaChina: "/news/cia-china.jpg",
-
-  // ✅ Kina moždani implantat (Naša planeta, 14. mart 2026)
-  chinaBrain: "/news/china-brain.jpg",
-
-  // ✅ Artemis II rekord udaljenosti (Naša planeta, 6. april 2026)
-  moonNasa: "/news/moon-nasa.jpg",
-
-  // ✅ Artemis II fotografije dubokog svemira (Naša planeta, 7. april 2026)
-  orionEarthView: "/news/orion-earth-view.jpg",
-};
 
 // Simple fade-in on scroll hook
 function useFadeIn() {
@@ -264,15 +135,14 @@ export default function Home() {
     >
       <Header />
 
-      {/* Hero */}
+      {/* Hero banner */}
       <section
         className="relative w-full overflow-hidden h-[22vh] md:h-[28vh] hero-section"
         style={{
-          backgroundImage: `url(${IMAGES.hero}), linear-gradient(to bottom, var(--nt-hero-bg), var(--nt-hero-bg-end))`,
+          backgroundImage: `url(/hero/naslovna-novitalas.jpg), linear-gradient(to bottom, var(--nt-hero-bg), var(--nt-hero-bg-end))`,
           backgroundColor: "var(--nt-hero-bg)",
         }}
       >
-        {/* Dark-mode image dimming overlay */}
         {isDark && (
           <div
             aria-hidden="true"
@@ -281,11 +151,10 @@ export default function Home() {
           />
         )}
 
-        {/* SEO: visually hidden H1 and intro paragraph for "Novi Talas" keyword */}
+        {/* SEO: visually hidden H1 */}
         <h1 className="sr-only">Novi Talas</h1>
         <p className="sr-only">Novi Talas je digitalni nedeljnik koji donosi analize geopolitike, Srbije i sveta, uz fokus na najvažnije događaje dana.</p>
 
-        {/* Slogan – horizontally centered, near the bottom */}
         <div className="absolute inset-x-0 bottom-0 pb-4 md:pb-6 flex justify-center">
           <p
             className="hero-tagline text-[18px] md:text-[26px] italic tracking-wide"
@@ -310,136 +179,135 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-5">
 
           {/* ======================
-              LIVE BLOK — NASA Artemis II (compact, directly below hero)
+              1. HERO — Artemis II splashdown
              ====================== */}
           <FadeIn className="mb-10">
-            <LiveBriefingBlock isDark={isDark} />
+            <article>
+              <span className="kicker block mb-2">Naša planeta</span>
+
+              <h2
+                className="mt-2 mb-3 text-[32px] md:text-[46px] font-bold leading-[1.1]"
+                style={{
+                  fontFamily: "'Playfair Display', Georgia, serif",
+                  fontWeight: 700,
+                  color: isDark ? "#e0ddd5" : "#111",
+                }}
+              >
+                <Link
+                  href="/nasa-planeta/artemis-ii-splashdown"
+                  className="headline-link"
+                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                >
+                  Artemis II uspešno okončan: Orion se vratio na Zemlju nakon istorijskog leta oko Meseca
+                </Link>
+              </h2>
+
+              <p
+                className="text-[18px] md:text-[20px] leading-[1.6] mb-5"
+                style={{
+                  fontFamily: "'Lora', Georgia, serif",
+                  color: isDark ? "#9a978f" : "#555",
+                }}
+              >
+                Kapsula sa četvoročlanom posadom bezbedno je sletela u Tihi okean, završivši prvu ljudsku misiju ka Mesecu posle više od 50 godina.
+              </p>
+
+              <Link
+                href="/nasa-planeta/artemis-ii-splashdown"
+                className="block no-underline"
+              >
+                <div
+                  className="relative w-full overflow-hidden rounded-xl aspect-video"
+                  style={{
+                    border: isDark ? "1px solid #2a2a2e" : "1px solid #e5e5e5",
+                  }}
+                >
+                  <img
+                    src="/news/orion-earth-view.jpg"
+                    alt="Letelica Orion tokom povratka na Zemlju — misija Artemis II"
+                    className="w-full h-full object-cover block"
+                    fetchPriority="high"
+                    decoding="async"
+                  />
+                </div>
+                <p
+                  className="mt-2 text-[13px]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#7a7872" : "#777",
+                  }}
+                >
+                  Foto: NASA / Artemis II
+                </p>
+              </Link>
+            </article>
           </FadeIn>
 
+          <hr
+            className="editorial-divider mb-10"
+            style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
+          />
+
           {/* ======================
-              EDITORIAL LAYOUT: HERO + SIDEBAR
+              2. SMALL NEWS GRID (4 cards)
              ====================== */}
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-14 mb-10">
+          <FadeIn className="mb-10">
+            <div className="flex flex-col gap-6">
+              <SmallArticleCard
+                category="Naša planeta"
+                href="/nasa-planeta/artemis-ii-fotografije-dubokog-svemira"
+                title="Fotografije iz dubokog svemira: Artemis II beleži prizore sa lunarnog preleta"
+                description="NASA objavila nove snimke Zemlje i pomračenja iz perspektive misije Artemis II."
+                imageSrc="/news/orion-earth-view.jpg"
+                imageAlt="Pogled na Zemlju iz letelice Orion tokom misije Artemis II"
+              />
 
-            {/* LEFT: HERO — Rusija, Kina i Francuska blokirale rezoluciju (Geopolitika) */}
-            <FadeIn>
-              <article>
-                {/* BREAKING badge */}
-                <div
-                  className="inline-flex items-center gap-2 mb-3 px-3 py-1.5 rounded-sm"
-                  style={{ backgroundColor: "#8B0000" }}
-                >
-                  <span
-                    className="text-[11px] font-bold tracking-[0.14em] uppercase text-white"
-                    style={{ fontFamily: "'Source Sans 3', sans-serif" }}
-                  >
-                    🚨 BREAKING
-                  </span>
-                </div>
+              <hr className="editorial-divider" />
 
-                <span className="kicker block mb-2">Geopolitika</span>
+              <SmallArticleCard
+                category="Geopolitika"
+                href="/geopolitika/kina-testira-vodonicni-avion-pocetak-nove-energetske-trke-u-avijaciji"
+                title="Kina testira vodonični avion: početak nove energetske trke u avijaciji"
+                description="Kina je izvela prvi uspešan test megavatnog vodoničnog turboprop motora."
+                imageSrc="/news/hydrogen-light.jpg"
+                imageAlt="Vodoničnim gorivnim ćelijama pogonjen avion na poletištu tokom testiranja"
+              />
 
-                <h2
-                  className="mt-2 mb-3 text-[32px] md:text-[42px] font-bold leading-[1.1]"
-                  style={{
-                    fontFamily: "'Playfair Display', Georgia, serif",
-                    fontWeight: 700,
-                    color: isDark ? "#e0ddd5" : "#111",
-                  }}
-                >
-                  <Link
-                    href="/geopolitika/rusija-kina-francuska-blokirale-rezoluciju-o-otvaranju-ormuskog-moreuza"
-                    className="headline-link"
-                    style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-                  >
-                    Rusija, Kina i Francuska blokirale rezoluciju o otvaranju Ormuskog moreuza
-                  </Link>
-                </h2>
+              <hr className="editorial-divider" />
 
-                <p
-                  className="text-[18px] md:text-[19px] leading-[1.6] mb-5"
-                  style={{
-                    fontFamily: "'Lora', Georgia, serif",
-                    color: isDark ? "#9a978f" : "#555",
-                  }}
-                >
-                  Rusija, Kina i Francuska blokirale su u Savetu bezbednosti UN rezoluciju o ponovnom otvaranju Ormuskog moreuza. Odluka dodatno produbljuje neizvesnost u regionu Persijskog zaliva i pojačava pritisak na globalne energetske tokove.
-                </p>
+              <SmallArticleCard
+                category="Geopolitika"
+                href="/geopolitika/oboren-f15e-iran-2026"
+                title="Oboren američki F-15E iznad Irana: jedan član posade spašen, drugi nestao"
+                description="Incident predstavlja prvi potvrđeni slučaj obaranja američkog aviona sa posadom u aktuelnom sukobu."
+                imageSrc="/news/f15e-iran.jpg"
+                imageAlt="F-15E Strike Eagle u letu"
+              />
 
-                <Link
-                  href="/geopolitika/rusija-kina-francuska-blokirale-rezoluciju-o-otvaranju-ormuskog-moreuza"
-                  className="block no-underline"
-                >
-                  <div
-                    className="relative w-full overflow-hidden rounded-xl aspect-video"
-                    style={{
-                      border: isDark ? "1px solid #2a2a2e" : "1px solid #e5e5e5",
-                    }}
-                  >
-                    <img
-                      src={IMAGES.unSecurityCouncil}
-                      alt="Savet bezbednosti Ujedinjenih nacija u Njujorku, gde je blokirana rezolucija o otvaranju Ormuskog moreuza."
-                      className="w-full h-full object-cover block"
-                      fetchPriority="high"
-                      decoding="async"
-                    />
-                  </div>
-                </Link>
-              </article>
-            </FadeIn>
+              <hr className="editorial-divider" />
 
-            {/* RIGHT: Sidebar — secondary articles */}
-            <aside>
-              <FadeIn>
-                <div className="flex flex-col">
-                  {/* Mobile-only separator */}
-                  <hr className="editorial-divider my-5 lg:hidden" />
+              <SmallArticleCard
+                category="Geopolitika"
+                href="/geopolitika/inflacija-evrozona-ecb-mart"
+                title="Inflacija u evrozoni pada, ECB spreman za nove rezove kamatnih stopa"
+                description="Godišnja inflacija u evrozoni nastavila je pad u martu 2026, što otvara prostor za dalje smanjenje kamatnih stopa ECB."
+                imageSrc="/news/ecb-frankfurt-inflation.jpg"
+                imageAlt="Evropska centralna banka u Frankfurtu"
+              />
+            </div>
+          </FadeIn>
 
-                  <SmallArticleCard
-                    category="Geopolitika"
-                    href="/geopolitika/harg-srce-iranskog-izvoza-nafte"
-                    title="Harg – srce iranskog izvoza nafte"
-                    description="Sjedinjene Američke Države, prema dostupnim izveštajima, izvele su udare na vojne ciljeve na ostrvu Harg, ključnom energetskom čvorištu Irana u Persijskom zalivu."
-                    imageSrc={IMAGES.hargOilTerminal}
-                    imageAlt="Naftni terminal na ostrvu Harg, jednom od najvažnijih energetskih čvorišta Irana."
-                  />
+          <hr
+            className="editorial-divider mb-10"
+            style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
+          />
 
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Naša planeta"
-                    href="/nasa-planeta/artemis-ii-fotografije-dubokog-svemira"
-                    title="Fotografije iz dubokog svemira: Artemis II beleži prizore sa lunarnog preleta"
-                    description="NASA objavila nove snimke Zemlje i pomračenja iz perspektive misije Artemis II."
-                    imageSrc={IMAGES.orionEarthView}
-                    imageAlt="Pogled na Zemlju iz letelice Orion tokom misije Artemis II"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Naša planeta"
-                    href="/nasa-planeta/artemis-ii-rekord-udaljenosti"
-                    title="Čovečanstvo najdalje od Zemlje u istoriji: Artemis II nadmašio rekord Apola 13"
-                    description="Posada misije Artemis II dostigla je najveću udaljenost od Zemlje ikada zabeleženu za ljudsku posadu, premašivši rekord misije Apollo 13."
-                    imageSrc={IMAGES.moonNasa}
-                    imageAlt="Letelica Orion u dubokom svemiru tokom misije Artemis II"
-                  />
-
-                  <hr className="editorial-divider my-5" />
-
-                  <SmallArticleCard
-                    category="Geopolitika"
-                    href="/geopolitika/kina-testira-vodonicni-avion-pocetak-nove-energetske-trke-u-avijaciji"
-                    title="Kina testira vodonični avion: početak nove energetske trke u avijaciji"
-                    description="Kina je izvela prvi uspešan test megavatnog vodoničnog turboprop motora, što ukazuje na ubrzanje globalne energetske i tehnološke trke u avijaciji."
-                    imageSrc={IMAGES.hydrogenLight}
-                    imageAlt="Vodoničnim gorivnim ćelijama pogonjen avion na poletištu tokom testiranja"
-                  />
-                </div>
-              </FadeIn>
-            </aside>
-          </div>
+          {/* ======================
+              3. LIVE BLOCK (short)
+             ====================== */}
+          <FadeIn>
+            <LiveBriefingBlock isDark={isDark} />
+          </FadeIn>
 
         </div>
       </main>
@@ -448,3 +316,4 @@ export default function Home() {
     </div>
   );
 }
+

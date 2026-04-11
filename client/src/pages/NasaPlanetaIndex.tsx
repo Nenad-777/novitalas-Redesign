@@ -11,6 +11,15 @@ import LiveBriefingBlock from "@/components/LiveBriefingBlock";
 
 const ARTICLES = [
   {
+    href: "/nasa-planeta/artemis-ii-splashdown",
+    img: "/news/orion-earth-view.jpg",
+    alt: "Letelica Orion tokom povratka na Zemlju — misija Artemis II",
+    title:
+      "Artemis II uspešno okončan: Orion se vratio na Zemlju nakon istorijskog leta oko Meseca",
+    description:
+      "Kapsula sa četvoročlanom posadom bezbedno je sletela u Tihi okean, završivši prvu ljudsku misiju ka Mesecu posle više od 50 godina.",
+  },
+  {
     href: "/nasa-planeta/artemis-ii-fotografije-dubokog-svemira",
     img: "/news/orion-earth-view.jpg",
     alt: "Pogled na Zemlju iz letelice Orion tokom misije Artemis II",
@@ -24,13 +33,13 @@ const ARTICLES = [
     img: "/news/moon-nasa.jpg",
     alt: "Letelica Orion u dubokom svemiru tokom misije Artemis II",
     title:
-      "🚨 Čovečanstvo najdalje od Zemlje u istoriji: Artemis II nadmašio rekord Apola 13",
+      "Čovečanstvo najdalje od Zemlje u istoriji: Artemis II nadmašio rekord Apola 13",
     description:
       "Posada misije Artemis II dostigla je najveću udaljenost od Zemlje ikada zabeleženu za ljudsku posadu, premašivši rekord misije Apollo 13.",
   },
   {
     href: "/nasa-planeta/artemis-ii-uzivo-prenos-rekord",
-    img: "https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg",
+    img: "/news/artemis-view1.jpg",
     alt: "NASA Artemis II — uživo prenos iz dubokog svemira",
     title:
       "Uživo: Artemis II obara istorijski rekord — prenos iz dubokog svemira",
@@ -39,7 +48,7 @@ const ARTICLES = [
   },
   {
     href: "/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca",
-    img: "https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg",
+    img: "/news/artemis-view2.jpg",
     alt: "Orion letelica na putu ka Mesecu — misija Artemis II",
     title:
       "Orion više od polovine puta do Meseca: misija Artemis II u dubokom svemiru",
@@ -48,9 +57,9 @@ const ARTICLES = [
   },
   {
     href: "/nasa-planeta/breaking-nasa-artemis-ii-mesec-posle-50-godina",
-    img: "https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg",
+    img: "/news/artemis-eclipse.jpg",
     alt: "NASA Artemis II — prva ljudska misija ka Mesecu posle 50 godina",
-    title: "🚨 BREAKING: NASA ponovo šalje ljude ka Mesecu posle više od 50 godina",
+    title: "BREAKING: NASA ponovo šalje ljude ka Mesecu posle više od 50 godina",
     description:
       "Artemis II označava povratak čovečanstva u duboki svemir — prvi put od 1972. godine.",
   },

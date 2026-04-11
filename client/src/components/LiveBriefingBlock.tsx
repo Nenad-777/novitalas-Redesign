@@ -19,53 +19,24 @@ interface LiveBriefingBlockProps {
 // Izveštaji — najnoviji na vrhu. Prikazuju se samo prva 3.
 const LIVE_REPORTS: LiveReport[] = [
   {
-    id: "report-2000-artemis-fotografije-0407",
-    time: "20:00",
+    id: "report-2155-splashdown",
+    time: "21:55",
     text: [
-      "NASA objavila nove fotografije iz misije Artemis II.",
-      "• pogled na Zemlju iz letelice Orion",
-      "• solarno pomračenje zabeleženo tokom lunarnog preleta",
+      "Artemis II uspešno sleteo u Pacifik",
+      "• misija završena bez incidenata",
+      "• Orion bezbedno vraćen",
+      "• istorijski let završen",
     ],
   },
   {
-    id: "report-1930",
+    id: "report-2000-rekord",
+    time: "20:00",
+    text: ["Rekordna udaljenost od Zemlje"],
+  },
+  {
+    id: "report-1930-polovina",
     time: "19:30",
-    text: [
-      "Posada testira Orion odela.",
-      "NASA navodi da astronauti već vide delove daleke strane Meseca.",
-    ],
-  },
-  {
-    id: "report-ranije",
-    time: "ranije",
-    text: [
-      "Misija stabilna na putanji.",
-      "Svi sistemi funkcionišu bez većih problema.",
-    ],
-  },
-  {
-    id: "report-2000",
-    time: "20:00",
-    text: [
-      "Misija Artemis II upravo je oborila istorijski rekord udaljenosti od Zemlje.",
-      "Posada je nadmašila granicu postavljenu tokom misije Apollo 13.",
-    ],
-  },
-  {
-    id: "report-2250",
-    time: "22:50",
-    text: [
-      "Letelica Orion nalazi se u cislunarnom prostoru na putu ka Mesecu.",
-      "Posada je prešla više od 160.000 kilometara od Zemlje.",
-    ],
-  },
-  {
-    id: "report-0400",
-    time: "04:00",
-    text: [
-      "Letelica Orion napustila je Zemljinu orbitu.",
-      "Let protiče stabilno, bez većih problema.",
-    ],
+    text: ["Orion prošao polovinu puta ka Mesecu"],
   },
 ];
 
@@ -196,7 +167,7 @@ export default function LiveBriefingBlock({ isDark }: LiveBriefingBlockProps) {
         }}
       >
         <a
-          href="/nasa-planeta/artemis-ii-fotografije-dubokog-svemira"
+          href="/nasa-planeta/artemis-ii-splashdown"
           style={{
             fontFamily: "'Source Sans 3', sans-serif",
             fontSize: "12px",
