@@ -179,11 +179,11 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-5">
 
           {/* ======================
-              1. HERO — N1 pritisci (Analiza nedelje)
+              1. HERO — Magyar-Orban (Analiza nedelje)
              ====================== */}
           <FadeIn className="mb-10">
             <article>
-              <span className="kicker block mb-2">Srbija</span>
+              <span className="kicker block mb-2">Geopolitika</span>
 
               <h2
                 className="mt-2 mb-3 text-[32px] md:text-[46px] font-bold leading-[1.1]"
@@ -194,11 +194,11 @@ export default function Home() {
                 }}
               >
                 <Link
-                  href="/srbija/senke-nad-ekranom-tiho-preuzimanje-ili-kontrolisano-gasenje-istine"
+                  href="/geopolitika/pomeranje-tezista-orban-evropa"
                   className="headline-link"
                   style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                 >
-                  SENKE NAD EKRANOM: Tiho preuzimanje ili kontrolisano gašenje istine
+                  POMERANJE TEŽIŠTA: Šta poraz Orbana znači za Evropu i svet
                 </Link>
               </h2>
 
@@ -209,11 +209,11 @@ export default function Home() {
                   color: isDark ? "#9a978f" : "#555",
                 }}
               >
-                Proces pritiska na nezavisne medije retko je otvoren i nagao. Mnogo češće odvija se postepeno, kroz smene, promene uređivačke politike i sužavanje prostora javne reči. Slučaj N1 otvara pitanje granica takvog procesa u savremenom društvu.
+                Analiza političkih i geopolitičkih posledica poraza Viktora Orbana u Mađarskoj
               </p>
 
               <Link
-                href="/srbija/senke-nad-ekranom-tiho-preuzimanje-ili-kontrolisano-gasenje-istine"
+                href="/geopolitika/pomeranje-tezista-orban-evropa"
                 className="block no-underline"
               >
                 <div
@@ -223,8 +223,8 @@ export default function Home() {
                   }}
                 >
                   <img
-                    src="/news/iscezavanje-N1.jpg"
-                    alt="Ilustracija procesa nestajanja javnog prostora kroz pritisak na medije."
+                    src="/news/magyar.jpg"
+                    alt="Viktor Orban — poraz na izborima u Mađarskoj i geopolitičke posledice"
                     className="w-full h-full object-cover block"
                     fetchPriority="high"
                     decoding="async"
@@ -254,6 +254,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Srbija"
+                href="/srbija/senke-nad-ekranom-tiho-preuzimanje-ili-kontrolisano-gasenje-istine"
+                title="SENKE NAD EKRANOM: Tiho preuzimanje ili kontrolisano gašenje istine"
+                description="Proces pritiska na nezavisne medije retko je otvoren i nagao. Mnogo češće odvija se postepeno, kroz smene, promene uređivačke politike i sužavanje prostora javne reči."
+                imageSrc="/news/iscezavanje-N1.jpg"
+                imageAlt="Ilustracija procesa nestajanja javnog prostora kroz pritisak na medije."
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Geopolitika"
                 href="/geopolitika/rusija-i-ukrajina-dogovorile-privremeno-primirje-za-pravoslavni-uskrs"
                 title="Rusija i Ukrajina dogovorile privremeno primirje za pravoslavni Uskrs"
@@ -282,17 +293,6 @@ export default function Home() {
                 description="NASA objavila nove snimke Zemlje i pomračenja iz perspektive misije Artemis II."
                 imageSrc="/news/orion-earth-view.jpg"
                 imageAlt="Pogled na Zemlju iz letelice Orion tokom misije Artemis II"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/kina-testira-vodonicni-avion-pocetak-nove-energetske-trke-u-avijaciji"
-                title="Kina testira vodonični avion: početak nove energetske trke u avijaciji"
-                description="Kina je izvela prvi uspešan test megavatnog vodoničnog turboprop motora."
-                imageSrc="/news/hydrogen-light.jpg"
-                imageAlt="Vodoničnim gorivnim ćelijama pogonjen avion na poletištu tokom testiranja"
               />
             </div>
           </FadeIn>
