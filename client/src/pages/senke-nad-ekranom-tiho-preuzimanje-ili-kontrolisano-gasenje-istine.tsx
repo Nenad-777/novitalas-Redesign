@@ -10,7 +10,7 @@ export default function SenkeNadEkranom() {
       deck="Proces pritiska na nezavisne medije retko je otvoren i nagao. Mnogo češće odvija se postepeno, kroz smene, promene uređivačke politike i sužavanje prostora javne reči. Slučaj N1 otvara pitanje granica takvog procesa u savremenom društvu."
       imageSrc="/news/iscezavanje-N1.jpg"
       imageAlt="Ilustracija procesa nestajanja javnog prostora kroz pritisak na medije."
-      imageCredit="Novi Talas / digital art"
+      imageCredit="Novi Talas / ilustracija"
       paragraphs={[
         "U političkim sistemima koji formalno počivaju na demokratskim procedurama, retko kada dolazi do otvorenog gašenja medija. Mnogo češće, proces je spor, gotovo nevidljiv, lišen spektakla, ali upravo zato razorniji. On se ne odvija kroz jedan čin, već kroz niz pažljivo raspoređenih poteza. Ono što danas posmatramo u slučaju N1 ne liči na nagli prekid, već na metodično razgrađivanje, korak po korak, kadar po kadar, glas po glas.",
         "Ako se vratimo unazad, na jesen, na razgovore koji su tada delovali kao izolovani incidenti ili šum u sistemu, danas oni počinju da dobijaju drugačiju strukturu. Ono što je tada moglo biti tumačeno kao politički pritisak ili retorička pretnja, sada se čita kao početak jednog procesa. U tom smislu, vremenska linija više nije niz nepovezanih događaja, ona postaje narativ.",

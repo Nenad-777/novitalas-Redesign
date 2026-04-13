@@ -20,7 +20,7 @@ export default function PrimirjeVaskrs() {
       deck="Rusija i Ukrajina dogovorile su privremeni prekid vatre povodom pravoslavnog Uskrsa. Primirje je vremenski ograničeno i vezano za trajanje praznika, uz obostrane rezerve o njegovom sprovođenju na terenu."
       imageSrc={IMAGE_SRC}
       imageAlt="Ilustracija uskršnjeg primirja u ratu između Rusije i Ukrajine."
-      imageCredit="Novi Talas / digital art"
+      imageCredit="Novi Talas / ilustracija"
       paragraphs={PARAGRAPHS}
       backHref="/geopolitika"
       backLabel="← Nazad na Geopolitiku"

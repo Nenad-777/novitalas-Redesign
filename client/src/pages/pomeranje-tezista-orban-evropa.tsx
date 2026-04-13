@@ -34,7 +34,7 @@ export default function PomeranjeTezistaOrbanEvropa() {
       deck="Analiza političkih i geopolitičkih posledica poraza Viktora Orbana u Mađarskoj"
       imageSrc={IMAGE_SRC}
       imageAlt="Viktor Orban — poraz na izborima u Mađarskoj i geopolitičke posledice"
-      imageCredit="Novi Talas / digital art"
+      imageCredit="Novi Talas / ilustracija"
       paragraphs={PARAGRAPHS}
       backHref="/geopolitika"
       backLabel="← Nazad na Geopolitiku"
