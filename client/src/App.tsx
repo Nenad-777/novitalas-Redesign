@@ -33,6 +33,9 @@ import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 
 /* ✅ NOVA VEST — Geopolitika */
+import PomeranjeTezistaOrbanEvropa from "./pages/pomeranje-tezista-orban-evropa";
+
+/* ✅ NOVA VEST — Geopolitika */
 import PrimirjeVaskrs from "./pages/rusija-i-ukrajina-dogovorile-privremeno-primirje-za-pravoslavni-uskrs";
 
 /* ✅ NOVA VEST — Geopolitika */
@@ -182,6 +185,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/pomeranje-tezista-orban-evropa"
+          component={PomeranjeTezistaOrbanEvropa}
+        />
+
         <Route
           path="/geopolitika/rusija-i-ukrajina-dogovorile-privremeno-primirje-za-pravoslavni-uskrs"
           component={PrimirjeVaskrs}

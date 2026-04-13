@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/pomeranje-tezista-orban-evropa",
+    title:
+      "POMERANJE TEŽIŠTA: Šta poraz Orbana znači za Evropu i svet",
+    description:
+      "Analiza političkih i geopolitičkih posledica poraza Viktora Orbana u Mađarskoj",
+    imageSrc: "/news/magyar.jpg",
+    datePublished: "2026-04-13",
+  },
+  {
     path: "/geopolitika/rusija-i-ukrajina-dogovorile-privremeno-primirje-za-pravoslavni-uskrs",
     title:
       "Rusija i Ukrajina dogovorile privremeno primirje za pravoslavni Uskrs",
