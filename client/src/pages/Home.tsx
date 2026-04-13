@@ -237,7 +237,7 @@ export default function Home() {
                     color: isDark ? "#7a7872" : "#777",
                   }}
                 >
-                  Novi Talas / digital art
+                  Novi Talas / ilustracija
                 </p>
               </Link>
             </article>
