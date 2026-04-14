@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 
-const IMAGE_SRC = "/news/orban-oil.jpg";
+const IMAGE_SRC = "/news/orban-gas.jpg";
 
 const PARAGRAPHS = [
   "Mađarski premijer Viktor Orban najavio je da će njegova zemlja postepeno obustaviti isporuke gasa Ukrajini, što predstavlja novi pritisak na energetsku stabilnost zemlje u uslovima rata.",

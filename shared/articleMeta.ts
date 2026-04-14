@@ -247,7 +247,7 @@ export const articleMeta: ArticleStaticMeta[] = [
     title: "Orban najavio prekid isporuke gasa Ukrajini",
     description:
       "Mađarski premijer Viktor Orban najavio postepeni prekid isporuke gasa Ukrajini, uz nove tenzije unutar Evropske unije.",
-    imageSrc: "/news/orban-oil.jpg",
+    imageSrc: "/news/orban-gas.jpg",
     datePublished: "2026-03-25",
   },
   {

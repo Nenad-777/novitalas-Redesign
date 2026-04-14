@@ -16,7 +16,7 @@ const IMAGES = {
   f15eIran: "/news/f15e-iran.jpg",
   ecbFrankfurtInflation: "/news/ecb-frankfurt-inflation.jpg",
   vanceNetanyahu: "/news/vance-netanyahu.jpg",
-  orbanOil: "/news/orban-oil.jpg",
+  orbanGas: "/news/orban-gas.jpg",
   steinmeier: "/news/Frank-Walter Steinmeier.jpg",
   meloniReferendum: "/news/meloni-referendum.jpg",
   trumpIran: "/news/trump-iran.jpg",
@@ -509,7 +509,7 @@ export default function GeopolitikaIndex() {
                   }}
                 >
                   <img
-                    src={IMAGES.orbanOil}
+                    src={IMAGES.orbanGas}
                     alt="Viktor Orban tokom obraćanja na sastanku Evropskog saveta"
                     className="w-full h-[260px] object-cover object-center block"
                     decoding="async"
