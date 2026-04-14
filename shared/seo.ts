@@ -565,12 +565,12 @@ export const seoData: Record<string, SEOData> = {
     ogDescription:
       "Misija Artemis II nalazi se u dubokom svemiru nakon što je Orion prešao više od 160.000 kilometara od Zemlje.",
     ogUrl: "https://novitalas.org/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca",
-    ogImage: "https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg",
+    ogImage: "https://novitalas.org/news/artemis-landing.jpg",
     twitterTitle:
       "Orion više od polovine puta do Meseca: misija Artemis II u dubokom svemiru",
     twitterDescription:
       "Misija Artemis II nalazi se u dubokom svemiru nakon što je Orion prešao više od 160.000 kilometara od Zemlje.",
-    twitterImage: "https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg",
+    twitterImage: "https://novitalas.org/news/artemis-landing.jpg",
     datePublished: "2026-04-05",
   },
 

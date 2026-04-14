@@ -42,7 +42,7 @@ const ARTICLES = [
   },
   {
     href: "/obavestajni-izvori/rat-senki",
-    img: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/acjhxldMBPFDSKKa.png",
+    img: "/news/obavestajni-image.jpg",
     alt: "Obaveštajni izveštaj — digitalni ekrani",
     title:
       "Rat senki: povratak obaveštajnih službi u središte geopolitike",

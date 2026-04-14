@@ -13,8 +13,7 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { useSEO } from "@/hooks/useSEO";
 
 const IMAGES = {
-  intelligenceReport:
-    "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/acjhxldMBPFDSKKa.png",
+  intelligenceReport: "/news/obavestajni-image.jpg",
 };
 
 export default function ObavestajniArticle() {
