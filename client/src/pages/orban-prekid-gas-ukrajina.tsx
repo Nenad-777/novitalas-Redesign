@@ -20,7 +20,7 @@ export default function OrbanPrekidGasUkrajina() {
       deck="Mađarski premijer Viktor Orban najavio postepeni prekid isporuke gasa Ukrajini, uz nove tenzije unutar Evropske unije."
       imageSrc={IMAGE_SRC}
       imageAlt="Viktor Orban tokom obraćanja na sastanku Evropskog saveta"
-      imageCredit="Foto: Pier Marco Tacca / Getty Images"
+      imageCredit="NOVI TALAS / ilustracija"
       paragraphs={PARAGRAPHS}
       backHref="/geopolitika"
       backLabel="← Nazad na Geopolitiku"

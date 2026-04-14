@@ -20,8 +20,7 @@ const IMAGES = {
   kosovAmfiteatar: "/news/kosovo-amfiteatar.jpg",
   traktori: "/traktori-beograd.jpg",
   analizaNedeljeMars: "/analiza-nedelje-mars.jpg",
-  heroOld:
-    "https://files.manuscdn.com/user_upload_by_module/session_file/310519663335272373/qZixjPORsEGCuRBV.png",
+  heroOld: "/images/srbija-polarizacija.jpg",
 };
 
 export default function SrbijaPage() {

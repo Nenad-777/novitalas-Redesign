@@ -198,7 +198,7 @@ export const articleMeta: ArticleStaticMeta[] = [
     title: "🚨 BREAKING: NASA ponovo šalje ljude ka Mesecu posle više od 50 godina",
     description:
       "NASA je lansirala Artemis II, prvu ljudsku misiju ka Mesecu posle više od pola veka.",
-    imageSrc: "https://img.youtube.com/vi/m3kR2KK8TEs/maxresdefault.jpg",
+    imageSrc: "/news/artemis-landing.jpg",
     datePublished: "2026-04-02",
   },
   {
