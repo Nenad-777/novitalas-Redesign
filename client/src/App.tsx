@@ -28,6 +28,7 @@ import ObavestajniArticle from "./pages/ObavestajniArticle";
 import ObavestajniIndex from "./pages/ObavestajniIndex";
 import KinaSpyBrodovi from "./pages/kina-spy-brodovi";
 import CiaPokrenulaKampanju from "./pages/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira";
+import PrviBrifing from "./pages/prvi-brifing";
 import SrbijaPage from "./pages/SrbijaPage";
 import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
@@ -349,6 +350,11 @@ function Router() {
         <Route
           path="/obavestajni-izvori/kina-spy-brodovi"
           component={KinaSpyBrodovi}
+        />
+
+        <Route
+          path="/obavestajni-izvori/prvi-brifing"
+          component={PrviBrifing}
         />
 
         <Route
