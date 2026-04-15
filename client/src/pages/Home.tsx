@@ -254,12 +254,12 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
-                category="Srbija"
-                href="/srbija/senke-nad-ekranom-tiho-preuzimanje-ili-kontrolisano-gasenje-istine"
-                title="SENKE NAD EKRANOM: Tiho preuzimanje ili kontrolisano gašenje istine"
-                description="Proces pritiska na nezavisne medije retko je otvoren i nagao. Mnogo češće odvija se postepeno, kroz smene, promene uređivačke politike i sužavanje prostora javne reči."
-                imageSrc="/news/iscezavanje-N1.jpg"
-                imageAlt="Ilustracija procesa nestajanja javnog prostora kroz pritisak na medije."
+                category="Obaveštajni izvori"
+                href="/obavestajni-izvori/prvi-brifing"
+                title="OBAVEŠTAJNI BRIFING | 15. april 2026."
+                description="Sažeti obaveštajni pregled: pomorski pritisci, digitalni nadzor i diplomatski balans u regionu Persijskog zaliva."
+                imageSrc="/news/security-world.jpg"
+                imageAlt="Globalna bezbednosna mapa i obaveštajni uvid"
               />
 
               <hr className="editorial-divider" />
@@ -316,4 +316,3 @@ export default function Home() {
     </div>
   );
 }
-

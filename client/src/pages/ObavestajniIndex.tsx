@@ -7,9 +7,17 @@ import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
-import ObavestajniBrifingBlock from "@/components/ObavestajniBrifingBlock";
 
 const ARTICLES = [
+  {
+    href: "/obavestajni-izvori/prvi-brifing",
+    img: "/news/security-world.jpg",
+    alt: "Obaveštajni brifing — globalna bezbednosna mapa",
+    title: "OBAVEŠTAJNI BRIFING | 15. april 2026.",
+    description:
+      "Sažeti obaveštajni pregled: pomorski pritisci, digitalni nadzor i diplomatski balans u regionu Persijskog zaliva.",
+    date: "15. april 2026.",
+  },
   {
     href: "/obavestajni-izvori/nemacka-curenje-informacija",
     img: "/news/germany-intelligence.jpg",
@@ -86,9 +94,6 @@ export default function ObavestajniIndex() {
             </p>
 
           </div>
-
-          {/* OBAVEŠTAJNI BRIFING — first element in section */}
-          <ObavestajniBrifingBlock />
 
           {/* HERO ARTICLE — featured story */}
           <article className="mb-14">
