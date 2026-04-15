@@ -102,11 +102,11 @@ export default function PrviBrifing() {
               color: isDark ? "#cac4b8" : "#2a2a2a",
             }}
           >
-            U ovom izdanju pratimo pomorske i bezbednosne pomake koji oblikuju
-            regionalnu ravnotežu u Persijskom zalivu. Fokus je na signalima koji
-            prethode vidljivim krizama: logističkim usporenjima, digitalnom
-            izviđanju i diplomatskom manevrisanju. Zaključak je jasan — prostor
-            između mira i otvorenog sukoba ostaje najvažnije polje procene.
+            Pomorski i bezbednosni tokovi u Persijskom zalivu pokazuju pomake
+            koji direktno utiču na regionalnu ravnotežu. Fokus je na signalima
+            koji prethode vidljivim krizama: logističkim usporenjima, digitalnom
+            izviđanju i diplomatskom manevrisanju. Prostor između mira i otvorenog
+            sukoba ostaje najvažnije polje procene.
           </p>
 
           <div className="mt-14 space-y-10 md:space-y-12">
