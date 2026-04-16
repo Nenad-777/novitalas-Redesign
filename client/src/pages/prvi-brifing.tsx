@@ -8,29 +8,29 @@ const BRIEFING_BLOCKS = [
   {
     subtitle: "Pomorski koridor pod konstantnim pritiskom",
     paragraphs: [
-      "Satelitski i komercijalni podaci potvrđuju usporavanje prolaza kroz ključne tačke Persijskog zaliva, uz povećan broj privremenih zaustavljanja tankera i konvoja. Pritisak na osiguranje transporta podiže operativne troškove i menja rute snabdevanja u realnom vremenu.",
-      "Regionalni akteri trenutno izbegavaju otvorenu konfrontaciju, ali nastavljaju sa merama ograničenog odvraćanja i demonstracije sile.",
+      "Prema podacima UKMTO i komercijalnih platformi za praćenje brodova, u južnom delu Crvenog mora i prilazima Persijskom zalivu zabeleženo je više privremenih usporavanja i promena kursa tankera u poslednja 24–48 časa. Istovremeno, premije osiguranja za rizične rute ostaju povišene, što direktno utiče na troškove transporta energenata.",
+      "Regionalni akteri izbegavaju direktnu konfrontaciju, ali nastavljaju sa merama ograničenog odvraćanja kroz prisustvo i kontrolu ključnih tačaka prolaza.",
     ],
     signal:
-      "Signal: Svako dodatno usporavanje saobraćaja brzo se preliva na evropsko tržište energenata.",
+      "Svako dodatno usporavanje saobraćaja brzo se prenosi na evropsko tržište nafte i gasa.",
   },
   {
-    subtitle: "Digitalni nadzor postaje prva linija procene",
+    subtitle: "Digitalni nadzor usmeren na energetsku infrastrukturu",
     paragraphs: [
-      "U poslednja 24 časa zabeležen je rast koordinisanih sajber izviđačkih aktivnosti usmerenih ka energetskim i logističkim sistemima. Fokus je na mapiranju ranjivosti, a ne na javno vidljivim prekidima, što ukazuje na pripremnu fazu operacija.",
-      "Paralelno, pojačan je informacioni šum kroz ciljane narative koji otežavaju razlikovanje potvrđenih činjenica od namernih dezinformacija.",
+      "Evropske i američke sajber bezbednosne agencije, uključujući ENISA i CISA, upozorile su na aktivnosti usmerene ka mrežnim uređajima u energetskom i logističkom sektoru, posebno na edge rutere i VPN sisteme. Napadi uključuju pokušaje DNS manipulacije i prikupljanje pristupnih podataka.",
+      "Fokus ovih operacija je na mapiranju sistema i identifikaciji ranjivosti, bez izazivanja vidljivih prekida u radu.",
     ],
     signal:
-      "Signal: Ko kontroliše tok operativnih podataka, kontroliše i tempo političkog odgovora.",
+      "Kontrola pristupa mrežnoj infrastrukturi omogućava uticaj na tok informacija i vreme reakcije institucija.",
   },
   {
-    subtitle: "Diplomatski kanali aktivni, ali bez stabilne garancije",
+    subtitle: "Diplomatski kanali aktivni bez operativnog ishoda",
     paragraphs: [
-      "Više posredničkih kanala ostaje otvoreno i trenutno sprečava naglu eskalaciju, ali nijedan mehanizam još ne nudi dugoročnu predvidljivost. Pregovarački okvir je funkcionalan samo dok obe strane procenjuju da je cena direktnog sukoba viša od cene zategnutosti.",
-      "Zbog toga se region nalazi u zoni produženog rizika: nema formalnog prekida procesa, ali nema ni pouzdane deeskalacije.",
+      "Posrednički kanali preko regionalnih aktera, uključujući Oman i Katar, ostaju otvoreni, ali bez formalnog pomaka ka stabilnom dogovoru. Pregovori funkcionišu na nivou održavanja komunikacije, bez konkretnih mehanizama deeskalacije.",
+      "Istovremeno, prisustvo vojnih i bezbednosnih struktura u regionu ostaje nepromenjeno, što ukazuje na nastavak politike kontrolisanog pritiska.",
     ],
     signal:
-      "Signal: Krhka ravnoteža opstaje dok god incidenti ostaju lokalizovani i kratkog dometa.",
+      "Ravnoteža se održava dok incidenti ostaju ograničeni i bez direktnog širenja sukoba.",
   },
 ];
 
@@ -105,8 +105,7 @@ export default function PrviBrifing() {
             Pomorski i bezbednosni tokovi u Persijskom zalivu pokazuju pomake
             koji direktno utiču na regionalnu ravnotežu. Fokus je na signalima
             koji prethode vidljivim krizama: logističkim usporenjima, digitalnom
-            izviđanju i diplomatskom manevrisanju. Prostor između mira i otvorenog
-            sukoba ostaje najvažnije polje procene.
+            izviđanju i diplomatskom manevrisanju.
           </p>
 
           <div className="mt-14 space-y-10 md:space-y-12">
