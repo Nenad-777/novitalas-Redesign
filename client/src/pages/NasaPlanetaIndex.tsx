@@ -7,7 +7,6 @@ import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
-import LiveBriefingBlock from "@/components/LiveBriefingBlock";
 
 const ARTICLES = [
   {
@@ -188,10 +187,18 @@ export default function NasaPlanetaIndex() {
               NAUKA   PRIRODA   KULTURA
             </p>
 
-          </div>
+            <Link
+              href="/nasa-planeta/artemis-live"
+              className="mt-4 inline-block text-[12px] font-semibold uppercase tracking-[0.08em] no-underline"
+              style={{
+                fontFamily: "'Source Sans 3', sans-serif",
+                color: isDark ? "#d9bf7a" : "#8B0000",
+              }}
+            >
+              Artemis live arhiva →
+            </Link>
 
-          {/* 🔴 LIVE BRIEFING — Artemis II stack izveštaj */}
-          <LiveBriefingBlock isDark={isDark} />
+          </div>
 
           {/* HERO ARTICLE — featured story */}
           <article className="mb-14">

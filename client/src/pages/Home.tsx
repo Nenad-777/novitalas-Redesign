@@ -11,7 +11,6 @@ import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
-import LiveBriefingBlock from "@/components/LiveBriefingBlock";
 
 // Simple fade-in on scroll hook
 function useFadeIn() {
@@ -295,18 +294,6 @@ export default function Home() {
                 imageAlt="Letelica Orion tokom povratka na Zemlju — misija Artemis II"
               />
             </div>
-          </FadeIn>
-
-          <hr
-            className="editorial-divider mb-10"
-            style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
-          />
-
-          {/* ======================
-              3. LIVE BLOCK (short)
-             ====================== */}
-          <FadeIn>
-            <LiveBriefingBlock isDark={isDark} />
           </FadeIn>
 
         </div>
