@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 
-const IMAGE_SRC = "/news/spielberg-bw-final.jpg";
+const IMAGE_SRC = "/news/spilberg.jpg";
 
 const PARAGRAPHS = [
   "Na CinemaCon događaju u Las Vegasu, Stiven Spilberg uputio je poruku filmskoj industriji da se mora preispitati oslanjanje na franšize i nastavke. Govoreći pred vodećim ljudima studija i distributerima, istakao je da publika sve više pokazuje zasićenje ponavljajućim narativima i da raste potreba za originalnim pričama.",
