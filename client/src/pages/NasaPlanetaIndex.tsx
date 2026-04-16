@@ -11,6 +11,14 @@ import LiveBriefingBlock from "@/components/LiveBriefingBlock";
 
 const ARTICLES = [
   {
+    href: "/nasa-planeta/spilberg-upozorava-holivud-publika-trazi-originalne-filmove",
+    img: "/news/spielberg-bw-final.jpg",
+    alt: "Stiven Spilberg na događaju CinemaCon",
+    title: "Spilberg upozorava Holivud: publika traži originalne filmove",
+    description:
+      "Stiven Spilberg poručio je na CinemaConu da Holivud mora da preispita oslanjanje na franšize i nastavke, jer publika sve više traži originalne priče.",
+  },
+  {
     href: "/nasa-planeta/artemis-ii-splashdown",
     img: "/news/artemis-landing.jpg",
     alt: "Letelica Orion tokom povratka na Zemlju — misija Artemis II",

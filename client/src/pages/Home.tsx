@@ -179,11 +179,11 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto px-5">
 
           {/* ======================
-              1. HERO — Magyar-Orban (Analiza nedelje)
+              1. HERO
              ====================== */}
           <FadeIn className="mb-10">
             <article>
-              <span className="kicker block mb-2">Geopolitika</span>
+              <span className="kicker block mb-2">Naša planeta</span>
 
               <h2
                 className="mt-2 mb-3 text-[32px] md:text-[46px] font-bold leading-[1.1]"
@@ -194,11 +194,11 @@ export default function Home() {
                 }}
               >
                 <Link
-                  href="/geopolitika/pomeranje-tezista-orban-evropa"
+                  href="/nasa-planeta/spilberg-upozorava-holivud-publika-trazi-originalne-filmove"
                   className="headline-link"
                   style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                 >
-                  POMERANJE TEŽIŠTA: Šta poraz Orbana znači za Evropu i svet
+                  Spilberg upozorava Holivud: publika traži originalne filmove
                 </Link>
               </h2>
 
@@ -209,11 +209,11 @@ export default function Home() {
                   color: isDark ? "#9a978f" : "#555",
                 }}
               >
-                Analiza političkih i geopolitičkih posledica poraza Viktora Orbana u Mađarskoj
+                Stiven Spilberg poručio je na CinemaConu da Holivud mora da preispita oslanjanje na franšize i nastavke, jer publika sve više traži originalne priče.
               </p>
 
               <Link
-                href="/geopolitika/pomeranje-tezista-orban-evropa"
+                href="/nasa-planeta/spilberg-upozorava-holivud-publika-trazi-originalne-filmove"
                 className="block no-underline"
               >
                 <div
@@ -223,8 +223,8 @@ export default function Home() {
                   }}
                 >
                   <img
-                    src="/news/magyar.jpg"
-                    alt="Viktor Orban — poraz na izborima u Mađarskoj i geopolitičke posledice"
+                    src="/news/spielberg-bw-final.jpg"
+                    alt="Stiven Spilberg na događaju CinemaCon"
                     className="w-full h-full object-cover block"
                     fetchPriority="high"
                     decoding="async"
@@ -254,6 +254,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Geopolitika"
+                href="/geopolitika/pomeranje-tezista-orban-evropa"
+                title="POMERANJE TEŽIŠTA: Šta poraz Orbana znači za Evropu i svet"
+                description="Analiza političkih i geopolitičkih posledica poraza Viktora Orbana u Mađarskoj"
+                imageSrc="/news/magyar.jpg"
+                imageAlt="Viktor Orban — poraz na izborima u Mađarskoj i geopolitičke posledice"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Obaveštajni izvori"
                 href="/obavestajni-izvori/prvi-brifing"
                 title="OBAVEŠTAJNI BRIFING | 15. april 2026."
@@ -282,17 +293,6 @@ export default function Home() {
                 description="Kapsula sa četvoročlanom posadom bezbedno je sletela u Tihi okean, završivši prvu ljudsku misiju ka Mesecu posle više od 50 godina."
                 imageSrc="/news/artemis-landing.jpg"
                 imageAlt="Letelica Orion tokom povratka na Zemlju — misija Artemis II"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Naša planeta"
-                href="/nasa-planeta/artemis-ii-fotografije-dubokog-svemira"
-                title="Fotografije iz dubokog svemira: Artemis II beleži prizore sa lunarnog preleta"
-                description="NASA objavila nove snimke Zemlje i pomračenja iz perspektive misije Artemis II."
-                imageSrc="/news/orion-earth-view.jpg"
-                imageAlt="Pogled na Zemlju iz letelice Orion tokom misije Artemis II"
               />
             </div>
           </FadeIn>
