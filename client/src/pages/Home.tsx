@@ -223,7 +223,7 @@ export default function Home() {
                   }}
                 >
                   <img
-                    src="/news/spielberg-bw-final.jpg"
+                    src="/news/spilberg.jpg"
                     alt="Stiven Spilberg na događaju CinemaCon"
                     className="w-full h-full object-cover block"
                     fetchPriority="high"

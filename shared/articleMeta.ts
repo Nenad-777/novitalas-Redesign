@@ -147,7 +147,7 @@ export const articleMeta: ArticleStaticMeta[] = [
     title: "Spilberg upozorava Holivud: publika traži originalne filmove",
     description:
       "Stiven Spilberg poručio je na CinemaConu da Holivud mora da preispita oslanjanje na franšize i nastavke, jer publika sve više traži originalne priče.",
-    imageSrc: "/news/spielberg-bw-final.jpg",
+    imageSrc: "/news/spilberg.jpg",
     datePublished: "2026-04-16",
   },
   {

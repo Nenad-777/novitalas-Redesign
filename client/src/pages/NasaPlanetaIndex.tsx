@@ -12,7 +12,7 @@ import LiveBriefingBlock from "@/components/LiveBriefingBlock";
 const ARTICLES = [
   {
     href: "/nasa-planeta/spilberg-upozorava-holivud-publika-trazi-originalne-filmove",
-    img: "/news/spielberg-bw-final.jpg",
+    img: "/news/spilberg.jpg",
     alt: "Stiven Spilberg na događaju CinemaCon",
     title: "Spilberg upozorava Holivud: publika traži originalne filmove",
     description:
