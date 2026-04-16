@@ -138,6 +138,7 @@ import ArtemisIIRekordUdaljenosti from "./pages/artemis-ii-rekord-udaljenosti";
 
 /* ✅ BREAKING VEST — Naša planeta — Uživo prenos */
 import ArtemisIIUzivoPrenosRekord from "./pages/artemis-ii-uzivo-prenos-rekord";
+import ArtemisLiveArhiva from "./pages/artemis-live-arhiva";
 
 /* ✅ NOVA VEST — Naša planeta */
 import ArtemisIIOrionPolovinaPuta from "./pages/artemis-ii-orion-polovina-puta-do-meseca";
@@ -441,6 +442,11 @@ function Router() {
         <Route
           path="/nasa-planeta/artemis-ii-uzivo-prenos-rekord"
           component={ArtemisIIUzivoPrenosRekord}
+        />
+
+        <Route
+          path="/nasa-planeta/artemis-live"
+          component={ArtemisLiveArhiva}
         />
 
         <Route

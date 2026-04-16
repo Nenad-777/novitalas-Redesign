@@ -55,6 +55,7 @@ const STATIC_SITEMAP_ENTRIES: Array<{
   { loc: "/geopolitika", changefreq: "daily", priority: "0.8" },
   { loc: "/srbija", changefreq: "daily", priority: "0.8" },
   { loc: "/nasa-planeta", changefreq: "daily", priority: "0.8" },
+  { loc: "/nasa-planeta/artemis-live", changefreq: "monthly", priority: "0.7" },
   { loc: "/obavestajni-izvori", changefreq: "daily", priority: "0.8" },
   { loc: "/kultura", changefreq: "weekly", priority: "0.8" },
 ];

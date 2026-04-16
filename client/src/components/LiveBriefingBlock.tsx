@@ -3,7 +3,7 @@
  *
  * Prikazuje kompaktne izveštaje sa vremenskim oznakama (lokalno vreme Srbije).
  * Najnoviji izveštaj je uvek na vrhu. Prikazuju se max 3 unosa.
- * Koristi se na Home i NasaPlanetaIndex.
+ * Koristi se na Artemis live arhivskoj stranici.
  */
 
 interface LiveReport {
