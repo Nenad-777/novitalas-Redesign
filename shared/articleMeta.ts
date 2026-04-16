@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/spilberg-upozorava-holivud-publika-trazi-originalne-filmove",
+    title: "Spilberg upozorava Holivud: publika traži originalne filmove",
+    description:
+      "Stiven Spilberg poručio je na CinemaConu da Holivud mora da preispita oslanjanje na franšize i nastavke, jer publika sve više traži originalne priče.",
+    imageSrc: "/news/spielberg-bw-final.jpg",
+    datePublished: "2026-04-16",
+  },
+  {
     path: "/geopolitika/pomeranje-tezista-orban-evropa",
     title:
       "POMERANJE TEŽIŠTA: Šta poraz Orbana znači za Evropu i svet",

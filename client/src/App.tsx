@@ -115,6 +115,7 @@ import IzboriRezultati from "./pages/izbori-rezultati";
 
 import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
 import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
+import SpilbergUpozoravaHolivudPublikaTraziOriginalneFilmove from "./pages/spilberg-upozorava-holivud-publika-trazi-originalne-filmove";
 
 /* ✅ NOVA VEST — Naša planeta */
 import KoJeDobioOskara from "./pages/ko-je-dobio-oskara";
@@ -421,6 +422,11 @@ function Router() {
             NAŠA PLANETA
            ========================= */}
         <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
+
+        <Route
+          path="/nasa-planeta/spilberg-upozorava-holivud-publika-trazi-originalne-filmove"
+          component={SpilbergUpozoravaHolivudPublikaTraziOriginalneFilmove}
+        />
 
         <Route
           path="/nasa-planeta/breaking-nasa-artemis-ii-mesec-posle-50-godina"
