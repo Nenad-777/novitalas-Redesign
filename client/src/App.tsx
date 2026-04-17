@@ -20,6 +20,7 @@ import VelikeSileIKrizaUIranu from "./pages/velike-sile-i-kriza-u-iranu";
 import RezerveNafte from "./pages/rezerve-nafte";
 import FrancuskaOdbranaOrmuza from "./pages/francuska-odbrana-ormuza";
 import SadSpecijalnaOperacijaIranUranijum from "./pages/sad-specijalna-operacija-iran-uranijum";
+import IranOtvorioHormuskiMoreuzZaKomercijalniSaobracajTokomPrimirja from "./pages/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja";
 
 /* ✅ NOVA VEST — Obaveštajni izvori */
 import NemackaCurenjeInformacija from "./pages/nemacka-curenje-informacija";
@@ -191,6 +192,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja"
+          component={IranOtvorioHormuskiMoreuzZaKomercijalniSaobracajTokomPrimirja}
+        />
+
         <Route
           path="/geopolitika/pomeranje-tezista-orban-evropa"
           component={PomeranjeTezistaOrbanEvropa}
