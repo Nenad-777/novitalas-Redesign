@@ -193,11 +193,11 @@ export default function Home() {
                 }}
               >
                 <Link
-                  href="/geopolitika/sad-odlazu-isporuke-oruzja-evropi-zbog-rata-sa-iranom"
+                  href="/geopolitika/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja"
                   className="headline-link"
                   style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                 >
-                  SAD odlažu isporuke oružja Evropi zbog rata sa Iranom
+                  Iran otvorio Hormuški moreuz za komercijalni saobraćaj tokom primirja
                 </Link>
               </h2>
 
@@ -208,11 +208,11 @@ export default function Home() {
                   color: isDark ? "#9a978f" : "#555",
                 }}
               >
-                Sjedinjene Američke Države odlažu deo planiranih isporuka oružja evropskim saveznicima zbog pojačanih operativnih zahteva u ratu sa Iranom, potvrđuju diplomatski i bezbednosni izvori.
+                Teheran je saopštio da je Hormuški moreuz otvoren za komercijalni saobraćaj tokom trajanja primirja, čime je privremeno smanjena bojazan od novog udara na globalno tržište energije.
               </p>
 
               <Link
-                href="/geopolitika/sad-odlazu-isporuke-oruzja-evropi-zbog-rata-sa-iranom"
+                href="/geopolitika/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja"
                 className="block no-underline"
               >
                 <div
@@ -222,8 +222,8 @@ export default function Home() {
                   }}
                 >
                   <img
-                    src="/news/military-cargo.jpg"
-                    alt="Vojni transport i logistika na pisti uoči isporuke opreme"
+                    src="/news/open-ormuz.jpg"
+                    alt="Hormuški moreuz otvoren za komercijalni saobraćaj tokom primirja"
                     className="w-full h-full object-cover block"
                     fetchPriority="high"
                     decoding="async"
@@ -253,6 +253,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Geopolitika"
+                href="/geopolitika/sad-odlazu-isporuke-oruzja-evropi-zbog-rata-sa-iranom"
+                title="SAD odlažu isporuke oružja Evropi zbog rata sa Iranom"
+                description="Sjedinjene Američke Države odlažu deo planiranih isporuka oružja evropskim saveznicima zbog pojačanih operativnih zahteva u ratu sa Iranom, potvrđuju diplomatski i bezbednosni izvori."
+                imageSrc="/news/military-cargo.jpg"
+                imageAlt="Vojni transport i logistika na pisti uoči isporuke opreme"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Naša planeta"
                 href="/nasa-planeta/spilberg-upozorava-holivud-publika-trazi-originalne-filmove"
                 title="Spilberg upozorava Holivud: publika traži originalne filmove"
@@ -281,17 +292,6 @@ export default function Home() {
                 description="Sažeti obaveštajni pregled: pomorski pritisci, digitalni nadzor i diplomatski balans u regionu Persijskog zaliva."
                 imageSrc="/news/security-world.jpg"
                 imageAlt="Globalna bezbednosna mapa i obaveštajni uvid"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/rusija-i-ukrajina-dogovorile-privremeno-primirje-za-pravoslavni-uskrs"
-                title="Rusija i Ukrajina dogovorile privremeno primirje za pravoslavni Uskrs"
-                description="Rusija i Ukrajina dogovorile su privremeni prekid vatre povodom pravoslavnog Uskrsa. Primirje je vremenski ograničeno i vezano za trajanje praznika, uz obostrane rezerve o njegovom sprovođenju na terenu."
-                imageSrc="/news/primirje-vaskrs.jpg"
-                imageAlt="Ilustracija uskršnjeg primirja u ratu između Rusije i Ukrajine."
               />
             </div>
           </FadeIn>
