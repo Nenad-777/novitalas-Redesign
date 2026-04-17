@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/sad-odlazu-isporuke-oruzja-evropi-zbog-rata-sa-iranom",
+    title: "SAD odlažu isporuke oružja Evropi zbog rata sa Iranom",
+    description:
+      "Sjedinjene Američke Države odlažu deo planiranih isporuka oružja evropskim saveznicima zbog pojačanih operativnih zahteva u ratu sa Iranom, potvrđuju diplomatski i bezbednosni izvori.",
+    imageSrc: "/news/military-cargo.jpg",
+    datePublished: "2026-04-17",
+  },
+  {
     path: "/nasa-planeta/spilberg-upozorava-holivud-publika-trazi-originalne-filmove",
     title: "Spilberg upozorava Holivud: publika traži originalne filmove",
     description:
