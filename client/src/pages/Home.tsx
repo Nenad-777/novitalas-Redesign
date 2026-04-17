@@ -182,7 +182,7 @@ export default function Home() {
              ====================== */}
           <FadeIn className="mb-10">
             <article>
-              <span className="kicker block mb-2">Naša planeta</span>
+              <span className="kicker block mb-2">Geopolitika</span>
 
               <h2
                 className="mt-2 mb-3 text-[32px] md:text-[46px] font-bold leading-[1.1]"
@@ -193,11 +193,11 @@ export default function Home() {
                 }}
               >
                 <Link
-                  href="/nasa-planeta/spilberg-upozorava-holivud-publika-trazi-originalne-filmove"
+                  href="/geopolitika/sad-odlazu-isporuke-oruzja-evropi-zbog-rata-sa-iranom"
                   className="headline-link"
                   style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                 >
-                  Spilberg upozorava Holivud: publika traži originalne filmove
+                  SAD odlažu isporuke oružja Evropi zbog rata sa Iranom
                 </Link>
               </h2>
 
@@ -208,11 +208,11 @@ export default function Home() {
                   color: isDark ? "#9a978f" : "#555",
                 }}
               >
-                Stiven Spilberg poručio je na CinemaConu da Holivud mora da preispita oslanjanje na franšize i nastavke, jer publika sve više traži originalne priče.
+                Sjedinjene Američke Države odlažu deo planiranih isporuka oružja evropskim saveznicima zbog pojačanih operativnih zahteva u ratu sa Iranom, potvrđuju diplomatski i bezbednosni izvori.
               </p>
 
               <Link
-                href="/nasa-planeta/spilberg-upozorava-holivud-publika-trazi-originalne-filmove"
+                href="/geopolitika/sad-odlazu-isporuke-oruzja-evropi-zbog-rata-sa-iranom"
                 className="block no-underline"
               >
                 <div
@@ -222,8 +222,8 @@ export default function Home() {
                   }}
                 >
                   <img
-                    src="/news/spilberg.jpg"
-                    alt="Stiven Spilberg na događaju CinemaCon"
+                    src="/news/military-cargo.jpg"
+                    alt="Vojni transport i logistika na pisti uoči isporuke opreme"
                     className="w-full h-full object-cover block"
                     fetchPriority="high"
                     decoding="async"
@@ -253,6 +253,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Naša planeta"
+                href="/nasa-planeta/spilberg-upozorava-holivud-publika-trazi-originalne-filmove"
+                title="Spilberg upozorava Holivud: publika traži originalne filmove"
+                description="Stiven Spilberg poručio je na CinemaConu da Holivud mora da preispita oslanjanje na franšize i nastavke, jer publika sve više traži originalne priče."
+                imageSrc="/news/spilberg.jpg"
+                imageAlt="Stiven Spilberg na događaju CinemaCon"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Geopolitika"
                 href="/geopolitika/pomeranje-tezista-orban-evropa"
                 title="POMERANJE TEŽIŠTA: Šta poraz Orbana znači za Evropu i svet"
@@ -281,17 +292,6 @@ export default function Home() {
                 description="Rusija i Ukrajina dogovorile su privremeni prekid vatre povodom pravoslavnog Uskrsa. Primirje je vremenski ograničeno i vezano za trajanje praznika, uz obostrane rezerve o njegovom sprovođenju na terenu."
                 imageSrc="/news/primirje-vaskrs.jpg"
                 imageAlt="Ilustracija uskršnjeg primirja u ratu između Rusije i Ukrajine."
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Naša planeta"
-                href="/nasa-planeta/artemis-ii-splashdown"
-                title="Artemis II uspešno okončan: Orion se vratio na Zemlju nakon istorijskog leta oko Meseca"
-                description="Kapsula sa četvoročlanom posadom bezbedno je sletela u Tihi okean, završivši prvu ljudsku misiju ka Mesecu posle više od 50 godina."
-                imageSrc="/news/artemis-landing.jpg"
-                imageAlt="Letelica Orion tokom povratka na Zemlju — misija Artemis II"
               />
             </div>
           </FadeIn>
