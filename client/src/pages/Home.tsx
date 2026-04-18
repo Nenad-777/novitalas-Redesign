@@ -255,10 +255,10 @@ export default function Home() {
               <SmallArticleCard
                 category="Geopolitika"
                 href="/geopolitika/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja"
-                title="Iran otvorio Hormuški moreuz za komercijalni saobraćaj tokom primirja"
-                description="Teheran je saopštio da je Hormuški moreuz otvoren za komercijalni saobraćaj tokom trajanja primirja, čime je privremeno smanjena bojazan od novog udara na globalno tržište energije."
+                title="Iran otvorio Ormuski moreuz za komercijalni saobraćaj tokom primirja"
+                description="Teheran je saopštio da je Ormuski moreuz otvoren za komercijalni saobraćaj tokom trajanja primirja, čime je privremeno smanjena bojazan od novog udara na globalno tržište energije."
                 imageSrc="/news/open-ormuz.jpg"
-                imageAlt="Hormuški moreuz otvoren za komercijalni saobraćaj tokom primirja"
+                imageAlt="Ormuski moreuz otvoren za komercijalni saobraćaj tokom primirja"
               />
 
               <hr className="editorial-divider" />

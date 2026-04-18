@@ -152,9 +152,9 @@ export const articleMeta: ArticleStaticMeta[] = [
   },
   {
     path: "/geopolitika/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja",
-    title: "Iran otvorio Hormuški moreuz za komercijalni saobraćaj tokom primirja",
+    title: "Iran otvorio Ormuski moreuz za komercijalni saobraćaj tokom primirja",
     description:
-      "Teheran je saopštio da je Hormuški moreuz otvoren za komercijalni saobraćaj tokom trajanja primirja, čime je privremeno smanjena bojazan od novog udara na globalno tržište energije.",
+      "Teheran je saopštio da je Ormuski moreuz otvoren za komercijalni saobraćaj tokom trajanja primirja, čime je privremeno smanjena bojazan od novog udara na globalno tržište energije.",
     imageSrc: "/news/open-ormuz.jpg",
     datePublished: "2026-04-17",
   },
