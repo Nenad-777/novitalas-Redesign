@@ -193,11 +193,11 @@ export default function Home() {
                 }}
               >
                 <Link
-                  href="/geopolitika/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja"
+                  href="/geopolitika/iran-zatvara-ormuski-moreuz-svet-ulazi-u-energetsku-neizvesnost"
                   className="headline-link"
                   style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                 >
-                  Iran otvorio Hormuški moreuz za komercijalni saobraćaj tokom primirja
+                  Iran zatvara Ormuski moreuz: svet ulazi u energetsku neizvesnost
                 </Link>
               </h2>
 
@@ -208,11 +208,11 @@ export default function Home() {
                   color: isDark ? "#9a978f" : "#555",
                 }}
               >
-                Teheran je saopštio da je Hormuški moreuz otvoren za komercijalni saobraćaj tokom trajanja primirja, čime je privremeno smanjena bojazan od novog udara na globalno tržište energije.
+                Kontrola nad ključnim pomorskim pravcem postaje instrument političkog pritiska u trenutku globalnih tenzija.
               </p>
 
               <Link
-                href="/geopolitika/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja"
+                href="/geopolitika/iran-zatvara-ormuski-moreuz-svet-ulazi-u-energetsku-neizvesnost"
                 className="block no-underline"
               >
                 <div
@@ -222,8 +222,8 @@ export default function Home() {
                   }}
                 >
                   <img
-                    src="/news/open-ormuz.jpg"
-                    alt="Hormuški moreuz otvoren za komercijalni saobraćaj tokom primirja"
+                    src="/news/closed-again.jpg"
+                    alt="Ormuski moreuz pod pojačanom vojnom kontrolom"
                     className="w-full h-full object-cover block"
                     fetchPriority="high"
                     decoding="async"
@@ -236,7 +236,7 @@ export default function Home() {
                     color: isDark ? "#7a7872" : "#777",
                   }}
                 >
-                  Novi Talas / ilustracija
+                  NOVI TALAS / ilustracija
                 </p>
               </Link>
             </article>
@@ -252,6 +252,17 @@ export default function Home() {
              ====================== */}
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
+              <SmallArticleCard
+                category="Geopolitika"
+                href="/geopolitika/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja"
+                title="Iran otvorio Hormuški moreuz za komercijalni saobraćaj tokom primirja"
+                description="Teheran je saopštio da je Hormuški moreuz otvoren za komercijalni saobraćaj tokom trajanja primirja, čime je privremeno smanjena bojazan od novog udara na globalno tržište energije."
+                imageSrc="/news/open-ormuz.jpg"
+                imageAlt="Hormuški moreuz otvoren za komercijalni saobraćaj tokom primirja"
+              />
+
+              <hr className="editorial-divider" />
+
               <SmallArticleCard
                 category="Geopolitika"
                 href="/geopolitika/sad-odlazu-isporuke-oruzja-evropi-zbog-rata-sa-iranom"
@@ -281,17 +292,6 @@ export default function Home() {
                 description="Analiza političkih i geopolitičkih posledica poraza Viktora Orbana u Mađarskoj"
                 imageSrc="/news/magyar.jpg"
                 imageAlt="Viktor Orban — poraz na izborima u Mađarskoj i geopolitičke posledice"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Obaveštajni izvori"
-                href="/obavestajni-izvori/prvi-brifing"
-                title="OBAVEŠTAJNI BRIFING | 15. april 2026."
-                description="Sažeti obaveštajni pregled: pomorski pritisci, digitalni nadzor i diplomatski balans u regionu Persijskog zaliva."
-                imageSrc="/news/security-world.jpg"
-                imageAlt="Globalna bezbednosna mapa i obaveštajni uvid"
               />
             </div>
           </FadeIn>
