@@ -141,7 +141,7 @@ export default function GeopolitikaIndex() {
                 >
                   <img
                     src={IMAGES.openOrmuz}
-                    alt="Hormuški moreuz otvoren za komercijalni saobraćaj tokom primirja"
+                    alt="Ormuski moreuz otvoren za komercijalni saobraćaj tokom primirja"
                     className="w-full h-[260px] object-cover object-center block"
                     decoding="async"
                   />
@@ -154,7 +154,7 @@ export default function GeopolitikaIndex() {
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  Iran otvorio Hormuški moreuz za komercijalni saobraćaj tokom primirja
+                  Iran otvorio Ormuski moreuz za komercijalni saobraćaj tokom primirja
                 </h2>
 
                 <p
@@ -164,7 +164,7 @@ export default function GeopolitikaIndex() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  {"Teheran je saopštio da je Hormuški moreuz otvoren za komercijalni saobraćaj tokom trajanja primirja, čime je privremeno smanjena bojazan od novog udara na globalno tržište energije."}
+                  {"Teheran je saopštio da je Ormuski moreuz otvoren za komercijalni saobraćaj tokom trajanja primirja, čime je privremeno smanjena bojazan od novog udara na globalno tržište energije."}
                 </p>
 
                 <div
