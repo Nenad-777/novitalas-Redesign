@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/iran-zatvara-ormuski-moreuz-svet-ulazi-u-energetsku-neizvesnost",
+    title: "Iran zatvara Ormuski moreuz: svet ulazi u energetsku neizvesnost",
+    description:
+      "Iran je ponovo uspostavio strogu kontrolu nad Ormuskim moreuzom, jednim od najvažnijih svetskih energetskih prolaza, uz obrazloženje da Sjedinjene Američke Države nastavljaju blokadu iranskih luka.",
+    imageSrc: "/news/closed-again.jpg",
+    datePublished: "2026-04-18",
+  },
+  {
     path: "/geopolitika/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja",
     title: "Iran otvorio Hormuški moreuz za komercijalni saobraćaj tokom primirja",
     description:

@@ -20,6 +20,7 @@ import VelikeSileIKrizaUIranu from "./pages/velike-sile-i-kriza-u-iranu";
 import RezerveNafte from "./pages/rezerve-nafte";
 import FrancuskaOdbranaOrmuza from "./pages/francuska-odbrana-ormuza";
 import SadSpecijalnaOperacijaIranUranijum from "./pages/sad-specijalna-operacija-iran-uranijum";
+import IranZatvaraOrmuskiMoreuzSvetUlaziUEnergetskuNeizvesnost from "./pages/iran-zatvara-ormuski-moreuz-svet-ulazi-u-energetsku-neizvesnost";
 import IranOtvorioHormuskiMoreuzZaKomercijalniSaobracajTokomPrimirja from "./pages/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja";
 
 /* ✅ NOVA VEST — Obaveštajni izvori */
@@ -192,6 +193,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/iran-zatvara-ormuski-moreuz-svet-ulazi-u-energetsku-neizvesnost"
+          component={IranZatvaraOrmuskiMoreuzSvetUlaziUEnergetskuNeizvesnost}
+        />
+
         <Route
           path="/geopolitika/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja"
           component={IranOtvorioHormuskiMoreuzZaKomercijalniSaobracajTokomPrimirja}
