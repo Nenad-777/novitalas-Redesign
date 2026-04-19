@@ -5,7 +5,15 @@ import ShareButton from "@/components/ShareButton";
 import SeoMeta from "@/components/SeoMeta";
 import { useTheme } from "@/contexts/ThemeContext";
 
-type ArticleParagraph = string;
+type ArticleInlineImage = {
+  type: "image";
+  src: string;
+  alt: string;
+  credit?: string;
+  heightClass?: string;
+};
+
+type ArticleParagraph = string | ArticleInlineImage;
 
 const EM_DASH_REPLACEMENT = ",";
 
@@ -143,26 +151,45 @@ export default function ArticleTemplate({
           <div className="mt-8">
             {paragraphs.map((p, idx) => (
               <div key={idx}>
-                <p
-                  className={
-                    idx === 0
-                      ? // ✅ DROP CAP (prvo slovo velikoooo, magazinski)
-                        "text-[18px] md:text-[20px] leading-[1.75] first-letter:text-[64px] first-letter:font-bold first-letter:mr-2 first-letter:float-left first-letter:leading-[0.9]"
-                      : "mt-5 text-[17px] md:text-[18px] leading-[1.8]"
-                  }
-                  style={{
-                    fontFamily: "'Lora', serif",
-                    color: isDark
-                      ? idx === 0
-                        ? "#cfcac0"
-                        : "#b7b2aa"
-                      : idx === 0
-                      ? "#222"
-                      : "#333",
-                  }}
-                >
-                  {normalizeEmDashes(p)}
-                </p>
+                {typeof p === "string" ? (
+                  <p
+                    className={
+                      idx === 0
+                        ? // ✅ DROP CAP (prvo slovo velikoooo, magazinski)
+                          "text-[18px] md:text-[20px] leading-[1.75] first-letter:text-[64px] first-letter:font-bold first-letter:mr-2 first-letter:float-left first-letter:leading-[0.9]"
+                        : "mt-5 text-[17px] md:text-[18px] leading-[1.8]"
+                    }
+                    style={{
+                      fontFamily: "'Lora', serif",
+                      color: isDark
+                        ? idx === 0
+                          ? "#cfcac0"
+                          : "#b7b2aa"
+                        : idx === 0
+                        ? "#222"
+                        : "#333",
+                    }}
+                  >
+                    {normalizeEmDashes(p)}
+                  </p>
+                ) : (
+                  <div
+                    className="mt-5 border overflow-hidden"
+                    style={{
+                      borderColor: isDark ? "#2a2a2e" : "#eee",
+                      backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                    }}
+                  >
+                    <img
+                      src={p.src}
+                      alt={p.alt}
+                      className={`w-full ${p.heightClass ?? "h-[240px] md:h-[420px]"} object-cover object-center block`}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <ImageCaption credit={p.credit} />
+                  </div>
+                )}
 
                 {/* Separator između pasusa */}
                 {idx !== paragraphs.length - 1 && (

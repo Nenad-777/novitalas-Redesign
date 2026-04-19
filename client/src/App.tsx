@@ -121,6 +121,7 @@ import IzboriRezultati from "./pages/izbori-rezultati";
 import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
 import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
 import SpilbergUpozoravaHolivudPublikaTraziOriginalneFilmove from "./pages/spilberg-upozorava-holivud-publika-trazi-originalne-filmove";
+import UmetnostKojaDiseTeamlabTokio from "./pages/umetnost-koja-dise-teamlab-tokio";
 
 /* ✅ NOVA VEST — Naša planeta */
 import KoJeDobioOskara from "./pages/ko-je-dobio-oskara";
@@ -447,6 +448,10 @@ function Router() {
         <Route
           path="/nasa-planeta/spilberg-upozorava-holivud-publika-trazi-originalne-filmove"
           component={SpilbergUpozoravaHolivudPublikaTraziOriginalneFilmove}
+        />
+        <Route
+          path="/nasa-planeta/umetnost-koja-dise-teamlab-tokio"
+          component={UmetnostKojaDiseTeamlabTokio}
         />
 
         <Route

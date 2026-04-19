@@ -10,6 +10,15 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/nasa-planeta/umetnost-koja-dise-teamlab-tokio",
+    img: "/news/teamlab1.jpg",
+    alt: "Interaktivna instalacija izložbe teamLab Planets u Tokiju",
+    title:
+      "Umetnost koja diše: izložba u Tokiju koja briše granicu između čoveka i prirode",
+    description:
+      "U Tokiju, u četvrti Tojosu, izložba teamLab Planets menja način na koji posmatramo umetnost, prirodu i odnos čoveka prema prostoru.",
+  },
+  {
     href: "/nasa-planeta/spilberg-upozorava-holivud-publika-trazi-originalne-filmove",
     img: "/news/spilberg.jpg",
     alt: "Stiven Spilberg na događaju CinemaCon",

@@ -175,6 +175,15 @@ export const articleMeta: ArticleStaticMeta[] = [
     datePublished: "2026-04-16",
   },
   {
+    path: "/nasa-planeta/umetnost-koja-dise-teamlab-tokio",
+    title:
+      "Umetnost koja diše: izložba u Tokiju koja briše granicu između čoveka i prirode",
+    description:
+      "U Tokiju, u četvrti Tojosu, izložba teamLab Planets menja način na koji posmatramo umetnost, prirodu i odnos čoveka prema prostoru.",
+    imageSrc: "/news/teamlab1.jpg",
+    datePublished: "2026-04-18",
+  },
+  {
     path: "/geopolitika/pomeranje-tezista-orban-evropa",
     title:
       "POMERANJE TEŽIŠTA: Šta poraz Orbana znači za Evropu i svet",

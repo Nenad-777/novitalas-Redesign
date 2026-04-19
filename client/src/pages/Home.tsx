@@ -182,7 +182,7 @@ export default function Home() {
              ====================== */}
           <FadeIn className="mb-10">
             <article>
-              <span className="kicker block mb-2">Geopolitika</span>
+              <span className="kicker block mb-2">Naša planeta</span>
 
               <h2
                 className="mt-2 mb-3 text-[32px] md:text-[46px] font-bold leading-[1.1]"
@@ -193,11 +193,11 @@ export default function Home() {
                 }}
               >
                 <Link
-                  href="/geopolitika/iran-zatvara-ormuski-moreuz-svet-ulazi-u-energetsku-neizvesnost"
+                  href="/nasa-planeta/umetnost-koja-dise-teamlab-tokio"
                   className="headline-link"
                   style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                 >
-                  Iran zatvara Ormuski moreuz: svet ulazi u energetsku neizvesnost
+                  Umetnost koja diše: izložba u Tokiju koja briše granicu između čoveka i prirode
                 </Link>
               </h2>
 
@@ -208,11 +208,11 @@ export default function Home() {
                   color: isDark ? "#9a978f" : "#555",
                 }}
               >
-                Kontrola nad ključnim pomorskim pravcem postaje instrument političkog pritiska u trenutku globalnih tenzija.
+                U Tokiju, u četvrti Tojosu, izložba teamLab Planets menja način na koji posmatramo umetnost, prirodu i odnos čoveka prema prostoru.
               </p>
 
               <Link
-                href="/geopolitika/iran-zatvara-ormuski-moreuz-svet-ulazi-u-energetsku-neizvesnost"
+                href="/nasa-planeta/umetnost-koja-dise-teamlab-tokio"
                 className="block no-underline"
               >
                 <div
@@ -222,8 +222,8 @@ export default function Home() {
                   }}
                 >
                   <img
-                    src="/news/closed-again.jpg"
-                    alt="Ormuski moreuz pod pojačanom vojnom kontrolom"
+                    src="/news/teamlab1.jpg"
+                    alt="Interaktivna instalacija izložbe teamLab Planets u Tokiju"
                     className="w-full h-full object-cover block"
                     fetchPriority="high"
                     decoding="async"
@@ -254,6 +254,17 @@ export default function Home() {
             <div className="flex flex-col gap-6">
               <SmallArticleCard
                 category="Geopolitika"
+                href="/geopolitika/iran-zatvara-ormuski-moreuz-svet-ulazi-u-energetsku-neizvesnost"
+                title="Iran zatvara Ormuski moreuz: svet ulazi u energetsku neizvesnost"
+                description="Kontrola nad ključnim pomorskim pravcem postaje instrument političkog pritiska u trenutku globalnih tenzija."
+                imageSrc="/news/closed-again.jpg"
+                imageAlt="Ormuski moreuz pod pojačanom vojnom kontrolom"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
+                category="Geopolitika"
                 href="/geopolitika/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja"
                 title="Iran otvorio Ormuski moreuz za komercijalni saobraćaj tokom primirja"
                 description="Teheran je saopštio da je Ormuski moreuz otvoren za komercijalni saobraćaj tokom trajanja primirja, čime je privremeno smanjena bojazan od novog udara na globalno tržište energije."
@@ -281,17 +292,6 @@ export default function Home() {
                 description="Stiven Spilberg poručio je na CinemaConu da Holivud mora da preispita oslanjanje na franšize i nastavke, jer publika sve više traži originalne priče."
                 imageSrc="/news/spilberg.jpg"
                 imageAlt="Stiven Spilberg na događaju CinemaCon"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/pomeranje-tezista-orban-evropa"
-                title="POMERANJE TEŽIŠTA: Šta poraz Orbana znači za Evropu i svet"
-                description="Analiza političkih i geopolitičkih posledica poraza Viktora Orbana u Mađarskoj"
-                imageSrc="/news/magyar.jpg"
-                imageAlt="Viktor Orban — poraz na izborima u Mađarskoj i geopolitičke posledice"
               />
             </div>
           </FadeIn>
