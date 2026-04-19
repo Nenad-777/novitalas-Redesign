@@ -173,7 +173,7 @@ export default function ArticleTemplate({
                     {normalizeEmDashes(p)}
                   </p>
                 ) : (
-                  <div
+                  <figure
                     className="mt-5 border overflow-hidden"
                     style={{
                       borderColor: isDark ? "#2a2a2e" : "#eee",
@@ -187,8 +187,18 @@ export default function ArticleTemplate({
                       loading="lazy"
                       decoding="async"
                     />
-                    <ImageCaption credit={p.credit} />
-                  </div>
+                    {p.credit ? (
+                      <figcaption
+                        className="mt-[6px] px-2 pb-2 text-sm"
+                        style={{
+                          fontFamily: "'Source Sans 3', sans-serif",
+                          color: isDark ? "#6b6760" : "#777",
+                        }}
+                      >
+                        {p.credit}
+                      </figcaption>
+                    ) : null}
+                  </figure>
                 )}
 
                 {/* Separator između pasusa */}
