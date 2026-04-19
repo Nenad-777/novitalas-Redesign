@@ -265,6 +265,17 @@ export default function Home() {
             <div className="flex flex-col gap-6">
               <SmallArticleCard
                 category="Geopolitika"
+                href="/geopolitika/bugarska-na-raskrsnici-rumen-radev-vodi-prema-izlaznim-anketama"
+                title="Bugarska na raskrsnici: Rumen Radev vodi prema izlaznim anketama"
+                description="Rezultati ukazuju na moguće pomeranje spoljnopolitičkog pravca zemlje u trenutku pojačanih tenzija između Zapada i Rusije."
+                imageSrc="/news/bulgaria-elections.jpg"
+                imageAlt="Predsednički izbori u Bugarskoj"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
+                category="Geopolitika"
                 href="/geopolitika/iran-zatvara-ormuski-moreuz-svet-ulazi-u-energetsku-neizvesnost"
                 title="Iran zatvara Ormuski moreuz: svet ulazi u energetsku neizvesnost"
                 description="Kontrola nad ključnim pomorskim pravcem postaje instrument političkog pritiska u trenutku globalnih tenzija."
@@ -294,16 +305,6 @@ export default function Home() {
                 imageAlt="Vojni transport i logistika na pisti uoči isporuke opreme"
               />
 
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Naša planeta"
-                href="/nasa-planeta/spilberg-upozorava-holivud-publika-trazi-originalne-filmove"
-                title="Spilberg upozorava Holivud: publika traži originalne filmove"
-                description="Stiven Spilberg poručio je na CinemaConu da Holivud mora da preispita oslanjanje na franšize i nastavke, jer publika sve više traži originalne priče."
-                imageSrc="/news/spilberg.jpg"
-                imageAlt="Stiven Spilberg na događaju CinemaCon"
-              />
             </div>
           </FadeIn>
 

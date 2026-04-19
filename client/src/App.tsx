@@ -22,6 +22,7 @@ import FrancuskaOdbranaOrmuza from "./pages/francuska-odbrana-ormuza";
 import SadSpecijalnaOperacijaIranUranijum from "./pages/sad-specijalna-operacija-iran-uranijum";
 import IranZatvaraOrmuskiMoreuzSvetUlaziUEnergetskuNeizvesnost from "./pages/iran-zatvara-ormuski-moreuz-svet-ulazi-u-energetsku-neizvesnost";
 import IranOtvorioHormuskiMoreuzZaKomercijalniSaobracajTokomPrimirja from "./pages/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja";
+import BugarskaNaRaskrsniciRumenRadevVodiPremaIzlaznimAnketama from "./pages/bugarska-na-raskrsnici-rumen-radev-vodi-prema-izlaznim-anketama";
 
 /* ✅ NOVA VEST — Obaveštajni izvori */
 import NemackaCurenjeInformacija from "./pages/nemacka-curenje-informacija";
@@ -197,6 +198,11 @@ function Router() {
         <Route
           path="/geopolitika/iran-zatvara-ormuski-moreuz-svet-ulazi-u-energetsku-neizvesnost"
           component={IranZatvaraOrmuskiMoreuzSvetUlaziUEnergetskuNeizvesnost}
+        />
+
+        <Route
+          path="/geopolitika/bugarska-na-raskrsnici-rumen-radev-vodi-prema-izlaznim-anketama"
+          component={BugarskaNaRaskrsniciRumenRadevVodiPremaIzlaznimAnketama}
         />
 
         <Route

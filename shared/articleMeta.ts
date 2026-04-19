@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/bugarska-na-raskrsnici-rumen-radev-vodi-prema-izlaznim-anketama",
+    title: "Bugarska na raskrsnici: Rumen Radev vodi prema izlaznim anketama",
+    description:
+      "Prema izlaznim anketama, aktuelni predsednik Bugarske, Rumen Radev, ostvario je značajnu prednost na izborima, potvrđujući snažnu podršku biračkog tela.",
+    imageSrc: "/news/bulgaria-elections.jpg",
+    datePublished: "2026-04-19",
+  },
+  {
     path: "/geopolitika/iran-zatvara-ormuski-moreuz-svet-ulazi-u-energetsku-neizvesnost",
     title: "Iran zatvara Ormuski moreuz: svet ulazi u energetsku neizvesnost",
     description:
