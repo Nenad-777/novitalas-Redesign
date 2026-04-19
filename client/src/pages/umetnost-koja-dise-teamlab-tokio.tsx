@@ -10,6 +10,7 @@ const PARAGRAPHS = [
     type: "image" as const,
     src: "/news/teamlab2.jpg",
     alt: "Posetioci prolaze kroz interaktivnu svetlosnu instalaciju u teamLab Planets muzeju",
+    credit: "Foto: Unsplash",
   },
   "U jednoj prostoriji posetioci hodaju kroz vodu do članaka, dok se oko njih projektuju svetlosni oblici koji reaguju na svaki korak. U drugoj ulaze u prostor nalik šumi, gde digitalno cveće raste, nestaje i menja se u zavisnosti od prisustva ljudi. Negde dalje, ogledala brišu granice prostora, pa više nije jasno gde se slika završava, a gde počinje telo.",
   "Sve je povezano jednim principom: umetnost ne postoji bez posetioca. Ona se dovršava tek u susretu.",
@@ -19,6 +20,7 @@ const PARAGRAPHS = [
     type: "image" as const,
     src: "/news/teamlab3.jpg",
     alt: "Digitalne instalacije i refleksije koje brišu granicu između prostora i tela",
+    credit: "Foto: Unsplash",
   },
   "Na izlazu nema objašnjenja. Nema zaključka. Ali ostaje utisak da granica između prirodnog i veštačkog više nije tamo gde smo mislili da jeste.",
   "I možda je to ono što ove izložbe rade najbolje: ne nude novu sliku sveta, već menjaju način na koji u njemu učestvujemo.",
@@ -34,6 +36,7 @@ export default function UmetnostKojaDiseTeamlabTokio() {
       deck="U Tokiju, u četvrti Tojosu, izložba teamLab Planets menja način na koji posmatramo umetnost, prirodu i odnos čoveka prema prostoru."
       imageSrc={IMAGE_SRC}
       imageAlt="Interaktivna instalacija izložbe teamLab Planets u Tokiju"
+      imageCredit="Foto: Unsplash"
       paragraphs={PARAGRAPHS}
       backHref="/nasa-planeta"
       backLabel="← Nazad na Našu planetu"
