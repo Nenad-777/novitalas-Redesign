@@ -8,11 +8,21 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
-const ARTICLES = [
+type NasaPlanetaArticle = {
+  href: string;
+  img: string;
+  alt: string;
+  imageCredit?: string;
+  title: string;
+  description: string;
+};
+
+const ARTICLES: NasaPlanetaArticle[] = [
   {
     href: "/nasa-planeta/umetnost-koja-dise-teamlab-tokio",
     img: "/news/teamlab1.jpg",
     alt: "Interaktivna instalacija izložbe teamLab Planets u Tokiju",
+    imageCredit: "Foto: Unsplash",
     title:
       "Umetnost koja diše: izložba u Tokiju koja briše granicu između čoveka i prirode",
     description:
@@ -221,6 +231,15 @@ export default function NasaPlanetaIndex() {
                   decoding="async"
                 />
               </div>
+              <p
+                className="mt-2 text-[13px]"
+                style={{
+                  fontFamily: "'Source Sans 3', sans-serif",
+                  color: isDark ? "#7a7872" : "#777",
+                }}
+              >
+                {hero.imageCredit || "Foto: Arhiva"}
+              </p>
 
               <div className="max-w-[760px]">
                 <div
