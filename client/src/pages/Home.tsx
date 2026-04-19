@@ -13,14 +13,14 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/nasa-planeta/umetnost-koja-dise-teamlab-tokio",
+  href: "/geopolitika/bugarska-na-raskrsnici-rumen-radev-vodi-prema-izlaznim-anketama",
   title:
-    "Umetnost koja diše: izložba u Tokiju koja briše granicu između čoveka i prirode",
+    "Bugarska na raskrsnici: Rumen Radev vodi prema izlaznim anketama",
   description:
-    "U Tokiju, u četvrti Tojosu, izložba teamLab Planets menja način na koji posmatramo umetnost, prirodu i odnos čoveka prema prostoru.",
-  imageSrc: "/news/teamlab1.jpg",
-  imageAlt: "Interaktivna instalacija izložbe teamLab Planets u Tokiju",
-  imageCredit: "Foto: Unsplash",
+    "Rezultati ukazuju na moguće pomeranje spoljnopolitičkog pravca zemlje u trenutku pojačanih tenzija između Zapada i Rusije.",
+  imageSrc: "/news/bulgaria-elections.jpg",
+  imageAlt: "Predsednički izbori u Bugarskoj",
+  imageCredit: "NOVI TALAS / ilustracija",
 };
 
 // Simple fade-in on scroll hook
@@ -193,7 +193,7 @@ export default function Home() {
              ====================== */}
           <FadeIn className="mb-10">
             <article>
-              <span className="kicker block mb-2">Naša planeta</span>
+              <span className="kicker block mb-2">Geopolitika</span>
 
               <h2
                 className="mt-2 mb-3 text-[32px] md:text-[46px] font-bold leading-[1.1]"
@@ -264,12 +264,12 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/bugarska-na-raskrsnici-rumen-radev-vodi-prema-izlaznim-anketama"
-                title="Bugarska na raskrsnici: Rumen Radev vodi prema izlaznim anketama"
-                description="Rezultati ukazuju na moguće pomeranje spoljnopolitičkog pravca zemlje u trenutku pojačanih tenzija između Zapada i Rusije."
-                imageSrc="/news/bulgaria-elections.jpg"
-                imageAlt="Predsednički izbori u Bugarskoj"
+                category="Naša planeta"
+                href="/nasa-planeta/umetnost-koja-dise-teamlab-tokio"
+                title="Umetnost koja diše: izložba u Tokiju koja briše granicu između čoveka i prirode"
+                description="U Tokiju, u četvrti Tojosu, izložba teamLab Planets menja način na koji posmatramo umetnost, prirodu i odnos čoveka prema prostoru."
+                imageSrc="/news/teamlab1.jpg"
+                imageAlt="Interaktivna instalacija izložbe teamLab Planets u Tokiju"
               />
 
               <hr className="editorial-divider" />
