@@ -12,6 +12,17 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
+const HERO_ARTICLE = {
+  href: "/nasa-planeta/umetnost-koja-dise-teamlab-tokio",
+  title:
+    "Umetnost koja diše: izložba u Tokiju koja briše granicu između čoveka i prirode",
+  description:
+    "U Tokiju, u četvrti Tojosu, izložba teamLab Planets menja način na koji posmatramo umetnost, prirodu i odnos čoveka prema prostoru.",
+  imageSrc: "/news/teamlab1.jpg",
+  imageAlt: "Interaktivna instalacija izložbe teamLab Planets u Tokiju",
+  imageCredit: "Foto: Unsplash",
+};
+
 // Simple fade-in on scroll hook
 function useFadeIn() {
   const ref = useRef<HTMLDivElement>(null);
@@ -193,11 +204,11 @@ export default function Home() {
                 }}
               >
                 <Link
-                  href="/nasa-planeta/umetnost-koja-dise-teamlab-tokio"
+                  href={HERO_ARTICLE.href}
                   className="headline-link"
                   style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                 >
-                  Umetnost koja diše: izložba u Tokiju koja briše granicu između čoveka i prirode
+                  {HERO_ARTICLE.title}
                 </Link>
               </h2>
 
@@ -208,11 +219,11 @@ export default function Home() {
                   color: isDark ? "#9a978f" : "#555",
                 }}
               >
-                U Tokiju, u četvrti Tojosu, izložba teamLab Planets menja način na koji posmatramo umetnost, prirodu i odnos čoveka prema prostoru.
+                {HERO_ARTICLE.description}
               </p>
 
               <Link
-                href="/nasa-planeta/umetnost-koja-dise-teamlab-tokio"
+                href={HERO_ARTICLE.href}
                 className="block no-underline"
               >
                 <div
@@ -222,8 +233,8 @@ export default function Home() {
                   }}
                 >
                   <img
-                    src="/news/teamlab1.jpg"
-                    alt="Interaktivna instalacija izložbe teamLab Planets u Tokiju"
+                    src={HERO_ARTICLE.imageSrc}
+                    alt={HERO_ARTICLE.imageAlt}
                     className="w-full h-full object-cover block"
                     fetchPriority="high"
                     decoding="async"
@@ -236,7 +247,7 @@ export default function Home() {
                     color: isDark ? "#7a7872" : "#777",
                   }}
                 >
-                  NOVI TALAS / ilustracija
+                  {HERO_ARTICLE.imageCredit}
                 </p>
               </Link>
             </article>
