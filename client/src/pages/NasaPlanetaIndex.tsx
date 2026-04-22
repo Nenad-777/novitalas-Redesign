@@ -19,6 +19,15 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/na-marsu-otkrivene-molekule-povezane-sa-poreklom-zivota",
+    img: "/news/mars-life.jpg",
+    alt: "Površina Marsa sa tragovima organskih jedinjenja",
+    imageCredit: "NOVI TALAS / ilustracija",
+    title: "Na Marsu otkrivene molekule povezane sa poreklom života",
+    description:
+      "Rover Curiosity identifikovao je kompleksne organske molekule koji otvaraju nova pitanja o mogućem nastanku života na Crvenoj planeti.",
+  },
+  {
     href: "/nasa-planeta/umetnost-koja-dise-teamlab-tokio",
     img: "/news/teamlab1.jpg",
     alt: "Interaktivna instalacija izložbe teamLab Planets u Tokiju",
