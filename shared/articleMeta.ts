@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/novac-kao-uslov-trenutak-u-kojem-se-odlucuje-pravac-srbije",
+    title: "Novac kao uslov: trenutak u kojem se odlučuje pravac Srbije",
+    description:
+      "Evropska unija prvi put jasno povezuje finansijsku podršku sa političkim odlukama, otvarajući pitanje daljeg kursa Srbije.",
+    imageSrc: "/news/eu-uslov.jpg",
+    datePublished: "2026-04-22",
+  },
+  {
     path: "/geopolitika/bugarska-na-raskrsnici-rumen-radev-vodi-prema-izlaznim-anketama",
     title: "Bugarska na raskrsnici: Rumen Radev vodi prema izlaznim anketama",
     description:

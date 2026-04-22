@@ -13,13 +13,13 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/bugarska-na-raskrsnici-rumen-radev-vodi-prema-izlaznim-anketama",
+  href: "/geopolitika/novac-kao-uslov-trenutak-u-kojem-se-odlucuje-pravac-srbije",
   title:
-    "Bugarska na raskrsnici: Rumen Radev vodi prema izlaznim anketama",
+    "Novac kao uslov: trenutak u kojem se odlučuje pravac Srbije",
   description:
-    "Rezultati ukazuju na moguće pomeranje spoljnopolitičkog pravca zemlje u trenutku pojačanih tenzija između Zapada i Rusije.",
-  imageSrc: "/news/bulgaria-elections.jpg",
-  imageAlt: "Predsednički izbori u Bugarskoj",
+    "Evropska unija prvi put jasno povezuje finansijsku podršku sa političkim odlukama, otvarajući pitanje daljeg kursa Srbije.",
+  imageSrc: "/news/eu-uslov.jpg",
+  imageAlt: "Evropska unija i finansijski uslovi za političke odluke Srbije",
   imageCredit: "NOVI TALAS / ilustracija",
 };
 
@@ -264,6 +264,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Geopolitika"
+                href="/geopolitika/bugarska-na-raskrsnici-rumen-radev-vodi-prema-izlaznim-anketama"
+                title="Bugarska na raskrsnici: Rumen Radev vodi prema izlaznim anketama"
+                description="Rezultati ukazuju na moguće pomeranje spoljnopolitičkog pravca zemlje u trenutku pojačanih tenzija između Zapada i Rusije."
+                imageSrc="/news/bulgaria-elections.jpg"
+                imageAlt="Predsednički izbori u Bugarskoj"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Naša planeta"
                 href="/nasa-planeta/umetnost-koja-dise-teamlab-tokio"
                 title="Umetnost koja diše: izložba u Tokiju koja briše granicu između čoveka i prirode"
@@ -293,18 +304,6 @@ export default function Home() {
                 imageSrc="/news/open-ormuz.jpg"
                 imageAlt="Ormuski moreuz otvoren za komercijalni saobraćaj tokom primirja"
               />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/sad-odlazu-isporuke-oruzja-evropi-zbog-rata-sa-iranom"
-                title="SAD odlažu isporuke oružja Evropi zbog rata sa Iranom"
-                description="Sjedinjene Američke Države odlažu deo planiranih isporuka oružja evropskim saveznicima zbog pojačanih operativnih zahteva u ratu sa Iranom, potvrđuju diplomatski i bezbednosni izvori."
-                imageSrc="/news/military-cargo.jpg"
-                imageAlt="Vojni transport i logistika na pisti uoči isporuke opreme"
-              />
-
             </div>
           </FadeIn>
 

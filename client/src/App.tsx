@@ -23,6 +23,7 @@ import SadSpecijalnaOperacijaIranUranijum from "./pages/sad-specijalna-operacija
 import IranZatvaraOrmuskiMoreuzSvetUlaziUEnergetskuNeizvesnost from "./pages/iran-zatvara-ormuski-moreuz-svet-ulazi-u-energetsku-neizvesnost";
 import IranOtvorioHormuskiMoreuzZaKomercijalniSaobracajTokomPrimirja from "./pages/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja";
 import BugarskaNaRaskrsniciRumenRadevVodiPremaIzlaznimAnketama from "./pages/bugarska-na-raskrsnici-rumen-radev-vodi-prema-izlaznim-anketama";
+import NovacKaoUslovTrenutakUKojemSeOdlucujePravacSrbije from "./pages/novac-kao-uslov-trenutak-u-kojem-se-odlucuje-pravac-srbije";
 
 /* ✅ NOVA VEST — Obaveštajni izvori */
 import NemackaCurenjeInformacija from "./pages/nemacka-curenje-informacija";
@@ -203,6 +204,11 @@ function Router() {
         <Route
           path="/geopolitika/bugarska-na-raskrsnici-rumen-radev-vodi-prema-izlaznim-anketama"
           component={BugarskaNaRaskrsniciRumenRadevVodiPremaIzlaznimAnketama}
+        />
+
+        <Route
+          path="/geopolitika/novac-kao-uslov-trenutak-u-kojem-se-odlucuje-pravac-srbije"
+          component={NovacKaoUslovTrenutakUKojemSeOdlucujePravacSrbije}
         />
 
         <Route
