@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/na-marsu-otkrivene-molekule-povezane-sa-poreklom-zivota",
+    title: "Na Marsu otkrivene molekule povezane sa poreklom života",
+    description:
+      "Rover Curiosity identifikovao je kompleksne organske molekule koji otvaraju nova pitanja o mogućem nastanku života na Crvenoj planeti.",
+    imageSrc: "/news/mars-life.jpg",
+    datePublished: "2026-04-22",
+  },
+  {
     path: "/geopolitika/novac-kao-uslov-trenutak-u-kojem-se-odlucuje-pravac-srbije",
     title: "Novac kao uslov: trenutak u kojem se odlučuje pravac Srbije",
     description:

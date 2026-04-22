@@ -13,13 +13,12 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/novac-kao-uslov-trenutak-u-kojem-se-odlucuje-pravac-srbije",
-  title:
-    "Novac kao uslov: trenutak u kojem se odlučuje pravac Srbije",
+  href: "/nasa-planeta/na-marsu-otkrivene-molekule-povezane-sa-poreklom-zivota",
+  title: "Na Marsu otkrivene molekule povezane sa poreklom života",
   description:
-    "Evropska unija prvi put jasno povezuje finansijsku podršku sa političkim odlukama, otvarajući pitanje daljeg kursa Srbije.",
-  imageSrc: "/news/eu-uslov.jpg",
-  imageAlt: "Evropska unija i finansijski uslovi za političke odluke Srbije",
+    "Rover Curiosity identifikovao je kompleksne organske molekule koji otvaraju nova pitanja o mogućem nastanku života na Crvenoj planeti.",
+  imageSrc: "/news/mars-life.jpg",
+  imageAlt: "Površina Marsa sa tragovima organskih jedinjenja",
   imageCredit: "NOVI TALAS / ilustracija",
 };
 
@@ -193,7 +192,7 @@ export default function Home() {
              ====================== */}
           <FadeIn className="mb-10">
             <article>
-              <span className="kicker block mb-2">Geopolitika</span>
+              <span className="kicker block mb-2">Naša planeta</span>
 
               <h2
                 className="mt-2 mb-3 text-[32px] md:text-[46px] font-bold leading-[1.1]"
@@ -265,6 +264,17 @@ export default function Home() {
             <div className="flex flex-col gap-6">
               <SmallArticleCard
                 category="Geopolitika"
+                href="/geopolitika/novac-kao-uslov-trenutak-u-kojem-se-odlucuje-pravac-srbije"
+                title="Novac kao uslov: trenutak u kojem se odlučuje pravac Srbije"
+                description="Evropska unija prvi put jasno povezuje finansijsku podršku sa političkim odlukama, otvarajući pitanje daljeg kursa Srbije."
+                imageSrc="/news/eu-uslov.jpg"
+                imageAlt="Evropska unija i finansijski uslovi za političke odluke Srbije"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
+                category="Geopolitika"
                 href="/geopolitika/bugarska-na-raskrsnici-rumen-radev-vodi-prema-izlaznim-anketama"
                 title="Bugarska na raskrsnici: Rumen Radev vodi prema izlaznim anketama"
                 description="Rezultati ukazuju na moguće pomeranje spoljnopolitičkog pravca zemlje u trenutku pojačanih tenzija između Zapada i Rusije."
@@ -292,17 +302,6 @@ export default function Home() {
                 description="Kontrola nad ključnim pomorskim pravcem postaje instrument političkog pritiska u trenutku globalnih tenzija."
                 imageSrc="/news/closed-again.jpg"
                 imageAlt="Ormuski moreuz pod pojačanom vojnom kontrolom"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja"
-                title="Iran otvorio Ormuski moreuz za komercijalni saobraćaj tokom primirja"
-                description="Teheran je saopštio da je Ormuski moreuz otvoren za komercijalni saobraćaj tokom trajanja primirja, čime je privremeno smanjena bojazan od novog udara na globalno tržište energije."
-                imageSrc="/news/open-ormuz.jpg"
-                imageAlt="Ormuski moreuz otvoren za komercijalni saobraćaj tokom primirja"
               />
             </div>
           </FadeIn>
