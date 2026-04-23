@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/nato-pod-pritiskom-od-saveza-ravnopravnih-ka-sistemu-uslovljene-lojalnosti",
+    title: "NATO pod pritiskom: od saveza ravnopravnih ka sistemu uslovljene lojalnosti",
+    description:
+      "U Vašingtonu se sve otvorenije razmatra diferenciranje saveznika prema političkoj i vojnoj usklađenosti sa američkim prioritetima.",
+    imageSrc: "/news/Nato-new-relations.jpg",
+    datePublished: "2026-04-23",
+  },
+  {
     path: "/nasa-planeta/na-marsu-otkrivene-molekule-povezane-sa-poreklom-zivota",
     title: "Na Marsu otkrivene molekule povezane sa poreklom života",
     description:

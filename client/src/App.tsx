@@ -25,6 +25,9 @@ import IranOtvorioHormuskiMoreuzZaKomercijalniSaobracajTokomPrimirja from "./pag
 import BugarskaNaRaskrsniciRumenRadevVodiPremaIzlaznimAnketama from "./pages/bugarska-na-raskrsnici-rumen-radev-vodi-prema-izlaznim-anketama";
 import NovacKaoUslovTrenutakUKojemSeOdlucujePravacSrbije from "./pages/novac-kao-uslov-trenutak-u-kojem-se-odlucuje-pravac-srbije";
 
+/* ✅ NOVA VEST — Geopolitika */
+import NatoPodPritiskom from "./pages/nato-pod-pritiskom-od-saveza-ravnopravnih-ka-sistemu-uslovljene-lojalnosti";
+
 /* ✅ NOVA VEST — Obaveštajni izvori */
 import NemackaCurenjeInformacija from "./pages/nemacka-curenje-informacija";
 
@@ -197,6 +200,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/nato-pod-pritiskom-od-saveza-ravnopravnih-ka-sistemu-uslovljene-lojalnosti"
+          component={NatoPodPritiskom}
+        />
+
         <Route
           path="/geopolitika/iran-zatvara-ormuski-moreuz-svet-ulazi-u-energetsku-neizvesnost"
           component={IranZatvaraOrmuskiMoreuzSvetUlaziUEnergetskuNeizvesnost}
