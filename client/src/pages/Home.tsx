@@ -13,12 +13,12 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/nasa-planeta/na-marsu-otkrivene-molekule-povezane-sa-poreklom-zivota",
-  title: "Na Marsu otkrivene molekule povezane sa poreklom života",
+  href: "/geopolitika/nato-pod-pritiskom-od-saveza-ravnopravnih-ka-sistemu-uslovljene-lojalnosti",
+  title: "NATO pod pritiskom: od saveza ravnopravnih ka sistemu uslovljene lojalnosti",
   description:
-    "Rover Curiosity identifikovao je kompleksne organske molekule koji otvaraju nova pitanja o mogućem nastanku života na Crvenoj planeti.",
-  imageSrc: "/news/mars-life.jpg",
-  imageAlt: "Površina Marsa sa tragovima organskih jedinjenja",
+    "U Vašingtonu se sve otvorenije razmatra diferenciranje saveznika prema političkoj i vojnoj usklađenosti sa američkim prioritetima.",
+  imageSrc: "/news/Nato-new-relations.jpg",
+  imageAlt: "NATO savez pod pritiskom novih uslovljavanja",
   imageCredit: "NOVI TALAS / ilustracija",
 };
 
@@ -192,7 +192,7 @@ export default function Home() {
              ====================== */}
           <FadeIn className="mb-10">
             <article>
-              <span className="kicker block mb-2">Naša planeta</span>
+              <span className="kicker block mb-2">Geopolitika</span>
 
               <h2
                 className="mt-2 mb-3 text-[32px] md:text-[46px] font-bold leading-[1.1]"
@@ -263,6 +263,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Naša planeta"
+                href="/nasa-planeta/na-marsu-otkrivene-molekule-povezane-sa-poreklom-zivota"
+                title="Na Marsu otkrivene molekule povezane sa poreklom života"
+                description="Rover Curiosity identifikovao je kompleksne organske molekule koji otvaraju nova pitanja o mogućem nastanku života na Crvenoj planeti."
+                imageSrc="/news/mars-life.jpg"
+                imageAlt="Površina Marsa sa tragovima organskih jedinjenja"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Geopolitika"
                 href="/geopolitika/novac-kao-uslov-trenutak-u-kojem-se-odlucuje-pravac-srbije"
                 title="Novac kao uslov: trenutak u kojem se odlučuje pravac Srbije"
@@ -291,17 +302,6 @@ export default function Home() {
                 description="U Tokiju, u četvrti Tojosu, izložba teamLab Planets menja način na koji posmatramo umetnost, prirodu i odnos čoveka prema prostoru."
                 imageSrc="/news/teamlab1.jpg"
                 imageAlt="Interaktivna instalacija izložbe teamLab Planets u Tokiju"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/iran-zatvara-ormuski-moreuz-svet-ulazi-u-energetsku-neizvesnost"
-                title="Iran zatvara Ormuski moreuz: svet ulazi u energetsku neizvesnost"
-                description="Kontrola nad ključnim pomorskim pravcem postaje instrument političkog pritiska u trenutku globalnih tenzija."
-                imageSrc="/news/closed-again.jpg"
-                imageAlt="Ormuski moreuz pod pojačanom vojnom kontrolom"
               />
             </div>
           </FadeIn>
