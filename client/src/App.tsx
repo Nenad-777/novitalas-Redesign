@@ -129,6 +129,9 @@ import SpilbergUpozoravaHolivudPublikaTraziOriginalneFilmove from "./pages/spilb
 import UmetnostKojaDiseTeamlabTokio from "./pages/umetnost-koja-dise-teamlab-tokio";
 
 /* ✅ NOVA VEST — Naša planeta */
+import HomerovaIlijada from "./pages/homerova-ilijada-pronadjena-u-egipatskoj-mumiji";
+
+/* ✅ NOVA VEST — Naša planeta */
 import KoJeDobioOskara from "./pages/ko-je-dobio-oskara";
 
 /* ✅ NOVA VEST — Naša planeta */
@@ -465,6 +468,11 @@ function Router() {
             NAŠA PLANETA
            ========================= */}
         <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
+
+        <Route
+          path="/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji"
+          component={HomerovaIlijada}
+        />
 
         <Route
           path="/nasa-planeta/spilberg-upozorava-holivud-publika-trazi-originalne-filmove"
