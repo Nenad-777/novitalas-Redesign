@@ -19,6 +19,15 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji",
+    img: "/news/Iliad-mumy.jpg",
+    alt: "Papirus sa fragmentom Homerove Ilijade pronađen unutar egipatske mumije",
+    imageCredit: "NOVI TALAS / ilustracija",
+    title: "Homerova Ilijada pronađena u egipatskoj mumiji",
+    description:
+      "U antičkom Oksirinhu arheolozi su otkrili papirus sa fragmentom Ilijade unutar mumije iz rimskog perioda, što predstavlja prvi poznati slučaj ovakve upotrebe književnog teksta u mumifikaciji.",
+  },
+  {
     href: "/nasa-planeta/na-marsu-otkrivene-molekule-povezane-sa-poreklom-zivota",
     img: "/news/mars-life.jpg",
     alt: "Površina Marsa sa tragovima organskih jedinjenja",

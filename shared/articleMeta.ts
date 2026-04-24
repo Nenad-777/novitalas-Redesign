@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji",
+    title: "Homerova Ilijada pronađena u egipatskoj mumiji",
+    description:
+      "U antičkom Oksirinhu arheolozi su otkrili papirus sa fragmentom Ilijade unutar mumije iz rimskog perioda, što predstavlja prvi poznati slučaj ovakve upotrebe književnog teksta u mumifikaciji.",
+    imageSrc: "/news/Iliad-mumy.jpg",
+    datePublished: "2026-04-24",
+  },
+  {
     path: "/geopolitika/nato-pod-pritiskom-od-saveza-ravnopravnih-ka-sistemu-uslovljene-lojalnosti",
     title: "NATO pod pritiskom: od saveza ravnopravnih ka sistemu uslovljene lojalnosti",
     description:

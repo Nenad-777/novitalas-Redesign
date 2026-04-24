@@ -13,12 +13,12 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/nato-pod-pritiskom-od-saveza-ravnopravnih-ka-sistemu-uslovljene-lojalnosti",
-  title: "NATO pod pritiskom: od saveza ravnopravnih ka sistemu uslovljene lojalnosti",
+  href: "/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji",
+  title: "Homerova Ilijada pronađena u egipatskoj mumiji",
   description:
-    "U Vašingtonu se sve otvorenije razmatra diferenciranje saveznika prema političkoj i vojnoj usklađenosti sa američkim prioritetima.",
-  imageSrc: "/news/Nato-new-relations.jpg",
-  imageAlt: "NATO savez pod pritiskom novih uslovljavanja",
+    "U antičkom Oksirinhu arheolozi su otkrili papirus sa fragmentom Ilijade unutar mumije iz rimskog perioda, što predstavlja prvi poznati slučaj ovakve upotrebe književnog teksta u mumifikaciji.",
+  imageSrc: "/news/Iliad-mumy.jpg",
+  imageAlt: "Papirus sa fragmentom Homerove Ilijade pronađen unutar egipatske mumije",
   imageCredit: "NOVI TALAS / ilustracija",
 };
 
@@ -192,7 +192,7 @@ export default function Home() {
              ====================== */}
           <FadeIn className="mb-10">
             <article>
-              <span className="kicker block mb-2">Geopolitika</span>
+              <span className="kicker block mb-2">Naša planeta</span>
 
               <h2
                 className="mt-2 mb-3 text-[32px] md:text-[46px] font-bold leading-[1.1]"
@@ -263,6 +263,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Geopolitika"
+                href="/geopolitika/nato-pod-pritiskom-od-saveza-ravnopravnih-ka-sistemu-uslovljene-lojalnosti"
+                title="NATO pod pritiskom: od saveza ravnopravnih ka sistemu uslovljene lojalnosti"
+                description="U Vašingtonu se sve otvorenije razmatra diferenciranje saveznika prema političkoj i vojnoj usklađenosti sa američkim prioritetima."
+                imageSrc="/news/Nato-new-relations.jpg"
+                imageAlt="NATO savez pod pritiskom novih uslovljavanja"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Naša planeta"
                 href="/nasa-planeta/na-marsu-otkrivene-molekule-povezane-sa-poreklom-zivota"
                 title="Na Marsu otkrivene molekule povezane sa poreklom života"
@@ -291,17 +302,6 @@ export default function Home() {
                 description="Rezultati ukazuju na moguće pomeranje spoljnopolitičkog pravca zemlje u trenutku pojačanih tenzija između Zapada i Rusije."
                 imageSrc="/news/bulgaria-elections.jpg"
                 imageAlt="Predsednički izbori u Bugarskoj"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Naša planeta"
-                href="/nasa-planeta/umetnost-koja-dise-teamlab-tokio"
-                title="Umetnost koja diše: izložba u Tokiju koja briše granicu između čoveka i prirode"
-                description="U Tokiju, u četvrti Tojosu, izložba teamLab Planets menja način na koji posmatramo umetnost, prirodu i odnos čoveka prema prostoru."
-                imageSrc="/news/teamlab1.jpg"
-                imageAlt="Interaktivna instalacija izložbe teamLab Planets u Tokiju"
               />
             </div>
           </FadeIn>
