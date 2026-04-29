@@ -13,13 +13,13 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji",
-  title: "Homerova Ilijada pronađena u egipatskoj mumiji",
+  href: "/obavestajni-izvori/kazakstan-spijun",
+  title: "Berlin u senci špijunaže: uhapšen osumnjičeni ruski agent, meta bile informacije o Ukrajini i NATO konvojima",
   description:
-    "U antičkom Oksirinhu arheolozi su otkrili papirus sa fragmentom Ilijade unutar mumije iz rimskog perioda, što predstavlja prvi poznati slučaj ovakve upotrebe književnog teksta u mumifikaciji.",
-  imageSrc: "/news/Iliad-mumy.jpg",
-  imageAlt: "Papirus sa fragmentom Homerove Ilijade pronađen unutar egipatske mumije",
-  imageCredit: "NOVI TALAS / ilustracija",
+    "Nemački tužioci tvrde da je državljanin Kazahstana mesecima bio u kontaktu sa ruskom obaveštajnom službom i dostavljao podatke o vojnoj pomoći Ukrajini, odbrambenoj industriji i kretanju NATO konvoja.",
+  imageSrc: "/news/kazakstan-spy.jpg",
+  imageAlt: "Uhapšeni osumnjičeni špijun u Berlinu, kazahstanski državljanin Sergej K",
+  imageCredit: "Foto: ilustracija",
 };
 
 // Simple fade-in on scroll hook
@@ -192,7 +192,7 @@ export default function Home() {
              ====================== */}
           <FadeIn className="mb-10">
             <article>
-              <span className="kicker block mb-2">Naša planeta</span>
+              <span className="kicker block mb-2">Obaveštajni izvori</span>
 
               <h2
                 className="mt-2 mb-3 text-[32px] md:text-[46px] font-bold leading-[1.1]"
@@ -263,12 +263,12 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
-                category="Obaveštajni izvori"
-                href="/obavestajni-izvori/kazakstan-spijun"
-                title="Berlin u senci špijunaže: uhapšen osumnjičeni ruski agent, meta bile informacije o Ukrajini i NATO konvojima"
-                description="Nemački tužioci tvrde da je državljanin Kazahstana mesecima bio u kontaktu sa ruskom obaveštajnom službom i dostavljao podatke o vojnoj pomoći Ukrajini, odbrambenoj industriji i kretanju NATO konvoja."
-                imageSrc="/news/kazakstan-spy.jpg"
-                imageAlt="Uhapšeni osumnjičeni špijun u Berlinu, kazahstanski državljanin Sergej K"
+                category="Naša planeta"
+                href="/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji"
+                title="Homerova Ilijada pronađena u egipatskoj mumiji"
+                description="U antičkom Oksirinhu arheolozi su otkrili papirus sa fragmentom Ilijade unutar mumije iz rimskog perioda, što predstavlja prvi poznati slučaj ovakve upotrebe književnog teksta u mumifikaciji."
+                imageSrc="/news/Iliad-mumy.jpg"
+                imageAlt="Papirus sa fragmentom Homerove Ilijade pronađen unutar egipatske mumije"
               />
 
               <hr className="editorial-divider" />
