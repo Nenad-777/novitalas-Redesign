@@ -31,6 +31,9 @@ import NatoPodPritiskom from "./pages/nato-pod-pritiskom-od-saveza-ravnopravnih-
 /* ✅ NOVA VEST — Obaveštajni izvori */
 import NemackaCurenjeInformacija from "./pages/nemacka-curenje-informacija";
 
+/* ✅ NOVA VEST — Obaveštajni izvori */
+import KazakstanSpijun from "./pages/kazakstan-spijun";
+
 import ObavestajniArticle from "./pages/ObavestajniArticle";
 import ObavestajniIndex from "./pages/ObavestajniIndex";
 import KinaSpyBrodovi from "./pages/kina-spy-brodovi";
@@ -383,6 +386,11 @@ function Router() {
             OBAVEŠTAJNI IZVORI
            ========================= */}
         <Route path="/obavestajni-izvori" component={ObavestajniIndex} />
+
+        <Route
+          path="/obavestajni-izvori/kazakstan-spijun"
+          component={KazakstanSpijun}
+        />
 
         <Route
           path="/obavestajni-izvori/nemacka-curenje-informacija"
