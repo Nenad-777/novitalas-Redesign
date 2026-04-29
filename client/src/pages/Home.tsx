@@ -263,6 +263,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Obaveštajni izvori"
+                href="/obavestajni-izvori/kazakstan-spijun"
+                title="Berlin u senci špijunaže: uhapšen osumnjičeni ruski agent, meta bile informacije o Ukrajini i NATO konvojima"
+                description="Nemački tužioci tvrde da je državljanin Kazahstana mesecima bio u kontaktu sa ruskom obaveštajnom službom i dostavljao podatke o vojnoj pomoći Ukrajini, odbrambenoj industriji i kretanju NATO konvoja."
+                imageSrc="/news/kazakstan-spy.jpg"
+                imageAlt="Uhapšeni osumnjičeni špijun u Berlinu, kazahstanski državljanin Sergej K"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Geopolitika"
                 href="/geopolitika/nato-pod-pritiskom-od-saveza-ravnopravnih-ka-sistemu-uslovljene-lojalnosti"
                 title="NATO pod pritiskom: od saveza ravnopravnih ka sistemu uslovljene lojalnosti"
@@ -291,17 +302,6 @@ export default function Home() {
                 description="Evropska unija prvi put jasno povezuje finansijsku podršku sa političkim odlukama, otvarajući pitanje daljeg kursa Srbije."
                 imageSrc="/news/eu-uslov.jpg"
                 imageAlt="Evropska unija i finansijski uslovi za političke odluke Srbije"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/bugarska-na-raskrsnici-rumen-radev-vodi-prema-izlaznim-anketama"
-                title="Bugarska na raskrsnici: Rumen Radev vodi prema izlaznim anketama"
-                description="Rezultati ukazuju na moguće pomeranje spoljnopolitičkog pravca zemlje u trenutku pojačanih tenzija između Zapada i Rusije."
-                imageSrc="/news/bulgaria-elections.jpg"
-                imageAlt="Predsednički izbori u Bugarskoj"
               />
             </div>
           </FadeIn>
