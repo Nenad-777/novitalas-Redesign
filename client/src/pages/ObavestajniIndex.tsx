@@ -10,6 +10,16 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/obavestajni-izvori/kazakstan-spijun",
+    img: "/news/kazakstan-spy.jpg",
+    alt: "Uhapšeni osumnjičeni špijun u Berlinu — kazahstanski državljanin Sergej K",
+    title:
+      "Berlin u senci špijunaže: uhapšen osumnjičeni ruski agent, meta bile informacije o Ukrajini i NATO konvojima",
+    description:
+      "Nemački tužioci tvrde da je državljanin Kazahstana mesecima bio u kontaktu sa ruskom obaveštajnom službom i dostavljao podatke o vojnoj pomoći Ukrajini, odbrambenoj industriji i kretanju NATO konvoja.",
+    date: "29. april 2026.",
+  },
+  {
     href: "/obavestajni-izvori/prvi-brifing",
     img: "/news/security-world.jpg",
     alt: "Obaveštajni brifing — globalna bezbednosna mapa",

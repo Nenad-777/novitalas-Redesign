@@ -143,6 +143,14 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/obavestajni-izvori/kazakstan-spijun",
+    title: "Berlin u senci špijunaže: uhapšen osumnjičeni ruski agent, meta bile informacije o Ukrajini i NATO konvojima",
+    description:
+      "Nemački tužioci tvrde da je državljanin Kazahstana mesecima bio u kontaktu sa ruskom obaveštajnom službom i dostavljao podatke o vojnoj pomoći Ukrajini, odbrambenoj industriji i kretanju NATO konvoja.",
+    imageSrc: "/news/kazakstan-spy.jpg",
+    datePublished: "2026-04-29",
+  },
+  {
     path: "/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji",
     title: "Homerova Ilijada pronađena u egipatskoj mumiji",
     description:
