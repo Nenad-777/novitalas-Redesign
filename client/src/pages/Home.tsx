@@ -14,12 +14,12 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
   href: "/geopolitika/svet-na-dan-1-maj-2026",
-  title: "SVET NA DAN: Hormuz, Ukrajina i Tajvan oblikuju novu mapu pritiska",
+  title: "SVET NA DAN, 1. maj: Ormuz, Ukrajina i Tajvan oblikuju novu mapu pritiska",
   description:
     "Prvi maj 2026. donosi sliku sveta u kome se energetska kriza, rat u Ukrajini i američko-kinesko nadmetanje sve brže spajaju u jednu geopolitičku celinu.",
   imageSrc: "/news/world-1.may.jpg",
-  imageAlt: "Geopolitička mapa pritiska: Hormuz, Ukrajina i Tajvan",
-  imageCredit: "Foto: ilustracija",
+  imageAlt: "Geopolitička mapa pritiska: Ormuz, Ukrajina i Tajvan",
+  imageCredit: "Ilustracija: Novi Talas / AI",
 };
 
 // Simple fade-in on scroll hook

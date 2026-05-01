@@ -144,7 +144,7 @@ export function buildJsonLd(meta: {
 export const articleMeta: ArticleStaticMeta[] = [
   {
     path: "/geopolitika/svet-na-dan-1-maj-2026",
-    title: "SVET NA DAN: Hormuz, Ukrajina i Tajvan oblikuju novu mapu pritiska",
+    title: "SVET NA DAN, 1. maj: Ormuz, Ukrajina i Tajvan oblikuju novu mapu pritiska",
     description:
       "Prvi maj 2026. donosi sliku sveta u kome se energetska kriza, rat u Ukrajini i američko-kinesko nadmetanje sve brže spajaju u jednu geopolitičku celinu.",
     imageSrc: "/news/world-1.may.jpg",
