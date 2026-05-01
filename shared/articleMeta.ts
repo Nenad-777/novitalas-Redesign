@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/svet-na-dan-1-maj-2026",
+    title: "SVET NA DAN: Hormuz, Ukrajina i Tajvan oblikuju novu mapu pritiska",
+    description:
+      "Prvi maj 2026. donosi sliku sveta u kome se energetska kriza, rat u Ukrajini i američko-kinesko nadmetanje sve brže spajaju u jednu geopolitičku celinu.",
+    imageSrc: "/news/world-1.may.jpg",
+    datePublished: "2026-05-01",
+    author: "Novi Talas",
+  },
+  {
     path: "/obavestajni-izvori/kazakstan-spijun",
     title: "Berlin u senci špijunaže: uhapšen osumnjičeni ruski agent, meta bile informacije o Ukrajini i NATO konvojima",
     description:

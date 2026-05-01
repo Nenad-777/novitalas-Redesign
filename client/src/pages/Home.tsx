@@ -13,12 +13,12 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/obavestajni-izvori/kazakstan-spijun",
-  title: "Berlin u senci špijunaže: uhapšen osumnjičeni ruski agent, meta bile informacije o Ukrajini i NATO konvojima",
+  href: "/geopolitika/svet-na-dan-1-maj-2026",
+  title: "SVET NA DAN: Hormuz, Ukrajina i Tajvan oblikuju novu mapu pritiska",
   description:
-    "Nemački tužioci tvrde da je državljanin Kazahstana mesecima bio u kontaktu sa ruskom obaveštajnom službom i dostavljao podatke o vojnoj pomoći Ukrajini, odbrambenoj industriji i kretanju NATO konvoja.",
-  imageSrc: "/news/kazakstan-spy.jpg",
-  imageAlt: "Uhapšeni osumnjičeni špijun u Berlinu, kazahstanski državljanin Sergej K",
+    "Prvi maj 2026. donosi sliku sveta u kome se energetska kriza, rat u Ukrajini i američko-kinesko nadmetanje sve brže spajaju u jednu geopolitičku celinu.",
+  imageSrc: "/news/world-1.may.jpg",
+  imageAlt: "Geopolitička mapa pritiska: Hormuz, Ukrajina i Tajvan",
   imageCredit: "Foto: ilustracija",
 };
 
@@ -192,7 +192,7 @@ export default function Home() {
              ====================== */}
           <FadeIn className="mb-10">
             <article>
-              <span className="kicker block mb-2">Obaveštajni izvori</span>
+              <span className="kicker block mb-2">Geopolitika</span>
 
               <h2
                 className="mt-2 mb-3 text-[32px] md:text-[46px] font-bold leading-[1.1]"
@@ -263,6 +263,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Obaveštajni izvori"
+                href="/obavestajni-izvori/kazakstan-spijun"
+                title="Berlin u senci špijunaže: uhapšen osumnjičeni ruski agent, meta bile informacije o Ukrajini i NATO konvojima"
+                description="Nemački tužioci tvrde da je državljanin Kazahstana mesecima bio u kontaktu sa ruskom obaveštajnom službom i dostavljao podatke o vojnoj pomoći Ukrajini, odbrambenoj industriji i kretanju NATO konvoja."
+                imageSrc="/news/kazakstan-spy.jpg"
+                imageAlt="Uhapšeni osumnjičeni špijun u Berlinu, kazahstanski državljanin Sergej K"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Naša planeta"
                 href="/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji"
                 title="Homerova Ilijada pronađena u egipatskoj mumiji"
@@ -291,17 +302,6 @@ export default function Home() {
                 description="Rover Curiosity identifikovao je kompleksne organske molekule koji otvaraju nova pitanja o mogućem nastanku života na Crvenoj planeti."
                 imageSrc="/news/mars-life.jpg"
                 imageAlt="Površina Marsa sa tragovima organskih jedinjenja"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/novac-kao-uslov-trenutak-u-kojem-se-odlucuje-pravac-srbije"
-                title="Novac kao uslov: trenutak u kojem se odlučuje pravac Srbije"
-                description="Evropska unija prvi put jasno povezuje finansijsku podršku sa političkim odlukama, otvarajući pitanje daljeg kursa Srbije."
-                imageSrc="/news/eu-uslov.jpg"
-                imageAlt="Evropska unija i finansijski uslovi za političke odluke Srbije"
               />
             </div>
           </FadeIn>

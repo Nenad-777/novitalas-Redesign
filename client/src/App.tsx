@@ -26,6 +26,9 @@ import BugarskaNaRaskrsniciRumenRadevVodiPremaIzlaznimAnketama from "./pages/bug
 import NovacKaoUslovTrenutakUKojemSeOdlucujePravacSrbije from "./pages/novac-kao-uslov-trenutak-u-kojem-se-odlucuje-pravac-srbije";
 
 /* ✅ NOVA VEST — Geopolitika */
+import SvetNaDan1Maj2026 from "./pages/svet-na-dan-1-maj-2026";
+
+/* ✅ NOVA VEST — Geopolitika */
 import NatoPodPritiskom from "./pages/nato-pod-pritiskom-od-saveza-ravnopravnih-ka-sistemu-uslovljene-lojalnosti";
 
 /* ✅ NOVA VEST — Obaveštajni izvori */
@@ -206,6 +209,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/svet-na-dan-1-maj-2026"
+          component={SvetNaDan1Maj2026}
+        />
+
         <Route
           path="/geopolitika/nato-pod-pritiskom-od-saveza-ravnopravnih-ka-sistemu-uslovljene-lojalnosti"
           component={NatoPodPritiskom}
