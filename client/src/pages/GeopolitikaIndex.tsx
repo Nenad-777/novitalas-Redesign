@@ -92,7 +92,7 @@ export default function GeopolitikaIndex() {
                 >
                   <img
                     src={IMAGES.world1May}
-                    alt="Geopolitička mapa pritiska: Hormuz, Ukrajina i Tajvan"
+                    alt="Geopolitička mapa pritiska: Ormuz, Ukrajina i Tajvan"
                     className="w-full h-[260px] object-cover object-center block"
                     decoding="async"
                   />
@@ -105,7 +105,7 @@ export default function GeopolitikaIndex() {
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  SVET NA DAN: Hormuz, Ukrajina i Tajvan oblikuju novu mapu pritiska
+                  SVET NA DAN, 1. maj: Ormuz, Ukrajina i Tajvan oblikuju novu mapu pritiska
                 </h2>
 
                 <p
