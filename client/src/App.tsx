@@ -26,6 +26,9 @@ import BugarskaNaRaskrsniciRumenRadevVodiPremaIzlaznimAnketama from "./pages/bug
 import NovacKaoUslovTrenutakUKojemSeOdlucujePravacSrbije from "./pages/novac-kao-uslov-trenutak-u-kojem-se-odlucuje-pravac-srbije";
 
 /* ✅ NOVA VEST — Geopolitika */
+import AmerikaPoVlaciVojnikeIzNemacke from "./pages/amerika-povlaci-vojnike-iz-nemacke-nato-nepoverenje";
+
+/* ✅ NOVA VEST — Geopolitika */
 import SvetNaDan1Maj2026 from "./pages/svet-na-dan-1-maj-2026";
 
 /* ✅ NOVA VEST — Geopolitika */
@@ -212,6 +215,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/amerika-povlaci-vojnike-iz-nemacke-nato-nepoverenje"
+          component={AmerikaPoVlaciVojnikeIzNemacke}
+        />
+
         <Route
           path="/geopolitika/svet-na-dan-1-maj-2026"
           component={SvetNaDan1Maj2026}

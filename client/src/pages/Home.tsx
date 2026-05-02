@@ -13,15 +13,15 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/nasa-planeta/venecijansko-bijenale-ziri-ostavka-umetnost-granice",
-  category: "KULTURA",
-  title: "Može li se zabraniti umetnost zbog države iz koje dolazi?",
+  href: "/geopolitika/amerika-povlaci-vojnike-iz-nemacke-nato-nepoverenje",
+  category: "GEOPOLITIKA",
+  title: "Amerika povlači vojnike iz Nemačke: NATO ulazi u novu eru nepoverenja",
   description:
-    "Ostavka žirija Venecijanskog bijenala otvorila je pitanje koje prevazilazi jednu izložbu: da li umetnost treba da ostane prostor bez granica, ili mora da odgovori na ratove iz sveta oko sebe.",
-  imageSrc: "/news/venice-biennale-arsenale-2024.jpg",
-  imageAlt: "Izložbeni prostor Arsenala tokom 60. Venecijanskog bijenala 2024.",
+    "Povlačenje oko 5.000 američkih vojnika iz Nemačke pokazuje da evropska bezbednost ulazi u period u kome se američka zaštita više ne podrazumeva kao ranije.",
+  imageSrc: "/news/us-german-soldiers-germany.jpg",
+  imageAlt: "Američki i nemački vojnici tokom zajedničke vežbe u Oberlausitzu, Nemačka",
   imageCredit:
-    "Izložbeni prostor Arsenala tokom 60. Venecijanskog bijenala 2024. Foto: Jennifer 8. Lee / Wikimedia Commons, CC BY-SA 4.0",
+    "Američki i nemački vojnici tokom zajedničke vežbe u Oberlausitzu, Nemačka. Foto: Spc. Hassani Ribera Soto / U.S. Army, DVIDS",
 };
 
 // Simple fade-in on scroll hook
@@ -265,6 +265,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Kultura"
+                href="/nasa-planeta/venecijansko-bijenale-ziri-ostavka-umetnost-granice"
+                title="Može li se zabraniti umetnost zbog države iz koje dolazi?"
+                description="Ostavka žirija Venecijanskog bijenala otvorila je pitanje koje prevazilazi jednu izložbu: da li umetnost treba da ostane prostor bez granica, ili mora da odgovori na ratove iz sveta oko sebe."
+                imageSrc="/news/venice-biennale-arsenale-2024.jpg"
+                imageAlt="Izložbeni prostor Arsenala tokom 60. Venecijanskog bijenala 2024."
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Geopolitika"
                 href="/geopolitika/svet-na-dan-1-maj-2026"
                 title="SVET NA DAN, 1. maj: Ormuz, Ukrajina i Tajvan oblikuju novu mapu pritiska"
@@ -293,17 +304,6 @@ export default function Home() {
                 description="U antičkom Oksirinhu arheolozi su otkrili papirus sa fragmentom Ilijade unutar mumije iz rimskog perioda, što predstavlja prvi poznati slučaj ovakve upotrebe književnog teksta u mumifikaciji."
                 imageSrc="/news/Iliad-mumy.jpg"
                 imageAlt="Papirus sa fragmentom Homerove Ilijade pronađen unutar egipatske mumije"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/nato-pod-pritiskom-od-saveza-ravnopravnih-ka-sistemu-uslovljene-lojalnosti"
-                title="NATO pod pritiskom: od saveza ravnopravnih ka sistemu uslovljene lojalnosti"
-                description="U Vašingtonu se sve otvorenije razmatra diferenciranje saveznika prema političkoj i vojnoj usklađenosti sa američkim prioritetima."
-                imageSrc="/news/Nato-new-relations.jpg"
-                imageAlt="NATO savez pod pritiskom novih uslovljavanja"
               />
             </div>
           </FadeIn>
