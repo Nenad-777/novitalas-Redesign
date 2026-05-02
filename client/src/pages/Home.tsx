@@ -241,13 +241,7 @@ export default function Home() {
                     decoding="async"
                   />
                 </div>
-                <p
-                  className="mt-2 text-[13px]"
-                  style={{
-                    fontFamily: "'Source Sans 3', sans-serif",
-                    color: isDark ? "#7a7872" : "#777",
-                  }}
-                >
+                <p className="photo-credit">
                   {HERO_ARTICLE.imageCredit}
                 </p>
               </Link>

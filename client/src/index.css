@@ -185,12 +185,7 @@
     margin: 0;
   }
 
-  .photo-credit {
-    font-family: var(--font-ui);
-    font-size: 12px;
-    color: #888;
-    margin-top: 6px;
-  }
+
 
   /* Hero + CTA titles */
   .hero-tagline,
@@ -254,4 +249,24 @@ main article li,
 main article blockquote {
   font-size: 1em;
   line-height: inherit;
+}
+
+/* ===== IMAGE CAPTION / PHOTO CREDIT — global ===== */
+/* Defined outside any @layer so it overrides main article p inheritance */
+.photo-credit {
+  font-family: 'Source Sans 3', -apple-system, system-ui, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #888;
+  margin-top: 6px;
+}
+
+@media (min-width: 768px) {
+  .photo-credit {
+    font-size: 14px;
+  }
+}
+
+.dark .photo-credit {
+  color: #6b6760;
 }
