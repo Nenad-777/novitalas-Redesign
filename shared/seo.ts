@@ -15,6 +15,27 @@ export interface SEOData {
 }
 
 export const seoData: Record<string, SEOData> = {
+  "/geopolitika/amerika-povlaci-vojnike-iz-nemacke-nato-nepoverenje": {
+    title:
+      "Amerika povlači vojnike iz Nemačke: NATO ulazi u novu eru nepoverenja | Novi Talas",
+    description:
+      "Odluka Pentagona da povuče oko 5.000 američkih vojnika iz Nemačke otvara pitanje budućnosti NATO-a, evropske bezbednosti i američkog bezbednosnog kišobrana nad Evropom.",
+    ogTitle:
+      "Amerika povlači vojnike iz Nemačke: NATO ulazi u novu eru nepoverenja",
+    ogDescription:
+      "Povlačenje američkih trupa iz Nemačke nije samo vojno-tehnička odluka, već politički signal Evropi da se bezbednosni kišobran Vašingtona više ne podrazumeva kao ranije.",
+    ogUrl:
+      "https://novitalas.org/geopolitika/amerika-povlaci-vojnike-iz-nemacke-nato-nepoverenje",
+    ogImage: "https://novitalas.org/news/us-german-soldiers-germany.jpg",
+    twitterTitle:
+      "Amerika povlači vojnike iz Nemačke: NATO ulazi u novu eru nepoverenja",
+    twitterDescription:
+      "Povlačenje američkih trupa iz Nemačke nije samo vojno-tehnička odluka, već politički signal Evropi da se bezbednosni kišobran Vašingtona više ne podrazumeva kao ranije.",
+    twitterImage: "https://novitalas.org/news/us-german-soldiers-germany.jpg",
+    datePublished: "2026-05-01",
+    author: "Novi Talas",
+  },
+
   "/nasa-planeta/venecijansko-bijenale-ziri-ostavka-umetnost-granice": {
     title:
       "Može li se zabraniti umetnost zbog države iz koje dolazi? | Novi Talas",

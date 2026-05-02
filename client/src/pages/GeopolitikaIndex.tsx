@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  usGermanSoldiers: "/news/us-german-soldiers-germany.jpg",
   world1May: "/news/world-1.may.jpg",
   euUslov: "/news/eu-uslov.jpg",
   bulgariaElections: "/news/bulgaria-elections.jpg",
@@ -77,6 +78,59 @@ export default function GeopolitikaIndex() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* ✅ NAJNOVIJA VEST (Amerika povlači vojnike iz Nemačke) */}
+            <article className="md:col-span-2">
+              <Link
+                href="/geopolitika/amerika-povlaci-vojnike-iz-nemacke-nato-nepoverenje"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.usGermanSoldiers}
+                    alt="Američki i nemački vojnici tokom zajedničke vežbe u Oberlausitzu, Nemačka"
+                    className="w-full h-[260px] object-cover object-center block"
+                    decoding="async"
+                  />
+                </div>
+
+                <h2
+                  className="text-[22px] md:text-[28px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Amerika povlači vojnike iz Nemačke: NATO ulazi u novu eru nepoverenja
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Povlačenje oko 5.000 američkih vojnika iz Nemačke pokazuje da evropska bezbednost ulazi u period u kome se američka zaštita više ne podrazumeva kao ranije.
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
+
             {/* ✅ NAJNOVIJA VEST (Svet na dan — 1. maj 2026) */}
             <article className="md:col-span-2">
               <Link
