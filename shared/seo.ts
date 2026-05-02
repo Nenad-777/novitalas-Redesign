@@ -15,6 +15,26 @@ export interface SEOData {
 }
 
 export const seoData: Record<string, SEOData> = {
+  "/nasa-planeta/venecijansko-bijenale-ziri-ostavka-umetnost-granice": {
+    title:
+      "Može li se zabraniti umetnost zbog države iz koje dolazi? | Novi Talas",
+    description:
+      "Ostavka žirija Venecijanskog bijenala otvorila je pitanje koje prevazilazi jednu izložbu: da li umetnost treba da ostane prostor bez granica, ili mora da odgovori na ratove iz sveta oko sebe.",
+    ogTitle: "Može li se zabraniti umetnost zbog države iz koje dolazi?",
+    ogDescription:
+      "Venecijansko bijenale ušlo je u krizu posle ostavke žirija. U središtu spora je pitanje da li umetnosti treba postavljati granice zbog država iz kojih dolazi.",
+    ogUrl:
+      "https://novitalas.org/nasa-planeta/venecijansko-bijenale-ziri-ostavka-umetnost-granice",
+    ogImage: "https://novitalas.org/news/venice-biennale-arsenale-2024.jpg",
+    twitterTitle: "Može li se zabraniti umetnost zbog države iz koje dolazi?",
+    twitterDescription:
+      "Ostavka žirija Venecijanskog bijenala otvorila je pitanje koje prevazilazi jednu izložbu: da li umetnost treba da ostane prostor bez granica, ili mora da odgovori na ratove iz sveta oko sebe.",
+    twitterImage:
+      "https://novitalas.org/news/venice-biennale-arsenale-2024.jpg",
+    datePublished: "2026-05-01",
+    author: "Novi Talas",
+  },
+
   "/srbija/senke-nad-ekranom-tiho-preuzimanje-ili-kontrolisano-gasenje-istine": {
     title:
       "SENKE NAD EKRANOM: Tiho preuzimanje ili kontrolisano gašenje istine — Novi Talas",

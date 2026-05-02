@@ -13,13 +13,15 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/svet-na-dan-1-maj-2026",
-  title: "SVET NA DAN, 1. maj: Ormuz, Ukrajina i Tajvan oblikuju novu mapu pritiska",
+  href: "/nasa-planeta/venecijansko-bijenale-ziri-ostavka-umetnost-granice",
+  category: "KULTURA",
+  title: "Može li se zabraniti umetnost zbog države iz koje dolazi?",
   description:
-    "Prvi maj 2026. donosi sliku sveta u kome se energetska kriza, rat u Ukrajini i američko-kinesko nadmetanje sve brže spajaju u jednu geopolitičku celinu.",
-  imageSrc: "/news/world-1.may.jpg",
-  imageAlt: "Geopolitička mapa pritiska: Ormuz, Ukrajina i Tajvan",
-  imageCredit: "Ilustracija: Novi Talas / AI",
+    "Ostavka žirija Venecijanskog bijenala otvorila je pitanje koje prevazilazi jednu izložbu: da li umetnost treba da ostane prostor bez granica, ili mora da odgovori na ratove iz sveta oko sebe.",
+  imageSrc: "/news/venice-biennale-arsenale-2024.jpg",
+  imageAlt: "Izložbeni prostor Arsenala tokom 60. Venecijanskog bijenala 2024.",
+  imageCredit:
+    "Izložbeni prostor Arsenala tokom 60. Venecijanskog bijenala 2024. Foto: Jennifer 8. Lee / Wikimedia Commons, CC BY-SA 4.0",
 };
 
 // Simple fade-in on scroll hook
@@ -192,7 +194,7 @@ export default function Home() {
              ====================== */}
           <FadeIn className="mb-10">
             <article>
-              <span className="kicker block mb-2">Geopolitika</span>
+              <span className="kicker block mb-2">{HERO_ARTICLE.category}</span>
 
               <h2
                 className="mt-2 mb-3 text-[32px] md:text-[46px] font-bold leading-[1.1]"
@@ -263,6 +265,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Geopolitika"
+                href="/geopolitika/svet-na-dan-1-maj-2026"
+                title="SVET NA DAN, 1. maj: Ormuz, Ukrajina i Tajvan oblikuju novu mapu pritiska"
+                description="Prvi maj 2026. donosi sliku sveta u kome se energetska kriza, rat u Ukrajini i američko-kinesko nadmetanje sve brže spajaju u jednu geopolitičku celinu."
+                imageSrc="/news/world-1.may.jpg"
+                imageAlt="Geopolitička mapa pritiska: Ormuz, Ukrajina i Tajvan"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Obaveštajni izvori"
                 href="/obavestajni-izvori/kazakstan-spijun"
                 title="Berlin u senci špijunaže: uhapšen osumnjičeni ruski agent, meta bile informacije o Ukrajini i NATO konvojima"
@@ -291,17 +304,6 @@ export default function Home() {
                 description="U Vašingtonu se sve otvorenije razmatra diferenciranje saveznika prema političkoj i vojnoj usklađenosti sa američkim prioritetima."
                 imageSrc="/news/Nato-new-relations.jpg"
                 imageAlt="NATO savez pod pritiskom novih uslovljavanja"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Naša planeta"
-                href="/nasa-planeta/na-marsu-otkrivene-molekule-povezane-sa-poreklom-zivota"
-                title="Na Marsu otkrivene molekule povezane sa poreklom života"
-                description="Rover Curiosity identifikovao je kompleksne organske molekule koji otvaraju nova pitanja o mogućem nastanku života na Crvenoj planeti."
-                imageSrc="/news/mars-life.jpg"
-                imageAlt="Površina Marsa sa tragovima organskih jedinjenja"
               />
             </div>
           </FadeIn>
