@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/venecijansko-bijenale-ziri-ostavka-umetnost-granice",
+    title: "Može li se zabraniti umetnost zbog države iz koje dolazi?",
+    description:
+      "Ostavka žirija Venecijanskog bijenala otvorila je pitanje koje prevazilazi jednu izložbu: da li umetnost treba da ostane prostor bez granica, ili mora da odgovori na ratove iz sveta oko sebe.",
+    imageSrc: "/news/venice-biennale-arsenale-2024.jpg",
+    datePublished: "2026-05-01",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/svet-na-dan-1-maj-2026",
     title: "SVET NA DAN, 1. maj: Ormuz, Ukrajina i Tajvan oblikuju novu mapu pritiska",
     description:

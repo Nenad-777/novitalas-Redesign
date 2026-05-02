@@ -19,6 +19,16 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/venecijansko-bijenale-ziri-ostavka-umetnost-granice",
+    img: "/news/venice-biennale-arsenale-2024.jpg",
+    alt: "Izložbeni prostor Arsenala tokom 60. Venecijanskog bijenala 2024.",
+    imageCredit:
+      "Foto: Jennifer 8. Lee / Wikimedia Commons, CC BY-SA 4.0",
+    title: "Može li se zabraniti umetnost zbog države iz koje dolazi?",
+    description:
+      "Ostavka žirija Venecijanskog bijenala otvorila je pitanje koje prevazilazi jednu izložbu: da li umetnost treba da ostane prostor bez granica, ili mora da odgovori na ratove iz sveta oko sebe.",
+  },
+  {
     href: "/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji",
     img: "/news/Iliad-mumy.jpg",
     alt: "Papirus sa fragmentom Homerove Ilijade pronađen unutar egipatske mumije",
