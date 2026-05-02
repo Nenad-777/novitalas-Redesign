@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 
-export default function AmerikaPoVlaciVojnikeIzNemacke() {
+export default function AmerikaPovlaciVojnikeIzNemacke() {
   return (
     <ArticleTemplate
       path="/geopolitika/amerika-povlaci-vojnike-iz-nemacke-nato-nepoverenje"
