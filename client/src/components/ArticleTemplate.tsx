@@ -189,11 +189,7 @@ export default function ArticleTemplate({
                     />
                     {p.credit ? (
                       <figcaption
-                        className="mt-[6px] px-2 pb-2 text-sm"
-                        style={{
-                          fontFamily: "'Source Sans 3', sans-serif",
-                          color: isDark ? "#6b6760" : "#777",
-                        }}
+                        className="photo-credit px-2 pb-2"
                       >
                         {p.credit}
                       </figcaption>

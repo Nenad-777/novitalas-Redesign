@@ -100,13 +100,7 @@ export default function ArtemisIIFotografijeDubokogSvemira() {
                 decoding="async"
               />
             </div>
-            <figcaption
-              className="mt-2 text-[13px] leading-[1.5]"
-              style={{
-                fontFamily: "'Source Sans 3', sans-serif",
-                color: isDark ? "#7a7872" : "#777",
-              }}
-            >
+            <figcaption className="photo-credit">
               Foto: NASA / Artemis II
             </figcaption>
           </figure>
@@ -149,13 +143,7 @@ export default function ArtemisIIFotografijeDubokogSvemira() {
                 decoding="async"
               />
             </div>
-            <figcaption
-              className="mt-2 text-[13px] leading-[1.5]"
-              style={{
-                fontFamily: "'Source Sans 3', sans-serif",
-                color: isDark ? "#7a7872" : "#777",
-              }}
-            >
+            <figcaption className="photo-credit">
               Foto: NASA / Artemis II
             </figcaption>
           </figure>
