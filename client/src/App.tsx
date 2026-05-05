@@ -26,6 +26,9 @@ import BugarskaNaRaskrsniciRumenRadevVodiPremaIzlaznimAnketama from "./pages/bug
 import NovacKaoUslovTrenutakUKojemSeOdlucujePravacSrbije from "./pages/novac-kao-uslov-trenutak-u-kojem-se-odlucuje-pravac-srbije";
 
 /* ✅ NOVA VEST — Geopolitika */
+import PadVladeURumuniji from "./pages/pad-vlade-u-rumuniji-proevropski-zid-nato";
+
+/* ✅ NOVA VEST — Geopolitika */
 import AmerikaPovlaciVojnikeIzNemacke from "./pages/amerika-povlaci-vojnike-iz-nemacke-nato-nepoverenje";
 
 /* ✅ NOVA VEST — Geopolitika */
@@ -215,6 +218,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/pad-vlade-u-rumuniji-proevropski-zid-nato"
+          component={PadVladeURumuniji}
+        />
+
         <Route
           path="/geopolitika/amerika-povlaci-vojnike-iz-nemacke-nato-nepoverenje"
           component={AmerikaPovlaciVojnikeIzNemacke}

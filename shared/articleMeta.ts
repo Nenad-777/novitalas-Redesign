@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/pad-vlade-u-rumuniji-proevropski-zid-nato",
+    title: "Pad vlade u Rumuniji: proevropski zid puca na istočnom krilu NATO-a",
+    description:
+      "Pad vlade Ilieja Bolojana u Rumuniji otvara pitanje stabilnosti zemlje na istočnom krilu NATO-a, evropskih fondova, fiskalne štednje i rasta krajnje desnice.",
+    imageSrc: "/news/romania-parliament-bucharest.jpg",
+    datePublished: "2026-05-05",
+    author: "Novi Talas",
+  },
+  {
     path: "/nasa-planeta/venecijansko-bijenale-ziri-ostavka-umetnost-granice",
     title: "Može li se zabraniti umetnost zbog države iz koje dolazi?",
     description:

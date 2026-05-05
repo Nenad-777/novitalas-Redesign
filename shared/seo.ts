@@ -15,6 +15,27 @@ export interface SEOData {
 }
 
 export const seoData: Record<string, SEOData> = {
+  "/geopolitika/pad-vlade-u-rumuniji-proevropski-zid-nato": {
+    title:
+      "Pad vlade u Rumuniji: proevropski zid puca na istočnom krilu NATO-a | Novi Talas",
+    description:
+      "Pad vlade Ilieja Bolojana u Rumuniji otvara pitanje stabilnosti zemlje na istočnom krilu NATO-a, evropskih fondova, fiskalne štednje i rasta krajnje desnice.",
+    ogTitle:
+      "Pad vlade u Rumuniji: proevropski zid puca na istočnom krilu NATO-a",
+    ogDescription:
+      "Vlada Ilieja Bolojana pala je posle izglasavanja nepoverenja, nakon što su socijaldemokrate napustile proevropsku koaliciju i udružile glasove sa krajnjom desnicom.",
+    ogUrl:
+      "https://novitalas.org/geopolitika/pad-vlade-u-rumuniji-proevropski-zid-nato",
+    ogImage: "https://novitalas.org/news/romania-parliament-bucharest.jpg",
+    twitterTitle:
+      "Pad vlade u Rumuniji: proevropski zid puca na istočnom krilu NATO-a",
+    twitterDescription:
+      "Vlada Ilieja Bolojana pala je posle izglasavanja nepoverenja, nakon što su socijaldemokrate napustile proevropsku koaliciju i udružile glasove sa krajnjom desnicom.",
+    twitterImage: "https://novitalas.org/news/romania-parliament-bucharest.jpg",
+    datePublished: "2026-05-05",
+    author: "Novi Talas",
+  },
+
   "/geopolitika/amerika-povlaci-vojnike-iz-nemacke-nato-nepoverenje": {
     title:
       "Amerika povlači vojnike iz Nemačke: NATO ulazi u novu eru nepoverenja | Novi Talas",

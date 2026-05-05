@@ -13,15 +13,15 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/amerika-povlaci-vojnike-iz-nemacke-nato-nepoverenje",
+  href: "/geopolitika/pad-vlade-u-rumuniji-proevropski-zid-nato",
   category: "GEOPOLITIKA",
-  title: "Amerika povlači vojnike iz Nemačke: NATO ulazi u novu eru nepoverenja",
+  title: "Pad vlade u Rumuniji: proevropski zid puca na istočnom krilu NATO-a",
   description:
-    "Povlačenje oko 5.000 američkih vojnika iz Nemačke pokazuje da evropska bezbednost ulazi u period u kome se američka zaštita više ne podrazumeva kao ranije.",
-  imageSrc: "/news/us-german-soldiers-germany.jpg",
-  imageAlt: "Američki i nemački vojnici tokom zajedničke vežbe u Oberlausitzu, Nemačka",
+    "Vlada Ilieja Bolojana pala je nakon što su socijaldemokrate napustile proevropsku koaliciju i udružile glasove sa krajnjom desnicom. Kriza u Bukureštu otvara pitanje stabilnosti Rumunije, evropskih fondova i političke čvrstine NATO istoka.",
+  imageSrc: "/news/romania-parliament-bucharest.jpg",
+  imageAlt: "Palata parlamenta u Bukureštu",
   imageCredit:
-    "Američki i nemački vojnici tokom zajedničke vežbe u Oberlausitzu, Nemačka. Foto: Spc. Hassani Ribera Soto / U.S. Army, DVIDS",
+    "Palata parlamenta u Bukureštu. Foto: Wikimedia Commons",
 };
 
 // Simple fade-in on scroll hook
@@ -259,6 +259,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Geopolitika"
+                href="/geopolitika/amerika-povlaci-vojnike-iz-nemacke-nato-nepoverenje"
+                title="Amerika povlači vojnike iz Nemačke: NATO ulazi u novu eru nepoverenja"
+                description="Povlačenje oko 5.000 američkih vojnika iz Nemačke pokazuje da evropska bezbednost ulazi u period u kome se američka zaštita više ne podrazumeva kao ranije."
+                imageSrc="/news/us-german-soldiers-germany.jpg"
+                imageAlt="Američki i nemački vojnici tokom zajedničke vežbe u Oberlausitzu, Nemačka"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Kultura"
                 href="/nasa-planeta/venecijansko-bijenale-ziri-ostavka-umetnost-granice"
                 title="Može li se zabraniti umetnost zbog države iz koje dolazi?"
@@ -287,17 +298,6 @@ export default function Home() {
                 description="Nemački tužioci tvrde da je državljanin Kazahstana mesecima bio u kontaktu sa ruskom obaveštajnom službom i dostavljao podatke o vojnoj pomoći Ukrajini, odbrambenoj industriji i kretanju NATO konvoja."
                 imageSrc="/news/kazakstan-spy.jpg"
                 imageAlt="Uhapšeni osumnjičeni špijun u Berlinu, kazahstanski državljanin Sergej K"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Naša planeta"
-                href="/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji"
-                title="Homerova Ilijada pronađena u egipatskoj mumiji"
-                description="U antičkom Oksirinhu arheolozi su otkrili papirus sa fragmentom Ilijade unutar mumije iz rimskog perioda, što predstavlja prvi poznati slučaj ovakve upotrebe književnog teksta u mumifikaciji."
-                imageSrc="/news/Iliad-mumy.jpg"
-                imageAlt="Papirus sa fragmentom Homerove Ilijade pronađen unutar egipatske mumije"
               />
             </div>
           </FadeIn>
