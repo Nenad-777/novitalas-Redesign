@@ -26,6 +26,9 @@ import BugarskaNaRaskrsniciRumenRadevVodiPremaIzlaznimAnketama from "./pages/bug
 import NovacKaoUslovTrenutakUKojemSeOdlucujePravacSrbije from "./pages/novac-kao-uslov-trenutak-u-kojem-se-odlucuje-pravac-srbije";
 
 /* ✅ NOVA VEST — Geopolitika */
+import AmerickeSluzbeIranMozeDaIzdrziBlokaduOrmuza from "./pages/americke-sluzbe-iran-moze-da-izdrzi-blokadu-ormuza";
+
+/* ✅ NOVA VEST — Geopolitika */
 import PadVladeURumuniji from "./pages/pad-vlade-u-rumuniji-proevropski-zid-nato";
 
 /* ✅ NOVA VEST — Geopolitika */
@@ -218,6 +221,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/americke-sluzbe-iran-moze-da-izdrzi-blokadu-ormuza"
+          component={AmerickeSluzbeIranMozeDaIzdrziBlokaduOrmuza}
+        />
+
         <Route
           path="/geopolitika/pad-vlade-u-rumuniji-proevropski-zid-nato"
           component={PadVladeURumuniji}

@@ -13,15 +13,14 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/pad-vlade-u-rumuniji-proevropski-zid-nato",
+  href: "/geopolitika/americke-sluzbe-iran-moze-da-izdrzi-blokadu-ormuza",
   category: "GEOPOLITIKA",
-  title: "Pad vlade u Rumuniji: proevropski zid puca na istočnom krilu NATO-a",
+  title: "Američke službe upozoravaju: Iran može da izdrži blokadu Ormuza mesecima",
   description:
-    "Vlada Ilieja Bolojana pala je nakon što su socijaldemokrate napustile proevropsku koaliciju i udružile glasove sa krajnjom desnicom. Kriza u Bukureštu otvara pitanje stabilnosti Rumunije, evropskih fondova i političke čvrstine NATO istoka.",
-  imageSrc: "/news/romania-parliament-bucharest.jpg",
-  imageAlt: "Palata parlamenta u Bukureštu",
-  imageCredit:
-    "Palata parlamenta u Bukureštu. Foto: Wikimedia Commons",
+    "Američka procena kaže da Iran može da izdrži blokadu Ormuza mesecima, što krizu oko ključnog energetskog prolaza pretvara u rat izdržljivosti, a ne u brzu pobedu Vašingtona.",
+  imageSrc: "/news/washington-cia.jpg",
+  imageAlt: "Ilustracija američke obaveštajne procene i Ormuskog moreuza",
+  imageCredit: "Ilustracija: Novi Talas / AI",
 };
 
 // Simple fade-in on scroll hook
@@ -260,6 +259,17 @@ export default function Home() {
             <div className="flex flex-col gap-6">
               <SmallArticleCard
                 category="Geopolitika"
+                href="/geopolitika/pad-vlade-u-rumuniji-proevropski-zid-nato"
+                title="Pad vlade u Rumuniji: proevropski zid puca na istočnom krilu NATO-a"
+                description="Vlada Ilieja Bolojana pala je nakon što su socijaldemokrate napustile proevropsku koaliciju i udružile glasove sa krajnjom desnicom. Kriza u Bukureštu otvara pitanje stabilnosti Rumunije, evropskih fondova i političke čvrstine NATO istoka."
+                imageSrc="/news/romania-parliament-bucharest.jpg"
+                imageAlt="Palata parlamenta u Bukureštu"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
+                category="Geopolitika"
                 href="/geopolitika/amerika-povlaci-vojnike-iz-nemacke-nato-nepoverenje"
                 title="Amerika povlači vojnike iz Nemačke: NATO ulazi u novu eru nepoverenja"
                 description="Povlačenje oko 5.000 američkih vojnika iz Nemačke pokazuje da evropska bezbednost ulazi u period u kome se američka zaštita više ne podrazumeva kao ranije."
@@ -287,17 +297,6 @@ export default function Home() {
                 description="Prvi maj 2026. donosi sliku sveta u kome se energetska kriza, rat u Ukrajini i američko-kinesko nadmetanje sve brže spajaju u jednu geopolitičku celinu."
                 imageSrc="/news/world-1.may.jpg"
                 imageAlt="Geopolitička mapa pritiska: Ormuz, Ukrajina i Tajvan"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Obaveštajni izvori"
-                href="/obavestajni-izvori/kazakstan-spijun"
-                title="Berlin u senci špijunaže: uhapšen osumnjičeni ruski agent, meta bile informacije o Ukrajini i NATO konvojima"
-                description="Nemački tužioci tvrde da je državljanin Kazahstana mesecima bio u kontaktu sa ruskom obaveštajnom službom i dostavljao podatke o vojnoj pomoći Ukrajini, odbrambenoj industriji i kretanju NATO konvoja."
-                imageSrc="/news/kazakstan-spy.jpg"
-                imageAlt="Uhapšeni osumnjičeni špijun u Berlinu, kazahstanski državljanin Sergej K"
               />
             </div>
           </FadeIn>
