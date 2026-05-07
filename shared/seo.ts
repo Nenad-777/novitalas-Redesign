@@ -15,6 +15,27 @@ export interface SEOData {
 }
 
 export const seoData: Record<string, SEOData> = {
+  "/geopolitika/americke-sluzbe-iran-moze-da-izdrzi-blokadu-ormuza": {
+    title:
+      "Američke službe upozoravaju: Iran može da izdrži blokadu Ormuza mesecima | Novi Talas",
+    description:
+      "Američka obaveštajna procena upozorava da Iran može da izdrži blokadu Ormuskog moreuza najmanje tri do četiri meseca, uprkos pritisku Vašingtona.",
+    ogTitle:
+      "Američke službe upozoravaju: Iran može da izdrži blokadu Ormuza mesecima",
+    ogDescription:
+      "Procena američkih službi dovodi u pitanje tvrdnje Bele kuće da je Teheran blizu sloma i pokazuje da se kriza oko Ormuza pretvara u rat izdržljivosti.",
+    ogUrl:
+      "https://novitalas.org/geopolitika/americke-sluzbe-iran-moze-da-izdrzi-blokadu-ormuza",
+    ogImage: "https://novitalas.org/news/washington-cia.jpg",
+    twitterTitle:
+      "Američke službe upozoravaju: Iran može da izdrži blokadu Ormuza mesecima",
+    twitterDescription:
+      "Procena američkih službi dovodi u pitanje tvrdnje Bele kuće da je Teheran blizu sloma i pokazuje da se kriza oko Ormuza pretvara u rat izdržljivosti.",
+    twitterImage: "https://novitalas.org/news/washington-cia.jpg",
+    datePublished: "2026-05-07",
+    author: "Novi Talas",
+  },
+
   "/geopolitika/pad-vlade-u-rumuniji-proevropski-zid-nato": {
     title:
       "Pad vlade u Rumuniji: proevropski zid puca na istočnom krilu NATO-a | Novi Talas",

@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  washingtonCia: "/news/washington-cia.jpg",
   romaniaParliament: "/news/romania-parliament-bucharest.jpg",
   usGermanSoldiers: "/news/us-german-soldiers-germany.jpg",
   world1May: "/news/world-1.may.jpg",
@@ -79,10 +80,10 @@ export default function GeopolitikaIndex() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* ✅ NAJNOVIJA VEST (Pad vlade u Rumuniji) */}
+            {/* ✅ NAJNOVIJA VEST (Američke službe upozoravaju) */}
             <article className="md:col-span-2">
               <Link
-                href="/geopolitika/pad-vlade-u-rumuniji-proevropski-zid-nato"
+                href="/geopolitika/americke-sluzbe-iran-moze-da-izdrzi-blokadu-ormuza"
                 className="no-underline"
               >
                 <div
@@ -93,8 +94,8 @@ export default function GeopolitikaIndex() {
                   }}
                 >
                   <img
-                    src={IMAGES.romaniaParliament}
-                    alt="Palata parlamenta u Bukureštu"
+                    src={IMAGES.washingtonCia}
+                    alt="Ilustracija američke obaveštajne procene i Ormuskog moreuza"
                     className="w-full h-[260px] object-cover object-center block"
                     decoding="async"
                   />
@@ -107,7 +108,7 @@ export default function GeopolitikaIndex() {
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  Pad vlade u Rumuniji: proevropski zid puca na istočnom krilu NATO-a
+                  Američke službe upozoravaju: Iran može da izdrži blokadu Ormuza mesecima
                 </h2>
 
                 <p
@@ -117,7 +118,7 @@ export default function GeopolitikaIndex() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Vlada Ilieja Bolojana pala je nakon što su socijaldemokrate napustile proevropsku koaliciju i udružile glasove sa krajnjom desnicom. Kriza u Bukureštu otvara pitanje stabilnosti Rumunije, evropskih fondova i političke čvrstine NATO istoka.
+                  Procena američke obaveštajne zajednice dovodi u pitanje tvrdnje Bele kuće da je Teheran blizu sloma. Iran, prema tim procenama, i dalje raspolaže značajnim raketnim i dronovskim kapacitetima, dok se kriza oko Ormuskog moreuza sve jasnije pretvara u rat izdržljivosti.
                 </p>
 
                 <div

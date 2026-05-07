@@ -32,6 +32,7 @@ type ArticleTemplateProps = {
   sectionLabel: string;
   title: string;
   dateLabel?: string;
+  authorLabel?: string;
   deck?: string;
   imageSrc?: string;
   imageAlt?: string;
@@ -48,6 +49,7 @@ export default function ArticleTemplate({
   sectionLabel,
   title,
   dateLabel,
+  authorLabel,
   deck,
   imageSrc,
   imageAlt = "",
@@ -95,8 +97,29 @@ export default function ArticleTemplate({
             {title}
           </h1>
 
-          {/* Datum */}
-          {dateLabel ? (
+          {/* Datum / autor */}
+          {authorLabel ? (
+            <div
+              className="mt-3 flex items-center gap-2 text-[13px]"
+              style={{
+                fontFamily: "'Source Sans 3', sans-serif",
+                color: isDark ? "#7a7872" : "#888",
+              }}
+            >
+              <span
+                className="font-semibold uppercase tracking-[0.05em]"
+                style={{ color: isDark ? "#9a978f" : "#555" }}
+              >
+                {authorLabel}
+              </span>
+              {dateLabel ? (
+                <>
+                  <span>&bull;</span>
+                  <span>{dateLabel}</span>
+                </>
+              ) : null}
+            </div>
+          ) : dateLabel ? (
             <p
               className="mt-3 uppercase"
               style={{
