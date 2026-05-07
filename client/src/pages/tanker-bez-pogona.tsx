@@ -27,7 +27,7 @@ export default function TankerBezPogona() {
       deck="Tanker bez pogona koji prevozi naftu nekontrolisano pluta u evropskim vodama, dok evropski lideri upozoravaju na rizik ekološke katastrofe i traže hitnu koordinisanu reakciju."
       imageSrc="/news/tanker.jpg"
       imageAlt="Tanker bez pogona u evropskim vodama"
-      imageCredit="Vizuel: Novi Talas (AI)"
+      imageCredit="Ilustracija: Novi Talas"
       paragraphs={PARAGRAPHS}
       backHref="/geopolitika"
       backLabel="← Nazad na Geopolitiku"

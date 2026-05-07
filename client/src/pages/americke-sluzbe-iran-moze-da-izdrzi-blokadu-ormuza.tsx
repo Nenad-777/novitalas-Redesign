@@ -20,7 +20,7 @@ export default function AmerickeSluzbeIranMozeDaIzdrziBlokaduOrmuza() {
       deck="Procena američke obaveštajne zajednice dovodi u pitanje tvrdnje Bele kuće da je Teheran blizu sloma. Iran, prema tim procenama, i dalje raspolaže značajnim raketnim i dronovskim kapacitetima, dok se kriza oko Ormuskog moreuza sve jasnije pretvara u rat izdržljivosti."
       imageSrc={IMAGE_SRC}
       imageAlt="Ilustracija američke obaveštajne procene i Ormuskog moreuza"
-      imageCredit="Ilustracija: Novi Talas / AI"
+      imageCredit="Ilustracija: Novi Talas"
       paragraphs={PARAGRAPHS}
       backHref="/geopolitika"
       backLabel="← Nazad na Geopolitiku"

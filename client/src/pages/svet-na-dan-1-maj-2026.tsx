@@ -10,7 +10,7 @@ export default function SvetNaDan1Maj2026() {
       deck="Prvi maj 2026. donosi sliku sveta u kome se energetska kriza, rat u Ukrajini i američko-kinesko nadmetanje sve brže spajaju u jednu geopolitičku celinu."
       imageSrc="/news/world-1.may.jpg"
       imageAlt="Geopolitička mapa pritiska: Ormuz, Ukrajina i Tajvan"
-      imageCredit="Ilustracija: Novi Talas / AI"
+      imageCredit="Ilustracija: Novi Talas"
       paragraphs={[
         "Prvi maj 2026. ne liči na dan političke pauze. Naprotiv, najnovije vesti iz sveta pokazuju da se međunarodni poredak nalazi u stanju produženog pritiska, gde se Bliski istok, istočna Evropa i Indo-Pacifik više ne mogu posmatrati kao odvojene krize. Ono što se dešava u Ormuskom moreuzu utiče na cene energije u Aziji i Evropi. Ono što se dešava u Ukrajini oblikuje buduću bezbednost Evrope. Ono što Peking govori Vašingtonu o Tajvanu pokazuje da se najveće sile već pripremaju za pregovore u kojima nijedna tema nije izolovana.",
         "U središtu dana ostaje Iran i kriza oko Ormuskog moreuza. Prema izveštajima međunarodnih agencija, Ujedinjeni Arapski Emirati ocenjuju da se Iranu ne može verovati kada je reč o Ormuzu, dok su diplomatski napori za smirivanje situacije u zastoju. Istovremeno, tržišta u Zalivu ostaju oprezna, a cena nafte je i dalje pod pritiskom zbog geopolitičke napetosti i mogućnosti novog američkog pritiska na Teheran.",
