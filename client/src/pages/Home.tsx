@@ -20,7 +20,7 @@ const HERO_ARTICLE = {
     "Američka procena kaže da Iran može da izdrži blokadu Ormuza mesecima, što krizu oko ključnog energetskog prolaza pretvara u rat izdržljivosti, a ne u brzu pobedu Vašingtona.",
   imageSrc: "/news/washington-cia.jpg",
   imageAlt: "Ilustracija američke obaveštajne procene i Ormuskog moreuza",
-  imageCredit: "Ilustracija: Novi Talas / AI",
+  imageCredit: "Ilustracija: Novi Talas",
 };
 
 // Simple fade-in on scroll hook
