@@ -15,6 +15,27 @@ export interface SEOData {
 }
 
 export const seoData: Record<string, SEOData> = {
+  "/geopolitika/ormuz-deli-nato-vasington-trazi-baze": {
+    title:
+      "Ormuz deli NATO: Vašington traži baze, Evropa meri cenu savezništva | Novi Talas",
+    description:
+      "Kriza u Ormuskom moreuzu testira NATO: Vašington traži podršku evropskih baza, dok Evropa meri cenu savezništva i rizik ulaska u američku strategiju prema Iranu.",
+    ogTitle:
+      "Ormuz deli NATO: Vašington traži baze, Evropa meri cenu savezništva",
+    ogDescription:
+      "Ormuski moreuz više nije samo tačka sukoba SAD i Irana. Kriza sada testira NATO, evropske baze i poverenje između Vašingtona i saveznika.",
+    ogUrl:
+      "https://novitalas.org/geopolitika/ormuz-deli-nato-vasington-trazi-baze",
+    ogImage: "https://novitalas.org/news/ormuz-nato-problems.jpg",
+    twitterTitle:
+      "Ormuz deli NATO: Vašington traži baze, Evropa meri cenu savezništva",
+    twitterDescription:
+      "Ormuski moreuz više nije samo tačka sukoba SAD i Irana. Kriza sada testira NATO, evropske baze i poverenje između Vašingtona i saveznika.",
+    twitterImage: "https://novitalas.org/news/ormuz-nato-problems.jpg",
+    datePublished: "2026-05-08",
+    author: "Novi Talas",
+  },
+
   "/geopolitika/americke-sluzbe-iran-moze-da-izdrzi-blokadu-ormuza": {
     title:
       "Američke službe upozoravaju: Iran može da izdrži blokadu Ormuza mesecima | Novi Talas",

@@ -13,13 +13,13 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/americke-sluzbe-iran-moze-da-izdrzi-blokadu-ormuza",
+  href: "/geopolitika/ormuz-deli-nato-vasington-trazi-baze",
   category: "GEOPOLITIKA",
-  title: "Američke službe upozoravaju: Iran može da izdrži blokadu Ormuza mesecima",
+  title: "Ormuz deli NATO: Vašington traži baze, Evropa meri cenu savezništva",
   description:
-    "Američka procena kaže da Iran može da izdrži blokadu Ormuza mesecima, što krizu oko ključnog energetskog prolaza pretvara u rat izdržljivosti, a ne u brzu pobedu Vašingtona.",
-  imageSrc: "/news/washington-cia.jpg",
-  imageAlt: "Ilustracija američke obaveštajne procene i Ormuskog moreuza",
+    "Kriza oko Ormuza sada testira i NATO: Vašington traži podršku evropskih baza, dok saveznici mere cenu ulaska u američku strategiju prema Iranu.",
+  imageSrc: "/news/ormuz-nato-problems.jpg",
+  imageAlt: "Ormuski moreuz i NATO saveznici, ilustracija geopolitičke krize",
   imageCredit: "Ilustracija: Novi Talas",
 };
 
@@ -259,6 +259,17 @@ export default function Home() {
             <div className="flex flex-col gap-6">
               <SmallArticleCard
                 category="Geopolitika"
+                href="/geopolitika/americke-sluzbe-iran-moze-da-izdrzi-blokadu-ormuza"
+                title="Američke službe upozoravaju: Iran može da izdrži blokadu Ormuza mesecima"
+                description="Američka procena kaže da Iran može da izdrži blokadu Ormuza mesecima, što krizu oko ključnog energetskog prolaza pretvara u rat izdržljivosti, a ne u brzu pobedu Vašingtona."
+                imageSrc="/news/washington-cia.jpg"
+                imageAlt="Ilustracija američke obaveštajne procene i Ormuskog moreuza"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
+                category="Geopolitika"
                 href="/geopolitika/pad-vlade-u-rumuniji-proevropski-zid-nato"
                 title="Pad vlade u Rumuniji: proevropski zid puca na istočnom krilu NATO-a"
                 description="Vlada Ilieja Bolojana pala je nakon što su socijaldemokrate napustile proevropsku koaliciju i udružile glasove sa krajnjom desnicom. Kriza u Bukureštu otvara pitanje stabilnosti Rumunije, evropskih fondova i političke čvrstine NATO istoka."
@@ -286,17 +297,6 @@ export default function Home() {
                 description="Ostavka žirija Venecijanskog bijenala otvorila je pitanje koje prevazilazi jednu izložbu: da li umetnost treba da ostane prostor bez granica, ili mora da odgovori na ratove iz sveta oko sebe."
                 imageSrc="/news/venice-biennale-arsenale-2024.jpg"
                 imageAlt="Izložbeni prostor Arsenala tokom 60. Venecijanskog bijenala 2024."
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/svet-na-dan-1-maj-2026"
-                title="SVET NA DAN, 1. maj: Ormuz, Ukrajina i Tajvan oblikuju novu mapu pritiska"
-                description="Prvi maj 2026. donosi sliku sveta u kome se energetska kriza, rat u Ukrajini i američko-kinesko nadmetanje sve brže spajaju u jednu geopolitičku celinu."
-                imageSrc="/news/world-1.may.jpg"
-                imageAlt="Geopolitička mapa pritiska: Ormuz, Ukrajina i Tajvan"
               />
             </div>
           </FadeIn>
