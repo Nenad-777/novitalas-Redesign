@@ -80,6 +80,59 @@ export default function GeopolitikaIndex() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* ✅ NAJNOVIJA VEST (Ormuz deli NATO) */}
+            <article className="md:col-span-2">
+              <Link
+                href="/geopolitika/ormuz-deli-nato-vasington-trazi-baze"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src="/news/ormuz-nato-problems.jpg"
+                    alt="Ormuski moreuz i NATO saveznici, ilustracija geopolitičke krize"
+                    className="w-full h-[260px] object-cover object-center block"
+                    decoding="async"
+                  />
+                </div>
+
+                <h2
+                  className="text-[22px] md:text-[28px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Ormuz deli NATO: Vašington traži baze, Evropa meri cenu savezništva
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Kriza u Ormuskom moreuzu više nije samo sukob SAD i Irana. Ona sada testira unutrašnju čvrstinu NATO-a, spremnost evropskih saveznika da podrže američke operacije i sposobnost Zapada da zaštiti ključne energetske prolaze.
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
+
             {/* ✅ NAJNOVIJA VEST (Američke službe upozoravaju) */}
             <article className="md:col-span-2">
               <Link
