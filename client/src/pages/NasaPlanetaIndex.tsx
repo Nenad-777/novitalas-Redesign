@@ -19,6 +19,15 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/trump-otvorio-ufo-arhive",
+    img: "/news/ufo-files.jpg",
+    alt: "Ilustracija UFO arhiva Trumpove administracije",
+    imageCredit: "Ilustracija: Novi Talas",
+    title: "Trump otvorio UFO arhive: više pitanja nego odgovora",
+    description:
+      "Objavljena je prva grupa američkih dokumenata o UFO i UAP pojavama. Arhive donose snimke, fotografije i stare izveštaje, ali ne i dokaz o vanzemaljskoj tehnologiji.",
+  },
+  {
     href: "/nasa-planeta/venecijansko-bijenale-ziri-ostavka-umetnost-granice",
     img: "/news/venice-biennale-arsenale-2024.jpg",
     alt: "Izložbeni prostor Arsenala tokom 60. Venecijanskog bijenala 2024.",
