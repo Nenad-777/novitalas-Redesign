@@ -13,13 +13,13 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/ormuz-deli-nato-vasington-trazi-baze",
-  category: "GEOPOLITIKA",
-  title: "Ormuz deli NATO: Vašington traži baze, Evropa meri cenu savezništva",
+  href: "/nasa-planeta/trump-otvorio-ufo-arhive",
+  category: "NAŠA PLANETA",
+  title: "Trump otvorio UFO arhive: više pitanja nego odgovora",
   description:
-    "Kriza oko Ormuza sada testira i NATO: Vašington traži podršku evropskih baza, dok saveznici mere cenu ulaska u američku strategiju prema Iranu.",
-  imageSrc: "/news/ormuz-nato-problems.jpg",
-  imageAlt: "Ormuski moreuz i NATO saveznici, ilustracija geopolitičke krize",
+    "Objavljena je prva grupa američkih dokumenata o UFO i UAP pojavama. Arhive donose snimke, fotografije i stare izveštaje, ali ne i dokaz o vanzemaljskoj tehnologiji.",
+  imageSrc: "/news/ufo-files.jpg",
+  imageAlt: "Ilustracija UFO arhiva Trumpove administracije",
   imageCredit: "Ilustracija: Novi Talas",
 };
 
@@ -259,6 +259,17 @@ export default function Home() {
             <div className="flex flex-col gap-6">
               <SmallArticleCard
                 category="Geopolitika"
+                href="/geopolitika/ormuz-deli-nato-vasington-trazi-baze"
+                title="Ormuz deli NATO: Vašington traži baze, Evropa meri cenu savezništva"
+                description="Kriza oko Ormuza sada testira i NATO: Vašington traži podršku evropskih baza, dok saveznici mere cenu ulaska u američku strategiju prema Iranu."
+                imageSrc="/news/ormuz-nato-problems.jpg"
+                imageAlt="Ormuski moreuz i NATO saveznici, ilustracija geopolitičke krize"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
+                category="Geopolitika"
                 href="/geopolitika/americke-sluzbe-iran-moze-da-izdrzi-blokadu-ormuza"
                 title="Američke službe upozoravaju: Iran može da izdrži blokadu Ormuza mesecima"
                 description="Američka procena kaže da Iran može da izdrži blokadu Ormuza mesecima, što krizu oko ključnog energetskog prolaza pretvara u rat izdržljivosti, a ne u brzu pobedu Vašingtona."
@@ -286,17 +297,6 @@ export default function Home() {
                 description="Povlačenje oko 5.000 američkih vojnika iz Nemačke pokazuje da evropska bezbednost ulazi u period u kome se američka zaštita više ne podrazumeva kao ranije."
                 imageSrc="/news/us-german-soldiers-germany.jpg"
                 imageAlt="Američki i nemački vojnici tokom zajedničke vežbe u Oberlausitzu, Nemačka"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Kultura"
-                href="/nasa-planeta/venecijansko-bijenale-ziri-ostavka-umetnost-granice"
-                title="Može li se zabraniti umetnost zbog države iz koje dolazi?"
-                description="Ostavka žirija Venecijanskog bijenala otvorila je pitanje koje prevazilazi jednu izložbu: da li umetnost treba da ostane prostor bez granica, ili mora da odgovori na ratove iz sveta oko sebe."
-                imageSrc="/news/venice-biennale-arsenale-2024.jpg"
-                imageAlt="Izložbeni prostor Arsenala tokom 60. Venecijanskog bijenala 2024."
               />
             </div>
           </FadeIn>

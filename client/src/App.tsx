@@ -147,6 +147,9 @@ import SpilbergUpozoravaHolivudPublikaTraziOriginalneFilmove from "./pages/spilb
 import UmetnostKojaDiseTeamlabTokio from "./pages/umetnost-koja-dise-teamlab-tokio";
 
 /* ✅ NOVA VEST — Naša planeta */
+import TrumpOtvorioUfoArhive from "./pages/trump-otvorio-ufo-arhive";
+
+/* ✅ NOVA VEST — Naša planeta */
 import VenecijanskoBijenaleZiriOstavka from "./pages/venecijansko-bijenale-ziri-ostavka-umetnost-granice";
 
 /* ✅ NOVA VEST — Naša planeta */
@@ -519,6 +522,11 @@ function Router() {
             NAŠA PLANETA
            ========================= */}
         <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
+
+        <Route
+          path="/nasa-planeta/trump-otvorio-ufo-arhive"
+          component={TrumpOtvorioUfoArhive}
+        />
 
         <Route
           path="/nasa-planeta/venecijansko-bijenale-ziri-ostavka-umetnost-granice"

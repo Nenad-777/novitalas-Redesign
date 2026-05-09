@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/trump-otvorio-ufo-arhive",
+    title: "Trump otvorio UFO arhive: više pitanja nego odgovora",
+    description:
+      "Američka administracija objavila je prvu grupu ranije poverljivih dokumenata o UFO i UAP pojavama, ali bez potvrde da je reč o vanzemaljskoj tehnologiji.",
+    imageSrc: "/news/ufo-files.jpg",
+    datePublished: "2026-05-08",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/pad-vlade-u-rumuniji-proevropski-zid-nato",
     title: "Pad vlade u Rumuniji: proevropski zid puca na istočnom krilu NATO-a",
     description:
