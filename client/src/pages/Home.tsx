@@ -13,13 +13,13 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/nasa-planeta/trump-otvorio-ufo-arhive",
-  category: "NAŠA PLANETA",
-  title: "Trump otvorio UFO arhive: više pitanja nego odgovora",
+  href: "/geopolitika/putin-govori-o-kraju-rata-ukrajina",
+  category: "GEOPOLITIKA",
+  title: "Putin govori o kraju rata: između nade i opreza",
   description:
-    "Objavljena je prva grupa američkih dokumenata o UFO i UAP pojavama. Arhive donose snimke, fotografije i stare izveštaje, ali ne i dokaz o vanzemaljskoj tehnologiji.",
-  imageSrc: "/news/ufo-files.jpg",
-  imageAlt: "Ilustracija UFO arhiva Trumpove administracije",
+    "Putinova tvrdnja da se rat u Ukrajini približava kraju ne znači da je mir blizu, ali pokazuje da se reč “završnica” ponovo vraća u diplomatski prostor.",
+  imageSrc: "/news/putin-end-war.jpg",
+  imageAlt: "Ilustracija izjave Vladimira Putina o završnici rata u Ukrajini",
   imageCredit: "Ilustracija: Novi Talas",
 };
 
@@ -258,6 +258,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Naša planeta"
+                href="/nasa-planeta/trump-otvorio-ufo-arhive"
+                title="Trump otvorio UFO arhive: više pitanja nego odgovora"
+                description="Objavljena je prva grupa američkih dokumenata o UFO i UAP pojavama. Arhive donose snimke, fotografije i stare izveštaje, ali ne i dokaz o vanzemaljskoj tehnologiji."
+                imageSrc="/news/ufo-files.jpg"
+                imageAlt="Ilustracija UFO arhiva Trumpove administracije"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Geopolitika"
                 href="/geopolitika/ormuz-deli-nato-vasington-trazi-baze"
                 title="Ormuz deli NATO: Vašington traži baze, Evropa meri cenu savezništva"
@@ -288,16 +299,6 @@ export default function Home() {
                 imageAlt="Palata parlamenta u Bukureštu"
               />
 
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/amerika-povlaci-vojnike-iz-nemacke-nato-nepoverenje"
-                title="Amerika povlači vojnike iz Nemačke: NATO ulazi u novu eru nepoverenja"
-                description="Povlačenje oko 5.000 američkih vojnika iz Nemačke pokazuje da evropska bezbednost ulazi u period u kome se američka zaštita više ne podrazumeva kao ranije."
-                imageSrc="/news/us-german-soldiers-germany.jpg"
-                imageAlt="Američki i nemački vojnici tokom zajedničke vežbe u Oberlausitzu, Nemačka"
-              />
             </div>
           </FadeIn>
 

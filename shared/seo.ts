@@ -15,6 +15,24 @@ export interface SEOData {
 }
 
 export const seoData: Record<string, SEOData> = {
+  "/geopolitika/putin-govori-o-kraju-rata-ukrajina": {
+    title: "Putin govori o kraju rata: između nade i opreza | Novi Talas",
+    description:
+      "Putinova izjava da se rat u Ukrajini približava kraju vraća temu završnice u diplomatski prostor, ali borbe na terenu pokazuju da mir još nije blizu.",
+    ogTitle: "Putin govori o kraju rata: između nade i opreza",
+    ogDescription:
+      "Ruski predsednik kaže da veruje da se rat u Ukrajini približava završetku. Njegove reči bude nadu, ali front i dalje ne ćuti.",
+    ogUrl:
+      "https://novitalas.org/geopolitika/putin-govori-o-kraju-rata-ukrajina",
+    ogImage: "https://novitalas.org/news/putin-end-war.jpg",
+    twitterTitle: "Putin govori o kraju rata: između nade i opreza",
+    twitterDescription:
+      "Ruski predsednik kaže da veruje da se rat u Ukrajini približava završetku. Njegove reči bude nadu, ali front i dalje ne ćuti.",
+    twitterImage: "https://novitalas.org/news/putin-end-war.jpg",
+    datePublished: "2026-05-09",
+    author: "Novi Talas",
+  },
+
   "/geopolitika/ormuz-deli-nato-vasington-trazi-baze": {
     title:
       "Ormuz deli NATO: Vašington traži baze, Evropa meri cenu savezništva | Novi Talas",
