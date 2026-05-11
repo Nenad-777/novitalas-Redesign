@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/putin-govori-o-kraju-rata-ukrajina",
+    title: "Putin govori o kraju rata: između nade i opreza",
+    description:
+      "Putinova izjava da se rat u Ukrajini približava kraju vraća temu završnice u diplomatski prostor, ali borbe na terenu pokazuju da mir još nije blizu.",
+    imageSrc: "/news/putin-end-war.jpg",
+    datePublished: "2026-05-09",
+    author: "Novi Talas",
+  },
+  {
     path: "/nasa-planeta/trump-otvorio-ufo-arhive",
     title: "Trump otvorio UFO arhive: više pitanja nego odgovora",
     description:
