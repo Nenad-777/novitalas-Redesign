@@ -13,13 +13,13 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/putin-govori-o-kraju-rata-ukrajina",
+  href: "/geopolitika/brics-iran-nafta-pukotine-multipolarnog-sveta",
   category: "GEOPOLITIKA",
-  title: "Putin govori o kraju rata: između nade i opreza",
+  title: "BRICS pred velikim testom: Iran, nafta i pukotine multipolarnog sveta",
   description:
-    "Putinova tvrdnja da se rat u Ukrajini približava kraju ne znači da je mir blizu, ali pokazuje da se reč “završnica” ponovo vraća u diplomatski prostor.",
-  imageSrc: "/news/putin-end-war.jpg",
-  imageAlt: "Ilustracija izjave Vladimira Putina o završnici rata u Ukrajini",
+    "BRICS se sastaje u Indiji dok rat oko Irana i kriza nafte otkrivaju duboke podele među članicama. Novi multipolarni svet sada polaže prvi veliki ispit stvarne politike.",
+  imageSrc: "/news/brics-breaking.jpg",
+  imageAlt: "Sastanak BRICS-a i geopolitička kriza oko Irana i nafte",
   imageCredit: "Ilustracija: Novi Talas",
 };
 
@@ -258,6 +258,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Geopolitika"
+                href="/geopolitika/putin-govori-o-kraju-rata-ukrajina"
+                title="Putin govori o kraju rata: između nade i opreza"
+                description="Putinova tvrdnja da se rat u Ukrajini približava kraju ne znači da je mir blizu, ali pokazuje da se reč “završnica” ponovo vraća u diplomatski prostor."
+                imageSrc="/news/putin-end-war.jpg"
+                imageAlt="Ilustracija izjave Vladimira Putina o završnici rata u Ukrajini"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Naša planeta"
                 href="/nasa-planeta/trump-otvorio-ufo-arhive"
                 title="Trump otvorio UFO arhive: više pitanja nego odgovora"
@@ -286,17 +297,6 @@ export default function Home() {
                 description="Američka procena kaže da Iran može da izdrži blokadu Ormuza mesecima, što krizu oko ključnog energetskog prolaza pretvara u rat izdržljivosti, a ne u brzu pobedu Vašingtona."
                 imageSrc="/news/washington-cia.jpg"
                 imageAlt="Ilustracija američke obaveštajne procene i Ormuskog moreuza"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/pad-vlade-u-rumuniji-proevropski-zid-nato"
-                title="Pad vlade u Rumuniji: proevropski zid puca na istočnom krilu NATO-a"
-                description="Vlada Ilieja Bolojana pala je nakon što su socijaldemokrate napustile proevropsku koaliciju i udružile glasove sa krajnjom desnicom. Kriza u Bukureštu otvara pitanje stabilnosti Rumunije, evropskih fondova i političke čvrstine NATO istoka."
-                imageSrc="/news/romania-parliament-bucharest.jpg"
-                imageAlt="Palata parlamenta u Bukureštu"
               />
 
             </div>

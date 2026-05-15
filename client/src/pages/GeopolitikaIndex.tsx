@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  bricsBreaking: "/news/brics-breaking.jpg",
   putinEndWar: "/news/putin-end-war.jpg",
   washingtonCia: "/news/washington-cia.jpg",
   romaniaParliament: "/news/romania-parliament-bucharest.jpg",
@@ -81,6 +82,58 @@ export default function GeopolitikaIndex() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <article className="md:col-span-2">
+              <Link
+                href="/geopolitika/brics-iran-nafta-pukotine-multipolarnog-sveta"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.bricsBreaking}
+                    alt="Sastanak BRICS-a i geopolitička kriza oko Irana i nafte"
+                    className="w-full h-[260px] object-cover object-center block"
+                    decoding="async"
+                  />
+                </div>
+
+                <h2
+                  className="text-[22px] md:text-[28px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  BRICS pred velikim testom: Iran, nafta i pukotine multipolarnog sveta
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Sastanak ministara BRICS-a u Indiji pokazuje kako rat oko Irana, kriza nafte i Ormuski moreuz otkrivaju podele unutar multipolarnog sveta.
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
+
             {/* ✅ NAJNOVIJA VEST (Putin govori o kraju rata) */}
             <article className="md:col-span-2">
               <Link

@@ -15,6 +15,27 @@ export interface SEOData {
 }
 
 export const seoData: Record<string, SEOData> = {
+  "/geopolitika/brics-iran-nafta-pukotine-multipolarnog-sveta": {
+    title:
+      "BRICS pred velikim testom: Iran, nafta i pukotine multipolarnog sveta | Novi Talas",
+    description:
+      "Sastanak ministara BRICS-a u Indiji pokazuje kako rat oko Irana, kriza nafte i Ormuski moreuz otkrivaju podele unutar multipolarnog sveta.",
+    ogTitle:
+      "BRICS pred velikim testom: Iran, nafta i pukotine multipolarnog sveta",
+    ogDescription:
+      "BRICS se sastaje u Indiji dok rat oko Irana i kriza nafte testiraju sposobnost bloka da govori jednim glasom.",
+    ogUrl:
+      "https://novitalas.org/geopolitika/brics-iran-nafta-pukotine-multipolarnog-sveta",
+    ogImage: "https://novitalas.org/news/brics-breaking.jpg",
+    twitterTitle:
+      "BRICS pred velikim testom: Iran, nafta i pukotine multipolarnog sveta",
+    twitterDescription:
+      "BRICS se sastaje u Indiji dok rat oko Irana i kriza nafte testiraju sposobnost bloka da govori jednim glasom.",
+    twitterImage: "https://novitalas.org/news/brics-breaking.jpg",
+    datePublished: "2026-05-14",
+    author: "Novi Talas",
+  },
+
   "/geopolitika/putin-govori-o-kraju-rata-ukrajina": {
     title: "Putin govori o kraju rata: između nade i opreza | Novi Talas",
     description:
