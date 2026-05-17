@@ -53,6 +53,7 @@ import KazakstanSpijun from "./pages/kazakstan-spijun";
 
 import ObavestajniArticle from "./pages/ObavestajniArticle";
 import ObavestajniIndex from "./pages/ObavestajniIndex";
+import BritanijaZakonStraneProxyMreze from "./pages/britanija-zakon-strane-proxy-mreze";
 import KinaSpyBrodovi from "./pages/kina-spy-brodovi";
 import CiaPokrenulaKampanju from "./pages/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira";
 import PrviBrifing from "./pages/prvi-brifing";
@@ -444,6 +445,11 @@ function Router() {
             OBAVEŠTAJNI IZVORI
            ========================= */}
         <Route path="/obavestajni-izvori" component={ObavestajniIndex} />
+
+        <Route
+          path="/obavestajni-izvori/britanija-zakon-strane-proxy-mreze"
+          component={BritanijaZakonStraneProxyMreze}
+        />
 
         <Route
           path="/obavestajni-izvori/kazakstan-spijun"

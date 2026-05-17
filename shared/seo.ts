@@ -344,6 +344,24 @@ export const seoData: Record<string, SEOData> = {
     datePublished: "2026-03-08",
   },
 
+  "/obavestajni-izvori/britanija-zakon-strane-proxy-mreze": {
+    title: "Britanija sprema zakon protiv mreža stranih država | Novi Talas",
+    description:
+      "London najavljuje zakon protiv stranih proxy mreža povezanih sa špijunažom, sabotažom, nasiljem i političkim uticajem neprijateljskih država.",
+    ogTitle: "Britanija sprema zakon protiv mreža stranih država",
+    ogDescription:
+      "Britanija želi da zabrani organizacije povezane sa špijunažom, sabotažom i političkim uticajem stranih režima. Novi zakon pokazuje kako se menja evropska kontraobaveštajna politika.",
+    ogUrl:
+      "https://novitalas.org/obavestajni-izvori/britanija-zakon-strane-proxy-mreze",
+    ogImage: "https://novitalas.org/news/london-spy-law.jpg",
+    twitterTitle: "Britanija sprema zakon protiv mreža stranih država",
+    twitterDescription:
+      "Britanija želi da zabrani organizacije povezane sa špijunažom, sabotažom i političkim uticajem stranih režima. Novi zakon pokazuje kako se menja evropska kontraobaveštajna politika.",
+    twitterImage: "https://novitalas.org/news/london-spy-law.jpg",
+    datePublished: "2026-05-15",
+    author: "Novi Talas",
+  },
+
   "/obavestajni-izvori/kina-spy-brodovi": {
     title:
       "Kina prati američke snage na Bliskom istoku uz pomoć AI i špijunskih brodova — Novi Talas",
