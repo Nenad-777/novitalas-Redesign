@@ -10,6 +10,15 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/obavestajni-izvori/britanija-zakon-strane-proxy-mreze",
+    img: "/news/london-spy-law.jpg",
+    alt: "Ilustracija britanskog zakona protiv mreža stranih država",
+    title: "Britanija sprema zakon protiv mreža stranih država",
+    description:
+      "London najavljuje zakon protiv stranih proxy mreža povezanih sa špijunažom, sabotažom, nasiljem i političkim uticajem neprijateljskih država.",
+    date: "15. maj 2026.",
+  },
+  {
     href: "/obavestajni-izvori/kazakstan-spijun",
     img: "/news/kazakstan-spy.jpg",
     alt: "Uhapšeni osumnjičeni špijun u Berlinu — kazahstanski državljanin Sergej K",

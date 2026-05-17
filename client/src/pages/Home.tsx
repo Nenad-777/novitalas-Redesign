@@ -13,13 +13,13 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/brics-iran-nafta-pukotine-multipolarnog-sveta",
-  category: "GEOPOLITIKA",
-  title: "BRICS pred velikim testom: Iran, nafta i pukotine multipolarnog sveta",
+  href: "/obavestajni-izvori/britanija-zakon-strane-proxy-mreze",
+  category: "OBAVEŠTAJNI IZVORI",
+  title: "Britanija sprema zakon protiv mreža stranih država",
   description:
-    "BRICS se sastaje u Indiji dok rat oko Irana i kriza nafte otkrivaju duboke podele među članicama. Novi multipolarni svet sada polaže prvi veliki ispit stvarne politike.",
-  imageSrc: "/news/brics-breaking.jpg",
-  imageAlt: "Sastanak BRICS-a i geopolitička kriza oko Irana i nafte",
+    "Britanija najavljuje zakon protiv stranih proxy mreža povezanih sa špijunažom, sabotažom, nasiljem i političkim uticajem. U fokusu su posrednici koji deluju za račun neprijateljskih država.",
+  imageSrc: "/news/london-spy-law.jpg",
+  imageAlt: "Ilustracija britanskog zakona protiv mreža stranih država",
   imageCredit: "Ilustracija: Novi Talas",
 };
 
@@ -259,6 +259,17 @@ export default function Home() {
             <div className="flex flex-col gap-6">
               <SmallArticleCard
                 category="Geopolitika"
+                href="/geopolitika/brics-iran-nafta-pukotine-multipolarnog-sveta"
+                title="BRICS pred velikim testom: Iran, nafta i pukotine multipolarnog sveta"
+                description="BRICS se sastaje u Indiji dok rat oko Irana i kriza nafte otkrivaju duboke podele među članicama. Novi multipolarni svet sada polaže prvi veliki ispit stvarne politike."
+                imageSrc="/news/brics-breaking.jpg"
+                imageAlt="Sastanak BRICS-a i geopolitička kriza oko Irana i nafte"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
+                category="Geopolitika"
                 href="/geopolitika/putin-govori-o-kraju-rata-ukrajina"
                 title="Putin govori o kraju rata: između nade i opreza"
                 description="Putinova tvrdnja da se rat u Ukrajini približava kraju ne znači da je mir blizu, ali pokazuje da se reč “završnica” ponovo vraća u diplomatski prostor."
@@ -286,17 +297,6 @@ export default function Home() {
                 description="Kriza oko Ormuza sada testira i NATO: Vašington traži podršku evropskih baza, dok saveznici mere cenu ulaska u američku strategiju prema Iranu."
                 imageSrc="/news/ormuz-nato-problems.jpg"
                 imageAlt="Ormuski moreuz i NATO saveznici, ilustracija geopolitičke krize"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/americke-sluzbe-iran-moze-da-izdrzi-blokadu-ormuza"
-                title="Američke službe upozoravaju: Iran može da izdrži blokadu Ormuza mesecima"
-                description="Američka procena kaže da Iran može da izdrži blokadu Ormuza mesecima, što krizu oko ključnog energetskog prolaza pretvara u rat izdržljivosti, a ne u brzu pobedu Vašingtona."
-                imageSrc="/news/washington-cia.jpg"
-                imageAlt="Ilustracija američke obaveštajne procene i Ormuskog moreuza"
               />
 
             </div>
