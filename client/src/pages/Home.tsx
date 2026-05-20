@@ -13,14 +13,14 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/obavestajni-izvori/britanija-zakon-strane-proxy-mreze",
-  category: "OBAVEŠTAJNI IZVORI",
-  title: "Britanija sprema zakon protiv mreža stranih država",
+  href: "/geopolitika/peking-izmedju-trumpa-i-putina",
+  category: "GEOPOLITIKA",
+  title: "Peking između Trumpa i Putina: Kina u središtu nove velike igre",
   description:
-    "Britanija najavljuje zakon protiv stranih proxy mreža povezanih sa špijunažom, sabotažom, nasiljem i političkim uticajem. U fokusu su posrednici koji deluju za račun neprijateljskih država.",
-  imageSrc: "/news/london-spy-law.jpg",
-  imageAlt: "Ilustracija britanskog zakona protiv mreža stranih država",
-  imageCredit: "Ilustracija: Novi Talas",
+    "Putinova poseta Kini, neposredno posle Trumpovog susreta sa Sijem, pokazuje da Peking pokušava da zadrži prednost razgovora sa svima: Moskvom, Vašingtonom i ostatkom sveta.",
+  imageSrc: "/news/putin-xi.jpg",
+  imageAlt: "Vladimir Putin i Si Đinping tokom susreta u Pekingu",
+  imageCredit: "Foto: Kremlin.ru / Wikimedia Commons",
 };
 
 // Simple fade-in on scroll hook
@@ -258,6 +258,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Obaveštajni izvori"
+                href="/obavestajni-izvori/britanija-zakon-strane-proxy-mreze"
+                title="Britanija sprema zakon protiv mreža stranih država"
+                description="Britanija najavljuje zakon protiv stranih proxy mreža povezanih sa špijunažom, sabotažom, nasiljem i političkim uticajem. U fokusu su posrednici koji deluju za račun neprijateljskih država."
+                imageSrc="/news/london-spy-law.jpg"
+                imageAlt="Ilustracija britanskog zakona protiv mreža stranih država"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Geopolitika"
                 href="/geopolitika/brics-iran-nafta-pukotine-multipolarnog-sveta"
                 title="BRICS pred velikim testom: Iran, nafta i pukotine multipolarnog sveta"
@@ -286,17 +297,6 @@ export default function Home() {
                 description="Objavljena je prva grupa američkih dokumenata o UFO i UAP pojavama. Arhive donose snimke, fotografije i stare izveštaje, ali ne i dokaz o vanzemaljskoj tehnologiji."
                 imageSrc="/news/ufo-files.jpg"
                 imageAlt="Ilustracija UFO arhiva Trumpove administracije"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/ormuz-deli-nato-vasington-trazi-baze"
-                title="Ormuz deli NATO: Vašington traži baze, Evropa meri cenu savezništva"
-                description="Kriza oko Ormuza sada testira i NATO: Vašington traži podršku evropskih baza, dok saveznici mere cenu ulaska u američku strategiju prema Iranu."
-                imageSrc="/news/ormuz-nato-problems.jpg"
-                imageAlt="Ormuski moreuz i NATO saveznici, ilustracija geopolitičke krize"
               />
 
             </div>
