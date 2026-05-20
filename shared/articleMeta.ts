@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/peking-izmedju-trumpa-i-putina",
+    title: "Peking između Trumpa i Putina: Kina u središtu nove velike igre",
+    description:
+      "Putinova poseta Pekingu, nekoliko dana posle Trumpovog susreta sa Sijem, pokazuje kako Kina postaje centralno mesto nove velike igre između Moskve i Vašingtona.",
+    imageSrc: "/news/putin-xi.jpg",
+    datePublished: "2026-05-17",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/putin-govori-o-kraju-rata-ukrajina",
     title: "Putin govori o kraju rata: između nade i opreza",
     description:

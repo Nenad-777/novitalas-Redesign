@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  putinXi: "/news/putin-xi.jpg",
   bricsBreaking: "/news/brics-breaking.jpg",
   putinEndWar: "/news/putin-end-war.jpg",
   washingtonCia: "/news/washington-cia.jpg",
@@ -82,6 +83,58 @@ export default function GeopolitikaIndex() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <article className="md:col-span-2">
+              <Link
+                href="/geopolitika/peking-izmedju-trumpa-i-putina"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.putinXi}
+                    alt="Vladimir Putin i Si Đinping tokom sastanka u Pekingu"
+                    className="w-full h-[260px] object-cover object-center block"
+                    decoding="async"
+                  />
+                </div>
+
+                <h2
+                  className="text-[22px] md:text-[28px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Peking između Trumpa i Putina: Kina u središtu nove velike igre
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Putinova poseta Pekingu, samo nekoliko dana posle Trumpovog susreta sa Sijem, pokazuje kako Kina postaje centralno mesto nove velike igre između Moskve i Vašingtona.
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
+
             <article className="md:col-span-2">
               <Link
                 href="/geopolitika/brics-iran-nafta-pukotine-multipolarnog-sveta"

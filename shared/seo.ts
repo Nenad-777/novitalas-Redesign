@@ -15,6 +15,25 @@ export interface SEOData {
 }
 
 export const seoData: Record<string, SEOData> = {
+  "/geopolitika/peking-izmedju-trumpa-i-putina": {
+    title:
+      "Peking između Trumpa i Putina: Kina u središtu nove velike igre | Novi Talas",
+    description:
+      "Putinova poseta Pekingu, nekoliko dana posle Trumpovog susreta sa Sijem, pokazuje kako Kina postaje centralno mesto nove velike igre između Moskve i Vašingtona.",
+    ogTitle: "Peking između Trumpa i Putina: Kina u središtu nove velike igre",
+    ogDescription:
+      "Moskva traži potvrdu savezništva, Vašington stabilniji odnos, a Peking pokušava da zadrži prednost razgovora sa svima.",
+    ogUrl: "https://novitalas.org/geopolitika/peking-izmedju-trumpa-i-putina",
+    ogImage: "https://novitalas.org/news/putin-xi.jpg",
+    twitterTitle:
+      "Peking između Trumpa i Putina: Kina u središtu nove velike igre",
+    twitterDescription:
+      "Moskva traži potvrdu savezništva, Vašington stabilniji odnos, a Peking pokušava da zadrži prednost razgovora sa svima.",
+    twitterImage: "https://novitalas.org/news/putin-xi.jpg",
+    datePublished: "2026-05-17",
+    author: "Novi Talas",
+  },
+
   "/geopolitika/brics-iran-nafta-pukotine-multipolarnog-sveta": {
     title:
       "BRICS pred velikim testom: Iran, nafta i pukotine multipolarnog sveta | Novi Talas",
