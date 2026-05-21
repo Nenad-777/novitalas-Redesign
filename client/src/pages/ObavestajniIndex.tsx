@@ -10,6 +10,15 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/obavestajni-izvori/spijunske-aktivnosti-ne-jenjavaju-u-evropi",
+    img: "/news/germany-police.jpg",
+    alt: "Nemačka policija na ulicama — pojačane bezbednosne mere zbog obaveštajnih pretnji",
+    title: "Špijunske aktivnosti ne jenjavaju u Evropi",
+    description:
+      "Evropske kontraobaveštajne službe beleže kontinuiran rast stranih operacija na tlu kontinenta. Nemačka je posebno izložena kineskim i ruskim naporima usmerenim ka industrijskim tajnama, vojnoj logistici i akademskim institucijama.",
+    date: "21. maj 2026.",
+  },
+  {
     href: "/obavestajni-izvori/britanija-zakon-strane-proxy-mreze",
     img: "/news/london-spy-law.jpg",
     alt: "Ilustracija britanskog zakona protiv mreža stranih država",

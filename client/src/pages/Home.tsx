@@ -13,14 +13,14 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/peking-izmedju-trumpa-i-putina",
-  category: "GEOPOLITIKA",
-  title: "Peking između Trumpa i Putina: Kina u središtu nove velike igre",
+  href: "/obavestajni-izvori/spijunske-aktivnosti-ne-jenjavaju-u-evropi",
+  category: "OBAVEŠTAJNI IZVORI",
+  title: "Špijunske aktivnosti ne jenjavaju u Evropi",
   description:
-    "Putinova poseta Kini, neposredno posle Trumpovog susreta sa Sijem, pokazuje da Peking pokušava da zadrži prednost razgovora sa svima: Moskvom, Vašingtonom i ostatkom sveta.",
-  imageSrc: "/news/putin-xi.jpg",
-  imageAlt: "Vladimir Putin i Si Đinping tokom susreta u Pekingu",
-  imageCredit: "Foto: Kremlin.ru / Wikimedia Commons",
+    "Evropske kontraobaveštajne službe beleže kontinuiran rast stranih operacija. Nemačka je posebno izložena kineskim i ruskim naporima usmerenim ka industrijskim tajnama, vojnoj logistici i akademskim institucijama.",
+  imageSrc: "/news/germany-police.jpg",
+  imageAlt: "Nemačka policija na ulicama — pojačane bezbednosne mere zbog obaveštajnih pretnji",
+  imageCredit: "Foto: ilustracija",
 };
 
 // Simple fade-in on scroll hook
@@ -258,6 +258,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Geopolitika"
+                href="/geopolitika/peking-izmedju-trumpa-i-putina"
+                title="Peking između Trumpa i Putina: Kina u središtu nove velike igre"
+                description="Putinova poseta Kini, neposredno posle Trumpovog susreta sa Sijem, pokazuje da Peking pokušava da zadrži prednost razgovora sa svima: Moskvom, Vašingtonom i ostatkom sveta."
+                imageSrc="/news/putin-xi.jpg"
+                imageAlt="Vladimir Putin i Si Đinping tokom susreta u Pekingu"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Obaveštajni izvori"
                 href="/obavestajni-izvori/britanija-zakon-strane-proxy-mreze"
                 title="Britanija sprema zakon protiv mreža stranih država"
@@ -286,17 +297,6 @@ export default function Home() {
                 description="Putinova tvrdnja da se rat u Ukrajini približava kraju ne znači da je mir blizu, ali pokazuje da se reč “završnica” ponovo vraća u diplomatski prostor."
                 imageSrc="/news/putin-end-war.jpg"
                 imageAlt="Ilustracija izjave Vladimira Putina o završnici rata u Ukrajini"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Naša planeta"
-                href="/nasa-planeta/trump-otvorio-ufo-arhive"
-                title="Trump otvorio UFO arhive: više pitanja nego odgovora"
-                description="Objavljena je prva grupa američkih dokumenata o UFO i UAP pojavama. Arhive donose snimke, fotografije i stare izveštaje, ali ne i dokaz o vanzemaljskoj tehnologiji."
-                imageSrc="/news/ufo-files.jpg"
-                imageAlt="Ilustracija UFO arhiva Trumpove administracije"
               />
 
             </div>

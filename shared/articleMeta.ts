@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/obavestajni-izvori/spijunske-aktivnosti-ne-jenjavaju-u-evropi",
+    title: "Špijunske aktivnosti ne jenjavaju u Evropi",
+    description:
+      "Evropske kontraobaveštajne službe beleže kontinuiran rast stranih operacija na tlu kontinenta. Nemačka je posebno izložena kineskim i ruskim naporima usmerenim ka industrijskim tajnama, vojnoj logistici i akademskim institucijama.",
+    imageSrc: "/news/germany-police.jpg",
+    datePublished: "2026-05-21",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/peking-izmedju-trumpa-i-putina",
     title: "Peking između Trumpa i Putina: Kina u središtu nove velike igre",
     description:
