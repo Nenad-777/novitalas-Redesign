@@ -14,6 +14,7 @@ import GeopolitikaArticle from "./pages/GeopolitikaArticle";
 import PutinGovoriOKrajuRataUkrajina from "./pages/putin-govori-o-kraju-rata-ukrajina";
 import BricsIranNaftaPukotineMultipolarnogSveta from "./pages/brics-iran-nafta-pukotine-multipolarnog-sveta";
 import PekingIzmedjuTrumpaIPutina from "./pages/peking-izmedju-trumpa-i-putina";
+import EvropaTraziNovuFormuluZaUkrajinu from "./pages/evropa-trazi-novu-formulu-za-ukrajinu";
 
 import UkrajinaCetiriGodine from "./pages/ukrajina-cetiri-godine-rata";
 import IranProtesti2026 from "./pages/iran-protesti-2026";
@@ -242,6 +243,11 @@ function Router() {
         <Route
           path="/geopolitika/peking-izmedju-trumpa-i-putina"
           component={PekingIzmedjuTrumpaIPutina}
+        />
+
+        <Route
+          path="/geopolitika/evropa-trazi-novu-formulu-za-ukrajinu"
+          component={EvropaTraziNovuFormuluZaUkrajinu}
         />
 
         <Route

@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/evropa-trazi-novu-formulu-za-ukrajinu",
+    title: "Evropa traži novu formulu za Ukrajinu",
+    description:
+      "Berlin predlaže model pridruženog članstva bez prava glasa, dok Evropska unija pokušava da pronađe ravnotežu između političke podrške Kijevu i straha od dubokih unutrašnjih promena.",
+    imageSrc: "/news/mertz-ukraine.jpg",
+    datePublished: "2026-05-22",
+    author: "Novi Talas",
+  },
+  {
     path: "/obavestajni-izvori/spijunske-aktivnosti-ne-jenjavaju-u-evropi",
     title: "Špijunske aktivnosti ne jenjavaju u Evropi",
     description:
