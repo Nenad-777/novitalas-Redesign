@@ -129,6 +129,9 @@ import TankerBezPogona from "./pages/tanker-bez-pogona";
 import SeloNePrastaPoraz from "./pages/selo-ne-prasta-poraz";
 
 /* ✅ NOVA VEST — Srbija */
+import PosleSlavijeVlastUlaziUFazuPolitickeNervoze from "./pages/posle-slavije-vlast-ulazi-u-fazu-politicke-nervoze";
+
+/* ✅ NOVA VEST — Srbija */
 import TihoGasenjeSrpskihUniverzitetaNaKosovu from "./pages/tiho-gasenje-srpskih-univerziteta-na-kosovu";
 
 /* ✅ NOVA VEST — Srbija */
@@ -505,6 +508,11 @@ function Router() {
             SRBIJA
            ========================= */}
         <Route path="/srbija" component={SrbijaPage} />
+
+        <Route
+          path="/srbija/posle-slavije-vlast-ulazi-u-fazu-politicke-nervoze"
+          component={PosleSlavijeVlastUlaziUFazuPolitickeNervoze}
+        />
 
         <Route
           path="/srbija/senke-nad-ekranom-tiho-preuzimanje-ili-kontrolisano-gasenje-istine"
