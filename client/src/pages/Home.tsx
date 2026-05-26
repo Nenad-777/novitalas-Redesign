@@ -13,13 +13,13 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/evropa-trazi-novu-formulu-za-ukrajinu",
-  category: "Geopolitika",
-  title: "Evropa traži novu formulu za Ukrajinu",
+  href: "/srbija/posle-slavije-vlast-ulazi-u-fazu-politicke-nervoze",
+  category: "Srbija",
+  title: "Posle Slavije: vlast ulazi u fazu političke nervoze",
   description:
-    "Berlin predlaže model pridruženog članstva bez prava glasa, dok Evropska unija pokušava da pronađe ravnotežu između političke podrške Kijevu i straha od dubokih unutrašnjih promena.",
-  imageSrc: "/news/mertz-ukraine.jpg",
-  imageAlt: "Evropska unija i Ukrajina u kontekstu predloga o pridruženom članstvu",
+    "Studentski pokret pokazuje sve jasnije obrise političke artikulacije, dok vlast istovremeno pokušava da kupi vreme i spreči formiranje studentske izborne liste čiji identitet još nije poznat javnosti.",
+  imageSrc: "/news/slavija-protest.jpg",
+  imageAlt: "Ilustracija",
   imageCredit: "Ilustracija",
 };
 
@@ -258,6 +258,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Geopolitika"
+                href="/geopolitika/evropa-trazi-novu-formulu-za-ukrajinu"
+                title="Evropa traži novu formulu za Ukrajinu"
+                description="Berlin predlaže model pridruženog članstva bez prava glasa, dok Evropska unija pokušava da pronađe ravnotežu između političke podrške Kijevu i straha od dubokih unutrašnjih promena."
+                imageSrc="/news/mertz-ukraine.jpg"
+                imageAlt="Evropska unija i Ukrajina u kontekstu predloga o pridruženom članstvu"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Obaveštajni izvori"
                 href="/obavestajni-izvori/spijunske-aktivnosti-ne-jenjavaju-u-evropi"
                 title="Špijunske aktivnosti ne jenjavaju u Evropi"
@@ -286,17 +297,6 @@ export default function Home() {
                 description="Britanija najavljuje zakon protiv stranih proxy mreža povezanih sa špijunažom, sabotažom, nasiljem i političkim uticajem. U fokusu su posrednici koji deluju za račun neprijateljskih država."
                 imageSrc="/news/london-spy-law.jpg"
                 imageAlt="Ilustracija britanskog zakona protiv mreža stranih država"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/brics-iran-nafta-pukotine-multipolarnog-sveta"
-                title="BRICS pred velikim testom: Iran, nafta i pukotine multipolarnog sveta"
-                description="BRICS se sastaje u Indiji dok rat oko Irana i kriza nafte otkrivaju duboke podele među članicama. Novi multipolarni svet sada polaže prvi veliki ispit stvarne politike."
-                imageSrc="/news/brics-breaking.jpg"
-                imageAlt="Sastanak BRICS-a i geopolitička kriza oko Irana i nafte"
               />
 
             </div>

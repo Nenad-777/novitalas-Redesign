@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/srbija/posle-slavije-vlast-ulazi-u-fazu-politicke-nervoze",
+    title: "Posle Slavije: vlast ulazi u fazu političke nervoze",
+    description:
+      "Studentski pokret pokazuje sve jasnije obrise političke artikulacije, dok vlast istovremeno pokušava da kupi vreme i spreči formiranje studentske izborne liste čiji identitet još nije poznat javnosti.",
+    imageSrc: "/news/slavija-protest.jpg",
+    datePublished: "2026-05-26",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/evropa-trazi-novu-formulu-za-ukrajinu",
     title: "Evropa traži novu formulu za Ukrajinu",
     description:
