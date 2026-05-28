@@ -19,6 +19,15 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/nasa-anounce",
+    img: "/news/nasa-anounce.jpg",
+    alt: "Ilustracija NASA misija ka Mesecu i plana trajne baze",
+    imageCredit: "Ilustracija",
+    title: "NASA najavila nove misije ka Mesecu i plan trajne baze",
+    description:
+      "Američka svemirska agencija predstavila je detaljan plan izgradnje trajne baze na Mesecu, uz seriju novih posadnih misija koje bi postepeno izgradile lunarnu infrastrukturu.",
+  },
+  {
     href: "/nasa-planeta/trump-otvorio-ufo-arhive",
     img: "/news/ufo-files.jpg",
     alt: "Ilustracija UFO arhiva Trumpove administracije",

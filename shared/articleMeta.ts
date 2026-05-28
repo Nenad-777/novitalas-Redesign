@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/nasa-anounce",
+    title: "NASA najavila nove misije ka Mesecu i plan trajne baze",
+    description:
+      "Američka svemirska agencija predstavila je detaljan plan izgradnje trajne baze na Mesecu, uz seriju novih posadnih misija koje bi postepeno izgradile lunarnu infrastrukturu.",
+    imageSrc: "/news/nasa-anounce.jpg",
+    datePublished: "2026-05-28",
+    author: "Novi Talas",
+  },
+  {
     path: "/srbija/posle-slavije-vlast-ulazi-u-fazu-politicke-nervoze",
     title: "Posle Slavije: vlast ulazi u fazu političke nervoze",
     description:
