@@ -13,12 +13,12 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/srbija/posle-slavije-vlast-ulazi-u-fazu-politicke-nervoze",
-  category: "Srbija",
-  title: "Posle Slavije: vlast ulazi u fazu političke nervoze",
+  href: "/nasa-planeta/nasa-anounce",
+  category: "Naša planeta",
+  title: "NASA najavila nove misije ka Mesecu i plan trajne baze",
   description:
-    "Studentski pokret pokazuje sve jasnije obrise političke artikulacije, dok vlast istovremeno pokušava da kupi vreme i spreči formiranje studentske izborne liste čiji identitet još nije poznat javnosti.",
-  imageSrc: "/news/slavija-protest.jpg",
+    "Američka svemirska agencija predstavila je detaljan plan izgradnje trajne baze na Mesecu, uz seriju novih posadnih misija koje bi postepeno izgradile lunarnu infrastrukturu.",
+  imageSrc: "/news/nasa-anounce.jpg",
   imageAlt: "Ilustracija",
   imageCredit: "Ilustracija",
 };
@@ -258,6 +258,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Srbija"
+                href="/srbija/posle-slavije-vlast-ulazi-u-fazu-politicke-nervoze"
+                title="Posle Slavije: vlast ulazi u fazu političke nervoze"
+                description="Studentski pokret pokazuje sve jasnije obrise političke artikulacije, dok vlast istovremeno pokušava da kupi vreme i spreči formiranje studentske izborne liste čiji identitet još nije poznat javnosti."
+                imageSrc="/news/slavija-protest.jpg"
+                imageAlt="Ilustracija"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Geopolitika"
                 href="/geopolitika/evropa-trazi-novu-formulu-za-ukrajinu"
                 title="Evropa traži novu formulu za Ukrajinu"
@@ -286,17 +297,6 @@ export default function Home() {
                 description="Putinova poseta Kini, neposredno posle Trumpovog susreta sa Sijem, pokazuje da Peking pokušava da zadrži prednost razgovora sa svima: Moskvom, Vašingtonom i ostatkom sveta."
                 imageSrc="/news/putin-xi.jpg"
                 imageAlt="Vladimir Putin i Si Đinping tokom susreta u Pekingu"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Obaveštajni izvori"
-                href="/obavestajni-izvori/britanija-zakon-strane-proxy-mreze"
-                title="Britanija sprema zakon protiv mreža stranih država"
-                description="Britanija najavljuje zakon protiv stranih proxy mreža povezanih sa špijunažom, sabotažom, nasiljem i političkim uticajem. U fokusu su posrednici koji deluju za račun neprijateljskih država."
-                imageSrc="/news/london-spy-law.jpg"
-                imageAlt="Ilustracija britanskog zakona protiv mreža stranih država"
               />
 
             </div>

@@ -206,6 +206,9 @@ import MoonRing from "./pages/moon-ring";
 import AiSuperaplikacija from "./pages/ai-superaplikacija";
 import PsihologijaDosada from "./pages/psihologija-dosada";
 
+/* ✅ NOVA VEST — Naša planeta */
+import NasaAnounce from "./pages/nasa-anounce";
+
 /* ✅ ARHIVSKA STRANICA — Februar 2026 */
 import ArhivaFebruar2026 from "./pages/ArhivaFebruar2026";
 
@@ -568,6 +571,11 @@ function Router() {
             NAŠA PLANETA
            ========================= */}
         <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
+
+        <Route
+          path="/nasa-planeta/nasa-anounce"
+          component={NasaAnounce}
+        />
 
         <Route
           path="/nasa-planeta/trump-otvorio-ufo-arhive"
