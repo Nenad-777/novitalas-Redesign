@@ -30,6 +30,9 @@ import BugarskaNaRaskrsniciRumenRadevVodiPremaIzlaznimAnketama from "./pages/bug
 import NovacKaoUslovTrenutakUKojemSeOdlucujePravacSrbije from "./pages/novac-kao-uslov-trenutak-u-kojem-se-odlucuje-pravac-srbije";
 
 /* ✅ NOVA VEST — Geopolitika */
+import SezdestDanaBlizkiIstokSadIranDogovor from "./pages/60-dana-bliski-istok-sad-iran-dogovor";
+
+/* ✅ NOVA VEST — Geopolitika */
 import OrmuzDeliNatoVasingtonTraziBaze from "./pages/ormuz-deli-nato-vasington-trazi-baze";
 
 /* ✅ NOVA VEST — Geopolitika */
@@ -241,6 +244,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/60-dana-bliski-istok-sad-iran-dogovor"
+          component={SezdestDanaBlizkiIstokSadIranDogovor}
+        />
+
         <Route
           path="/geopolitika/brics-iran-nafta-pukotine-multipolarnog-sveta"
           component={BricsIranNaftaPukotineMultipolarnogSveta}
