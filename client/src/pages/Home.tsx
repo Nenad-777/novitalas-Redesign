@@ -13,13 +13,13 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/nasa-planeta/nasa-anounce",
-  category: "Naša planeta",
-  title: "NASA najavila nove misije ka Mesecu i plan trajne baze",
+  href: "/geopolitika/60-dana-bliski-istok-sad-iran-dogovor",
+  category: "Geopolitika",
+  title: "60 dana za Bliski istok: iza pregovora SAD i Irana krije se mnogo veći dogovor",
   description:
-    "Američka svemirska agencija predstavila je detaljan plan izgradnje trajne baze na Mesecu, uz seriju novih posadnih misija koje bi postepeno izgradile lunarnu infrastrukturu.",
-  imageSrc: "/news/nasa-anounce.jpg",
-  imageAlt: "Ilustracija",
+    "Okvirni sporazum o produženju primirja između Vašingtona i Teherana mogao bi da otvori prostor za novu rundu pregovora o iranskom nuklearnom programu, sankcijama i bezbednosti Persijskog zaliva.",
+  imageSrc: "/news/iran-usa-new-deal.jpg",
+  imageAlt: "Ilustracija — pregovori SAD i Irana",
   imageCredit: "Ilustracija",
 };
 
@@ -258,6 +258,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Naša planeta"
+                href="/nasa-planeta/nasa-anounce"
+                title="NASA najavila nove misije ka Mesecu i plan trajne baze"
+                description="Američka svemirska agencija predstavila je detaljan plan izgradnje trajne baze na Mesecu, uz seriju novih posadnih misija koje bi postepeno izgradile lunarnu infrastrukturu."
+                imageSrc="/news/nasa-anounce.jpg"
+                imageAlt="Ilustracija"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Srbija"
                 href="/srbija/posle-slavije-vlast-ulazi-u-fazu-politicke-nervoze"
                 title="Posle Slavije: vlast ulazi u fazu političke nervoze"
@@ -286,17 +297,6 @@ export default function Home() {
                 description="Evropske kontraobaveštajne službe beleže kontinuiran rast stranih operacija. Nemačka je posebno izložena kineskim i ruskim naporima usmerenim ka industrijskim tajnama, vojnoj logistici i akademskim institucijama."
                 imageSrc="/news/germany-police.jpg"
                 imageAlt="Nemačka policija na ulicama — pojačane bezbednosne mere zbog obaveštajnih pretnji"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/peking-izmedju-trumpa-i-putina"
-                title="Peking između Trumpa i Putina: Kina u središtu nove velike igre"
-                description="Putinova poseta Kini, neposredno posle Trumpovog susreta sa Sijem, pokazuje da Peking pokušava da zadrži prednost razgovora sa svima: Moskvom, Vašingtonom i ostatkom sveta."
-                imageSrc="/news/putin-xi.jpg"
-                imageAlt="Vladimir Putin i Si Đinping tokom susreta u Pekingu"
               />
 
             </div>

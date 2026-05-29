@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  iranUsaNewDeal: "/news/iran-usa-new-deal.jpg",
   mertzUkraine: "/news/mertz-ukraine.jpg",
   putinXi: "/news/putin-xi.jpg",
   bricsBreaking: "/news/brics-breaking.jpg",
@@ -84,6 +85,57 @@ export default function GeopolitikaIndex() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <article className="md:col-span-2">
+              <Link
+                href="/geopolitika/60-dana-bliski-istok-sad-iran-dogovor"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.iranUsaNewDeal}
+                    alt="Ilustracija — pregovori SAD i Irana"
+                    className="w-full h-[260px] object-cover object-center block"
+                    decoding="async"
+                  />
+                </div>
+
+                <h2
+                  className="text-[22px] md:text-[28px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  60 dana za Bliski istok: iza pregovora SAD i Irana krije se mnogo veći dogovor
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Okvirni sporazum o produženju primirja između Vašingtona i Teherana mogao bi da otvori prostor za novu rundu pregovora o iranskom nuklearnom programu, sankcijama i bezbednosti Persijskog zaliva.
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
             <article className="md:col-span-2">
               <Link
                 href="/geopolitika/evropa-trazi-novu-formulu-za-ukrajinu"

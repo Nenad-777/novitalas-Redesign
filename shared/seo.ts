@@ -15,6 +15,27 @@ export interface SEOData {
 }
 
 export const seoData: Record<string, SEOData> = {
+  "/geopolitika/60-dana-bliski-istok-sad-iran-dogovor": {
+    title:
+      "60 dana za Bliski istok: iza pregovora SAD i Irana krije se mnogo veći dogovor | Novi Talas",
+    description:
+      "Okvirni sporazum o produženju primirja između Vašingtona i Teherana mogao bi da otvori prostor za novu rundu pregovora o iranskom nuklearnom programu, sankcijama i bezbednosti Persijskog zaliva.",
+    ogTitle:
+      "60 dana za Bliski istok: iza pregovora SAD i Irana krije se mnogo veći dogovor",
+    ogDescription:
+      "Okvirni sporazum o produženju primirja između Vašingtona i Teherana mogao bi da otvori prostor za novu rundu pregovora o iranskom nuklearnom programu, sankcijama i bezbednosti Persijskog zaliva.",
+    ogUrl:
+      "https://novitalas.org/geopolitika/60-dana-bliski-istok-sad-iran-dogovor",
+    ogImage: "https://novitalas.org/news/iran-usa-new-deal.jpg",
+    twitterTitle:
+      "60 dana za Bliski istok: iza pregovora SAD i Irana krije se mnogo veći dogovor",
+    twitterDescription:
+      "Okvirni sporazum o produženju primirja između Vašingtona i Teherana mogao bi da otvori prostor za novu rundu pregovora o iranskom nuklearnom programu, sankcijama i bezbednosti Persijskog zaliva.",
+    twitterImage: "https://novitalas.org/news/iran-usa-new-deal.jpg",
+    datePublished: "2026-05-29",
+    author: "Novi Talas",
+  },
+
   "/geopolitika/peking-izmedju-trumpa-i-putina": {
     title:
       "Peking između Trumpa i Putina: Kina u središtu nove velike igre | Novi Talas",
