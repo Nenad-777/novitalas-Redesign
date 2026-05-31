@@ -29,6 +29,9 @@ import IranOtvorioHormuskiMoreuzZaKomercijalniSaobracajTokomPrimirja from "./pag
 import BugarskaNaRaskrsniciRumenRadevVodiPremaIzlaznimAnketama from "./pages/bugarska-na-raskrsnici-rumen-radev-vodi-prema-izlaznim-anketama";
 import NovacKaoUslovTrenutakUKojemSeOdlucujePravacSrbije from "./pages/novac-kao-uslov-trenutak-u-kojem-se-odlucuje-pravac-srbije";
 
+/* ✅ GLAVNA VEST — Geopolitika */
+import PosleDronovaDolazeRoboti from "./pages/posle-dronova-dolaze-roboti-novo-poglavlje-rata-u-ukrajini";
+
 /* ✅ NOVA VEST — Geopolitika */
 import SezdestDanaBlizkiIstokSadIranDogovor from "./pages/60-dana-bliski-istok-sad-iran-dogovor";
 
@@ -244,6 +247,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/posle-dronova-dolaze-roboti-novo-poglavlje-rata-u-ukrajini"
+          component={PosleDronovaDolazeRoboti}
+        />
+
         <Route
           path="/geopolitika/60-dana-bliski-istok-sad-iran-dogovor"
           component={SezdestDanaBlizkiIstokSadIranDogovor}
