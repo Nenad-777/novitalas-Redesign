@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/posle-dronova-dolaze-roboti-novo-poglavlje-rata-u-ukrajini",
+    title: "Posle dronova dolaze roboti: novo poglavlje rata u Ukrajini",
+    description:
+      "Testiranje humanoidnih robota na ukrajinskom ratištu pokazuje da se iza današnjeg sukoba odvija mnogo šira tehnološka transformacija koja bi mogla da promeni način vođenja ratova u decenijama koje dolaze.",
+    imageSrc: "/news/robots-ukraine.jpg",
+    datePublished: "2026-05-31",
+    author: "Novi Talas",
+  },
+  {
     path: "/nasa-planeta/nasa-anounce",
     title: "NASA najavila nove misije ka Mesecu i plan trajne baze",
     description:

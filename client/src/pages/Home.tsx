@@ -13,13 +13,13 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/60-dana-bliski-istok-sad-iran-dogovor",
+  href: "/geopolitika/posle-dronova-dolaze-roboti-novo-poglavlje-rata-u-ukrajini",
   category: "Geopolitika",
-  title: "60 dana za Bliski istok: iza pregovora SAD i Irana krije se mnogo veći dogovor",
+  title: "Posle dronova dolaze roboti: novo poglavlje rata u Ukrajini",
   description:
-    "Okvirni sporazum o produženju primirja između Vašingtona i Teherana mogao bi da otvori prostor za novu rundu pregovora o iranskom nuklearnom programu, sankcijama i bezbednosti Persijskog zaliva.",
-  imageSrc: "/news/iran-usa-new-deal.jpg",
-  imageAlt: "Ilustracija — pregovori SAD i Irana",
+    "Testiranje humanoidnih robota na ukrajinskom ratištu pokazuje da se iza današnjeg sukoba odvija mnogo šira tehnološka transformacija koja bi mogla da promeni način vođenja ratova u decenijama koje dolaze.",
+  imageSrc: "/news/robots-ukraine.jpg",
+  imageAlt: "Ilustracija",
   imageCredit: "Ilustracija",
 };
 
@@ -258,6 +258,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Geopolitika"
+                href="/geopolitika/60-dana-bliski-istok-sad-iran-dogovor"
+                title="60 dana za Bliski istok: iza pregovora SAD i Irana krije se mnogo veći dogovor"
+                description="Okvirni sporazum o produženju primirja između Vašingtona i Teherana mogao bi da otvori prostor za novu rundu pregovora o iranskom nuklearnom programu, sankcijama i bezbednosti Persijskog zaliva."
+                imageSrc="/news/iran-usa-new-deal.jpg"
+                imageAlt="Ilustracija — pregovori SAD i Irana"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Naša planeta"
                 href="/nasa-planeta/nasa-anounce"
                 title="NASA najavila nove misije ka Mesecu i plan trajne baze"
@@ -286,17 +297,6 @@ export default function Home() {
                 description="Berlin predlaže model pridruženog članstva bez prava glasa, dok Evropska unija pokušava da pronađe ravnotežu između političke podrške Kijevu i straha od dubokih unutrašnjih promena."
                 imageSrc="/news/mertz-ukraine.jpg"
                 imageAlt="Evropska unija i Ukrajina u kontekstu predloga o pridruženom članstvu"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Obaveštajni izvori"
-                href="/obavestajni-izvori/spijunske-aktivnosti-ne-jenjavaju-u-evropi"
-                title="Špijunske aktivnosti ne jenjavaju u Evropi"
-                description="Evropske kontraobaveštajne službe beleže kontinuiran rast stranih operacija. Nemačka je posebno izložena kineskim i ruskim naporima usmerenim ka industrijskim tajnama, vojnoj logistici i akademskim institucijama."
-                imageSrc="/news/germany-police.jpg"
-                imageAlt="Nemačka policija na ulicama — pojačane bezbednosne mere zbog obaveštajnih pretnji"
               />
 
             </div>
