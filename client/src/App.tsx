@@ -31,6 +31,7 @@ import NovacKaoUslovTrenutakUKojemSeOdlucujePravacSrbije from "./pages/novac-kao
 
 /* ✅ GLAVNA VEST — Geopolitika */
 import PosleDronovaDolazeRoboti from "./pages/posle-dronova-dolaze-roboti-novo-poglavlje-rata-u-ukrajini";
+import MoskvaUpozoravaPutinaRatnaPotrosnjaPostajeNeodrziva from "./pages/moskva-upozorava-putina-ratna-potrosnja-postaje-neodrziva";
 
 /* ✅ NOVA VEST — Geopolitika */
 import SezdestDanaBlizkiIstokSadIranDogovor from "./pages/60-dana-bliski-istok-sad-iran-dogovor";
@@ -251,6 +252,10 @@ function Router() {
         <Route
           path="/geopolitika/posle-dronova-dolaze-roboti-novo-poglavlje-rata-u-ukrajini"
           component={PosleDronovaDolazeRoboti}
+        />
+        <Route
+          path="/geopolitika/moskva-upozorava-putina-ratna-potrosnja-postaje-neodrziva"
+          component={MoskvaUpozoravaPutinaRatnaPotrosnjaPostajeNeodrziva}
         />
 
         <Route

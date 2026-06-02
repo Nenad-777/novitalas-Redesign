@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/moskva-upozorava-putina-ratna-potrosnja-postaje-neodrziva",
+    title: "Moskva upozorava Putina: ratna potrošnja postaje neodrživa",
+    description:
+      "Ruski finansijski zvaničnici navodno upozoravaju da troškovi rata u Ukrajini sve ozbiljnije pritiskaju budžet, dok vojni vrh traži nova sredstva i odbija smanjenje odbrambenih rashoda.",
+    imageSrc: "/news/moscow-economy-war.jpg",
+    datePublished: "2026-06-02",
+    author: "Novi Talas",
+  },
+  {
     path: "/nasa-planeta/nvidia-ulazi-u-globalnu-trku-za-humanoidne-robote",
     title: "Nvidia ulazi u globalnu trku za humanoidne robote",
     description:
