@@ -146,7 +146,7 @@ export const articleMeta: ArticleStaticMeta[] = [
     path: "/nasa-planeta/nvidia-ulazi-u-globalnu-trku-za-humanoidne-robote",
     title: "Nvidia ulazi u globalnu trku za humanoidne robote",
     description:
-      "Američki tehnološki gigant najavio je saradnju sa proizvođačima humanoidnih robota iz Sjedinjenih Država i Evrope, dok Kina ubrzano razvija sopstvene sisteme. Počinje nova industrijska trka koja bi mogla promeniti svet rada tokom naredne decenije.",
+      "Američki tehnološki gigant najavio je saradnju sa proizvođačima humanoidnih robota iz Sjedinjenih Država i Evrope, dok Kina ubrzano razvija sopstvene sisteme. Počinje nova industrijska revolucija u kojoj veštačka inteligencija dobija fizički oblik.",
     imageSrc: "/news/ai-humnoid.jpg",
     datePublished: "2026-06-02",
     author: "Novi Talas",
