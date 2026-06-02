@@ -214,6 +214,7 @@ import PsihologijaDosada from "./pages/psihologija-dosada";
 
 /* ✅ NOVA VEST — Naša planeta */
 import NasaAnounce from "./pages/nasa-anounce";
+import NvidiaUlaziUGlobalnuTrkuZaHumanoidneRobote from "./pages/nvidia-ulazi-u-globalnu-trku-za-humanoidne-robote";
 
 /* ✅ ARHIVSKA STRANICA — Februar 2026 */
 import ArhivaFebruar2026 from "./pages/ArhivaFebruar2026";
@@ -324,7 +325,9 @@ function Router() {
 
         <Route
           path="/geopolitika/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja"
-          component={IranOtvorioHormuskiMoreuzZaKomercijalniSaobracajTokomPrimirja}
+          component={
+            IranOtvorioHormuskiMoreuzZaKomercijalniSaobracajTokomPrimirja
+          }
         />
 
         <Route
@@ -397,15 +400,9 @@ function Router() {
           component={IranTrumpOrmuskirMoreuz}
         />
 
-        <Route
-          path="/geopolitika/ormuz-moreuz"
-          component={OrmuzMoreuz}
-        />
+        <Route path="/geopolitika/ormuz-moreuz" component={OrmuzMoreuz} />
 
-        <Route
-          path="/geopolitika/energetski-rat"
-          component={EnergetskiRat}
-        />
+        <Route path="/geopolitika/energetski-rat" component={EnergetskiRat} />
 
         <Route path="/geopolitika/iran" component={GeopolitikaIran} />
 
@@ -441,15 +438,9 @@ function Router() {
           component={SadSpecijalnaOperacijaIranUranijum}
         />
 
-        <Route
-          path="/geopolitika/rezerve-nafte"
-          component={RezerveNafte}
-        />
+        <Route path="/geopolitika/rezerve-nafte" component={RezerveNafte} />
 
-        <Route
-          path="/geopolitika/biennale-rusija"
-          component={BiennaleRusija}
-        />
+        <Route path="/geopolitika/biennale-rusija" component={BiennaleRusija} />
 
         <Route
           path="/geopolitika/refugees-iran-un"
@@ -543,20 +534,14 @@ function Router() {
           component={IzboriNepravilnostiKrivicnaOdgovornost}
         />
 
-        <Route
-          path="/srbija/izbori-rezultati"
-          component={IzboriRezultati}
-        />
+        <Route path="/srbija/izbori-rezultati" component={IzboriRezultati} />
 
         <Route
           path="/srbija/lokalni-izbori-analiza"
           component={LokalniIzboriAnaliza}
         />
 
-        <Route
-          path="/srbija/akademija-novisad"
-          component={AkademijaNovisad}
-        />
+        <Route path="/srbija/akademija-novisad" component={AkademijaNovisad} />
 
         <Route
           path="/srbija/tiho-gasenje-srpskih-univerziteta-na-kosovu"
@@ -589,9 +574,11 @@ function Router() {
         <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
 
         <Route
-          path="/nasa-planeta/nasa-anounce"
-          component={NasaAnounce}
+          path="/nasa-planeta/nvidia-ulazi-u-globalnu-trku-za-humanoidne-robote"
+          component={NvidiaUlaziUGlobalnuTrkuZaHumanoidneRobote}
         />
+
+        <Route path="/nasa-planeta/nasa-anounce" component={NasaAnounce} />
 
         <Route
           path="/nasa-planeta/trump-otvorio-ufo-arhive"
@@ -652,20 +639,14 @@ function Router() {
           component={ArtemisIIFotografijeDubokogSvemira}
         />
 
-        <Route
-          path="/nasa-planeta/moon-ring"
-          component={MoonRing}
-        />
+        <Route path="/nasa-planeta/moon-ring" component={MoonRing} />
 
         <Route
           path="/nasa-planeta/najtoplija-decenija-planeta-un"
           component={NajtoplijaDecenijaPlanetaUn}
         />
 
-        <Route
-          path="/nasa-planeta/mars-reka"
-          component={MarsReka}
-        />
+        <Route path="/nasa-planeta/mars-reka" component={MarsReka} />
 
         <Route
           path="/nasa-planeta/na-marsu-otkrivene-molekule-povezane-sa-poreklom-zivota"
@@ -692,15 +673,9 @@ function Router() {
           component={NaucniciPoceliDaUsmeravajuSnove}
         />
 
-        <Route
-          path="/nasa-planeta/ai-vest-svest"
-          component={AiVestSvest}
-        />
+        <Route path="/nasa-planeta/ai-vest-svest" component={AiVestSvest} />
 
-        <Route
-          path="/nasa-planeta/kubrick"
-          component={Kubrick}
-        />
+        <Route path="/nasa-planeta/kubrick" component={Kubrick} />
 
         <Route
           path="/nasa-planeta/kina-mozgani-implantat"

@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/nvidia-ulazi-u-globalnu-trku-za-humanoidne-robote",
+    title: "Nvidia ulazi u globalnu trku za humanoidne robote",
+    description:
+      "Američki tehnološki gigant najavio je saradnju sa proizvođačima humanoidnih robota iz Sjedinjenih Država i Evrope, dok Kina ubrzano razvija sopstvene sisteme. Počinje nova industrijska trka koja bi mogla promeniti svet rada tokom naredne decenije.",
+    imageSrc: "/news/ai-humnoid.jpg",
+    datePublished: "2026-06-02",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/posle-dronova-dolaze-roboti-novo-poglavlje-rata-u-ukrajini",
     title: "Posle dronova dolaze roboti: novo poglavlje rata u Ukrajini",
     description:
@@ -216,7 +225,8 @@ export const articleMeta: ArticleStaticMeta[] = [
   },
   {
     path: "/geopolitika/pad-vlade-u-rumuniji-proevropski-zid-nato",
-    title: "Pad vlade u Rumuniji: proevropski zid puca na istočnom krilu NATO-a",
+    title:
+      "Pad vlade u Rumuniji: proevropski zid puca na istočnom krilu NATO-a",
     description:
       "Pad vlade Ilieja Bolojana u Rumuniji otvara pitanje stabilnosti zemlje na istočnom krilu NATO-a, evropskih fondova, fiskalne štednje i rasta krajnje desnice.",
     imageSrc: "/news/romania-parliament-bucharest.jpg",
@@ -234,7 +244,8 @@ export const articleMeta: ArticleStaticMeta[] = [
   },
   {
     path: "/geopolitika/svet-na-dan-1-maj-2026",
-    title: "SVET NA DAN, 1. maj: Ormuz, Ukrajina i Tajvan oblikuju novu mapu pritiska",
+    title:
+      "SVET NA DAN, 1. maj: Ormuz, Ukrajina i Tajvan oblikuju novu mapu pritiska",
     description:
       "Prvi maj 2026. donosi sliku sveta u kome se energetska kriza, rat u Ukrajini i američko-kinesko nadmetanje sve brže spajaju u jednu geopolitičku celinu.",
     imageSrc: "/news/world-1.may.jpg",
@@ -243,7 +254,8 @@ export const articleMeta: ArticleStaticMeta[] = [
   },
   {
     path: "/obavestajni-izvori/kazakstan-spijun",
-    title: "Berlin u senci špijunaže: uhapšen osumnjičeni ruski agent, meta bile informacije o Ukrajini i NATO konvojima",
+    title:
+      "Berlin u senci špijunaže: uhapšen osumnjičeni ruski agent, meta bile informacije o Ukrajini i NATO konvojima",
     description:
       "Nemački tužioci tvrde da je državljanin Kazahstana mesecima bio u kontaktu sa ruskom obaveštajnom službom i dostavljao podatke o vojnoj pomoći Ukrajini, odbrambenoj industriji i kretanju NATO konvoja.",
     imageSrc: "/news/kazakstan-spy.jpg",
@@ -259,7 +271,8 @@ export const articleMeta: ArticleStaticMeta[] = [
   },
   {
     path: "/geopolitika/nato-pod-pritiskom-od-saveza-ravnopravnih-ka-sistemu-uslovljene-lojalnosti",
-    title: "NATO pod pritiskom: od saveza ravnopravnih ka sistemu uslovljene lojalnosti",
+    title:
+      "NATO pod pritiskom: od saveza ravnopravnih ka sistemu uslovljene lojalnosti",
     description:
       "U Vašingtonu se sve otvorenije razmatra diferenciranje saveznika prema političkoj i vojnoj usklađenosti sa američkim prioritetima.",
     imageSrc: "/news/Nato-new-relations.jpg",
@@ -299,7 +312,8 @@ export const articleMeta: ArticleStaticMeta[] = [
   },
   {
     path: "/geopolitika/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja",
-    title: "Iran otvorio Ormuski moreuz za komercijalni saobraćaj tokom primirja",
+    title:
+      "Iran otvorio Ormuski moreuz za komercijalni saobraćaj tokom primirja",
     description:
       "Teheran je saopštio da je Ormuski moreuz otvoren za komercijalni saobraćaj tokom trajanja primirja, čime je privremeno smanjena bojazan od novog udara na globalno tržište energije.",
     imageSrc: "/news/open-ormuz.jpg",
@@ -332,8 +346,7 @@ export const articleMeta: ArticleStaticMeta[] = [
   },
   {
     path: "/geopolitika/pomeranje-tezista-orban-evropa",
-    title:
-      "POMERANJE TEŽIŠTA: Šta poraz Orbana znači za Evropu i svet",
+    title: "POMERANJE TEŽIŠTA: Šta poraz Orbana znači za Evropu i svet",
     description:
       "Analiza političkih i geopolitičkih posledica poraza Viktora Orbana u Mađarskoj",
     imageSrc: "/news/magyar.jpg",
@@ -367,7 +380,8 @@ export const articleMeta: ArticleStaticMeta[] = [
   },
   {
     path: "/geopolitika/kina-testira-vodonicni-avion-pocetak-nove-energetske-trke-u-avijaciji",
-    title: "Kina testira vodonični avion: početak nove energetske trke u avijaciji",
+    title:
+      "Kina testira vodonični avion: početak nove energetske trke u avijaciji",
     description:
       "Kina je izvela prvi uspešan test megavatnog vodoničnog turboprop motora, što ukazuje na ubrzanje globalne energetske i tehnološke trke u avijaciji.",
     imageSrc: "/news/hydrogen-light.jpg",
@@ -383,7 +397,8 @@ export const articleMeta: ArticleStaticMeta[] = [
   },
   {
     path: "/nasa-planeta/breaking-nasa-artemis-ii-mesec-posle-50-godina",
-    title: "🚨 BREAKING: NASA ponovo šalje ljude ka Mesecu posle više od 50 godina",
+    title:
+      "🚨 BREAKING: NASA ponovo šalje ljude ka Mesecu posle više od 50 godina",
     description:
       "NASA je lansirala Artemis II, prvu ljudsku misiju ka Mesecu posle više od pola veka.",
     imageSrc: "/news/artemis-landing.jpg",
@@ -391,7 +406,8 @@ export const articleMeta: ArticleStaticMeta[] = [
   },
   {
     path: "/geopolitika/oboren-f15e-iran-2026",
-    title: "Oboren američki F-15E iznad Irana: jedan član posade spašen, drugi nestao",
+    title:
+      "Oboren američki F-15E iznad Irana: jedan član posade spašen, drugi nestao",
     description:
       "Incident predstavlja prvi potvrđeni slučaj obaranja američkog aviona sa posadom u aktuelnom sukobu",
     imageSrc: "https://novitalas.org/news/f15e-iran.jpg",
@@ -474,8 +490,7 @@ export const articleMeta: ArticleStaticMeta[] = [
   },
   {
     path: "/srbija/lokalni-izbori-analiza",
-    title:
-      "Analiza predstojećih izbora: da li je moguć početak promena?",
+    title: "Analiza predstojećih izbora: da li je moguć početak promena?",
     description:
       "Analiza predstojećih lokalnih izbora u Srbiji: uslovi, kontrola procesa i nova energija na terenu.",
     imageSrc: "/news/lokalni-izbori.jpg",
