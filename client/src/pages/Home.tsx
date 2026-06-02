@@ -13,12 +13,12 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/nasa-planeta/nvidia-ulazi-u-globalnu-trku-za-humanoidne-robote",
-  category: "Naša planeta",
-  title: "Nvidia ulazi u globalnu trku za humanoidne robote",
+  href: "/geopolitika/moskva-upozorava-putina-ratna-potrosnja-postaje-neodrziva",
+  category: "Geopolitika",
+  title: "Moskva upozorava Putina: ratna potrošnja postaje neodrživa",
   description:
-    "Američki tehnološki gigant najavio je saradnju sa proizvođačima humanoidnih robota iz Sjedinjenih Država i Evrope, dok Kina ubrzano razvija sopstvene sisteme. Počinje nova industrijska revolucija u kojoj veštačka inteligencija dobija fizički oblik.",
-  imageSrc: "/news/ai-humnoid.jpg",
+    "Ruski finansijski zvaničnici navodno upozoravaju da troškovi rata u Ukrajini sve ozbiljnije pritiskaju budžet, dok vojni vrh traži nova sredstva i odbija smanjenje odbrambenih rashoda.",
+  imageSrc: "/news/moscow-economy-war.jpg",
   imageAlt: "Ilustracija",
   imageCredit: "Ilustracija",
 };
@@ -255,6 +255,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Naša planeta"
+                href="/nasa-planeta/nvidia-ulazi-u-globalnu-trku-za-humanoidne-robote"
+                title="Nvidia ulazi u globalnu trku za humanoidne robote"
+                description="Američki tehnološki gigant najavio je saradnju sa proizvođačima humanoidnih robota iz Sjedinjenih Država i Evrope, dok Kina ubrzano razvija sopstvene sisteme. Počinje nova industrijska revolucija u kojoj veštačka inteligencija dobija fizički oblik."
+                imageSrc="/news/ai-humnoid.jpg"
+                imageAlt="Ilustracija"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Geopolitika"
                 href="/geopolitika/posle-dronova-dolaze-roboti-novo-poglavlje-rata-u-ukrajini"
                 title="Posle dronova dolaze roboti: novo poglavlje rata u Ukrajini"
@@ -282,17 +293,6 @@ export default function Home() {
                 title="NASA najavila nove misije ka Mesecu i plan trajne baze"
                 description="Američka svemirska agencija predstavila je detaljan plan izgradnje trajne baze na Mesecu, uz seriju novih posadnih misija koje bi postepeno izgradile lunarnu infrastrukturu."
                 imageSrc="/news/nasa-anounce.jpg"
-                imageAlt="Ilustracija"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Srbija"
-                href="/srbija/posle-slavije-vlast-ulazi-u-fazu-politicke-nervoze"
-                title="Posle Slavije: vlast ulazi u fazu političke nervoze"
-                description="Studentski pokret pokazuje sve jasnije obrise političke artikulacije, dok vlast istovremeno pokušava da kupi vreme i spreči formiranje studentske izborne liste čiji identitet još nije poznat javnosti."
-                imageSrc="/news/slavija-protest.jpg"
                 imageAlt="Ilustracija"
               />
             </div>
