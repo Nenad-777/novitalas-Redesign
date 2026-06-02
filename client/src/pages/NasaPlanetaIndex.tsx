@@ -19,6 +19,15 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/nvidia-ulazi-u-globalnu-trku-za-humanoidne-robote",
+    img: "/news/ai-humnoid.jpg",
+    alt: "Ilustracija humanoidnih robota i razvoja veštačke inteligencije",
+    imageCredit: "Ilustracija",
+    title: "Nvidia ulazi u globalnu trku za humanoidne robote",
+    description:
+      "Američki tehnološki gigant najavio je saradnju sa proizvođačima humanoidnih robota iz Sjedinjenih Država i Evrope, dok Kina ubrzano razvija sopstvene sisteme.",
+  },
+  {
     href: "/nasa-planeta/nasa-anounce",
     img: "/news/nasa-anounce.jpg",
     alt: "Ilustracija NASA misija ka Mesecu i plana trajne baze",
@@ -40,8 +49,7 @@ const ARTICLES: NasaPlanetaArticle[] = [
     href: "/nasa-planeta/venecijansko-bijenale-ziri-ostavka-umetnost-granice",
     img: "/news/venice-biennale-arsenale-2024.jpg",
     alt: "Izložbeni prostor Arsenala tokom 60. Venecijanskog bijenala 2024.",
-    imageCredit:
-      "Foto: Jennifer 8. Lee / Wikimedia Commons, CC BY-SA 4.0",
+    imageCredit: "Foto: Jennifer 8. Lee / Wikimedia Commons, CC BY-SA 4.0",
     title: "Može li se zabraniti umetnost zbog države iz koje dolazi?",
     description:
       "Ostavka žirija Venecijanskog bijenala otvorila je pitanje koje prevazilazi jednu izložbu: da li umetnost treba da ostane prostor bez granica, ili mora da odgovori na ratove iz sveta oko sebe.",
@@ -131,7 +139,8 @@ const ARTICLES: NasaPlanetaArticle[] = [
     href: "/nasa-planeta/breaking-nasa-artemis-ii-mesec-posle-50-godina",
     img: "/news/artemis-eclipse.jpg",
     alt: "NASA Artemis II — prva ljudska misija ka Mesecu posle 50 godina",
-    title: "BREAKING: NASA ponovo šalje ljude ka Mesecu posle više od 50 godina",
+    title:
+      "BREAKING: NASA ponovo šalje ljude ka Mesecu posle više od 50 godina",
     description:
       "Artemis II označava povratak čovečanstva u duboki svemir — prvi put od 1972. godine.",
   },
@@ -147,7 +156,8 @@ const ARTICLES: NasaPlanetaArticle[] = [
     href: "/nasa-planeta/psihologija-dosada",
     img: "/news/psihologija-dosada.jpg",
     alt: "Čovek koji sedi u tišini i gleda u daljinu — simbol mentalne odmorenosti i dosade kao produktivnog stanja",
-    title: "Otkriće psihologije: zašto je najbolja stvar koju možete da uradite da ne radite ništa",
+    title:
+      "Otkriće psihologije: zašto je najbolja stvar koju možete da uradite da ne radite ništa",
     description:
       "Savremena psihologija otkriva da vaš mozak najbolje radi kada ga ostavite na miru — i da je dosada možda najproduktivnija stvar koju ćete danas uraditi.",
   },
@@ -155,7 +165,8 @@ const ARTICLES: NasaPlanetaArticle[] = [
     href: "/nasa-planeta/najtoplija-decenija-planeta-un",
     img: "/news/world-heat.jpg",
     alt: "Zemlja sa tankom crvenom linijom koja simbolizuje rast globalne temperature",
-    title: "UN potvrdio: planeta iza sebe ima najtopliju deceniju u istoriji merenja",
+    title:
+      "UN potvrdio: planeta iza sebe ima najtopliju deceniju u istoriji merenja",
     description:
       "Svetska meteorološka organizacija UN potvrdila je da je period od 2015. do 2025. bio najtopliji otkad se vodi moderna evidencija o temperaturama.",
   },
@@ -163,7 +174,8 @@ const ARTICLES: NasaPlanetaArticle[] = [
     href: "/nasa-planeta/ai-superaplikacija",
     img: "/news/ai-superapp.jpg",
     alt: "Minimalistički prikaz veštačke inteligencije kao centralnog sistema koji povezuje digitalne funkcije računara",
-    title: "OpenAI razvija „superaplikaciju“ koja objedinjuje ChatGPT, Codex i browser",
+    title:
+      "OpenAI razvija „superaplikaciju“ koja objedinjuje ChatGPT, Codex i browser",
     description:
       "OpenAI planira razvoj jedinstvene desktop aplikacije koja bi objedinjavala ChatGPT, programerski alat Codex i AI browser u jedan integrisani sistem.",
   },
@@ -171,7 +183,8 @@ const ARTICLES: NasaPlanetaArticle[] = [
     href: "/nasa-planeta/mars-reka",
     img: "/news/mars-reka.jpg",
     alt: "Površina Marsa sa tragovima drevnog rečnog korita",
-    title: "Na Marsu otkriveni tragovi drevne reke: nova faza u potrazi za životom",
+    title:
+      "Na Marsu otkriveni tragovi drevne reke: nova faza u potrazi za životom",
     description:
       "NASA-in rover otkrio je nove dokaze koji ukazuju da je na površini Marsa nekada postojala reka, što dodatno menja dosadašnje razumevanje istorije Crvene planete.",
   },
@@ -211,7 +224,8 @@ const ARTICLES: NasaPlanetaArticle[] = [
     href: "/nasa-planeta/naucnici-poceli-da-usmeravaju-snove",
     img: "/snovi-usmeravanje-snova.jpg",
     alt: "Naučnici usmeravaju snove",
-    title: "Naučnici počeli da usmeravaju snove: novo otkriće savremene psihologije",
+    title:
+      "Naučnici počeli da usmeravaju snove: novo otkriće savremene psihologije",
     description:
       "Novo istraživanje pokazuje da je moguće uticati na sadržaj snova i podstaći mozak da tokom sna kreativnije rešava probleme.",
   },
@@ -235,7 +249,6 @@ export default function NasaPlanetaIndex() {
         style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
       >
         <section className="max-w-[1000px] mx-auto px-5">
-
           {/* Section header: kicker + Garamond subtitle + description */}
           <div className="mb-10">
             <span className="kicker">Naša planeta</span>
@@ -249,7 +262,7 @@ export default function NasaPlanetaIndex() {
                 color: isDark ? "#9a978f" : "#555",
               }}
             >
-              NAUKA   PRIRODA   KULTURA
+              NAUKA PRIRODA KULTURA
             </p>
 
             <Link
@@ -262,7 +275,6 @@ export default function NasaPlanetaIndex() {
             >
               Artemis live arhiva →
             </Link>
-
           </div>
 
           {/* HERO ARTICLE — featured story */}
@@ -327,7 +339,7 @@ export default function NasaPlanetaIndex() {
 
           {/* EDITORIAL ARTICLE CARDS — image + title only */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16">
-            {gridArticles.map((article) => (
+            {gridArticles.map(article => (
               <article key={article.href}>
                 <Link href={article.href} className="no-underline block group">
                   <div className="overflow-hidden mb-3">
@@ -374,7 +386,7 @@ export default function NasaPlanetaIndex() {
             </h3>
 
             <ul className="space-y-5">
-              {ARTICLES.map((article) => (
+              {ARTICLES.map(article => (
                 <li key={article.href}>
                   <Link
                     href={article.href}

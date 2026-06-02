@@ -13,12 +13,12 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/posle-dronova-dolaze-roboti-novo-poglavlje-rata-u-ukrajini",
-  category: "Geopolitika",
-  title: "Posle dronova dolaze roboti: novo poglavlje rata u Ukrajini",
+  href: "/nasa-planeta/nvidia-ulazi-u-globalnu-trku-za-humanoidne-robote",
+  category: "Naša planeta",
+  title: "Nvidia ulazi u globalnu trku za humanoidne robote",
   description:
-    "Testiranje humanoidnih robota na ukrajinskom ratištu pokazuje da se iza današnjeg sukoba odvija mnogo šira tehnološka transformacija koja bi mogla da promeni način vođenja ratova u decenijama koje dolaze.",
-  imageSrc: "/news/robots-ukraine.jpg",
+    "Američki tehnološki gigant najavio je saradnju sa proizvođačima humanoidnih robota iz Sjedinjenih Država i Evrope, dok Kina ubrzano razvija sopstvene sisteme. Počinje nova industrijska trka koja bi mogla promeniti svet rada tokom naredne decenije.",
+  imageSrc: "/news/ai-humnoid.jpg",
   imageAlt: "Ilustracija",
   imageCredit: "Ilustracija",
 };
@@ -163,7 +163,10 @@ export default function Home() {
 
         {/* SEO: visually hidden H1 */}
         <h1 className="sr-only">Novi Talas</h1>
-        <p className="sr-only">Novi Talas je digitalni nedeljnik koji donosi analize geopolitike, Srbije i sveta, uz fokus na najvažnije događaje dana.</p>
+        <p className="sr-only">
+          Novi Talas je digitalni nedeljnik koji donosi analize geopolitike,
+          Srbije i sveta, uz fokus na najvažnije događaje dana.
+        </p>
 
         <div className="absolute inset-x-0 bottom-0 pb-4 md:pb-6 flex justify-center">
           <p
@@ -187,7 +190,6 @@ export default function Home() {
         style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
       >
         <div className="max-w-[1200px] mx-auto px-5">
-
           {/* ======================
               1. HERO
              ====================== */}
@@ -222,10 +224,7 @@ export default function Home() {
                 {HERO_ARTICLE.description}
               </p>
 
-              <Link
-                href={HERO_ARTICLE.href}
-                className="block no-underline"
-              >
+              <Link href={HERO_ARTICLE.href} className="block no-underline">
                 <div
                   className="relative w-full overflow-hidden rounded-xl aspect-video"
                   style={{
@@ -240,9 +239,7 @@ export default function Home() {
                     decoding="async"
                   />
                 </div>
-                <p className="photo-credit">
-                  {HERO_ARTICLE.imageCredit}
-                </p>
+                <p className="photo-credit">{HERO_ARTICLE.imageCredit}</p>
               </Link>
             </article>
           </FadeIn>
@@ -257,6 +254,17 @@ export default function Home() {
              ====================== */}
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
+              <SmallArticleCard
+                category="Geopolitika"
+                href="/geopolitika/posle-dronova-dolaze-roboti-novo-poglavlje-rata-u-ukrajini"
+                title="Posle dronova dolaze roboti: novo poglavlje rata u Ukrajini"
+                description="Testiranje humanoidnih robota na ukrajinskom ratištu pokazuje da se iza današnjeg sukoba odvija mnogo šira tehnološka transformacija koja bi mogla da promeni način vođenja ratova u decenijama koje dolaze."
+                imageSrc="/news/robots-ukraine.jpg"
+                imageAlt="Ilustracija"
+              />
+
+              <hr className="editorial-divider" />
+
               <SmallArticleCard
                 category="Geopolitika"
                 href="/geopolitika/60-dana-bliski-istok-sad-iran-dogovor"
@@ -287,21 +295,8 @@ export default function Home() {
                 imageSrc="/news/slavija-protest.jpg"
                 imageAlt="Ilustracija"
               />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/evropa-trazi-novu-formulu-za-ukrajinu"
-                title="Evropa traži novu formulu za Ukrajinu"
-                description="Berlin predlaže model pridruženog članstva bez prava glasa, dok Evropska unija pokušava da pronađe ravnotežu između političke podrške Kijevu i straha od dubokih unutrašnjih promena."
-                imageSrc="/news/mertz-ukraine.jpg"
-                imageAlt="Evropska unija i Ukrajina u kontekstu predloga o pridruženom članstvu"
-              />
-
             </div>
           </FadeIn>
-
         </div>
       </main>
 
