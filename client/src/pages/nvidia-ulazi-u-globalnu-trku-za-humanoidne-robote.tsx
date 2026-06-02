@@ -19,7 +19,7 @@ export default function NvidiaUlaziUGlobalnuTrkuZaHumanoidneRobote() {
       title="Nvidia ulazi u globalnu trku za humanoidne robote"
       dateLabel="2. JUN 2026."
       authorLabel="Novi Talas"
-      deck="Američki tehnološki gigant najavio je saradnju sa proizvođačima humanoidnih robota iz Sjedinjenih Država i Evrope, dok Kina ubrzano razvija sopstvene sisteme. Počinje nova industrijska trka koja bi mogla promeniti svet rada tokom naredne decenije."
+      deck="Američki tehnološki gigant najavio je saradnju sa proizvođačima humanoidnih robota iz Sjedinjenih Država i Evrope, dok Kina ubrzano razvija sopstvene sisteme. Počinje nova industrijska revolucija u kojoj veštačka inteligencija dobija fizički oblik."
       imageSrc={IMAGE_SRC}
       imageAlt="Ilustracija"
       imageCredit="Ilustracija"
