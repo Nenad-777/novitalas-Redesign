@@ -17,7 +17,7 @@ const HERO_ARTICLE = {
   category: "Naša planeta",
   title: "Nvidia ulazi u globalnu trku za humanoidne robote",
   description:
-    "Američki tehnološki gigant najavio je saradnju sa proizvođačima humanoidnih robota iz Sjedinjenih Država i Evrope, dok Kina ubrzano razvija sopstvene sisteme. Počinje nova industrijska trka koja bi mogla promeniti svet rada tokom naredne decenije.",
+    "Američki tehnološki gigant najavio je saradnju sa proizvođačima humanoidnih robota iz Sjedinjenih Država i Evrope, dok Kina ubrzano razvija sopstvene sisteme. Počinje nova industrijska revolucija u kojoj veštačka inteligencija dobija fizički oblik.",
   imageSrc: "/news/ai-humnoid.jpg",
   imageAlt: "Ilustracija",
   imageCredit: "Ilustracija",
