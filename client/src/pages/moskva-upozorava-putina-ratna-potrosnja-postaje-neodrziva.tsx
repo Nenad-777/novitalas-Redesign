@@ -8,7 +8,6 @@ const PARAGRAPHS = [
   "Rusija je tokom prethodnih godina pokazala veću otpornost na sankcije nego što su mnogi zapadni analitičari očekivali. Prihodi od izvoza energenata, prilagođavanje trgovinskih tokova i rast vojne proizvodnje omogućili su Moskvi da nastavi finansiranje rata uprkos međunarodnim restrikcijama. Međutim, rast vojnih rashoda postepeno smanjuje prostor za ulaganja u infrastrukturu, tehnološki razvoj i civilne sektore privrede.",
   "Dodatni izazov predstavljaju visoke kamatne stope i inflatorni pritisci sa kojima se suočava ruska ekonomija. Kako rat traje duže od očekivanog, troškovi održavanja vojne proizvodnje, isplate vojnicima i finansiranja bezbednosnog aparata postaju sve značajnija stavka državnog budžeta.",
   "Za Kremlj ovo nije samo ekonomsko pitanje. Tokom istorije, dugotrajni sukobi često su pokazivali da sposobnost države da finansira rat može biti podjednako važna kao i događaji na samom frontu. Upravo zato rasprava o budžetu i ratnoj potrošnji postaje jedan od najvažnijih pokazatelja budućeg razvoja sukoba.",
-  "Komentar",
   "Ratovi se ne vode samo na bojištima. Oni se vode i u ministarstvima finansija, centralnim bankama i budžetskim komisijama. Ukoliko se upozorenja ruskih ekonomskih zvaničnika pokažu tačnim, naredna faza rata mogla bi biti određena ne samo vojnim događajima, već i sposobnošću države da izdrži finansijski teret dugotrajnog sukoba. Istorija pokazuje da se granice ekonomske izdržljivosti često približavaju neprimetno — sve dok ne postanu presudan faktor.",
 ];
 
