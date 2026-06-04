@@ -32,6 +32,7 @@ import NovacKaoUslovTrenutakUKojemSeOdlucujePravacSrbije from "./pages/novac-kao
 /* ✅ GLAVNA VEST — Geopolitika */
 import PosleDronovaDolazeRoboti from "./pages/posle-dronova-dolaze-roboti-novo-poglavlje-rata-u-ukrajini";
 import MoskvaUpozoravaPutinaRatnaPotrosnjaPostajeNeodrziva from "./pages/moskva-upozorava-putina-ratna-potrosnja-postaje-neodrziva";
+import EvropskaIndustrijaPredNovimUdaromEnergetskeKrize from "./pages/evropska-industrija-pred-novim-udarom-energetske-krize";
 
 /* ✅ NOVA VEST — Geopolitika */
 import SezdestDanaBlizkiIstokSadIranDogovor from "./pages/60-dana-bliski-istok-sad-iran-dogovor";
@@ -257,6 +258,10 @@ function Router() {
         <Route
           path="/geopolitika/moskva-upozorava-putina-ratna-potrosnja-postaje-neodrziva"
           component={MoskvaUpozoravaPutinaRatnaPotrosnjaPostajeNeodrziva}
+        />
+        <Route
+          path="/geopolitika/evropska-industrija-pred-novim-udarom-energetske-krize"
+          component={EvropskaIndustrijaPredNovimUdaromEnergetskeKrize}
         />
 
         <Route

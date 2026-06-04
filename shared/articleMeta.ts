@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/evropska-industrija-pred-novim-udarom-energetske-krize",
+    title: "Evropska industrija pred novim udarom energetske krize",
+    description:
+      "Evropska komisija upozorava da bi rast cena energije mogao ugroziti do 1,3 miliona radnih mesta, dok rat na Bliskom istoku ponovo povećava zabrinutost za stabilnost evropske privrede.",
+    imageSrc: "/news/workers-eu.jpg",
+    datePublished: "2026-06-04",
+    author: "Novi Talas",
+  },
+  {
     path: "/srbija/potpuni-slom-vuciceve-medjunarodne-reputacije",
     title: "Potpuni slom Vučićeve međunarodne reputacije",
     description:

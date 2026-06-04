@@ -13,12 +13,12 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/srbija/potpuni-slom-vuciceve-medjunarodne-reputacije",
-  category: "Srbija",
-  title: "Potpuni slom Vučićeve međunarodne reputacije",
+  href: "/geopolitika/evropska-industrija-pred-novim-udarom-energetske-krize",
+  category: "Geopolitika",
+  title: "Evropska industrija pred novim udarom energetske krize",
   description:
-    "Zabrana ulaska grupi državljana Srbije u Crnu Goru otvorila je pitanje međunarodnog ugleda Aleksandra Vučića i političkog sistema koji je gradio više od decenije.",
-  imageSrc: "/news/slom-medjunarodni.jpg",
+    "Evropska komisija upozorava da bi rast cena energije mogao ugroziti do 1,3 miliona radnih mesta, dok rat na Bliskom istoku ponovo povećava zabrinutost za stabilnost evropske privrede.",
+  imageSrc: "/news/workers-eu.jpg",
   imageAlt: "Ilustracija",
   imageCredit: "Ilustracija",
 };
@@ -255,6 +255,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Srbija"
+                href="/srbija/potpuni-slom-vuciceve-medjunarodne-reputacije"
+                title="Potpuni slom Vučićeve međunarodne reputacije"
+                description="Zabrana ulaska grupi državljana Srbije u Crnu Goru otvorila je pitanje međunarodnog ugleda Aleksandra Vučića i političkog sistema koji je gradio više od decenije."
+                imageSrc="/news/slom-medjunarodni.jpg"
+                imageAlt="Ilustracija"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Geopolitika"
                 href="/geopolitika/moskva-upozorava-putina-ratna-potrosnja-postaje-neodrziva"
                 title="Moskva upozorava Putina: ratna potrošnja postaje neodrživa"
@@ -283,17 +294,6 @@ export default function Home() {
                 description="Testiranje humanoidnih robota na ukrajinskom ratištu pokazuje da se iza današnjeg sukoba odvija mnogo šira tehnološka transformacija koja bi mogla da promeni način vođenja ratova u decenijama koje dolaze."
                 imageSrc="/news/robots-ukraine.jpg"
                 imageAlt="Ilustracija"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/60-dana-bliski-istok-sad-iran-dogovor"
-                title="60 dana za Bliski istok: iza pregovora SAD i Irana krije se mnogo veći dogovor"
-                description="Okvirni sporazum o produženju primirja između Vašingtona i Teherana mogao bi da otvori prostor za novu rundu pregovora o iranskom nuklearnom programu, sankcijama i bezbednosti Persijskog zaliva."
-                imageSrc="/news/iran-usa-new-deal.jpg"
-                imageAlt="Ilustracija — pregovori SAD i Irana"
               />
 
             </div>
