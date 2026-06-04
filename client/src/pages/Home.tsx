@@ -13,12 +13,12 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/moskva-upozorava-putina-ratna-potrosnja-postaje-neodrziva",
-  category: "Geopolitika",
-  title: "Moskva upozorava Putina: ratna potrošnja postaje neodrživa",
+  href: "/srbija/potpuni-slom-vuciceve-medjunarodne-reputacije",
+  category: "Srbija",
+  title: "Potpuni slom Vučićeve međunarodne reputacije",
   description:
-    "Ruski finansijski zvaničnici navodno upozoravaju da troškovi rata u Ukrajini sve ozbiljnije pritiskaju budžet, dok vojni vrh traži nova sredstva i odbija smanjenje odbrambenih rashoda.",
-  imageSrc: "/news/moscow-economy-war.jpg",
+    "Zabrana ulaska grupi državljana Srbije u Crnu Goru otvorila je pitanje međunarodnog ugleda Aleksandra Vučića i političkog sistema koji je gradio više od decenije.",
+  imageSrc: "/news/slom-medjunarodni.jpg",
   imageAlt: "Ilustracija",
   imageCredit: "Ilustracija",
 };
@@ -255,6 +255,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Geopolitika"
+                href="/geopolitika/moskva-upozorava-putina-ratna-potrosnja-postaje-neodrziva"
+                title="Moskva upozorava Putina: ratna potrošnja postaje neodrživa"
+                description="Ruski finansijski zvaničnici navodno upozoravaju da troškovi rata u Ukrajini sve ozbiljnije pritiskaju budžet, dok vojni vrh traži nova sredstva i odbija smanjenje odbrambenih rashoda."
+                imageSrc="/news/moscow-economy-war.jpg"
+                imageAlt="Ilustracija"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Naša planeta"
                 href="/nasa-planeta/nvidia-ulazi-u-globalnu-trku-za-humanoidne-robote"
                 title="Nvidia ulazi u globalnu trku za humanoidne robote"
@@ -285,16 +296,6 @@ export default function Home() {
                 imageAlt="Ilustracija — pregovori SAD i Irana"
               />
 
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Naša planeta"
-                href="/nasa-planeta/nasa-anounce"
-                title="NASA najavila nove misije ka Mesecu i plan trajne baze"
-                description="Američka svemirska agencija predstavila je detaljan plan izgradnje trajne baze na Mesecu, uz seriju novih posadnih misija koje bi postepeno izgradile lunarnu infrastrukturu."
-                imageSrc="/news/nasa-anounce.jpg"
-                imageAlt="Ilustracija"
-              />
             </div>
           </FadeIn>
         </div>

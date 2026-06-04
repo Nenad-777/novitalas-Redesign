@@ -72,6 +72,7 @@ import PrviBrifing from "./pages/prvi-brifing";
 import SrbijaPage from "./pages/SrbijaPage";
 import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
+import PotpuniSlomVuciceveMedjunarodneReputacije from "./pages/potpuni-slom-vuciceve-medjunarodne-reputacije";
 
 /* ✅ NOVA VEST — Geopolitika */
 import PomeranjeTezistaOrbanEvropa from "./pages/pomeranje-tezista-orban-evropa";
@@ -527,6 +528,11 @@ function Router() {
         <Route
           path="/srbija/posle-slavije-vlast-ulazi-u-fazu-politicke-nervoze"
           component={PosleSlavijeVlastUlaziUFazuPolitickeNervoze}
+        />
+
+        <Route
+          path="/srbija/potpuni-slom-vuciceve-medjunarodne-reputacije"
+          component={PotpuniSlomVuciceveMedjunarodneReputacije}
         />
 
         <Route
