@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/srbija/potpuni-slom-vuciceve-medjunarodne-reputacije",
+    title: "Potpuni slom Vučićeve međunarodne reputacije",
+    description:
+      "Zabrana ulaska grupi državljana Srbije u Crnu Goru otvorila je pitanje međunarodnog ugleda Aleksandra Vučića i političkog sistema koji je gradio više od decenije.",
+    imageSrc: "/news/slom-medjunarodni.jpg",
+    datePublished: "2026-06-04",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/moskva-upozorava-putina-ratna-potrosnja-postaje-neodrziva",
     title: "Moskva upozorava Putina: ratna potrošnja postaje neodrživa",
     description:
