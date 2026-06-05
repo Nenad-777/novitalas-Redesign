@@ -30,6 +30,7 @@ const IMAGES = {
   hargOilTerminal: "/news/harg-oil-terminal.jpg",
   f15eIran: "/news/f15e-iran.jpg",
   ecbFrankfurtInflation: "/news/ecb-frankfurt-inflation.jpg",
+  workersEu: "/news/workers-eu.jpg",
   vanceNetanyahu: "/news/vance-netanyahu.jpg",
   orbanGas: "/news/orban-gas.jpg",
   steinmeier: "/news/Frank-Walter Steinmeier.jpg",
@@ -175,6 +176,60 @@ export default function GeopolitikaIndex() {
                   }}
                 >
                   Okvirni sporazum o produženju primirja između Vašingtona i Teherana mogao bi da otvori prostor za novu rundu pregovora o iranskom nuklearnom programu, sankcijama i bezbednosti Persijskog zaliva.
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
+            <article className="md:col-span-2">
+              <Link
+                href="/geopolitika/evropska-industrija-pred-novim-udarom-energetske-krize"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.workersEu}
+                    alt="Ilustracija"
+                    className="w-full h-[260px] object-cover object-center block"
+                    decoding="async"
+                  />
+                </div>
+
+                <h2
+                  className="text-[22px] md:text-[28px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Evropska industrija pred novim udarom energetske krize
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Evropska komisija upozorava da bi rast cena energije mogao
+                  ugroziti do 1,3 miliona radnih mesta, dok rat na Bliskom
+                  istoku ponovo povećava zabrinutost za stabilnost evropske
+                  privrede.
                 </p>
 
                 <div
