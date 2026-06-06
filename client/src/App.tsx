@@ -217,6 +217,7 @@ import PsihologijaDosada from "./pages/psihologija-dosada";
 
 /* ✅ NOVA VEST — Naša planeta */
 import NasaAnounce from "./pages/nasa-anounce";
+import PrviKorakKaSvetuBezNaslednihBolesti from "./pages/prvi-korak-ka-svetu-bez-naslednih-bolesti";
 import NvidiaUlaziUGlobalnuTrkuZaHumanoidneRobote from "./pages/nvidia-ulazi-u-globalnu-trku-za-humanoidne-robote";
 
 /* ✅ ARHIVSKA STRANICA — Februar 2026 */
@@ -588,6 +589,11 @@ function Router() {
             NAŠA PLANETA
            ========================= */}
         <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
+
+        <Route
+          path="/nasa-planeta/prvi-korak-ka-svetu-bez-naslednih-bolesti"
+          component={PrviKorakKaSvetuBezNaslednihBolesti}
+        />
 
         <Route
           path="/nasa-planeta/nvidia-ulazi-u-globalnu-trku-za-humanoidne-robote"

@@ -13,12 +13,12 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/evropska-industrija-pred-novim-udarom-energetske-krize",
-  category: "Geopolitika",
-  title: "Evropska industrija pred novim udarom energetske krize",
+  href: "/nasa-planeta/prvi-korak-ka-svetu-bez-naslednih-bolesti",
+  category: "Naša planeta",
+  title: "Prvi korak ka svetu bez naslednih bolesti?",
   description:
-    "Evropska komisija upozorava da bi rast cena energije mogao ugroziti do 1,3 miliona radnih mesta, dok rat na Bliskom istoku ponovo povećava zabrinutost za stabilnost evropske privrede.",
-  imageSrc: "/news/workers-eu.jpg",
+    "Naučnici su po prvi put precizno izmenili gene u ljudskim embrionima, otvarajući mogućnost lečenja naslednih bolesti, ali i novu raspravu o granicama ljudskog mešanja u sopstvenu evoluciju.",
+  imageSrc: "/news/embryo-edit.jpg",
   imageAlt: "Ilustracija",
   imageCredit: "Ilustracija",
 };
@@ -289,10 +289,10 @@ export default function Home() {
 
               <SmallArticleCard
                 category="Geopolitika"
-                href="/geopolitika/posle-dronova-dolaze-roboti-novo-poglavlje-rata-u-ukrajini"
-                title="Posle dronova dolaze roboti: novo poglavlje rata u Ukrajini"
-                description="Testiranje humanoidnih robota na ukrajinskom ratištu pokazuje da se iza današnjeg sukoba odvija mnogo šira tehnološka transformacija koja bi mogla da promeni način vođenja ratova u decenijama koje dolaze."
-                imageSrc="/news/robots-ukraine.jpg"
+                href="/geopolitika/evropska-industrija-pred-novim-udarom-energetske-krize"
+                title="Evropska industrija pred novim udarom energetske krize"
+                description="Evropska komisija upozorava da bi rast cena energije mogao ugroziti do 1,3 miliona radnih mesta, dok rat na Bliskom istoku ponovo povećava zabrinutost za stabilnost evropske privrede."
+                imageSrc="/news/workers-eu.jpg"
                 imageAlt="Ilustracija"
               />
 
