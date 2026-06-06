@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/prvi-korak-ka-svetu-bez-naslednih-bolesti",
+    title: "Prvi korak ka svetu bez naslednih bolesti?",
+    description:
+      "Naučnici su po prvi put precizno izmenili gene u ljudskim embrionima, otvarajući mogućnost lečenja naslednih bolesti, ali i novu raspravu o granicama ljudskog mešanja u sopstvenu evoluciju.",
+    imageSrc: "/news/embryo-edit.jpg",
+    datePublished: "2026-06-06",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/evropska-industrija-pred-novim-udarom-energetske-krize",
     title: "Evropska industrija pred novim udarom energetske krize",
     description:

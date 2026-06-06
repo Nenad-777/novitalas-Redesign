@@ -19,6 +19,15 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/prvi-korak-ka-svetu-bez-naslednih-bolesti",
+    img: "/news/embryo-edit.jpg",
+    alt: "Ilustracija",
+    imageCredit: "Ilustracija",
+    title: "Prvi korak ka svetu bez naslednih bolesti?",
+    description:
+      "Naučnici su po prvi put precizno izmenili gene u ljudskim embrionima, otvarajući mogućnost lečenja naslednih bolesti, ali i novu raspravu o granicama ljudskog mešanja u sopstvenu evoluciju.",
+  },
+  {
     href: "/nasa-planeta/nvidia-ulazi-u-globalnu-trku-za-humanoidne-robote",
     img: "/news/ai-humnoid.jpg",
     alt: "Ilustracija humanoidnih robota i razvoja veštačke inteligencije",
