@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  nuclearViennaIran: "/news/nuclear-vienna-iran.jpg",
   iranUsaNewDeal: "/news/iran-usa-new-deal.jpg",
   robotsUkraine: "/news/robots-ukraine.jpg",
   mertzUkraine: "/news/mertz-ukraine.jpg",
@@ -86,6 +87,57 @@ export default function GeopolitikaIndex() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <article className="md:col-span-2">
+              <Link
+                href="/geopolitika/nova-bitka-za-iran-pocinje-u-becu"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.nuclearViennaIran}
+                    alt="Ilustracija"
+                    className="w-full h-[260px] object-cover object-center block"
+                    decoding="async"
+                  />
+                </div>
+
+                <h2
+                  className="text-[22px] md:text-[28px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Nova bitka za Iran počinje u Beču
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Dok Zapad traži veću transparentnost iranskog nuklearnog programa, Rusija i Kina upozoravaju da bi novi pritisci mogli dodatno ugroziti ionako krhke pregovore o budućnosti regiona.
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
             <article className="md:col-span-2">
               <Link
                 href="/geopolitika/posle-dronova-dolaze-roboti-novo-poglavlje-rata-u-ukrajini"

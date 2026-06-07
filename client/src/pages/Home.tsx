@@ -13,12 +13,12 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/nasa-planeta/prvi-korak-ka-svetu-bez-naslednih-bolesti",
-  category: "Naša planeta",
-  title: "Prvi korak ka svetu bez naslednih bolesti?",
+  href: "/geopolitika/nova-bitka-za-iran-pocinje-u-becu",
+  category: "Geopolitika",
+  title: "Nova bitka za Iran počinje u Beču",
   description:
-    "Naučnici su po prvi put precizno izmenili gene u ljudskim embrionima, otvarajući mogućnost lečenja naslednih bolesti, ali i novu raspravu o granicama ljudskog mešanja u sopstvenu evoluciju.",
-  imageSrc: "/news/embryo-edit.jpg",
+    "Dok Zapad traži veću transparentnost iranskog nuklearnog programa, Rusija i Kina upozoravaju da bi novi pritisci mogli dodatno ugroziti ionako krhke pregovore o budućnosti regiona.",
+  imageSrc: "/news/nuclear-vienna-iran.jpg",
   imageAlt: "Ilustracija",
   imageCredit: "Ilustracija",
 };
@@ -255,6 +255,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Naša planeta"
+                href="/nasa-planeta/prvi-korak-ka-svetu-bez-naslednih-bolesti"
+                title="Prvi korak ka svetu bez naslednih bolesti?"
+                description="Naučnici su po prvi put precizno izmenili gene u ljudskim embrionima, otvarajući mogućnost lečenja naslednih bolesti, ali i novu raspravu o granicama ljudskog mešanja u sopstvenu evoluciju."
+                imageSrc="/news/embryo-edit.jpg"
+                imageAlt="Ilustracija"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Srbija"
                 href="/srbija/potpuni-slom-vuciceve-medjunarodne-reputacije"
                 title="Potpuni slom Vučićeve međunarodne reputacije"
@@ -284,18 +295,6 @@ export default function Home() {
                 imageSrc="/news/ai-humnoid.jpg"
                 imageAlt="Ilustracija"
               />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/evropska-industrija-pred-novim-udarom-energetske-krize"
-                title="Evropska industrija pred novim udarom energetske krize"
-                description="Evropska komisija upozorava da bi rast cena energije mogao ugroziti do 1,3 miliona radnih mesta, dok rat na Bliskom istoku ponovo povećava zabrinutost za stabilnost evropske privrede."
-                imageSrc="/news/workers-eu.jpg"
-                imageAlt="Ilustracija"
-              />
-
             </div>
           </FadeIn>
         </div>
