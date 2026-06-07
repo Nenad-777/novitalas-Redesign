@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/nova-bitka-za-iran-pocinje-u-becu",
+    title: "Nova bitka za Iran počinje u Beču",
+    description:
+      "Dok Zapad traži veću transparentnost iranskog nuklearnog programa, Rusija i Kina upozoravaju da bi novi pritisci mogli dodatno ugroziti ionako krhke pregovore o budućnosti regiona.",
+    imageSrc: "/news/nuclear-vienna-iran.jpg",
+    datePublished: "2026-06-07",
+    author: "Novi Talas",
+  },
+  {
     path: "/nasa-planeta/prvi-korak-ka-svetu-bez-naslednih-bolesti",
     title: "Prvi korak ka svetu bez naslednih bolesti?",
     description:

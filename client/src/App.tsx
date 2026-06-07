@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import GeopolitikaIndex from "./pages/GeopolitikaIndex";
 import GeopolitikaIran from "./pages/GeopolitikaIran";
 import GeopolitikaArticle from "./pages/GeopolitikaArticle";
+import NovaBitkaZaIranPocinjeUBecu from "./pages/nova-bitka-za-iran-pocinje-u-becu";
 import PutinGovoriOKrajuRataUkrajina from "./pages/putin-govori-o-kraju-rata-ukrajina";
 import BricsIranNaftaPukotineMultipolarnogSveta from "./pages/brics-iran-nafta-pukotine-multipolarnog-sveta";
 import PekingIzmedjuTrumpaIPutina from "./pages/peking-izmedju-trumpa-i-putina";
@@ -252,6 +253,10 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/nova-bitka-za-iran-pocinje-u-becu"
+          component={NovaBitkaZaIranPocinjeUBecu}
+        />
         <Route
           path="/geopolitika/posle-dronova-dolaze-roboti-novo-poglavlje-rata-u-ukrajini"
           component={PosleDronovaDolazeRoboti}
