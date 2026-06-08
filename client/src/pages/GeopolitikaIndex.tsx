@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  albaniaTrumpShore: "/news/albania-trump-shore.jpg",
   nuclearViennaIran: "/news/nuclear-vienna-iran.jpg",
   iranUsaNewDeal: "/news/iran-usa-new-deal.jpg",
   robotsUkraine: "/news/robots-ukraine.jpg",
@@ -89,7 +90,7 @@ export default function GeopolitikaIndex() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <article className="md:col-span-2">
               <Link
-                href="/geopolitika/nova-bitka-za-iran-pocinje-u-becu"
+                href="/geopolitika/luksuzni-raj-ili-gubitak-obale"
                 className="no-underline"
               >
                 <div
@@ -100,7 +101,7 @@ export default function GeopolitikaIndex() {
                   }}
                 >
                   <img
-                    src={IMAGES.nuclearViennaIran}
+                    src={IMAGES.albaniaTrumpShore}
                     alt="Ilustracija"
                     className="w-full h-[260px] object-cover object-center block"
                     decoding="async"
@@ -114,7 +115,7 @@ export default function GeopolitikaIndex() {
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  Nova bitka za Iran počinje u Beču
+                  Luksuzni raj ili gubitak obale?
                 </h2>
 
                 <p
@@ -124,7 +125,9 @@ export default function GeopolitikaIndex() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Dok Zapad traži veću transparentnost iranskog nuklearnog programa, Rusija i Kina upozoravaju da bi novi pritisci mogli dodatno ugroziti ionako krhke pregovore o budućnosti regiona.
+                  Veliki turistički projekat na albanskoj obali ponovo otvara
+                  pitanje kako uskladiti privlačenje investicija sa zaštitom
+                  prostora i javnog interesa.
                 </p>
 
                 <div
