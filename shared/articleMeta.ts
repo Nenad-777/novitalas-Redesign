@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/luksuzni-raj-ili-gubitak-obale",
+    title: "Luksuzni raj ili gubitak obale?",
+    description:
+      "Veliki turistički projekat na albanskoj obali ponovo otvara pitanje kako uskladiti privlačenje investicija sa zaštitom prostora i javnog interesa.",
+    imageSrc: "/news/albania-trump-shore.jpg",
+    datePublished: "2026-06-08",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/nova-bitka-za-iran-pocinje-u-becu",
     title: "Nova bitka za Iran počinje u Beču",
     description:

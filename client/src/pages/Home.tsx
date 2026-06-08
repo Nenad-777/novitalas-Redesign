@@ -13,6 +13,17 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
+  href: "/geopolitika/luksuzni-raj-ili-gubitak-obale",
+  category: "Geopolitika",
+  title: "Luksuzni raj ili gubitak obale?",
+  description:
+    "Investicija u luksuzni turizam na albanskoj obali otvara širu balkansku dilemu: kako privući kapital i nova radna mesta, a ne izgubiti prirodno nasleđe koje taj kapital želi da iskoristi.",
+  imageSrc: "/news/albania-trump-shore.jpg",
+  imageAlt: "Ilustracija",
+  imageCredit: "Ilustracija",
+};
+
+const PREVIOUS_HERO_ARTICLE = {
   href: "/geopolitika/nova-bitka-za-iran-pocinje-u-becu",
   category: "Geopolitika",
   title: "Nova bitka za Iran počinje u Beču",
@@ -255,6 +266,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category={PREVIOUS_HERO_ARTICLE.category}
+                href={PREVIOUS_HERO_ARTICLE.href}
+                title={PREVIOUS_HERO_ARTICLE.title}
+                description={PREVIOUS_HERO_ARTICLE.description}
+                imageSrc={PREVIOUS_HERO_ARTICLE.imageSrc}
+                imageAlt={PREVIOUS_HERO_ARTICLE.imageAlt}
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Naša planeta"
                 href="/nasa-planeta/prvi-korak-ka-svetu-bez-naslednih-bolesti"
                 title="Prvi korak ka svetu bez naslednih bolesti?"
@@ -282,17 +304,6 @@ export default function Home() {
                 title="Moskva upozorava Putina: ratna potrošnja postaje neodrživa"
                 description="Ruski finansijski zvaničnici navodno upozoravaju da troškovi rata u Ukrajini sve ozbiljnije pritiskaju budžet, dok vojni vrh traži nova sredstva i odbija smanjenje odbrambenih rashoda."
                 imageSrc="/news/moscow-economy-war.jpg"
-                imageAlt="Ilustracija"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Naša planeta"
-                href="/nasa-planeta/nvidia-ulazi-u-globalnu-trku-za-humanoidne-robote"
-                title="Nvidia ulazi u globalnu trku za humanoidne robote"
-                description="Američki tehnološki gigant najavio je saradnju sa proizvođačima humanoidnih robota iz Sjedinjenih Država i Evrope, dok Kina ubrzano razvija sopstvene sisteme. Počinje nova industrijska revolucija u kojoj veštačka inteligencija dobija fizički oblik."
-                imageSrc="/news/ai-humnoid.jpg"
                 imageAlt="Ilustracija"
               />
             </div>
