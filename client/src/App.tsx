@@ -52,6 +52,9 @@ import PadVladeURumuniji from "./pages/pad-vlade-u-rumuniji-proevropski-zid-nato
 import AmerikaPovlaciVojnikeIzNemacke from "./pages/amerika-povlaci-vojnike-iz-nemacke-nato-nepoverenje";
 
 /* ✅ NOVA VEST — Geopolitika */
+import NemackaIFrancuskaOdustajuOdZajednickogBorbenogAviona from "./pages/nemacka-i-francuska-odustaju-od-zajednickog-borbenog-aviona";
+
+/* ✅ NOVA VEST — Geopolitika */
 import SvetNaDan1Maj2026 from "./pages/svet-na-dan-1-maj-2026";
 
 /* ✅ NOVA VEST — Geopolitika */
@@ -321,6 +324,11 @@ function Router() {
         <Route
           path="/geopolitika/amerika-povlaci-vojnike-iz-nemacke-nato-nepoverenje"
           component={AmerikaPovlaciVojnikeIzNemacke}
+        />
+
+        <Route
+          path="/geopolitika/nemacka-i-francuska-odustaju-od-zajednickog-borbenog-aviona"
+          component={NemackaIFrancuskaOdustajuOdZajednickogBorbenogAviona}
         />
 
         <Route

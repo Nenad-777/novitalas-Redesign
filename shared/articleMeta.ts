@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/nemacka-i-francuska-odustaju-od-zajednickog-borbenog-aviona",
+    title: "Nemačka i Francuska odustaju od zajedničkog borbenog aviona",
+    description:
+      "Kriza programa FCAS ponovo otvara pitanje evropske odbrane: Francuska, Nemačka, Airbus i Dassault nisu uspeli da usaglase zajednički razvoj borbenog aviona nove generacije.",
+    imageSrc: "/news/germany-france-delayed.jpg",
+    datePublished: "2026-06-09",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/luksuzni-raj-ili-gubitak-obale",
     title: "Luksuzni raj ili gubitak obale?",
     description:
