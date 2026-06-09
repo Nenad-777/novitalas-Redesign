@@ -58,6 +58,9 @@ import SvetNaDan1Maj2026 from "./pages/svet-na-dan-1-maj-2026";
 import NatoPodPritiskom from "./pages/nato-pod-pritiskom-od-saveza-ravnopravnih-ka-sistemu-uslovljene-lojalnosti";
 
 /* ✅ NOVA VEST — Obaveštajni izvori */
+import EvropaPreispitujeOslanjanjeNaAmericskeObavestajneSluzbe from "./pages/evropa-preispituje-oslanjanje-na-americke-obavestajne-sluzbe";
+
+/* ✅ NOVA VEST — Obaveštajni izvori */
 import SpijunskeAktivnostiNeJenjavajuUEvropi from "./pages/spijunske-aktivnosti-ne-jenjavaju-u-evropi";
 
 /* ✅ NOVA VEST — Obaveštajni izvori */
@@ -495,6 +498,11 @@ function Router() {
             OBAVEŠTAJNI IZVORI
            ========================= */}
         <Route path="/obavestajni-izvori" component={ObavestajniIndex} />
+
+        <Route
+          path="/obavestajni-izvori/evropa-preispituje-oslanjanje-na-americke-obavestajne-sluzbe"
+          component={EvropaPreispitujeOslanjanjeNaAmericskeObavestajneSluzbe}
+        />
 
         <Route
           path="/obavestajni-izvori/spijunske-aktivnosti-ne-jenjavaju-u-evropi"

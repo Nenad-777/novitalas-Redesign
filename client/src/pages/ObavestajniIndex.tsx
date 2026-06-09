@@ -10,6 +10,15 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/obavestajni-izvori/evropa-preispituje-oslanjanje-na-americke-obavestajne-sluzbe",
+    img: "/news/europe-independent-intelligence.jpg",
+    alt: "Ilustracija — Evropa i nezavisne obaveštajne službe",
+    title: "Evropa preispituje oslanjanje na američke obaveštajne službe",
+    description:
+      "Evropske bezbednosne i obaveštajne službe sve otvorenije izražavaju zabrinutost zbog dugogodišnje zavisnosti od američkih obaveštajnih kapaciteta. Rat u Ukrajini i neizvesnost oko spoljnopolitičkog kursa Vašingtona pokrenuli su raspravu o jačanju evropskih obaveštajnih sposobnosti.",
+    date: "9. jun 2026.",
+  },
+  {
     href: "/obavestajni-izvori/spijunske-aktivnosti-ne-jenjavaju-u-evropi",
     img: "/news/germany-police.jpg",
     alt: "Nemačka policija na ulicama — pojačane bezbednosne mere zbog obaveštajnih pretnji",

@@ -13,23 +13,23 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
+  href: "/obavestajni-izvori/evropa-preispituje-oslanjanje-na-americke-obavestajne-sluzbe",
+  category: "Obaveštajni izvori",
+  title: "Evropa preispituje oslanjanje na američke obaveštajne službe",
+  description:
+    "Evropske bezbednosne i obaveštajne službe sve otvorenije izražavaju zabrinutost zbog dugogodišnje zavisnosti od američkih obaveštajnih kapaciteta. Rat u Ukrajini i neizvesnost oko spoljnopolitičkog kursa Vašingtona pokrenuli su raspravu o jačanju evropskih obaveštajnih sposobnosti.",
+  imageSrc: "/news/europe-independent-intelligence.jpg",
+  imageAlt: "Ilustracija — Evropa i nezavisne obaveštajne službe",
+  imageCredit: "Ilustracija: Novi Talas",
+};
+
+const PREVIOUS_HERO_ARTICLE = {
   href: "/geopolitika/luksuzni-raj-ili-gubitak-obale",
   category: "Geopolitika",
   title: "Luksuzni raj ili gubitak obale?",
   description:
     "Investicija u luksuzni turizam na albanskoj obali otvara širu balkansku dilemu: kako privući kapital i nova radna mesta, a ne izgubiti prirodno nasleđe koje taj kapital želi da iskoristi.",
   imageSrc: "/news/albania-trump-shore.jpg",
-  imageAlt: "Ilustracija",
-  imageCredit: "Ilustracija",
-};
-
-const PREVIOUS_HERO_ARTICLE = {
-  href: "/geopolitika/nova-bitka-za-iran-pocinje-u-becu",
-  category: "Geopolitika",
-  title: "Nova bitka za Iran počinje u Beču",
-  description:
-    "Dok Zapad traži veću transparentnost iranskog nuklearnog programa, Rusija i Kina upozoravaju da bi novi pritisci mogli dodatno ugroziti ionako krhke pregovore o budućnosti regiona.",
-  imageSrc: "/news/nuclear-vienna-iran.jpg",
   imageAlt: "Ilustracija",
   imageCredit: "Ilustracija",
 };
