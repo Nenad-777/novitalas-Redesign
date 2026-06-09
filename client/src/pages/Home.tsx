@@ -24,14 +24,14 @@ const HERO_ARTICLE = {
 };
 
 const PREVIOUS_HERO_ARTICLE = {
-  href: "/geopolitika/luksuzni-raj-ili-gubitak-obale",
+  href: "/geopolitika/nemacka-i-francuska-odustaju-od-zajednickog-borbenog-aviona",
   category: "Geopolitika",
-  title: "Luksuzni raj ili gubitak obale?",
+  title: "Nemačka i Francuska odustaju od zajedničkog borbenog aviona",
   description:
-    "Investicija u luksuzni turizam na albanskoj obali otvara širu balkansku dilemu: kako privući kapital i nova radna mesta, a ne izgubiti prirodno nasleđe koje taj kapital želi da iskoristi.",
-  imageSrc: "/news/albania-trump-shore.jpg",
-  imageAlt: "Ilustracija",
-  imageCredit: "Ilustracija",
+    "Program FCAS, zamišljen kao temelj evropske vazdušne moći, ulazi u ozbiljnu krizu nakon što Pariz i Berlin nisu uspeli da prevaziđu višegodišnje sporove oko industrijskog vođstva i tehnoloških prava.",
+  imageSrc: "/news/germany-france-delayed.jpg",
+  imageAlt: "Ilustracija evropskog borbenog aviona FCAS",
+  imageCredit: "Foto: Novi Talas",
 };
 
 // Simple fade-in on scroll hook
