@@ -13,6 +13,17 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
+  href: "/geopolitika/tramp-pokrenuo-udare-na-iran-nakon-obaranja-americkog-helikoptera",
+  category: "Geopolitika",
+  title: "Tramp pokrenuo udare na Iran nakon obaranja američkog helikoptera",
+  description:
+    "Obaranje američkog vojnog helikoptera u blizini Ormuskog moreuza pokrenulo je niz vojnih i diplomatskih poteza koji su za nekoliko dana prerasli u novu otvorenu krizu između Vašingtona i Teherana.",
+  imageSrc: "/news/usa-iran-crisis.jpg",
+  imageAlt: "Američki i iranski vojni sudar — kriza oko Ormuskog moreuza",
+  imageCredit: "Ilustracija: Novi Talas",
+};
+
+const PREVIOUS_HERO_ARTICLE = {
   href: "/obavestajni-izvori/evropa-preispituje-oslanjanje-na-americke-obavestajne-sluzbe",
   category: "Obaveštajni izvori",
   title: "Evropa preispituje oslanjanje na američke obaveštajne službe",
@@ -21,17 +32,6 @@ const HERO_ARTICLE = {
   imageSrc: "/news/europe-independent-intelligence.jpg",
   imageAlt: "Ilustracija — Evropa i nezavisne obaveštajne službe",
   imageCredit: "Ilustracija: Novi Talas",
-};
-
-const PREVIOUS_HERO_ARTICLE = {
-  href: "/geopolitika/nemacka-i-francuska-odustaju-od-zajednickog-borbenog-aviona",
-  category: "Geopolitika",
-  title: "Nemačka i Francuska odustaju od zajedničkog borbenog aviona",
-  description:
-    "Program FCAS, zamišljen kao temelj evropske vazdušne moći, ulazi u ozbiljnu krizu nakon što Pariz i Berlin nisu uspeli da prevaziđu višegodišnje sporove oko industrijskog vođstva i tehnoloških prava.",
-  imageSrc: "/news/germany-france-delayed.jpg",
-  imageAlt: "Ilustracija evropskog borbenog aviona FCAS",
-  imageCredit: "Foto: Novi Talas",
 };
 
 // Simple fade-in on scroll hook
