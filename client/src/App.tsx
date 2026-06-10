@@ -224,6 +224,9 @@ import MoonRing from "./pages/moon-ring";
 import AiSuperaplikacija from "./pages/ai-superaplikacija";
 import PsihologijaDosada from "./pages/psihologija-dosada";
 
+/* ✅ NOVA VEST — Naša planeta — Artemis III */
+import NasaPredstavilaPosaduArtemisIII from "./pages/nasa-predstavila-posadu-artemis-iii";
+
 /* ✅ NOVA VEST — Naša planeta */
 import NasaAnounce from "./pages/nasa-anounce";
 import PrviKorakKaSvetuBezNaslednihBolesti from "./pages/prvi-korak-ka-svetu-bez-naslednih-bolesti";
@@ -632,6 +635,11 @@ function Router() {
         />
 
         <Route path="/nasa-planeta/nasa-anounce" component={NasaAnounce} />
+
+        <Route
+          path="/nasa-planeta/nasa-predstavila-posadu-artemis-iii"
+          component={NasaPredstavilaPosaduArtemisIII}
+        />
 
         <Route
           path="/nasa-planeta/trump-otvorio-ufo-arhive"
