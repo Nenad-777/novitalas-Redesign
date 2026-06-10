@@ -19,6 +19,15 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/nasa-predstavila-posadu-artemis-iii",
+    img: "/news/artemis-nasa-3.jpg",
+    alt: "NASA Artemis III — posada misije koja treba da vrati ljude na Mesec",
+    imageCredit: "Foto: NASA / Artemis III",
+    title: "NASA predstavila posadu misije Artemis III",
+    description:
+      "Povratak ljudi na Mesec ulazi u novu fazu — NASA je zvanično objavila posadu prve misije koja bi trebalo da vrati astronaute na površinu Meseca posle više od pola veka.",
+  },
+  {
     href: "/nasa-planeta/prvi-korak-ka-svetu-bez-naslednih-bolesti",
     img: "/news/embryo-edit.jpg",
     alt: "Ilustracija",

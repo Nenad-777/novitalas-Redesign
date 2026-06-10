@@ -278,6 +278,17 @@ export default function Home() {
 
               <SmallArticleCard
                 category="Naša planeta"
+                href="/nasa-planeta/nasa-predstavila-posadu-artemis-iii"
+                title="NASA predstavila posadu misije Artemis III"
+                description="Povratak ljudi na Mesec ulazi u novu fazu — NASA je zvanično objavila posadu prve misije koja bi trebalo da vrati astronaute na površinu Meseca posle više od pola veka."
+                imageSrc="/news/artemis-nasa-3.jpg"
+                imageAlt="NASA Artemis III — posada misije koja treba da vrati ljude na Mesec"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
+                category="Naša planeta"
                 href="/nasa-planeta/prvi-korak-ka-svetu-bez-naslednih-bolesti"
                 title="Prvi korak ka svetu bez naslednih bolesti?"
                 description="Naučnici su po prvi put precizno izmenili gene u ljudskim embrionima, otvarajući mogućnost lečenja naslednih bolesti, ali i novu raspravu o granicama ljudskog mešanja u sopstvenu evoluciju."

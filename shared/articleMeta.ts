@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/nasa-predstavila-posadu-artemis-iii",
+    title: "NASA predstavila posadu misije Artemis III",
+    description:
+      "Povratak ljudi na Mesec ulazi u novu fazu — NASA je zvanično objavila posadu prve misije koja bi trebalo da vrati astronaute na površinu Meseca posle više od pola veka.",
+    imageSrc: "/news/artemis-nasa-3.jpg",
+    datePublished: "2026-06-10",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/tramp-pokrenuo-udare-na-iran-nakon-obaranja-americkog-helikoptera",
     title: "Tramp pokrenuo udare na Iran nakon obaranja američkog helikoptera",
     description:
