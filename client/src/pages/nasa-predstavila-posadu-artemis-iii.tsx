@@ -22,7 +22,7 @@ export default function NasaPredstavilaPosaduArtemisIII() {
       deck="Povratak ljudi na Mesec ulazi u novu fazu — NASA je zvanično objavila posadu prve misije koja bi trebalo da vrati astronaute na površinu Meseca posle više od pola veka."
       imageSrc={IMAGE_SRC}
       imageAlt="NASA Artemis III — posada misije koja treba da vrati ljude na Mesec"
-      imageCredit="Foto: NASA / Artemis III"
+      imageCredit="Vizualizacija: Novi Talas"
       paragraphs={PARAGRAPHS}
       backHref="/nasa-planeta"
       backLabel="← Nazad na Našu planetu"
