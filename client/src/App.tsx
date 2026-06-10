@@ -13,6 +13,7 @@ import GeopolitikaIran from "./pages/GeopolitikaIran";
 import GeopolitikaArticle from "./pages/GeopolitikaArticle";
 import LuksuzniRajIliGubitakObale from "./pages/luksuzni-raj-ili-gubitak-obale";
 import NovaBitkaZaIranPocinjeUBecu from "./pages/nova-bitka-za-iran-pocinje-u-becu";
+import TrampPokrenioUdareNaIran from "./pages/tramp-pokrenuo-udare-na-iran";
 import PutinGovoriOKrajuRataUkrajina from "./pages/putin-govori-o-kraju-rata-ukrajina";
 import BricsIranNaftaPukotineMultipolarnogSveta from "./pages/brics-iran-nafta-pukotine-multipolarnog-sveta";
 import PekingIzmedjuTrumpaIPutina from "./pages/peking-izmedju-trumpa-i-putina";
@@ -263,6 +264,10 @@ function Router() {
         <Route
           path="/geopolitika/luksuzni-raj-ili-gubitak-obale"
           component={LuksuzniRajIliGubitakObale}
+        />
+        <Route
+          path="/geopolitika/tramp-pokrenuo-udare-na-iran-nakon-obaranja-americkog-helikoptera"
+          component={TrampPokrenioUdareNaIran}
         />
         <Route
           path="/geopolitika/nova-bitka-za-iran-pocinje-u-becu"

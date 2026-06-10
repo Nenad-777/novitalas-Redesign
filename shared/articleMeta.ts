@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/tramp-pokrenuo-udare-na-iran-nakon-obaranja-americkog-helikoptera",
+    title: "Tramp pokrenuo udare na Iran nakon obaranja američkog helikoptera",
+    description:
+      "Obaranje američkog vojnog helikoptera u blizini Ormuskog moreuza pokrenulo je niz vojnih i diplomatskih poteza koji su za nekoliko dana prerasli u novu otvorenu krizu između Vašingtona i Teherana.",
+    imageSrc: "/news/usa-iran-crisis.jpg",
+    datePublished: "2026-06-10",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/nemacka-i-francuska-odustaju-od-zajednickog-borbenog-aviona",
     title: "Nemačka i Francuska odustaju od zajedničkog borbenog aviona",
     description:
