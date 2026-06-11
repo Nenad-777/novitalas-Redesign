@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/talibani-otvorili-vatru-na-protest-za-prava-zena",
+    title: "Talibani otvorili vatru na protest za prava žena",
+    description:
+      "Novi protest za prava žena u Avganistanu završen je nasilnom intervencijom talibanskih snaga. Žene godinama gube prava, protesti se guše, a međunarodna pažnja slabi.",
+    imageSrc: "https://novitalas.org/news/afganistan-woman.jpg",
+    datePublished: "2026-06-11",
+    author: "Novi Talas",
+  },
+  {
     path: "/nasa-planeta/nasa-predstavila-posadu-artemis-iii",
     title: "NASA predstavila posadu misije Artemis III",
     description:
