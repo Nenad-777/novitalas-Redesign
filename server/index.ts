@@ -62,6 +62,10 @@ function injectSEO(html: string, route: string): string {
       `$1${escapeHtml(seo.ogImage)}$2`,
     )
     .replace(
+      /(<meta\s+name="twitter:card"\s+content=")[^"]*(")/,
+      `$1summary_large_image$2`,
+    )
+    .replace(
       /(<meta\s+name="twitter:title"\s+content=")[^"]*(")/,
       `$1${escapeHtml(seo.twitterTitle)}$2`,
     )

@@ -107,6 +107,10 @@ function injectSEO(
       `$1${escapeHtml(resolvedSeo.ogImage)}$2`,
     )
     .replace(
+      /(<meta\s+name="twitter:card"\s+content=")[^"]*(")/,
+      `$1summary_large_image$2`,
+    )
+    .replace(
       /(<meta\s+name="twitter:title"\s+content=")[^"]*(")/,
       `$1${escapeHtml(resolvedSeo.twitterTitle)}$2`,
     )
