@@ -15,11 +15,11 @@ import { useTheme } from "@/contexts/ThemeContext";
 const HERO_ARTICLE = {
   href: "/geopolitika/tramp-pokrenuo-udare-na-iran-nakon-obaranja-americkog-helikoptera",
   category: "Geopolitika",
-  title: "Tramp pokrenuo udare na Iran nakon obaranja američkog helikoptera",
+  title: "KRIZA SAD–IRAN",
   description:
-    "Obaranje američkog vojnog helikoptera u blizini Ormuskog moreuza pokrenulo je niz vojnih i diplomatskih poteza koji su za nekoliko dana prerasli u novu otvorenu krizu između Vašingtona i Teherana.",
-  imageSrc: "/news/usa-iran-crisis.jpg",
-  imageAlt: "Američki i iranski vojni sudar — kriza oko Ormuskog moreuza",
+    "SAD izvele novu seriju udara na ciljeve u Iranu dok Teheran najavljuje odgovor. Sukob koji je počeo obaranjem američkog helikoptera ulazi u novu fazu, a pažnja sveta ostaje usmerena ka Ormuskom moreuzu i bezbednosti Persijskog zaliva.",
+  imageSrc: "/news/usa-iran-red-line.jpg",
+  imageAlt: "Kriza SAD–Iran i vojni udari na ciljeve u Iranu",
   imageCredit: "Ilustracija: Novi Talas",
 };
 
