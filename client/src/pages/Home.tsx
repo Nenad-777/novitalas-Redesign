@@ -13,6 +13,17 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
+  href: "/geopolitika/talibani-otvorili-vatru-na-protest-za-prava-zena",
+  category: "Geopolitika",
+  title: "Talibani otvorili vatru na protest za prava žena",
+  description:
+    "Novi protest za prava žena u Avganistanu završen je nasilnom intervencijom talibanskih snaga. Incident je ponovo skrenuo pažnju međunarodne javnosti na položaj žena gotovo četiri godine nakon povratka talibana na vlast.",
+  imageSrc: "/news/afganistan-woman.jpg",
+  imageAlt: "Protest za prava žena u Avganistanu",
+  imageCredit: "Vizualizacija: Novi Talas",
+};
+
+const PREVIOUS_HERO_ARTICLE = {
   href: "/geopolitika/tramp-pokrenuo-udare-na-iran-nakon-obaranja-americkog-helikoptera",
   category: "Geopolitika",
   title: "KRIZA SAD–IRAN",
@@ -20,17 +31,6 @@ const HERO_ARTICLE = {
     "SAD izvele novu seriju udara na ciljeve u Iranu dok Teheran najavljuje odgovor. Sukob koji je počeo obaranjem američkog helikoptera ulazi u novu fazu, a pažnja sveta ostaje usmerena ka Ormuskom moreuzu i bezbednosti Persijskog zaliva.",
   imageSrc: "/news/usa-iran-red-line.jpg",
   imageAlt: "Kriza SAD–Iran i vojni udari na ciljeve u Iranu",
-  imageCredit: "Ilustracija: Novi Talas",
-};
-
-const PREVIOUS_HERO_ARTICLE = {
-  href: "/obavestajni-izvori/evropa-preispituje-oslanjanje-na-americke-obavestajne-sluzbe",
-  category: "Obaveštajni izvori",
-  title: "Evropa preispituje oslanjanje na američke obaveštajne službe",
-  description:
-    "Evropske bezbednosne i obaveštajne službe sve otvorenije izražavaju zabrinutost zbog dugogodišnje zavisnosti od američkih obaveštajnih kapaciteta. Rat u Ukrajini i neizvesnost oko spoljnopolitičkog kursa Vašingtona pokrenuli su raspravu o jačanju evropskih obaveštajnih sposobnosti.",
-  imageSrc: "/news/europe-independent-intelligence.jpg",
-  imageAlt: "Ilustracija — Evropa i nezavisne obaveštajne službe",
   imageCredit: "Ilustracija: Novi Talas",
 };
 
