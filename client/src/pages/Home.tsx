@@ -266,6 +266,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Geopolitika"
+                href="/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan"
+                title="SAD i Iran blizu sporazuma: Pakistan tvrdi da je tekst dogovoren, Teheran još oprezan"
+                description="Pakistanski premijer Shehbaz Sharif saopštio je da su Sjedinjene Države i Iran usaglasili tekst mirovnog sporazuma. Ipak, iz Teherana stiže poruka da konačna odluka još nije doneta."
+                imageSrc="/news/peace-for-iran.jpg"
+                imageAlt="Ilustracija — SAD i Iran pregovori o sporazumu"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category={PREVIOUS_HERO_ARTICLE.category}
                 href={PREVIOUS_HERO_ARTICLE.href}
                 title={PREVIOUS_HERO_ARTICLE.title}
@@ -304,17 +315,6 @@ export default function Home() {
                 title="Prvi korak ka svetu bez naslednih bolesti?"
                 description="Naučnici su po prvi put precizno izmenili gene u ljudskim embrionima, otvarajući mogućnost lečenja naslednih bolesti, ali i novu raspravu o granicama ljudskog mešanja u sopstvenu evoluciju."
                 imageSrc="/news/embryo-edit.jpg"
-                imageAlt="Ilustracija"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Srbija"
-                href="/srbija/potpuni-slom-vuciceve-medjunarodne-reputacije"
-                title="Potpuni slom Vučićeve međunarodne reputacije"
-                description="Zabrana ulaska grupi državljana Srbije u Crnu Goru otvorila je pitanje međunarodnog ugleda Aleksandra Vučića i političkog sistema koji je gradio više od decenije."
-                imageSrc="/news/slom-medjunarodni.jpg"
                 imageAlt="Ilustracija"
               />
             </div>
