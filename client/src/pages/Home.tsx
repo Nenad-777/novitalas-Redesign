@@ -197,7 +197,7 @@ export default function Home() {
 
       {/* Main */}
       <main
-        className="py-12 md:py-16 flex-1"
+        className="pt-9 pb-12 md:pt-12 md:pb-16 flex-1"
         style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
       >
         <div className="max-w-[1200px] mx-auto px-5">
