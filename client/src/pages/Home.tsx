@@ -1,9 +1,9 @@
 /*
- * DESIGN: "Diplomatska Klasika" v3  -  Foreign Affairs-inspired homepage
- * Structure (final):
- * 1. HERO — Artemis II splashdown (full-width, large)
- * 2. SMALL NEWS GRID (4 cards)
- * 3. LIVE BLOCK (compact, max 3 entries)
+ * DESIGN: "Diplomatska Klasika" v4 — Premium mobile-first homepage
+ * Structure:
+ * 1. HERO — full-bleed image above headline, metadata
+ * 2. FEATURED ARTICLE — secondary, visually prominent
+ * 3. ARTICLE GRID — compact 2-column cards
  */
 
 import { useEffect, useRef, useState } from "react";
@@ -21,18 +21,61 @@ const HERO_ARTICLE = {
   imageSrc: "/news/eu-flags.jpg",
   imageAlt: "Zastave Evropske unije",
   imageCredit: "Vizual: Novi Talas",
+  date: "12. jun 2026.",
+  readTime: "8 min",
 };
 
-const PREVIOUS_HERO_ARTICLE = {
+const FEATURED_ARTICLE = {
   href: "/geopolitika/talibani-otvorili-vatru-na-protest-za-prava-zena",
   category: "Geopolitika",
   title: "Talibani otvorili vatru na protest za prava žena",
   description:
-    "Novi protest za prava žena u Avganistanu završen je nasilnom intervencijom talibanskih snaga. Incident je ponovo skrenuo pažnju međunarodne javnosti na položaj žena gotovo četiri godine nakon povratka talibana na vlast.",
+    "Novi protest za prava žena u Avganistanu završen je nasilnom intervencijom talibanskih snaga, ponovo skrećući pažnju sveta na položaj žena.",
   imageSrc: "/news/afganistan-woman.jpg",
   imageAlt: "Protest za prava žena u Avganistanu",
   imageCredit: "Vizualizacija: Novi Talas",
+  date: "11. jun 2026.",
+  readTime: "6 min",
 };
+
+const GRID_ARTICLES = [
+  {
+    category: "Geopolitika",
+    href: "/geopolitika/tramp-pokrenuo-udare-na-iran-nakon-obaranja-americkog-helikoptera",
+    title: "KRIZA SAD–IRAN",
+    description: "SAD izvele novu seriju udara na ciljeve u Iranu dok Teheran najavljuje odgovor.",
+    imageSrc: "/news/usa-iran-red-line.jpg",
+    imageAlt: "Kriza SAD–Iran",
+    readTime: "5 min",
+  },
+  {
+    category: "Naša planeta",
+    href: "/nasa-planeta/nasa-predstavila-posadu-artemis-iii",
+    title: "NASA predstavila posadu misije Artemis III",
+    description: "Povratak ljudi na Mesec ulazi u novu fazu — NASA je zvanično objavila posadu prve misije.",
+    imageSrc: "/news/artemis-nasa-3.jpg",
+    imageAlt: "NASA Artemis III",
+    readTime: "4 min",
+  },
+  {
+    category: "Naša planeta",
+    href: "/nasa-planeta/prvi-korak-ka-svetu-bez-naslednih-bolesti",
+    title: "Prvi korak ka svetu bez naslednih bolesti?",
+    description: "Naučnici su po prvi put precizno izmenili gene u ljudskim embrionima.",
+    imageSrc: "/news/embryo-edit.jpg",
+    imageAlt: "Ilustracija",
+    readTime: "6 min",
+  },
+  {
+    category: "Srbija",
+    href: "/srbija/potpuni-slom-vuciceve-medjunarodne-reputacije",
+    title: "Potpuni slom Vučićeve međunarodne reputacije",
+    description: "Zabrana ulaska grupi državljana Srbije u Crnu Goru otvorila je pitanje ugleda.",
+    imageSrc: "/news/slom-medjunarodni.jpg",
+    imageAlt: "Ilustracija",
+    readTime: "7 min",
+  },
+];
 
 // Simple fade-in on scroll hook
 function useFadeIn() {
@@ -84,43 +127,152 @@ function FadeIn({
   );
 }
 
-interface SmallArticleCardProps {
+interface FeaturedArticleProps {
   category: string;
   href: string;
   title: string;
   description: string;
   imageSrc: string;
   imageAlt: string;
+  imageCredit: string;
+  date: string;
+  readTime: string;
 }
 
-function SmallArticleCard({
+function FeaturedArticleCard({
   category,
   href,
   title,
   description,
   imageSrc,
   imageAlt,
-}: SmallArticleCardProps) {
+  imageCredit,
+  date,
+  readTime,
+}: FeaturedArticleProps) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
   return (
-    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
-      <div>
-        <span className="kicker">{category}</span>
+    <article>
+      <Link href={href} className="block no-underline">
+        <div
+          className="w-full overflow-hidden rounded-sm"
+          style={{ aspectRatio: "16/9" }}
+        >
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            className="w-full h-full object-cover block transition-transform duration-500 hover:scale-[1.02]"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <p className="photo-credit">{imageCredit}</p>
+      </Link>
+
+      <div className="mt-4">
+        <span className="kicker block mb-2">{category}</span>
         <h3
-          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
+          className="mt-1 mb-3 text-[24px] md:text-[30px] font-bold leading-[1.2]"
           style={{
-            fontFamily: "'Lora', Georgia, serif",
+            fontFamily: "'Playfair Display', Georgia, serif",
             color: isDark ? "#e0ddd5" : "#111",
           }}
         >
-          <Link href={href} className="headline-link">
+          <Link
+            href={href}
+            className="headline-link"
+            style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+          >
             {title}
           </Link>
         </h3>
         <p
-          className="mt-1 text-[14px] leading-[1.5]"
+          className="text-[15px] md:text-[16px] leading-[1.55] line-clamp-2"
+          style={{
+            fontFamily: "'Lora', Georgia, serif",
+            color: isDark ? "#9a978f" : "#555",
+          }}
+        >
+          {description}
+        </p>
+        <div
+          className="flex items-center gap-2 mt-3 text-[11px] uppercase tracking-[0.1em]"
+          style={{
+            fontFamily: "'Source Sans 3', sans-serif",
+            color: isDark ? "#6b6760" : "#888",
+          }}
+        >
+          <span>{date}</span>
+          <span>·</span>
+          <span>{readTime} čitanja</span>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+interface CompactCardProps {
+  category: string;
+  href: string;
+  title: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+  readTime: string;
+}
+
+function CompactCard({
+  category,
+  href,
+  title,
+  description,
+  imageSrc,
+  imageAlt,
+  readTime,
+}: CompactCardProps) {
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
+
+  return (
+    <article>
+      <Link href={href} className="block no-underline">
+        <div
+          className="w-full overflow-hidden rounded-sm"
+          style={{ aspectRatio: "16/9" }}
+        >
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            className="w-full h-full object-cover block transition-transform duration-500 hover:scale-[1.02]"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </Link>
+
+      <div className="mt-2">
+        <span className="kicker" style={{ fontSize: "10px" }}>
+          {category}
+        </span>
+        <h4
+          className="mt-1 text-[14px] md:text-[15px] font-bold leading-[1.3]"
+          style={{
+            fontFamily: "'Playfair Display', Georgia, serif",
+            color: isDark ? "#e0ddd5" : "#111",
+          }}
+        >
+          <Link
+            href={href}
+            className="headline-link"
+            style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+          >
+            {title}
+          </Link>
+        </h4>
+        <p
+          className="mt-1 text-[12px] leading-[1.45] line-clamp-1"
           style={{
             fontFamily: "'Lora', Georgia, serif",
             color: isDark ? "#7a7872" : "#666",
@@ -128,20 +280,17 @@ function SmallArticleCard({
         >
           {description}
         </p>
+        <p
+          className="mt-1.5 text-[10px] uppercase tracking-[0.08em]"
+          style={{
+            fontFamily: "'Source Sans 3', sans-serif",
+            color: isDark ? "#6b6760" : "#888",
+          }}
+        >
+          {readTime} čitanja
+        </p>
       </div>
-
-      <img
-        src={imageSrc}
-        alt={imageAlt}
-        className="w-[100px] h-[75px] object-cover border"
-        style={{
-          borderColor: isDark ? "#2a2a2e" : "#eee",
-          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
-        }}
-        loading="lazy"
-        decoding="async"
-      />
-    </div>
+    </article>
   );
 }
 
@@ -156,63 +305,47 @@ export default function Home() {
     >
       <Header />
 
-      {/* Hero banner */}
-      <section
-        className="relative w-full overflow-hidden h-[22vh] md:h-[28vh] hero-section"
-        style={{
-          backgroundImage: `url(/hero/naslovna-novitalas.jpg), linear-gradient(to bottom, var(--nt-hero-bg), var(--nt-hero-bg-end))`,
-          backgroundColor: "var(--nt-hero-bg)",
-        }}
-      >
-        {isDark && (
-          <div
-            aria-hidden="true"
-            className="absolute inset-0"
-            style={{ backgroundColor: "rgba(13,17,23,0.35)" }}
-          />
-        )}
-
-        {/* SEO: visually hidden H1 */}
-        <h1 className="sr-only">Novi Talas</h1>
-        <p className="sr-only">
-          Novi Talas je digitalni nedeljnik koji donosi analize geopolitike,
-          Srbije i sveta, uz fokus na najvažnije događaje dana.
-        </p>
-
-        <div className="absolute inset-x-0 bottom-0 pb-4 md:pb-6 flex justify-center">
-          <p
-            className="hero-tagline text-[18px] md:text-[26px] italic tracking-wide"
-            style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              color: isDark ? "#e0ddd5" : "#1a1a1a",
-              textShadow: isDark
-                ? "0 1px 2px rgba(0,0,0,0.3)"
-                : "0 1px 2px rgba(0,0,0,0.15)",
-            }}
-          >
-            Vaš prozor u svet
-          </p>
-        </div>
-      </section>
+      {/* SEO hidden content */}
+      <h1 className="sr-only">Novi Talas</h1>
+      <p className="sr-only">
+        Novi Talas je digitalni nedeljnik koji donosi analize geopolitike,
+        Srbije i sveta, uz fokus na najvažnije događaje dana.
+      </p>
 
       {/* Main */}
       <main
-        className="pt-9 pb-12 md:pt-12 md:pb-16 flex-1"
+        className="pb-12 md:pb-16 flex-1"
         style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
       >
-        <div className="max-w-[1200px] mx-auto px-5">
-          {/* ======================
-              1. HERO
-             ====================== */}
-          <FadeIn className="mb-10">
-            <article>
+        {/* ======================
+            1. HERO ARTICLE (Level 1)
+           ====================== */}
+        <FadeIn className="mb-8 md:mb-12">
+          <article>
+            {/* Hero image — full-bleed, edge to edge on mobile */}
+            <Link href={HERO_ARTICLE.href} className="block no-underline">
+              <div
+                className="w-full overflow-hidden"
+                style={{ aspectRatio: "16/9" }}
+              >
+                <img
+                  src={HERO_ARTICLE.imageSrc}
+                  alt={HERO_ARTICLE.imageAlt}
+                  className="w-full h-full object-cover block"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              </div>
+            </Link>
+
+            {/* Article content */}
+            <div className="max-w-[1200px] mx-auto px-5 pt-5">
               <span className="kicker block mb-2">{HERO_ARTICLE.category}</span>
 
               <h2
-                className="mt-2 mb-3 text-[32px] md:text-[46px] font-bold leading-[1.1]"
+                className="mt-1 mb-3 text-[34px] md:text-[52px] font-bold leading-[1.08]"
                 style={{
                   fontFamily: "'Playfair Display', Georgia, serif",
-                  fontWeight: 700,
                   color: isDark ? "#e0ddd5" : "#111",
                 }}
               >
@@ -226,7 +359,7 @@ export default function Home() {
               </h2>
 
               <p
-                className="text-[18px] md:text-[20px] leading-[1.6] mb-5"
+                className="text-[16px] md:text-[19px] leading-[1.6] mb-4 line-clamp-3"
                 style={{
                   fontFamily: "'Lora', Georgia, serif",
                   color: isDark ? "#9a978f" : "#555",
@@ -235,88 +368,66 @@ export default function Home() {
                 {HERO_ARTICLE.description}
               </p>
 
-              <Link href={HERO_ARTICLE.href} className="block no-underline">
-                <div
-                  className="relative w-full overflow-hidden rounded-xl aspect-video"
-                  style={{
-                    border: isDark ? "1px solid #2a2a2e" : "1px solid #e5e5e5",
-                  }}
-                >
-                  <img
-                    src={HERO_ARTICLE.imageSrc}
-                    alt={HERO_ARTICLE.imageAlt}
-                    className="w-full h-full object-cover block"
-                    fetchPriority="high"
-                    decoding="async"
-                  />
-                </div>
-                <p className="photo-credit">{HERO_ARTICLE.imageCredit}</p>
-              </Link>
-            </article>
-          </FadeIn>
+              <div
+                className="flex items-center gap-2 text-[11px] uppercase tracking-[0.1em]"
+                style={{
+                  fontFamily: "'Source Sans 3', sans-serif",
+                  color: isDark ? "#6b6760" : "#888",
+                }}
+              >
+                <span>{HERO_ARTICLE.date}</span>
+                <span>·</span>
+                <span>{HERO_ARTICLE.readTime} čitanja</span>
+              </div>
+            </div>
+          </article>
+        </FadeIn>
 
+        <div className="max-w-[1200px] mx-auto px-5">
           <hr
-            className="editorial-divider mb-10"
+            className="editorial-divider mb-8"
             style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
           />
 
           {/* ======================
-              2. SMALL NEWS GRID (4 cards)
+              2. FEATURED ARTICLE (Level 2)
+             ====================== */}
+          <FadeIn className="mb-8">
+            <FeaturedArticleCard
+              category={FEATURED_ARTICLE.category}
+              href={FEATURED_ARTICLE.href}
+              title={FEATURED_ARTICLE.title}
+              description={FEATURED_ARTICLE.description}
+              imageSrc={FEATURED_ARTICLE.imageSrc}
+              imageAlt={FEATURED_ARTICLE.imageAlt}
+              imageCredit={FEATURED_ARTICLE.imageCredit}
+              date={FEATURED_ARTICLE.date}
+              readTime={FEATURED_ARTICLE.readTime}
+            />
+          </FadeIn>
+
+          <hr
+            className="editorial-divider mb-8"
+            style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
+          />
+
+          {/* ======================
+              3. ARTICLE GRID (Level 3)
              ====================== */}
           <FadeIn className="mb-10">
-            <div className="flex flex-col gap-6">
-              <SmallArticleCard
-                category={PREVIOUS_HERO_ARTICLE.category}
-                href={PREVIOUS_HERO_ARTICLE.href}
-                title={PREVIOUS_HERO_ARTICLE.title}
-                description={PREVIOUS_HERO_ARTICLE.description}
-                imageSrc={PREVIOUS_HERO_ARTICLE.imageSrc}
-                imageAlt={PREVIOUS_HERO_ARTICLE.imageAlt}
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/tramp-pokrenuo-udare-na-iran-nakon-obaranja-americkog-helikoptera"
-                title="KRIZA SAD–IRAN"
-                description="SAD izvele novu seriju udara na ciljeve u Iranu dok Teheran najavljuje odgovor. Sukob koji je počeo obaranjem američkog helikoptera ulazi u novu fazu, a pažnja sveta ostaje usmerena ka Ormuskom moreuzu i bezbednosti Persijskog zaliva."
-                imageSrc="/news/usa-iran-red-line.jpg"
-                imageAlt="Kriza SAD–Iran i vojni udari na ciljeve u Iranu"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Naša planeta"
-                href="/nasa-planeta/nasa-predstavila-posadu-artemis-iii"
-                title="NASA predstavila posadu misije Artemis III"
-                description="Povratak ljudi na Mesec ulazi u novu fazu — NASA je zvanično objavila posadu prve misije koja bi trebalo da vrati astronaute na površinu Meseca posle više od pola veka."
-                imageSrc="/news/artemis-nasa-3.jpg"
-                imageAlt="NASA Artemis III — posada misije koja treba da vrati ljude na Mesec"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Naša planeta"
-                href="/nasa-planeta/prvi-korak-ka-svetu-bez-naslednih-bolesti"
-                title="Prvi korak ka svetu bez naslednih bolesti?"
-                description="Naučnici su po prvi put precizno izmenili gene u ljudskim embrionima, otvarajući mogućnost lečenja naslednih bolesti, ali i novu raspravu o granicama ljudskog mešanja u sopstvenu evoluciju."
-                imageSrc="/news/embryo-edit.jpg"
-                imageAlt="Ilustracija"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Srbija"
-                href="/srbija/potpuni-slom-vuciceve-medjunarodne-reputacije"
-                title="Potpuni slom Vučićeve međunarodne reputacije"
-                description="Zabrana ulaska grupi državljana Srbije u Crnu Goru otvorila je pitanje međunarodnog ugleda Aleksandra Vučića i političkog sistema koji je gradio više od decenije."
-                imageSrc="/news/slom-medjunarodni.jpg"
-                imageAlt="Ilustracija"
-              />
+            <div className="grid grid-cols-2 gap-x-5 gap-y-7">
+              {GRID_ARTICLES.map((article) => (
+                <CompactCard
+                  key={article.href}
+                  category={article.category}
+                  href={article.href}
+                  title={article.title}
+                  description={article.description}
+                  imageSrc={article.imageSrc}
+                  imageAlt={article.imageAlt}
+                  readTime={article.readTime}
+                />
+              ))}
             </div>
           </FadeIn>
         </div>

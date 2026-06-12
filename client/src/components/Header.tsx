@@ -2,12 +2,12 @@
  * DESIGN: "Diplomatska Klasika" — Foreign Affairs-inspired header
  * Light mode: Light blue top bar (#d6e8f0) — Foreign Affairs style
  * Dark mode: Dark bar (#0d0d0f)
- * Update: Added "Naša planeta" in top menu (right side, next to Srbija)
+ * Mobile: hamburger left · logo + slogan centered · search right
  */
 
 import { useState } from "react";
 import { Link } from "wouter";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X, Sun, Moon, Search } from "lucide-react";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const navItems = [
@@ -33,9 +33,10 @@ export default function Header() {
       }}
     >
       <div className="max-w-[1200px] mx-auto px-5">
-        <div className="flex items-center justify-between h-[60px]">
+        {/* Desktop header row */}
+        <div className="hidden lg:flex items-center justify-between h-[60px]">
           {/* Left nav — desktop */}
-          <nav className="hidden lg:flex items-center gap-6">
+          <nav className="flex items-center gap-6">
             {navItems.slice(0, 2).map((item) => (
               <Link
                 key={item.label}
@@ -51,7 +52,7 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Center logo */}
+          {/* Center logo — desktop */}
           <Link href="/" className="flex items-center gap-0 no-underline">
             <span
               className="text-[22px] font-extrabold tracking-[0.18em] uppercase"
@@ -74,7 +75,7 @@ export default function Header() {
           </Link>
 
           {/* Right nav — desktop */}
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="flex items-center gap-6">
             {navItems.slice(2).map((item) => (
               <Link
                 key={item.label}
@@ -114,9 +115,64 @@ export default function Header() {
               {isDark ? <Sun size={16} /> : <Moon size={16} />}
             </button>
           </div>
+        </div>
 
-          {/* Mobile: theme toggle + menu button */}
-          <div className="lg:hidden flex items-center gap-3">
+        {/* Mobile header row — 3-column: hamburger · logo+slogan · search+theme */}
+        <div className="lg:hidden flex items-center h-[46px]">
+          {/* Left: hamburger */}
+          <div className="flex-1 flex items-center">
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Meni"
+              className="p-1"
+              style={{ color: isDark ? "#c9c6cf" : "#1a2a3a" }}
+            >
+              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
+
+          {/* Center: logo + slogan stacked */}
+          <Link href="/" className="flex flex-col items-center no-underline">
+            <div className="flex items-baseline gap-0">
+              <span
+                className="text-[19px] font-extrabold tracking-[0.18em] uppercase"
+                style={{
+                  fontFamily: "'Lora', serif",
+                  color: isDark ? "#f6f3e8" : "#1a2a3a",
+                }}
+              >
+                NOVI{" "}
+              </span>
+              <span
+                className="text-[19px] font-extrabold tracking-[0.18em] uppercase"
+                style={{
+                  fontFamily: "'Lora', serif",
+                  color: isDark ? "#d9bf7a" : "#8B0000",
+                }}
+              >
+                TALAS
+              </span>
+            </div>
+            <p
+              className="text-[9px] italic tracking-[0.08em] leading-none mt-[3px]"
+              style={{
+                fontFamily: "'Lora', serif",
+                color: isDark ? "#8a8790" : "#5a6a7a",
+              }}
+            >
+              Vaš prozor u svet
+            </p>
+          </Link>
+
+          {/* Right: search + theme toggle */}
+          <div className="flex-1 flex items-center justify-end gap-2">
+            <button
+              aria-label="Pretraga"
+              className="p-1"
+              style={{ color: isDark ? "#c9c6cf" : "#1a2a3a" }}
+            >
+              <Search size={18} />
+            </button>
             <button
               onClick={toggleTheme}
               className="p-1.5 rounded-full transition-colors duration-200"
@@ -128,15 +184,7 @@ export default function Header() {
               }}
               aria-label={isDark ? "Svetli režim" : "Tamni režim"}
             >
-              {isDark ? <Sun size={16} /> : <Moon size={16} />}
-            </button>
-
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label="Meni"
-              style={{ color: isDark ? "#c9c6cf" : "#1a2a3a" }}
-            >
-              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+              {isDark ? <Sun size={15} /> : <Moon size={15} />}
             </button>
           </div>
         </div>

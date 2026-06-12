@@ -50,8 +50,12 @@ export default function Footer() {
 
           {/* Motto */}
           <p
-            className="text-[#bcb7a6] text-[12px] italic"
-            style={{ fontFamily: "'Lora', serif" }}
+            className="text-[13px] italic tracking-[0.06em]"
+            style={{
+              fontFamily: "'Lora', serif",
+              color: "#d9bf7a",
+              textShadow: "0 0 12px rgba(217,191,122,0.15)",
+            }}
           >
             Veritas ante omnia
           </p>
