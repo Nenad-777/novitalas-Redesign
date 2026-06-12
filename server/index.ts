@@ -22,6 +22,21 @@ for (const [route, data] of Object.entries(seoData)) {
   mergedSeoLookup[route] = data as ReturnType<typeof buildSEOFromArticleMeta>;
 }
 
+const articleRoutesByRootSlug = new Map<string, string>();
+const duplicateRootSlugs = new Set<string>();
+
+for (const route of Object.keys(mergedSeoLookup)) {
+  const slug = route.split("/").filter(Boolean).at(-1);
+  if (!slug) continue;
+
+  if (articleRoutesByRootSlug.has(slug)) {
+    articleRoutesByRootSlug.delete(slug);
+    duplicateRootSlugs.add(slug);
+  } else if (!duplicateRootSlugs.has(slug)) {
+    articleRoutesByRootSlug.set(slug, route);
+  }
+}
+
 function escapeHtml(str: string): string {
   return str
     .replace(/&/g, "&amp;")
@@ -130,6 +145,18 @@ function injectSEO(html: string, route: string): string {
 async function startServer() {
   const app = express();
   const server = createServer(app);
+
+  app.get("/:slug", (req, res, next) => {
+    const destination = articleRoutesByRootSlug.get(req.params.slug);
+    if (!destination) {
+      next();
+      return;
+    }
+
+    const queryIndex = req.originalUrl.indexOf("?");
+    const query = queryIndex >= 0 ? req.originalUrl.slice(queryIndex) : "";
+    res.redirect(308, `${destination}${query}`);
+  });
 
   // Serve static files from dist/public in production
   const staticPath =

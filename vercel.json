@@ -7,6 +7,13 @@
       ]
     }
   ],
+  "redirects": [
+    {
+      "source": "/talibani-otvorili-vatru-na-protest-za-prava-zena",
+      "destination": "/geopolitika/talibani-otvorili-vatru-na-protest-za-prava-zena",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/share/(.*)", "destination": "/share/$1" },
     { "source": "/(.*)", "destination": "/" }
