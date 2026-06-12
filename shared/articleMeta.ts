@@ -16,7 +16,7 @@
  *   3. server/index.ts                    (for server-side injection on every request)
  */
 
-const SITE_BASE = "https://novitalas.org";
+const SITE_BASE = "https://www.novitalas.org";
 const BRAND_SUFFIX = " — Novi Talas";
 
 export interface ArticleStaticMeta {
@@ -156,7 +156,7 @@ export const articleMeta: ArticleStaticMeta[] = [
     title: "Talibani otvorili vatru na protest za prava žena",
     description:
       "Novi protest za prava žena u Avganistanu završen je nasilnom intervencijom talibanskih snaga. Žene godinama gube prava, protesti se guše, a međunarodna pažnja slabi.",
-    imageSrc: "https://novitalas.org/news/afganistan-woman.jpg",
+    imageSrc: "/news/afganistan-woman.jpg",
     datePublished: "2026-06-11",
     author: "Novi Talas",
   },
