@@ -13,14 +13,15 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/eu-migration-rules-2026",
+  href: "/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan",
   category: "Geopolitika",
-  title: "Nova migraciona pravila Evropske unije ulaze u primenu",
+  title:
+    "SAD i Iran blizu sporazuma: Pakistan tvrdi da je tekst dogovoren, Teheran još oprezan",
   description:
-    "Novi evropski pakt menja pravila za azil, granice i deportacije, uz zajedničke procedure i novi sistem solidarnosti među državama članicama.",
-  imageSrc: "/news/eu-flags.jpg",
-  imageAlt: "Zastave Evropske unije",
-  imageCredit: "Vizual: Novi Talas",
+    "Pakistanski premijer Shehbaz Sharif saopštio je da su Sjedinjene Države i Iran usaglasili tekst mirovnog sporazuma. Ipak, iz Teherana stiže poruka da konačna odluka još nije doneta.",
+  imageSrc: "/news/peace-for-iran.jpg",
+  imageAlt: "Ilustracija — SAD i Iran pregovori o sporazumu",
+  imageCredit: "Reuters / AP",
 };
 
 const PREVIOUS_HERO_ARTICLE = {
@@ -267,11 +268,11 @@ export default function Home() {
             <div className="flex flex-col gap-6">
               <SmallArticleCard
                 category="Geopolitika"
-                href="/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan"
-                title="SAD i Iran blizu sporazuma: Pakistan tvrdi da je tekst dogovoren, Teheran još oprezan"
-                description="Pakistanski premijer Shehbaz Sharif saopštio je da su Sjedinjene Države i Iran usaglasili tekst mirovnog sporazuma. Ipak, iz Teherana stiže poruka da konačna odluka još nije doneta."
-                imageSrc="/news/peace-for-iran.jpg"
-                imageAlt="Ilustracija — SAD i Iran pregovori o sporazumu"
+                href="/geopolitika/eu-migration-rules-2026"
+                title="Nova migraciona pravila Evropske unije ulaze u primenu"
+                description="Novi evropski pakt menja pravila za azil, granice i deportacije, uz zajedničke procedure i novi sistem solidarnosti među državama članicama."
+                imageSrc="/news/eu-flags.jpg"
+                imageAlt="Zastave Evropske unije"
               />
 
               <hr className="editorial-divider" />
