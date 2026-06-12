@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  peaceForIran: "/news/peace-for-iran.jpg",
   euFlags: "/news/eu-flags.jpg",
   afganistanWoman: "/news/afganistan-woman.jpg",
   albaniaTrumpShore: "/news/albania-trump-shore.jpg",
@@ -91,6 +92,57 @@ export default function GeopolitikaIndex() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <article className="md:col-span-2">
+              <Link
+                href="/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.peaceForIran}
+                    alt="SAD i Iran blizu sporazuma"
+                    className="w-full h-[260px] object-cover object-center block"
+                    decoding="async"
+                  />
+                </div>
+
+                <h2
+                  className="text-[22px] md:text-[28px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  SAD i Iran blizu sporazuma: Pakistan tvrdi da je tekst dogovoren, Teheran još oprezan
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Pakistanski premijer Shehbaz Sharif saopštio je da su Sjedinjene Države i Iran usaglasili tekst mirovnog sporazuma, dok Teheran poručuje da konačna odluka još nije doneta.
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
             <article className="md:col-span-2">
               <Link
                 href="/geopolitika/eu-migration-rules-2026"
@@ -2583,61 +2635,6 @@ export default function GeopolitikaIndex() {
               </Link>
             </article>
 
-            {/* 4) STARA VEST (Evropa) */}
-            <article className="md:col-span-2">
-              <Link
-                href="/geopolitika/nova-bezbednosna-arhitektura"
-                className="no-underline"
-              >
-                <div
-                  className="border mb-4 overflow-hidden"
-                  style={{
-                    borderColor: isDark ? "#2a2a2e" : "#eee",
-                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
-                  }}
-                >
-                  <img
-                    src={IMAGES.europeMap}
-                    alt="Nova bezbednosna arhitektura Evrope"
-                    className="w-full h-[220px] object-cover object-center block"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-
-                <h2
-                  className="text-[22px] md:text-[26px] font-bold leading-[1.2]"
-                  style={{
-                    fontFamily: "'Playfair Display', serif",
-                    color: isDark ? "#e0ddd5" : "#111",
-                  }}
-                >
-                  Nova bezbednosna arhitektura Evrope: da li se rađa kontinent
-                  tvrde moći?
-                </h2>
-
-                <p
-                  className="mt-2 text-[15px] leading-[1.6]"
-                  style={{
-                    fontFamily: "'Crimson Pro', serif",
-                    color: isDark ? "#9a978f" : "#555",
-                  }}
-                >
-                  Rat u Ukrajini, energija i strateška autonomija  -  Evropa menja
-                  bezbednosni identitet.
-                </p>
-
-                <div
-                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
-                  style={{
-                    fontFamily: "'Source Sans 3', sans-serif",
-                    color: isDark ? "#d9bf7a" : "#8B0000",
-                  }}
-                >
-                  Otvori tekst →
-                </div>
-              </Link>
-            </article>
           </div>
 
           {/* Back */}
