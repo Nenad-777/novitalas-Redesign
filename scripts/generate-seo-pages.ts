@@ -42,7 +42,7 @@ import {
   buildJsonLd,
 } from "../shared/articleMeta.js";
 
-const SITE_BASE = "https://novitalas.org";
+const SITE_BASE = "https://www.novitalas.org";
 
 /** Static pages that are always included in the sitemap regardless of article registries. */
 const STATIC_SITEMAP_ENTRIES: Array<{
