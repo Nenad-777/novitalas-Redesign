@@ -143,6 +143,16 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan",
+    title:
+      "SAD i Iran blizu sporazuma: Pakistan tvrdi da je tekst dogovoren, Teheran još oprezan",
+    description:
+      "Pakistanski premijer Shehbaz Sharif saopštio je da su Sjedinjene Države i Iran usaglasili tekst mirovnog sporazuma. Ipak, iz Teherana stiže poruka da konačna odluka još nije doneta.",
+    imageSrc: "/news/peace-for-iran.jpg",
+    datePublished: "2026-06-12",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/eu-migration-rules-2026",
     title: "Nova migraciona pravila Evropske unije ulaze u primenu",
     description:
