@@ -13,6 +13,17 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
+  href: "/geopolitika/eu-migration-rules-2026",
+  category: "Geopolitika",
+  title: "Nova migraciona pravila Evropske unije ulaze u primenu",
+  description:
+    "Novi evropski pakt menja pravila za azil, granice i deportacije, uz zajedničke procedure i novi sistem solidarnosti među državama članicama.",
+  imageSrc: "/news/eu-flags.jpg",
+  imageAlt: "Zastave Evropske unije",
+  imageCredit: "Vizual: Novi Talas",
+};
+
+const PREVIOUS_HERO_ARTICLE = {
   href: "/geopolitika/talibani-otvorili-vatru-na-protest-za-prava-zena",
   category: "Geopolitika",
   title: "Talibani otvorili vatru na protest za prava žena",
@@ -21,17 +32,6 @@ const HERO_ARTICLE = {
   imageSrc: "/news/afganistan-woman.jpg",
   imageAlt: "Protest za prava žena u Avganistanu",
   imageCredit: "Vizualizacija: Novi Talas",
-};
-
-const PREVIOUS_HERO_ARTICLE = {
-  href: "/geopolitika/tramp-pokrenuo-udare-na-iran-nakon-obaranja-americkog-helikoptera",
-  category: "Geopolitika",
-  title: "KRIZA SAD–IRAN",
-  description:
-    "SAD izvele novu seriju udara na ciljeve u Iranu dok Teheran najavljuje odgovor. Sukob koji je počeo obaranjem američkog helikoptera ulazi u novu fazu, a pažnja sveta ostaje usmerena ka Ormuskom moreuzu i bezbednosti Persijskog zaliva.",
-  imageSrc: "/news/usa-iran-red-line.jpg",
-  imageAlt: "Kriza SAD–Iran i vojni udari na ciljeve u Iranu",
-  imageCredit: "Ilustracija: Novi Talas",
 };
 
 // Simple fade-in on scroll hook
@@ -277,6 +277,17 @@ export default function Home() {
               <hr className="editorial-divider" />
 
               <SmallArticleCard
+                category="Geopolitika"
+                href="/geopolitika/tramp-pokrenuo-udare-na-iran-nakon-obaranja-americkog-helikoptera"
+                title="KRIZA SAD–IRAN"
+                description="SAD izvele novu seriju udara na ciljeve u Iranu dok Teheran najavljuje odgovor. Sukob koji je počeo obaranjem američkog helikoptera ulazi u novu fazu, a pažnja sveta ostaje usmerena ka Ormuskom moreuzu i bezbednosti Persijskog zaliva."
+                imageSrc="/news/usa-iran-red-line.jpg"
+                imageAlt="Kriza SAD–Iran i vojni udari na ciljeve u Iranu"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Naša planeta"
                 href="/nasa-planeta/nasa-predstavila-posadu-artemis-iii"
                 title="NASA predstavila posadu misije Artemis III"
@@ -304,17 +315,6 @@ export default function Home() {
                 title="Potpuni slom Vučićeve međunarodne reputacije"
                 description="Zabrana ulaska grupi državljana Srbije u Crnu Goru otvorila je pitanje međunarodnog ugleda Aleksandra Vučića i političkog sistema koji je gradio više od decenije."
                 imageSrc="/news/slom-medjunarodni.jpg"
-                imageAlt="Ilustracija"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/moskva-upozorava-putina-ratna-potrosnja-postaje-neodrziva"
-                title="Moskva upozorava Putina: ratna potrošnja postaje neodrživa"
-                description="Ruski finansijski zvaničnici navodno upozoravaju da troškovi rata u Ukrajini sve ozbiljnije pritiskaju budžet, dok vojni vrh traži nova sredstva i odbija smanjenje odbrambenih rashoda."
-                imageSrc="/news/moscow-economy-war.jpg"
                 imageAlt="Ilustracija"
               />
             </div>

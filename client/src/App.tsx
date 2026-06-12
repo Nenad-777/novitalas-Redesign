@@ -13,6 +13,7 @@ import GeopolitikaIran from "./pages/GeopolitikaIran";
 import GeopolitikaArticle from "./pages/GeopolitikaArticle";
 import LuksuzniRajIliGubitakObale from "./pages/luksuzni-raj-ili-gubitak-obale";
 import NovaBitkaZaIranPocinjeUBecu from "./pages/nova-bitka-za-iran-pocinje-u-becu";
+import EuMigrationRules2026 from "./pages/eu-migration-rules-2026";
 
 /* ✅ GLAVNA VEST — Geopolitika */
 import TalibaniOtvoriliVatruNaProtestZaPravaZena from "./pages/talibani-otvorili-vatru-na-protest-za-prava-zena";
@@ -267,6 +268,10 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/eu-migration-rules-2026"
+          component={EuMigrationRules2026}
+        />
         <Route
           path="/geopolitika/luksuzni-raj-ili-gubitak-obale"
           component={LuksuzniRajIliGubitakObale}

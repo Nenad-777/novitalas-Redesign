@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/eu-migration-rules-2026",
+    title: "Nova migraciona pravila Evropske unije ulaze u primenu",
+    description:
+      "Novi evropski pakt menja pravila za azil, granice i deportacije, uz zajedničke procedure i novi sistem solidarnosti među državama članicama.",
+    imageSrc: "/news/eu-flags.jpg",
+    datePublished: "2026-06-12",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/talibani-otvorili-vatru-na-protest-za-prava-zena",
     title: "Talibani otvorili vatru na protest za prava žena",
     description:
