@@ -91,7 +91,6 @@ interface SmallArticleCardProps {
   description: string;
   imageSrc: string;
   imageAlt: string;
-  variant?: "lead" | "stacked" | "standard";
 }
 
 function SmallArticleCard({
@@ -101,73 +100,48 @@ function SmallArticleCard({
   description,
   imageSrc,
   imageAlt,
-  variant = "standard",
 }: SmallArticleCardProps) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
-  const isLead = variant === "lead";
-  const isStacked = variant === "stacked";
 
   return (
-    <Link href={href} className="group block h-full no-underline">
-      <div
-        className={`h-full ${
-          isStacked
-            ? "md:grid md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] md:gap-5 md:items-start"
-            : "flex flex-col"
-        }`}
-      >
-        <div
-          className="aspect-[3/2] overflow-hidden border"
+    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
+      <div>
+        <span className="kicker">{category}</span>
+        <h3
+          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
           style={{
-            borderColor: isDark ? "#2a2a2e" : "#dedbd4",
-            backgroundColor: isDark ? "#1a1c22" : "#f3f0e8",
+            fontFamily: "'Lora', Georgia, serif",
+            color: isDark ? "#e0ddd5" : "#111",
           }}
         >
-          <img
-            src={imageSrc}
-            alt={imageAlt}
-            className="block h-full w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.015] motion-reduce:transition-none motion-reduce:transform-none"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-
-        <div className={isStacked ? "mt-5 md:mt-0" : "mt-5"}>
-          <span className="kicker">{category}</span>
-          <h3
-            className={`mt-2 font-bold leading-[1.16] ${
-              isLead
-                ? "text-[30px] md:text-[38px]"
-                : isStacked
-                  ? "text-[25px] md:text-[26px]"
-                  : "text-[25px] md:text-[29px]"
-            }`}
-            style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              color: isDark ? "#e0ddd5" : "#111",
-            }}
-          >
-            <span className="headline-link">{title}</span>
-          </h3>
-          <p
-            className={`mt-3 leading-[1.65] ${
-              isLead
-                ? "text-[16px] md:text-[18px]"
-                : isStacked
-                  ? "text-[15px]"
-                  : "text-[15px] md:text-[16px]"
-            }`}
-            style={{
-              fontFamily: "'Lora', Georgia, serif",
-              color: isDark ? "#9a978f" : "#555",
-            }}
-          >
-            {description}
-          </p>
-        </div>
+          <Link href={href} className="headline-link">
+            {title}
+          </Link>
+        </h3>
+        <p
+          className="mt-1 text-[14px] leading-[1.5]"
+          style={{
+            fontFamily: "'Lora', Georgia, serif",
+            color: isDark ? "#7a7872" : "#666",
+          }}
+        >
+          {description}
+        </p>
       </div>
-    </Link>
+
+      <img
+        src={imageSrc}
+        alt={imageAlt}
+        className="w-[100px] h-[75px] object-cover border"
+        style={{
+          borderColor: isDark ? "#2a2a2e" : "#eee",
+          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
+        }}
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
   );
 }
 
@@ -287,57 +261,43 @@ export default function Home() {
           />
 
           {/* ======================
-              2. SECONDARY NEWS GRID
+              2. SMALL NEWS GRID (4 cards)
              ====================== */}
-          <div className="mb-10">
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-[minmax(0,1.65fr)_minmax(340px,1fr)] md:gap-10">
-              <div
-                className="md:border-r md:pr-10"
-                style={{ borderColor: isDark ? "#2a2a2e" : "#dedbd4" }}
-              >
-                <SmallArticleCard
-                  category={PREVIOUS_HERO_ARTICLE.category}
-                  href={PREVIOUS_HERO_ARTICLE.href}
-                  title={PREVIOUS_HERO_ARTICLE.title}
-                  description={PREVIOUS_HERO_ARTICLE.description}
-                  imageSrc={PREVIOUS_HERO_ARTICLE.imageSrc}
-                  imageAlt={PREVIOUS_HERO_ARTICLE.imageAlt}
-                  variant="lead"
-                />
-              </div>
+          <FadeIn className="mb-10">
+            <div className="flex flex-col gap-6">
+              <SmallArticleCard
+                category={PREVIOUS_HERO_ARTICLE.category}
+                href={PREVIOUS_HERO_ARTICLE.href}
+                title={PREVIOUS_HERO_ARTICLE.title}
+                description={PREVIOUS_HERO_ARTICLE.description}
+                imageSrc={PREVIOUS_HERO_ARTICLE.imageSrc}
+                imageAlt={PREVIOUS_HERO_ARTICLE.imageAlt}
+              />
 
-              <div className="grid grid-cols-1 gap-10 md:gap-8">
-                <SmallArticleCard
-                  category="Naša planeta"
-                  href="/nasa-planeta/nasa-predstavila-posadu-artemis-iii"
-                  title="NASA predstavila posadu misije Artemis III"
-                  description="Povratak ljudi na Mesec ulazi u novu fazu — NASA je zvanično objavila posadu prve misije koja bi trebalo da vrati astronaute na površinu Meseca posle više od pola veka."
-                  imageSrc="/news/artemis-nasa-3.jpg"
-                  imageAlt="NASA Artemis III — posada misije koja treba da vrati ljude na Mesec"
-                  variant="stacked"
-                />
+              <hr className="editorial-divider" />
 
-                <div
-                  className="border-t pt-10 md:pt-8"
-                  style={{ borderColor: isDark ? "#2a2a2e" : "#dedbd4" }}
-                >
-                  <SmallArticleCard
-                    category="Naša planeta"
-                    href="/nasa-planeta/prvi-korak-ka-svetu-bez-naslednih-bolesti"
-                    title="Prvi korak ka svetu bez naslednih bolesti?"
-                    description="Naučnici su po prvi put precizno izmenili gene u ljudskim embrionima, otvarajući mogućnost lečenja naslednih bolesti, ali i novu raspravu o granicama ljudskog mešanja u sopstvenu evoluciju."
-                    imageSrc="/news/embryo-edit.jpg"
-                    imageAlt="Ilustracija"
-                    variant="stacked"
-                  />
-                </div>
-              </div>
-            </div>
+              <SmallArticleCard
+                category="Naša planeta"
+                href="/nasa-planeta/nasa-predstavila-posadu-artemis-iii"
+                title="NASA predstavila posadu misije Artemis III"
+                description="Povratak ljudi na Mesec ulazi u novu fazu — NASA je zvanično objavila posadu prve misije koja bi trebalo da vrati astronaute na površinu Meseca posle više od pola veka."
+                imageSrc="/news/artemis-nasa-3.jpg"
+                imageAlt="NASA Artemis III — posada misije koja treba da vrati ljude na Mesec"
+              />
 
-            <div
-              className="mt-12 grid grid-cols-1 gap-12 border-t pt-12 md:mt-14 md:grid-cols-2 md:gap-10 md:pt-14"
-              style={{ borderColor: isDark ? "#2a2a2e" : "#dedbd4" }}
-            >
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
+                category="Naša planeta"
+                href="/nasa-planeta/prvi-korak-ka-svetu-bez-naslednih-bolesti"
+                title="Prvi korak ka svetu bez naslednih bolesti?"
+                description="Naučnici su po prvi put precizno izmenili gene u ljudskim embrionima, otvarajući mogućnost lečenja naslednih bolesti, ali i novu raspravu o granicama ljudskog mešanja u sopstvenu evoluciju."
+                imageSrc="/news/embryo-edit.jpg"
+                imageAlt="Ilustracija"
+              />
+
+              <hr className="editorial-divider" />
+
               <SmallArticleCard
                 category="Srbija"
                 href="/srbija/potpuni-slom-vuciceve-medjunarodne-reputacije"
@@ -346,6 +306,8 @@ export default function Home() {
                 imageSrc="/news/slom-medjunarodni.jpg"
                 imageAlt="Ilustracija"
               />
+
+              <hr className="editorial-divider" />
 
               <SmallArticleCard
                 category="Geopolitika"
@@ -356,7 +318,7 @@ export default function Home() {
                 imageAlt="Ilustracija"
               />
             </div>
-          </div>
+          </FadeIn>
         </div>
       </main>
 
