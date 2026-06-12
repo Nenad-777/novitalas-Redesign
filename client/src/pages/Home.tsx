@@ -91,6 +91,7 @@ interface SmallArticleCardProps {
   description: string;
   imageSrc: string;
   imageAlt: string;
+  featured?: boolean;
 }
 
 function SmallArticleCard({
@@ -100,48 +101,74 @@ function SmallArticleCard({
   description,
   imageSrc,
   imageAlt,
+  featured = false,
 }: SmallArticleCardProps) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
   return (
-    <div className="grid grid-cols-[1fr_100px] gap-4 items-start">
-      <div>
-        <span className="kicker">{category}</span>
-        <h3
-          className="mt-1 text-[18px] md:text-[20px] font-bold leading-[1.25]"
+    <Link
+      href={href}
+      className={`group block no-underline ${
+        featured ? "md:col-span-2" : ""
+      }`}
+    >
+      <div
+        className={`h-full ${
+          featured
+            ? "md:grid md:grid-cols-[1.35fr_1fr] md:gap-8 md:items-center"
+            : ""
+        }`}
+      >
+        <div
+          className={`overflow-hidden border ${
+            featured ? "aspect-[16/10] md:aspect-[16/9]" : "aspect-[4/3]"
+          }`}
           style={{
-            fontFamily: "'Lora', Georgia, serif",
-            color: isDark ? "#e0ddd5" : "#111",
+            borderColor: isDark ? "#2a2a2e" : "#dedbd4",
+            backgroundColor: isDark ? "#1a1c22" : "#f3f0e8",
           }}
         >
-          <Link href={href} className="headline-link">
-            {title}
-          </Link>
-        </h3>
-        <p
-          className="mt-1 text-[14px] leading-[1.5]"
-          style={{
-            fontFamily: "'Lora', Georgia, serif",
-            color: isDark ? "#7a7872" : "#666",
-          }}
-        >
-          {description}
-        </p>
-      </div>
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            className="w-full h-full object-cover block transition-transform duration-500 ease-out group-hover:scale-[1.02] motion-reduce:transition-none motion-reduce:transform-none"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
 
-      <img
-        src={imageSrc}
-        alt={imageAlt}
-        className="w-[100px] h-[75px] object-cover border"
-        style={{
-          borderColor: isDark ? "#2a2a2e" : "#eee",
-          backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
-        }}
-        loading="lazy"
-        decoding="async"
-      />
-    </div>
+        <div className={featured ? "mt-5 md:mt-0" : "mt-5"}>
+          <span className="kicker">{category}</span>
+          <h3
+            className={`mt-2 font-bold leading-[1.16] transition-colors duration-200 ${
+              featured
+                ? "text-[28px] md:text-[36px]"
+                : "text-[25px] md:text-[30px]"
+            }`}
+            style={{
+              fontFamily: "'Playfair Display', Georgia, serif",
+              color: isDark ? "#e0ddd5" : "#111",
+            }}
+          >
+            <span className="headline-link">{title}</span>
+          </h3>
+          <p
+            className={`mt-3 leading-[1.65] ${
+              featured
+                ? "text-[16px] md:text-[18px]"
+                : "text-[15px] md:text-[16px]"
+            }`}
+            style={{
+              fontFamily: "'Lora', Georgia, serif",
+              color: isDark ? "#9a978f" : "#555",
+            }}
+          >
+            {description}
+          </p>
+        </div>
+      </div>
+    </Link>
   );
 }
 
@@ -261,10 +288,10 @@ export default function Home() {
           />
 
           {/* ======================
-              2. SMALL NEWS GRID (4 cards)
+              2. SECONDARY NEWS GRID
              ====================== */}
-          <FadeIn className="mb-10">
-            <div className="flex flex-col gap-6">
+          <div className="mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 md:gap-y-14">
               <SmallArticleCard
                 category={PREVIOUS_HERO_ARTICLE.category}
                 href={PREVIOUS_HERO_ARTICLE.href}
@@ -272,9 +299,8 @@ export default function Home() {
                 description={PREVIOUS_HERO_ARTICLE.description}
                 imageSrc={PREVIOUS_HERO_ARTICLE.imageSrc}
                 imageAlt={PREVIOUS_HERO_ARTICLE.imageAlt}
+                featured
               />
-
-              <hr className="editorial-divider" />
 
               <SmallArticleCard
                 category="Naša planeta"
@@ -285,8 +311,6 @@ export default function Home() {
                 imageAlt="NASA Artemis III — posada misije koja treba da vrati ljude na Mesec"
               />
 
-              <hr className="editorial-divider" />
-
               <SmallArticleCard
                 category="Naša planeta"
                 href="/nasa-planeta/prvi-korak-ka-svetu-bez-naslednih-bolesti"
@@ -295,8 +319,6 @@ export default function Home() {
                 imageSrc="/news/embryo-edit.jpg"
                 imageAlt="Ilustracija"
               />
-
-              <hr className="editorial-divider" />
 
               <SmallArticleCard
                 category="Srbija"
@@ -307,8 +329,6 @@ export default function Home() {
                 imageAlt="Ilustracija"
               />
 
-              <hr className="editorial-divider" />
-
               <SmallArticleCard
                 category="Geopolitika"
                 href="/geopolitika/moskva-upozorava-putina-ratna-potrosnja-postaje-neodrziva"
@@ -318,7 +338,7 @@ export default function Home() {
                 imageAlt="Ilustracija"
               />
             </div>
-          </FadeIn>
+          </div>
         </div>
       </main>
 
