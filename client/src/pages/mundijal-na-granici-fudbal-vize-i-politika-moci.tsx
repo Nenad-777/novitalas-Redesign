@@ -41,7 +41,7 @@ export default function MundijalNaGraniciFudbalVizeIPolitikaMoci() {
       title="Mundijal na granici: fudbal, vize i politika moći"
       dateLabel="13. JUN 2026."
       authorLabel="Novi Talas"
-      deck="Dok FIFA slavi najveći fudbalski spektakl na svetu, američka vizna politika, ratne tenzije i pitanje ko uopšte ima pravo da učestvuje u „svetskom” prvenstvu već su postali deo turnira."
+      deck="Dok FIFA slavi najveći fudbalski spektakl na svetu, američka vizna politika, ratne tenzije i pitanje ko uopšte ima pravo da učestvuje na "svetskom” prvenstvu već su postali deo turnira."
       imageSrc={IMAGE_SRC}
       imageAlt="Fudbalski stadion i kontrola granice kao simbol geopolitike Mundijala"
       imageCredit="Reuters"
