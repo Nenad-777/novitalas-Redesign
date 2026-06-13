@@ -19,6 +19,15 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/zasto-ljudi-kada-lutaju-cesto-skrecu-ulevo",
+    img: "/news/human-walking-left.jpg",
+    alt: "Ljudi koji hodaju kroz otvoren prostor, sa putanjama koje se blago uvijaju ulevo",
+    imageCredit: "Ilustracija: Novi Talas",
+    title: "Zašto ljudi, kada lutaju, često skreću ulevo?",
+    description:
+      "Kada ljudi izgube spoljne orijentire i pokušaju da hodaju nasumično, njihovo kretanje često se ne razvija kao prava linija, već kao blagi luk — neretko ulevo.",
+  },
+  {
     href: "/nasa-planeta/nasa-predstavila-posadu-artemis-iii",
     img: "/news/artemis-nasa-3.jpg",
     alt: "NASA Artemis III — posada misije koja treba da vrati ljude na Mesec",
