@@ -17,7 +17,7 @@ const HERO_ARTICLE = {
   category: "Geopolitika",
   title: "Mundijal na granici: fudbal, vize i politika moći",
   description:
-    "Dok FIFA slavi najveći fudbalski spektakl na svetu, američka vizna politika, ratne tenzije i pitanje ko uopšte ima pravo da učestvuje u „svetskom” prvenstvu već su postali deo turnira.",
+    "Dok FIFA slavi najveći fudbalski spektakl na svetu, američka vizna politika, ratne tenzije i pitanje ko uopšte ima pravo da učestvuje na Svetskom prvenstvu već su postali deo turnira.",
   imageSrc: "/news/world-cup-visas.jpg",
   imageAlt: "Mundijal, vize i geopolitika na granici",
   imageCredit: "Reuters",
