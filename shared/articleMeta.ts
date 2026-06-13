@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/mundijal-na-granici-fudbal-vize-i-politika-moci",
+    title: "Mundijal na granici: fudbal, vize i politika moći",
+    description:
+      "Dok FIFA slavi najveći fudbalski spektakl na svetu, američka vizna politika, ratne tenzije i pitanje ko uopšte ima pravo da učestvuje u „svetskom” prvenstvu već su postali deo turnira.",
+    imageSrc: "/news/world-cup-visas.jpg",
+    datePublished: "2026-06-13",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan",
     title:
       "SAD i Iran blizu sporazuma: Pakistan tvrdi da je tekst dogovoren, Teheran još oprezan",

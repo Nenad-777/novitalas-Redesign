@@ -14,6 +14,7 @@ import GeopolitikaArticle from "./pages/GeopolitikaArticle";
 import LuksuzniRajIliGubitakObale from "./pages/luksuzni-raj-ili-gubitak-obale";
 import NovaBitkaZaIranPocinjeUBecu from "./pages/nova-bitka-za-iran-pocinje-u-becu";
 import EuMigrationRules2026 from "./pages/eu-migration-rules-2026";
+import MundijalNaGraniciFudbalVizeIPolitikaMoci from "./pages/mundijal-na-granici-fudbal-vize-i-politika-moci";
 import SadIIranBlizuSporazumaPakistanTvrdiDaJeTekstDogovorenTeheranJosOprezan from "./pages/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan";
 
 /* ✅ GLAVNA VEST — Geopolitika */
@@ -269,6 +270,10 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/mundijal-na-granici-fudbal-vize-i-politika-moci"
+          component={MundijalNaGraniciFudbalVizeIPolitikaMoci}
+        />
         <Route
           path="/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan"
           component={

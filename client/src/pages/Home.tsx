@@ -13,6 +13,17 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
+  href: "/geopolitika/mundijal-na-granici-fudbal-vize-i-politika-moci",
+  category: "Geopolitika",
+  title: "Mundijal na granici: fudbal, vize i politika moći",
+  description:
+    "Dok FIFA slavi najveći fudbalski spektakl na svetu, američka vizna politika, ratne tenzije i pitanje ko uopšte ima pravo da učestvuje u „svetskom” prvenstvu već su postali deo turnira.",
+  imageSrc: "/news/world-cup-visas.jpg",
+  imageAlt: "Mundijal, vize i geopolitika na granici",
+  imageCredit: "Reuters",
+};
+
+const PREVIOUS_HERO_ARTICLE = {
   href: "/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan",
   category: "Geopolitika",
   title:
@@ -22,17 +33,6 @@ const HERO_ARTICLE = {
   imageSrc: "/news/peace-for-iran.jpg",
   imageAlt: "Ilustracija — SAD i Iran pregovori o sporazumu",
   imageCredit: "Reuters / AP",
-};
-
-const PREVIOUS_HERO_ARTICLE = {
-  href: "/geopolitika/talibani-otvorili-vatru-na-protest-za-prava-zena",
-  category: "Geopolitika",
-  title: "Talibani otvorili vatru na protest za prava žena",
-  description:
-    "Novi protest za prava žena u Avganistanu završen je nasilnom intervencijom talibanskih snaga. Incident je ponovo skrenuo pažnju međunarodne javnosti na položaj žena gotovo četiri godine nakon povratka talibana na vlast.",
-  imageSrc: "/news/afganistan-woman.jpg",
-  imageAlt: "Protest za prava žena u Avganistanu",
-  imageCredit: "Vizualizacija: Novi Talas",
 };
 
 // Simple fade-in on scroll hook
