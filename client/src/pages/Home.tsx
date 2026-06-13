@@ -267,6 +267,17 @@ export default function Home() {
           <FadeIn className="mb-10">
             <div className="flex flex-col gap-6">
               <SmallArticleCard
+                category="Naša planeta"
+                href="/nasa-planeta/zasto-ljudi-kada-lutaju-cesto-skrecu-ulevo"
+                title="Zašto ljudi, kada lutaju, često skreću ulevo?"
+                description="Kada ljudi izgube spoljne orijentire i pokušaju da hodaju nasumično, njihovo kretanje često se ne razvija kao prava linija, već kao blagi luk — neretko ulevo."
+                imageSrc="/news/human-walking-left.jpg"
+                imageAlt="Ljudi koji hodaju kroz otvoren prostor, sa putanjama koje se blago uvijaju ulevo"
+              />
+
+              <hr className="editorial-divider" />
+
+              <SmallArticleCard
                 category="Geopolitika"
                 href="/geopolitika/eu-migration-rules-2026"
                 title="Nova migraciona pravila Evropske unije ulaze u primenu"
@@ -306,17 +317,6 @@ export default function Home() {
                 description="Povratak ljudi na Mesec ulazi u novu fazu — NASA je zvanično objavila posadu prve misije koja bi trebalo da vrati astronaute na površinu Meseca posle više od pola veka."
                 imageSrc="/news/artemis-nasa-3.jpg"
                 imageAlt="NASA Artemis III — posada misije koja treba da vrati ljude na Mesec"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Naša planeta"
-                href="/nasa-planeta/prvi-korak-ka-svetu-bez-naslednih-bolesti"
-                title="Prvi korak ka svetu bez naslednih bolesti?"
-                description="Naučnici su po prvi put precizno izmenili gene u ljudskim embrionima, otvarajući mogućnost lečenja naslednih bolesti, ali i novu raspravu o granicama ljudskog mešanja u sopstvenu evoluciju."
-                imageSrc="/news/embryo-edit.jpg"
-                imageAlt="Ilustracija"
               />
             </div>
           </FadeIn>
