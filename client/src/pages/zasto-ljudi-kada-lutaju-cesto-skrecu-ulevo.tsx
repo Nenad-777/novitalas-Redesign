@@ -17,14 +17,6 @@ const PARAGRAPHS = [
   "A tada, izgleda, često krenemo ulevo. Ne dramatično. Ne svesno. Samo dovoljno da nas telo podseti da pravac nikada nije potpuno jednostavna stvar.",
 ];
 
-const INFO_BOX = {
-  title: "Izvori i tagovi",
-  items: [
-    "Izvori: ScienceAlert; naučna istraživanja o ljudskom kretanju i prostornoj orijentaciji",
-    "Tagovi: hodanje, ljudsko telo, psihologija, orijentacija, biomehanika, nauka",
-  ],
-};
-
 export default function ZastoLjudiKadaLutajuCestoSkrecuUlevo() {
   return (
     <ArticleTemplate
@@ -38,7 +30,6 @@ export default function ZastoLjudiKadaLutajuCestoSkrecuUlevo() {
       imageAlt="Ljudi koji hodaju kroz otvoren prostor, sa putanjama koje se blago uvijaju ulevo"
       imageCredit="Ilustracija: Novi Talas"
       paragraphs={PARAGRAPHS}
-      infoBox={INFO_BOX}
       backHref="/nasa-planeta"
       backLabel="← Nazad na Našu planetu"
     />
