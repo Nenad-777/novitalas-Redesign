@@ -44,7 +44,6 @@ export default function MundijalNaGraniciFudbalVizeIPolitikaMoci() {
       deck="Dok FIFA slavi najveći fudbalski spektakl na svetu, američka vizna politika, ratne tenzije i pitanje ko uopšte ima pravo da učestvuje na Svetskom prvenstvu već su postali deo turnira."
       imageSrc={IMAGE_SRC}
       imageAlt="Fudbalski stadion i kontrola granice kao simbol geopolitike Mundijala"
-      imageCredit="Reuters"
       paragraphs={PARAGRAPHS}
       infoBox={INFO_BOX}
       backHref="/geopolitika"
