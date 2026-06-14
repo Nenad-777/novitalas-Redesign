@@ -164,10 +164,13 @@ function DesktopSideStory({ article }: { article: (typeof ARTICLES)[number] }) {
     <article className="grid grid-cols-[1fr_104px] gap-4 border-b pb-4" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}>
       <div>
         <span className="kicker">{article.category}</span>
-        <h3 className="mt-1 text-[16px] font-bold leading-[1.15]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#e0ddd5" : "#111" }}>
+        <h3 className="mt-1 text-[18px] font-bold leading-[1.18]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#e0ddd5" : "#111" }}>
           <Link href={article.href} className="headline-link">{article.title}</Link>
         </h3>
-        <p className="mt-2 text-[12px] leading-[1.35] line-clamp-2" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#9a978f" : "#666" }}>
+        <p
+          className="mt-2 font-normal line-clamp-2"
+          style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "13px", lineHeight: 1.42, color: isDark ? "#8f8c85" : "#737373" }}
+        >
           {article.description}
         </p>
       </div>
@@ -183,7 +186,7 @@ function DesktopTileStory({ article }: { article: (typeof ARTICLES)[number] }) {
   const isDark = theme === "dark";
 
   return (
-    <article className="border-t pt-5" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}>
+    <article>
       <Link href={article.href} className="block no-underline">
         <img src={article.imageSrc} alt={article.imageAlt} className="w-full aspect-[16/9] object-cover rounded-lg border" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }} loading="lazy" decoding="async" />
       </Link>
