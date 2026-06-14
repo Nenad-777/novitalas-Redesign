@@ -1,6 +1,6 @@
 /*
- * DESIGN: "Diplomatska Klasika" v3  -  Foreign Affairs-inspired homepage
- * Mobile update: editorial masthead, image-first hero and cleaner magazine cards.
+ * DESIGN: "Diplomatska Klasika" v4
+ * Mobile keeps the approved editorial stack; desktop gets a compact magazine grid.
  */
 
 import { useEffect, useRef, useState } from "react";
@@ -17,20 +17,55 @@ const HERO_ARTICLE = {
     "Dok FIFA slavi najveći fudbalski spektakl na svetu, američka vizna politika, ratne tenzije i pitanje ko uopšte ima pravo da učestvuje na Svetskom prvenstvu već su deo turnira.",
   imageSrc: "/news/world-cup-visas.jpg",
   imageAlt: "Mundijal, vize i geopolitika na granici",
-  imageCredit: "",
 };
 
-const PREVIOUS_HERO_ARTICLE = {
-  href: "/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan",
-  category: "Geopolitika",
-  title:
-    "SAD i Iran blizu sporazuma: Pakistan tvrdi da je tekst dogovoren, Teheran još oprezan",
-  description:
-    "Pakistanski premijer Shehbaz Sharif saopštio je da su Sjedinjene Države i Iran usaglasili tekst mirovnog sporazuma. Ipak, iz Teherana stiže poruka da konačna odluka još nije doneta.",
-  imageSrc: "/news/peace-for-iran.jpg",
-  imageAlt: "Ilustracija — SAD i Iran pregovori o sporazumu",
-  imageCredit: "Reuters / AP",
-};
+const ARTICLES = [
+  {
+    href: "/nasa-planeta/zasto-ljudi-kada-lutaju-cesto-skrecu-ulevo",
+    category: "Naša planeta",
+    title: "Zašto ljudi, kada lutaju, često skreću ulevo?",
+    description:
+      "Kada ljudi izgube spoljne orijentire, njihovo kretanje često ne ide pravom linijom, već blagim lukom — neretko ulevo.",
+    imageSrc: "/news/human-walking-left.jpg",
+    imageAlt: "Ljudi koji hodaju kroz otvoren prostor, sa putanjama koje se blago uvijaju ulevo",
+  },
+  {
+    href: "/geopolitika/eu-migration-rules-2026",
+    category: "Geopolitika",
+    title: "Nova migraciona pravila Evropske unije ulaze u primenu",
+    description:
+      "Novi evropski pakt menja pravila za azil, granice i deportacije, uz zajedničke procedure i sistem solidarnosti.",
+    imageSrc: "/news/eu-flags.jpg",
+    imageAlt: "Zastave Evropske unije",
+  },
+  {
+    href: "/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan",
+    category: "Geopolitika",
+    title:
+      "SAD i Iran blizu sporazuma: Pakistan tvrdi da je tekst dogovoren, Teheran još oprezan",
+    description:
+      "Pakistan tvrdi da su SAD i Iran usaglasili tekst mirovnog sporazuma, dok Teheran poručuje da konačna odluka još nije doneta.",
+    imageSrc: "/news/peace-for-iran.jpg",
+    imageAlt: "Ilustracija — SAD i Iran pregovori o sporazumu",
+  },
+  {
+    href: "/geopolitika/tramp-pokrenuo-udare-na-iran-nakon-obaranja-americkog-helikoptera",
+    category: "Geopolitika",
+    title: "KRIZA SAD–IRAN",
+    description:
+      "SAD izvele novu seriju udara na ciljeve u Iranu dok Teheran najavljuje odgovor.",
+    imageSrc: "/news/usa-iran-red-line.jpg",
+    imageAlt: "Kriza SAD–Iran i vojni udari na ciljeve u Iranu",
+  },
+  {
+    href: "/nasa-planeta/nasa-predstavila-posadu-artemis-iii",
+    category: "Naša planeta",
+    title: "NASA predstavila posadu misije Artemis III",
+    description: "Povratak ljudi na Mesec ulazi u novu fazu — NASA je objavila posadu misije Artemis III.",
+    imageSrc: "/news/artemis-nasa-3.jpg",
+    imageAlt: "NASA Artemis III — posada misije koja treba da vrati ljude na Mesec",
+  },
+];
 
 function useFadeIn() {
   const ref = useRef<HTMLDivElement>(null);
@@ -57,13 +92,7 @@ function useFadeIn() {
   return { ref, visible };
 }
 
-function FadeIn({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
+function FadeIn({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const { ref, visible } = useFadeIn();
 
   return (
@@ -91,44 +120,18 @@ interface SmallArticleCardProps {
   variant?: "split" | "tile";
 }
 
-function SmallArticleCard({
-  category,
-  href,
-  title,
-  description,
-  imageSrc,
-  imageAlt,
-  variant = "split",
-}: SmallArticleCardProps) {
+function SmallArticleCard({ category, href, title, description, imageSrc, imageAlt, variant = "split" }: SmallArticleCardProps) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
   if (variant === "tile") {
     return (
-      <article
-        className="overflow-hidden rounded-xl border"
-        style={{
-          borderColor: isDark ? "#2a2a2e" : "#eee",
-          backgroundColor: isDark ? "#17191f" : "#ffffff",
-        }}
-      >
+      <article className="overflow-hidden rounded-xl border" style={{ borderColor: isDark ? "#2a2a2e" : "#eee", backgroundColor: isDark ? "#17191f" : "#ffffff" }}>
         <Link href={href} className="block no-underline">
-          <img
-            src={imageSrc}
-            alt={imageAlt}
-            className="w-full h-[120px] object-cover block"
-            loading="lazy"
-            decoding="async"
-          />
+          <img src={imageSrc} alt={imageAlt} className="w-full h-[120px] object-cover block" loading="lazy" decoding="async" />
           <div className="p-3">
             <span className="kicker">{category}</span>
-            <h3
-              className="mt-1 text-[17px] font-bold leading-[1.2]"
-              style={{
-                fontFamily: "'Lora', Georgia, serif",
-                color: isDark ? "#e0ddd5" : "#111",
-              }}
-            >
+            <h3 className="mt-1 text-[17px] font-bold leading-[1.2]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#e0ddd5" : "#111" }}>
               {title}
             </h3>
           </div>
@@ -138,44 +141,62 @@ function SmallArticleCard({
   }
 
   return (
-    <article className="grid grid-cols-[1fr_112px] min-[390px]:grid-cols-[1fr_118px] md:grid-cols-[1fr_100px] gap-4 items-start">
+    <article className="grid grid-cols-[1fr_112px] min-[390px]:grid-cols-[1fr_118px] gap-4 items-start">
       <div>
         <span className="kicker">{category}</span>
-        <h3
-          className="mt-1 text-[19px] min-[390px]:text-[20px] md:text-[20px] font-bold leading-[1.18]"
-          style={{
-            fontFamily: "'Lora', Georgia, serif",
-            color: isDark ? "#e0ddd5" : "#111",
-          }}
-        >
-          <Link href={href} className="headline-link">
-            {title}
-          </Link>
+        <h3 className="mt-1 text-[19px] min-[390px]:text-[20px] font-bold leading-[1.18]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#e0ddd5" : "#111" }}>
+          <Link href={href} className="headline-link">{title}</Link>
+        </h3>
+        <p className="hidden" style={{ fontFamily: "'Lora', Georgia, serif" }}>{description}</p>
+      </div>
+      <Link href={href} className="block no-underline">
+        <img src={imageSrc} alt={imageAlt} className="w-[112px] h-[84px] min-[390px]:w-[118px] min-[390px]:h-[88px] object-cover border rounded-md" style={{ borderColor: isDark ? "#2a2a2e" : "#eee", backgroundColor: isDark ? "#1a1c22" : "#f5f5f5" }} loading="lazy" decoding="async" />
+      </Link>
+    </article>
+  );
+}
+
+function DesktopSideStory({ article }: { article: (typeof ARTICLES)[number] }) {
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
+
+  return (
+    <article className="grid grid-cols-[1fr_104px] gap-4 border-b pb-4" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}>
+      <div>
+        <span className="kicker">{article.category}</span>
+        <h3 className="mt-1 text-[18px] font-bold leading-[1.18]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#e0ddd5" : "#111" }}>
+          <Link href={article.href} className="headline-link">{article.title}</Link>
         </h3>
         <p
-          className="hidden md:block mt-2 text-[14px] leading-[1.42]"
-          style={{
-            fontFamily: "'Lora', Georgia, serif",
-            color: isDark ? "#9a978f" : "#555",
-          }}
+          className="mt-2 font-normal line-clamp-2"
+          style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "13px", lineHeight: 1.42, color: isDark ? "#8f8c85" : "#737373" }}
         >
-          {description}
+          {article.description}
         </p>
       </div>
-
-      <Link href={href} className="block no-underline">
-        <img
-          src={imageSrc}
-          alt={imageAlt}
-          className="w-[112px] h-[84px] min-[390px]:w-[118px] min-[390px]:h-[88px] md:w-[100px] md:h-[75px] object-cover border rounded-md md:rounded-none"
-          style={{
-            borderColor: isDark ? "#2a2a2e" : "#eee",
-            backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
-          }}
-          loading="lazy"
-          decoding="async"
-        />
+      <Link href={article.href} className="block no-underline">
+        <img src={article.imageSrc} alt={article.imageAlt} className="w-[104px] h-[72px] object-cover rounded-md border" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }} loading="lazy" decoding="async" />
       </Link>
+    </article>
+  );
+}
+
+function DesktopTileStory({ article }: { article: (typeof ARTICLES)[number] }) {
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
+
+  return (
+    <article>
+      <Link href={article.href} className="block no-underline">
+        <img src={article.imageSrc} alt={article.imageAlt} className="w-full aspect-[16/9] object-cover rounded-lg border" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }} loading="lazy" decoding="async" />
+      </Link>
+      <span className="kicker block mt-3">{article.category}</span>
+      <h3 className="mt-2 text-[22px] font-bold leading-[1.12]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#e0ddd5" : "#111" }}>
+        <Link href={article.href} className="headline-link">{article.title}</Link>
+      </h3>
+      <p className="mt-2 text-[14px] leading-[1.4]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#9a978f" : "#555" }}>
+        {article.description}
+      </p>
     </article>
   );
 }
@@ -185,176 +206,78 @@ export default function Home() {
   const isDark = theme === "dark";
 
   return (
-    <div
-      className="min-h-screen flex flex-col transition-colors duration-300"
-      style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
-    >
+    <div className="min-h-screen flex flex-col transition-colors duration-300" style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}>
       <Header />
-
-      <section
-        className="hidden md:block relative w-full overflow-hidden h-[28vh] hero-section"
-        style={{
-          backgroundImage: `url(/hero/naslovna-novitalas.jpg), linear-gradient(to bottom, var(--nt-hero-bg), var(--nt-hero-bg-end))`,
-          backgroundColor: "var(--nt-hero-bg)",
-        }}
-      >
-        {isDark && (
-          <div
-            aria-hidden="true"
-            className="absolute inset-0"
-            style={{ backgroundColor: "rgba(13,17,23,0.35)" }}
-          />
-        )}
-
-        <h1 className="sr-only">Novi Talas</h1>
-        <p className="sr-only">
-          Novi Talas je digitalni nedeljnik koji donosi analize geopolitike,
-          Srbije i sveta, uz fokus na najvažnije događaje dana.
-        </p>
-
-        <div className="absolute inset-x-0 bottom-0 pb-6 flex justify-center">
-          <p
-            className="hero-tagline text-[26px] italic tracking-wide"
-            style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              color: isDark ? "#e0ddd5" : "#1a1a1a",
-              textShadow: isDark
-                ? "0 1px 2px rgba(0,0,0,0.3)"
-                : "0 1px 2px rgba(0,0,0,0.15)",
-            }}
-          >
-            Vaš prozor u svet
-          </p>
-        </div>
-      </section>
-
-      <main
-        className="pt-0 pb-12 md:pt-12 md:pb-16 flex-1"
-        style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
-      >
-        <div className="max-w-[1200px] mx-auto px-5 md:px-5">
-          <FadeIn className="mb-11 md:mb-10">
-            <article className="flex flex-col">
-              <Link
-                href={HERO_ARTICLE.href}
-                className="block no-underline -mx-5 md:mx-0 order-first md:order-none mb-5 md:mb-0"
-              >
-                <div
-                  className="relative w-full overflow-hidden md:rounded-xl aspect-[16/9]"
-                  style={{
-                    border: isDark ? "1px solid #2a2a2e" : "1px solid #e5e5e5",
-                  }}
-                >
-                  <img
-                    src={HERO_ARTICLE.imageSrc}
-                    alt={HERO_ARTICLE.imageAlt}
-                    className="w-full h-full object-cover block"
-                    fetchPriority="high"
-                    decoding="async"
-                  />
-                </div>
-                {HERO_ARTICLE.imageCredit ? (
-                  <p className="photo-credit px-5 md:px-0">{HERO_ARTICLE.imageCredit}</p>
-                ) : null}
-              </Link>
-
-              <span className="kicker block mb-2">{HERO_ARTICLE.category}</span>
-
-              <h2
-                className="mt-2 mb-3 text-[32px] min-[390px]:text-[34px] md:text-[46px] font-bold leading-[1.08]"
-                style={{
-                  fontFamily: "'Playfair Display', Georgia, serif",
-                  fontWeight: 700,
-                  color: isDark ? "#e0ddd5" : "#111",
-                }}
-              >
-                <Link
-                  href={HERO_ARTICLE.href}
-                  className="headline-link"
-                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-                >
-                  {HERO_ARTICLE.title}
+      <main className="pt-0 pb-12 md:pt-7 md:pb-14 flex-1" style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}>
+        <div className="max-w-[1200px] mx-auto px-5 md:px-8">
+          <div className="md:hidden">
+            <FadeIn className="mb-11">
+              <article className="flex flex-col">
+                <Link href={HERO_ARTICLE.href} className="block no-underline -mx-5 order-first mb-5">
+                  <div className="relative w-full overflow-hidden aspect-[16/9]" style={{ border: isDark ? "1px solid #2a2a2e" : "1px solid #e5e5e5" }}>
+                    <img src={HERO_ARTICLE.imageSrc} alt={HERO_ARTICLE.imageAlt} className="w-full h-full object-cover block" fetchPriority="high" decoding="async" />
+                  </div>
                 </Link>
-              </h2>
-
-              <p
-                className="text-[17px] min-[390px]:text-[18px] md:text-[20px] leading-[1.48] md:leading-[1.6] mb-2 md:mb-5"
-                style={{
-                  fontFamily: "'Lora', Georgia, serif",
-                  color: isDark ? "#9a978f" : "#555",
-                }}
-              >
-                {HERO_ARTICLE.description}
-              </p>
-            </article>
-          </FadeIn>
-
-          <hr
-            className="editorial-divider mb-8 md:mb-10"
-            style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
-          />
-
-          <FadeIn className="mb-10">
-            <div className="flex flex-col gap-5 md:gap-6">
-              <SmallArticleCard
-                category="Naša planeta"
-                href="/nasa-planeta/zasto-ljudi-kada-lutaju-cesto-skrecu-ulevo"
-                title="Zašto ljudi, kada lutaju, često skreću ulevo?"
-                description="Kada ljudi izgube spoljne orijentire, njihovo kretanje često ne ide pravom linijom, već blagim lukom — neretko ulevo."
-                imageSrc="/news/human-walking-left.jpg"
-                imageAlt="Ljudi koji hodaju kroz otvoren prostor, sa putanjama koje se blago uvijaju ulevo"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category="Geopolitika"
-                href="/geopolitika/eu-migration-rules-2026"
-                title="Nova migraciona pravila Evropske unije ulaze u primenu"
-                description="Novi evropski pakt menja pravila za azil, granice i deportacije, uz zajedničke procedure i sistem solidarnosti."
-                imageSrc="/news/eu-flags.jpg"
-                imageAlt="Zastave Evropske unije"
-              />
-
-              <hr className="editorial-divider" />
-
-              <SmallArticleCard
-                category={PREVIOUS_HERO_ARTICLE.category}
-                href={PREVIOUS_HERO_ARTICLE.href}
-                title={PREVIOUS_HERO_ARTICLE.title}
-                description="Pakistan tvrdi da su SAD i Iran usaglasili tekst mirovnog sporazuma, dok Teheran poručuje da konačna odluka još nije doneta."
-                imageSrc={PREVIOUS_HERO_ARTICLE.imageSrc}
-                imageAlt={PREVIOUS_HERO_ARTICLE.imageAlt}
-              />
-
-              <hr className="editorial-divider" />
-
-              <div className="grid grid-cols-1 min-[420px]:grid-cols-2 md:grid-cols-1 gap-4 md:gap-6">
-                <SmallArticleCard
-                  variant="tile"
-                  category="Geopolitika"
-                  href="/geopolitika/tramp-pokrenuo-udare-na-iran-nakon-obaranja-americkog-helikoptera"
-                  title="KRIZA SAD–IRAN"
-                  description="SAD izvele novu seriju udara na ciljeve u Iranu dok Teheran najavljuje odgovor."
-                  imageSrc="/news/usa-iran-red-line.jpg"
-                  imageAlt="Kriza SAD–Iran i vojni udari na ciljeve u Iranu"
-                />
-
-                <SmallArticleCard
-                  variant="tile"
-                  category="Naša planeta"
-                  href="/nasa-planeta/nasa-predstavila-posadu-artemis-iii"
-                  title="NASA predstavila posadu misije Artemis III"
-                  description="Povratak ljudi na Mesec ulazi u novu fazu."
-                  imageSrc="/news/artemis-nasa-3.jpg"
-                  imageAlt="NASA Artemis III — posada misije koja treba da vrati ljude na Mesec"
-                />
+                <span className="kicker block mb-2">{HERO_ARTICLE.category}</span>
+                <h2 className="mt-2 mb-3 text-[32px] min-[390px]:text-[34px] font-bold leading-[1.08]" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 700, color: isDark ? "#e0ddd5" : "#111" }}>
+                  <Link href={HERO_ARTICLE.href} className="headline-link" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>{HERO_ARTICLE.title}</Link>
+                </h2>
+                <p className="text-[17px] min-[390px]:text-[18px] leading-[1.48] mb-2" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#9a978f" : "#555" }}>
+                  {HERO_ARTICLE.description}
+                </p>
+              </article>
+            </FadeIn>
+            <hr className="editorial-divider mb-8" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }} />
+            <FadeIn className="mb-10">
+              <div className="flex flex-col gap-5">
+                <SmallArticleCard {...ARTICLES[0]} />
+                <hr className="editorial-divider" />
+                <SmallArticleCard {...ARTICLES[1]} />
+                <hr className="editorial-divider" />
+                <SmallArticleCard {...ARTICLES[2]} />
+                <hr className="editorial-divider" />
+                <div className="grid grid-cols-1 min-[420px]:grid-cols-2 gap-4">
+                  <SmallArticleCard variant="tile" {...ARTICLES[3]} />
+                  <SmallArticleCard variant="tile" {...ARTICLES[4]} />
+                </div>
               </div>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
+
+          <div className="hidden md:block">
+            <FadeIn className="mb-9">
+              <section className="grid grid-cols-[minmax(0,1.65fr)_minmax(300px,0.85fr)] gap-8 items-start border-b pb-8" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}>
+                <article>
+                  <Link href={HERO_ARTICLE.href} className="block no-underline">
+                    <img src={HERO_ARTICLE.imageSrc} alt={HERO_ARTICLE.imageAlt} className="w-full h-[340px] lg:h-[390px] object-cover rounded-xl border" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }} fetchPriority="high" decoding="async" />
+                  </Link>
+                  <span className="kicker block mt-4">{HERO_ARTICLE.category}</span>
+                  <h1 className="mt-2 text-[40px] lg:text-[48px] font-bold leading-[1.02]" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 700, color: isDark ? "#e0ddd5" : "#111" }}>
+                    <Link href={HERO_ARTICLE.href} className="headline-link" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>{HERO_ARTICLE.title}</Link>
+                  </h1>
+                  <p className="mt-4 max-w-[720px] text-[18px] leading-[1.48]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#9a978f" : "#555" }}>
+                    {HERO_ARTICLE.description}
+                  </p>
+                </article>
+                <aside className="flex flex-col gap-4">
+                  <div className="text-[11px] font-semibold tracking-[0.18em] uppercase border-b pb-3" style={{ color: isDark ? "#bcb7a6" : "#8B0000", borderColor: isDark ? "#2a2a2e" : "#e5e5e5", fontFamily: "'Source Sans 3', sans-serif" }}>
+                    Najnovije
+                  </div>
+                  <DesktopSideStory article={ARTICLES[0]} />
+                  <DesktopSideStory article={ARTICLES[1]} />
+                  <DesktopSideStory article={ARTICLES[2]} />
+                </aside>
+              </section>
+            </FadeIn>
+            <FadeIn>
+              <section className="grid grid-cols-2 gap-8">
+                <DesktopTileStory article={ARTICLES[3]} />
+                <DesktopTileStory article={ARTICLES[4]} />
+              </section>
+            </FadeIn>
+          </div>
         </div>
       </main>
-
       <Footer />
     </div>
   );
