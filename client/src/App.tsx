@@ -8,6 +8,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
 import Home from "./pages/Home";
+import Pretraga from "./pages/Pretraga";
 import GeopolitikaIndex from "./pages/GeopolitikaIndex";
 import GeopolitikaIran from "./pages/GeopolitikaIran";
 import GeopolitikaArticle from "./pages/GeopolitikaArticle";
@@ -266,6 +267,7 @@ function Router() {
       <Switch>
         {/* Home */}
         <Route path="/" component={Home} />
+        <Route path="/pretraga" component={Pretraga} />
 
         {/* =========================
             GEOPOLITIKA
