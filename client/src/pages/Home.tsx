@@ -14,7 +14,7 @@ const HERO_ARTICLE = {
   category: "Geopolitika",
   title: "Mundijal na granici: fudbal, vize i politika moći",
   description:
-    "Dok FIFA slavi najveći fudbalski spektakl na svetu, američka vizna politika, ratne tenzije i pitanje ko uopšte ima pravo da učestvuje na Svetskom prvenstvu već su postali deo turnira.",
+    "Dok FIFA slavi najveći fudbalski spektakl na svetu, američka vizna politika, ratne tenzije i pitanje ko uopšte ima pravo da učestvuje na Svetskom prvenstvu već su deo turnira.",
   imageSrc: "/news/world-cup-visas.jpg",
   imageAlt: "Mundijal, vize i geopolitika na granici",
   imageCredit: "",
@@ -233,7 +233,7 @@ export default function Home() {
         style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
       >
         <div className="max-w-[1200px] mx-auto px-5 md:px-5">
-          <FadeIn className="mb-9 md:mb-10">
+          <FadeIn className="mb-11 md:mb-10">
             <article className="flex flex-col">
               <Link
                 href={HERO_ARTICLE.href}
@@ -278,7 +278,7 @@ export default function Home() {
               </h2>
 
               <p
-                className="text-[18px] md:text-[20px] leading-[1.5] md:leading-[1.6] mb-1 md:mb-5"
+                className="text-[17px] min-[390px]:text-[18px] md:text-[20px] leading-[1.48] md:leading-[1.6] mb-2 md:mb-5"
                 style={{
                   fontFamily: "'Lora', Georgia, serif",
                   color: isDark ? "#9a978f" : "#555",
@@ -290,7 +290,7 @@ export default function Home() {
           </FadeIn>
 
           <hr
-            className="editorial-divider mb-7 md:mb-10"
+            className="editorial-divider mb-8 md:mb-10"
             style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
           />
 
