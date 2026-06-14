@@ -19,6 +19,15 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/sta-kratki-video-snimci-rade-decjem-mozgu",
+    img: "/news/nerve-lab-deca-ekrani-mozak.jpg",
+    alt: "Dete osvetljeno ekranom telefona, sa apstraktnim prikazom mozga i digitalnih signala",
+    imageCredit: "Ilustracija: Novi Talas",
+    title: "Šta kratki video-snimci rade dečjem mozgu? Britanci pokrenuli laboratoriju da to konačno izmere",
+    description:
+      "Britanski Nerve Lab koristi AI, nosivo skeniranje mozga i analizu medijskog sadržaja kako bi ispitao kako tempo, boje, zvuk i kratki video-formati utiču na dečju pažnju, razumevanje i emocionalni odgovor.",
+  },
+  {
     href: "/nasa-planeta/zasto-ljudi-kada-lutaju-cesto-skrecu-ulevo",
     img: "/news/human-walking-left.jpg",
     alt: "Ljudi koji hodaju kroz otvoren prostor, sa putanjama koje se blago uvijaju ulevo",

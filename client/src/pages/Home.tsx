@@ -10,16 +10,25 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/mundijal-na-granici-fudbal-vize-i-politika-moci",
-  category: "Geopolitika",
-  title: "Mundijal na granici: fudbal, vize i politika moći",
+  href: "/nasa-planeta/sta-kratki-video-snimci-rade-decjem-mozgu",
+  category: "Naša planeta",
+  title: "Šta kratki video-snimci rade dečjem mozgu? Britanci pokrenuli laboratoriju da to konačno izmere",
   description:
-    "Dok FIFA slavi najveći fudbalski spektakl na svetu, američka vizna politika, ratne tenzije i pitanje ko uopšte ima pravo da učestvuje na Svetskom prvenstvu već su deo turnira.",
-  imageSrc: "/news/world-cup-visas.jpg",
-  imageAlt: "Mundijal, vize i geopolitika na granici",
+    "Britanski Nerve Lab koristi AI, nosivo skeniranje mozga i analizu medijskog sadržaja kako bi ispitao kako tempo, boje, zvuk i kratki video-formati utiču na dečju pažnju, razumevanje i emocionalni odgovor.",
+  imageSrc: "/news/nerve-lab-deca-ekrani-mozak.jpg",
+  imageAlt: "Dete osvetljeno ekranom telefona, sa apstraktnim prikazom mozga i digitalnih signala",
 };
 
 const ARTICLES = [
+  {
+    href: "/geopolitika/mundijal-na-granici-fudbal-vize-i-politika-moci",
+    category: "Geopolitika",
+    title: "Mundijal na granici: fudbal, vize i politika moći",
+    description:
+      "Dok FIFA slavi najveći fudbalski spektakl na svetu, američka vizna politika, ratne tenzije i pitanje ko uopšte ima pravo da učestvuje na Svetskom prvenstvu već su deo turnira.",
+    imageSrc: "/news/world-cup-visas.jpg",
+    imageAlt: "Mundijal, vize i geopolitika na granici",
+  },
   {
     href: "/nasa-planeta/zasto-ljudi-kada-lutaju-cesto-skrecu-ulevo",
     category: "Naša planeta",
