@@ -17,7 +17,7 @@ const HERO_ARTICLE = {
     "Dok FIFA slavi najveći fudbalski spektakl na svetu, američka vizna politika, ratne tenzije i pitanje ko uopšte ima pravo da učestvuje na Svetskom prvenstvu već su postali deo turnira.",
   imageSrc: "/news/world-cup-visas.jpg",
   imageAlt: "Mundijal, vize i geopolitika na granici",
-  imageCredit: "Reuters",
+  imageCredit: "",
 };
 
 const PREVIOUS_HERO_ARTICLE = {
@@ -253,7 +253,9 @@ export default function Home() {
                     decoding="async"
                   />
                 </div>
-                <p className="photo-credit px-5 md:px-0">{HERO_ARTICLE.imageCredit}</p>
+                {HERO_ARTICLE.imageCredit ? (
+                  <p className="photo-credit px-5 md:px-0">{HERO_ARTICLE.imageCredit}</p>
+                ) : null}
               </Link>
 
               <span className="kicker block mb-2">{HERO_ARTICLE.category}</span>
