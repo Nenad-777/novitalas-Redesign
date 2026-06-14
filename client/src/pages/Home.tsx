@@ -261,7 +261,7 @@ export default function Home() {
               <span className="kicker block mb-2">{HERO_ARTICLE.category}</span>
 
               <h2
-                className="mt-2 mb-3 text-[32px] min-[390px]:text-[34px] md:text-[46px] font-bold leading-[1.08]"
+                className="mt-2 mb-3 text-[29px] min-[390px]:text-[31px] md:text-[46px] font-bold leading-[1.08]"
                 style={{
                   fontFamily: "'Playfair Display', Georgia, serif",
                   fontWeight: 700,
@@ -278,7 +278,7 @@ export default function Home() {
               </h2>
 
               <p
-                className="text-[17px] min-[390px]:text-[18px] md:text-[20px] leading-[1.48] md:leading-[1.6] mb-2 md:mb-5"
+                className="text-[16px] min-[390px]:text-[17px] md:text-[20px] leading-[1.48] md:leading-[1.6] mb-2 md:mb-5"
                 style={{
                   fontFamily: "'Lora', Georgia, serif",
                   color: isDark ? "#9a978f" : "#555",
