@@ -19,6 +19,15 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/sta-kratki-video-snimci-rade-decjem-mozgu",
+    img: "/news/nerve-lab-deca-ekrani-mozak.jpg",
+    alt: "Dete osvetljeno ekranom telefona, sa apstraktnim prikazom mozga i digitalnih signala",
+    imageCredit: "Ilustracija: Novi Talas",
+    title: "Šta kratki video-snimci rade dečjem mozgu? Britanci pokrenuli laboratoriju da to konačno izmere",
+    description:
+      "Britanski Nerve Lab koristi AI, nosivo skeniranje mozga i analizu medijskog sadržaja kako bi ispitao kako tempo, boje, zvuk i kratki video-formati utiču na dečju pažnju, razumevanje i emocionalni odgovor.",
+  },
+  {
     href: "/nasa-planeta/zasto-ljudi-kada-lutaju-cesto-skrecu-ulevo",
     img: "/news/human-walking-left.jpg",
     alt: "Ljudi koji hodaju kroz otvoren prostor, sa putanjama koje se blago uvijaju ulevo",
@@ -276,11 +285,9 @@ export default function NasaPlanetaIndex() {
         style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
       >
         <section className="max-w-[1000px] mx-auto px-5">
-          {/* Section header: kicker + Garamond subtitle + description */}
           <div className="mb-10">
             <span className="kicker">Naša planeta</span>
 
-            {/* Garamond subtitle — section identity */}
             <p
               className="mt-3 text-[12px] md:text-[13px] uppercase"
               style={{
@@ -304,10 +311,8 @@ export default function NasaPlanetaIndex() {
             </Link>
           </div>
 
-          {/* HERO ARTICLE — featured story */}
           <article className="mb-14">
             <Link href={hero.href} className="no-underline block group">
-              {/* Full-width hero image */}
               <div className="overflow-hidden mb-3">
                 <img
                   src={hero.img}
@@ -364,7 +369,6 @@ export default function NasaPlanetaIndex() {
             </Link>
           </article>
 
-          {/* EDITORIAL ARTICLE CARDS — image + title only */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16">
             {gridArticles.map(article => (
               <article key={article.href}>
@@ -393,7 +397,6 @@ export default function NasaPlanetaIndex() {
             ))}
           </div>
 
-          {/* NAJNOVIJE PRIČE — latest stories list */}
           <div className="mb-12">
             <hr
               style={{
@@ -446,7 +449,6 @@ export default function NasaPlanetaIndex() {
             </ul>
           </div>
 
-          {/* Back navigation */}
           <hr className="editorial-divider my-12" />
           <Link
             href="/"
