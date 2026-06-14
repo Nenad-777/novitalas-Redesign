@@ -138,13 +138,11 @@ function SmallArticleCard({
   }
 
   return (
-    <article
-      className="grid grid-cols-[1fr_118px] md:grid-cols-[1fr_100px] gap-4 items-start rounded-xl md:rounded-none p-0 md:p-0"
-    >
+    <article className="grid grid-cols-[1fr_112px] min-[390px]:grid-cols-[1fr_118px] md:grid-cols-[1fr_100px] gap-4 items-start">
       <div>
         <span className="kicker">{category}</span>
         <h3
-          className="mt-1 text-[20px] md:text-[20px] font-bold leading-[1.2]"
+          className="mt-1 text-[19px] min-[390px]:text-[20px] md:text-[20px] font-bold leading-[1.18]"
           style={{
             fontFamily: "'Lora', Georgia, serif",
             color: isDark ? "#e0ddd5" : "#111",
@@ -155,10 +153,12 @@ function SmallArticleCard({
           </Link>
         </h3>
         <p
-          className="mt-2 text-[15px] md:text-[14px] leading-[1.45]"
+          className="mt-2 text-[15px] md:text-[14px] leading-[1.42]"
           style={{
             fontFamily: "'Lora', Georgia, serif",
             color: isDark ? "#9a978f" : "#555",
+            maxHeight: "4.28em",
+            overflow: "hidden",
           }}
         >
           {description}
@@ -169,7 +169,7 @@ function SmallArticleCard({
         <img
           src={imageSrc}
           alt={imageAlt}
-          className="w-[118px] h-[92px] md:w-[100px] md:h-[75px] object-cover border rounded-md md:rounded-none"
+          className="w-[112px] h-[84px] min-[390px]:w-[118px] min-[390px]:h-[88px] md:w-[100px] md:h-[75px] object-cover border rounded-md md:rounded-none"
           style={{
             borderColor: isDark ? "#2a2a2e" : "#eee",
             backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
@@ -193,7 +193,6 @@ export default function Home() {
     >
       <Header />
 
-      {/* Desktop hero brand banner — hidden on mobile because mobile header carries the identity */}
       <section
         className="hidden md:block relative w-full overflow-hidden h-[28vh] hero-section"
         style={{
@@ -236,8 +235,7 @@ export default function Home() {
         style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
       >
         <div className="max-w-[1200px] mx-auto px-5 md:px-5">
-          {/* 1. HERO */}
-          <FadeIn className="mb-10">
+          <FadeIn className="mb-9 md:mb-10">
             <article className="flex flex-col">
               <Link
                 href={HERO_ARTICLE.href}
@@ -263,7 +261,7 @@ export default function Home() {
               <span className="kicker block mb-2">{HERO_ARTICLE.category}</span>
 
               <h2
-                className="mt-2 mb-3 text-[33px] md:text-[46px] font-bold leading-[1.08]"
+                className="mt-2 mb-3 text-[32px] min-[390px]:text-[34px] md:text-[46px] font-bold leading-[1.08]"
                 style={{
                   fontFamily: "'Playfair Display', Georgia, serif",
                   fontWeight: 700,
@@ -280,7 +278,7 @@ export default function Home() {
               </h2>
 
               <p
-                className="text-[18px] md:text-[20px] leading-[1.55] md:leading-[1.6] mb-2 md:mb-5"
+                className="text-[18px] md:text-[20px] leading-[1.5] md:leading-[1.6] mb-1 md:mb-5"
                 style={{
                   fontFamily: "'Lora', Georgia, serif",
                   color: isDark ? "#9a978f" : "#555",
@@ -292,18 +290,17 @@ export default function Home() {
           </FadeIn>
 
           <hr
-            className="editorial-divider mb-8 md:mb-10"
+            className="editorial-divider mb-7 md:mb-10"
             style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
           />
 
-          {/* 2. SMALL NEWS GRID */}
           <FadeIn className="mb-10">
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-5 md:gap-6">
               <SmallArticleCard
                 category="Naša planeta"
                 href="/nasa-planeta/zasto-ljudi-kada-lutaju-cesto-skrecu-ulevo"
                 title="Zašto ljudi, kada lutaju, često skreću ulevo?"
-                description="Kada ljudi izgube spoljne orijentire i pokušaju da hodaju nasumično, njihovo kretanje često se ne razvija kao prava linija, već kao blagi luk — neretko ulevo."
+                description="Kada ljudi izgube spoljne orijentire, njihovo kretanje često ne ide pravom linijom, već blagim lukom — neretko ulevo."
                 imageSrc="/news/human-walking-left.jpg"
                 imageAlt="Ljudi koji hodaju kroz otvoren prostor, sa putanjama koje se blago uvijaju ulevo"
               />
@@ -314,7 +311,7 @@ export default function Home() {
                 category="Geopolitika"
                 href="/geopolitika/eu-migration-rules-2026"
                 title="Nova migraciona pravila Evropske unije ulaze u primenu"
-                description="Novi evropski pakt menja pravila za azil, granice i deportacije, uz zajedničke procedure i novi sistem solidarnosti među državama članicama."
+                description="Novi evropski pakt menja pravila za azil, granice i deportacije, uz zajedničke procedure i sistem solidarnosti."
                 imageSrc="/news/eu-flags.jpg"
                 imageAlt="Zastave Evropske unije"
               />
@@ -325,7 +322,7 @@ export default function Home() {
                 category={PREVIOUS_HERO_ARTICLE.category}
                 href={PREVIOUS_HERO_ARTICLE.href}
                 title={PREVIOUS_HERO_ARTICLE.title}
-                description={PREVIOUS_HERO_ARTICLE.description}
+                description="Pakistan tvrdi da su SAD i Iran usaglasili tekst mirovnog sporazuma, dok Teheran poručuje da konačna odluka još nije doneta."
                 imageSrc={PREVIOUS_HERO_ARTICLE.imageSrc}
                 imageAlt={PREVIOUS_HERO_ARTICLE.imageAlt}
               />
