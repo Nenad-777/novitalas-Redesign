@@ -1,8 +1,3 @@
-/*
- * DESIGN: "Diplomatska Klasika" — Foreign Affairs-inspired header
- * Mobile update: centered Novi Talas masthead, one-line tagline and red wave divider.
- */
-
 import { useState } from "react";
 import { Link } from "wouter";
 import { Menu, X, Sun, Moon, Search } from "lucide-react";
@@ -20,19 +15,13 @@ function MastheadLogo({ isDark }: { isDark: boolean }) {
     <Link href="/" className="flex items-center justify-center gap-0 no-underline whitespace-nowrap max-w-full overflow-hidden">
       <span
         className="font-extrabold tracking-[0.13em] min-[390px]:tracking-[0.16em] uppercase text-[21px] min-[390px]:text-[23px] md:text-[22px]"
-        style={{
-          fontFamily: "'Lora', serif",
-          color: isDark ? "#f6f3e8" : "#1a2a3a",
-        }}
+        style={{ fontFamily: "'Lora', serif", color: isDark ? "#f6f3e8" : "#1a2a3a" }}
       >
         NOVI{" "}
       </span>
       <span
         className="font-extrabold tracking-[0.13em] min-[390px]:tracking-[0.16em] uppercase text-[21px] min-[390px]:text-[23px] md:text-[22px]"
-        style={{
-          fontFamily: "'Lora', serif",
-          color: isDark ? "#d9bf7a" : "#8B0000",
-        }}
+        style={{ fontFamily: "'Lora', serif", color: isDark ? "#d9bf7a" : "#8B0000" }}
       >
         TALAS
       </span>
@@ -41,27 +30,24 @@ function MastheadLogo({ isDark }: { isDark: boolean }) {
 }
 
 function MobileWaveDivider({ isDark }: { isDark: boolean }) {
+  const lineColor = isDark ? "rgba(217,191,122,0.45)" : "rgba(139,0,0,0.42)";
+  const waveColor = isDark ? "#d9bf7a" : "#8B0000";
+
   return (
     <div className="lg:hidden px-8 pb-2">
-      <div className="relative h-[12px] flex items-center justify-center max-w-[290px] mx-auto">
-        <div
-          className="absolute left-0 right-0 h-px"
-          style={{ backgroundColor: isDark ? "rgba(217,191,122,0.45)" : "rgba(139,0,0,0.42)" }}
-        />
-        <svg
-          viewBox="0 0 120 24"
-          className="relative w-[58px] h-[15px]"
-          aria-hidden="true"
-        >
+      <div className="h-[14px] flex items-center justify-center max-w-[290px] mx-auto">
+        <div className="h-px flex-1" style={{ backgroundColor: lineColor }} />
+        <svg viewBox="0 0 120 24" className="w-[62px] h-[16px] shrink-0 mx-[2px]" aria-hidden="true">
           <path
-            d="M2 12 H38 C42 12 42 7 45 7 C49 7 48 18 52 18 C57 18 55 4 60 4 C65 4 63 20 68 20 C72 20 72 12 78 12 H118"
+            d="M2 12 H34 C41 12 41 7 45 7 C50 7 49 18 53 18 C58 18 56 4 60 4 C64 4 62 20 67 20 C72 20 72 12 80 12 H118"
             fill="none"
-            stroke={isDark ? "#d9bf7a" : "#8B0000"}
+            stroke={waveColor}
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
         </svg>
+        <div className="h-px flex-1" style={{ backgroundColor: lineColor }} />
       </div>
     </div>
   );
@@ -77,9 +63,7 @@ export default function Header() {
       className="sticky top-0 z-50 transition-colors duration-300 overflow-hidden"
       style={{
         backgroundColor: isDark ? "#0d0d0f" : "#ffffff",
-        borderBottom: isDark
-          ? "1px solid rgba(255,255,255,0.08)"
-          : "1px solid rgba(0,0,0,0.08)",
+        borderBottom: isDark ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(0,0,0,0.08)",
       }}
     >
       <div className="max-w-[1200px] mx-auto px-4 min-[390px]:px-5">
@@ -90,10 +74,7 @@ export default function Header() {
                 key={item.label}
                 href={item.href}
                 className="text-[12px] font-semibold tracking-[0.12em] uppercase transition-colors duration-200"
-                style={{
-                  fontFamily: "'Source Sans 3', sans-serif",
-                  color: isDark ? "#c9c6cf" : "#1a2a3a",
-                }}
+                style={{ fontFamily: "'Source Sans 3', sans-serif", color: isDark ? "#c9c6cf" : "#1a2a3a" }}
               >
                 {item.label}
               </Link>
@@ -113,10 +94,7 @@ export default function Header() {
             <MastheadLogo isDark={isDark} />
             <p
               className="lg:hidden mt-1 text-[15px] italic leading-none whitespace-nowrap"
-              style={{
-                fontFamily: "'Lora', Georgia, serif",
-                color: isDark ? "#bcb7a6" : "#333333",
-              }}
+              style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#bcb7a6" : "#333333" }}
             >
               Vaš prozor u svet
             </p>
@@ -128,10 +106,7 @@ export default function Header() {
                 key={item.label}
                 href={item.href}
                 className="text-[12px] font-semibold tracking-[0.12em] uppercase transition-colors duration-200"
-                style={{
-                  fontFamily: "'Source Sans 3', sans-serif",
-                  color: isDark ? "#c9c6cf" : "#1a2a3a",
-                }}
+                style={{ fontFamily: "'Source Sans 3', sans-serif", color: isDark ? "#c9c6cf" : "#1a2a3a" }}
               >
                 {item.label}
               </Link>
@@ -139,10 +114,7 @@ export default function Header() {
 
             <span
               className="text-[12px] font-medium italic ml-2"
-              style={{
-                fontFamily: "'Lora', serif",
-                color: isDark ? "#bcb7a6" : "#5a6a7a",
-              }}
+              style={{ fontFamily: "'Lora', serif", color: isDark ? "#bcb7a6" : "#5a6a7a" }}
             >
               Veritas ante omnia
             </span>
@@ -151,9 +123,7 @@ export default function Header() {
               onClick={toggleTheme}
               className="ml-3 p-1.5 rounded-full transition-colors duration-200"
               style={{
-                backgroundColor: isDark
-                  ? "rgba(255,255,255,0.08)"
-                  : "rgba(0,0,0,0.06)",
+                backgroundColor: isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.06)",
                 color: isDark ? "#d9bf7a" : "#1a2a3a",
               }}
               aria-label={isDark ? "Svetli režim" : "Tamni režim"}
@@ -167,9 +137,7 @@ export default function Header() {
               onClick={toggleTheme}
               className="p-2 rounded-full transition-colors duration-200"
               style={{
-                backgroundColor: isDark
-                  ? "rgba(255,255,255,0.08)"
-                  : "rgba(26,42,58,0.07)",
+                backgroundColor: isDark ? "rgba(255,255,255,0.08)" : "rgba(26,42,58,0.07)",
                 color: isDark ? "#d9bf7a" : "#1a2a3a",
               }}
               aria-label={isDark ? "Svetli režim" : "Tamni režim"}
@@ -194,9 +162,7 @@ export default function Header() {
           className="lg:hidden px-5 pb-5"
           style={{
             backgroundColor: isDark ? "#0d0d0f" : "#ffffff",
-            borderTop: isDark
-              ? "1px solid rgba(255,255,255,0.08)"
-              : "1px solid rgba(0,0,0,0.08)",
+            borderTop: isDark ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(0,0,0,0.08)",
           }}
         >
           <nav className="flex flex-col gap-3 pt-3">
@@ -205,10 +171,7 @@ export default function Header() {
                 key={item.label}
                 href={item.href}
                 className="text-[13px] font-semibold tracking-[0.1em] uppercase py-2 transition-colors duration-200"
-                style={{
-                  fontFamily: "'Source Sans 3', sans-serif",
-                  color: isDark ? "#c9c6cf" : "#1a2a3a",
-                }}
+                style={{ fontFamily: "'Source Sans 3', sans-serif", color: isDark ? "#c9c6cf" : "#1a2a3a" }}
                 onClick={() => setMobileOpen(false)}
               >
                 {item.label}
@@ -218,10 +181,7 @@ export default function Header() {
 
           <p
             className="text-[12px] italic mt-4"
-            style={{
-              fontFamily: "'Lora', serif",
-              color: isDark ? "#bcb7a6" : "#5a6a7a",
-            }}
+            style={{ fontFamily: "'Lora', serif", color: isDark ? "#bcb7a6" : "#5a6a7a" }}
           >
             Veritas ante omnia
           </p>
