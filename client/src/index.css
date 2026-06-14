@@ -251,6 +251,30 @@ main article blockquote {
   line-height: inherit;
 }
 
+/* ===== MOBILE HOME HERO OVERRIDE ===== */
+/* Keeps article-page typography from inflating the homepage lead story. */
+@media (max-width: 767px) {
+  main > div > .md\:hidden > div:first-child article > h2 {
+    font-size: 23px !important;
+    line-height: 1.06 !important;
+  }
+
+  main > div > .md\:hidden > div:first-child article > p {
+    font-size: 14px !important;
+    line-height: 1.42 !important;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 767px) {
+  main > div > .md\:hidden > div:first-child article > h2 {
+    font-size: 25px !important;
+  }
+
+  main > div > .md\:hidden > div:first-child article > p {
+    font-size: 15px !important;
+  }
+}
+
 /* ===== IMAGE CAPTION / PHOTO CREDIT — global ===== */
 /* Defined outside any @layer so it overrides main article p inheritance */
 .photo-credit {
