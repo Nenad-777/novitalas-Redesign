@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  worldCupVisas: "/news/world-cup-visas.jpg",
   peaceForIran: "/news/peace-for-iran.jpg",
   euFlags: "/news/eu-flags.jpg",
   afganistanWoman: "/news/afganistan-woman.jpg",
@@ -92,6 +93,61 @@ export default function GeopolitikaIndex() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <article className="md:col-span-2">
+              <Link
+                href="/geopolitika/mundijal-na-granici-fudbal-vize-i-politika-moci"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.worldCupVisas}
+                    alt="Mundijal, vize i geopolitika na granici"
+                    className="w-full h-[260px] object-cover object-center block"
+                    decoding="async"
+                  />
+                </div>
+
+                <span className="kicker">Geopolitika</span>
+
+                <h2
+                  className="mt-2 text-[22px] md:text-[28px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Mundijal na granici: fudbal, vize i politika moći
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Dok FIFA slavi najveći fudbalski spektakl na svetu, američka
+                  vizna politika, ratne tenzije i pitanje ko ima pravo da
+                  učestvuje na Svetskom prvenstvu već su deo turnira.
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
             <article className="md:col-span-2">
               <Link
                 href="/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan"
