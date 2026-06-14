@@ -64,8 +64,7 @@ export default function Header() {
     const query = searchQuery.trim();
     if (!query) return;
 
-    const params = new URLSearchParams({ q: `site:novitalas.org ${query}` });
-    window.location.href = `https://www.google.com/search?${params.toString()}`;
+    window.location.href = `/pretraga?q=${encodeURIComponent(query)}`;
   };
 
   return (
