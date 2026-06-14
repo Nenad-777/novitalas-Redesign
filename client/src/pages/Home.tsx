@@ -219,10 +219,10 @@ export default function Home() {
                   </div>
                 </Link>
                 <span className="kicker block mb-2">{HERO_ARTICLE.category}</span>
-                <h2 className="mt-2 mb-3 text-[32px] min-[390px]:text-[34px] font-bold leading-[1.08]" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 700, color: isDark ? "#e0ddd5" : "#111" }}>
+                <h2 className="mt-2 mb-3 text-[29px] min-[390px]:text-[31px] font-bold leading-[1.08]" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 700, color: isDark ? "#e0ddd5" : "#111" }}>
                   <Link href={HERO_ARTICLE.href} className="headline-link" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>{HERO_ARTICLE.title}</Link>
                 </h2>
-                <p className="text-[17px] min-[390px]:text-[18px] leading-[1.48] mb-2" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#9a978f" : "#555" }}>
+                <p className="text-[16px] min-[390px]:text-[17px] leading-[1.48] mb-2" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#9a978f" : "#555" }}>
                   {HERO_ARTICLE.description}
                 </p>
               </article>
