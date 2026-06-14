@@ -153,12 +153,10 @@ function SmallArticleCard({
           </Link>
         </h3>
         <p
-          className="mt-2 text-[15px] md:text-[14px] leading-[1.42]"
+          className="hidden md:block mt-2 text-[14px] leading-[1.42]"
           style={{
             fontFamily: "'Lora', Georgia, serif",
             color: isDark ? "#9a978f" : "#555",
-            maxHeight: "4.28em",
-            overflow: "hidden",
           }}
         >
           {description}
