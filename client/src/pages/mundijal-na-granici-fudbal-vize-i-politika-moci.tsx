@@ -25,14 +25,6 @@ const PARAGRAPHS = [
   "Lopta jeste krenula. Ali pre prvog velikog gola, geopolitika je već postigla svoj.",
 ];
 
-const INFO_BOX = {
-  title: "Izvori i tagovi",
-  items: [
-    "Izvori: Reuters",
-    "Tagovi: Mundijal, FIFA, SAD, Iran, vize, fudbal, geopolitika, Svetsko prvenstvo 2026",
-  ],
-};
-
 export default function MundijalNaGraniciFudbalVizeIPolitikaMoci() {
   return (
     <ArticleTemplate
@@ -45,7 +37,6 @@ export default function MundijalNaGraniciFudbalVizeIPolitikaMoci() {
       imageSrc={IMAGE_SRC}
       imageAlt="Fudbalski stadion i kontrola granice kao simbol geopolitike Mundijala"
       paragraphs={PARAGRAPHS}
-      infoBox={INFO_BOX}
       backHref="/geopolitika"
       backLabel="← Nazad na Geopolitiku"
     />
