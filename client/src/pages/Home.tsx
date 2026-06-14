@@ -211,23 +211,23 @@ export default function Home() {
       <main className="pt-0 pb-12 md:pt-7 md:pb-14 flex-1" style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}>
         <div className="max-w-[1200px] mx-auto px-5 md:px-8">
           <div className="md:hidden">
-            <FadeIn className="mb-11">
+            <FadeIn className="mb-5">
               <article className="flex flex-col">
-                <Link href={HERO_ARTICLE.href} className="block no-underline -mx-5 order-first mb-5">
-                  <div className="relative w-full overflow-hidden aspect-[16/9]" style={{ border: isDark ? "1px solid #2a2a2e" : "1px solid #e5e5e5" }}>
+                <Link href={HERO_ARTICLE.href} className="block no-underline -mx-5 order-first mb-4">
+                  <div className="relative w-full overflow-hidden aspect-[2/1]" style={{ border: isDark ? "1px solid #2a2a2e" : "1px solid #e5e5e5" }}>
                     <img src={HERO_ARTICLE.imageSrc} alt={HERO_ARTICLE.imageAlt} className="w-full h-full object-cover block" fetchPriority="high" decoding="async" />
                   </div>
                 </Link>
                 <span className="kicker block mb-2">{HERO_ARTICLE.category}</span>
-                <h2 className="mt-2 mb-3 text-[26px] min-[390px]:text-[28px] font-bold leading-[1.08]" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 700, color: isDark ? "#e0ddd5" : "#111" }}>
+                <h2 className="mt-2 mb-2 text-[25px] min-[390px]:text-[27px] font-bold leading-[1.06]" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 700, color: isDark ? "#e0ddd5" : "#111" }}>
                   <Link href={HERO_ARTICLE.href} className="headline-link" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>{HERO_ARTICLE.title}</Link>
                 </h2>
-                <p className="text-[15px] min-[390px]:text-[16px] leading-[1.48] mb-2" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#9a978f" : "#555" }}>
+                <p className="text-[15px] min-[390px]:text-[16px] leading-[1.48] line-clamp-2" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#9a978f" : "#555" }}>
                   {HERO_ARTICLE.description}
                 </p>
               </article>
             </FadeIn>
-            <hr className="editorial-divider mb-8" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }} />
+            <hr className="editorial-divider mb-5" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }} />
             <FadeIn className="mb-10">
               <div className="flex flex-col gap-5">
                 <SmallArticleCard {...ARTICLES[0]} />
