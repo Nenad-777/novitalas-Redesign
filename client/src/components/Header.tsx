@@ -17,9 +17,9 @@ const navItems = [
 
 function MastheadLogo({ isDark }: { isDark: boolean }) {
   return (
-    <Link href="/" className="flex items-center justify-center gap-0 no-underline whitespace-nowrap">
+    <Link href="/" className="flex items-center justify-center gap-0 no-underline whitespace-nowrap max-w-full overflow-hidden">
       <span
-        className="font-extrabold tracking-[0.19em] uppercase text-[24px] min-[390px]:text-[25px] md:text-[22px]"
+        className="font-extrabold tracking-[0.13em] min-[390px]:tracking-[0.16em] uppercase text-[21px] min-[390px]:text-[23px] md:text-[22px]"
         style={{
           fontFamily: "'Lora', serif",
           color: isDark ? "#f6f3e8" : "#1a2a3a",
@@ -28,7 +28,7 @@ function MastheadLogo({ isDark }: { isDark: boolean }) {
         NOVI{" "}
       </span>
       <span
-        className="font-extrabold tracking-[0.19em] uppercase text-[24px] min-[390px]:text-[25px] md:text-[22px]"
+        className="font-extrabold tracking-[0.13em] min-[390px]:tracking-[0.16em] uppercase text-[21px] min-[390px]:text-[23px] md:text-[22px]"
         style={{
           fontFamily: "'Lora', serif",
           color: isDark ? "#d9bf7a" : "#8B0000",
@@ -42,22 +42,22 @@ function MastheadLogo({ isDark }: { isDark: boolean }) {
 
 function MobileWaveDivider({ isDark }: { isDark: boolean }) {
   return (
-    <div className="lg:hidden px-9 pb-2">
-      <div className="relative h-[12px] flex items-center justify-center">
+    <div className="lg:hidden px-8 pb-2">
+      <div className="relative h-[12px] flex items-center justify-center max-w-[290px] mx-auto">
         <div
           className="absolute left-0 right-0 h-px"
           style={{ backgroundColor: isDark ? "rgba(217,191,122,0.45)" : "rgba(139,0,0,0.42)" }}
         />
         <svg
           viewBox="0 0 120 24"
-          className="relative w-[66px] h-[16px]"
+          className="relative w-[58px] h-[15px]"
           aria-hidden="true"
         >
           <path
             d="M2 12 H38 C42 12 42 7 45 7 C49 7 48 18 52 18 C57 18 55 4 60 4 C65 4 63 20 68 20 C72 20 72 12 78 12 H118"
             fill="none"
             stroke={isDark ? "#d9bf7a" : "#8B0000"}
-            strokeWidth="2.2"
+            strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
@@ -74,7 +74,7 @@ export default function Header() {
 
   return (
     <header
-      className="sticky top-0 z-50 transition-colors duration-300"
+      className="sticky top-0 z-50 transition-colors duration-300 overflow-hidden"
       style={{
         backgroundColor: isDark ? "#0d0d0f" : "#ffffff",
         borderBottom: isDark
@@ -106,10 +106,10 @@ export default function Header() {
             className="absolute left-0 lg:hidden p-1"
             style={{ color: isDark ? "#c9c6cf" : "#1a2a3a" }}
           >
-            {mobileOpen ? <X size={26} /> : <Menu size={26} />}
+            {mobileOpen ? <X size={25} /> : <Menu size={25} />}
           </button>
 
-          <div className="flex flex-col items-center justify-center max-w-[230px] min-[390px]:max-w-none">
+          <div className="flex flex-col items-center justify-center w-[calc(100%-118px)] max-w-[245px] min-[390px]:max-w-[270px] mx-auto">
             <MastheadLogo isDark={isDark} />
             <p
               className="lg:hidden mt-1 text-[15px] italic leading-none whitespace-nowrap"
@@ -174,14 +174,14 @@ export default function Header() {
               }}
               aria-label={isDark ? "Svetli režim" : "Tamni režim"}
             >
-              {isDark ? <Sun size={19} /> : <Moon size={19} />}
+              {isDark ? <Sun size={18} /> : <Moon size={18} />}
             </button>
             <button
-              className="p-1"
+              className="p-1 hidden min-[360px]:block"
               style={{ color: isDark ? "#c9c6cf" : "#1a2a3a" }}
               aria-label="Pretraga"
             >
-              <Search size={24} />
+              <Search size={23} />
             </button>
           </div>
         </div>
