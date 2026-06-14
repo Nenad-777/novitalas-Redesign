@@ -1,6 +1,6 @@
 /*
  * DESIGN: "Diplomatska Klasika" v4
- * Mobile keeps the approved editorial stack; desktop gets a magazine grid.
+ * Mobile keeps the approved editorial stack; desktop gets a compact magazine grid.
  */
 
 import { useEffect, useRef, useState } from "react";
@@ -17,7 +17,6 @@ const HERO_ARTICLE = {
     "Dok FIFA slavi najveći fudbalski spektakl na svetu, američka vizna politika, ratne tenzije i pitanje ko uopšte ima pravo da učestvuje na Svetskom prvenstvu već su deo turnira.",
   imageSrc: "/news/world-cup-visas.jpg",
   imageAlt: "Mundijal, vize i geopolitika na granici",
-  imageCredit: "",
 };
 
 const ARTICLES = [
@@ -191,20 +190,20 @@ function DesktopSideStory({ article }: { article: (typeof ARTICLES)[number] }) {
   const isDark = theme === "dark";
 
   return (
-    <article className="grid grid-cols-[1fr_132px] gap-5 border-b pb-5" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}>
+    <article className="grid grid-cols-[1fr_112px] gap-4 border-b pb-4" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}>
       <div>
         <span className="kicker">{article.category}</span>
-        <h3 className="mt-2 text-[21px] font-bold leading-[1.16]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#e0ddd5" : "#111" }}>
+        <h3 className="mt-1 text-[18px] font-bold leading-[1.16]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#e0ddd5" : "#111" }}>
           <Link href={article.href} className="headline-link">
             {article.title}
           </Link>
         </h3>
-        <p className="mt-2 text-[15px] leading-[1.45]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#9a978f" : "#555" }}>
+        <p className="mt-2 text-[13px] leading-[1.35] line-clamp-2" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#9a978f" : "#666" }}>
           {article.description}
         </p>
       </div>
       <Link href={article.href} className="block no-underline">
-        <img src={article.imageSrc} alt={article.imageAlt} className="w-[132px] h-[92px] object-cover rounded-md border" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }} loading="lazy" decoding="async" />
+        <img src={article.imageSrc} alt={article.imageAlt} className="w-[112px] h-[78px] object-cover rounded-md border" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }} loading="lazy" decoding="async" />
       </Link>
     </article>
   );
@@ -219,13 +218,13 @@ function DesktopTileStory({ article }: { article: (typeof ARTICLES)[number] }) {
       <Link href={article.href} className="block no-underline">
         <img src={article.imageSrc} alt={article.imageAlt} className="w-full aspect-[16/9] object-cover rounded-lg border" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }} loading="lazy" decoding="async" />
       </Link>
-      <span className="kicker block mt-4">{article.category}</span>
-      <h3 className="mt-2 text-[24px] font-bold leading-[1.14]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#e0ddd5" : "#111" }}>
+      <span className="kicker block mt-3">{article.category}</span>
+      <h3 className="mt-2 text-[22px] font-bold leading-[1.12]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#e0ddd5" : "#111" }}>
         <Link href={article.href} className="headline-link">
           {article.title}
         </Link>
       </h3>
-      <p className="mt-2 text-[15px] leading-[1.45]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#9a978f" : "#555" }}>
+      <p className="mt-2 text-[14px] leading-[1.4]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#9a978f" : "#555" }}>
         {article.description}
       </p>
     </article>
@@ -240,7 +239,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col transition-colors duration-300" style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}>
       <Header />
 
-      <main className="pt-0 pb-12 md:pt-10 md:pb-16 flex-1" style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}>
+      <main className="pt-0 pb-12 md:pt-7 md:pb-14 flex-1" style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}>
         <div className="max-w-[1200px] mx-auto px-5 md:px-8">
           <div className="md:hidden">
             <FadeIn className="mb-11">
@@ -282,39 +281,39 @@ export default function Home() {
           </div>
 
           <div className="hidden md:block">
-            <FadeIn className="mb-14">
-              <div className="grid grid-cols-[minmax(0,1.45fr)_minmax(320px,0.9fr)] gap-10 items-start">
+            <FadeIn className="mb-9">
+              <section className="grid grid-cols-[minmax(0,1.65fr)_minmax(300px,0.85fr)] gap-8 items-start border-b pb-8" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}>
                 <article>
                   <Link href={HERO_ARTICLE.href} className="block no-underline">
-                    <img src={HERO_ARTICLE.imageSrc} alt={HERO_ARTICLE.imageAlt} className="w-full aspect-[16/9] object-cover rounded-xl border" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }} fetchPriority="high" decoding="async" />
+                    <img src={HERO_ARTICLE.imageSrc} alt={HERO_ARTICLE.imageAlt} className="w-full h-[340px] lg:h-[390px] object-cover rounded-xl border" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }} fetchPriority="high" decoding="async" />
                   </Link>
-                  <span className="kicker block mt-6">{HERO_ARTICLE.category}</span>
-                  <h1 className="mt-3 text-[48px] lg:text-[56px] font-bold leading-[1.02]" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 700, color: isDark ? "#e0ddd5" : "#111" }}>
+                  <span className="kicker block mt-4">{HERO_ARTICLE.category}</span>
+                  <h1 className="mt-2 text-[40px] lg:text-[48px] font-bold leading-[1.02]" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 700, color: isDark ? "#e0ddd5" : "#111" }}>
                     <Link href={HERO_ARTICLE.href} className="headline-link" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
                       {HERO_ARTICLE.title}
                     </Link>
                   </h1>
-                  <p className="mt-5 max-w-[760px] text-[19px] leading-[1.55]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#9a978f" : "#555" }}>
+                  <p className="mt-4 max-w-[720px] text-[18px] leading-[1.48]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#9a978f" : "#555" }}>
                     {HERO_ARTICLE.description}
                   </p>
                 </article>
 
-                <aside className="border-l pl-8 flex flex-col gap-5" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}>
-                  <div className="text-[12px] font-semibold tracking-[0.18em] uppercase" style={{ color: isDark ? "#bcb7a6" : "#8B0000", fontFamily: "'Source Sans 3', sans-serif" }}>
+                <aside className="flex flex-col gap-4">
+                  <div className="text-[12px] font-semibold tracking-[0.18em] uppercase border-b pb-3" style={{ color: isDark ? "#bcb7a6" : "#8B0000", borderColor: isDark ? "#2a2a2e" : "#e5e5e5", fontFamily: "'Source Sans 3', sans-serif" }}>
                     Najnovije
                   </div>
                   <DesktopSideStory article={ARTICLES[0]} />
                   <DesktopSideStory article={ARTICLES[1]} />
                   <DesktopSideStory article={ARTICLES[2]} />
                 </aside>
-              </div>
+              </section>
             </FadeIn>
 
             <FadeIn>
-              <div className="grid grid-cols-2 gap-10">
+              <section className="grid grid-cols-2 gap-8">
                 <DesktopTileStory article={ARTICLES[3]} />
                 <DesktopTileStory article={ARTICLES[4]} />
-              </div>
+              </section>
             </FadeIn>
           </div>
         </div>
