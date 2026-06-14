@@ -233,6 +233,7 @@ import PsihologijaDosada from "./pages/psihologija-dosada";
 
 /* ✅ NOVA VEST — Naša planeta — Artemis III */
 import NasaPredstavilaPosaduArtemisIII from "./pages/nasa-predstavila-posadu-artemis-iii";
+import StaKratkiVideoSnimciRadeDecjemMozgu from "./pages/sta-kratki-video-snimci-rade-decjem-mozgu";
 
 /* ✅ NOVA VEST — Naša planeta */
 import NasaAnounce from "./pages/nasa-anounce";
@@ -649,6 +650,11 @@ function Router() {
             NAŠA PLANETA
            ========================= */}
         <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
+
+        <Route
+          path="/nasa-planeta/sta-kratki-video-snimci-rade-decjem-mozgu"
+          component={StaKratkiVideoSnimciRadeDecjemMozgu}
+        />
 
         <Route
           path="/nasa-planeta/prvi-korak-ka-svetu-bez-naslednih-bolesti"
