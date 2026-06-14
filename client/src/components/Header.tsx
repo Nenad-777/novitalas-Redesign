@@ -1,6 +1,6 @@
 /*
  * DESIGN: "Diplomatska Klasika" — Foreign Affairs-inspired header
- * Mobile update: centered Novi Talas masthead, tagline and red wave divider.
+ * Mobile update: centered Novi Talas masthead, one-line tagline and red wave divider.
  */
 
 import { useState } from "react";
@@ -17,9 +17,9 @@ const navItems = [
 
 function MastheadLogo({ isDark }: { isDark: boolean }) {
   return (
-    <Link href="/" className="flex items-center justify-center gap-0 no-underline">
+    <Link href="/" className="flex items-center justify-center gap-0 no-underline whitespace-nowrap">
       <span
-        className="font-extrabold tracking-[0.22em] uppercase text-[25px] md:text-[22px]"
+        className="font-extrabold tracking-[0.19em] uppercase text-[24px] min-[390px]:text-[25px] md:text-[22px]"
         style={{
           fontFamily: "'Lora', serif",
           color: isDark ? "#f6f3e8" : "#1a2a3a",
@@ -28,7 +28,7 @@ function MastheadLogo({ isDark }: { isDark: boolean }) {
         NOVI{" "}
       </span>
       <span
-        className="font-extrabold tracking-[0.22em] uppercase text-[25px] md:text-[22px]"
+        className="font-extrabold tracking-[0.19em] uppercase text-[24px] min-[390px]:text-[25px] md:text-[22px]"
         style={{
           fontFamily: "'Lora', serif",
           color: isDark ? "#d9bf7a" : "#8B0000",
@@ -42,15 +42,15 @@ function MastheadLogo({ isDark }: { isDark: boolean }) {
 
 function MobileWaveDivider({ isDark }: { isDark: boolean }) {
   return (
-    <div className="lg:hidden px-9 pb-3">
-      <div className="relative h-[16px] flex items-center justify-center">
+    <div className="lg:hidden px-9 pb-2">
+      <div className="relative h-[12px] flex items-center justify-center">
         <div
           className="absolute left-0 right-0 h-px"
           style={{ backgroundColor: isDark ? "rgba(217,191,122,0.45)" : "rgba(139,0,0,0.42)" }}
         />
         <svg
           viewBox="0 0 120 24"
-          className="relative w-[74px] h-[18px]"
+          className="relative w-[66px] h-[16px]"
           aria-hidden="true"
         >
           <path
@@ -82,9 +82,8 @@ export default function Header() {
           : "1px solid rgba(0,0,0,0.08)",
       }}
     >
-      <div className="max-w-[1200px] mx-auto px-5">
-        <div className="relative flex items-center justify-center lg:justify-between h-[74px] lg:h-[60px]">
-          {/* Left nav — desktop */}
+      <div className="max-w-[1200px] mx-auto px-4 min-[390px]:px-5">
+        <div className="relative flex items-center justify-center lg:justify-between h-[66px] lg:h-[60px]">
           <nav className="hidden lg:flex items-center gap-6">
             {navItems.slice(0, 2).map((item) => (
               <Link
@@ -101,21 +100,19 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Mobile left menu */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Meni"
             className="absolute left-0 lg:hidden p-1"
             style={{ color: isDark ? "#c9c6cf" : "#1a2a3a" }}
           >
-            {mobileOpen ? <X size={27} /> : <Menu size={27} />}
+            {mobileOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
 
-          {/* Center logo + mobile tagline */}
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center max-w-[230px] min-[390px]:max-w-none">
             <MastheadLogo isDark={isDark} />
             <p
-              className="lg:hidden mt-1 text-[16px] italic leading-none"
+              className="lg:hidden mt-1 text-[15px] italic leading-none whitespace-nowrap"
               style={{
                 fontFamily: "'Lora', Georgia, serif",
                 color: isDark ? "#bcb7a6" : "#333333",
@@ -125,7 +122,6 @@ export default function Header() {
             </p>
           </div>
 
-          {/* Right nav — desktop */}
           <div className="hidden lg:flex items-center gap-6">
             {navItems.slice(2).map((item) => (
               <Link
@@ -166,8 +162,7 @@ export default function Header() {
             </button>
           </div>
 
-          {/* Mobile right actions */}
-          <div className="absolute right-0 lg:hidden flex items-center gap-3">
+          <div className="absolute right-0 lg:hidden flex items-center gap-2 min-[390px]:gap-3">
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full transition-colors duration-200"
@@ -179,14 +174,14 @@ export default function Header() {
               }}
               aria-label={isDark ? "Svetli režim" : "Tamni režim"}
             >
-              {isDark ? <Sun size={20} /> : <Moon size={20} />}
+              {isDark ? <Sun size={19} /> : <Moon size={19} />}
             </button>
             <button
               className="p-1"
               style={{ color: isDark ? "#c9c6cf" : "#1a2a3a" }}
               aria-label="Pretraga"
             >
-              <Search size={25} />
+              <Search size={24} />
             </button>
           </div>
         </div>
@@ -194,7 +189,6 @@ export default function Header() {
 
       <MobileWaveDivider isDark={isDark} />
 
-      {/* Mobile nav */}
       {mobileOpen && (
         <div
           className="lg:hidden px-5 pb-5"
