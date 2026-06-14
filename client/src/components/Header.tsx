@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { Link } from "wouter";
 import { Menu, X, Sun, Moon, Search } from "lucide-react";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -55,8 +55,18 @@ function WaveDivider({ isDark, desktop = false }: { isDark: boolean; desktop?: b
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const { theme, toggleTheme } = useTheme();
   const isDark = theme === "dark";
+
+  const handleMobileSearch = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const query = searchQuery.trim();
+    if (!query) return;
+
+    const params = new URLSearchParams({ q: `site:novitalas.org ${query}` });
+    window.location.href = `https://www.google.com/search?${params.toString()}`;
+  };
 
   return (
     <header
@@ -126,7 +136,7 @@ export default function Header() {
             </button>
           </div>
 
-          <div className="absolute right-0 lg:hidden flex items-center gap-2 min-[390px]:gap-3">
+          <div className="absolute right-0 lg:hidden flex items-center">
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full transition-colors duration-200"
@@ -137,13 +147,6 @@ export default function Header() {
               aria-label={isDark ? "Svetli režim" : "Tamni režim"}
             >
               {isDark ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
-            <button
-              className="p-1 hidden min-[360px]:block"
-              style={{ color: isDark ? "#c9c6cf" : "#1a2a3a" }}
-              aria-label="Pretraga"
-            >
-              <Search size={23} />
             </button>
           </div>
         </div>
@@ -172,6 +175,45 @@ export default function Header() {
               </Link>
             ))}
           </nav>
+
+          <form
+            onSubmit={handleMobileSearch}
+            className="mt-5 pt-4"
+            style={{ borderTop: isDark ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(0,0,0,0.08)" }}
+          >
+            <label
+              htmlFor="mobile-search"
+              className="block text-[11px] font-semibold tracking-[0.14em] uppercase mb-2"
+              style={{ fontFamily: "'Source Sans 3', sans-serif", color: isDark ? "#bcb7a6" : "#5a6a7a" }}
+            >
+              PRETRAGA
+            </label>
+            <div
+              className="flex items-center rounded-md border overflow-hidden"
+              style={{
+                borderColor: isDark ? "rgba(255,255,255,0.14)" : "rgba(26,42,58,0.18)",
+                backgroundColor: isDark ? "rgba(255,255,255,0.05)" : "#ffffff",
+              }}
+            >
+              <input
+                id="mobile-search"
+                type="search"
+                value={searchQuery}
+                onChange={(event) => setSearchQuery(event.target.value)}
+                placeholder="Pretraži Novi Talas"
+                className="min-w-0 flex-1 bg-transparent px-3 py-2.5 text-[14px] outline-none"
+                style={{ fontFamily: "'Source Sans 3', sans-serif", color: isDark ? "#f6f3e8" : "#1a2a3a" }}
+              />
+              <button
+                type="submit"
+                className="p-2.5"
+                style={{ color: isDark ? "#d9bf7a" : "#1a2a3a" }}
+                aria-label="Pretraži"
+              >
+                <Search size={19} />
+              </button>
+            </div>
+          </form>
 
           <p
             className="text-[12px] italic mt-4"
