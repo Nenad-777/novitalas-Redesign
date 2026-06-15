@@ -22,6 +22,15 @@ const HERO_ARTICLE = {
 
 const ARTICLES = [
   {
+    href: "/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji",
+    category: "Naša planeta",
+    title: "Posle 2.600 godina tišine, otvorena jedna od najbolje očuvanih etrurskih grobnica",
+    description:
+      "Pre nego što su Rimljani zavladali Mediteranom, Italijom su dominirali Etrurci. Nova grobnica stara 2.600 godina pruža redak uvid u život civilizacije koja je oblikovala svet iz kojeg je kasnije nastao Rim.",
+    imageSrc: "/news/etrurska-bronzana-kutija.jpg",
+    imageAlt: "Detalj etrurske bronzane kutije za čuvanje dragocenosti iz 4. veka pre nove ere",
+  },
+  {
     href: "/geopolitika/putin-govori-o-kraju-rata-ukrajina",
     category: "Geopolitika",
     title: "Tramp poručio Putinu da je spreman da pomogne u okončanju rata u Ukrajini",
@@ -38,15 +47,6 @@ const ARTICLES = [
       "Britanski Nerve Lab koristi AI, nosivo skeniranje mozga i analizu medijskog sadržaja kako bi ispitao kako tempo, boje, zvuk i kratki video-formati utiču na dečju pažnju, razumevanje i emocionalni odgovor.",
     imageSrc: "/news/nerve-lab-deca-ekrani-mozak.jpg",
     imageAlt: "Dete osvetljeno ekranom telefona, sa apstraktnim prikazom mozga i digitalnih signala",
-  },
-  {
-    href: "/geopolitika/mundijal-na-granici-fudbal-vize-i-politika-moci",
-    category: "Geopolitika",
-    title: "Mundijal na granici: fudbal, vize i politika moći",
-    description:
-      "Dok FIFA slavi najveći fudbalski spektakl na svetu, američka vizna politika, ratne tenzije i pitanje ko uopšte ima pravo da učestvuje na Svetskom prvenstvu već su deo turnira.",
-    imageSrc: "/news/world-cup-visas.jpg",
-    imageAlt: "Mundijal, vize i geopolitika na granici",
   },
   {
     href: "/nasa-planeta/zasto-ljudi-kada-lutaju-cesto-skrecu-ulevo",
