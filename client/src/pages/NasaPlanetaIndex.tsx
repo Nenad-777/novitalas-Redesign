@@ -102,6 +102,172 @@ const ARTICLES: NasaPlanetaArticle[] = [
     description:
       "Stiven Spilberg poručio je na CinemaConu da Holivud mora da preispita oslanjanje na franšize i nastavke, jer publika sve više traži originalne priče.",
   },
+  {
+    href: "/nasa-planeta/nasa-anounce",
+    img: "/news/nasa-anounce.jpg",
+    alt: "Ilustracija NASA misija ka Mesecu i plana trajne baze",
+    imageCredit: "Ilustracija",
+    title: "NASA najavila nove misije ka Mesecu i plan trajne baze",
+    description:
+      "Američka svemirska agencija predstavila je detaljan plan izgradnje trajne baze na Mesecu, uz seriju novih posadnih misija koje bi postepeno izgradile lunarnu infrastrukturu.",
+  },
+  {
+    href: "/nasa-planeta/trump-otvorio-ufo-arhive",
+    img: "/news/ufo-files.jpg",
+    alt: "Ilustracija UFO arhiva Trumpove administracije",
+    imageCredit: "Ilustracija: Novi Talas",
+    title: "Trump otvorio UFO arhive: više pitanja nego odgovora",
+    description:
+      "Objavljena je prva grupa američkih dokumenata o UFO i UAP pojavama. Arhive donose snimke, fotografije i stare izveštaje, ali ne i dokaz o vanzemaljskoj tehnologiji.",
+  },
+  {
+    href: "/nasa-planeta/na-marsu-otkrivene-molekule-povezane-sa-poreklom-zivota",
+    img: "/news/mars-life.jpg",
+    alt: "Površina Marsa sa tragovima organskih jedinjenja",
+    imageCredit: "NOVI TALAS / ilustracija",
+    title: "Na Marsu otkrivene molekule povezane sa poreklom života",
+    description:
+      "Rover Curiosity identifikovao je kompleksne organske molekule koji otvaraju nova pitanja o mogućem nastanku života na Crvenoj planeti.",
+  },
+  {
+    href: "/nasa-planeta/artemis-ii-splashdown",
+    img: "/news/artemis-landing.jpg",
+    alt: "Letelica Orion tokom povratka na Zemlju — misija Artemis II",
+    title:
+      "Artemis II uspešno okončan: Orion se vratio na Zemlju nakon istorijskog leta oko Meseca",
+    description:
+      "Kapsula sa četvoročlanom posadom bezbedno je sletela u Tihi okean, završivši prvu ljudsku misiju ka Mesecu posle više od 50 godina.",
+  },
+  {
+    href: "/nasa-planeta/artemis-ii-fotografije-dubokog-svemira",
+    img: "/news/orion-earth-view.jpg",
+    alt: "Pogled na Zemlju iz letelice Orion tokom misije Artemis II",
+    title:
+      "Fotografije iz dubokog svemira: Artemis II beleži prizore sa lunarnog preleta",
+    description:
+      "NASA objavila nove snimke Zemlje i pomračenja iz perspektive misije Artemis II.",
+  },
+  {
+    href: "/nasa-planeta/artemis-ii-rekord-udaljenosti",
+    img: "/news/moon-nasa.jpg",
+    alt: "Letelica Orion u dubokom svemiru tokom misije Artemis II",
+    title:
+      "Čovečanstvo najdalje od Zemlje u istoriji: Artemis II nadmašio rekord Apola 13",
+    description:
+      "Posada misije Artemis II dostigla je najveću udaljenost od Zemlje ikada zabeleženu za ljudsku posadu, premašivši rekord misije Apollo 13.",
+  },
+  {
+    href: "/nasa-planeta/artemis-ii-uzivo-prenos-rekord",
+    img: "/news/artemis-view1.jpg",
+    alt: "NASA Artemis II — uživo prenos iz dubokog svemira",
+    title:
+      "Uživo: Artemis II obara istorijski rekord — prenos iz dubokog svemira",
+    description:
+      "NASA uživo prenosi misiju Artemis II u trenutku kada posada dostiže najveću udaljenost od Zemlje u istoriji čovečanstva.",
+  },
+  {
+    href: "/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca",
+    img: "/news/artemis-view2.jpg",
+    alt: "Orion letelica na putu ka Mesecu — misija Artemis II",
+    title:
+      "Orion više od polovine puta do Meseca: misija Artemis II u dubokom svemiru",
+    description:
+      "Orion je više od polovine puta do Meseca. Misija Artemis II ulazi u fazu dubokog svemirskog krstarenja.",
+  },
+  {
+    href: "/nasa-planeta/breaking-nasa-artemis-ii-mesec-posle-50-godina",
+    img: "/news/artemis-eclipse.jpg",
+    alt: "NASA Artemis II — prva ljudska misija ka Mesecu posle 50 godina",
+    title:
+      "BREAKING: NASA ponovo šalje ljude ka Mesecu posle više od 50 godina",
+    description:
+      "Artemis II označava povratak čovečanstva u duboki svemir — prvi put od 1972. godine.",
+  },
+  {
+    href: "/nasa-planeta/moon-ring",
+    img: "/news/moon-ring.jpg",
+    alt: "Solarni prsten oko Meseca — japanski koncept svemirske energije",
+    title: "Plan iz Japana: solarni prsten oko Meseca za energiju Zemlje",
+    description:
+      "Japanski istraživački tim predstavio je koncept izgradnje ogromnog solarnog sistema na Mesecu, koji bi mogao neprekidno da proizvodi energiju i šalje je na Zemlju.",
+  },
+  {
+    href: "/nasa-planeta/psihologija-dosada",
+    img: "/news/psihologija-dosada.jpg",
+    alt: "Čovek koji sedi u tišini i gleda u daljinu — simbol mentalne odmorenosti i dosade kao produktivnog stanja",
+    title:
+      "Otkriće psihologije: zašto je najbolja stvar koju možete da uradite da ne radite ništa",
+    description:
+      "Savremena psihologija otkriva da vaš mozak najbolje radi kada ga ostavite na miru — i da je dosada možda najproduktivnija stvar koju ćete danas uraditi.",
+  },
+  {
+    href: "/nasa-planeta/najtoplija-decenija-planeta-un",
+    img: "/news/world-heat.jpg",
+    alt: "Zemlja sa tankom crvenom linijom koja simbolizuje rast globalne temperature",
+    title:
+      "UN potvrdio: planeta iza sebe ima najtopliju deceniju u istoriji merenja",
+    description:
+      "Svetska meteorološka organizacija UN potvrdila je da je period od 2015. do 2025. bio najtopliji otkad se vodi moderna evidencija o temperaturama.",
+  },
+  {
+    href: "/nasa-planeta/ai-superaplikacija",
+    img: "/news/ai-superapp.jpg",
+    alt: "Minimalistički prikaz veštačke inteligencije kao centralnog sistema koji povezuje digitalne funkcije računara",
+    title:
+      "OpenAI razvija „superaplikaciju“ koja objedinjuje ChatGPT, Codex i browser",
+    description:
+      "OpenAI planira razvoj jedinstvene desktop aplikacije koja bi objedinjavala ChatGPT, programerski alat Codex i AI browser u jedan integrisani sistem.",
+  },
+  {
+    href: "/nasa-planeta/mars-reka",
+    img: "/news/mars-reka.jpg",
+    alt: "Površina Marsa sa tragovima drevnog rečnog korita",
+    title:
+      "Na Marsu otkriveni tragovi drevne reke: nova faza u potrazi za životom",
+    description:
+      "NASA-in rover otkrio je nove dokaze koji ukazuju da je na površini Marsa nekada postojala reka, što dodatno menja dosadašnje razumevanje istorije Crvene planete.",
+  },
+  {
+    href: "/nasa-planeta/ko-je-dobio-oskara",
+    img: "/news/oscar-world.jpg",
+    alt: "Ceremonija dodele Oskara — 98. dodela nagrada Američke filmske akademije",
+    title: "Ko je dobio Oskara?",
+    description:
+      "Dok svet tone u ratove, razaranja i očigledan pad civilizacijskih normi, ceremonija Oskara nastavlja da blista, gotovo ravnodušna prema vremenu koje izgleda poraženo.",
+  },
+  {
+    href: "/nasa-planeta/kina-mozgani-implantat",
+    img: "/news/china-brain.jpg",
+    alt: "Kina — prvi moždani implantat za komercijalnu upotrebu",
+    title: "Kina odobrila prvi moždani implantat za komercijalnu upotrebu",
+    description:
+      "Kineske vlasti odobrile su prvi moždani implantat namenjen komercijalnoj upotrebi, čime je napravljen značajan korak u razvoju brain-computer interface tehnologije.",
+  },
+  {
+    href: "/nasa-planeta/kubrick",
+    img: "/kubrick.jpg",
+    alt: "Stenli Kjubrik — reditelj koji je promenio film",
+    title: "Stenli Kjubrik i tajna filma koji ne stari",
+    description:
+      "Dok se svet ponovo okreće ceremoniji Oskara, jedan reditelj i dalje stoji izvan logike nagrada i podseća nas da film može biti umetnost mišljenja.",
+  },
+  {
+    href: "/nasa-planeta/ai-vest-svest",
+    img: "/ai-supercomputer-data-center.jpg",
+    alt: "AI supercomputer data center",
+    title: "Da li je veštačka inteligencija već svesna?",
+    description:
+      "Direktor kompanije Anthropic izjavio je da naučnici sve ozbiljnije razmatraju mogućnost da napredni AI sistemi razviju neku vrstu svesti.",
+  },
+  {
+    href: "/nasa-planeta/naucnici-poceli-da-usmeravaju-snove",
+    img: "/snovi-usmeravanje-snova.jpg",
+    alt: "Naučnici usmeravaju snove",
+    title:
+      "Naučnici počeli da usmeravaju snove: novo otkriće savremene psihologije",
+    description:
+      "Novo istraživanje pokazuje da je moguće uticati na sadržaj snova i podstaći mozak da tokom sna kreativnije rešava probleme.",
+  },
 ];
 
 export default function NasaPlanetaIndex() {
@@ -158,7 +324,9 @@ export default function NasaPlanetaIndex() {
                   decoding="async"
                 />
               </div>
-              <p className="photo-credit">{hero.imageCredit || "Foto: Arhiva"}</p>
+              <p className="photo-credit">
+                {hero.imageCredit || "Foto: Arhiva"}
+              </p>
 
               <div className="max-w-[760px]">
                 <div
