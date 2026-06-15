@@ -21,6 +21,16 @@ const HERO_ARTICLE = {
 
 const ARTICLES = [
   {
+    href: "/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan",
+    category: "Geopolitika",
+    title:
+      "SAD i Iran postigli okvirni mirovni dogovor: Ormuski moreuz ponovo se otvara za svetsku trgovinu",
+    description:
+      "Donald Tramp je objavio da je dogovor sa Teheranom završen i naredio ukidanje američke pomorske blokade, ali ključna pitanja ostaju otvorena.",
+    imageSrc: "/news/ormuski-moreuz-nasa.jpg",
+    imageAlt: "Satelitski prikaz Ormuskog moreuza između Irana, Omana i Ujedinjenih Arapskih Emirata",
+  },
+  {
     href: "/geopolitika/mundijal-na-granici-fudbal-vize-i-politika-moci",
     category: "Geopolitika",
     title: "Mundijal na granici: fudbal, vize i politika moći",
@@ -48,16 +58,6 @@ const ARTICLES = [
     imageAlt: "Zastave Evropske unije",
   },
   {
-    href: "/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan",
-    category: "Geopolitika",
-    title:
-      "SAD i Iran blizu sporazuma: Pakistan tvrdi da je tekst dogovoren, Teheran još oprezan",
-    description:
-      "Pakistan tvrdi da su SAD i Iran usaglasili tekst mirovnog sporazuma, dok Teheran poručuje da konačna odluka još nije doneta.",
-    imageSrc: "/news/peace-for-iran.jpg",
-    imageAlt: "Ilustracija — SAD i Iran pregovori o sporazumu",
-  },
-  {
     href: "/geopolitika/tramp-pokrenuo-udare-na-iran-nakon-obaranja-americkog-helikoptera",
     category: "Geopolitika",
     title: "KRIZA SAD–IRAN",
@@ -65,14 +65,6 @@ const ARTICLES = [
       "SAD izvele novu seriju udara na ciljeve u Iranu dok Teheran najavljuje odgovor.",
     imageSrc: "/news/usa-iran-red-line.jpg",
     imageAlt: "Kriza SAD–Iran i vojni udari na ciljeve u Iranu",
-  },
-  {
-    href: "/nasa-planeta/nasa-predstavila-posadu-artemis-iii",
-    category: "Naša planeta",
-    title: "NASA predstavila posadu misije Artemis III",
-    description: "Povratak ljudi na Mesec ulazi u novu fazu — NASA je objavila posadu misije Artemis III.",
-    imageSrc: "/news/artemis-nasa-3.jpg",
-    imageAlt: "NASA Artemis III — posada misije koja treba da vrati ljude na Mesec",
   },
 ];
 
