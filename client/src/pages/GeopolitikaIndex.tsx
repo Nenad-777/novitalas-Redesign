@@ -28,6 +28,14 @@ const ARTICLES: Article[] = [
       "Satelitski prikaz Ormuskog moreuza između Irana, Omana i Ujedinjenih Arapskih Emirata",
   },
   {
+    href: "/geopolitika/putin-govori-o-kraju-rata-ukrajina",
+    title: "Tramp poručio Putinu da je spreman da pomogne u okončanju rata u Ukrajini",
+    description:
+      "Posle najava o smirivanju krize sa Iranom, američki predsednik pokušava da otvori i ukrajinski front diplomatije.",
+    imageSrc: "/news/tramp-zelenski-oval-office.jpg",
+    imageAlt: "Donald Tramp i Volodimir Zelenski tokom sastanka u Ovalnoj kancelariji Bele kuće",
+  },
+  {
     href: "/geopolitika/mundijal-na-granici-fudbal-vize-i-politika-moci",
     title: "Mundijal na granici: fudbal, vize i politika moći",
     description:
@@ -74,14 +82,6 @@ const ARTICLES: Article[] = [
       "Rat u Ukrajini sve brže ulazi u fazu robotizovanih sistema, autonomnih platformi i nove tehnološke trke na frontu.",
     imageSrc: "/news/robots-ukraine.jpg",
     imageAlt: "Roboti i dronovi kao novo poglavlje rata u Ukrajini",
-  },
-  {
-    href: "/geopolitika/nemacka-i-francuska-odustaju-od-zajednickog-borbenog-aviona",
-    title: "Nemačka i Francuska odustaju od zajedničkog borbenog aviona",
-    description:
-      "Zastoj u zajedničkom vojnom projektu pokazuje koliko je evropska strateška autonomija i dalje politički i industrijski krhka.",
-    imageSrc: "/news/germany-france-delayed.jpg",
-    imageAlt: "Nemačka i Francuska — zastoj u razvoju zajedničkog borbenog aviona",
   },
 ];
 
