@@ -2,27 +2,28 @@ import ArticleTemplate from "@/components/ArticleTemplate";
 
 const PATH =
   "/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan";
-const IMAGE_SRC = "/news/peace-for-iran.jpg";
+const IMAGE_SRC = "/news/ormuski-moreuz-nasa.jpg";
 
 const PARAGRAPHS = [
-  "Posle nedelja posredovanja i diplomatskih pritisaka, iz Islamabada je stigla vest koja bi mogla da označi prekretnicu u jednoj od najopasnijih kriza poslednjih meseci.",
-  "Pakistanski premijer Shehbaz Sharif objavio je da su Sjedinjene Države i Iran usaglasili finalni tekst mirovnog sporazuma. Prema njegovim rečima, Pakistan sada radi sa obe strane na narednim koracima u procesu.",
-  "To, međutim, još ne znači da je sporazum potpisan.",
-  "Iran je dan ranije poručio da konačna odluka o mogućem dogovoru sa Sjedinjenim Državama još nije doneta. Portparol iranskog Ministarstva spoljnih poslova Esmaeil Baghaei rekao je da Teheran neće odustati od svojih „crvenih linija“ i da su spekulacije o vremenu i mestu potpisivanja preuranjene.",
-  "Pakistan, dakle, tvrdi da je papir na stolu. Ali dok Vašington i Teheran ne potvrde dogovor, ovo je i dalje diplomatski trenutak nade, ne potpisani mir.",
-  "Prema navodima međunarodnih medija, predloženi okvir dogovora mogao bi da obuhvati prekid neprijateljstava, razgovore o iranskom nuklearnom programu, pitanje visoko obogaćenog uranijuma, ublažavanje sankcija i pristup zamrznutim iranskim sredstvima. Kao jedna od važnih tačaka pominje se i Ormuski moreuz, ključna pomorska ruta za svetsku trgovinu naftom.",
-  "Zato ova vest ima težinu daleko veću od jednog diplomatskog saopštenja.",
-  "Američko-iranski dogovor, ako zaista bude potvrđen, mogao bi da utiče na čitav Bliski istok: na Iran, Izrael, zemlje Zaliva, Liban, energetska tržišta i širu bezbednosnu sliku sveta. Svaki korak ka smirivanju odnosa Vašingtona i Teherana pažljivo se prati jer bi neuspeh pregovora mogao ponovo da otvori prostor za eskalaciju.",
-  "Za sada, ipak, ostaje oprez.",
-  "U diplomatiji postoji velika razlika između teksta koji je spreman i odluke da se taj tekst potpiše. Prvo znači da su pregovarači pronašli reči. Drugo znači da su politički lideri spremni da preuzmu rizik.",
-  "Ako se potvrdi ono što tvrdi Pakistan, ovo bi mogao biti jedan od najvažnijih diplomatskih pomaka godine. Ako ne, ostaće još jedan trenutak u kojem je mir bio blizu, ali ne i dovoljno blizu.",
+  "Sjedinjene Američke Države i Iran postigli su okvirni mirovni dogovor koji bi mogao da označi kraj višemesečnog sukoba i ponovno otvaranje Ormuskog moreuza, jedne od najvažnijih tačaka svetske energetske trgovine.",
+  "Američki predsednik Donald Tramp saopštio je da je sporazum sa Iranom „završen” i da je odobrio ukidanje američke pomorske blokade. U poruci objavljenoj na društvenim mrežama naglasio je da se Ormuski moreuz otvara za slobodnu plovidbu i poručio: „Neka nafta poteče.”",
+  "Dogovor je najavio i pakistanski premijer Šehbaz Šarif, čija je zemlja imala posredničku ulogu u pregovorima. Prema njegovim rečima, Sjedinjene Države i Iran saglasili su se o prekidu vojnih operacija, a formalno potpisivanje sporazuma očekuje se u Švajcarskoj.",
+  "Reč je, međutim, o sporazumu koji za sada više liči na politički okvir nego na konačno rešenje krize. Prema dostupnim informacijama, dogovor predviđa prekid neprijateljstava, otvaranje Ormuskog moreuza i nastavak pregovora o najtežim pitanjima u narednom periodu.",
+  "Među otvorenim pitanjima ostaju budućnost iranskog nuklearnog programa, eventualno ublažavanje američkih sankcija i bezbednosni režim u Persijskom zalivu. Upravo od tih tema zavisiće da li će sadašnji dogovor postati trajno političko rešenje ili samo kratki predah u jednoj od najopasnijih kriza poslednjih meseci.",
+  "Ormuski moreuz ima ogroman značaj za globalnu ekonomiju. Kroz ovaj uski morski prolaz između Irana i Omana prolazi značajan deo svetske trgovine naftom i tečnim gasom, zbog čega svaka kriza u tom području neposredno utiče na cene energenata, inflaciju i bezbednost pomorskih ruta.",
+  "Vest o dogovoru odmah je uticala na tržišta. Cene nafte su pale, dok su berze reagovale rastom, jer investitori očekuju smirivanje tenzija i stabilizaciju snabdevanja energentima.",
+  "Ipak, diplomatski optimizam prate i ozbiljne rezerve. Tekst sporazuma još nije u potpunosti javno predstavljen, a ostaju nejasni detalji oko načina otvaranja Ormuskog moreuza, tempa ukidanja blokade i garancija da se sukob neće obnoviti.",
+  "Posebno osetljivo pitanje ostaje širi regionalni kontekst. Deo izveštaja pominje i prekid vojnih operacija na drugim frontovima, uključujući Liban, ali nije jasno da li su sve regionalne strane spremne da prihvate takav okvir.",
+  "Zato ovaj dogovor, ukoliko bude formalno potpisan, ne predstavlja kraj bliskoistočne krize, već njen mogući predah. On otvara prostor za diplomatiju, smiruje tržišta i privremeno uklanja opasnost od šireg rata u Persijskom zalivu.",
+  "Ali njegova trajnost zavisiće od pitanja koje je i dovelo do višegodišnje konfrontacije: može li se pronaći politički prihvatljiv sporazum o iranskom nuklearnom programu.",
+  "Za sada, najvažnija posledica dogovora jeste činjenica da se Ormuski moreuz ponovo otvara. U svetu u kome energija, rat i diplomatija sve češće stoje u istoj rečenici, to je vest koja daleko prevazilazi odnose Vašingtona i Teherana.",
 ];
 
 const INFO_BOX = {
   title: "Izvori i tagovi",
   items: [
-    "Izvori: Reuters, AP, Ground News",
-    "Tagovi: SAD, Iran, Pakistan, Bliski istok, diplomatija, mirovni sporazum, Ormuski moreuz",
+    "Izvori: Ground News, Reuters, The Guardian, NASA / Wikimedia Commons",
+    "Tagovi: SAD, Iran, Pakistan, Bliski istok, diplomatija, mirovni sporazum, Ormuski moreuz, nafta",
   ],
 };
 
@@ -30,14 +31,14 @@ export default function SadIIranBlizuSporazumaPakistanTvrdiDaJeTekstDogovorenTeh
   return (
     <ArticleTemplate
       path={PATH}
-      sectionLabel="Svet"
-      title="SAD i Iran blizu sporazuma: Pakistan tvrdi da je tekst dogovoren, Teheran još oprezan"
-      dateLabel="12. JUN 2026."
+      sectionLabel="Geopolitika"
+      title="SAD i Iran postigli okvirni mirovni dogovor: Ormuski moreuz ponovo se otvara za svetsku trgovinu"
+      dateLabel="15. JUN 2026."
       authorLabel="Novi Talas"
-      deck="Pakistanski premijer Shehbaz Sharif saopštio je da su Sjedinjene Države i Iran usaglasili tekst mirovnog sporazuma. Ipak, iz Teherana stiže poruka da konačna odluka još nije doneta."
+      deck="Donald Tramp je objavio da je dogovor sa Teheranom „završen” i naredio ukidanje američke pomorske blokade. Ipak, ključna pitanja — iranski nuklearni program, sankcije i dugoročne bezbednosne garancije — ostaju otvorena."
       imageSrc={IMAGE_SRC}
-      imageAlt="SAD i Iran blizu sporazuma, Teheran i dalje oprezan"
-      imageCredit="Reuters / AP"
+      imageAlt="Satelitski prikaz Ormuskog moreuza između Irana, Omana i Ujedinjenih Arapskih Emirata"
+      imageCredit="Foto: NASA / Wikimedia Commons"
       paragraphs={PARAGRAPHS}
       infoBox={INFO_BOX}
       backHref="/geopolitika"
