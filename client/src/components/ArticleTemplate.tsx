@@ -38,6 +38,7 @@ type ArticleTemplateProps = {
   imageAlt?: string;
   imageCredit?: string;
   imageHeightClass?: string;
+  imageFirst?: boolean; 
   paragraphs: ArticleParagraph[];
   infoBox?: InfoBox;
   backHref: string;
@@ -55,6 +56,7 @@ export default function ArticleTemplate({
   imageAlt = "",
   imageCredit,
   imageHeightClass = "h-[260px] md:h-[420px]",
+  imageFirst = false,
   paragraphs,
   infoBox,
   backHref,
@@ -83,6 +85,26 @@ export default function ArticleTemplate({
         style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
       >
         <article className="max-w-[860px] mx-auto px-5">
+                    {/* Slika pre naslova */}
+          {imageFirst && imageSrc ? (
+            <div className="mb-8">
+              <div
+                className="border overflow-hidden"
+                style={{
+                  borderColor: isDark ? "#2a2a2e" : "#eee",
+                  backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                }}
+              >
+                <img
+                  src={imageSrc}
+                  alt={imageAlt}
+                  className={`w-full ${imageHeightClass} object-cover object-center block`}
+                  decoding="async"
+                />
+              </div>
+              <ImageCaption credit={imageCredit} />
+            </div>
+          ) : null}
           {/* Rubrika */}
           <span className="kicker">{sectionLabel}</span>
 
@@ -150,7 +172,7 @@ export default function ArticleTemplate({
           ) : null}
 
           {/* Slika */}
-          {imageSrc ? (
+          {!imageFirst && imageSrc ? (
             <div className="mt-8">
               <div
                 className="border overflow-hidden"
