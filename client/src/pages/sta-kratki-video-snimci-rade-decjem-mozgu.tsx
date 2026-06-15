@@ -27,6 +27,7 @@ export default function StaKratkiVideoSnimciRadeDecjemMozgu() {
       imageSrc="/news/nerve-lab-deca-ekrani-mozak.jpg"
       imageAlt="Dete osvetljeno ekranom telefona, sa apstraktnim prikazom mozga i digitalnih signala"
       imageCredit="Ilustracija: Novi Talas"
+      imageFirst={true}
       paragraphs={PARAGRAPHS}
       backHref="/nasa-planeta"
       backLabel="← Nazad na Našu planetu"
