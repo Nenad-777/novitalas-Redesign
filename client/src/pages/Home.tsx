@@ -22,6 +22,15 @@ const HERO_ARTICLE = {
 
 const ARTICLES = [
   {
+    href: "/geopolitika/putin-govori-o-kraju-rata-ukrajina",
+    category: "Geopolitika",
+    title: "Tramp poručio Putinu da je spreman da pomogne u okončanju rata u Ukrajini",
+    description:
+      "Posle najava o smirivanju krize sa Iranom, američki predsednik pokušava da otvori i ukrajinski front diplomatije.",
+    imageSrc: "/news/tramp-zelenski-oval-office.jpg",
+    imageAlt: "Donald Tramp i Volodimir Zelenski tokom sastanka u Ovalnoj kancelariji Bele kuće",
+  },
+  {
     href: "/nasa-planeta/sta-kratki-video-snimci-rade-decjem-mozgu",
     category: "Naša planeta",
     title: "Šta kratki video-snimci rade dečjem mozgu? Britanci pokrenuli laboratoriju da to konačno izmere",
@@ -56,15 +65,6 @@ const ARTICLES = [
       "Novi evropski pakt menja pravila za azil, granice i deportacije, uz zajedničke procedure i sistem solidarnosti.",
     imageSrc: "/news/eu-flags.jpg",
     imageAlt: "Zastave Evropske unije",
-  },
-  {
-    href: "/geopolitika/tramp-pokrenuo-udare-na-iran-nakon-obaranja-americkog-helikoptera",
-    category: "Geopolitika",
-    title: "KRIZA SAD–IRAN",
-    description:
-      "SAD izvele novu seriju udara na ciljeve u Iranu dok Teheran najavljuje odgovor.",
-    imageSrc: "/news/usa-iran-red-line.jpg",
-    imageAlt: "Kriza SAD–Iran i vojni udari na ciljeve u Iranu",
   },
 ];
 
