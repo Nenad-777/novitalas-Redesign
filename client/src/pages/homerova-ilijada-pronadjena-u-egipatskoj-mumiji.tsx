@@ -1,31 +1,41 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 
 const PARAGRAPHS = [
-  "Negde u Egiptu, u suvom i slojevitom tlu antičkog Oksirinha, otvorena je mumija koja nije trebalo da kaže ništa novo. Takvi nalazi obično prate poznat obrazac: telo, zavoji, tragovi rituala, poneki predmet ostavljen uz pokojnika.",
-  "Ovog puta, među slojevima tkanine pojavio se tekst.",
-  "Papirus sa fragmentom Homerove Ilijade bio je položen u unutrašnjost mumije, u predelu abdomena, tokom procesa mumifikacije. Njegovo prisustvo ne deluje kao slučajnost, već kao deo postupka čiji smisao danas možemo samo da naslutimo.",
-  "Fragment pripada drugoj knjizi Ilijade, delu poznatom kao \u201EKatalog brodova\u201C, u kojem se nabrajaju grčke snage koje su krenule ka Troji. Tekst je nastao vekovima pre ove mumije, ali je u rimskom Egiptu i dalje bio deo obrazovanja i kulturnog života.",
-  "Iako su papirusi u tom periodu često korišćeni kao reciklirani materijal u procesu mumifikacije, način na koji je ovaj fragment položen otvara mogućnost da njegova uloga nije bila samo praktična.",
-  "Ostaje pitanje: zašto baš taj tekst?",
-  "U rimskom Egiptu preplitale su se egipatske, grčke i rimske tradicije. Ljudi su mogli da mumifikuju telo po egipatskom običaju, govore grčki i žive pod rimskom vlašću. U tom svetu Homer se čitao, učio i nosio sa sobom — ne kao književnost, već kao deo svakodnevnog iskustva.",
-  "Papirus u ovoj mumiji ne govori nam šta je pokojnik mislio. Pokazuje šta je smatrano vrednim da ga prati.",
-  "U istim grobnicama pronađeni su i drugi neobični predmeti, poput metalnih jezika postavljenih u usta mrtvih, za koje se verovalo da omogućavaju govor u zagrobnom svetu. U tom kontekstu, tekst Ilijade ne deluje kao kuriozitet, već kao još jedan pokušaj da se sačuva nešto što nadilazi život — govor, identitet, prisustvo.",
-  "Ne saznajemo ništa novo o Homeru.",
-  "Saznajemo kako je čitan vekovima kasnije.",
+  "U centralnoj Italiji arheolozi su otvorili netaknutu etrursku grobnicu staru oko 2.600 godina. U njoj su pronađena četiri skeleta i više od stotinu predmeta, među kojima su bronzano oružje, nakit, keramika i posude ostavljene uz pokojne.",
+  "Za arheologe, ovakva otkrića predstavljaju retku priliku da zavire u svet jedne od najzagonetnijih civilizacija antičkog Mediterana.",
+  "Danas gotovo svi znaju za Rimljane. Međutim, mnogo pre nego što je Rim postao centar ogromnog carstva, velikim delom današnje Italije upravljali su Etrurci.",
+  "Njihovi gradovi bili su bogati, dobro organizovani i povezani trgovačkim putevima sa Grcima, Feničanima i drugim narodima Mediterana. Gradili su hramove, razvili sopstveno pismo i bili poznati po veštini obrade bronze, zlata i gvožđa.",
+  "Rimljani su od njih preuzeli mnogo više nego što se danas obično misli. Istoričari smatraju da pojedini verski obredi, simboli vlasti, urbanistička rešenja, pa čak i neki elementi rimske arhitekture vode poreklo upravo iz etrurskog sveta.",
+  "Ipak, za razliku od Grka i Rimljana, Etrurci su ostavili veoma malo pisanih izvora. Njihov jezik delimično je dešifrovan, ali i dalje nije u potpunosti razumljiv. Zbog toga se veliki deo znanja o njihovom društvu zasniva na arheološkim nalazima.",
+  "A među tim nalazima najvažnije mesto zauzimaju upravo grobnice.",
+  "Za Etrurce smrt nije predstavljala kraj, već prelazak u drugi oblik postojanja. Zato su grobnice često uređivane kao svojevrsne kuće za večnost. U njima su ostavljani predmeti za svakodnevnu upotrebu, oružje, nakit i hrana, kao da pokojnika očekuje nastavak života u nekom drugom svetu.",
+  "Zahvaljujući toj tradiciji, arheolozi danas mogu da rekonstruišu delove njihovog svakodnevnog života. Znamo da su Etrurci organizovali raskošne gozbe, da su bili vešti trgovci i pomorci i da su žene u njihovom društvu imale znatno veći društveni položaj nego u većini drugih antičkih kultura tog vremena.",
+  "Upravo zato svaka netaknuta grobnica predstavlja mnogo više od zbirke starih predmeta. Ona je retko sačuvana poruka iz sveta koji je nestao pre više od dve hiljade godina.",
+  "Novo otkriće neće promeniti istoriju Rima. Ali bi moglo da pomogne da bolje razumemo narod bez koga ni istorija Rima ne bi izgledala onako kako je danas poznajemo.",
 ];
+
+const INFO_BOX = {
+  title: "Izvori i napomena o fotografiji",
+  items: [
+    "Izvor: Popular Mechanics, prema podacima arheološkog tima u Italiji",
+    "Fotografija: detalj etrurske bronzane kutije za čuvanje dragocenosti i ličnih predmeta, 4. vek pre nove ere. Foto: Walters Art Museum / Wikimedia Commons.",
+  ],
+};
 
 export default function HomerovaIlijadaPronadjenauEgipatskojMumiji() {
   return (
     <ArticleTemplate
       path="/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji"
       sectionLabel="Naša planeta"
-      title="Homerova Ilijada pronađena u egipatskoj mumiji"
-      dateLabel="24. APRIL 2026."
-      deck="U antičkom Oksirinhu arheolozi su otkrili papirus sa fragmentom Ilijade unutar mumije iz rimskog perioda, što predstavlja prvi poznati slučaj ovakve upotrebe književnog teksta u mumifikaciji."
-      imageSrc="/news/Iliad-mumy.jpg"
-      imageAlt="Papirus sa fragmentom Homerove Ilijade pronađen unutar egipatske mumije"
-      imageCredit="NOVI TALAS / ilustracija"
+      title="Posle 2.600 godina tišine, otvorena jedna od najbolje očuvanih etrurskih grobnica"
+      dateLabel="16. JUN 2026."
+      authorLabel="Novi Talas"
+      deck="Pre nego što su Rimljani zavladali Mediteranom, Italijom su dominirali Etrurci. Nova grobnica stara 2.600 godina pruža redak uvid u život civilizacije koja je oblikovala svet iz kojeg je kasnije nastao Rim."
+      imageSrc="/news/etrurska-bronzana-kutija.jpg"
+      imageAlt="Detalj etrurske bronzane kutije za čuvanje dragocenosti iz 4. veka pre nove ere"
+      imageCredit="Detalj etrurske bronzane kutije za čuvanje dragocenosti i ličnih predmeta, 4. vek pre nove ere. Foto: Walters Art Museum / Wikimedia Commons."
       paragraphs={PARAGRAPHS}
+      infoBox={INFO_BOX}
       backHref="/nasa-planeta"
       backLabel="← Nazad na Našu planetu"
     />
