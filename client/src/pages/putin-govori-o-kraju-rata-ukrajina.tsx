@@ -1,27 +1,49 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 
-const IMAGE_SRC = "/news/putin-end-war.jpg";
+const PATH = "/geopolitika/putin-govori-o-kraju-rata-ukrajina";
+const IMAGE_SRC = "/news/tramp-zelenski-oval-office.jpg";
 
 const PARAGRAPHS = [
-  "Vladimir Putin izjavio je da veruje da se rat u Ukrajini približava kraju, u poruci koja je odmah izazvala pažnju svetske javnosti. Izjava je došla posle obeležavanja Dana pobede u Moskvi, u atmosferi pojačane bezbednosti, skromnije parade i krhkog primirja za koje su obe strane već optužile jedna drugu da ga krše. Prema izveštajima svetskih agencija, Putin je rekao da misli da se “stvar približava kraju”, ali nije ponudio konkretan plan, datum ili uslove pod kojima bi rat zaista mogao da se zaustavi.",
-  "Zato ovu vest treba čitati istovremeno sa nadom i oprezom. Nada postoji zato što se reč “kraj” sve češće pojavljuje u jeziku velikih aktera, uključujući Moskvu, Vašington i posrednike koji pokušavaju da otvore pregovarački prostor. Oprez je neophodan jer se na terenu i dalje puca: Ukrajina prijavljuje borbe, dronovske napade i civilne žrtve uprkos američki posredovanom primirju, dok Rusija tvrdi da je obarala ukrajinske dronove i odgovarala na napade.",
-  "Najvažnije u Putinovoj izjavi možda nije sama tvrdnja da je rat blizu kraja, već priznanje da rat ulazi u fazu u kojoj se sve više govori o završnici. To ne mora da znači mir. Može da znači pritisak, iscrpljenost, pokušaj oblikovanja pregovora pod povoljnijim uslovima ili političku poruku domaćoj javnosti. Ali i takva promena jezika ima težinu: ratovi se ne završavaju samo kada oružje utihne, već i kada vođe počnu da pripremaju javnost za mogućnost da jednom mora da dođe kraj.",
-  "Za ljude u Ukrajini, Rusiji i Evropi svaka takva rečenica nosi teret nade. Ipak, istina je da mir još nije potpisan, front još nije utihnuo, a uslovi budućeg dogovora ostaju duboko sporni. Zato je najpoštenije reći: možda još nismo na kraju rata, ali smo možda ušli u trenutak kada kraj rata ponovo može da se izgovori kao politička mogućnost. Posle godina razaranja, i to nije malo.",
+  "Donald Tramp poručio je Vladimiru Putinu da je spreman da pomogne u okončanju rata u Ukrajini, saopštio je Kremlj nakon telefonskog razgovora dvojice lidera.",
+  "Vest sama po sebi ne znači da je mir blizu. Ali dolazi u trenutku kada američki predsednik pokušava da se predstavi kao čovek koji može da otvara kanale tamo gde su drugi videli samo blokadu: najpre prema Iranu, a sada ponovo prema Moskvi.",
+  "Prema navodima savetnika Kremlja Jurija Ušakova, razgovor je trajao 55 minuta, a rat u Ukrajini bio je jedna od centralnih tema. Tramp je, prema ruskoj strani, rekao da je završetak sukoba od ključne važnosti i da je spreman da sarađuje sa Evropom i Kijevom u traženju rešenja.",
+  "Upravo ta formulacija je najvažniji deo vesti. Ako je tačna, ona pokazuje da Vašington ne pokušava samo da obnovi direktan kanal sa Moskvom, već da taj kanal bar formalno poveže sa evropskim saveznicima i Ukrajinom.",
+  "Ali tu počinje i najveći problem.",
+  "Svaki razgovor između američkog i ruskog predsednika o Ukrajini nosi političku težinu, ali i opasnost. Za Kijev i evropske prestonice ključno pitanje nije samo da li se pregovori otvaraju, već pod kojim uslovima i ko zaista sedi za stolom.",
+  "Ukrajina ne želi mir koji bi značio zamrzavanje rata pod ruskim uslovima. Evropa, naročito države istočnog krila NATO-a, strahuje da bi brz dogovor mogao da nagradi silu i ostavi kontinent u trajnoj bezbednosnoj neizvesnosti.",
+  "Moskva, sa druge strane, i dalje nastoji da pokaže da vreme radi za nju. Putin je, prema navodima Kremlja, u razgovoru tvrdio da ukrajinski napadi neće promeniti stanje na frontu i da Zapad svojim predlozima samo produžava rat.",
+  "To je poznata ruska poruka: pritisak treba predstaviti kao uzaludan, a pregovore kao prihvatanje realnosti na terenu.",
+  "Kijev pokušava da odgovori suprotno. Volodimir Zelenski poručuje da je Ukrajina spremna za direktan razgovor o završetku rata, ali ne po cenu odricanja od sopstvene političke i teritorijalne budućnosti.",
+  "Zato se iza jedne telefonske rečenice krije mnogo veće pitanje: da li Tramp pokušava da pokrene stvarni mirovni proces ili da proizvede diplomatsku sliku brzog rešenja?",
+  "Njegova politička logika je jasna. Ako posle iranske krize uspe da pokaže da može da razgovara i sa Putinom, Tramp dobija sliku lidera koji pomera najopasnije svetske konflikte iz zone rata u zonu pregovora.",
+  "Ali Ukrajina nije diplomatska tabla na kojoj se veliki dogovaraju o linijama razdvajanja. Svaki sporazum koji bi bio sklopljen mimo Kijeva ili protiv njegovih osnovnih interesa mogao bi da zaustavi pucanje samo privremeno, ali bi dugoročno otvorio novu evropsku krizu.",
+  "Zato ovu vest treba čitati oprezno. Ona nije dokaz da se rat završava, već znak da se ponovo testira mogućnost pregovora.",
+  "Rat u Ukrajini ulazi u fazu u kojoj se front, izborna politika, evropska bezbednost i američka diplomatija sve snažnije prepliću. Ako Tramp zaista želi da pomogne u okončanju rata, prvo pitanje neće biti da li može da razgovara sa Putinom.",
+  "Prvo pitanje biće da li taj razgovor može da dovede do mira u kojem Ukrajina ostaje subjekt sopstvene sudbine, a ne cena tuđeg dogovora.",
 ];
+
+const INFO_BOX = {
+  title: "Izvori i tagovi",
+  items: [
+    "Izvori: Reuters, The Guardian, Ground News",
+    "Tagovi: Donald Tramp, Vladimir Putin, Volodimir Zelenski, Ukrajina, Rusija, SAD, G7, diplomatija",
+  ],
+};
 
 export default function PutinGovoriOKrajuRataUkrajina() {
   return (
     <ArticleTemplate
-      path="/geopolitika/putin-govori-o-kraju-rata-ukrajina"
-      sectionLabel="GEOPOLITIKA"
-      title="Putin govori o kraju rata: između nade i opreza"
-      dateLabel="9. maj 2026."
+      path={PATH}
+      sectionLabel="Geopolitika"
+      title="Tramp poručio Putinu da je spreman da pomogne u okončanju rata u Ukrajini"
+      dateLabel="15. JUN 2026."
       authorLabel="Novi Talas"
-      deck="Ruski predsednik kaže da veruje da se rat u Ukrajini približava završetku. Njegove reči ne znače da je mir blizu, ali pokazuju da se, posle godina rata, u diplomatski prostor vraća pitanje završnice."
+      deck="Posle najava o smirivanju krize sa Iranom, američki predsednik pokušava da otvori i ukrajinski front diplomatije. Ali pitanje ostaje isto: može li se o miru razgovarati bez opasnosti da Ukrajina postane predmet dogovora velikih sila?"
       imageSrc={IMAGE_SRC}
-      imageAlt="Ilustracija: Vladimir Putin i tema završnice rata u Ukrajini"
-      imageCredit="Ilustracija: Novi Talas"
+      imageAlt="Donald Tramp i Volodimir Zelenski tokom sastanka u Ovalnoj kancelariji Bele kuće"
+      imageCredit="Foto: Wikimedia Commons"
       paragraphs={PARAGRAPHS}
+      infoBox={INFO_BOX}
       backHref="/geopolitika"
       backLabel="← Nazad na Geopolitiku"
     />
