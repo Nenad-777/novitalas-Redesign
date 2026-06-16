@@ -10,25 +10,25 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan",
+  href: "/geopolitika/pomeranje-tezista-orban-evropa",
   category: "Geopolitika",
-  title:
-    "SAD i Iran postigli okvirni mirovni dogovor: Ormuski moreuz ponovo se otvara za svetsku trgovinu",
+  title: "Kraj jedne ere: Mađarska zatvara vrata Orbanovom povratku",
   description:
-    "Donald Tramp je objavio da je dogovor sa Teheranom završen i naredio ukidanje američke pomorske blokade, ali ključna pitanja ostaju otvorena.",
-  imageSrc: "/news/ormuski-moreuz-nasa.jpg",
-  imageAlt: "Satelitski prikaz Ormuskog moreuza između Irana, Omana i Ujedinjenih Arapskih Emirata",
+    "Mađarski parlament usvojio je ustavni amandman kojim se mandat premijera ograničava na osam godina, otvarajući pitanje da li se završava politička epoha Viktora Orbana.",
+  imageSrc: "/news/orban-era-end-hungary.jpg",
+  imageAlt: "Mađarski parlament i politička senka Viktora Orbana",
 };
 
 const ARTICLES = [
   {
-    href: "/geopolitika/pomeranje-tezista-orban-evropa",
+    href: "/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan",
     category: "Geopolitika",
-    title: "Kraj jedne ere: Mađarska zatvara vrata Orbanovom povratku",
+    title:
+      "SAD i Iran postigli okvirni mirovni dogovor: Ormuski moreuz ponovo se otvara za svetsku trgovinu",
     description:
-      "Mađarski parlament usvojio je ustavni amandman kojim se mandat premijera ograničava na osam godina, otvarajući pitanje da li se završava politička epoha Viktora Orbana.",
-    imageSrc: "/news/orban-era-end-hungary.jpg",
-    imageAlt: "Mađarski parlament i politička senka Viktora Orbana",
+      "Donald Tramp je objavio da je dogovor sa Teheranom završen i naredio ukidanje američke pomorske blokade, ali ključna pitanja ostaju otvorena.",
+    imageSrc: "/news/ormuski-moreuz-nasa.jpg",
+    imageAlt: "Satelitski prikaz Ormuskog moreuza između Irana, Omana i Ujedinjenih Arapskih Emirata",
   },
   {
     href: "/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji",
