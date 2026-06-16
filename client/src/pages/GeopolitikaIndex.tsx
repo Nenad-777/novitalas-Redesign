@@ -18,6 +18,15 @@ type Article = {
 
 const ARTICLES: Article[] = [
   {
+    href: "/geopolitika/pomeranje-tezista-orban-evropa",
+    title: "Kraj jedne ere: Mađarska zatvara vrata Orbanovom povratku",
+    description:
+      "Mađarski parlament usvojio je ustavni amandman kojim se mandat premijera ograničava na osam godina, otvarajući pitanje da li se završava politička epoha Viktora Orbana.",
+    imageSrc: "/news/orban-era-end-hungary.jpg",
+    imageAlt:
+      "Senka Viktora Orbana ispred mađarskog parlamenta, simbol kraja jedne političke ere",
+  },
+  {
     href: "/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan",
     title:
       "SAD i Iran postigli okvirni mirovni dogovor: Ormuski moreuz ponovo se otvara za svetsku trgovinu",
@@ -116,7 +125,7 @@ const ARTICLES: Article[] = [
     title:
       "Američke službe upozoravaju: Iran može da izdrži blokadu Ormuza mesecima",
     description:
-      "Procena američke obaveštajne zajednice dovodi u pitanje tvrdnje Bele kuće da je Teheran blizu sloma. Iran, prema tim procenama, i dalje raspolaže značajnim raketnim i dronovskim kapacitetima, dok se kriza oko Ormuskog moreuza sve jasnije pretvara u rat izdržljivosti.",
+      "Procena američke obaveštajne zajednice dovodi u pitanje tvrdnje Bele kuće da je Teheran blizu sloma. Iran i dalje raspolaže značajnim raketnim i dronovskim kapacitetima.",
     imageSrc: "/news/washington-cia.jpg",
     imageAlt: "Ilustracija američke obaveštajne procene i Ormuskog moreuza",
   },
@@ -185,25 +194,16 @@ const ARTICLES: Article[] = [
     href: "/geopolitika/sad-odlazu-isporuke-oruzja-evropi-zbog-rata-sa-iranom",
     title: "SAD odlažu isporuke oružja Evropi zbog rata sa Iranom",
     description:
-      "Sjedinjene Američke Države odlažu deo planiranih isporuka oružja evropskim saveznicima zbog pojačanih operativnih zahteva u ratu sa Iranom, potvrđuju diplomatski i bezbednosni izvori.",
+      "Sjedinjene Američke Države odlažu deo planiranih isporuka oružja evropskim saveznicima zbog pojačanih operativnih zahteva u ratu sa Iranom.",
     imageSrc: "/news/military-cargo.jpg",
     imageAlt: "Vojni transport i logistika na pisti uoči isporuke opreme",
-  },
-  {
-    href: "/geopolitika/pomeranje-tezista-orban-evropa",
-    title: "POMERANJE TEŽIŠTA: Šta poraz Orbana znači za Evropu i svet",
-    description:
-      "Analiza političkih i geopolitičkih posledica poraza Viktora Orbana u Mađarskoj",
-    imageSrc: "/news/magyar.jpg",
-    imageAlt:
-      "Viktor Orban — poraz na izborima u Mađarskoj i geopolitičke posledice",
   },
   {
     href: "/geopolitika/rusija-i-ukrajina-dogovorile-privremeno-primirje-za-pravoslavni-uskrs",
     title:
       "Rusija i Ukrajina dogovorile privremeno primirje za pravoslavni Uskrs",
     description:
-      "Rusija i Ukrajina dogovorile su privremeni prekid vatre povodom pravoslavnog Uskrsa. Primirje je vremenski ograničeno i vezano za trajanje praznika, uz obostrane rezerve o njegovom sprovođenju na terenu.",
+      "Rusija i Ukrajina dogovorile su privremeni prekid vatre povodom pravoslavnog Uskrsa, uz obostrane rezerve o njegovom sprovođenju na terenu.",
     imageSrc: "/news/primirje-vaskrs.jpg",
     imageAlt: "Ilustracija uskršnjeg primirja u ratu između Rusije i Ukrajine.",
   },
