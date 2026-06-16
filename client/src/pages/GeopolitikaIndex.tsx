@@ -27,15 +27,6 @@ const ARTICLES: Article[] = [
       "Senka Viktora Orbana ispred mađarskog parlamenta, simbol kraja jedne političke ere",
   },
   {
-    href: "/geopolitika/pomeranje-tezista-orban-evropa",
-    title: "POMERANJE TEŽIŠTA: Šta poraz Orbana znači za Evropu i svet",
-    description:
-      "Analiza političkih i geopolitičkih posledica poraza Viktora Orbana u Mađarskoj i promene ravnoteže unutar Evropske unije.",
-    imageSrc: "/news/magyar.jpg",
-    imageAlt:
-      "Viktor Orban — poraz na izborima u Mađarskoj i geopolitičke posledice",
-  },
-  {
     href: "/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan",
     title:
       "SAD i Iran postigli okvirni mirovni dogovor: Ormuski moreuz ponovo se otvara za svetsku trgovinu",
@@ -156,6 +147,15 @@ const ARTICLES: Article[] = [
       "Prvi maj 2026. donosi sliku sveta u kome se energetska kriza, rat u Ukrajini i američko-kinesko nadmetanje sve brže spajaju u jednu geopolitičku celinu.",
     imageSrc: "/news/world-1.may.jpg",
     imageAlt: "Geopolitička mapa pritiska: Ormuz, Ukrajina i Tajvan",
+  },
+  {
+    href: "/geopolitika/pomeranje-tezista-orban-evropa",
+    title: "POMERANJE TEŽIŠTA: Šta poraz Orbana znači za Evropu i svet",
+    description:
+      "Analiza političkih i geopolitičkih posledica poraza Viktora Orbana u Mađarskoj i promene ravnoteže unutar Evropske unije.",
+    imageSrc: "/news/magyar.jpg",
+    imageAlt:
+      "Viktor Orban — poraz na izborima u Mađarskoj i geopolitičke posledice",
   },
   {
     href: "/geopolitika/nato-pod-pritiskom-od-saveza-ravnopravnih-ka-sistemu-uslovljene-lojalnosti",
