@@ -18,13 +18,22 @@ type Article = {
 
 const ARTICLES: Article[] = [
   {
-    href: "/geopolitika/pomeranje-tezista-orban-evropa",
+    href: "/geopolitika/madjarska-ogranicenje-mandata-orban",
     title: "Kraj jedne ere: Mađarska zatvara vrata Orbanovom povratku",
     description:
       "Mađarski parlament usvojio je ustavni amandman kojim se mandat premijera ograničava na osam godina, otvarajući pitanje da li se završava politička epoha Viktora Orbana.",
     imageSrc: "/news/orban-era-end-hungary.jpg",
     imageAlt:
       "Senka Viktora Orbana ispred mađarskog parlamenta, simbol kraja jedne političke ere",
+  },
+  {
+    href: "/geopolitika/pomeranje-tezista-orban-evropa",
+    title: "POMERANJE TEŽIŠTA: Šta poraz Orbana znači za Evropu i svet",
+    description:
+      "Analiza političkih i geopolitičkih posledica poraza Viktora Orbana u Mađarskoj i promene ravnoteže unutar Evropske unije.",
+    imageSrc: "/news/magyar.jpg",
+    imageAlt:
+      "Viktor Orban — poraz na izborima u Mađarskoj i geopolitičke posledice",
   },
   {
     href: "/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan",

@@ -92,6 +92,7 @@ import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 import PotpuniSlomVuciceveMedjunarodneReputacije from "./pages/potpuni-slom-vuciceve-medjunarodne-reputacije";
 
 /* ✅ NOVA VEST — Geopolitika */
+import MadjarskaOgranicenjeMandataOrban from "./pages/madjarska-ogranicenje-mandata-orban";
 import PomeranjeTezistaOrbanEvropa from "./pages/pomeranje-tezista-orban-evropa";
 
 /* ✅ NOVA VEST — Geopolitika */
@@ -396,6 +397,11 @@ function Router() {
           component={
             IranOtvorioHormuskiMoreuzZaKomercijalniSaobracajTokomPrimirja
           }
+        />
+
+        <Route
+          path="/geopolitika/madjarska-ogranicenje-mandata-orban"
+          component={MadjarskaOgranicenjeMandataOrban}
         />
 
         <Route
