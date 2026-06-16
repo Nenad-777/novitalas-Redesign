@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/pomeranje-tezista-orban-evropa?vest=mandati",
+  href: "/geopolitika/madjarska-ogranicenje-mandata-orban",
   category: "Geopolitika",
   title: "Kraj jedne ere: Mađarska zatvara vrata Orbanovom povratku",
   description:
@@ -28,34 +28,41 @@ const ARTICLES = [
     description:
       "Donald Tramp je objavio da je dogovor sa Teheranom završen i naredio ukidanje američke pomorske blokade, ali ključna pitanja ostaju otvorena.",
     imageSrc: "/news/ormuski-moreuz-nasa.jpg",
-    imageAlt: "Satelitski prikaz Ormuskog moreuza između Irana, Omana i Ujedinjenih Arapskih Emirata",
+    imageAlt:
+      "Satelitski prikaz Ormuskog moreuza između Irana, Omana i Ujedinjenih Arapskih Emirata",
   },
   {
     href: "/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji",
     category: "Naša planeta",
-    title: "Posle 2.600 godina tišine, otvorena jedna od najbolje očuvanih etrurskih grobnica",
+    title:
+      "Posle 2.600 godina tišine, otvorena jedna od najbolje očuvanih etrurskih grobnica",
     description:
       "Pre nego što su Rimljani zavladali Mediteranom, Italijom su dominirali Etrurci. Nova grobnica stara 2.600 godina pruža redak uvid u život civilizacije koja je oblikovala svet iz kojeg je kasnije nastao Rim.",
     imageSrc: "/news/etrurska-bronzana-kutija.jpg",
-    imageAlt: "Detalj etrurske bronzane kutije za čuvanje dragocenosti iz 4. veka pre nove ere",
+    imageAlt:
+      "Detalj etrurske bronzane kutije za čuvanje dragocenosti iz 4. veka pre nove ere",
   },
   {
     href: "/geopolitika/putin-govori-o-kraju-rata-ukrajina",
     category: "Geopolitika",
-    title: "Tramp poručio Putinu da je spreman da pomogne u okončanju rata u Ukrajini",
+    title:
+      "Tramp poručio Putinu da je spreman da pomogne u okončanju rata u Ukrajini",
     description:
       "Posle najava o smirivanju krize sa Iranom, američki predsednik pokušava da otvori i ukrajinski front diplomatije.",
     imageSrc: "/news/tramp-zelenski-oval-office.jpg",
-    imageAlt: "Donald Tramp i Volodimir Zelenski tokom sastanka u Ovalnoj kancelariji Bele kuće",
+    imageAlt:
+      "Donald Tramp i Volodimir Zelenski tokom sastanka u Ovalnoj kancelariji Bele kuće",
   },
   {
     href: "/nasa-planeta/sta-kratki-video-snimci-rade-decjem-mozgu",
     category: "Naša planeta",
-    title: "Šta kratki video-snimci rade dečjem mozgu? Britanci pokrenuli laboratoriju da to konačno izmere",
+    title:
+      "Šta kratki video-snimci rade dečjem mozgu? Britanci pokrenuli laboratoriju da to konačno izmere",
     description:
       "Britanski Nerve Lab koristi AI, nosivo skeniranje mozga i analizu medijskog sadržaja kako bi ispitao kako tempo, boje, zvuk i kratki video-formati utiču na dečju pažnju, razumevanje i emocionalni odgovor.",
     imageSrc: "/news/nerve-lab-deca-ekrani-mozak.jpg",
-    imageAlt: "Dete osvetljeno ekranom telefona, sa apstraktnim prikazom mozga i digitalnih signala",
+    imageAlt:
+      "Dete osvetljeno ekranom telefona, sa apstraktnim prikazom mozga i digitalnih signala",
   },
   {
     href: "/nasa-planeta/zasto-ljudi-kada-lutaju-cesto-skrecu-ulevo",
@@ -64,7 +71,8 @@ const ARTICLES = [
     description:
       "Kada ljudi izgube spoljne orijentire, njihovo kretanje često ne ide pravom linijom, već blagim lukom — neretko ulevo.",
     imageSrc: "/news/human-walking-left.jpg",
-    imageAlt: "Ljudi koji hodaju kroz otvoren prostor, sa putanjama koje se blago uvijaju ulevo",
+    imageAlt:
+      "Ljudi koji hodaju kroz otvoren prostor, sa putanjama koje se blago uvijaju ulevo",
   },
 ];
 
@@ -93,7 +101,13 @@ function useFadeIn() {
   return { ref, visible };
 }
 
-function FadeIn({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+function FadeIn({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   const { ref, visible } = useFadeIn();
 
   return (
@@ -121,18 +135,44 @@ interface SmallArticleCardProps {
   variant?: "split" | "tile";
 }
 
-function SmallArticleCard({ category, href, title, description, imageSrc, imageAlt, variant = "split" }: SmallArticleCardProps) {
+function SmallArticleCard({
+  category,
+  href,
+  title,
+  description,
+  imageSrc,
+  imageAlt,
+  variant = "split",
+}: SmallArticleCardProps) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
   if (variant === "tile") {
     return (
-      <article className="overflow-hidden rounded-xl border" style={{ borderColor: isDark ? "#2a2a2e" : "#eee", backgroundColor: isDark ? "#17191f" : "#ffffff" }}>
+      <article
+        className="overflow-hidden rounded-xl border"
+        style={{
+          borderColor: isDark ? "#2a2a2e" : "#eee",
+          backgroundColor: isDark ? "#17191f" : "#ffffff",
+        }}
+      >
         <Link href={href} className="block no-underline">
-          <img src={imageSrc} alt={imageAlt} className="w-full h-[120px] object-cover block" loading="lazy" decoding="async" />
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            className="w-full h-[120px] object-cover block"
+            loading="lazy"
+            decoding="async"
+          />
           <div className="p-3">
             <span className="kicker">{category}</span>
-            <h3 className="mt-1 text-[17px] font-bold leading-[1.2]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#e0ddd5" : "#111" }}>
+            <h3
+              className="mt-1 text-[17px] font-bold leading-[1.2]"
+              style={{
+                fontFamily: "'Lora', Georgia, serif",
+                color: isDark ? "#e0ddd5" : "#111",
+              }}
+            >
               {title}
             </h3>
           </div>
@@ -145,13 +185,33 @@ function SmallArticleCard({ category, href, title, description, imageSrc, imageA
     <article className="grid grid-cols-[1fr_112px] min-[390px]:grid-cols-[1fr_118px] gap-4 items-start">
       <div>
         <span className="kicker">{category}</span>
-        <h3 className="mt-1 text-[19px] min-[390px]:text-[20px] font-bold leading-[1.18]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#e0ddd5" : "#111" }}>
-          <Link href={href} className="headline-link">{title}</Link>
+        <h3
+          className="mt-1 text-[19px] min-[390px]:text-[20px] font-bold leading-[1.18]"
+          style={{
+            fontFamily: "'Lora', Georgia, serif",
+            color: isDark ? "#e0ddd5" : "#111",
+          }}
+        >
+          <Link href={href} className="headline-link">
+            {title}
+          </Link>
         </h3>
-        <p className="hidden" style={{ fontFamily: "'Lora', Georgia, serif" }}>{description}</p>
+        <p className="hidden" style={{ fontFamily: "'Lora', Georgia, serif" }}>
+          {description}
+        </p>
       </div>
       <Link href={href} className="block no-underline">
-        <img src={imageSrc} alt={imageAlt} className="w-[112px] h-[84px] min-[390px]:w-[118px] min-[390px]:h-[88px] object-cover border rounded-md" style={{ borderColor: isDark ? "#2a2a2e" : "#eee", backgroundColor: isDark ? "#1a1c22" : "#f5f5f5" }} loading="lazy" decoding="async" />
+        <img
+          src={imageSrc}
+          alt={imageAlt}
+          className="w-[112px] h-[84px] min-[390px]:w-[118px] min-[390px]:h-[88px] object-cover border rounded-md"
+          style={{
+            borderColor: isDark ? "#2a2a2e" : "#eee",
+            backgroundColor: isDark ? "#1a1c22" : "#f5f5f5",
+          }}
+          loading="lazy"
+          decoding="async"
+        />
       </Link>
     </article>
   );
@@ -162,21 +222,44 @@ function DesktopSideStory({ article }: { article: (typeof ARTICLES)[number] }) {
   const isDark = theme === "dark";
 
   return (
-    <article className="grid grid-cols-[1fr_104px] gap-4 border-b pb-4" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}>
+    <article
+      className="grid grid-cols-[1fr_104px] gap-4 border-b pb-4"
+      style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
+    >
       <div>
         <span className="kicker">{article.category}</span>
-        <h3 className="mt-1 text-[18px] font-bold leading-[1.18]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#e0ddd5" : "#111" }}>
-          <Link href={article.href} className="headline-link">{article.title}</Link>
+        <h3
+          className="mt-1 text-[18px] font-bold leading-[1.18]"
+          style={{
+            fontFamily: "'Lora', Georgia, serif",
+            color: isDark ? "#e0ddd5" : "#111",
+          }}
+        >
+          <Link href={article.href} className="headline-link">
+            {article.title}
+          </Link>
         </h3>
         <p
           className="mt-2 font-normal line-clamp-2"
-          style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "13px", lineHeight: 1.42, color: isDark ? "#8f8c85" : "#737373" }}
+          style={{
+            fontFamily: "'Lora', Georgia, serif",
+            fontSize: "13px",
+            lineHeight: 1.42,
+            color: isDark ? "#8f8c85" : "#737373",
+          }}
         >
           {article.description}
         </p>
       </div>
       <Link href={article.href} className="block no-underline">
-        <img src={article.imageSrc} alt={article.imageAlt} className="w-[104px] h-[72px] object-cover rounded-md border" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }} loading="lazy" decoding="async" />
+        <img
+          src={article.imageSrc}
+          alt={article.imageAlt}
+          className="w-[104px] h-[72px] object-cover rounded-md border"
+          style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
+          loading="lazy"
+          decoding="async"
+        />
       </Link>
     </article>
   );
@@ -189,13 +272,34 @@ function DesktopTileStory({ article }: { article: (typeof ARTICLES)[number] }) {
   return (
     <article>
       <Link href={article.href} className="block no-underline">
-        <img src={article.imageSrc} alt={article.imageAlt} className="w-full aspect-[16/9] object-cover rounded-lg border" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }} loading="lazy" decoding="async" />
+        <img
+          src={article.imageSrc}
+          alt={article.imageAlt}
+          className="w-full aspect-[16/9] object-cover rounded-lg border"
+          style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
+          loading="lazy"
+          decoding="async"
+        />
       </Link>
       <span className="kicker block mt-3">{article.category}</span>
-      <h3 className="mt-2 text-[22px] font-bold leading-[1.12]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#e0ddd5" : "#111" }}>
-        <Link href={article.href} className="headline-link">{article.title}</Link>
+      <h3
+        className="mt-2 text-[22px] font-bold leading-[1.12]"
+        style={{
+          fontFamily: "'Lora', Georgia, serif",
+          color: isDark ? "#e0ddd5" : "#111",
+        }}
+      >
+        <Link href={article.href} className="headline-link">
+          {article.title}
+        </Link>
       </h3>
-      <p className="mt-2 text-[14px] leading-[1.4]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#9a978f" : "#555" }}>
+      <p
+        className="mt-2 text-[14px] leading-[1.4]"
+        style={{
+          fontFamily: "'Lora', Georgia, serif",
+          color: isDark ? "#9a978f" : "#555",
+        }}
+      >
         {article.description}
       </p>
     </article>
@@ -207,28 +311,74 @@ export default function Home() {
   const isDark = theme === "dark";
 
   return (
-    <div className="min-h-screen flex flex-col transition-colors duration-300" style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}>
+    <div
+      className="min-h-screen flex flex-col transition-colors duration-300"
+      style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
+    >
       <Header />
-      <main className="pt-0 pb-12 md:pt-7 md:pb-14 flex-1" style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}>
+      <main
+        className="pt-0 pb-12 md:pt-7 md:pb-14 flex-1"
+        style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
+      >
         <div className="max-w-[1200px] mx-auto px-5 md:px-8">
           <div className="md:hidden">
             <FadeIn className="mb-5">
               <article className="flex flex-col">
-                <Link href={HERO_ARTICLE.href} className="block no-underline -mx-5 order-first mb-4">
-                  <div className="relative w-full overflow-hidden aspect-[2/1]" style={{ border: isDark ? "1px solid #2a2a2e" : "1px solid #e5e5e5" }}>
-                    <img src={HERO_ARTICLE.imageSrc} alt={HERO_ARTICLE.imageAlt} className="w-full h-full object-cover block" fetchPriority="high" decoding="async" />
+                <Link
+                  href={HERO_ARTICLE.href}
+                  className="block no-underline -mx-5 order-first mb-4"
+                >
+                  <div
+                    className="relative w-full overflow-hidden aspect-[2/1]"
+                    style={{
+                      border: isDark
+                        ? "1px solid #2a2a2e"
+                        : "1px solid #e5e5e5",
+                    }}
+                  >
+                    <img
+                      src={HERO_ARTICLE.imageSrc}
+                      alt={HERO_ARTICLE.imageAlt}
+                      className="w-full h-full object-cover block"
+                      fetchPriority="high"
+                      decoding="async"
+                    />
                   </div>
                 </Link>
-                <span className="kicker block mb-2">{HERO_ARTICLE.category}</span>
-                <h2 className="mt-2 mb-2 text-[25px] min-[390px]:text-[27px] font-bold leading-[1.06]" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 700, color: isDark ? "#e0ddd5" : "#111" }}>
-                  <Link href={HERO_ARTICLE.href} className="headline-link" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>{HERO_ARTICLE.title}</Link>
+                <span className="kicker block mb-2">
+                  {HERO_ARTICLE.category}
+                </span>
+                <h2
+                  className="mt-2 mb-2 text-[25px] min-[390px]:text-[27px] font-bold leading-[1.06]"
+                  style={{
+                    fontFamily: "'Playfair Display', Georgia, serif",
+                    fontWeight: 700,
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  <Link
+                    href={HERO_ARTICLE.href}
+                    className="headline-link"
+                    style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                  >
+                    {HERO_ARTICLE.title}
+                  </Link>
                 </h2>
-                <p className="text-[15px] min-[390px]:text-[16px] leading-[1.48] line-clamp-2" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#9a978f" : "#555" }}>
+                <p
+                  className="text-[15px] min-[390px]:text-[16px] leading-[1.48] line-clamp-2"
+                  style={{
+                    fontFamily: "'Lora', Georgia, serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
                   {HERO_ARTICLE.description}
                 </p>
               </article>
             </FadeIn>
-            <hr className="editorial-divider mb-5" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }} />
+            <hr
+              className="editorial-divider mb-5"
+              style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
+            />
             <FadeIn className="mb-10">
               <div className="flex flex-col gap-5">
                 <SmallArticleCard {...ARTICLES[0]} />
@@ -247,21 +397,61 @@ export default function Home() {
 
           <div className="hidden md:block">
             <FadeIn className="mb-9">
-              <section className="grid grid-cols-[minmax(0,1.65fr)_minmax(300px,0.85fr)] gap-8 items-start border-b pb-8" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}>
+              <section
+                className="grid grid-cols-[minmax(0,1.65fr)_minmax(300px,0.85fr)] gap-8 items-start border-b pb-8"
+                style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
+              >
                 <article>
                   <Link href={HERO_ARTICLE.href} className="block no-underline">
-                    <img src={HERO_ARTICLE.imageSrc} alt={HERO_ARTICLE.imageAlt} className="w-full h-[340px] lg:h-[390px] object-cover rounded-xl border" style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }} fetchPriority="high" decoding="async" />
+                    <img
+                      src={HERO_ARTICLE.imageSrc}
+                      alt={HERO_ARTICLE.imageAlt}
+                      className="w-full h-[340px] lg:h-[390px] object-cover rounded-xl border"
+                      style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
+                      fetchPriority="high"
+                      decoding="async"
+                    />
                   </Link>
-                  <span className="kicker block mt-4">{HERO_ARTICLE.category}</span>
-                  <h1 className="mt-2 text-[40px] lg:text-[48px] font-bold leading-[1.02]" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 700, color: isDark ? "#e0ddd5" : "#111" }}>
-                    <Link href={HERO_ARTICLE.href} className="headline-link" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>{HERO_ARTICLE.title}</Link>
+                  <span className="kicker block mt-4">
+                    {HERO_ARTICLE.category}
+                  </span>
+                  <h1
+                    className="mt-2 text-[40px] lg:text-[48px] font-bold leading-[1.02]"
+                    style={{
+                      fontFamily: "'Playfair Display', Georgia, serif",
+                      fontWeight: 700,
+                      color: isDark ? "#e0ddd5" : "#111",
+                    }}
+                  >
+                    <Link
+                      href={HERO_ARTICLE.href}
+                      className="headline-link"
+                      style={{
+                        fontFamily: "'Playfair Display', Georgia, serif",
+                      }}
+                    >
+                      {HERO_ARTICLE.title}
+                    </Link>
                   </h1>
-                  <p className="mt-4 max-w-[720px] text-[18px] leading-[1.48]" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#9a978f" : "#555" }}>
+                  <p
+                    className="mt-4 max-w-[720px] text-[18px] leading-[1.48]"
+                    style={{
+                      fontFamily: "'Lora', Georgia, serif",
+                      color: isDark ? "#9a978f" : "#555",
+                    }}
+                  >
                     {HERO_ARTICLE.description}
                   </p>
                 </article>
                 <aside className="flex flex-col gap-4">
-                  <div className="text-[11px] font-semibold tracking-[0.18em] uppercase border-b pb-3" style={{ color: isDark ? "#bcb7a6" : "#8B0000", borderColor: isDark ? "#2a2a2e" : "#e5e5e5", fontFamily: "'Source Sans 3', sans-serif" }}>
+                  <div
+                    className="text-[11px] font-semibold tracking-[0.18em] uppercase border-b pb-3"
+                    style={{
+                      color: isDark ? "#bcb7a6" : "#8B0000",
+                      borderColor: isDark ? "#2a2a2e" : "#e5e5e5",
+                      fontFamily: "'Source Sans 3', sans-serif",
+                    }}
+                  >
                     Najnovije
                   </div>
                   <DesktopSideStory article={ARTICLES[0]} />
