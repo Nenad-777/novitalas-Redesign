@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/pomeranje-tezista-orban-evropa",
+  href: "/geopolitika/pomeranje-tezista-orban-evropa?vest=mandati",
   category: "Geopolitika",
   title: "Kraj jedne ere: Mađarska zatvara vrata Orbanovom povratku",
   description:
