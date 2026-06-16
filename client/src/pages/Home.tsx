@@ -22,6 +22,15 @@ const HERO_ARTICLE = {
 
 const ARTICLES = [
   {
+    href: "/geopolitika/pomeranje-tezista-orban-evropa",
+    category: "Geopolitika",
+    title: "Kraj jedne ere: Mađarska zatvara vrata Orbanovom povratku",
+    description:
+      "Mađarski parlament usvojio je ustavni amandman kojim se mandat premijera ograničava na osam godina, otvarajući pitanje da li se završava politička epoha Viktora Orbana.",
+    imageSrc: "/news/orban-era-end-hungary.jpg",
+    imageAlt: "Mađarski parlament i politička senka Viktora Orbana",
+  },
+  {
     href: "/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji",
     category: "Naša planeta",
     title: "Posle 2.600 godina tišine, otvorena jedna od najbolje očuvanih etrurskih grobnica",
@@ -56,15 +65,6 @@ const ARTICLES = [
       "Kada ljudi izgube spoljne orijentire, njihovo kretanje često ne ide pravom linijom, već blagim lukom — neretko ulevo.",
     imageSrc: "/news/human-walking-left.jpg",
     imageAlt: "Ljudi koji hodaju kroz otvoren prostor, sa putanjama koje se blago uvijaju ulevo",
-  },
-  {
-    href: "/geopolitika/eu-migration-rules-2026",
-    category: "Geopolitika",
-    title: "Nova migraciona pravila Evropske unije ulaze u primenu",
-    description:
-      "Novi evropski pakt menja pravila za azil, granice i deportacije, uz zajedničke procedure i sistem solidarnosti.",
-    imageSrc: "/news/eu-flags.jpg",
-    imageAlt: "Zastave Evropske unije",
   },
 ];
 
