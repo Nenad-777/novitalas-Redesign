@@ -21,15 +21,14 @@ const HERO_ARTICLE = {
 
 const ARTICLES = [
   {
-    href: "/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan",
+    href: "/geopolitika/london-kampanja-protiv-dezinformacija",
     category: "Geopolitika",
-    title:
-      "SAD i Iran postigli okvirni mirovni dogovor: Ormuski moreuz ponovo se otvara za svetsku trgovinu",
+    title: "London pokreće kampanju od 7 miliona funti protiv dezinformacija",
     description:
-      "Donald Tramp je objavio da je dogovor sa Teheranom završen i naredio ukidanje američke pomorske blokade, ali ključna pitanja ostaju otvorena.",
-    imageSrc: "/news/ormuski-moreuz-nasa.jpg",
+      "Gradske vlasti tvrde da koordinisane kampanje na društvenim mrežama narušavaju ugled britanske prestonice, zbog čega je pokrenut međunarodni program za promociju Londona i suzbijanje dezinformacija.",
+    imageSrc: "/news/london-disinformation-campaign.jpg",
     imageAlt:
-      "Satelitski prikaz Ormuskog moreuza između Irana, Omana i Ujedinjenih Arapskih Emirata",
+      "London skyline with digital message overlays symbolizing disinformation campaigns",
   },
   {
     href: "/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji",
