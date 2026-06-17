@@ -10,26 +10,26 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/madjarska-ogranicenje-mandata-orban",
+  href: "/geopolitika/g7-podrzala-sporazum-sad-iran",
   category: "Geopolitika",
-  title: "Kraj jedne ere: Mađarska zatvara vrata Orbanovom povratku",
+  title:
+    "G7 podržala sporazum SAD i Irana: otvara li se put ka trajnoj stabilizaciji Bliskog istoka?",
   description:
-    "Mađarski parlament usvojio je ustavni amandman kojim se mandat premijera ograničava na osam godina, otvarajući pitanje da li se završava politička epoha Viktora Orbana.",
-  imageSrc: "/news/orban-era-end-hungary.jpg",
-  imageAlt: "Mađarski parlament i politička senka Viktora Orbana",
+    "Lideri G7 podržali su sporazum Vašingtona i Teherana kojim je zaustavljena najnovija eskalacija u Persijskom zalivu, ali ostaje neizvesno da li dogovor može prerasti u trajniju stabilizaciju Bliskog istoka.",
+  imageSrc: "/news/g7-supports-us-iran-deal.jpg",
+  imageAlt:
+    "Minimalist editorial illustration of G7 support for a US-Iran agreement, with a stylized Middle East map and summit table",
 };
 
 const ARTICLES = [
   {
-    href: "/geopolitika/g7-podrzala-sporazum-sad-iran",
+    href: "/geopolitika/madjarska-ogranicenje-mandata-orban",
     category: "Geopolitika",
-    title:
-      "G7 podržala sporazum SAD i Irana: otvara li se put ka trajnoj stabilizaciji Bliskog istoka?",
+    title: "Kraj jedne ere: Mađarska zatvara vrata Orbanovom povratku",
     description:
-      "Lideri G7 podržali su sporazum Vašingtona i Teherana kojim je zaustavljena najnovija eskalacija u Persijskom zalivu, ali ostaje neizvesno da li dogovor može prerasti u trajniju stabilizaciju Bliskog istoka.",
-    imageSrc: "/news/g7-supports-us-iran-deal.jpg",
-    imageAlt:
-      "Minimalist editorial illustration of G7 support for a US-Iran agreement, with a stylized Middle East map and summit table",
+      "Mađarski parlament usvojio je ustavni amandman kojim se mandat premijera ograničava na osam godina, otvarajući pitanje da li se završava politička epoha Viktora Orbana.",
+    imageSrc: "/news/orban-era-end-hungary.jpg",
+    imageAlt: "Mađarski parlament i politička senka Viktora Orbana",
   },
   {
     href: "/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji",
