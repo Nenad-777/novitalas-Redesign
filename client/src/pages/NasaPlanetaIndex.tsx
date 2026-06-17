@@ -19,6 +19,15 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/zasto-ljudi-veruju-lazima",
+    img: "/news/confirmation-bias-mirror.jpg",
+    alt: "Minimalist mirror illustration symbolizing confirmation bias and self-deception",
+    imageCredit: "AI generated illustration / Novi Talas",
+    title: "Zašto ljudi veruju lažima koje žele da čuju?",
+    description:
+      "Nova istraživanja i psihološki modeli pokazuju da ljudi ne prihvataju informacije samo na osnovu činjenica, već i na osnovu emocija, identiteta i potrebe da potvrde ono u šta već veruju.",
+  },
+  {
     href: "/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji",
     img: "/news/etrurska-bronzana-kutija.jpg",
     alt: "Detalj etrurske bronzane kutije za čuvanje dragocenosti iz 4. veka pre nove ere",

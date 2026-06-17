@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/zasto-ljudi-veruju-lazima",
+    title: "Zašto ljudi veruju lažima koje žele da čuju?",
+    description:
+      "Nova istraživanja i psihološki modeli pokazuju da ljudi ne prihvataju informacije samo na osnovu činjenica, već i na osnovu emocija, identiteta i potrebe da potvrde ono u šta već veruju.",
+    imageSrc: "/news/confirmation-bias-mirror.jpg",
+    datePublished: "2026-06-17",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/g7-podrzala-sporazum-sad-iran",
     title:
       "G7 podržala sporazum SAD i Irana: otvara li se put ka trajnoj stabilizaciji Bliskog istoka?",

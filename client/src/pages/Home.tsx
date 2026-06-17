@@ -65,14 +65,14 @@ const ARTICLES = [
       "Dete osvetljeno ekranom telefona, sa apstraktnim prikazom mozga i digitalnih signala",
   },
   {
-    href: "/nasa-planeta/zasto-ljudi-kada-lutaju-cesto-skrecu-ulevo",
+    href: "/nasa-planeta/zasto-ljudi-veruju-lazima",
     category: "Naša planeta",
-    title: "Zašto ljudi, kada lutaju, često skreću ulevo?",
+    title: "Zašto ljudi veruju lažima koje žele da čuju?",
     description:
-      "Kada ljudi izgube spoljne orijentire, njihovo kretanje često ne ide pravom linijom, već blagim lukom — neretko ulevo.",
-    imageSrc: "/news/human-walking-left.jpg",
+      "Nova istraživanja i psihološki modeli pokazuju da ljudi ne prihvataju informacije samo na osnovu činjenica, već i na osnovu emocija, identiteta i potrebe da potvrde ono u šta već veruju.",
+    imageSrc: "/news/confirmation-bias-mirror.jpg",
     imageAlt:
-      "Ljudi koji hodaju kroz otvoren prostor, sa putanjama koje se blago uvijaju ulevo",
+      "Minimalist mirror illustration symbolizing confirmation bias and self-deception",
   },
 ];
 

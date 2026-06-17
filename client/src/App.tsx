@@ -237,6 +237,7 @@ import PsihologijaDosada from "./pages/psihologija-dosada";
 /* ✅ NOVA VEST — Naša planeta — Artemis III */
 import NasaPredstavilaPosaduArtemisIII from "./pages/nasa-predstavila-posadu-artemis-iii";
 import StaKratkiVideoSnimciRadeDecjemMozgu from "./pages/sta-kratki-video-snimci-rade-decjem-mozgu";
+import WhyPeopleBelieveLiesArticle from "./pages/WhyPeopleBelieveLiesArticle";
 
 /* ✅ NOVA VEST — Naša planeta */
 import NasaAnounce from "./pages/nasa-anounce";
@@ -672,6 +673,11 @@ function Router() {
         <Route
           path="/nasa-planeta/sta-kratki-video-snimci-rade-decjem-mozgu"
           component={StaKratkiVideoSnimciRadeDecjemMozgu}
+        />
+
+        <Route
+          path="/nasa-planeta/zasto-ljudi-veruju-lazima"
+          component={WhyPeopleBelieveLiesArticle}
         />
 
         <Route
