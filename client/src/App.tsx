@@ -26,6 +26,7 @@ import BricsIranNaftaPukotineMultipolarnogSveta from "./pages/brics-iran-nafta-p
 import PekingIzmedjuTrumpaIPutina from "./pages/peking-izmedju-trumpa-i-putina";
 import EvropaTraziNovuFormuluZaUkrajinu from "./pages/evropa-trazi-novu-formulu-za-ukrajinu";
 import LondonDisinformationCampaignArticle from "./pages/LondonDisinformationCampaignArticle";
+import G7UsIranAgreementArticle from "./pages/G7UsIranAgreementArticle";
 
 import UkrajinaCetiriGodine from "./pages/ukrajina-cetiri-godine-rata";
 import IranProtesti2026 from "./pages/iran-protesti-2026";
@@ -545,6 +546,11 @@ function Router() {
         <Route
           path="/geopolitika/london-kampanja-protiv-dezinformacija"
           component={LondonDisinformationCampaignArticle}
+        />
+
+        <Route
+          path="/geopolitika/g7-podrzala-sporazum-sad-iran"
+          component={G7UsIranAgreementArticle}
         />
 
         <Route path="/geopolitika" component={GeopolitikaIndex} />
