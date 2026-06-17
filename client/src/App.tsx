@@ -25,6 +25,7 @@ import PutinGovoriOKrajuRataUkrajina from "./pages/putin-govori-o-kraju-rata-ukr
 import BricsIranNaftaPukotineMultipolarnogSveta from "./pages/brics-iran-nafta-pukotine-multipolarnog-sveta";
 import PekingIzmedjuTrumpaIPutina from "./pages/peking-izmedju-trumpa-i-putina";
 import EvropaTraziNovuFormuluZaUkrajinu from "./pages/evropa-trazi-novu-formulu-za-ukrajinu";
+import LondonDisinformationCampaignArticle from "./pages/LondonDisinformationCampaignArticle";
 
 import UkrajinaCetiriGodine from "./pages/ukrajina-cetiri-godine-rata";
 import IranProtesti2026 from "./pages/iran-protesti-2026";
@@ -539,6 +540,11 @@ function Router() {
         <Route
           path="/geopolitika/velike-sile-i-kriza-u-iranu"
           component={VelikeSileIKrizaUIranu}
+        />
+
+        <Route
+          path="/geopolitika/london-kampanja-protiv-dezinformacija"
+          component={LondonDisinformationCampaignArticle}
         />
 
         <Route path="/geopolitika" component={GeopolitikaIndex} />
