@@ -143,6 +143,16 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/g7-podrzala-sporazum-sad-iran",
+    title:
+      "G7 podržala sporazum SAD i Irana: otvara li se put ka trajnoj stabilizaciji Bliskog istoka?",
+    description:
+      "Lideri G7 podržali su sporazum Vašingtona i Teherana kojim je zaustavljena najnovija eskalacija u Persijskom zalivu, ali ostaje neizvesno da li dogovor može prerasti u trajniju stabilizaciju Bliskog istoka.",
+    imageSrc: "/news/g7-supports-us-iran-deal.jpg",
+    datePublished: "2026-06-17",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/london-kampanja-protiv-dezinformacija",
     title: "London pokreće kampanju od 7 miliona funti protiv dezinformacija",
     description:

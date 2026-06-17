@@ -18,6 +18,16 @@ type Article = {
 
 const ARTICLES: Article[] = [
   {
+    href: "/geopolitika/g7-podrzala-sporazum-sad-iran",
+    title:
+      "G7 podržala sporazum SAD i Irana: otvara li se put ka trajnoj stabilizaciji Bliskog istoka?",
+    description:
+      "Lideri G7 podržali su sporazum Vašingtona i Teherana kojim je zaustavljena najnovija eskalacija u Persijskom zalivu, ali ostaje neizvesno da li dogovor može prerasti u trajniju stabilizaciju Bliskog istoka.",
+    imageSrc: "/news/g7-supports-us-iran-deal.jpg",
+    imageAlt:
+      "Minimalist editorial illustration of G7 support for a US-Iran agreement, with a stylized Middle East map and summit table",
+  },
+  {
     href: "/geopolitika/london-kampanja-protiv-dezinformacija",
     title: "London pokreće kampanju od 7 miliona funti protiv dezinformacija",
     description:
