@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/london-kampanja-protiv-dezinformacija",
+    title: "London pokreće kampanju od 7 miliona funti protiv dezinformacija",
+    description:
+      "Gradske vlasti tvrde da koordinisane kampanje na društvenim mrežama narušavaju ugled britanske prestonice, zbog čega je pokrenut međunarodni program za promociju Londona i suzbijanje dezinformacija.",
+    imageSrc: "/news/london-disinformation-campaign.jpg",
+    datePublished: "2026-06-17",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/mundijal-na-granici-fudbal-vize-i-politika-moci",
     title: "Mundijal na granici: fudbal, vize i politika moći",
     description:

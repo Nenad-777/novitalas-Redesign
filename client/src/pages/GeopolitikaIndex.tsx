@@ -18,6 +18,15 @@ type Article = {
 
 const ARTICLES: Article[] = [
   {
+    href: "/geopolitika/london-kampanja-protiv-dezinformacija",
+    title: "London pokreće kampanju od 7 miliona funti protiv dezinformacija",
+    description:
+      "Gradske vlasti tvrde da koordinisane kampanje na društvenim mrežama narušavaju ugled britanske prestonice, zbog čega je pokrenut međunarodni program za promociju Londona i suzbijanje dezinformacija.",
+    imageSrc: "/news/london-disinformation-campaign.jpg",
+    imageAlt:
+      "London skyline with digital message overlays symbolizing disinformation campaigns",
+  },
+  {
     href: "/geopolitika/madjarska-ogranicenje-mandata-orban",
     title: "Kraj jedne ere: Mađarska zatvara vrata Orbanovom povratku",
     description:
