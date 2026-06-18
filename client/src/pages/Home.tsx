@@ -23,13 +23,14 @@ const HERO_ARTICLE = {
 
 const ARTICLES = [
   {
-    href: "/geopolitika/madjarska-ogranicenje-mandata-orban",
+    href: "/geopolitika/g7-nova-geopoliticka-strategija",
     category: "Geopolitika",
-    title: "Kraj jedne ere: Mađarska zatvara vrata Orbanovom povratku",
+    title:
+      "G7 pokreće novu geopolitičku strategiju: manje zavisnosti od Kine, veći pritisak na Rusiju i podrška sporazumu sa Iranom",
     description:
-      "Mađarski parlament usvojio je ustavni amandman kojim se mandat premijera ograničava na osam godina, otvarajući pitanje da li se završava politička epoha Viktora Orbana.",
-    imageSrc: "/news/orban-era-end-hungary.jpg",
-    imageAlt: "Mađarski parlament i politička senka Viktora Orbana",
+      "Lideri najrazvijenijih zapadnih ekonomija poslali su sa samita G7 poruku da ulaze u novu fazu geopolitičkog nadmetanja — kroz smanjenje zavisnosti od kineskih sirovina, nastavak podrške Ukrajini i podršku sporazumu između SAD i Irana.",
+    imageSrc: "/news/g7-summit-evian-2026.jpg",
+    imageAlt: "Leaders of G7 countries during the 2026 summit in Évian, France",
   },
   {
     href: "/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji",

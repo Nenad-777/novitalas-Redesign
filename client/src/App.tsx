@@ -27,6 +27,7 @@ import PekingIzmedjuTrumpaIPutina from "./pages/peking-izmedju-trumpa-i-putina";
 import EvropaTraziNovuFormuluZaUkrajinu from "./pages/evropa-trazi-novu-formulu-za-ukrajinu";
 import LondonDisinformationCampaignArticle from "./pages/LondonDisinformationCampaignArticle";
 import G7UsIranAgreementArticle from "./pages/G7UsIranAgreementArticle";
+import G7GeopoliticalStrategyArticle from "./pages/G7GeopoliticalStrategyArticle";
 
 import UkrajinaCetiriGodine from "./pages/ukrajina-cetiri-godine-rata";
 import IranProtesti2026 from "./pages/iran-protesti-2026";
@@ -552,6 +553,11 @@ function Router() {
         <Route
           path="/geopolitika/g7-podrzala-sporazum-sad-iran"
           component={G7UsIranAgreementArticle}
+        />
+
+        <Route
+          path="/geopolitika/g7-nova-geopoliticka-strategija"
+          component={G7GeopoliticalStrategyArticle}
         />
 
         <Route path="/geopolitika" component={GeopolitikaIndex} />
