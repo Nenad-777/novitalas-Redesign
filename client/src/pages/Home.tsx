@@ -10,27 +10,27 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/g7-podrzala-sporazum-sad-iran",
+  href: "/geopolitika/g7-nova-geopoliticka-strategija",
   category: "Geopolitika",
   title:
-    "G7 podržala sporazum SAD i Irana: otvara li se put ka trajnoj stabilizaciji Bliskog istoka?",
+    "G7 pokreće novu geopolitičku strategiju: manje zavisnosti od Kine, veći pritisak na Rusiju i podrška sporazumu sa Iranom",
   description:
-    "Lideri G7 podržali su sporazum Vašingtona i Teherana kojim je zaustavljena najnovija eskalacija u Persijskom zalivu, ali ostaje neizvesno da li dogovor može prerasti u trajniju stabilizaciju Bliskog istoka.",
-  imageSrc: "/news/g7-supports-us-iran-deal.jpg",
-  imageAlt:
-    "Minimalist editorial illustration of G7 support for a US-Iran agreement, with a stylized Middle East map and summit table",
+    "Lideri najrazvijenijih zapadnih ekonomija poslali su sa samita G7 poruku da ulaze u novu fazu geopolitičkog nadmetanja — kroz smanjenje zavisnosti od kineskih sirovina, nastavak podrške Ukrajini i podršku sporazumu između SAD i Irana.",
+  imageSrc: "/news/g7-summit-evian-2026.jpg",
+  imageAlt: "Leaders of G7 countries during the 2026 summit in Évian, France",
 };
 
 const ARTICLES = [
   {
-    href: "/geopolitika/g7-nova-geopoliticka-strategija",
+    href: "/geopolitika/g7-podrzala-sporazum-sad-iran",
     category: "Geopolitika",
     title:
-      "G7 pokreće novu geopolitičku strategiju: manje zavisnosti od Kine, veći pritisak na Rusiju i podrška sporazumu sa Iranom",
+      "G7 podržala sporazum SAD i Irana: otvara li se put ka trajnoj stabilizaciji Bliskog istoka?",
     description:
-      "Lideri najrazvijenijih zapadnih ekonomija poslali su sa samita G7 poruku da ulaze u novu fazu geopolitičkog nadmetanja — kroz smanjenje zavisnosti od kineskih sirovina, nastavak podrške Ukrajini i podršku sporazumu između SAD i Irana.",
-    imageSrc: "/news/g7-summit-evian-2026.jpg",
-    imageAlt: "Leaders of G7 countries during the 2026 summit in Évian, France",
+      "Lideri G7 podržali su sporazum Vašingtona i Teherana kojim je zaustavljena najnovija eskalacija u Persijskom zalivu, ali ostaje neizvesno da li dogovor može prerasti u trajniju stabilizaciju Bliskog istoka.",
+    imageSrc: "/news/g7-supports-us-iran-deal.jpg",
+    imageAlt:
+      "Minimalist editorial illustration of G7 support for a US-Iran agreement, with a stylized Middle East map and summit table",
   },
   {
     href: "/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji",

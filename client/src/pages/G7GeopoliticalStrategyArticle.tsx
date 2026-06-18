@@ -26,7 +26,7 @@ export default function G7GeopoliticalStrategyArticle() {
       deck="Lideri najrazvijenijih zapadnih ekonomija poslali su sa samita G7 poruku da ulaze u novu fazu geopolitičkog nadmetanja — kroz smanjenje zavisnosti od kineskih sirovina, nastavak podrške Ukrajini i podršku sporazumu između SAD i Irana."
       imageSrc="/news/g7-summit-evian-2026.jpg"
       imageAlt="Leaders of G7 countries during the 2026 summit in Évian, France"
-      imageCredit="European Council / Council of the EU"
+      imageCredit="European Council / Council of the European Union, G7 Summit 2026, Évian-les-Bains"
       paragraphs={PARAGRAPHS}
       backHref="/geopolitika"
       backLabel="← Nazad na Geopolitiku"
