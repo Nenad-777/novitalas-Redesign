@@ -18,6 +18,15 @@ type Article = {
 
 const ARTICLES: Article[] = [
   {
+    href: "/geopolitika/g7-nova-geopoliticka-strategija",
+    title:
+      "G7 pokreće novu geopolitičku strategiju: manje zavisnosti od Kine, veći pritisak na Rusiju i podrška sporazumu sa Iranom",
+    description:
+      "Lideri najrazvijenijih zapadnih ekonomija poslali su sa samita G7 poruku da ulaze u novu fazu geopolitičkog nadmetanja — kroz smanjenje zavisnosti od kineskih sirovina, nastavak podrške Ukrajini i podršku sporazumu između SAD i Irana.",
+    imageSrc: "/news/g7-summit-evian-2026.jpg",
+    imageAlt: "Leaders of G7 countries during the 2026 summit in Évian, France",
+  },
+  {
     href: "/geopolitika/g7-podrzala-sporazum-sad-iran",
     title:
       "G7 podržala sporazum SAD i Irana: otvara li se put ka trajnoj stabilizaciji Bliskog istoka?",

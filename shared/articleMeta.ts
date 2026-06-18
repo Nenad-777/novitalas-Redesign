@@ -143,6 +143,16 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/g7-nova-geopoliticka-strategija",
+    title:
+      "G7 pokreće novu geopolitičku strategiju: manje zavisnosti od Kine, veći pritisak na Rusiju i podrška sporazumu sa Iranom",
+    description:
+      "Lideri najrazvijenijih zapadnih ekonomija poslali su sa samita G7 poruku da ulaze u novu fazu geopolitičkog nadmetanja kroz smanjenje zavisnosti od kineskih sirovina, nastavak podrške Ukrajini i podršku sporazumu između SAD i Irana.",
+    imageSrc: "/news/g7-summit-evian-2026.jpg",
+    datePublished: "2026-06-18",
+    author: "Novi Talas",
+  },
+  {
     path: "/nasa-planeta/zasto-ljudi-veruju-lazima",
     title: "Zašto ljudi veruju lažima koje žele da čuju?",
     description:
