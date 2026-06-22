@@ -28,6 +28,7 @@ import EvropaTraziNovuFormuluZaUkrajinu from "./pages/evropa-trazi-novu-formulu-
 import LondonDisinformationCampaignArticle from "./pages/LondonDisinformationCampaignArticle";
 import G7UsIranAgreementArticle from "./pages/G7UsIranAgreementArticle";
 import G7GeopoliticalStrategyArticle from "./pages/G7GeopoliticalStrategyArticle";
+import PraguePublicMediaProtestArticle from "./pages/PraguePublicMediaProtestArticle";
 
 import UkrajinaCetiriGodine from "./pages/ukrajina-cetiri-godine-rata";
 import IranProtesti2026 from "./pages/iran-protesti-2026";
@@ -558,6 +559,11 @@ function Router() {
         <Route
           path="/geopolitika/g7-nova-geopoliticka-strategija"
           component={G7GeopoliticalStrategyArticle}
+        />
+
+        <Route
+          path="/geopolitika/protesti-u-pragu-zbog-finansiranja-javnog-servisa"
+          component={PraguePublicMediaProtestArticle}
         />
 
         <Route path="/geopolitika" component={GeopolitikaIndex} />

@@ -22,15 +22,15 @@ const HERO_ARTICLE = {
 
 const ARTICLES = [
   {
-    href: "/geopolitika/g7-podrzala-sporazum-sad-iran",
+    href: "/geopolitika/protesti-u-pragu-zbog-finansiranja-javnog-servisa",
     category: "Geopolitika",
     title:
-      "G7 podržala sporazum SAD i Irana: otvara li se put ka trajnoj stabilizaciji Bliskog istoka?",
+      "Hiljade građana protestovale u Pragu zbog reforme finansiranja javnog servisa",
     description:
-      "Lideri G7 podržali su sporazum Vašingtona i Teherana kojim je zaustavljena najnovija eskalacija u Persijskom zalivu, ali ostaje neizvesno da li dogovor može prerasti u trajniju stabilizaciju Bliskog istoka.",
-    imageSrc: "/news/g7-supports-us-iran-deal.jpg",
+      "Plan češke vlade da promeni model finansiranja javnih medija izazvao je proteste u Pragu, otvarajući širu evropsku raspravu o nezavisnosti javnih servisa u digitalnom dobu.",
+    imageSrc: "/news/prague-public-media-protest.jpg",
     imageAlt:
-      "Minimalist editorial illustration of G7 support for a US-Iran agreement, with a stylized Middle East map and summit table",
+      "Editorial illustration about public broadcasting, media independence and protests in Prague",
   },
   {
     href: "/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji",

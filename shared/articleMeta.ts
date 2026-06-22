@@ -143,6 +143,16 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/protesti-u-pragu-zbog-finansiranja-javnog-servisa",
+    title:
+      "Hiljade građana protestovale u Pragu zbog reforme finansiranja javnog servisa",
+    description:
+      "Plan češke vlade da promeni model finansiranja javnih medija izazvao je proteste u Pragu, otvarajući širu evropsku raspravu o nezavisnosti javnih servisa u digitalnom dobu.",
+    imageSrc: "/news/prague-public-media-protest.jpg",
+    datePublished: "2026-06-22",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/g7-nova-geopoliticka-strategija",
     title:
       "G7 pokreće novu geopolitičku strategiju: manje zavisnosti od Kine, veći pritisak na Rusiju i podrška sporazumu sa Iranom",
