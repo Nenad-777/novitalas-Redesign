@@ -143,6 +143,16 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/krim-u-vanrednoj-situaciji-nakon-masovnog-napada-dronovima",
+    title:
+      "Krim u vanrednoj situaciji nakon masovnog napada dronovima: rat ulazi u novu fazu",
+    description:
+      "Prema pisanju međunarodnih medija, ruske vlasti koje upravljaju Krimom proglasile su vanrednu situaciju nakon jednog od najvećih talasa ukrajinskih napada dronovima od početka rata.",
+    imageSrc: "/news/crimea-drone-attacks.jpg",
+    datePublished: "2026-06-27",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/protesti-u-pragu-zbog-finansiranja-javnog-servisa",
     title:
       "Hiljade građana protestovale u Pragu zbog reforme finansiranja javnog servisa",

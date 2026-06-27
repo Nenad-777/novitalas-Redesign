@@ -18,6 +18,16 @@ type Article = {
 
 const ARTICLES: Article[] = [
   {
+    href: "/geopolitika/krim-u-vanrednoj-situaciji-nakon-masovnog-napada-dronovima",
+    title:
+      "Krim u vanrednoj situaciji nakon masovnog napada dronovima: rat ulazi u novu fazu",
+    description:
+      "Prema pisanju međunarodnih medija, ruske vlasti koje upravljaju Krimom proglasile su vanrednu situaciju nakon jednog od najvećih talasa ukrajinskih napada dronovima od početka rata.",
+    imageSrc: "/news/crimea-drone-attacks.jpg",
+    imageAlt:
+      "Minimalist editorial illustration of Crimea following large-scale drone attacks",
+  },
+  {
     href: "/geopolitika/protesti-u-pragu-zbog-finansiranja-javnog-servisa",
     title:
       "Hiljade građana protestovale u Pragu zbog reforme finansiranja javnog servisa",

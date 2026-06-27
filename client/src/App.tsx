@@ -29,6 +29,7 @@ import LondonDisinformationCampaignArticle from "./pages/LondonDisinformationCam
 import G7UsIranAgreementArticle from "./pages/G7UsIranAgreementArticle";
 import G7GeopoliticalStrategyArticle from "./pages/G7GeopoliticalStrategyArticle";
 import PraguePublicMediaProtestArticle from "./pages/PraguePublicMediaProtestArticle";
+import CrimeaDroneAttacksArticle from "./pages/CrimeaDroneAttacksArticle";
 
 import UkrajinaCetiriGodine from "./pages/ukrajina-cetiri-godine-rata";
 import IranProtesti2026 from "./pages/iran-protesti-2026";
@@ -559,6 +560,11 @@ function Router() {
         <Route
           path="/geopolitika/g7-nova-geopoliticka-strategija"
           component={G7GeopoliticalStrategyArticle}
+        />
+
+        <Route
+          path="/geopolitika/krim-u-vanrednoj-situaciji-nakon-masovnog-napada-dronovima"
+          component={CrimeaDroneAttacksArticle}
         />
 
         <Route
