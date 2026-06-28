@@ -10,6 +10,16 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/obavestajni-izvori/nemacka-menja-bnd-najveca-reforma-obavestajne-sluzbe",
+    img: "/news/germany-bnd-modernization.jpg",
+    alt: "Editorial illustration about the modernization of Germany's Federal Intelligence Service (BND)",
+    title:
+      "Nemačka menja BND: najveća reforma obaveštajne službe u poslednjim decenijama",
+    description:
+      "Berlin priprema najopsežniju reformu Savezne obaveštajne službe u poslednjim decenijama, sa fokusom na sajber operacije, elektronsko izviđanje i veštačku inteligenciju.",
+    date: "28. jun 2026.",
+  },
+  {
     href: "/obavestajni-izvori/evropa-preispituje-oslanjanje-na-americke-obavestajne-sluzbe",
     img: "/news/europe-independent-intelligence.jpg",
     alt: "Ilustracija — Evropa i nezavisne obaveštajne službe",
@@ -69,8 +79,7 @@ const ARTICLES = [
     href: "/obavestajni-izvori/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira",
     img: "/news/cia-china.jpg",
     alt: "CIA kampanja za regrutovanje kineskih vojnih oficira",
-    title:
-      "CIA pokrenula kampanju za regrutovanje kineskih vojnih oficira",
+    title: "CIA pokrenula kampanju za regrutovanje kineskih vojnih oficira",
     description:
       "Američka CIA pokrenula javnu kampanju usmerenu ka potencijalnim izvorima unutar kineske vojske, objavivši video na kineskom jeziku koji cilja nezadovoljne oficire.",
     date: "14. mart 2026.",
@@ -89,8 +98,7 @@ const ARTICLES = [
     href: "/obavestajni-izvori/rat-senki",
     img: "/news/obavestajni-image.jpg",
     alt: "Obaveštajni izveštaj — digitalni ekrani",
-    title:
-      "Rat senki: povratak obaveštajnih službi u središte geopolitike",
+    title: "Rat senki: povratak obaveštajnih službi u središte geopolitike",
     description:
       "U savremenim međunarodnim odnosima rat se retko objavljuje, ali se gotovo stalno vodi. Ključne borbe odvijaju se izvan frontova.",
     date: "Februar 2026.",
@@ -127,9 +135,8 @@ export default function ObavestajniIndex() {
                 color: isDark ? "#9a978f" : "#555",
               }}
             >
-              BEZBEDNOST   OBAVEŠTAJNE OPERACIJE   ANALITIKA
+              BEZBEDNOST OBAVEŠTAJNE OPERACIJE ANALITIKA
             </p>
-
           </div>
 
           {/* HERO ARTICLE — featured story */}
@@ -197,9 +204,12 @@ export default function ObavestajniIndex() {
           {/* Grid of remaining articles */}
           {gridArticles.length > 0 && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              {gridArticles.map((article) => (
+              {gridArticles.map(article => (
                 <article key={article.href}>
-                  <Link href={article.href} className="no-underline block group">
+                  <Link
+                    href={article.href}
+                    className="no-underline block group"
+                  >
                     <div
                       className="border mb-4 overflow-hidden"
                       style={{
