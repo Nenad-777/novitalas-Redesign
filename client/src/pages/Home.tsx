@@ -77,14 +77,15 @@ const ARTICLES = [
       "Dete osvetljeno ekranom telefona, sa apstraktnim prikazom mozga i digitalnih signala",
   },
   {
-    href: "/nasa-planeta/zasto-ljudi-veruju-lazima",
-    category: "Naša planeta",
-    title: "Zašto ljudi veruju lažima koje žele da čuju?",
+    href: "/obavestajni-izvori/nemacka-menja-bnd-najveca-reforma-obavestajne-sluzbe",
+    category: "Obaveštajni izvori",
+    title:
+      "Nemačka menja BND: najveća reforma obaveštajne službe u poslednjim decenijama",
     description:
-      "Nova istraživanja i psihološki modeli pokazuju da ljudi ne prihvataju informacije samo na osnovu činjenica, već i na osnovu emocija, identiteta i potrebe da potvrde ono u šta već veruju.",
-    imageSrc: "/news/confirmation-bias-mirror.jpg",
+      "Berlin priprema najopsežniju reformu Savezne obaveštajne službe u poslednjim decenijama, sa fokusom na sajber operacije, elektronsko izviđanje i veštačku inteligenciju.",
+    imageSrc: "/news/germany-bnd-modernization.jpg",
     imageAlt:
-      "Minimalist mirror illustration symbolizing confirmation bias and self-deception",
+      "Editorial illustration about the modernization of Germany's Federal Intelligence Service (BND)",
   },
 ];
 

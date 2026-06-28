@@ -143,6 +143,16 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/obavestajni-izvori/nemacka-menja-bnd-najveca-reforma-obavestajne-sluzbe",
+    title:
+      "Nemačka menja BND: najveća reforma obaveštajne službe u poslednjim decenijama",
+    description:
+      "Berlin priprema najopsežniju reformu Savezne obaveštajne službe u poslednjim decenijama, sa fokusom na sajber operacije, elektronsko izviđanje i veštačku inteligenciju.",
+    imageSrc: "/news/germany-bnd-modernization.jpg",
+    datePublished: "2026-06-28",
+    author: "Novi Talas",
+  },
+  {
     path: "/geopolitika/krim-u-vanrednoj-situaciji-nakon-masovnog-napada-dronovima",
     title:
       "Krim u vanrednoj situaciji nakon masovnog napada dronovima: rat ulazi u novu fazu",
