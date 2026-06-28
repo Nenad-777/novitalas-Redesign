@@ -23,14 +23,14 @@ const HERO_ARTICLE = {
 
 const ARTICLES = [
   {
-    href: "/geopolitika/g7-nova-geopoliticka-strategija",
-    category: "Geopolitika",
-    title:
-      "G7 pokreće novu geopolitičku strategiju: manje zavisnosti od Kine, veći pritisak na Rusiju i podrška sporazumu sa Iranom",
+    href: "/nasa-planeta/hiljade-vespi-preplavile-rim-povodom-80-godina-italijanske-ikone",
+    category: "Naša planeta",
+    title: "Hiljade Vespi preplavile Rim povodom 80 godina italijanske ikone",
     description:
-      "Lideri najrazvijenijih zapadnih ekonomija poslali su sa samita G7 poruku da ulaze u novu fazu geopolitičkog nadmetanja — kroz smanjenje zavisnosti od kineskih sirovina, nastavak podrške Ukrajini i podršku sporazumu između SAD i Irana.",
-    imageSrc: "/news/g7-summit-evian-2026.jpg",
-    imageAlt: "Leaders of G7 countries during the 2026 summit in Évian, France",
+      "Više hiljada vlasnika Vespi okupilo se u istorijskom centru Rima kako bi obeležili osam decenija jednog od najprepoznatljivijih simbola italijanskog dizajna, filma i urbanog života.",
+    imageSrc: "/news/vespa-rome-80th-anniversary.jpg",
+    imageAlt:
+      "Watercolor editorial illustration of the 80th anniversary Vespa parade through Rome",
   },
   {
     href: "/geopolitika/protesti-u-pragu-zbog-finansiranja-javnog-servisa",
