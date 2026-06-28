@@ -204,6 +204,7 @@ import KoJeDobioOskara from "./pages/ko-je-dobio-oskara";
 /* ✅ NOVA VEST — Naša planeta */
 import NaucniciPoceliDaUsmeravajuSnove from "./pages/naucnici-poceli-da-usmeravaju-snove";
 import AiVestSvest from "./pages/ai-vest-svest";
+import AnthropicAIGovernanceArticle from "./pages/AnthropicAIGovernanceArticle";
 import Kubrick from "./pages/kubrick";
 import KinaMozganiImplantat from "./pages/kina-mozgani-implantat";
 
@@ -693,6 +694,11 @@ function Router() {
         {/* =========================
             NAŠA PLANETA
            ========================= */}
+        <Route
+          path="/nasa-planeta/anthropic-upozorava-da-li-razvoj-vestacke-inteligencije-postaje-brzi-od-nase-sposobnosti-da-je-kontrolisemo"
+          component={AnthropicAIGovernanceArticle}
+        />
+
         <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
 
         <Route

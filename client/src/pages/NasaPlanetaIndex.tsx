@@ -19,6 +19,16 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/anthropic-upozorava-da-li-razvoj-vestacke-inteligencije-postaje-brzi-od-nase-sposobnosti-da-je-kontrolisemo",
+    img: "/news/ai-governance-safeguards.jpg",
+    alt: "Minimalist editorial illustration about AI governance and safety",
+    imageCredit: "Ilustracija / Novi Talas",
+    title:
+      "Anthropic upozorava: da li razvoj veštačke inteligencije postaje brži od naše sposobnosti da je kontrolišemo?",
+    description:
+      "Jedna od vodećih svetskih kompanija za razvoj veštačke inteligencije upozorava da bi napredak najmoćnijih AI sistema uskoro mogao da nadmaši postojeće bezbednosne mehanizme namenjene njihovoj kontroli.",
+  },
+  {
     href: "/nasa-planeta/hiljade-vespi-preplavile-rim-povodom-80-godina-italijanske-ikone",
     img: "/news/vespa-rome-80th-anniversary.jpg",
     alt: "Watercolor editorial illustration of the 80th anniversary Vespa parade through Rome",

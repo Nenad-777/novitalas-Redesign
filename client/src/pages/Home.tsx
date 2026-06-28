@@ -23,6 +23,17 @@ const HERO_ARTICLE = {
 
 const ARTICLES = [
   {
+    href: "/nasa-planeta/anthropic-upozorava-da-li-razvoj-vestacke-inteligencije-postaje-brzi-od-nase-sposobnosti-da-je-kontrolisemo",
+    category: "Naša planeta",
+    title:
+      "Anthropic upozorava: da li razvoj veštačke inteligencije postaje brži od naše sposobnosti da je kontrolišemo?",
+    description:
+      "Jedna od vodećih svetskih kompanija za razvoj veštačke inteligencije upozorava da bi napredak najmoćnijih AI sistema uskoro mogao da nadmaši postojeće bezbednosne mehanizme namenjene njihovoj kontroli.",
+    imageSrc: "/news/ai-governance-safeguards.jpg",
+    imageAlt:
+      "Minimalist editorial illustration about AI governance and safety",
+  },
+  {
     href: "/nasa-planeta/hiljade-vespi-preplavile-rim-povodom-80-godina-italijanske-ikone",
     category: "Naša planeta",
     title: "Hiljade Vespi preplavile Rim povodom 80 godina italijanske ikone",
@@ -74,16 +85,6 @@ const ARTICLES = [
     imageSrc: "/news/g7-supports-us-iran-deal.jpg",
     imageAlt:
       "Minimalist editorial illustration of G7 support for a US-Iran agreement, with a stylized Middle East map and summit table",
-  },
-  {
-    href: "/geopolitika/london-kampanja-protiv-dezinformacija",
-    category: "Geopolitika",
-    title: "London pokreće kampanju od 7 miliona funti protiv dezinformacija",
-    description:
-      "Gradske vlasti tvrde da koordinisane kampanje na društvenim mrežama narušavaju ugled britanske prestonice, zbog čega je pokrenut međunarodni program za promociju Londona i suzbijanje dezinformacija.",
-    imageSrc: "/news/london-disinformation-campaign.jpg",
-    imageAlt:
-      "London skyline with digital message overlays symbolizing disinformation campaigns",
   },
 ];
 
