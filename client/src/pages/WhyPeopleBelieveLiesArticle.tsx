@@ -26,7 +26,7 @@ export default function WhyPeopleBelieveLiesArticle() {
       deck="Nova istraživanja i psihološki modeli pokazuju da ljudi ne prihvataju informacije samo na osnovu činjenica, već i na osnovu emocija, identiteta i potrebe da potvrde ono u šta već veruju."
       imageSrc="/news/confirmation-bias-mirror.jpg"
       imageAlt="Minimalist mirror illustration symbolizing confirmation bias and self-deception"
-      imageCredit="AI generated illustration / Novi Talas"
+      imageCredit="Ilustracija / Novi Talas"
       paragraphs={PARAGRAPHS}
       backHref="/nasa-planeta"
       backLabel="← Nazad na Našu planetu"

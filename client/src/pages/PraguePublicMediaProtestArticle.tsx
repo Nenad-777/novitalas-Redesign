@@ -17,7 +17,7 @@ export default function PraguePublicMediaProtestArticle() {
       deck="Plan češke vlade da promeni model finansiranja javnih medija izazvao je proteste u Pragu, otvarajući širu evropsku raspravu o nezavisnosti javnih servisa u digitalnom dobu."
       imageSrc="/news/prague-public-media-protest.jpg"
       imageAlt="Editorial illustration about public broadcasting, media independence and protests in Prague"
-      imageCredit="AI generated illustration / Novi Talas"
+      imageCredit="Ilustracija / Novi Talas"
       paragraphs={PARAGRAPHS}
       backHref="/geopolitika"
       backLabel="← Nazad na Geopolitiku"

@@ -27,7 +27,7 @@ export default function GermanyBNDReformArticle() {
       deck="Berlin priprema najopsežniju reformu Savezne obaveštajne službe u poslednjim decenijama, sa fokusom na sajber operacije, elektronsko izviđanje i veštačku inteligenciju."
       imageSrc={IMAGE_SRC}
       imageAlt="Editorial illustration about the modernization of Germany's Federal Intelligence Service (BND)"
-      imageCredit="AI generated illustration / Novi Talas"
+      imageCredit="Ilustracija / Novi Talas"
       paragraphs={PARAGRAPHS}
       backHref="/obavestajni-izvori"
       backLabel="← Nazad na Obaveštajni izvori"

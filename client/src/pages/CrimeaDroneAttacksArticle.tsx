@@ -9,7 +9,7 @@ const ARTICLE = {
   imageSrc: "/news/crimea-drone-attacks.jpg",
   imageAlt:
     "Minimalist editorial illustration of Crimea following large-scale drone attacks",
-  imageCredit: "AI generated illustration / Novi Talas",
+  imageCredit: "Ilustracija / Novi Talas",
   paragraphs: [
     "Prema pisanju The Guardiana, ruske vlasti koje upravljaju anektiranim Krimom proglasile su vanrednu situaciju nakon jednog od najvećih talasa ukrajinskih napada dronovima od početka rata. List navodi da su u pojedinim delovima poluostrva zabeleženi prekidi u snabdevanju električnom energijom i poremećaji u funkcionisanju infrastrukture, dok Moskva tvrdi da je oborila veliki broj bespilotnih letelica.",
     "Ukrajina poslednjih nedelja sve češće izvodi napade na ciljeve duboko iza linije fronta. Kako prenosi Reuters, fokus je pre svega na energetskoj i logističkoj infrastrukturi, sa ciljem da se oteža snabdevanje ruskih snaga i oslabe vojni kapaciteti na okupiranim teritorijama.",

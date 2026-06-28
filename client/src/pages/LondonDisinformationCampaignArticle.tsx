@@ -21,7 +21,7 @@ export default function LondonDisinformationCampaignArticle() {
       deck="Gradske vlasti tvrde da koordinisane kampanje na društvenim mrežama narušavaju ugled britanske prestonice, zbog čega je pokrenut međunarodni program za promociju Londona i suzbijanje dezinformacija."
       imageSrc="/news/london-disinformation-campaign.jpg"
       imageAlt="London skyline with digital message overlays symbolizing disinformation campaigns"
-      imageCredit="AI generated illustration / Novi Talas"
+      imageCredit="Ilustracija / Novi Talas"
       paragraphs={PARAGRAPHS}
       backHref="/geopolitika"
       backLabel="← Nazad na Geopolitiku"

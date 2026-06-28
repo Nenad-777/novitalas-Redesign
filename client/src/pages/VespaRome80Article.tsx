@@ -17,7 +17,7 @@ export default function VespaRome80Article() {
       deck="Više hiljada vlasnika Vespi okupilo se u istorijskom centru Rima kako bi obeležili osam decenija jednog od najprepoznatljivijih simbola italijanskog dizajna, filma i urbanog života."
       imageSrc="/news/vespa-rome-80th-anniversary.jpg"
       imageAlt="Watercolor editorial illustration of the 80th anniversary Vespa parade through Rome"
-      imageCredit="AI generated illustration / Novi Talas"
+      imageCredit="Ilustracija / Novi Talas"
       paragraphs={PARAGRAPHS}
       backHref="/nasa-planeta"
       backLabel="← Nazad na Našu planetu"
