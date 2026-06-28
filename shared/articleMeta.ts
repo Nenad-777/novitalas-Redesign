@@ -143,6 +143,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/hiljade-vespi-preplavile-rim-povodom-80-godina-italijanske-ikone",
+    title: "Hiljade Vespi preplavile Rim povodom 80 godina italijanske ikone",
+    description:
+      "Više hiljada vlasnika Vespi okupilo se u istorijskom centru Rima kako bi obeležili osam decenija jednog od najprepoznatljivijih simbola italijanskog dizajna, filma i urbanog života.",
+    imageSrc: "/news/vespa-rome-80th-anniversary.jpg",
+    datePublished: "2026-06-28",
+    author: "Novi Talas",
+  },
+  {
     path: "/obavestajni-izvori/nemacka-menja-bnd-najveca-reforma-obavestajne-sluzbe",
     title:
       "Nemačka menja BND: najveća reforma obaveštajne službe u poslednjim decenijama",

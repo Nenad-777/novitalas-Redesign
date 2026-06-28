@@ -19,6 +19,15 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/hiljade-vespi-preplavile-rim-povodom-80-godina-italijanske-ikone",
+    img: "/news/vespa-rome-80th-anniversary.jpg",
+    alt: "Watercolor editorial illustration of the 80th anniversary Vespa parade through Rome",
+    imageCredit: "AI generated illustration / Novi Talas",
+    title: "Hiljade Vespi preplavile Rim povodom 80 godina italijanske ikone",
+    description:
+      "Više hiljada vlasnika Vespi okupilo se u istorijskom centru Rima kako bi obeležili osam decenija jednog od najprepoznatljivijih simbola italijanskog dizajna, filma i urbanog života.",
+  },
+  {
     href: "/nasa-planeta/zasto-ljudi-veruju-lazima",
     img: "/news/confirmation-bias-mirror.jpg",
     alt: "Minimalist mirror illustration symbolizing confirmation bias and self-deception",

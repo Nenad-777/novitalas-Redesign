@@ -242,6 +242,7 @@ import PsihologijaDosada from "./pages/psihologija-dosada";
 import NasaPredstavilaPosaduArtemisIII from "./pages/nasa-predstavila-posadu-artemis-iii";
 import StaKratkiVideoSnimciRadeDecjemMozgu from "./pages/sta-kratki-video-snimci-rade-decjem-mozgu";
 import WhyPeopleBelieveLiesArticle from "./pages/WhyPeopleBelieveLiesArticle";
+import VespaRome80Article from "./pages/VespaRome80Article";
 
 /* ✅ NOVA VEST — Naša planeta */
 import NasaAnounce from "./pages/nasa-anounce";
@@ -693,6 +694,11 @@ function Router() {
             NAŠA PLANETA
            ========================= */}
         <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
+
+        <Route
+          path="/nasa-planeta/hiljade-vespi-preplavile-rim-povodom-80-godina-italijanske-ikone"
+          component={VespaRome80Article}
+        />
 
         <Route
           path="/nasa-planeta/sta-kratki-video-snimci-rade-decjem-mozgu"
