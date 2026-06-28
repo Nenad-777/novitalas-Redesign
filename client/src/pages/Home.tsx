@@ -33,6 +33,17 @@ const ARTICLES = [
       "Watercolor editorial illustration of the 80th anniversary Vespa parade through Rome",
   },
   {
+    href: "/obavestajni-izvori/nemacka-menja-bnd-najveca-reforma-obavestajne-sluzbe",
+    category: "Obaveštajni izvori",
+    title:
+      "Nemačka menja BND: najveća reforma obaveštajne službe u poslednjim decenijama",
+    description:
+      "Berlin priprema najopsežniju reformu Savezne obaveštajne službe u poslednjim decenijama, sa fokusom na sajber operacije, elektronsko izviđanje i veštačku inteligenciju.",
+    imageSrc: "/news/germany-bnd-modernization.jpg",
+    imageAlt:
+      "Editorial illustration about the modernization of Germany's Federal Intelligence Service (BND)",
+  },
+  {
     href: "/geopolitika/protesti-u-pragu-zbog-finansiranja-javnog-servisa",
     category: "Geopolitika",
     title:
@@ -44,48 +55,35 @@ const ARTICLES = [
       "Editorial illustration about public broadcasting, media independence and protests in Prague",
   },
   {
-    href: "/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji",
-    category: "Naša planeta",
-    title:
-      "Posle 2.600 godina tišine, otvorena jedna od najbolje očuvanih etrurskih grobnica",
-    description:
-      "Pre nego što su Rimljani zavladali Mediteranom, Italijom su dominirali Etrurci. Nova grobnica stara 2.600 godina pruža redak uvid u život civilizacije koja je oblikovala svet iz kojeg je kasnije nastao Rim.",
-    imageSrc: "/news/etrurska-bronzana-kutija.jpg",
-    imageAlt:
-      "Detalj etrurske bronzane kutije za čuvanje dragocenosti iz 4. veka pre nove ere",
-  },
-  {
-    href: "/geopolitika/putin-govori-o-kraju-rata-ukrajina",
+    href: "/geopolitika/g7-nova-geopoliticka-strategija",
     category: "Geopolitika",
     title:
-      "Tramp poručio Putinu da je spreman da pomogne u okončanju rata u Ukrajini",
+      "G7 pokreće novu geopolitičku strategiju: manje zavisnosti od Kine, veći pritisak na Rusiju i podrška sporazumu sa Iranom",
     description:
-      "Posle najava o smirivanju krize sa Iranom, američki predsednik pokušava da otvori i ukrajinski front diplomatije.",
-    imageSrc: "/news/tramp-zelenski-oval-office.jpg",
-    imageAlt:
-      "Donald Tramp i Volodimir Zelenski tokom sastanka u Ovalnoj kancelariji Bele kuće",
+      "Lideri najrazvijenijih zapadnih ekonomija poslali su sa samita G7 poruku da ulaze u novu fazu geopolitičkog nadmetanja — kroz smanjenje zavisnosti od kineskih sirovina, nastavak podrške Ukrajini i podršku sporazumu između SAD i Irana.",
+    imageSrc: "/news/g7-summit-evian-2026.jpg",
+    imageAlt: "Leaders of G7 countries during the 2026 summit in Évian, France",
   },
   {
-    href: "/nasa-planeta/sta-kratki-video-snimci-rade-decjem-mozgu",
-    category: "Naša planeta",
+    href: "/geopolitika/g7-podrzala-sporazum-sad-iran",
+    category: "Geopolitika",
     title:
-      "Šta kratki video-snimci rade dečjem mozgu? Britanci pokrenuli laboratoriju da to konačno izmere",
+      "G7 podržala sporazum SAD i Irana: otvara li se put ka trajnoj stabilizaciji Bliskog istoka?",
     description:
-      "Britanski Nerve Lab koristi AI, nosivo skeniranje mozga i analizu medijskog sadržaja kako bi ispitao kako tempo, boje, zvuk i kratki video-formati utiču na dečju pažnju, razumevanje i emocionalni odgovor.",
-    imageSrc: "/news/nerve-lab-deca-ekrani-mozak.jpg",
+      "Lideri G7 podržali su sporazum Vašingtona i Teherana kojim je zaustavljena najnovija eskalacija u Persijskom zalivu, ali ostaje neizvesno da li dogovor može prerasti u trajniju stabilizaciju Bliskog istoka.",
+    imageSrc: "/news/g7-supports-us-iran-deal.jpg",
     imageAlt:
-      "Dete osvetljeno ekranom telefona, sa apstraktnim prikazom mozga i digitalnih signala",
+      "Minimalist editorial illustration of G7 support for a US-Iran agreement, with a stylized Middle East map and summit table",
   },
   {
-    href: "/obavestajni-izvori/nemacka-menja-bnd-najveca-reforma-obavestajne-sluzbe",
-    category: "Obaveštajni izvori",
-    title:
-      "Nemačka menja BND: najveća reforma obaveštajne službe u poslednjim decenijama",
+    href: "/geopolitika/london-kampanja-protiv-dezinformacija",
+    category: "Geopolitika",
+    title: "London pokreće kampanju od 7 miliona funti protiv dezinformacija",
     description:
-      "Berlin priprema najopsežniju reformu Savezne obaveštajne službe u poslednjim decenijama, sa fokusom na sajber operacije, elektronsko izviđanje i veštačku inteligenciju.",
-    imageSrc: "/news/germany-bnd-modernization.jpg",
+      "Gradske vlasti tvrde da koordinisane kampanje na društvenim mrežama narušavaju ugled britanske prestonice, zbog čega je pokrenut međunarodni program za promociju Londona i suzbijanje dezinformacija.",
+    imageSrc: "/news/london-disinformation-campaign.jpg",
     imageAlt:
-      "Editorial illustration about the modernization of Germany's Federal Intelligence Service (BND)",
+      "London skyline with digital message overlays symbolizing disinformation campaigns",
   },
 ];
 
