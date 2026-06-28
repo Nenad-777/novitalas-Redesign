@@ -143,6 +143,16 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/anthropic-upozorava-da-li-razvoj-vestacke-inteligencije-postaje-brzi-od-nase-sposobnosti-da-je-kontrolisemo",
+    title:
+      "Anthropic upozorava: da li razvoj veštačke inteligencije postaje brži od naše sposobnosti da je kontrolišemo?",
+    description:
+      "Jedna od vodećih svetskih kompanija za razvoj veštačke inteligencije upozorava da bi napredak najmoćnijih AI sistema uskoro mogao da nadmaši postojeće bezbednosne mehanizme namenjene njihovoj kontroli.",
+    imageSrc: "/news/ai-governance-safeguards.jpg",
+    datePublished: "2026-06-28",
+    author: "Novi Talas",
+  },
+  {
     path: "/nasa-planeta/hiljade-vespi-preplavile-rim-povodom-80-godina-italijanske-ikone",
     title: "Hiljade Vespi preplavile Rim povodom 80 godina italijanske ikone",
     description:
