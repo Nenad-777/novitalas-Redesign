@@ -19,6 +19,17 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/jedno-od-sedam-svetskih-cuda-ponovo-otkriva-svoje-tajne-aleksandrijski-svetionik-izrasta-iz-mora",
+    img: "/news/alexandria-lighthouse-underwater-ruins.jpg",
+    alt: "Conceptual underwater illustration inspired by the archaeological remains of the Lighthouse of Alexandria",
+    imageCredit:
+      "Konceptualna ilustracija zasnovana na arheološkim istraživanjima / Novi Talas",
+    title:
+      "Jedno od sedam svetskih čuda ponovo otkriva svoje tajne: Aleksandrijski svetionik izranja iz mora",
+    description:
+      "Arheolozi su iz Sredozemnog mora izvadili monumentalne kamene blokove nekadašnjeg Aleksandrijskog svetionika, otvarajući put ka njegovoj najpreciznijoj digitalnoj rekonstrukciji do sada.",
+  },
+  {
     href: "/nasa-planeta/anthropic-upozorava-da-li-razvoj-vestacke-inteligencije-postaje-brzi-od-nase-sposobnosti-da-je-kontrolisemo",
     img: "/news/ai-governance-safeguards.jpg",
     alt: "Minimalist editorial illustration about AI governance and safety",
