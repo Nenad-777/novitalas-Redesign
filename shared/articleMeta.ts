@@ -143,6 +143,16 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/pol-makartni-sa-rolingstonsima-na-novom-albumu-koji-izlazi-10-jula",
+    title:
+      "Pol Makartni sa Rolingstonsima na novom albumu koji izlazi 10. jula",
+    description:
+      "Više od šest decenija nakon što su Bitlsi i Rolingstonsi obeležili jednu od najuzbudljivijih epoha u istoriji popularne muzike, Pol Makartni ponovo gostuje na novom studijskom albumu slavnog britanskog benda. Njihova nova saradnja predstavlja simboličan susret dve najveće institucije rok muzike.",
+    imageSrc: "/news/paul-mccartney-rolling-stones.jpg",
+    datePublished: "2026-07-01",
+    author: "Novi Talas",
+  },
+  {
     path: "/nasa-planeta/jedno-od-sedam-svetskih-cuda-ponovo-otkriva-svoje-tajne-aleksandrijski-svetionik-izrasta-iz-mora",
     title:
       "Jedno od sedam svetskih čuda ponovo otkriva svoje tajne: Aleksandrijski svetionik izranja iz mora",

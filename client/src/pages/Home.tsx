@@ -10,18 +10,28 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/krim-u-vanrednoj-situaciji-nakon-masovnog-napada-dronovima",
-  category: "Geopolitika",
-  title:
-    "Krim u vanrednoj situaciji nakon masovnog napada dronovima: rat ulazi u novu fazu",
+  href: "/nasa-planeta/pol-makartni-sa-rolingstonsima-na-novom-albumu-koji-izlazi-10-jula",
+  category: "Naša planeta",
+  title: "Pol Makartni sa Rolingstonsima na novom albumu koji izlazi 10. jula",
   description:
-    "Prema pisanju međunarodnih medija, ruske vlasti koje upravljaju Krimom proglasile su vanrednu situaciju nakon jednog od najvećih talasa ukrajinskih napada dronovima od početka rata.",
-  imageSrc: "/news/crimea-drone-attacks.jpg",
+    "Više od šest decenija nakon što su Bitlsi i Rolingstonsi obeležili jednu od najuzbudljivijih epoha u istoriji popularne muzike, Pol Makartni ponovo gostuje na novom studijskom albumu slavnog britanskog benda.",
+  imageSrc: "/news/paul-mccartney-rolling-stones.jpg",
   imageAlt:
-    "Minimalist editorial illustration of Crimea following large-scale drone attacks",
+    "Ilustracija Pola Makartnija i Mika Džegera povodom nove saradnje na albumu Foreign Tongues.",
 };
 
 const ARTICLES = [
+  {
+    href: "/geopolitika/krim-u-vanrednoj-situaciji-nakon-masovnog-napada-dronovima",
+    category: "Geopolitika",
+    title:
+      "Krim u vanrednoj situaciji nakon masovnog napada dronovima: rat ulazi u novu fazu",
+    description:
+      "Prema pisanju međunarodnih medija, ruske vlasti koje upravljaju Krimom proglasile su vanrednu situaciju nakon jednog od najvećih talasa ukrajinskih napada dronovima od početka rata.",
+    imageSrc: "/news/crimea-drone-attacks.jpg",
+    imageAlt:
+      "Minimalist editorial illustration of Crimea following large-scale drone attacks",
+  },
   {
     href: "/nasa-planeta/jedno-od-sedam-svetskih-cuda-ponovo-otkriva-svoje-tajne-aleksandrijski-svetionik-izrasta-iz-mora",
     category: "Naša planeta",

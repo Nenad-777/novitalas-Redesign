@@ -19,6 +19,16 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/pol-makartni-sa-rolingstonsima-na-novom-albumu-koji-izlazi-10-jula",
+    img: "/news/paul-mccartney-rolling-stones.jpg",
+    alt: "Ilustracija Pola Makartnija i Mika Džegera povodom nove saradnje na albumu Foreign Tongues.",
+    imageCredit: "Novi Talas AI illustration",
+    title:
+      "Pol Makartni sa Rolingstonsima na novom albumu koji izlazi 10. jula",
+    description:
+      "Više od šest decenija nakon što su Bitlsi i Rolingstonsi obeležili jednu od najuzbudljivijih epoha u istoriji popularne muzike, Pol Makartni ponovo gostuje na novom studijskom albumu slavnog britanskog benda.",
+  },
+  {
     href: "/nasa-planeta/jedno-od-sedam-svetskih-cuda-ponovo-otkriva-svoje-tajne-aleksandrijski-svetionik-izrasta-iz-mora",
     img: "/news/alexandria-lighthouse-underwater-ruins.jpg",
     alt: "Conceptual underwater illustration inspired by the archaeological remains of the Lighthouse of Alexandria",
