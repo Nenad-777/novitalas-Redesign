@@ -244,6 +244,7 @@ import NasaPredstavilaPosaduArtemisIII from "./pages/nasa-predstavila-posadu-art
 import StaKratkiVideoSnimciRadeDecjemMozgu from "./pages/sta-kratki-video-snimci-rade-decjem-mozgu";
 import WhyPeopleBelieveLiesArticle from "./pages/WhyPeopleBelieveLiesArticle";
 import VespaRome80Article from "./pages/VespaRome80Article";
+import AlexandriaLighthouseArticle from "./pages/AlexandriaLighthouseArticle";
 
 /* ✅ NOVA VEST — Naša planeta */
 import NasaAnounce from "./pages/nasa-anounce";
@@ -694,6 +695,11 @@ function Router() {
         {/* =========================
             NAŠA PLANETA
            ========================= */}
+        <Route
+          path="/nasa-planeta/jedno-od-sedam-svetskih-cuda-ponovo-otkriva-svoje-tajne-aleksandrijski-svetionik-izrasta-iz-mora"
+          component={AlexandriaLighthouseArticle}
+        />
+
         <Route
           path="/nasa-planeta/anthropic-upozorava-da-li-razvoj-vestacke-inteligencije-postaje-brzi-od-nase-sposobnosti-da-je-kontrolisemo"
           component={AnthropicAIGovernanceArticle}

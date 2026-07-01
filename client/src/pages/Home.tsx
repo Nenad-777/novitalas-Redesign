@@ -23,6 +23,17 @@ const HERO_ARTICLE = {
 
 const ARTICLES = [
   {
+    href: "/nasa-planeta/jedno-od-sedam-svetskih-cuda-ponovo-otkriva-svoje-tajne-aleksandrijski-svetionik-izrasta-iz-mora",
+    category: "Naša planeta",
+    title:
+      "Jedno od sedam svetskih čuda ponovo otkriva svoje tajne: Aleksandrijski svetionik izranja iz mora",
+    description:
+      "Arheolozi su iz Sredozemnog mora izvadili monumentalne kamene blokove nekadašnjeg Aleksandrijskog svetionika, otvarajući put ka njegovoj najpreciznijoj digitalnoj rekonstrukciji do sada.",
+    imageSrc: "/news/alexandria-lighthouse-underwater-ruins.jpg",
+    imageAlt:
+      "Conceptual underwater illustration inspired by the archaeological remains of the Lighthouse of Alexandria",
+  },
+  {
     href: "/nasa-planeta/anthropic-upozorava-da-li-razvoj-vestacke-inteligencije-postaje-brzi-od-nase-sposobnosti-da-je-kontrolisemo",
     category: "Naša planeta",
     title:
@@ -74,17 +85,6 @@ const ARTICLES = [
       "Lideri najrazvijenijih zapadnih ekonomija poslali su sa samita G7 poruku da ulaze u novu fazu geopolitičkog nadmetanja — kroz smanjenje zavisnosti od kineskih sirovina, nastavak podrške Ukrajini i podršku sporazumu između SAD i Irana.",
     imageSrc: "/news/g7-summit-evian-2026.jpg",
     imageAlt: "Leaders of G7 countries during the 2026 summit in Évian, France",
-  },
-  {
-    href: "/geopolitika/g7-podrzala-sporazum-sad-iran",
-    category: "Geopolitika",
-    title:
-      "G7 podržala sporazum SAD i Irana: otvara li se put ka trajnoj stabilizaciji Bliskog istoka?",
-    description:
-      "Lideri G7 podržali su sporazum Vašingtona i Teherana kojim je zaustavljena najnovija eskalacija u Persijskom zalivu, ali ostaje neizvesno da li dogovor može prerasti u trajniju stabilizaciju Bliskog istoka.",
-    imageSrc: "/news/g7-supports-us-iran-deal.jpg",
-    imageAlt:
-      "Minimalist editorial illustration of G7 support for a US-Iran agreement, with a stylized Middle East map and summit table",
   },
 ];
 
