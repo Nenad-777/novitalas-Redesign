@@ -245,6 +245,7 @@ import StaKratkiVideoSnimciRadeDecjemMozgu from "./pages/sta-kratki-video-snimci
 import WhyPeopleBelieveLiesArticle from "./pages/WhyPeopleBelieveLiesArticle";
 import VespaRome80Article from "./pages/VespaRome80Article";
 import AlexandriaLighthouseArticle from "./pages/AlexandriaLighthouseArticle";
+import PolMakartniSaRolingstonsimaArticle from "./pages/pol-makartni-sa-rolingstonsima-na-novom-albumu-koji-izlazi-10-jula";
 
 /* ✅ NOVA VEST — Naša planeta */
 import NasaAnounce from "./pages/nasa-anounce";
@@ -695,6 +696,11 @@ function Router() {
         {/* =========================
             NAŠA PLANETA
            ========================= */}
+        <Route
+          path="/nasa-planeta/pol-makartni-sa-rolingstonsima-na-novom-albumu-koji-izlazi-10-jula"
+          component={PolMakartniSaRolingstonsimaArticle}
+        />
+
         <Route
           path="/nasa-planeta/jedno-od-sedam-svetskih-cuda-ponovo-otkriva-svoje-tajne-aleksandrijski-svetionik-izrasta-iz-mora"
           component={AlexandriaLighthouseArticle}
