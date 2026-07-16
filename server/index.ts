@@ -14,7 +14,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Build a merged lookup: seo.ts (explicit) takes priority over articleMeta.
-const mergedSeoLookup: Record<string, ReturnType<typeof buildSEOFromArticleMeta>> = {};
+const mergedSeoLookup: Record<
+  string,
+  ReturnType<typeof buildSEOFromArticleMeta>
+> = {};
 for (const meta of articleMeta) {
   mergedSeoLookup[meta.path] = buildSEOFromArticleMeta(meta);
 }
@@ -54,43 +57,44 @@ function injectSEO(html: string, route: string): string {
     .replace(/<title>.*?<\/title>/, `<title>${escapeHtml(seo.title)}</title>`)
     .replace(
       /(<meta\s+name="description"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(seo.description)}$2`,
+      `$1${escapeHtml(seo.description)}$2`
     )
     .replace(
-      /(<meta\s+property="og:type"\s+content=")[^"]*(")/,
-      `$1article$2`,
+      /(<meta\s+name="keywords"\s+content=")[^"]*(")/,
+      `$1${escapeHtml(seo.keywords ?? "")}$2`
     )
+    .replace(/(<meta\s+property="og:type"\s+content=")[^"]*(")/, `$1article$2`)
     .replace(
       /(<meta\s+property="og:title"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(seo.ogTitle)}$2`,
+      `$1${escapeHtml(seo.ogTitle)}$2`
     )
     .replace(
       /(<meta\s+property="og:description"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(seo.ogDescription)}$2`,
+      `$1${escapeHtml(seo.ogDescription)}$2`
     )
     .replace(
       /(<meta\s+property="og:url"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(seo.ogUrl)}$2`,
+      `$1${escapeHtml(seo.ogUrl)}$2`
     )
     .replace(
       /(<meta\s+property="og:image"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(seo.ogImage)}$2`,
+      `$1${escapeHtml(seo.ogImage)}$2`
     )
     .replace(
       /(<meta\s+name="twitter:card"\s+content=")[^"]*(")/,
-      `$1summary_large_image$2`,
+      `$1summary_large_image$2`
     )
     .replace(
       /(<meta\s+name="twitter:title"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(seo.twitterTitle)}$2`,
+      `$1${escapeHtml(seo.twitterTitle)}$2`
     )
     .replace(
       /(<meta\s+name="twitter:description"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(seo.twitterDescription)}$2`,
+      `$1${escapeHtml(seo.twitterDescription)}$2`
     )
     .replace(
       /(<meta\s+name="twitter:image"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(seo.twitterImage)}$2`,
+      `$1${escapeHtml(seo.twitterImage)}$2`
     );
 
   // Derive MIME type from the image URL's file extension.
@@ -114,7 +118,7 @@ function injectSEO(html: string, route: string): string {
 
   result = result.replace(
     /(<meta\s+property="og:image"[^>]*>)/,
-    `$1\n${extraOgImageTags}`,
+    `$1\n${extraOgImageTags}`
   );
 
   // Add og:article:published_time when a publish date is available.

@@ -38,6 +38,8 @@ export interface ArticleStaticMeta {
   datePublished?: string;
   /** Article author name. Defaults to "Novi Talas" if omitted. */
   author?: string;
+  /** Comma-separated article keywords for search engines that use the tag. */
+  keywords?: string;
 }
 
 /** Convert a relative image path to an absolute URL suitable for og:image. */
@@ -63,6 +65,7 @@ export function buildSEOFromArticleMeta(meta: ArticleStaticMeta) {
     twitterImage: ogImage,
     datePublished: meta.datePublished,
     author: meta.author,
+    keywords: meta.keywords,
   };
 }
 

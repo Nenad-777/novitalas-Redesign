@@ -18,6 +18,15 @@ type Article = {
 
 const ARTICLES: Article[] = [
   {
+    href: "/geopolitika/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana",
+    title:
+      "Od primirja do novih udara: kako je ponovo eskalirao sukob SAD i Irana",
+    description:
+      "Nekoliko dana nakon novih pregovora i nagoveštaja smirivanja tenzija, Bliski istok ponovo se našao na ivici ozbiljne eskalacije, dok Ormuski moreuz postaje jedna od ključnih tačaka globalne nestabilnosti.",
+    imageSrc: "/news/hormuz-chokepoint.jpg",
+    imageAlt: "Ormuski moreuz, strateški pomorski prolaz između Irana i Omana",
+  },
+  {
     href: "/geopolitika/krim-u-vanrednoj-situaciji-nakon-masovnog-napada-dronovima",
     title:
       "Krim u vanrednoj situaciji nakon masovnog napada dronovima: rat ulazi u novu fazu",

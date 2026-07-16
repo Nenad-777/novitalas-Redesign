@@ -44,13 +44,9 @@ export default function SeoMeta({
   imageSrc,
 }: SeoMetaProps) {
   useEffect(() => {
-    const setMeta = (
-      attrName: string,
-      attrValue: string,
-      content: string,
-    ) => {
+    const setMeta = (attrName: string, attrValue: string, content: string) => {
       let el = document.querySelector(
-        `meta[${attrName}="${attrValue}"]`,
+        `meta[${attrName}="${attrValue}"]`
       ) as HTMLMetaElement | null;
       if (!el) {
         el = document.createElement("meta");
@@ -89,13 +85,20 @@ export default function SeoMeta({
     if (explicit) {
       document.title = explicit.title;
       setMeta("name", "description", explicit.description);
+      if (explicit.keywords) {
+        setMeta("name", "keywords", explicit.keywords);
+      }
       setMeta("property", "og:type", "article");
       setMeta("property", "og:title", explicit.ogTitle);
       setMeta("property", "og:description", explicit.ogDescription);
       setMeta("property", "og:url", explicit.ogUrl);
       setMeta("property", "og:image", explicit.ogImage);
       if (explicit.datePublished) {
-        setMeta("property", "og:article:published_time", `${explicit.datePublished}T00:00:00+01:00`);
+        setMeta(
+          "property",
+          "og:article:published_time",
+          `${explicit.datePublished}T00:00:00+01:00`
+        );
       }
       setMeta("name", "twitter:title", explicit.twitterTitle);
       setMeta("name", "twitter:description", explicit.twitterDescription);
@@ -109,11 +112,11 @@ export default function SeoMeta({
           ogImage: explicit.ogImage,
           datePublished: explicit.datePublished,
           author: explicit.author,
-        }),
+        })
       );
     } else {
       // ── Priority 2: articleMeta registry entry ───────────────────────────
-      const registered = articleMeta.find((m) => m.path === path);
+      const registered = articleMeta.find(m => m.path === path);
       if (registered) {
         const ogImage = buildOgImageUrl(registered.imageSrc);
         const ogUrl = `${SITE_BASE}${registered.path}`;
@@ -125,7 +128,11 @@ export default function SeoMeta({
         setMeta("property", "og:url", ogUrl);
         setMeta("property", "og:image", ogImage);
         if (registered.datePublished) {
-          setMeta("property", "og:article:published_time", `${registered.datePublished}T00:00:00+01:00`);
+          setMeta(
+            "property",
+            "og:article:published_time",
+            `${registered.datePublished}T00:00:00+01:00`
+          );
         }
         setMeta("name", "twitter:title", registered.title);
         setMeta("name", "twitter:description", registered.description);
@@ -139,7 +146,7 @@ export default function SeoMeta({
             ogImage,
             datePublished: registered.datePublished,
             author: registered.author,
-          }),
+          })
         );
       } else if (title) {
         // ── Priority 3: direct props (inline fallback) ────────────────────
@@ -166,7 +173,7 @@ export default function SeoMeta({
             description: description ?? "",
             ogUrl,
             ogImage,
-          }),
+          })
         );
       }
     }

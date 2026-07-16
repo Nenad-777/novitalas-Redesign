@@ -75,52 +75,56 @@ function escapeHtml(str: string): string {
 function injectSEO(
   html: string,
   route: string,
-  seo?: ReturnType<typeof buildSEOFromArticleMeta>,
+  seo?: ReturnType<typeof buildSEOFromArticleMeta>
 ): string {
   const resolvedSeo = seo ?? seoData[route];
   if (!resolvedSeo) return html;
 
   let result = html
-    .replace(/<title>.*?<\/title>/, `<title>${escapeHtml(resolvedSeo.title)}</title>`)
+    .replace(
+      /<title>.*?<\/title>/,
+      `<title>${escapeHtml(resolvedSeo.title)}</title>`
+    )
     .replace(
       /(<meta\s+name="description"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(resolvedSeo.description)}$2`,
+      `$1${escapeHtml(resolvedSeo.description)}$2`
     )
     .replace(
-      /(<meta\s+property="og:type"\s+content=")[^"]*(")/,
-      `$1article$2`,
+      /(<meta\s+name="keywords"\s+content=")[^"]*(")/,
+      `$1${escapeHtml(resolvedSeo.keywords ?? "")}$2`
     )
+    .replace(/(<meta\s+property="og:type"\s+content=")[^"]*(")/, `$1article$2`)
     .replace(
       /(<meta\s+property="og:title"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(resolvedSeo.ogTitle)}$2`,
+      `$1${escapeHtml(resolvedSeo.ogTitle)}$2`
     )
     .replace(
       /(<meta\s+property="og:description"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(resolvedSeo.ogDescription)}$2`,
+      `$1${escapeHtml(resolvedSeo.ogDescription)}$2`
     )
     .replace(
       /(<meta\s+property="og:url"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(resolvedSeo.ogUrl)}$2`,
+      `$1${escapeHtml(resolvedSeo.ogUrl)}$2`
     )
     .replace(
       /(<meta\s+property="og:image"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(resolvedSeo.ogImage)}$2`,
+      `$1${escapeHtml(resolvedSeo.ogImage)}$2`
     )
     .replace(
       /(<meta\s+name="twitter:card"\s+content=")[^"]*(")/,
-      `$1summary_large_image$2`,
+      `$1summary_large_image$2`
     )
     .replace(
       /(<meta\s+name="twitter:title"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(resolvedSeo.twitterTitle)}$2`,
+      `$1${escapeHtml(resolvedSeo.twitterTitle)}$2`
     )
     .replace(
       /(<meta\s+name="twitter:description"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(resolvedSeo.twitterDescription)}$2`,
+      `$1${escapeHtml(resolvedSeo.twitterDescription)}$2`
     )
     .replace(
       /(<meta\s+name="twitter:image"\s+content=")[^"]*(")/,
-      `$1${escapeHtml(resolvedSeo.twitterImage)}$2`,
+      `$1${escapeHtml(resolvedSeo.twitterImage)}$2`
     );
 
   // Derive the MIME type from the image URL's file extension.
@@ -147,7 +151,7 @@ function injectSEO(
 
   result = result.replace(
     /(<meta\s+property="og:image"[^>]*>)/,
-    `$1\n${extraOgImageTags}`,
+    `$1\n${extraOgImageTags}`
   );
 
   // Add og:article:published_time when a publish date is available.
@@ -186,7 +190,7 @@ function injectSEO(
  */
 function generateSitemap(
   distPublicPath: string,
-  mergedSeoData: Record<string, ReturnType<typeof buildSEOFromArticleMeta>>,
+  mergedSeoData: Record<string, ReturnType<typeof buildSEOFromArticleMeta>>
 ): void {
   const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
 
@@ -202,18 +206,16 @@ function generateSitemap(
         `    <changefreq>${entry.changefreq}</changefreq>`,
         `    <priority>${entry.priority}</priority>`,
         `  </url>`,
-      ].join("\n"),
+      ].join("\n")
     );
   }
 
   // 2. Individual article pages (sorted by datePublished descending, then path)
-  const articleEntries = Object.entries(mergedSeoData).sort(
-    ([, a], [, b]) => {
-      const dateA = a.datePublished ?? "0000-00-00";
-      const dateB = b.datePublished ?? "0000-00-00";
-      return dateB.localeCompare(dateA);
-    },
-  );
+  const articleEntries = Object.entries(mergedSeoData).sort(([, a], [, b]) => {
+    const dateA = a.datePublished ?? "0000-00-00";
+    const dateB = b.datePublished ?? "0000-00-00";
+    return dateB.localeCompare(dateA);
+  });
 
   for (const [route, seo] of articleEntries) {
     const lastmod = seo.datePublished ?? today;
@@ -225,7 +227,7 @@ function generateSitemap(
         `    <changefreq>monthly</changefreq>`,
         `    <priority>0.7</priority>`,
         `  </url>`,
-      ].join("\n"),
+      ].join("\n")
     );
   }
 
@@ -239,7 +241,9 @@ function generateSitemap(
 
   const sitemapPath = path.join(distPublicPath, "sitemap.xml");
   fs.writeFileSync(sitemapPath, xml, "utf-8");
-  console.log(`\n✅ Sitemap written to dist/public/sitemap.xml (${articleEntries.length} articles + ${STATIC_SITEMAP_ENTRIES.length} static pages)`);
+  console.log(
+    `\n✅ Sitemap written to dist/public/sitemap.xml (${articleEntries.length} articles + ${STATIC_SITEMAP_ENTRIES.length} static pages)`
+  );
 }
 
 async function main() {
@@ -248,7 +252,7 @@ async function main() {
 
   if (!fs.existsSync(indexHtmlPath)) {
     console.error(
-      "ERROR: dist/public/index.html not found. Run `vite build` first.",
+      "ERROR: dist/public/index.html not found. Run `vite build` first."
     );
     process.exit(1);
   }
@@ -298,7 +302,7 @@ async function main() {
   generateSitemap(distPublicPath, mergedSeoData);
 }
 
-main().catch((err) => {
+main().catch(err => {
   console.error("generate-seo-pages failed:", err);
   process.exit(1);
 });
