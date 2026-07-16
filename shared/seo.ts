@@ -12,9 +12,34 @@ export interface SEOData {
   datePublished?: string;
   /** Author display name. Defaults to "Novi Talas" when omitted. */
   author?: string;
+  /** Comma-separated article keywords for search engines that use the tag. */
+  keywords?: string;
 }
 
 export const seoData: Record<string, SEOData> = {
+  "/geopolitika/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana":
+    {
+      title:
+        "Od primirja do novih udara: kako je ponovo eskalirao sukob SAD i Irana | Novi Talas",
+      description:
+        "Posle novih pregovora između Vašingtona i Teherana, situacija na Bliskom istoku ponovo se zaoštrava. Zašto je Ormuski moreuz ponovo u centru svetske geopolitike?",
+      ogTitle:
+        "Od primirja do novih udara: kako je ponovo eskalirao sukob SAD i Irana",
+      ogDescription:
+        "Posle novih pregovora između Vašingtona i Teherana, situacija na Bliskom istoku ponovo se zaoštrava. Zašto je Ormuski moreuz ponovo u centru svetske geopolitike?",
+      ogUrl:
+        "https://novitalas.org/geopolitika/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana",
+      ogImage: "https://novitalas.org/news/hormuz-chokepoint.jpg",
+      twitterTitle:
+        "Od primirja do novih udara: kako je ponovo eskalirao sukob SAD i Irana",
+      twitterDescription:
+        "Posle novih pregovora između Vašingtona i Teherana, situacija na Bliskom istoku ponovo se zaoštrava. Zašto je Ormuski moreuz ponovo u centru svetske geopolitike?",
+      twitterImage: "https://novitalas.org/news/hormuz-chokepoint.jpg",
+      datePublished: "2026-07-16",
+      author: "Novi Talas",
+      keywords:
+        "United States, Iran, Strait of Hormuz, Persian Gulf, Middle East, oil, geopolitics, SAD, Iran, Ormuski moreuz, Bliski istok, nafta, geopolitika, Novi Talas",
+    },
   "/geopolitika/60-dana-bliski-istok-sad-iran-dogovor": {
     title:
       "60 dana za Bliski istok: iza pregovora SAD i Irana krije se mnogo veći dogovor | Novi Talas",
@@ -198,25 +223,26 @@ export const seoData: Record<string, SEOData> = {
     author: "Novi Talas",
   },
 
-  "/srbija/senke-nad-ekranom-tiho-preuzimanje-ili-kontrolisano-gasenje-istine": {
-    title:
-      "SENKE NAD EKRANOM: Tiho preuzimanje ili kontrolisano gašenje istine — Novi Talas",
-    description:
-      "Proces pritiska na nezavisne medije retko je otvoren i nagao. Mnogo češće odvija se postepeno, kroz smene, promene uređivačke politike i sužavanje prostora javne reči. Slučaj N1 otvara pitanje granica takvog procesa u savremenom društvu.",
-    ogTitle:
-      "SENKE NAD EKRANOM: Tiho preuzimanje ili kontrolisano gašenje istine",
-    ogDescription:
-      "Proces pritiska na nezavisne medije retko je otvoren i nagao. Mnogo češće odvija se postepeno, kroz smene, promene uređivačke politike i sužavanje prostora javne reči. Slučaj N1 otvara pitanje granica takvog procesa u savremenom društvu.",
-    ogUrl:
-      "https://novitalas.org/srbija/senke-nad-ekranom-tiho-preuzimanje-ili-kontrolisano-gasenje-istine",
-    ogImage: "https://novitalas.org/news/iscezavanje-N1.jpg",
-    twitterTitle:
-      "SENKE NAD EKRANOM: Tiho preuzimanje ili kontrolisano gašenje istine",
-    twitterDescription:
-      "Proces pritiska na nezavisne medije retko je otvoren i nagao. Mnogo češće odvija se postepeno, kroz smene, promene uređivačke politike i sužavanje prostora javne reči.",
-    twitterImage: "https://novitalas.org/news/iscezavanje-N1.jpg",
-    datePublished: "2026-04-11",
-  },
+  "/srbija/senke-nad-ekranom-tiho-preuzimanje-ili-kontrolisano-gasenje-istine":
+    {
+      title:
+        "SENKE NAD EKRANOM: Tiho preuzimanje ili kontrolisano gašenje istine — Novi Talas",
+      description:
+        "Proces pritiska na nezavisne medije retko je otvoren i nagao. Mnogo češće odvija se postepeno, kroz smene, promene uređivačke politike i sužavanje prostora javne reči. Slučaj N1 otvara pitanje granica takvog procesa u savremenom društvu.",
+      ogTitle:
+        "SENKE NAD EKRANOM: Tiho preuzimanje ili kontrolisano gašenje istine",
+      ogDescription:
+        "Proces pritiska na nezavisne medije retko je otvoren i nagao. Mnogo češće odvija se postepeno, kroz smene, promene uređivačke politike i sužavanje prostora javne reči. Slučaj N1 otvara pitanje granica takvog procesa u savremenom društvu.",
+      ogUrl:
+        "https://novitalas.org/srbija/senke-nad-ekranom-tiho-preuzimanje-ili-kontrolisano-gasenje-istine",
+      ogImage: "https://novitalas.org/news/iscezavanje-N1.jpg",
+      twitterTitle:
+        "SENKE NAD EKRANOM: Tiho preuzimanje ili kontrolisano gašenje istine",
+      twitterDescription:
+        "Proces pritiska na nezavisne medije retko je otvoren i nagao. Mnogo češće odvija se postepeno, kroz smene, promene uređivačke politike i sužavanje prostora javne reči.",
+      twitterImage: "https://novitalas.org/news/iscezavanje-N1.jpg",
+      datePublished: "2026-04-11",
+    },
 
   "/geopolitika/iran": {
     title:
@@ -371,11 +397,9 @@ export const seoData: Record<string, SEOData> = {
       "Velike sile i kriza u Iranu: oprezna ravnoteža Moskve i Pekinga — Novi Talas",
     description:
       "Između podrške Teheranu i izbegavanja velikog rata. Rusija i Kina razvile su bliske odnose sa Iranom, ali njihove reakcije na aktuelnu krizu pokazuju znatno oprezniji pristup.",
-    ogTitle:
-      "Velike sile i kriza u Iranu: oprezna ravnoteža Moskve i Pekinga",
+    ogTitle: "Velike sile i kriza u Iranu: oprezna ravnoteža Moskve i Pekinga",
     ogDescription: "Između podrške Teheranu i izbegavanja velikog rata.",
-    ogUrl:
-      "https://novitalas.org/geopolitika/velike-sile-i-kriza-u-iranu",
+    ogUrl: "https://novitalas.org/geopolitika/velike-sile-i-kriza-u-iranu",
     ogImage: "https://novitalas.org/og/velike-sile-i-kriza-u-iranu.jpg",
     twitterTitle:
       "Velike sile i kriza u Iranu: oprezna ravnoteža Moskve i Pekinga",
@@ -428,8 +452,7 @@ export const seoData: Record<string, SEOData> = {
       "Rat senki: povratak obaveštajnih službi u središte geopolitike — Novi Talas",
     description:
       "Analiza globalnog povratka tajnih službi na poziciju ključnog instrumenta geopolitike u novom multipolarnom svetu.",
-    ogTitle:
-      "Rat senki: povratak obaveštajnih službi u središte geopolitike",
+    ogTitle: "Rat senki: povratak obaveštajnih službi u središte geopolitike",
     ogDescription:
       "Analiza globalnog povratka tajnih službi na poziciju ključnog instrumenta geopolitike u novom multipolarnom svetu.",
     ogUrl: "https://novitalas.org/obavestajni-izvori/rat-senki",
@@ -530,8 +553,7 @@ export const seoData: Record<string, SEOData> = {
       "Najveća ALMA mapa ikad: otkriveno skriveno jezgro Mlečnog puta — Novi Talas",
     description:
       "Radio-teleskop ALMA napravio je najtačniju mapu Centralne molekularne zone Mlečnog puta, otkrivajući njegovo skriveno jezgro.",
-    ogTitle:
-      "Najveća ALMA mapa ikad: otkriveno skriveno jezgro Mlečnog puta",
+    ogTitle: "Najveća ALMA mapa ikad: otkriveno skriveno jezgro Mlečnog puta",
     ogDescription:
       "Radio-teleskop ALMA napravio je najtačniju mapu Centralne molekularne zone Mlečnog puta, otkrivajući njegovo skriveno jezgro.",
     ogUrl: "https://novitalas.org/nasa-planeta/alma-skriveno-jezgro",
@@ -565,18 +587,15 @@ export const seoData: Record<string, SEOData> = {
   },
 
   "/nasa-planeta/kubrick": {
-    title:
-      "Stenli Kjubrik i tajna filma koji ne stari — Novi Talas",
+    title: "Stenli Kjubrik i tajna filma koji ne stari — Novi Talas",
     description:
       "Dok se svet ponovo okreće ceremoniji Oskara, jedan reditelj i dalje stoji izvan logike nagrada i podseća nas da film može biti umetnost mišljenja.",
-    ogTitle:
-      "Stenli Kjubrik i tajna filma koji ne stari",
+    ogTitle: "Stenli Kjubrik i tajna filma koji ne stari",
     ogDescription:
       "Dok se svet ponovo okreće ceremoniji Oskara, jedan reditelj i dalje stoji izvan logike nagrada i podseća nas da film može biti umetnost mišljenja.",
     ogUrl: "https://novitalas.org/nasa-planeta/kubrick",
     ogImage: "https://novitalas.org/kubrick.jpg",
-    twitterTitle:
-      "Stenli Kjubrik i tajna filma koji ne stari",
+    twitterTitle: "Stenli Kjubrik i tajna filma koji ne stari",
     twitterDescription:
       "Dok se svet ponovo okreće ceremoniji Oskara, jedan reditelj i dalje stoji izvan logike nagrada i podseća nas da film može biti umetnost mišljenja.",
     twitterImage: "https://novitalas.org/kubrick.jpg",
@@ -584,18 +603,15 @@ export const seoData: Record<string, SEOData> = {
   },
 
   "/nasa-planeta/ai-vest-svest": {
-    title:
-      "Da li je veštačka inteligencija već svesna? — Novi Talas",
+    title: "Da li je veštačka inteligencija već svesna? — Novi Talas",
     description:
       "Direktor kompanije Anthropic izjavio je da naučnici sve ozbiljnije razmatraju mogućnost da napredni AI sistemi razviju neku vrstu svesti.",
-    ogTitle:
-      "Da li je veštačka inteligencija već svesna?",
+    ogTitle: "Da li je veštačka inteligencija već svesna?",
     ogDescription:
       "Direktor kompanije Anthropic izjavio je da naučnici sve ozbiljnije razmatraju mogućnost da napredni AI sistemi razviju neku vrstu svesti.",
     ogUrl: "https://novitalas.org/nasa-planeta/ai-vest-svest",
     ogImage: "https://novitalas.org/ai-supercomputer-data-center.jpg",
-    twitterTitle:
-      "Da li je veštačka inteligencija već svesna?",
+    twitterTitle: "Da li je veštačka inteligencija već svesna?",
     twitterDescription:
       "Direktor kompanije Anthropic izjavio je da naučnici sve ozbiljnije razmatraju mogućnost da napredni AI sistemi razviju neku vrstu svesti.",
     twitterImage: "https://novitalas.org/ai-supercomputer-data-center.jpg",
@@ -607,8 +623,7 @@ export const seoData: Record<string, SEOData> = {
       "Kina odobrila prvi moždani implantat za komercijalnu upotrebu — Novi Talas",
     description:
       "Kineske vlasti odobrile su prvi moždani implantat namenjen komercijalnoj upotrebi, čime je napravljen značajan korak u razvoju tehnologije brain-computer interface.",
-    ogTitle:
-      "Kina odobrila prvi moždani implantat za komercijalnu upotrebu",
+    ogTitle: "Kina odobrila prvi moždani implantat za komercijalnu upotrebu",
     ogDescription:
       "Kineske vlasti odobrile su prvi moždani implantat namenjen komercijalnoj upotrebi, čime je napravljen značajan korak u razvoju tehnologije brain-computer interface.",
     ogUrl: "https://novitalas.org/nasa-planeta/kina-mozgani-implantat",
@@ -626,14 +641,12 @@ export const seoData: Record<string, SEOData> = {
       "IEA pokreće najveće oslobađanje naftnih rezervi u istoriji — Novi Talas",
     description:
       "Države članice Međunarodne agencije za energiju puštaju 400 miliona barela nafte iz strateških rezervi kako bi ublažile globalni energetski šok izazvan krizom u Persijskom zalivu.",
-    ogTitle:
-      "IEA pokreće najveće oslobađanje naftnih rezervi u istoriji",
+    ogTitle: "IEA pokreće najveće oslobađanje naftnih rezervi u istoriji",
     ogDescription:
       "Države članice Međunarodne agencije za energiju puštaju 400 miliona barela nafte iz strateških rezervi kako bi ublažile globalni energetski šok.",
     ogUrl: "https://novitalas.org/geopolitika/rezerve-nafte",
     ogImage: "https://novitalas.org/rezerve-nafte.jpg",
-    twitterTitle:
-      "IEA pokreće najveće oslobađanje naftnih rezervi u istoriji",
+    twitterTitle: "IEA pokreće najveće oslobađanje naftnih rezervi u istoriji",
     twitterDescription:
       "Države članice Međunarodne agencije za energiju puštaju 400 miliona barela nafte iz strateških rezervi kako bi ublažile globalni energetski šok.",
     twitterImage: "https://novitalas.org/rezerve-nafte.jpg",
@@ -679,18 +692,15 @@ export const seoData: Record<string, SEOData> = {
   },
 
   "/nasa-planeta/ko-je-dobio-oskara": {
-    title:
-      "Ko je dobio Oskara? — Novi Talas",
+    title: "Ko je dobio Oskara? — Novi Talas",
     description:
       "Na 98. dodeli nagrada Američke filmske akademije najveći trijumf ostvario je film One Battle After Another. Dok svet tone u ratove, Oskar nastavlja da blista.",
-    ogTitle:
-      "Ko je dobio Oskara?",
+    ogTitle: "Ko je dobio Oskara?",
     ogDescription:
       "Dok svet tone u ratove, razaranja i očigledan pad civilizacijskih normi, ceremonija Oskara nastavlja da blista, gotovo ravnodušna prema vremenu koje izgleda poraženo.",
     ogUrl: "https://novitalas.org/nasa-planeta/ko-je-dobio-oskara",
     ogImage: "https://novitalas.org/news/oscar-world.jpg",
-    twitterTitle:
-      "Ko je dobio Oskara?",
+    twitterTitle: "Ko je dobio Oskara?",
     twitterDescription:
       "Dok svet tone u ratove, razaranja i očigledan pad civilizacijskih normi, ceremonija Oskara nastavlja da blista, gotovo ravnodušna prema vremenu koje izgleda poraženo.",
     twitterImage: "https://novitalas.org/news/oscar-world.jpg",
@@ -703,8 +713,7 @@ export const seoData: Record<string, SEOData> = {
         "CIA pokrenula kampanju za regrutovanje kineskih vojnih oficira — Novi Talas",
       description:
         "Američka CIA pokrenula javnu kampanju usmerenu ka potencijalnim izvorima unutar kineske vojske, objavivši video na kineskom jeziku koji cilja nezadovoljne oficire.",
-      ogTitle:
-        "CIA pokrenula kampanju za regrutovanje kineskih vojnih oficira",
+      ogTitle: "CIA pokrenula kampanju za regrutovanje kineskih vojnih oficira",
       ogDescription:
         "Američka CIA pokrenula javnu kampanju usmerenu ka potencijalnim izvorima unutar kineske vojske, objavivši video na kineskom jeziku koji cilja nezadovoljne oficire.",
       ogUrl:
@@ -746,7 +755,8 @@ export const seoData: Record<string, SEOData> = {
       "Nepravilnosti na izborima: zakon predviđa krivičnu odgovornost za manipulacije",
     ogDescription:
       "Prijavljene nepravilnosti tokom izbora u Srbiji otvaraju pitanje krivične odgovornosti za manipulacije i zloupotrebe izbornog procesa.",
-    ogUrl: "https://novitalas.org/srbija/izbori-nepravilnosti-krivicna-odgovornost",
+    ogUrl:
+      "https://novitalas.org/srbija/izbori-nepravilnosti-krivicna-odgovornost",
     ogImage: "https://novitalas.org/news/izbori-odgovornost.jpg",
     twitterTitle:
       "Nepravilnosti na izborima: zakon predviđa krivičnu odgovornost za manipulacije",
@@ -757,15 +767,15 @@ export const seoData: Record<string, SEOData> = {
   },
 
   "/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca": {
-    title:
-      "Orion više od polovine puta do Meseca | NOVI TALAS",
+    title: "Orion više od polovine puta do Meseca | NOVI TALAS",
     description:
       "Misija Artemis II nalazi se u dubokom svemiru nakon što je Orion prešao više od 160.000 kilometara od Zemlje.",
     ogTitle:
       "Orion više od polovine puta do Meseca: misija Artemis II u dubokom svemiru",
     ogDescription:
       "Misija Artemis II nalazi se u dubokom svemiru nakon što je Orion prešao više od 160.000 kilometara od Zemlje.",
-    ogUrl: "https://novitalas.org/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca",
+    ogUrl:
+      "https://novitalas.org/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca",
     ogImage: "https://novitalas.org/news/artemis-landing.jpg",
     twitterTitle:
       "Orion više od polovine puta do Meseca: misija Artemis II u dubokom svemiru",
@@ -841,7 +851,8 @@ export const seoData: Record<string, SEOData> = {
       "Fotografije iz dubokog svemira: Artemis II beleži prizore sa lunarnog preleta",
     ogDescription:
       "NASA objavila nove snimke Zemlje i pomračenja iz perspektive misije Artemis II.",
-    ogUrl: "https://novitalas.org/nasa-planeta/artemis-ii-fotografije-dubokog-svemira",
+    ogUrl:
+      "https://novitalas.org/nasa-planeta/artemis-ii-fotografije-dubokog-svemira",
     ogImage: "https://novitalas.org/news/orion-earth-view.jpg",
     twitterTitle:
       "Fotografije iz dubokog svemira: Artemis II beleži prizore sa lunarnog preleta",

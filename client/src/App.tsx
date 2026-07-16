@@ -30,6 +30,7 @@ import G7UsIranAgreementArticle from "./pages/G7UsIranAgreementArticle";
 import G7GeopoliticalStrategyArticle from "./pages/G7GeopoliticalStrategyArticle";
 import PraguePublicMediaProtestArticle from "./pages/PraguePublicMediaProtestArticle";
 import CrimeaDroneAttacksArticle from "./pages/CrimeaDroneAttacksArticle";
+import OdPrimirjaDoNovihUdaraSadIran from "./pages/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana";
 
 import UkrajinaCetiriGodine from "./pages/ukrajina-cetiri-godine-rata";
 import IranProtesti2026 from "./pages/iran-protesti-2026";
@@ -285,6 +286,10 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana"
+          component={OdPrimirjaDoNovihUdaraSadIran}
+        />
         <Route
           path="/geopolitika/mundijal-na-granici-fudbal-vize-i-politika-moci"
           component={MundijalNaGraniciFudbalVizeIPolitikaMoci}

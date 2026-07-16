@@ -10,14 +10,14 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/nasa-planeta/pol-makartni-sa-rolingstonsima-na-novom-albumu-koji-izlazi-10-jula",
-  category: "Naša planeta",
-  title: "Pol Makartni sa Rolingstonsima na novom albumu koji izlazi 10. jula",
+  href: "/geopolitika/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana",
+  category: "Geopolitika",
+  title:
+    "Od primirja do novih udara: kako je ponovo eskalirao sukob SAD i Irana",
   description:
-    "Više od šest decenija nakon što su Bitlsi i Rolingstonsi obeležili jednu od najuzbudljivijih epoha u istoriji popularne muzike, Pol Makartni ponovo gostuje na novom studijskom albumu slavnog britanskog benda.",
-  imageSrc: "/news/paul-mccartney-rolling-stones.jpg",
-  imageAlt:
-    "Ilustracija Pola Makartnija i Mika Džegera povodom nove saradnje na albumu Foreign Tongues.",
+    "Nekoliko dana nakon novih pregovora i nagoveštaja smirivanja tenzija, Bliski istok ponovo se našao na ivici ozbiljne eskalacije, dok Ormuski moreuz postaje jedna od ključnih tačaka globalne nestabilnosti.",
+  imageSrc: "/news/hormuz-chokepoint.jpg",
+  imageAlt: "Ormuski moreuz, strateški pomorski prolaz između Irana i Omana",
 };
 
 const ARTICLES = [

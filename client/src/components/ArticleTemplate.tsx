@@ -13,7 +13,12 @@ type ArticleInlineImage = {
   heightClass?: string;
 };
 
-type ArticleParagraph = string | ArticleInlineImage;
+type ArticleSectionHeading = {
+  type: "heading";
+  text: string;
+};
+
+type ArticleParagraph = string | ArticleInlineImage | ArticleSectionHeading;
 
 const EM_DASH_REPLACEMENT = ",";
 
@@ -38,7 +43,7 @@ type ArticleTemplateProps = {
   imageAlt?: string;
   imageCredit?: string;
   imageHeightClass?: string;
-  imageFirst?: boolean; 
+  imageFirst?: boolean;
   paragraphs: ArticleParagraph[];
   infoBox?: InfoBox;
   backHref: string;
@@ -85,7 +90,7 @@ export default function ArticleTemplate({
         style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
       >
         <article className="max-w-[860px] mx-auto px-5">
-                    {/* Slika pre naslova */}
+          {/* Slika pre naslova */}
           {imageFirst && imageSrc ? (
             <div className="mb-8">
               <div
@@ -211,12 +216,22 @@ export default function ArticleTemplate({
                           ? "#cfcac0"
                           : "#b7b2aa"
                         : idx === 0
-                        ? "#222"
-                        : "#333",
+                          ? "#222"
+                          : "#333",
                     }}
                   >
                     {normalizeEmDashes(p)}
                   </p>
+                ) : p.type === "heading" ? (
+                  <h2
+                    className="mt-10 text-[26px] md:text-[32px] font-bold leading-[1.2]"
+                    style={{
+                      fontFamily: "'Playfair Display', serif",
+                      color: isDark ? "#e0ddd5" : "#111",
+                    }}
+                  >
+                    {p.text}
+                  </h2>
                 ) : (
                   <figure
                     className="mt-5 border overflow-hidden"
@@ -233,9 +248,7 @@ export default function ArticleTemplate({
                       decoding="async"
                     />
                     {p.credit ? (
-                      <figcaption
-                        className="photo-credit px-2 pb-2"
-                      >
+                      <figcaption className="photo-credit px-2 pb-2">
                         {p.credit}
                       </figcaption>
                     ) : null}
