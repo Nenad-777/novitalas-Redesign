@@ -28,6 +28,7 @@ import EvropaTraziNovuFormuluZaUkrajinu from "./pages/evropa-trazi-novu-formulu-
 import LondonDisinformationCampaignArticle from "./pages/LondonDisinformationCampaignArticle";
 import G7UsIranAgreementArticle from "./pages/G7UsIranAgreementArticle";
 import G7GeopoliticalStrategyArticle from "./pages/G7GeopoliticalStrategyArticle";
+import HormuzBabElMandebEnergyArticle from "./pages/HormuzBabElMandebEnergyArticle";
 import PraguePublicMediaProtestArticle from "./pages/PraguePublicMediaProtestArticle";
 import CrimeaDroneAttacksArticle from "./pages/CrimeaDroneAttacksArticle";
 import OdPrimirjaDoNovihUdaraSadIran from "./pages/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana";
@@ -570,6 +571,11 @@ function Router() {
         <Route
           path="/geopolitika/g7-nova-geopoliticka-strategija"
           component={G7GeopoliticalStrategyArticle}
+        />
+
+        <Route
+          path="/geopolitika/dva-moreuza-jedan-rat-sukob-sad-i-irana-ugrozava-svetske-energetske-puteve"
+          component={HormuzBabElMandebEnergyArticle}
         />
 
         <Route

@@ -10,17 +10,28 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana",
+  href: "/geopolitika/dva-moreuza-jedan-rat-sukob-sad-i-irana-ugrozava-svetske-energetske-puteve",
   category: "Geopolitika",
   title:
-    "Od primirja do novih udara: kako je ponovo eskalirao sukob SAD i Irana",
+    "Dva moreuza, jedan rat: sukob SAD i Irana ugrožava svetske energetske puteve",
   description:
-    "Nekoliko dana nakon novih pregovora i nagoveštaja smirivanja tenzija, Bliski istok ponovo se našao na ivici ozbiljne eskalacije, dok Ormuski moreuz postaje jedna od ključnih tačaka globalne nestabilnosti.",
-  imageSrc: "/news/hormuz-chokepoint.jpg",
-  imageAlt: "Ormuski moreuz, strateški pomorski prolaz između Irana i Omana",
+    "Napad Huta na saudijske tankere u Crvenom moru otvorio je drugi front na putevima svetske nafte. Dok Iran gotovo zatvara Ormuski moreuz, njegov jemenski saveznik ugrožava Bab el Mandeb — prolaz kojim je Saudijska Arabija pokušavala da zaobiđe krizu u Persijskom zalivu.",
+  imageSrc: "/news/hormuz-bab-el-mandeb-energy-chokepoints.jpg",
+  imageAlt:
+    "Grafička ilustracija dva ugrožena energetska prolaza, Ormuskog moreuza i Bab el Mandeba",
 };
 
 const ARTICLES = [
+  {
+    href: "/geopolitika/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana",
+    category: "Geopolitika",
+    title:
+      "Od primirja do novih udara: kako je ponovo eskalirao sukob SAD i Irana",
+    description:
+      "Nekoliko dana nakon novih pregovora i nagoveštaja smirivanja tenzija, Bliski istok ponovo se našao na ivici ozbiljne eskalacije, dok Ormuski moreuz postaje jedna od ključnih tačaka globalne nestabilnosti.",
+    imageSrc: "/news/hormuz-chokepoint.jpg",
+    imageAlt: "Ormuski moreuz, strateški pomorski prolaz između Irana i Omana",
+  },
   {
     href: "/geopolitika/krim-u-vanrednoj-situaciji-nakon-masovnog-napada-dronovima",
     category: "Geopolitika",
@@ -412,6 +423,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 min-[420px]:grid-cols-2 gap-4">
                   <SmallArticleCard variant="tile" {...ARTICLES[3]} />
                   <SmallArticleCard variant="tile" {...ARTICLES[4]} />
+                  <SmallArticleCard variant="tile" {...ARTICLES[5]} />
                 </div>
               </div>
             </FadeIn>
@@ -483,9 +495,10 @@ export default function Home() {
               </section>
             </FadeIn>
             <FadeIn>
-              <section className="grid grid-cols-2 gap-8">
+              <section className="grid grid-cols-2 lg:grid-cols-3 gap-8">
                 <DesktopTileStory article={ARTICLES[3]} />
                 <DesktopTileStory article={ARTICLES[4]} />
+                <DesktopTileStory article={ARTICLES[5]} />
               </section>
             </FadeIn>
           </div>

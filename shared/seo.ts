@@ -17,6 +17,31 @@ export interface SEOData {
 }
 
 export const seoData: Record<string, SEOData> = {
+  "/geopolitika/dva-moreuza-jedan-rat-sukob-sad-i-irana-ugrozava-svetske-energetske-puteve":
+    {
+      title:
+        "Dva moreuza, jedan rat: sukob SAD i Irana ugrožava svetske energetske puteve | Novi Talas",
+      description:
+        "Napad Huta na saudijske tankere ugrozio je Bab el Mandeb, dok rat SAD i Irana remeti plovidbu kroz Ormuski moreuz i podiže cenu nafte.",
+      ogTitle:
+        "Dva moreuza, jedan rat: sukob SAD i Irana ugrožava svetske energetske puteve",
+      ogDescription:
+        "Napad Huta na saudijske tankere ugrozio je Bab el Mandeb, dok rat SAD i Irana remeti plovidbu kroz Ormuski moreuz i podiže cenu nafte.",
+      ogUrl:
+        "https://novitalas.org/geopolitika/dva-moreuza-jedan-rat-sukob-sad-i-irana-ugrozava-svetske-energetske-puteve",
+      ogImage:
+        "https://novitalas.org/news/hormuz-bab-el-mandeb-energy-chokepoints.jpg",
+      twitterTitle:
+        "Dva moreuza, jedan rat: sukob SAD i Irana ugrožava svetske energetske puteve",
+      twitterDescription:
+        "Napad Huta na saudijske tankere ugrozio je Bab el Mandeb, dok rat SAD i Irana remeti plovidbu kroz Ormuski moreuz i podiže cenu nafte.",
+      twitterImage:
+        "https://novitalas.org/news/hormuz-bab-el-mandeb-energy-chokepoints.jpg",
+      datePublished: "2026-07-23",
+      author: "Novi Talas",
+      keywords:
+        "Ormuski moreuz, Bab el Mandeb, SAD i Iran, Huti, Saudijska Arabija, Crveno more, cena nafte, energetska bezbednost, geopolitika, Novi Talas",
+    },
   "/geopolitika/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana":
     {
       title:

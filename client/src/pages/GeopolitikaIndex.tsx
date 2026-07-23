@@ -18,6 +18,16 @@ type Article = {
 
 const ARTICLES: Article[] = [
   {
+    href: "/geopolitika/dva-moreuza-jedan-rat-sukob-sad-i-irana-ugrozava-svetske-energetske-puteve",
+    title:
+      "Dva moreuza, jedan rat: sukob SAD i Irana ugrožava svetske energetske puteve",
+    description:
+      "Napad Huta na saudijske tankere u Crvenom moru otvorio je drugi front na putevima svetske nafte. Dok Iran gotovo zatvara Ormuski moreuz, njegov jemenski saveznik ugrožava Bab el Mandeb — prolaz kojim je Saudijska Arabija pokušavala da zaobiđe krizu u Persijskom zalivu.",
+    imageSrc: "/news/hormuz-bab-el-mandeb-energy-chokepoints.jpg",
+    imageAlt:
+      "Grafička ilustracija dva ugrožena energetska prolaza, Ormuskog moreuza i Bab el Mandeba",
+  },
+  {
     href: "/geopolitika/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana",
     title:
       "Od primirja do novih udara: kako je ponovo eskalirao sukob SAD i Irana",
