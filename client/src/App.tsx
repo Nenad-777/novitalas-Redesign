@@ -248,6 +248,7 @@ import WhyPeopleBelieveLiesArticle from "./pages/WhyPeopleBelieveLiesArticle";
 import VespaRome80Article from "./pages/VespaRome80Article";
 import AlexandriaLighthouseArticle from "./pages/AlexandriaLighthouseArticle";
 import PolMakartniSaRolingstonsimaArticle from "./pages/pol-makartni-sa-rolingstonsima-na-novom-albumu-koji-izlazi-10-jula";
+import PlanetaOstajeBezDahaArticle from "./pages/planeta-ostaje-bez-daha-kiseonik-nestaje-iz-okeana-jezera-i-reka";
 
 /* ✅ NOVA VEST — Naša planeta */
 import NasaAnounce from "./pages/nasa-anounce";
@@ -707,6 +708,11 @@ function Router() {
         {/* =========================
             NAŠA PLANETA
            ========================= */}
+        <Route
+          path="/nasa-planeta/planeta-ostaje-bez-daha-kiseonik-nestaje-iz-okeana-jezera-i-reka"
+          component={PlanetaOstajeBezDahaArticle}
+        />
+
         <Route
           path="/nasa-planeta/pol-makartni-sa-rolingstonsima-na-novom-albumu-koji-izlazi-10-jula"
           component={PolMakartniSaRolingstonsimaArticle}
