@@ -24,6 +24,8 @@ export interface ArticleStaticMeta {
   path: string;
   /** Article headline (without site name) */
   title: string;
+  /** Exact document title, when the standard brand suffix should be overridden. */
+  seoTitle?: string;
   /** Short description used for meta description and og:description */
   description: string;
   /**
@@ -52,7 +54,7 @@ export function buildOgImageUrl(imageSrc: string): string {
 export function buildSEOFromArticleMeta(meta: ArticleStaticMeta) {
   const ogImage = buildOgImageUrl(meta.imageSrc);
   const ogUrl = `${SITE_BASE}${meta.path}`;
-  const fullTitle = `${meta.title}${BRAND_SUFFIX}`;
+  const fullTitle = meta.seoTitle ?? `${meta.title}${BRAND_SUFFIX}`;
   return {
     title: fullTitle,
     description: meta.description,
@@ -145,6 +147,19 @@ export function buildJsonLd(meta: {
  * produce the correct static HTML / HTTP response with full OG + Twitter tags.
  */
 export const articleMeta: ArticleStaticMeta[] = [
+  {
+    path: "/nasa-planeta/planeta-ostaje-bez-daha-kiseonik-nestaje-iz-okeana-jezera-i-reka",
+    title: "Planeta ostaje bez daha: kiseonik nestaje iz okeana, jezera i reka",
+    seoTitle:
+      "Planeta ostaje bez daha: kiseonik nestaje iz okeana, jezera i reka | Novi Talas",
+    description:
+      "Novo međunarodno istraživanje pokazuje da količina kiseonika ubrzano opada u okeanima, rekama i jezerima širom sveta. Naučnici upozoravaju da bi deoksigenacija mogla postati jedna od ključnih planetarnih granica.",
+    imageSrc: "/news/ocean-deep.jpg",
+    datePublished: "2026-07-25",
+    author: "Novi Talas",
+    keywords:
+      "kiseonik, okeani, mora, jezera, reke, deoksigenacija, klimatske promene, ekologija, biodiverzitet, Naša planeta, Novi Talas",
+  },
   {
     path: "/nasa-planeta/pol-makartni-sa-rolingstonsima-na-novom-albumu-koji-izlazi-10-jula",
     title:

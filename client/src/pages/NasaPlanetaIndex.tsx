@@ -19,6 +19,15 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/planeta-ostaje-bez-daha-kiseonik-nestaje-iz-okeana-jezera-i-reka",
+    img: "/news/ocean-deep.jpg",
+    alt: "Bleached coral on the seabed beneath a thinning school of fish, symbolizing the global loss of oxygen from aquatic ecosystems.",
+    imageCredit: "AI editorial illustration / Novi Talas",
+    title: "Planeta ostaje bez daha: kiseonik nestaje iz okeana, jezera i reka",
+    description:
+      "Novo međunarodno istraživanje pokazuje da količina rastvorenog kiseonika ubrzano opada u okeanima, morima, rekama i jezerima, što predstavlja jednu od najvećih pretnji vodenim ekosistemima i budućnosti života na Zemlji.",
+  },
+  {
     href: "/nasa-planeta/pol-makartni-sa-rolingstonsima-na-novom-albumu-koji-izlazi-10-jula",
     img: "/news/paul-mccartney-rolling-stones.jpg",
     alt: "Ilustracija Pola Makartnija i Mika Džegera povodom nove saradnje na albumu Foreign Tongues.",

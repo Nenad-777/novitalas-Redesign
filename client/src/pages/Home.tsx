@@ -44,6 +44,16 @@ const ARTICLES = [
       "Minimalist editorial illustration of Crimea following large-scale drone attacks",
   },
   {
+    href: "/nasa-planeta/planeta-ostaje-bez-daha-kiseonik-nestaje-iz-okeana-jezera-i-reka",
+    category: "Naša planeta",
+    title: "Planeta ostaje bez daha: kiseonik nestaje iz okeana, jezera i reka",
+    description:
+      "Novo međunarodno istraživanje pokazuje da količina rastvorenog kiseonika ubrzano opada u okeanima, morima, rekama i jezerima, što predstavlja jednu od najvećih pretnji vodenim ekosistemima i budućnosti života na Zemlji.",
+    imageSrc: "/news/ocean-deep.jpg",
+    imageAlt:
+      "Bleached coral on the seabed beneath a thinning school of fish, symbolizing the global loss of oxygen from aquatic ecosystems.",
+  },
+  {
     href: "/nasa-planeta/jedno-od-sedam-svetskih-cuda-ponovo-otkriva-svoje-tajne-aleksandrijski-svetionik-izrasta-iz-mora",
     category: "Naša planeta",
     title:
