@@ -18,6 +18,16 @@ type Article = {
 
 const ARTICLES: Article[] = [
   {
+    href: "/geopolitika/nova-orbita-srpske-diplomatije-zasto-se-beograd-priblizava-vasingtonu-bas-sada",
+    title:
+      "Nova orbita srpske diplomatije: zašto se Beograd približava Vašingtonu baš sada",
+    description:
+      "Dok Srbija prolazi kroz jednu od najdubljih društvenih i političkih kriza u poslednjoj deceniji, Beograd i Vašington otvaraju novo poglavlje međusobnih odnosa.",
+    imageSrc: "/news/serbia-artemis-accords.jpg",
+    imageAlt:
+      "Marko Đurić i zamenik administratora NASA Matt Anderson nakon potpisivanja sporazuma Artemis u sedištu NASA u Vašingtonu.",
+  },
+  {
     href: "/geopolitika/dva-moreuza-jedan-rat-sukob-sad-i-irana-ugrozava-svetske-energetske-puteve",
     title:
       "Dva moreuza, jedan rat: sukob SAD i Irana ugrožava svetske energetske puteve",

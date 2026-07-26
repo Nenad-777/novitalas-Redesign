@@ -31,6 +31,7 @@ import G7GeopoliticalStrategyArticle from "./pages/G7GeopoliticalStrategyArticle
 import HormuzBabElMandebEnergyArticle from "./pages/HormuzBabElMandebEnergyArticle";
 import PraguePublicMediaProtestArticle from "./pages/PraguePublicMediaProtestArticle";
 import CrimeaDroneAttacksArticle from "./pages/CrimeaDroneAttacksArticle";
+import NovaOrbitaSrpskeDiplomatije from "./pages/nova-orbita-srpske-diplomatije-zasto-se-beograd-priblizava-vasingtonu-bas-sada";
 import OdPrimirjaDoNovihUdaraSadIran from "./pages/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana";
 
 import UkrajinaCetiriGodine from "./pages/ukrajina-cetiri-godine-rata";
@@ -577,6 +578,11 @@ function Router() {
         <Route
           path="/geopolitika/dva-moreuza-jedan-rat-sukob-sad-i-irana-ugrozava-svetske-energetske-puteve"
           component={HormuzBabElMandebEnergyArticle}
+        />
+
+        <Route
+          path="/geopolitika/nova-orbita-srpske-diplomatije-zasto-se-beograd-priblizava-vasingtonu-bas-sada"
+          component={NovaOrbitaSrpskeDiplomatije}
         />
 
         <Route
