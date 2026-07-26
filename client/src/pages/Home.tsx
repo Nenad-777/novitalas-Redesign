@@ -10,29 +10,18 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/dva-moreuza-jedan-rat-sukob-sad-i-irana-ugrozava-svetske-energetske-puteve",
+  href: "/geopolitika/nova-orbita-srpske-diplomatije-zasto-se-beograd-priblizava-vasingtonu-bas-sada",
   category: "Geopolitika",
   title:
-    "Dva moreuza, jedan rat: sukob SAD i Irana ugrožava svetske energetske puteve",
+    "Nova orbita srpske diplomatije: zašto se Beograd približava Vašingtonu baš sada",
   description:
-    "Napad Huta na saudijske tankere u Crvenom moru otvorio je drugi front na putevima svetske nafte. Dok Iran gotovo zatvara Ormuski moreuz, njegov jemenski saveznik ugrožava Bab el Mandeb — prolaz kojim je Saudijska Arabija pokušavala da zaobiđe krizu u Persijskom zalivu.",
-  imageSrc: "/news/hormuz-bab-el-mandeb-energy-chokepoints.jpg",
+    "Dok Srbija prolazi kroz jednu od najdubljih društvenih i političkih kriza u poslednjoj deceniji, Beograd i Vašington otvaraju novo poglavlje međusobnih odnosa.",
+  imageSrc: "/news/serbia-artemis-accords.jpg",
   imageAlt:
-    "Grafička ilustracija dva ugrožena energetska prolaza, Ormuskog moreuza i Bab el Mandeba",
+    "Marko Đurić i zamenik administratora NASA Matt Anderson nakon potpisivanja sporazuma Artemis u sedištu NASA u Vašingtonu.",
 };
 
 const ARTICLES = [
-  {
-    href: "/geopolitika/nova-orbita-srpske-diplomatije-zasto-se-beograd-priblizava-vasingtonu-bas-sada",
-    category: "Geopolitika",
-    title:
-      "Nova orbita srpske diplomatije: zašto se Beograd približava Vašingtonu baš sada",
-    description:
-      "Dok Srbija prolazi kroz jednu od najdubljih društvenih i političkih kriza u poslednjoj deceniji, Beograd i Vašington otvaraju novo poglavlje međusobnih odnosa.",
-    imageSrc: "/news/serbia-artemis-accords.jpg",
-    imageAlt:
-      "Marko Đurić i zamenik administratora NASA Matt Anderson nakon potpisivanja sporazuma Artemis u sedištu NASA u Vašingtonu.",
-  },
   {
     href: "/geopolitika/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana",
     category: "Geopolitika",
