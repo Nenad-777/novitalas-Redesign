@@ -148,6 +148,20 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/nova-orbita-srpske-diplomatije-zasto-se-beograd-priblizava-vasingtonu-bas-sada",
+    title:
+      "Nova orbita srpske diplomatije: zašto se Beograd približava Vašingtonu baš sada",
+    seoTitle:
+      "Nova orbita srpske diplomatije: zašto se Beograd približava Vašingtonu baš sada",
+    description:
+      "Pokretanje Strateškog dijaloga Srbije i SAD i pristupanje sporazumima Artemis otvaraju pitanje da li Beograd ulazi u novu fazu odnosa sa Vašingtonom u trenutku duboke unutrašnje političke krize.",
+    imageSrc: "/news/serbia-artemis-accords.jpg",
+    datePublished: "2026-07-26",
+    author: "Novi Talas",
+    keywords:
+      "Srbija, SAD, Vašington, Strateški dijalog, sporazumi Artemis, Marko Đurić, Marco Rubio, diplomatija, geopolitika, Novi Talas",
+  },
+  {
     path: "/nasa-planeta/planeta-ostaje-bez-daha-kiseonik-nestaje-iz-okeana-jezera-i-reka",
     title: "Planeta ostaje bez daha: kiseonik nestaje iz okeana, jezera i reka",
     seoTitle:

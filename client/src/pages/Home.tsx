@@ -23,6 +23,17 @@ const HERO_ARTICLE = {
 
 const ARTICLES = [
   {
+    href: "/geopolitika/nova-orbita-srpske-diplomatije-zasto-se-beograd-priblizava-vasingtonu-bas-sada",
+    category: "Geopolitika",
+    title:
+      "Nova orbita srpske diplomatije: zašto se Beograd približava Vašingtonu baš sada",
+    description:
+      "Dok Srbija prolazi kroz jednu od najdubljih društvenih i političkih kriza u poslednjoj deceniji, Beograd i Vašington otvaraju novo poglavlje međusobnih odnosa.",
+    imageSrc: "/news/serbia-artemis-accords.jpg",
+    imageAlt:
+      "Marko Đurić i zamenik administratora NASA Matt Anderson nakon potpisivanja sporazuma Artemis u sedištu NASA u Vašingtonu.",
+  },
+  {
     href: "/geopolitika/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana",
     category: "Geopolitika",
     title:
