@@ -23,6 +23,27 @@ const HERO_ARTICLE = {
 
 const ARTICLES = [
   {
+    href: "/nasa-planeta/planeta-ostaje-bez-daha-kiseonik-nestaje-iz-okeana-jezera-i-reka",
+    category: "Naša planeta",
+    title: "Planeta ostaje bez daha: kiseonik nestaje iz okeana, jezera i reka",
+    description:
+      "Novo međunarodno istraživanje pokazuje da količina rastvorenog kiseonika ubrzano opada u okeanima, morima, rekama i jezerima, što predstavlja jednu od najvećih pretnji vodenim ekosistemima i budućnosti života na Zemlji.",
+    imageSrc: "/news/ocean-deep.jpg",
+    imageAlt:
+      "Bleached coral on the seabed beneath a thinning school of fish, symbolizing the global loss of oxygen from aquatic ecosystems.",
+  },
+  {
+    href: "/geopolitika/dva-moreuza-jedan-rat-sukob-sad-i-irana-ugrozava-svetske-energetske-puteve",
+    category: "Geopolitika",
+    title:
+      "Dva moreuza, jedan rat: sukob SAD i Irana ugrožava svetske energetske puteve",
+    description:
+      "Napad Huta na saudijske tankere u Crvenom moru otvorio je drugi front na putevima svetske nafte. Dok Iran gotovo zatvara Ormuski moreuz, njegov jemenski saveznik ugrožava Bab el Mandeb — prolaz kojim je Saudijska Arabija pokušavala da zaobiđe krizu u Persijskom zalivu.",
+    imageSrc: "/news/hormuz-bab-el-mandeb-energy-chokepoints.jpg",
+    imageAlt:
+      "Grafička ilustracija dva ugrožena energetska prolaza, Ormuskog moreuza i Bab el Mandeba",
+  },
+  {
     href: "/geopolitika/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana",
     category: "Geopolitika",
     title:
@@ -33,25 +54,15 @@ const ARTICLES = [
     imageAlt: "Ormuski moreuz, strateški pomorski prolaz između Irana i Omana",
   },
   {
-    href: "/geopolitika/krim-u-vanrednoj-situaciji-nakon-masovnog-napada-dronovima",
-    category: "Geopolitika",
-    title:
-      "Krim u vanrednoj situaciji nakon masovnog napada dronovima: rat ulazi u novu fazu",
-    description:
-      "Prema pisanju međunarodnih medija, ruske vlasti koje upravljaju Krimom proglasile su vanrednu situaciju nakon jednog od najvećih talasa ukrajinskih napada dronovima od početka rata.",
-    imageSrc: "/news/crimea-drone-attacks.jpg",
-    imageAlt:
-      "Minimalist editorial illustration of Crimea following large-scale drone attacks",
-  },
-  {
-    href: "/nasa-planeta/planeta-ostaje-bez-daha-kiseonik-nestaje-iz-okeana-jezera-i-reka",
+    href: "/nasa-planeta/pol-makartni-sa-rolingstonsima-na-novom-albumu-koji-izlazi-10-jula",
     category: "Naša planeta",
-    title: "Planeta ostaje bez daha: kiseonik nestaje iz okeana, jezera i reka",
+    title:
+      "Pol Makartni sa Rolingstonsima na novom albumu koji izlazi 10. jula",
     description:
-      "Novo međunarodno istraživanje pokazuje da količina rastvorenog kiseonika ubrzano opada u okeanima, morima, rekama i jezerima, što predstavlja jednu od najvećih pretnji vodenim ekosistemima i budućnosti života na Zemlji.",
-    imageSrc: "/news/ocean-deep.jpg",
+      "Više od šest decenija nakon što su Bitlsi i Rolingstonsi obeležili jednu od najuzbudljivijih epoha u istoriji popularne muzike, Pol Makartni ponovo gostuje na novom studijskom albumu slavnog britanskog benda. Njihova nova saradnja predstavlja simboličan susret dve najveće institucije rok muzike.",
+    imageSrc: "/news/paul-mccartney-rolling-stones.jpg",
     imageAlt:
-      "Bleached coral on the seabed beneath a thinning school of fish, symbolizing the global loss of oxygen from aquatic ecosystems.",
+      "Ilustracija Pola Makartnija i Mika Džegera povodom nove saradnje na albumu Foreign Tongues.",
   },
   {
     href: "/nasa-planeta/jedno-od-sedam-svetskih-cuda-ponovo-otkriva-svoje-tajne-aleksandrijski-svetionik-izrasta-iz-mora",
@@ -63,59 +74,6 @@ const ARTICLES = [
     imageSrc: "/news/alexandria-lighthouse-underwater-ruins.jpg",
     imageAlt:
       "Conceptual underwater illustration inspired by the archaeological remains of the Lighthouse of Alexandria",
-  },
-  {
-    href: "/nasa-planeta/anthropic-upozorava-da-li-razvoj-vestacke-inteligencije-postaje-brzi-od-nase-sposobnosti-da-je-kontrolisemo",
-    category: "Naša planeta",
-    title:
-      "Anthropic upozorava: da li razvoj veštačke inteligencije postaje brži od naše sposobnosti da je kontrolišemo?",
-    description:
-      "Jedna od vodećih svetskih kompanija za razvoj veštačke inteligencije upozorava da bi napredak najmoćnijih AI sistema uskoro mogao da nadmaši postojeće bezbednosne mehanizme namenjene njihovoj kontroli.",
-    imageSrc: "/news/ai-governance-safeguards.jpg",
-    imageAlt:
-      "Minimalist editorial illustration about AI governance and safety",
-  },
-  {
-    href: "/nasa-planeta/hiljade-vespi-preplavile-rim-povodom-80-godina-italijanske-ikone",
-    category: "Naša planeta",
-    title: "Hiljade Vespi preplavile Rim povodom 80 godina italijanske ikone",
-    description:
-      "Više hiljada vlasnika Vespi okupilo se u istorijskom centru Rima kako bi obeležili osam decenija jednog od najprepoznatljivijih simbola italijanskog dizajna, filma i urbanog života.",
-    imageSrc: "/news/vespa-rome-80th-anniversary.jpg",
-    imageAlt:
-      "Watercolor editorial illustration of the 80th anniversary Vespa parade through Rome",
-  },
-  {
-    href: "/obavestajni-izvori/nemacka-menja-bnd-najveca-reforma-obavestajne-sluzbe",
-    category: "Obaveštajni izvori",
-    title:
-      "Nemačka menja BND: najveća reforma obaveštajne službe u poslednjim decenijama",
-    description:
-      "Berlin priprema najopsežniju reformu Savezne obaveštajne službe u poslednjim decenijama, sa fokusom na sajber operacije, elektronsko izviđanje i veštačku inteligenciju.",
-    imageSrc: "/news/germany-bnd-modernization.jpg",
-    imageAlt:
-      "Editorial illustration about the modernization of Germany's Federal Intelligence Service (BND)",
-  },
-  {
-    href: "/geopolitika/protesti-u-pragu-zbog-finansiranja-javnog-servisa",
-    category: "Geopolitika",
-    title:
-      "Hiljade građana protestovale u Pragu zbog reforme finansiranja javnog servisa",
-    description:
-      "Plan češke vlade da promeni model finansiranja javnih medija izazvao je proteste u Pragu, otvarajući širu evropsku raspravu o nezavisnosti javnih servisa u digitalnom dobu.",
-    imageSrc: "/news/prague-public-media-protest.jpg",
-    imageAlt:
-      "Editorial illustration about public broadcasting, media independence and protests in Prague",
-  },
-  {
-    href: "/geopolitika/g7-nova-geopoliticka-strategija",
-    category: "Geopolitika",
-    title:
-      "G7 pokreće novu geopolitičku strategiju: manje zavisnosti od Kine, veći pritisak na Rusiju i podrška sporazumu sa Iranom",
-    description:
-      "Lideri najrazvijenijih zapadnih ekonomija poslali su sa samita G7 poruku da ulaze u novu fazu geopolitičkog nadmetanja — kroz smanjenje zavisnosti od kineskih sirovina, nastavak podrške Ukrajini i podršku sporazumu između SAD i Irana.",
-    imageSrc: "/news/g7-summit-evian-2026.jpg",
-    imageAlt: "Leaders of G7 countries during the 2026 summit in Évian, France",
   },
 ];
 
@@ -433,7 +391,6 @@ export default function Home() {
                 <div className="grid grid-cols-1 min-[420px]:grid-cols-2 gap-4">
                   <SmallArticleCard variant="tile" {...ARTICLES[3]} />
                   <SmallArticleCard variant="tile" {...ARTICLES[4]} />
-                  <SmallArticleCard variant="tile" {...ARTICLES[5]} />
                 </div>
               </div>
             </FadeIn>
@@ -508,7 +465,6 @@ export default function Home() {
               <section className="grid grid-cols-2 lg:grid-cols-3 gap-8">
                 <DesktopTileStory article={ARTICLES[3]} />
                 <DesktopTileStory article={ARTICLES[4]} />
-                <DesktopTileStory article={ARTICLES[5]} />
               </section>
             </FadeIn>
           </div>
