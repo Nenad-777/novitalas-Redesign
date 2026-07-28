@@ -96,6 +96,7 @@ import KinaSpyBrodovi from "./pages/kina-spy-brodovi";
 import CiaPokrenulaKampanju from "./pages/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira";
 import PrviBrifing from "./pages/prvi-brifing";
 import SrbijaPage from "./pages/SrbijaPage";
+import SerbiaLostRepublicArticle from "./pages/SerbiaLostRepublicArticle";
 import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 import PotpuniSlomVuciceveMedjunarodneReputacije from "./pages/potpuni-slom-vuciceve-medjunarodne-reputacije";
@@ -656,6 +657,10 @@ function Router() {
             SRBIJA
            ========================= */}
         <Route path="/srbija" component={SrbijaPage} />
+        <Route
+          path="/srbija/srbija-bez-republike-moze-li-se-obnoviti-drzava-posle-cetrnaest-godina-vlasti-sns-a"
+          component={SerbiaLostRepublicArticle}
+        />
 
         <Route
           path="/srbija/posle-slavije-vlast-ulazi-u-fazu-politicke-nervoze"

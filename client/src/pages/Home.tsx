@@ -10,18 +10,29 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/nova-orbita-srpske-diplomatije-zasto-se-beograd-priblizava-vasingtonu-bas-sada",
-  category: "Geopolitika",
+  href: "/srbija/srbija-bez-republike-moze-li-se-obnoviti-drzava-posle-cetrnaest-godina-vlasti-sns-a",
+  category: "Srbija · ANALIZA",
   title:
-    "Nova orbita srpske diplomatije: zašto se Beograd približava Vašingtonu baš sada",
+    "Srbija bez republike: može li se obnoviti država posle četrnaest godina vlasti SNS-a?",
   description:
-    "Dok Srbija prolazi kroz jednu od najdubljih društvenih i političkih kriza u poslednjoj deceniji, Beograd i Vašington otvaraju novo poglavlje međusobnih odnosa.",
-  imageSrc: "/news/serbia-artemis-accords.jpg",
+    "Rasprava o nepoverenju Vladi Srbije samo je povod za mnogo veće pitanje: šta se dogodilo sa zemljom u kojoj institucije potvrđuju političku volju oblikovanu izvan njih?",
+  imageSrc: "/news/lost-republic.jpg",
   imageAlt:
-    "Marko Đurić i zamenik administratora NASA Matt Anderson nakon potpisivanja sporazuma Artemis u sedištu NASA u Vašingtonu.",
+    "Minimalistička ilustracija kupole Narodne skupštine Srbije sa dugom senkom koja simbolizuje odnos između institucija i stvarne političke moći.",
 };
 
 const ARTICLES = [
+  {
+    href: "/geopolitika/nova-orbita-srpske-diplomatije-zasto-se-beograd-priblizava-vasingtonu-bas-sada",
+    category: "Geopolitika",
+    title:
+      "Nova orbita srpske diplomatije: zašto se Beograd približava Vašingtonu baš sada",
+    description:
+      "Dok Srbija prolazi kroz jednu od najdubljih društvenih i političkih kriza u poslednjoj deceniji, Beograd i Vašington otvaraju novo poglavlje međusobnih odnosa.",
+    imageSrc: "/news/serbia-artemis-accords.jpg",
+    imageAlt:
+      "Marko Đurić i zamenik administratora NASA Matt Anderson nakon potpisivanja sporazuma Artemis u sedištu NASA u Vašingtonu.",
+  },
   {
     href: "/nasa-planeta/planeta-ostaje-bez-daha-kiseonik-nestaje-iz-okeana-jezera-i-reka",
     category: "Naša planeta",
@@ -391,6 +402,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 min-[420px]:grid-cols-2 gap-4">
                   <SmallArticleCard variant="tile" {...ARTICLES[3]} />
                   <SmallArticleCard variant="tile" {...ARTICLES[4]} />
+                  <SmallArticleCard variant="tile" {...ARTICLES[5]} />
                 </div>
               </div>
             </FadeIn>
@@ -465,6 +477,7 @@ export default function Home() {
               <section className="grid grid-cols-2 lg:grid-cols-3 gap-8">
                 <DesktopTileStory article={ARTICLES[3]} />
                 <DesktopTileStory article={ARTICLES[4]} />
+                <DesktopTileStory article={ARTICLES[5]} />
               </section>
             </FadeIn>
           </div>

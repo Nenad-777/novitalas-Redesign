@@ -148,6 +148,15 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/srbija/srbija-bez-republike-moze-li-se-obnoviti-drzava-posle-cetrnaest-godina-vlasti-sns-a",
+    title:
+      "Srbija bez republike: može li se obnoviti država posle četrnaest godina vlasti SNS-a?",
+    description:
+      "Politički esej o transformaciji institucija Srbije tokom četrnaest godina vlasti SNS-a i pitanju može li se obnoviti republika u ustavnom smislu.",
+    imageSrc: "/news/lost-republic.jpg",
+    datePublished: "2026-07-28",
+  },
+  {
     path: "/geopolitika/nova-orbita-srpske-diplomatije-zasto-se-beograd-priblizava-vasingtonu-bas-sada",
     title:
       "Nova orbita srpske diplomatije: zašto se Beograd približava Vašingtonu baš sada",
