@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  lostRepublic: "/news/lost-republic.jpg",
   slomMedjunarodni: "/news/slom-medjunarodni.jpg",
   slavijaProtest: "/news/slavija-protest.jpg",
   iscezavanjeN1: "/news/iscezavanje-N1.jpg",
@@ -58,6 +59,62 @@ export default function SrbijaPage() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <article className="md:col-span-2">
+              <Link
+                href="/srbija/srbija-bez-republike-moze-li-se-obnoviti-drzava-posle-cetrnaest-godina-vlasti-sns-a"
+                className="no-underline"
+              >
+                <div
+                  className="border mb-4 overflow-hidden"
+                  style={{
+                    borderColor: isDark ? "#2a2a2e" : "#eee",
+                    backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
+                  }}
+                >
+                  <img
+                    src={IMAGES.lostRepublic}
+                    alt="Minimalistička ilustracija kupole Narodne skupštine Srbije sa dugom senkom koja simbolizuje odnos između institucija i stvarne političke moći."
+                    className="w-full h-[260px] md:h-[420px] object-cover object-center block"
+                    decoding="async"
+                  />
+                </div>
+
+                <span className="kicker">ANALIZA</span>
+                <h2
+                  className="mt-2 text-[26px] md:text-[34px] font-bold leading-[1.2]"
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    color: isDark ? "#e0ddd5" : "#111",
+                  }}
+                >
+                  Srbija bez republike: može li se obnoviti država posle
+                  četrnaest godina vlasti SNS-a?
+                </h2>
+
+                <p
+                  className="mt-2 text-[15px] leading-[1.6]"
+                  style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    color: isDark ? "#9a978f" : "#555",
+                  }}
+                >
+                  Rasprava o nepoverenju Vladi Srbije otvara veće pitanje: šta
+                  se dogodilo sa zemljom u kojoj institucije potvrđuju političku
+                  volju oblikovanu izvan njih?
+                </p>
+
+                <div
+                  className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
+                  style={{
+                    fontFamily: "'Source Sans 3', sans-serif",
+                    color: isDark ? "#d9bf7a" : "#8B0000",
+                  }}
+                >
+                  Otvori tekst →
+                </div>
+              </Link>
+            </article>
+
             <article>
               <Link
                 href="/srbija/potpuni-slom-vuciceve-medjunarodne-reputacije"
@@ -150,7 +207,10 @@ export default function SrbijaPage() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Studentski pokret pokazuje sve jasnije obrise političke artikulacije, dok vlast istovremeno pokušava da kupi vreme i spreči formiranje studentske izborne liste čiji identitet još nije poznat javnosti.
+                  Studentski pokret pokazuje sve jasnije obrise političke
+                  artikulacije, dok vlast istovremeno pokušava da kupi vreme i
+                  spreči formiranje studentske izborne liste čiji identitet još
+                  nije poznat javnosti.
                 </p>
 
                 <div
@@ -193,7 +253,8 @@ export default function SrbijaPage() {
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  SENKE NAD EKRANOM: Tiho preuzimanje ili kontrolisano gašenje istine
+                  SENKE NAD EKRANOM: Tiho preuzimanje ili kontrolisano gašenje
+                  istine
                 </h2>
 
                 <p
@@ -203,7 +264,10 @@ export default function SrbijaPage() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Proces pritiska na nezavisne medije retko je otvoren i nagao. Mnogo češće odvija se postepeno, kroz smene, promene uređivačke politike i sužavanje prostora javne reči. Slučaj N1 otvara pitanje granica takvog procesa u savremenom društvu.
+                  Proces pritiska na nezavisne medije retko je otvoren i nagao.
+                  Mnogo češće odvija se postepeno, kroz smene, promene
+                  uređivačke politike i sužavanje prostora javne reči. Slučaj N1
+                  otvara pitanje granica takvog procesa u savremenom društvu.
                 </p>
 
                 <div
@@ -246,7 +310,8 @@ export default function SrbijaPage() {
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  Nepravilnosti na izborima: zakon predviđa krivičnu odgovornost za manipulacije
+                  Nepravilnosti na izborima: zakon predviđa krivičnu odgovornost
+                  za manipulacije
                 </h2>
 
                 <p
@@ -256,8 +321,9 @@ export default function SrbijaPage() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Prijavljene nepravilnosti tokom izbora u Srbiji otvaraju pitanje
-                  krivične odgovornosti za manipulacije i zloupotrebe izbornog procesa.
+                  Prijavljene nepravilnosti tokom izbora u Srbiji otvaraju
+                  pitanje krivične odgovornosti za manipulacije i zloupotrebe
+                  izbornog procesa.
                 </p>
 
                 <div
@@ -274,10 +340,7 @@ export default function SrbijaPage() {
 
             {/* NOVA VEST — Rezultati izbora */}
             <article>
-              <Link
-                href="/srbija/izbori-rezultati"
-                className="no-underline"
-              >
+              <Link href="/srbija/izbori-rezultati" className="no-underline">
                 <div
                   className="border mb-4 overflow-hidden"
                   style={{
@@ -300,7 +363,8 @@ export default function SrbijaPage() {
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  Tesne razlike i smanjenje prednosti vlasti: preliminarni rezultati u deset opština
+                  Tesne razlike i smanjenje prednosti vlasti: preliminarni
+                  rezultati u deset opština
                 </h2>
 
                 <p
@@ -310,7 +374,9 @@ export default function SrbijaPage() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Preliminarni rezultati lokalnih izbora u deset opština u Srbiji: vladajuća koalicija zadržala vlast uz vidljivo smanjene razlike i tesne odnose snaga.
+                  Preliminarni rezultati lokalnih izbora u deset opština u
+                  Srbiji: vladajuća koalicija zadržala vlast uz vidljivo
+                  smanjene razlike i tesne odnose snaga.
                 </p>
 
                 <div
@@ -381,10 +447,7 @@ export default function SrbijaPage() {
 
             {/* NOVA ANALIZA — Akademija umetnosti Novi Sad */}
             <article>
-              <Link
-                href="/srbija/akademija-novisad"
-                className="no-underline"
-              >
+              <Link href="/srbija/akademija-novisad" className="no-underline">
                 <div
                   className="border mb-4 overflow-hidden"
                   style={{
@@ -407,7 +470,8 @@ export default function SrbijaPage() {
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  Grad odlučuje, studenti na ulici: Akademiji umetnosti preti gubitak prostora
+                  Grad odlučuje, studenti na ulici: Akademiji umetnosti preti
+                  gubitak prostora
                 </h2>
 
                 <p
@@ -418,8 +482,8 @@ export default function SrbijaPage() {
                   }}
                 >
                   Odbornici odlučuju o oduzimanju prostora Akademiji umetnosti u
-                  Novom Sadu, dok studenti i profesori protestuju i upozoravaju na
-                  posledice.
+                  Novom Sadu, dok studenti i profesori protestuju i upozoravaju
+                  na posledice.
                 </p>
 
                 <div
@@ -582,9 +646,9 @@ export default function SrbijaPage() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Blokade su završene, ali poljoprivrednici odlaze sa protesta bez
-                  dogovora sa državom, što otvara pitanje političkih posledica u
-                  zemlji čiju stabilnost vekovima nosi selo.
+                  Blokade su završene, ali poljoprivrednici odlaze sa protesta
+                  bez dogovora sa državom, što otvara pitanje političkih
+                  posledica u zemlji čiju stabilnost vekovima nosi selo.
                 </p>
 
                 <div
@@ -625,8 +689,8 @@ export default function SrbijaPage() {
                     color: isDark ? "#e0ddd5" : "#111",
                   }}
                 >
-                  Marš za pravosuđe: kada institucije postanu centralno političko
-                  pitanje
+                  Marš za pravosuđe: kada institucije postanu centralno
+                  političko pitanje
                 </h2>
 
                 <p
@@ -636,8 +700,8 @@ export default function SrbijaPage() {
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
-                  Kada sudovi postanu tema politike, društvo raspravlja o sopstvenom
-                  ustavnom identitetu i o granicama izvršne vlasti.
+                  Kada sudovi postanu tema politike, društvo raspravlja o
+                  sopstvenom ustavnom identitetu i o granicama izvršne vlasti.
                 </p>
 
                 <div

@@ -4,6 +4,7 @@ import ImageCaption from "@/components/ImageCaption";
 import ShareButton from "@/components/ShareButton";
 import SeoMeta from "@/components/SeoMeta";
 import { useTheme } from "@/contexts/ThemeContext";
+import type { ReactNode } from "react";
 
 type ArticleInlineImage = {
   type: "image";
@@ -18,7 +19,16 @@ type ArticleSectionHeading = {
   text: string;
 };
 
-type ArticleParagraph = string | ArticleInlineImage | ArticleSectionHeading;
+type ArticleRichParagraph = {
+  type: "paragraph";
+  content: ReactNode;
+};
+
+type ArticleParagraph =
+  | string
+  | ArticleInlineImage
+  | ArticleSectionHeading
+  | ArticleRichParagraph;
 
 const EM_DASH_REPLACEMENT = ",";
 
@@ -232,6 +242,26 @@ export default function ArticleTemplate({
                   >
                     {p.text}
                   </h2>
+                ) : p.type === "paragraph" ? (
+                  <p
+                    className={
+                      idx === 0
+                        ? "text-[18px] md:text-[20px] leading-[1.75] first-letter:text-[64px] first-letter:font-bold first-letter:mr-2 first-letter:float-left first-letter:leading-[0.9]"
+                        : "mt-5 text-[17px] md:text-[18px] leading-[1.8]"
+                    }
+                    style={{
+                      fontFamily: "'Lora', serif",
+                      color: isDark
+                        ? idx === 0
+                          ? "#cfcac0"
+                          : "#b7b2aa"
+                        : idx === 0
+                          ? "#222"
+                          : "#333",
+                    }}
+                  >
+                    {p.content}
+                  </p>
                 ) : (
                   <figure
                     className="mt-5 border overflow-hidden"
