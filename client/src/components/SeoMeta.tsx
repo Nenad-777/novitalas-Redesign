@@ -146,6 +146,7 @@ export default function SeoMeta({
             ogImage,
             datePublished: registered.datePublished,
             author: registered.author,
+            section: registered.section,
           })
         );
       } else if (title) {

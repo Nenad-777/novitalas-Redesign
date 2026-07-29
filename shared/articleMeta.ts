@@ -38,8 +38,10 @@ export interface ArticleStaticMeta {
    * Used for JSON-LD datePublished and og:article:published_time.
    */
   datePublished?: string;
-  /** Article author name. Defaults to "Novi Talas" if omitted. */
+  /** Article author name. Omitted from metadata when not provided. */
   author?: string;
+  /** Editorial section used by Article JSON-LD. */
+  section?: string;
   /** Comma-separated article keywords for search engines that use the tag. */
   keywords?: string;
 }
@@ -67,6 +69,7 @@ export function buildSEOFromArticleMeta(meta: ArticleStaticMeta) {
     twitterImage: ogImage,
     datePublished: meta.datePublished,
     author: meta.author,
+    section: meta.section,
     keywords: meta.keywords,
   };
 }
@@ -101,8 +104,8 @@ export function buildJsonLd(meta: {
   ogImage: string;
   datePublished?: string;
   author?: string;
+  section?: string;
 }) {
-  const authorName = meta.author ?? "Novi Talas";
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const jsonLd: Record<string, any> = {
     "@context": "https://schema.org",
@@ -110,13 +113,6 @@ export function buildJsonLd(meta: {
     headline: meta.title,
     description: meta.description,
     image: [meta.ogImage],
-    author: [
-      {
-        "@type": authorName === "Novi Talas" ? "Organization" : "Person",
-        name: authorName,
-        url: SITE_BASE,
-      },
-    ],
     publisher: {
       "@type": "Organization",
       name: "Novi Talas",
@@ -133,6 +129,20 @@ export function buildJsonLd(meta: {
     },
   };
 
+  if (meta.author) {
+    jsonLd["author"] = [
+      {
+        "@type": meta.author === "Novi Talas" ? "Organization" : "Person",
+        name: meta.author,
+        url: SITE_BASE,
+      },
+    ];
+  }
+
+  if (meta.section) {
+    jsonLd["articleSection"] = meta.section;
+  }
+
   if (meta.datePublished) {
     jsonLd["datePublished"] = `${meta.datePublished}T00:00:00+01:00`;
   }
@@ -147,6 +157,20 @@ export function buildJsonLd(meta: {
  * produce the correct static HTML / HTTP response with full OG + Twitter tags.
  */
 export const articleMeta: ArticleStaticMeta[] = [
+  {
+    path: "/nasa-planeta/revolucija-u-borbi-protiv-raka-crispr-koji-ne-popravlja-gene-vec-unistava-celije-tumora",
+    title:
+      "Revolucija u borbi protiv raka: CRISPR koji ne popravlja gene, već uništava ćelije tumora",
+    seoTitle:
+      "Revolucija u borbi protiv raka: CRISPR koji ne popravlja gene, već uništava ćelije tumora | Novi Talas",
+    description:
+      "Nova istraživanja otvaraju mogućnost da se CRISPR koristi ne samo za uređivanje gena već i za selektivno uništavanje tumorskih ćelija, čime se otvara novi pravac u razvoju precizних терапија против рака.",
+    imageSrc: "/news/    crispr-cancer-therapy.jpg",
+    datePublished: "2026-07-29",
+    section: "Naša planeta",
+    keywords:
+      "CRISPR, rak, tumorske ćelije, genska medicina, precizna medicina, personalizovane terapije, Naša planeta, Novi Talas",
+  },
   {
     path: "/srbija/srbija-bez-republike-moze-li-se-obnoviti-drzava-posle-cetrnaest-godina-vlasti-sns-a",
     title:

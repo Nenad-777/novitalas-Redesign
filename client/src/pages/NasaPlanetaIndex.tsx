@@ -19,6 +19,16 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/revolucija-u-borbi-protiv-raka-crispr-koji-ne-popravlja-gene-vec-unistava-celije-tumora",
+    img: "/news/    crispr-cancer-therapy.jpg",
+    alt: "Mikroskopska ilustracija tumorske ćelije koju napada precizno usmerena CRISPR terapija.",
+    imageCredit: "Ilustracija: Novi talas",
+    title:
+      "Revolucija u borbi protiv raka: CRISPR koji ne popravlja gene, već uništava ćelije tumora",
+    description:
+      "Nova istraživanja otvaraju mogućnost da se CRISPR tehnologija koristi ne samo za ispravljanje gena već i za selektivno uništavanje obolelih ćelija. Iako je put do терапије за пацијенте још дуг, научници говоре о новом правцу у развоју прецизнијих метода лечења рака.",
+  },
+  {
     href: "/nasa-planeta/planeta-ostaje-bez-daha-kiseonik-nestaje-iz-okeana-jezera-i-reka",
     img: "/news/ocean-deep.jpg",
     alt: "Bleached coral on the seabed beneath a thinning school of fish, symbolizing the global loss of oxygen from aquatic ecosystems.",

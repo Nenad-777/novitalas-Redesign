@@ -139,6 +139,7 @@ function injectSEO(html: string, route: string): string {
     ogImage: seo.ogImage,
     datePublished: seo.datePublished,
     author: seo.author,
+    section: seo.section,
   });
   const jsonLdScript = `  <script type="application/ld+json">\n    ${JSON.stringify(jsonLdData, null, 2).replace(/\n/g, "\n    ")}\n  </script>`;
   result = result.replace(/(<\/body>)/, `${jsonLdScript}\n  $1`);
