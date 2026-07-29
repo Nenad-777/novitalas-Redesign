@@ -10,18 +10,29 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/srbija/srbija-bez-republike-moze-li-se-obnoviti-drzava-posle-cetrnaest-godina-vlasti-sns-a",
-  category: "Srbija · ANALIZA",
+  href: "/nasa-planeta/revolucija-u-borbi-protiv-raka-crispr-koji-ne-popravlja-gene-vec-unistava-celije-tumora",
+  category: "Naša planeta",
   title:
-    "Srbija bez republike: može li se obnoviti država posle četrnaest godina vlasti SNS-a?",
+    "Revolucija u borbi protiv raka: CRISPR koji ne popravlja gene, već uništava ćelije tumora",
   description:
-    "Rasprava o nepoverenju Vladi Srbije samo je povod za mnogo veće pitanje: šta se dogodilo sa zemljom u kojoj institucije potvrđuju političku volju oblikovanu izvan njih?",
-  imageSrc: "/news/lost-republic.jpg",
+    "Nova istraživanja otvaraju mogućnost da se CRISPR tehnologija koristi ne samo za ispravljanje gena već i za selektivno uništavanje obolelih ćelija. Iako je put do терапије за пацијенте још дуг, научници говоре о новом правцу у развоју прецизнијих метода лечења рака.",
+  imageSrc: "/news/    crispr-cancer-therapy.jpg",
   imageAlt:
-    "Minimalistička ilustracija kupole Narodne skupštine Srbije sa dugom senkom koja simbolizuje odnos između institucija i stvarne političke moći.",
+    "Mikroskopska ilustracija tumorske ćelije koju napada precizno usmerena CRISPR terapija.",
 };
 
 const ARTICLES = [
+  {
+    href: "/srbija/srbija-bez-republike-moze-li-se-obnoviti-drzava-posle-cetrnaest-godina-vlasti-sns-a",
+    category: "Srbija · ANALIZA",
+    title:
+      "Srbija bez republike: može li se obnoviti država posle četrnaest godina vlasti SNS-a?",
+    description:
+      "Rasprava o nepoverenju Vladi Srbije samo je povod za mnogo veće pitanje: šta se dogodilo sa zemljom u kojoj institucije potvrđuju političku volju oblikovanu izvan njih?",
+    imageSrc: "/news/lost-republic.jpg",
+    imageAlt:
+      "Minimalistička ilustracija kupole Narodne skupštine Srbije sa dugom senkom koja simbolizuje odnos između institucija i stvarne političke moći.",
+  },
   {
     href: "/geopolitika/nova-orbita-srpske-diplomatije-zasto-se-beograd-priblizava-vasingtonu-bas-sada",
     category: "Geopolitika",
@@ -74,17 +85,6 @@ const ARTICLES = [
     imageSrc: "/news/paul-mccartney-rolling-stones.jpg",
     imageAlt:
       "Ilustracija Pola Makartnija i Mika Džegera povodom nove saradnje na albumu Foreign Tongues.",
-  },
-  {
-    href: "/nasa-planeta/jedno-od-sedam-svetskih-cuda-ponovo-otkriva-svoje-tajne-aleksandrijski-svetionik-izrasta-iz-mora",
-    category: "Naša planeta",
-    title:
-      "Jedno od sedam svetskih čuda ponovo otkriva svoje tajne: Aleksandrijski svetionik izranja iz mora",
-    description:
-      "Arheolozi su iz Sredozemnog mora izvadili monumentalne kamene blokove nekadašnjeg Aleksandrijskog svetionika, otvarajući put ka njegovoj najpreciznijoj digitalnoj rekonstrukciji do sada.",
-    imageSrc: "/news/alexandria-lighthouse-underwater-ruins.jpg",
-    imageAlt:
-      "Conceptual underwater illustration inspired by the archaeological remains of the Lighthouse of Alexandria",
   },
 ];
 

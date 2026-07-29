@@ -251,6 +251,7 @@ import VespaRome80Article from "./pages/VespaRome80Article";
 import AlexandriaLighthouseArticle from "./pages/AlexandriaLighthouseArticle";
 import PolMakartniSaRolingstonsimaArticle from "./pages/pol-makartni-sa-rolingstonsima-na-novom-albumu-koji-izlazi-10-jula";
 import PlanetaOstajeBezDahaArticle from "./pages/planeta-ostaje-bez-daha-kiseonik-nestaje-iz-okeana-jezera-i-reka";
+import RevolucijaUBorbiProtivRakaCrisprArticle from "./pages/revolucija-u-borbi-protiv-raka-crispr-koji-ne-popravlja-gene-vec-unistava-celije-tumora";
 
 /* ✅ NOVA VEST — Naša planeta */
 import NasaAnounce from "./pages/nasa-anounce";
@@ -719,6 +720,11 @@ function Router() {
         {/* =========================
             NAŠA PLANETA
            ========================= */}
+        <Route
+          path="/nasa-planeta/revolucija-u-borbi-protiv-raka-crispr-koji-ne-popravlja-gene-vec-unistava-celije-tumora"
+          component={RevolucijaUBorbiProtivRakaCrisprArticle}
+        />
+
         <Route
           path="/nasa-planeta/planeta-ostaje-bez-daha-kiseonik-nestaje-iz-okeana-jezera-i-reka"
           component={PlanetaOstajeBezDahaArticle}
