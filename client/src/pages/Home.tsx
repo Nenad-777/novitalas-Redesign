@@ -10,18 +10,29 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/nasa-planeta/revolucija-u-borbi-protiv-raka-crispr-koji-ne-popravlja-gene-vec-unistava-celije-tumora",
+  href: "/nasa-planeta/vise-od-1100-strucnjaka-iz-vodecih-ai-kompanija-trazi-usporavanje-razvoja-vestacke-inteligencije",
   category: "Naša planeta",
   title:
-    "Revolucija u borbi protiv raka: CRISPR koji ne popravlja gene, već uništava ćelije tumora",
+    "Više od 1.100 stručnjaka iz vodećih AI kompanija traži usporavanje razvoja veštačke inteligencije",
   description:
-    "Nova istraživanja otvaraju mogućnost da se CRISPR tehnologija koristi ne samo za ispravljanje gena već i za selektivno uništavanje obolelih ćelija. Iako je put do терапије за пацијенте још дуг, научници говоре о новом правцу у развоју прецизнијих метода лечења рака.",
-  imageSrc: "/news/    crispr-cancer-therapy.jpg",
+    "Više od 1.100 zaposlenih i istraživača iz vodećih svetskih AI kompanija upozorava da bi automatizovani razvoj veštačke inteligencije uskoro mogao da postane brži od sposobnosti ljudi i institucija da ga razumeju, nadziru i kontrolišu.",
+  imageSrc: "/news/ai-frontier-warning.jpg",
   imageAlt:
-    "Mikroskopska ilustracija tumorske ćelije koju napada precizno usmerena CRISPR terapija.",
+    "Futuristički grad i digitalni prikaz ljudskog mozga kao simbol razvoja napredne veštačke inteligencije.",
 };
 
 const ARTICLES = [
+  {
+    href: "/nasa-planeta/revolucija-u-borbi-protiv-raka-crispr-koji-ne-popravlja-gene-vec-unistava-celije-tumora",
+    category: "Naša planeta",
+    title:
+      "Revolucija u borbi protiv raka: CRISPR koji ne popravlja gene, već uništava ćelije tumora",
+    description:
+      "Nova istraživanja otvaraju mogućnost da se CRISPR tehnologija koristi ne samo za ispravljanje gena već i za selektivno uništavanje obolelih ćelija. Iako je put do терапије за пацијенте још дуг, научници говоре о новом правцу у развоју прецизнијих метода лечења рака.",
+    imageSrc: "/news/    crispr-cancer-therapy.jpg",
+    imageAlt:
+      "Mikroskopska ilustracija tumorske ćelije koju napada precizno usmerena CRISPR terapija.",
+  },
   {
     href: "/srbija/srbija-bez-republike-moze-li-se-obnoviti-drzava-posle-cetrnaest-godina-vlasti-sns-a",
     category: "Srbija · ANALIZA",
@@ -74,17 +85,6 @@ const ARTICLES = [
       "Nekoliko dana nakon novih pregovora i nagoveštaja smirivanja tenzija, Bliski istok ponovo se našao na ivici ozbiljne eskalacije, dok Ormuski moreuz postaje jedna od ključnih tačaka globalne nestabilnosti.",
     imageSrc: "/news/hormuz-chokepoint.jpg",
     imageAlt: "Ormuski moreuz, strateški pomorski prolaz između Irana i Omana",
-  },
-  {
-    href: "/nasa-planeta/pol-makartni-sa-rolingstonsima-na-novom-albumu-koji-izlazi-10-jula",
-    category: "Naša planeta",
-    title:
-      "Pol Makartni sa Rolingstonsima na novom albumu koji izlazi 10. jula",
-    description:
-      "Više od šest decenija nakon što su Bitlsi i Rolingstonsi obeležili jednu od najuzbudljivijih epoha u istoriji popularne muzike, Pol Makartni ponovo gostuje na novom studijskom albumu slavnog britanskog benda. Njihova nova saradnja predstavlja simboličan susret dve najveće institucije rok muzike.",
-    imageSrc: "/news/paul-mccartney-rolling-stones.jpg",
-    imageAlt:
-      "Ilustracija Pola Makartnija i Mika Džegera povodom nove saradnje na albumu Foreign Tongues.",
   },
 ];
 

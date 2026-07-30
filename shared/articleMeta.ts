@@ -158,6 +158,18 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/vise-od-1100-strucnjaka-iz-vodecih-ai-kompanija-trazi-usporavanje-razvoja-vestacke-inteligencije",
+    title:
+      "Više od 1.100 stručnjaka iz vodećih AI kompanija traži usporavanje razvoja veštačke inteligencije",
+    seoTitle:
+      "Više od 1.100 stručnjaka iz vodećih AI kompanija traži usporavanje razvoja veštačke inteligencije | Novi Talas",
+    description:
+      "Više od 1.100 zaposlenih i istraživača iz vodećih AI kompanija traži međunarodne mehanizme za kontrolisanje tempa razvoja najnaprednijih sistema veštačke inteligencije.",
+    imageSrc: "/news/ai-frontier-warning.jpg",
+    section: "Naša planeta",
+    datePublished: "2026-07-30",
+  },
+  {
     path: "/nasa-planeta/revolucija-u-borbi-protiv-raka-crispr-koji-ne-popravlja-gene-vec-unistava-celije-tumora",
     title:
       "Revolucija u borbi protiv raka: CRISPR koji ne popravlja gene, već uništava ćelije tumora",

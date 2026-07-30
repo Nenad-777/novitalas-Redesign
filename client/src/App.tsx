@@ -252,6 +252,7 @@ import AlexandriaLighthouseArticle from "./pages/AlexandriaLighthouseArticle";
 import PolMakartniSaRolingstonsimaArticle from "./pages/pol-makartni-sa-rolingstonsima-na-novom-albumu-koji-izlazi-10-jula";
 import PlanetaOstajeBezDahaArticle from "./pages/planeta-ostaje-bez-daha-kiseonik-nestaje-iz-okeana-jezera-i-reka";
 import RevolucijaUBorbiProtivRakaCrisprArticle from "./pages/revolucija-u-borbi-protiv-raka-crispr-koji-ne-popravlja-gene-vec-unistava-celije-tumora";
+import FrontierAiSlowdownArticle from "./pages/FrontierAiSlowdownArticle";
 
 /* ✅ NOVA VEST — Naša planeta */
 import NasaAnounce from "./pages/nasa-anounce";
@@ -720,6 +721,11 @@ function Router() {
         {/* =========================
             NAŠA PLANETA
            ========================= */}
+        <Route
+          path="/nasa-planeta/vise-od-1100-strucnjaka-iz-vodecih-ai-kompanija-trazi-usporavanje-razvoja-vestacke-inteligencije"
+          component={FrontierAiSlowdownArticle}
+        />
+
         <Route
           path="/nasa-planeta/revolucija-u-borbi-protiv-raka-crispr-koji-ne-popravlja-gene-vec-unistava-celije-tumora"
           component={RevolucijaUBorbiProtivRakaCrisprArticle}
