@@ -19,6 +19,16 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/vise-od-1100-strucnjaka-iz-vodecih-ai-kompanija-trazi-usporavanje-razvoja-vestacke-inteligencije",
+    img: "/news/ai-frontier-warning.jpg",
+    alt: "Futuristički grad i digitalni prikaz ljudskog mozga kao simbol razvoja napredne veštačke inteligencije.",
+    imageCredit: "Ilustracija: Novi Talas",
+    title:
+      "Više od 1.100 stručnjaka iz vodećih AI kompanija traži usporavanje razvoja veštačke inteligencije",
+    description:
+      "Više od 1.100 zaposlenih i istraživača iz vodećih svetskih AI kompanija upozorava da bi automatizovani razvoj veštačke inteligencije uskoro mogao da postane brži od sposobnosti ljudi i institucija da ga razumeju, nadziru i kontrolišu.",
+  },
+  {
     href: "/nasa-planeta/revolucija-u-borbi-protiv-raka-crispr-koji-ne-popravlja-gene-vec-unistava-celije-tumora",
     img: "/news/    crispr-cancer-therapy.jpg",
     alt: "Mikroskopska ilustracija tumorske ćelije koju napada precizno usmerena CRISPR terapija.",
