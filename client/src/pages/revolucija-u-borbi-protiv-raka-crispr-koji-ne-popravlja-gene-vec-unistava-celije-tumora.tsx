@@ -50,7 +50,7 @@ export default function RevolucijaUBorbiProtivRakaCrisprArticle() {
       sectionLabel="Naša planeta"
       title="Revolucija u borbi protiv raka: CRISPR koji ne popravlja gene, već uništava ćelije tumora"
       dateLabel="29. jul 2026."
-      deck="Nova istraživanja otvaraju mogućnost da se CRISPR tehnologija koristi ne samo za ispravljanje gena već i za selektivno uništavanje obolelih ćelija. Iako je put do терапије за пацијенте још дуг, научници говоре о новом правцу у развоју прецизнијих метода лечења рака."
+      deck="Nova istraživanja otvaraju mogućnost da se CRISPR tehnologija koristi ne samo za ispravljanje gena već i za selektivno uništavanje obolelih ćelija. Iako je put do terapije za pacijente još dug, naučnici govore o novom pravcu u razvoju preciznijih metoda lečenja raka."
       imageSrc="/news/    crispr-cancer-therapy.jpg"
       imageAlt="Mikroskopska ilustracija tumorske ćelije koju napada precizno usmerena CRISPR terapija."
       imageCredit="Ilustracija: Novi talas"
