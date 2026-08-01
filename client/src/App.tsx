@@ -253,6 +253,7 @@ import PolMakartniSaRolingstonsimaArticle from "./pages/pol-makartni-sa-rolingst
 import PlanetaOstajeBezDahaArticle from "./pages/planeta-ostaje-bez-daha-kiseonik-nestaje-iz-okeana-jezera-i-reka";
 import RevolucijaUBorbiProtivRakaCrisprArticle from "./pages/revolucija-u-borbi-protiv-raka-crispr-koji-ne-popravlja-gene-vec-unistava-celije-tumora";
 import FrontierAiSlowdownArticle from "./pages/FrontierAiSlowdownArticle";
+import VanishingStarsArticle from "./pages/VanishingStarsArticle";
 
 /* ✅ NOVA VEST — Naša planeta */
 import NasaAnounce from "./pages/nasa-anounce";
@@ -721,6 +722,11 @@ function Router() {
         {/* =========================
             NAŠA PLANETA
            ========================= */}
+        <Route
+          path="/nasa-planeta/ko-ce-ugasiti-zvezde-astronomi-upozoravaju-da-bi-17-miliona-satelita-moglo-trajno-da-promeni-nocno-nebo"
+          component={VanishingStarsArticle}
+        />
+
         <Route
           path="/nasa-planeta/vise-od-1100-strucnjaka-iz-vodecih-ai-kompanija-trazi-usporavanje-razvoja-vestacke-inteligencije"
           component={FrontierAiSlowdownArticle}
