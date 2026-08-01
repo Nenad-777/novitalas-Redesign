@@ -254,6 +254,7 @@ import PlanetaOstajeBezDahaArticle from "./pages/planeta-ostaje-bez-daha-kiseoni
 import RevolucijaUBorbiProtivRakaCrisprArticle from "./pages/revolucija-u-borbi-protiv-raka-crispr-koji-ne-popravlja-gene-vec-unistava-celije-tumora";
 import FrontierAiSlowdownArticle from "./pages/FrontierAiSlowdownArticle";
 import VanishingStarsArticle from "./pages/VanishingStarsArticle";
+import CeutaMigrationCrisisArticle from "./pages/CeutaMigrationCrisisArticle";
 
 /* ✅ NOVA VEST — Naša planeta */
 import NasaAnounce from "./pages/nasa-anounce";
@@ -293,6 +294,10 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/zasto-je-desetine-hiljada-ljudi-krenulo-ka-spaniji-kriza-u-seuti-otvara-nova-pitanja-o-granicama-evrope"
+          component={CeutaMigrationCrisisArticle}
+        />
         <Route
           path="/geopolitika/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana"
           component={OdPrimirjaDoNovihUdaraSadIran}
