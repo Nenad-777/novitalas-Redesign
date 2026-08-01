@@ -158,6 +158,18 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/zasto-je-desetine-hiljada-ljudi-krenulo-ka-spaniji-kriza-u-seuti-otvara-nova-pitanja-o-granicama-evrope",
+    title:
+      "Zašto je desetine hiljada ljudi krenulo ka Španiji? Kriza u Seuti otvara nova pitanja o granicama Evrope",
+    seoTitle:
+      "Zašto je desetine hiljada ljudi krenulo ka Španiji? Kriza u Seuti otvara nova pitanja o granicama Evrope | Novi Talas",
+    description:
+      "Posle najvećeg migrantskog talasa u novijoj istoriji Seute, Španija pooštrava kontrolu granice, dok Evropa ponovo raspravlja o zaštiti svojih spoljašnjih granica.",
+    imageSrc: "/news/ceuta-border-fence.jpg",
+    section: "Geopolitika",
+    datePublished: "2026-08-01",
+  },
+  {
     path: "/nasa-planeta/ko-ce-ugasiti-zvezde-astronomi-upozoravaju-da-bi-17-miliona-satelita-moglo-trajno-da-promeni-nocno-nebo",
     title:
       "Ko će ugasiti zvezde? Astronomi upozoravaju da bi 1,7 miliona satelita moglo trajno da promeni noćno nebo",

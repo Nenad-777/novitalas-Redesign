@@ -10,17 +10,28 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/nasa-planeta/ko-ce-ugasiti-zvezde-astronomi-upozoravaju-da-bi-17-miliona-satelita-moglo-trajno-da-promeni-nocno-nebo",
-  category: "Naša planeta",
+  href: "/geopolitika/zasto-je-desetine-hiljada-ljudi-krenulo-ka-spaniji-kriza-u-seuti-otvara-nova-pitanja-o-granicama-evrope",
+  category: "Geopolitika",
   title:
-    "Ko će ugasiti zvezde? Astronomi upozoravaju da bi 1,7 miliona satelita moglo trajno da promeni noćno nebo",
+    "Zašto je desetine hiljada ljudi krenulo ka Španiji? Kriza u Seuti otvara nova pitanja o granicama Evrope",
   description:
-    "Novo upozorenje astronoma ukazuje da bi planirano lansiranje čak 1,7 miliona satelita moglo trajno da izmeni izgled noćnog neba, oteža astronomska posmatranja i poveća rizik od sudara u Zemljinoj orbiti.",
-  imageSrc: "/news/vanishing-stars.jpg",
-  imageAlt: "Noćno nebo prošarano tragovima satelita iznad Mlečnog puta.",
+    "Posle najvećeg migrantskog talasa u novijoj istoriji Seute, Španija pooštrava kontrolu granice, dok Evropa ponovo otvara raspravu o zaštiti svojih spoljašnjih granica i migrantskoj politici.",
+  imageSrc: "/news/ceuta-border-fence.jpg",
+  imageAlt:
+    "Granična ograda koja razdvaja špansku enklavu Seutu od teritorije Maroka.",
 };
 
 const ARTICLES = [
+  {
+    href: "/nasa-planeta/ko-ce-ugasiti-zvezde-astronomi-upozoravaju-da-bi-17-miliona-satelita-moglo-trajno-da-promeni-nocno-nebo",
+    category: "Naša planeta",
+    title:
+      "Ko će ugasiti zvezde? Astronomi upozoravaju da bi 1,7 miliona satelita moglo trajno da promeni noćno nebo",
+    description:
+      "Novo upozorenje astronoma ukazuje da bi planirano lansiranje čak 1,7 miliona satelita moglo trajno da izmeni izgled noćnog neba, oteža astronomska posmatranja i poveća rizik od sudara u Zemljinoj orbiti.",
+    imageSrc: "/news/vanishing-stars.jpg",
+    imageAlt: "Noćno nebo prošarano tragovima satelita iznad Mlečnog puta.",
+  },
   {
     href: "/nasa-planeta/vise-od-1100-strucnjaka-iz-vodecih-ai-kompanija-trazi-usporavanje-razvoja-vestacke-inteligencije",
     category: "Naša planeta",
@@ -74,17 +85,6 @@ const ARTICLES = [
     imageSrc: "/news/ocean-deep.jpg",
     imageAlt:
       "Bleached coral on the seabed beneath a thinning school of fish, symbolizing the global loss of oxygen from aquatic ecosystems.",
-  },
-  {
-    href: "/geopolitika/dva-moreuza-jedan-rat-sukob-sad-i-irana-ugrozava-svetske-energetske-puteve",
-    category: "Geopolitika",
-    title:
-      "Dva moreuza, jedan rat: sukob SAD i Irana ugrožava svetske energetske puteve",
-    description:
-      "Napad Huta na saudijske tankere u Crvenom moru otvorio je drugi front na putevima svetske nafte. Dok Iran gotovo zatvara Ormuski moreuz, njegov jemenski saveznik ugrožava Bab el Mandeb — prolaz kojim je Saudijska Arabija pokušavala da zaobiđe krizu u Persijskom zalivu.",
-    imageSrc: "/news/hormuz-bab-el-mandeb-energy-chokepoints.jpg",
-    imageAlt:
-      "Grafička ilustracija dva ugrožena energetska prolaza, Ormuskog moreuza i Bab el Mandeba",
   },
 ];
 

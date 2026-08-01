@@ -18,6 +18,16 @@ type Article = {
 
 const ARTICLES: Article[] = [
   {
+    href: "/geopolitika/zasto-je-desetine-hiljada-ljudi-krenulo-ka-spaniji-kriza-u-seuti-otvara-nova-pitanja-o-granicama-evrope",
+    title:
+      "Zašto je desetine hiljada ljudi krenulo ka Španiji? Kriza u Seuti otvara nova pitanja o granicama Evrope",
+    description:
+      "Posle najvećeg migrantskog talasa u novijoj istoriji Seute, Španija pooštrava kontrolu granice, dok Evropa ponovo otvara raspravu o zaštiti svojih spoljašnjih granica i migrantskoj politici.",
+    imageSrc: "/news/ceuta-border-fence.jpg",
+    imageAlt:
+      "Granična ograda koja razdvaja špansku enklavu Seutu od teritorije Maroka.",
+  },
+  {
     href: "/geopolitika/nova-orbita-srpske-diplomatije-zasto-se-beograd-priblizava-vasingtonu-bas-sada",
     title:
       "Nova orbita srpske diplomatije: zašto se Beograd približava Vašingtonu baš sada",
