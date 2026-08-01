@@ -19,6 +19,16 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/ko-ce-ugasiti-zvezde-astronomi-upozoravaju-da-bi-17-miliona-satelita-moglo-trajno-da-promeni-nocno-nebo",
+    img: "/news/vanishing-stars.jpg",
+    alt: "Noćno nebo prošarano tragovima satelita iznad Mlečnog puta.",
+    imageCredit: "Ilustracija: Novi Talas",
+    title:
+      "Ko će ugasiti zvezde? Astronomi upozoravaju da bi 1,7 miliona satelita moglo trajno da promeni noćno nebo",
+    description:
+      "Novo upozorenje astronoma ukazuje da bi planirano lansiranje čak 1,7 miliona satelita moglo trajno da izmeni izgled noćnog neba, oteža astronomska posmatranja i poveća rizik od sudara u Zemljinoj orbiti.",
+  },
+  {
     href: "/nasa-planeta/vise-od-1100-strucnjaka-iz-vodecih-ai-kompanija-trazi-usporavanje-razvoja-vestacke-inteligencije",
     img: "/news/ai-frontier-warning.jpg",
     alt: "Futuristički grad i digitalni prikaz ljudskog mozga kao simbol razvoja napredne veštačke inteligencije.",

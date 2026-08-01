@@ -10,18 +10,28 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/nasa-planeta/vise-od-1100-strucnjaka-iz-vodecih-ai-kompanija-trazi-usporavanje-razvoja-vestacke-inteligencije",
+  href: "/nasa-planeta/ko-ce-ugasiti-zvezde-astronomi-upozoravaju-da-bi-17-miliona-satelita-moglo-trajno-da-promeni-nocno-nebo",
   category: "Naša planeta",
   title:
-    "Više od 1.100 stručnjaka iz vodećih AI kompanija traži usporavanje razvoja veštačke inteligencije",
+    "Ko će ugasiti zvezde? Astronomi upozoravaju da bi 1,7 miliona satelita moglo trajno da promeni noćno nebo",
   description:
-    "Više od 1.100 zaposlenih i istraživača iz vodećih svetskih AI kompanija upozorava da bi automatizovani razvoj veštačke inteligencije uskoro mogao da postane brži od sposobnosti ljudi i institucija da ga razumeju, nadziru i kontrolišu.",
-  imageSrc: "/news/ai-frontier-warning.jpg",
-  imageAlt:
-    "Futuristički grad i digitalni prikaz ljudskog mozga kao simbol razvoja napredne veštačke inteligencije.",
+    "Novo upozorenje astronoma ukazuje da bi planirano lansiranje čak 1,7 miliona satelita moglo trajno da izmeni izgled noćnog neba, oteža astronomska posmatranja i poveća rizik od sudara u Zemljinoj orbiti.",
+  imageSrc: "/news/vanishing-stars.jpg",
+  imageAlt: "Noćno nebo prošarano tragovima satelita iznad Mlečnog puta.",
 };
 
 const ARTICLES = [
+  {
+    href: "/nasa-planeta/vise-od-1100-strucnjaka-iz-vodecih-ai-kompanija-trazi-usporavanje-razvoja-vestacke-inteligencije",
+    category: "Naša planeta",
+    title:
+      "Više od 1.100 stručnjaka iz vodećih AI kompanija traži usporavanje razvoja veštačke inteligencije",
+    description:
+      "Više od 1.100 zaposlenih i istraživača iz vodećih svetskih AI kompanija upozorava da bi automatizovani razvoj veštačke inteligencije uskoro mogao da postane brži od sposobnosti ljudi i institucija da ga razumeju, nadziru i kontrolišu.",
+    imageSrc: "/news/ai-frontier-warning.jpg",
+    imageAlt:
+      "Futuristički grad i digitalni prikaz ljudskog mozga kao simbol razvoja napredne veštačke inteligencije.",
+  },
   {
     href: "/nasa-planeta/revolucija-u-borbi-protiv-raka-crispr-koji-ne-popravlja-gene-vec-unistava-celije-tumora",
     category: "Naša planeta",
@@ -75,16 +85,6 @@ const ARTICLES = [
     imageSrc: "/news/hormuz-bab-el-mandeb-energy-chokepoints.jpg",
     imageAlt:
       "Grafička ilustracija dva ugrožena energetska prolaza, Ormuskog moreuza i Bab el Mandeba",
-  },
-  {
-    href: "/geopolitika/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana",
-    category: "Geopolitika",
-    title:
-      "Od primirja do novih udara: kako je ponovo eskalirao sukob SAD i Irana",
-    description:
-      "Nekoliko dana nakon novih pregovora i nagoveštaja smirivanja tenzija, Bliski istok ponovo se našao na ivici ozbiljne eskalacije, dok Ormuski moreuz postaje jedna od ključnih tačaka globalne nestabilnosti.",
-    imageSrc: "/news/hormuz-chokepoint.jpg",
-    imageAlt: "Ormuski moreuz, strateški pomorski prolaz između Irana i Omana",
   },
 ];
 
