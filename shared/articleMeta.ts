@@ -158,6 +158,18 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/istorijska-susa-ugrozila-nuklearne-elektrane-na-dunavu-rumunija-minira-stenovite-prepreke-madjarska-gasi-reaktore",
+    title:
+      "Istorijska suša ugrozila nuklearne elektrane na Dunavu: Rumunija minira stenovite prepreke, Mađarska gasi reaktore",
+    seoTitle:
+      "Istorijska suša ugrozila nuklearne elektrane na Dunavu: Rumunija minira stenovite prepreke, Mađarska gasi reaktore | Novi Talas",
+    description:
+      "Rekordno nizak vodostaj Dunava primorao je Rumuniju i Mađarsku na vanredne mere kako bi zaštitile rad nuklearnih elektrana i stabilnost energetskog sistema.",
+    imageSrc: "/news/danube-slankamen.jpg",
+    section: "Geopolitika",
+    datePublished: "2026-08-03",
+  },
+  {
     path: "/geopolitika/zasto-je-desetine-hiljada-ljudi-krenulo-ka-spaniji-kriza-u-seuti-otvara-nova-pitanja-o-granicama-evrope",
     title:
       "Zašto je desetine hiljada ljudi krenulo ka Španiji? Kriza u Seuti otvara nova pitanja o granicama Evrope",

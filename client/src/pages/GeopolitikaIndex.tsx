@@ -18,6 +18,15 @@ type Article = {
 
 const ARTICLES: Article[] = [
   {
+    href: "/geopolitika/istorijska-susa-ugrozila-nuklearne-elektrane-na-dunavu-rumunija-minira-stenovite-prepreke-madjarska-gasi-reaktore",
+    title:
+      "Istorijska suša ugrozila nuklearne elektrane na Dunavu: Rumunija minira stenovite prepreke, Mađarska gasi reaktore",
+    description:
+      "Rekordno nizak vodostaj Dunava primorao je Rumuniju i Mađarsku na vanredne mere kako bi zaštitile rad svojih nuklearnih elektrana i očuvale stabilnost elektroenergetskih sistema.",
+    imageSrc: "/news/danube-slankamen.jpg",
+    imageAlt: "Panoramski pogled na Dunav kod Starog Slankamena.",
+  },
+  {
     href: "/geopolitika/zasto-je-desetine-hiljada-ljudi-krenulo-ka-spaniji-kriza-u-seuti-otvara-nova-pitanja-o-granicama-evrope",
     title:
       "Zašto je desetine hiljada ljudi krenulo ka Španiji? Kriza u Seuti otvara nova pitanja o granicama Evrope",
