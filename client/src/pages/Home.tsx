@@ -10,18 +10,28 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/zasto-je-desetine-hiljada-ljudi-krenulo-ka-spaniji-kriza-u-seuti-otvara-nova-pitanja-o-granicama-evrope",
+  href: "/geopolitika/istorijska-susa-ugrozila-nuklearne-elektrane-na-dunavu-rumunija-minira-stenovite-prepreke-madjarska-gasi-reaktore",
   category: "Geopolitika",
   title:
-    "Zašto je desetine hiljada ljudi krenulo ka Španiji? Kriza u Seuti otvara nova pitanja o granicama Evrope",
+    "Istorijska suša ugrozila nuklearne elektrane na Dunavu: Rumunija minira stenovite prepreke, Mađarska gasi reaktore",
   description:
-    "Posle najvećeg migrantskog talasa u novijoj istoriji Seute, Španija pooštrava kontrolu granice, dok Evropa ponovo otvara raspravu o zaštiti svojih spoljašnjih granica i migrantskoj politici.",
-  imageSrc: "/news/ceuta-border-fence.jpg",
-  imageAlt:
-    "Granična ograda koja razdvaja špansku enklavu Seutu od teritorije Maroka.",
+    "Rekordno nizak vodostaj Dunava primorao je Rumuniju i Mađarsku na vanredne mere kako bi zaštitile rad svojih nuklearnih elektrana i očuvale stabilnost elektroenergetskih sistema.",
+  imageSrc: "/news/danube-slankamen.jpg",
+  imageAlt: "Panoramski pogled na Dunav kod Starog Slankamena.",
 };
 
 const ARTICLES = [
+  {
+    href: "/geopolitika/zasto-je-desetine-hiljada-ljudi-krenulo-ka-spaniji-kriza-u-seuti-otvara-nova-pitanja-o-granicama-evrope",
+    category: "Geopolitika",
+    title:
+      "Zašto je desetine hiljada ljudi krenulo ka Španiji? Kriza u Seuti otvara nova pitanja o granicama Evrope",
+    description:
+      "Posle najvećeg migrantskog talasa u novijoj istoriji Seute, Španija pooštrava kontrolu granice, dok Evropa ponovo otvara raspravu o zaštiti svojih spoljašnjih granica i migrantskoj politici.",
+    imageSrc: "/news/ceuta-border-fence.jpg",
+    imageAlt:
+      "Granična ograda koja razdvaja špansku enklavu Seutu od teritorije Maroka.",
+  },
   {
     href: "/nasa-planeta/ko-ce-ugasiti-zvezde-astronomi-upozoravaju-da-bi-17-miliona-satelita-moglo-trajno-da-promeni-nocno-nebo",
     category: "Naša planeta",
@@ -75,16 +85,6 @@ const ARTICLES = [
     imageSrc: "/news/serbia-artemis-accords.jpg",
     imageAlt:
       "Marko Đurić i zamenik administratora NASA Matt Anderson nakon potpisivanja sporazuma Artemis u sedištu NASA u Vašingtonu.",
-  },
-  {
-    href: "/nasa-planeta/planeta-ostaje-bez-daha-kiseonik-nestaje-iz-okeana-jezera-i-reka",
-    category: "Naša planeta",
-    title: "Planeta ostaje bez daha: kiseonik nestaje iz okeana, jezera i reka",
-    description:
-      "Novo međunarodno istraživanje pokazuje da količina rastvorenog kiseonika ubrzano opada u okeanima, morima, rekama i jezerima, što predstavlja jednu od najvećih pretnji vodenim ekosistemima i budućnosti života na Zemlji.",
-    imageSrc: "/news/ocean-deep.jpg",
-    imageAlt:
-      "Bleached coral on the seabed beneath a thinning school of fish, symbolizing the global loss of oxygen from aquatic ecosystems.",
   },
 ];
 

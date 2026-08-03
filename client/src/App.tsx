@@ -255,6 +255,7 @@ import RevolucijaUBorbiProtivRakaCrisprArticle from "./pages/revolucija-u-borbi-
 import FrontierAiSlowdownArticle from "./pages/FrontierAiSlowdownArticle";
 import VanishingStarsArticle from "./pages/VanishingStarsArticle";
 import CeutaMigrationCrisisArticle from "./pages/CeutaMigrationCrisisArticle";
+import DanubeNuclearCrisisArticle from "./pages/DanubeNuclearCrisisArticle";
 
 /* ✅ NOVA VEST — Naša planeta */
 import NasaAnounce from "./pages/nasa-anounce";
@@ -294,6 +295,10 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/istorijska-susa-ugrozila-nuklearne-elektrane-na-dunavu-rumunija-minira-stenovite-prepreke-madjarska-gasi-reaktore"
+          component={DanubeNuclearCrisisArticle}
+        />
         <Route
           path="/geopolitika/zasto-je-desetine-hiljada-ljudi-krenulo-ka-spaniji-kriza-u-seuti-otvara-nova-pitanja-o-granicama-evrope"
           component={CeutaMigrationCrisisArticle}
