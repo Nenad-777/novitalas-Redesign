@@ -10,17 +10,27 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/istorijska-susa-ugrozila-nuklearne-elektrane-na-dunavu-rumunija-minira-stenovite-prepreke-madjarska-gasi-reaktore",
-  category: "Geopolitika",
-  title:
-    "Istorijska suša ugrozila nuklearne elektrane na Dunavu: Rumunija minira stenovite prepreke, Mađarska gasi reaktore",
+  href: "/obavestajni-izvori/sta-se-to-dogadja-u-evropi-priprema-za-rat-bez-fronta",
+  category: "OBAVEŠTAJNI IZVORI",
+  title: "Šta se to događa u Evropi: priprema za rat bez fronta?",
   description:
-    "Rekordno nizak vodostaj Dunava primorao je Rumuniju i Mađarsku na vanredne mere kako bi zaštitile rad svojih nuklearnih elektrana i očuvale stabilnost elektroenergetskih sistema.",
-  imageSrc: "/news/danube-slankamen.jpg",
-  imageAlt: "Panoramski pogled na Dunav kod Starog Slankamena.",
+    "Poljska i baltičke države pojačavaju zaštitu elektrana, brana, gasnih skladišta i druge ključne infrastrukture. Među scenarijima koje razmatraju obaveštajne službe nalazi se i mogućnost napada čije bi poreklo bilo namerno prikriveno.",
+  imageSrc: "/news/europe-war-without-front.jpg",
+  imageAlt:
+    "Naftna platforma na otvorenom moru kao simbol ranjivosti evropske energetske i kritične infrastrukture.",
 };
 
 const ARTICLES = [
+  {
+    href: "/geopolitika/istorijska-susa-ugrozila-nuklearne-elektrane-na-dunavu-rumunija-minira-stenovite-prepreke-madjarska-gasi-reaktore",
+    category: "Geopolitika",
+    title:
+      "Istorijska suša ugrozila nuklearne elektrane na Dunavu: Rumunija minira stenovite prepreke, Mađarska gasi reaktore",
+    description:
+      "Rekordno nizak vodostaj Dunava primorao je Rumuniju i Mađarsku na vanredne mere kako bi zaštitile rad svojih nuklearnih elektrana i očuvale stabilnost elektroenergetskih sistema.",
+    imageSrc: "/news/danube-slankamen.jpg",
+    imageAlt: "Panoramski pogled na Dunav kod Starog Slankamena.",
+  },
   {
     href: "/geopolitika/zasto-je-desetine-hiljada-ljudi-krenulo-ka-spaniji-kriza-u-seuti-otvara-nova-pitanja-o-granicama-evrope",
     category: "Geopolitika",
@@ -74,17 +84,6 @@ const ARTICLES = [
     imageSrc: "/news/lost-republic.jpg",
     imageAlt:
       "Minimalistička ilustracija kupole Narodne skupštine Srbije sa dugom senkom koja simbolizuje odnos između institucija i stvarne političke moći.",
-  },
-  {
-    href: "/geopolitika/nova-orbita-srpske-diplomatije-zasto-se-beograd-priblizava-vasingtonu-bas-sada",
-    category: "Geopolitika",
-    title:
-      "Nova orbita srpske diplomatije: zašto se Beograd približava Vašingtonu baš sada",
-    description:
-      "Dok Srbija prolazi kroz jednu od najdubljih društvenih i političkih kriza u poslednjoj deceniji, Beograd i Vašington otvaraju novo poglavlje međusobnih odnosa.",
-    imageSrc: "/news/serbia-artemis-accords.jpg",
-    imageAlt:
-      "Marko Đurić i zamenik administratora NASA Matt Anderson nakon potpisivanja sporazuma Artemis u sedištu NASA u Vašingtonu.",
   },
 ];
 

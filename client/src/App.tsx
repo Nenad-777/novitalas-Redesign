@@ -88,6 +88,7 @@ import NemackaCurenjeInformacija from "./pages/nemacka-curenje-informacija";
 /* ✅ NOVA VEST — Obaveštajni izvori */
 import KazakstanSpijun from "./pages/kazakstan-spijun";
 import GermanyBNDReformArticle from "./pages/GermanyBNDReformArticle";
+import EuropeWarWithoutFrontArticle from "./pages/EuropeWarWithoutFrontArticle";
 
 import ObavestajniArticle from "./pages/ObavestajniArticle";
 import ObavestajniIndex from "./pages/ObavestajniIndex";
@@ -615,6 +616,11 @@ function Router() {
             OBAVEŠTAJNI IZVORI
            ========================= */}
         <Route path="/obavestajni-izvori" component={ObavestajniIndex} />
+
+        <Route
+          path="/obavestajni-izvori/sta-se-to-dogadja-u-evropi-priprema-za-rat-bez-fronta"
+          component={EuropeWarWithoutFrontArticle}
+        />
 
         <Route
           path="/obavestajni-izvori/nemacka-menja-bnd-najveca-reforma-obavestajne-sluzbe"

@@ -158,6 +158,17 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/obavestajni-izvori/sta-se-to-dogadja-u-evropi-priprema-za-rat-bez-fronta",
+    title: "Šta se to događa u Evropi: priprema za rat bez fronta?",
+    seoTitle:
+      "Šta se to događa u Evropi: priprema za rat bez fronta? | Novi Talas",
+    description:
+      "Poljska i baltičke države pojačavaju zaštitu ključne infrastrukture dok obaveštajne službe razmatraju mogućnost prikrivenih napada čije bi poreklo bilo teško odmah utvrditi.",
+    imageSrc: "/news/europe-war-without-front.jpg",
+    section: "Obaveštajni izvori",
+    datePublished: "2026-08-12",
+  },
+  {
     path: "/geopolitika/istorijska-susa-ugrozila-nuklearne-elektrane-na-dunavu-rumunija-minira-stenovite-prepreke-madjarska-gasi-reaktore",
     title:
       "Istorijska suša ugrozila nuklearne elektrane na Dunavu: Rumunija minira stenovite prepreke, Mađarska gasi reaktore",
