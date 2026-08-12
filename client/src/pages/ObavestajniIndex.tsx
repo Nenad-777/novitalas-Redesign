@@ -10,6 +10,15 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/obavestajni-izvori/sta-se-to-dogadja-u-evropi-priprema-za-rat-bez-fronta",
+    img: "/news/europe-war-without-front.jpg",
+    alt: "Naftna platforma na otvorenom moru kao simbol ranjivosti evropske energetske i kritične infrastrukture.",
+    title: "Šta se to događa u Evropi: priprema za rat bez fronta?",
+    description:
+      "Poljska i baltičke države pojačavaju zaštitu elektrana, brana, gasnih skladišta i druge ključne infrastrukture. Među scenarijima koje razmatraju obaveštajne službe nalazi se i mogućnost napada čije bi poreklo bilo namerno prikriveno.",
+    date: "12. avgust 2026.",
+  },
+  {
     href: "/obavestajni-izvori/nemacka-menja-bnd-najveca-reforma-obavestajne-sluzbe",
     img: "/news/germany-bnd-modernization.jpg",
     alt: "Editorial illustration about the modernization of Germany's Federal Intelligence Service (BND)",
