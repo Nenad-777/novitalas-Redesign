@@ -120,7 +120,8 @@ export default function SeoMeta({
       if (registered) {
         const ogImage = buildOgImageUrl(registered.imageSrc);
         const ogUrl = `${SITE_BASE}${registered.path}`;
-        document.title = `${registered.title}${BRAND_SUFFIX}`;
+        document.title =
+          registered.seoTitle ?? `${registered.title}${BRAND_SUFFIX}`;
         setMeta("name", "description", registered.description);
         setMeta("property", "og:type", "article");
         setMeta("property", "og:title", registered.title);

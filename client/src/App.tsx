@@ -257,6 +257,7 @@ import FrontierAiSlowdownArticle from "./pages/FrontierAiSlowdownArticle";
 import VanishingStarsArticle from "./pages/VanishingStarsArticle";
 import CeutaMigrationCrisisArticle from "./pages/CeutaMigrationCrisisArticle";
 import DanubeNuclearCrisisArticle from "./pages/DanubeNuclearCrisisArticle";
+import TrumpOmanThreatArticle from "./pages/TrumpOmanThreatArticle";
 
 /* ✅ NOVA VEST — Naša planeta */
 import NasaAnounce from "./pages/nasa-anounce";
@@ -296,6 +297,11 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/tramp-zapretio-bombardovanjem-omana-dok-istice-rok-za-sporazum-sa-iranom"
+          component={TrumpOmanThreatArticle}
+        />
+
         <Route
           path="/geopolitika/istorijska-susa-ugrozila-nuklearne-elektrane-na-dunavu-rumunija-minira-stenovite-prepreke-madjarska-gasi-reaktore"
           component={DanubeNuclearCrisisArticle}

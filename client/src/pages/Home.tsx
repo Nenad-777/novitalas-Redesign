@@ -10,17 +10,28 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/obavestajni-izvori/sta-se-to-dogadja-u-evropi-priprema-za-rat-bez-fronta",
-  category: "OBAVEŠTAJNI IZVORI",
-  title: "Šta se to događa u Evropi: priprema za rat bez fronta?",
+  href: "/geopolitika/tramp-zapretio-bombardovanjem-omana-dok-istice-rok-za-sporazum-sa-iranom",
+  category: "GEOPOLITIKA",
+  title:
+    "Tramp zapretio bombardovanjem Omana dok ističe rok za sporazum sa Iranom",
   description:
-    "Poljska i baltičke države pojačavaju zaštitu elektrana, brana, gasnih skladišta i druge ključne infrastrukture. Među scenarijima koje razmatraju obaveštajne službe nalazi se i mogućnost napada čije bi poreklo bilo namerno prikriveno.",
-  imageSrc: "/news/europe-war-without-front.jpg",
+    "Američki predsednik Donald Tramp zapretio je vojnom akcijom protiv Omana ukoliko se ta zemlja umeša u američki spor sa Iranom oko Ormuskog moreuza. Izjava dolazi upravo na dan kada ističe rok od 60 dana za postizanje sporazuma Vašingtona i Teherana, bez naznaka da su dve strane blizu dogovora.",
+  imageSrc: "/news/airplane-oman.jpg",
   imageAlt:
-    "Naftna platforma na otvorenom moru kao simbol ranjivosti evropske energetske i kritične infrastrukture.",
+    "Američki vojni avion iznad Ormuskog moreuza, dok tanker plovi ispod planinske obale Omana.",
 };
 
 const ARTICLES = [
+  {
+    href: "/obavestajni-izvori/sta-se-to-dogadja-u-evropi-priprema-za-rat-bez-fronta",
+    category: "Obaveštajni izvori",
+    title: "Šta se to događa u Evropi: priprema za rat bez fronta?",
+    description:
+      "Poljska i baltičke države pojačavaju zaštitu elektrana, brana, gasnih skladišta i druge ključne infrastrukture. Među scenarijima koje razmatraju obaveštajne službe nalazi se i mogućnost napada čije bi poreklo bilo namerno prikriveno.",
+    imageSrc: "/news/europe-war-without-front.jpg",
+    imageAlt:
+      "Naftna platforma na otvorenom moru kao simbol ranjivosti evropske energetske i kritične infrastrukture.",
+  },
   {
     href: "/geopolitika/istorijska-susa-ugrozila-nuklearne-elektrane-na-dunavu-rumunija-minira-stenovite-prepreke-madjarska-gasi-reaktore",
     category: "Geopolitika",
@@ -73,17 +84,6 @@ const ARTICLES = [
     imageSrc: "/news/    crispr-cancer-therapy.jpg",
     imageAlt:
       "Mikroskopska ilustracija tumorske ćelije koju napada precizno usmerena CRISPR terapija.",
-  },
-  {
-    href: "/srbija/srbija-bez-republike-moze-li-se-obnoviti-drzava-posle-cetrnaest-godina-vlasti-sns-a",
-    category: "Srbija · ANALIZA",
-    title:
-      "Srbija bez republike: može li se obnoviti država posle četrnaest godina vlasti SNS-a?",
-    description:
-      "Rasprava o nepoverenju Vladi Srbije samo je povod za mnogo veće pitanje: šta se dogodilo sa zemljom u kojoj institucije potvrđuju političku volju oblikovanu izvan njih?",
-    imageSrc: "/news/lost-republic.jpg",
-    imageAlt:
-      "Minimalistička ilustracija kupole Narodne skupštine Srbije sa dugom senkom koja simbolizuje odnos između institucija i stvarne političke moći.",
   },
 ];
 
