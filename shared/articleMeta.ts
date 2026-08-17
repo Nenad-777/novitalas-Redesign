@@ -158,6 +158,18 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/tramp-zapretio-bombardovanjem-omana-dok-istice-rok-za-sporazum-sa-iranom",
+    title:
+      "Tramp zapretio bombardovanjem Omana dok ističe rok za sporazum sa Iranom",
+    seoTitle:
+      "Tramp zapretio bombardovanjem Omana dok ističe rok za sporazum sa Iranom | Novi Talas",
+    description:
+      "Donald Tramp zapretio je vojnom akcijom protiv Omana dok ističe rok za sporazum SAD i Irana, a plovidba kroz Ormuski moreuz ostaje ozbiljno poremećena.",
+    imageSrc: "/news/airplane-oman.jpg",
+    datePublished: "2026-08-17",
+    section: "Geopolitika",
+  },
+  {
     path: "/obavestajni-izvori/sta-se-to-dogadja-u-evropi-priprema-za-rat-bez-fronta",
     title: "Šta se to događa u Evropi: priprema za rat bez fronta?",
     seoTitle:

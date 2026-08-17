@@ -18,6 +18,16 @@ type Article = {
 
 const ARTICLES: Article[] = [
   {
+    href: "/geopolitika/tramp-zapretio-bombardovanjem-omana-dok-istice-rok-za-sporazum-sa-iranom",
+    title:
+      "Tramp zapretio bombardovanjem Omana dok ističe rok za sporazum sa Iranom",
+    description:
+      "Američki predsednik Donald Tramp zapretio je vojnom akcijom protiv Omana ukoliko se ta zemlja umeša u američki spor sa Iranom oko Ormuskog moreuza. Izjava dolazi upravo na dan kada ističe rok od 60 dana za postizanje sporazuma Vašingtona i Teherana, bez naznaka da su dve strane blizu dogovora.",
+    imageSrc: "/news/airplane-oman.jpg",
+    imageAlt:
+      "Američki vojni avion iznad Ormuskog moreuza, dok tanker plovi ispod planinske obale Omana.",
+  },
+  {
     href: "/geopolitika/istorijska-susa-ugrozila-nuklearne-elektrane-na-dunavu-rumunija-minira-stenovite-prepreke-madjarska-gasi-reaktore",
     title:
       "Istorijska suša ugrozila nuklearne elektrane na Dunavu: Rumunija minira stenovite prepreke, Mađarska gasi reaktore",
