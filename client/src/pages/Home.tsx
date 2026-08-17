@@ -10,18 +10,29 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/tramp-zapretio-bombardovanjem-omana-dok-istice-rok-za-sporazum-sa-iranom",
-  category: "GEOPOLITIKA",
+  href: "/srbija/pravi-test-bice-izbori-sta-promene-na-vrhu-znace-za-n1-novu-danas-i-radar",
+  category: "SRBIJA",
   title:
-    "Tramp zapretio bombardovanjem Omana dok ističe rok za sporazum sa Iranom",
+    "Pravi test biće izbori: šta promene na vrhu znače za N1, Novu, Danas i Radar?",
   description:
-    "Američki predsednik Donald Tramp zapretio je vojnom akcijom protiv Omana ukoliko se ta zemlja umeša u američki spor sa Iranom oko Ormuskog moreuza. Izjava dolazi upravo na dan kada ističe rok od 60 dana za postizanje sporazuma Vašingtona i Teherana, bez naznaka da su dve strane blizu dogovora.",
-  imageSrc: "/news/airplane-oman.jpg",
+    "Promene u kompanijama koje stoje iza N1, Nove, Danasa i Radara otvaraju novo poglavlje posle prodaje ovih medija portugalskom Alpac Capitalu. U zemlji u kojoj su ove redakcije godinama među najvažnijim kritičkim glasovima, pitanje više nije samo ko je njihov vlasnik, već koliko će biti slobodne onda kada njihovo izveštavanje bude najvažnije.",
+  imageSrc: "/news/media-independence-election.jpg",
   imageAlt:
-    "Američki vojni avion iznad Ormuskog moreuza, dok tanker plovi ispod planinske obale Omana.",
+    "Prazna urednička stolica pred ekranima sa izbornim grafikama, dok se preko redakcije nadvija anonimna senka.",
 };
 
 const ARTICLES = [
+  {
+    href: "/geopolitika/tramp-zapretio-bombardovanjem-omana-dok-istice-rok-za-sporazum-sa-iranom",
+    category: "Geopolitika",
+    title:
+      "Tramp zapretio bombardovanjem Omana dok ističe rok za sporazum sa Iranom",
+    description:
+      "Američki predsednik Donald Tramp zapretio je vojnom akcijom protiv Omana ukoliko se ta zemlja umeša u američki spor sa Iranom oko Ormuskog moreuza. Izjava dolazi upravo na dan kada ističe rok od 60 dana za postizanje sporazuma Vašingtona i Teherana, bez naznaka da su dve strane blizu dogovora.",
+    imageSrc: "/news/airplane-oman.jpg",
+    imageAlt:
+      "Američki vojni avion iznad Ormuskog moreuza, dok tanker plovi ispod planinske obale Omana.",
+  },
   {
     href: "/obavestajni-izvori/sta-se-to-dogadja-u-evropi-priprema-za-rat-bez-fronta",
     category: "Obaveštajni izvori",
@@ -73,17 +84,6 @@ const ARTICLES = [
     imageSrc: "/news/ai-frontier-warning.jpg",
     imageAlt:
       "Futuristički grad i digitalni prikaz ljudskog mozga kao simbol razvoja napredne veštačke inteligencije.",
-  },
-  {
-    href: "/nasa-planeta/revolucija-u-borbi-protiv-raka-crispr-koji-ne-popravlja-gene-vec-unistava-celije-tumora",
-    category: "Naša planeta",
-    title:
-      "Revolucija u borbi protiv raka: CRISPR koji ne popravlja gene, već uništava ćelije tumora",
-    description:
-      "Nova istraživanja otvaraju mogućnost da se CRISPR tehnologija koristi ne samo za ispravljanje gena već i za selektivno uništavanje obolelih ćelija. Iako je put do терапије за пацијенте још дуг, научници говоре о новом правцу у развоју прецизнијих метода лечења рака.",
-    imageSrc: "/news/    crispr-cancer-therapy.jpg",
-    imageAlt:
-      "Mikroskopska ilustracija tumorske ćelije koju napada precizno usmerena CRISPR terapija.",
   },
 ];
 

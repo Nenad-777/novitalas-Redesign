@@ -100,6 +100,7 @@ import SrbijaPage from "./pages/SrbijaPage";
 import SerbiaLostRepublicArticle from "./pages/SerbiaLostRepublicArticle";
 import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
+import MediaIndependenceElectionArticle from "./pages/MediaIndependenceElectionArticle";
 import PotpuniSlomVuciceveMedjunarodneReputacije from "./pages/potpuni-slom-vuciceve-medjunarodne-reputacije";
 
 /* ✅ NOVA VEST — Geopolitika */
@@ -682,6 +683,10 @@ function Router() {
             SRBIJA
            ========================= */}
         <Route path="/srbija" component={SrbijaPage} />
+        <Route
+          path="/srbija/pravi-test-bice-izbori-sta-promene-na-vrhu-znace-za-n1-novu-danas-i-radar"
+          component={MediaIndependenceElectionArticle}
+        />
         <Route
           path="/srbija/srbija-bez-republike-moze-li-se-obnoviti-drzava-posle-cetrnaest-godina-vlasti-sns-a"
           component={SerbiaLostRepublicArticle}

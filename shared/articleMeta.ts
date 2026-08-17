@@ -158,6 +158,18 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/srbija/pravi-test-bice-izbori-sta-promene-na-vrhu-znace-za-n1-novu-danas-i-radar",
+    title:
+      "Pravi test biće izbori: šta promene na vrhu znače za N1, Novu, Danas i Radar?",
+    seoTitle:
+      "Pravi test biće izbori: šta promene na vrhu znače za N1, Novu, Danas i Radar? | Novi Talas",
+    description:
+      "Promene u upravljanju N1, Novom, Danasom i Radarom otvaraju pitanje buduće uređivačke nezavisnosti nekih od najvažnijih kritičkih medija u Srbiji.",
+    imageSrc: "/news/media-independence-election.jpg",
+    datePublished: "2026-08-17",
+    section: "Srbija",
+  },
+  {
     path: "/geopolitika/tramp-zapretio-bombardovanjem-omana-dok-istice-rok-za-sporazum-sa-iranom",
     title:
       "Tramp zapretio bombardovanjem Omana dok ističe rok za sporazum sa Iranom",
