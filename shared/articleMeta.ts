@@ -158,6 +158,17 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/da-li-rusija-sprema-jos-300000-vojnika-za-rat-u-ukrajini",
+    title: "Da li Rusija sprema još 300.000 vojnika za rat u Ukrajini?",
+    seoTitle:
+      "Da li Rusija sprema još 300.000 vojnika za rat u Ukrajini? | Novi Talas",
+    description:
+      "Kijev tvrdi da Rusija posle septembarskih izbora namerava da mobiliše dodatnih 300.000 ljudi. Moskva takav plan za sada nije potvrdila.",
+    imageSrc: "/news/kremlin-moscow.jpg",
+    datePublished: "2026-08-23",
+    section: "Geopolitika",
+  },
+  {
     path: "/srbija/pravi-test-bice-izbori-sta-promene-na-vrhu-znace-za-n1-novu-danas-i-radar",
     title:
       "Pravi test biće izbori: šta promene na vrhu znače za N1, Novu, Danas i Radar?",

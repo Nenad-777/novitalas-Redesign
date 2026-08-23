@@ -8,6 +8,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
 import Home from "./pages/Home";
+import Russia300000TroopsArticle from "./pages/Russia300000TroopsArticle";
 import Pretraga from "./pages/Pretraga";
 import GeopolitikaIndex from "./pages/GeopolitikaIndex";
 import GeopolitikaIran from "./pages/GeopolitikaIran";
@@ -293,6 +294,10 @@ function Router() {
       <Switch>
         {/* Home */}
         <Route path="/" component={Home} />
+        <Route
+          path="/geopolitika/da-li-rusija-sprema-jos-300000-vojnika-za-rat-u-ukrajini"
+          component={Russia300000TroopsArticle}
+        />
         <Route path="/pretraga" component={Pretraga} />
 
         {/* =========================

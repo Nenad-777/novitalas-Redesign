@@ -18,6 +18,14 @@ type Article = {
 
 const ARTICLES: Article[] = [
   {
+    href: "/geopolitika/da-li-rusija-sprema-jos-300000-vojnika-za-rat-u-ukrajini",
+    title: "Da li Rusija sprema još 300.000 vojnika za rat u Ukrajini?",
+    description:
+      "Rat u Ukrajini mogao bi da uđe u još jednu godinu velikih vojnih operacija. Kijev tvrdi da Rusija posle septembarskih izbora za Državnu dumu namerava da mobiliše dodatnih 300.000 ljudi, dok Moskva takav plan nije potvrdila.",
+    imageSrc: "/news/kremlin-moscow.jpg",
+    imageAlt: "Grafička ilustracija Moskovskog kremlja noću.",
+  },
+  {
     href: "/geopolitika/tramp-zapretio-bombardovanjem-omana-dok-istice-rok-za-sporazum-sa-iranom",
     title:
       "Tramp zapretio bombardovanjem Omana dok ističe rok za sporazum sa Iranom",
