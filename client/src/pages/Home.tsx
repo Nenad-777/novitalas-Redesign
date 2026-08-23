@@ -10,18 +10,27 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/srbija/pravi-test-bice-izbori-sta-promene-na-vrhu-znace-za-n1-novu-danas-i-radar",
-  category: "SRBIJA",
-  title:
-    "Pravi test biće izbori: šta promene na vrhu znače za N1, Novu, Danas i Radar?",
+  href: "/geopolitika/da-li-rusija-sprema-jos-300000-vojnika-za-rat-u-ukrajini",
+  category: "GEOPOLITIKA",
+  title: "Da li Rusija sprema još 300.000 vojnika za rat u Ukrajini?",
   description:
-    "Promene u kompanijama koje stoje iza N1, Nove, Danasa i Radara otvaraju novo poglavlje posle prodaje ovih medija portugalskom Alpac Capitalu. U zemlji u kojoj su ove redakcije godinama među najvažnijim kritičkim glasovima, pitanje više nije samo ko je njihov vlasnik, već koliko će biti slobodne onda kada njihovo izveštavanje bude najvažnije.",
-  imageSrc: "/news/media-independence-election.jpg",
-  imageAlt:
-    "Prazna urednička stolica pred ekranima sa izbornim grafikama, dok se preko redakcije nadvija anonimna senka.",
+    "Rat u Ukrajini mogao bi da uđe u još jednu godinu velikih vojnih operacija. Kijev tvrdi da Rusija posle septembarskih izbora za Državnu dumu namerava da mobiliše dodatnih 300.000 ljudi, dok Moskva takav plan nije potvrdila. Ako je procena tačna, brojka govori mnogo više od veličine nove mobilizacije — govori o vremenu za koje se rat planira.",
+  imageSrc: "/news/kremlin-moscow.jpg",
+  imageAlt: "Grafička ilustracija Moskovskog kremlja noću.",
 };
 
 const ARTICLES = [
+  {
+    href: "/srbija/pravi-test-bice-izbori-sta-promene-na-vrhu-znace-za-n1-novu-danas-i-radar",
+    category: "Srbija",
+    title:
+      "Pravi test biće izbori: šta promene na vrhu znače za N1, Novu, Danas i Radar?",
+    description:
+      "Promene u kompanijama koje stoje iza N1, Nove, Danasa i Radara otvaraju novo poglavlje posle prodaje ovih medija portugalskom Alpac Capitalu. U zemlji u kojoj su ove redakcije godinama među najvažnijim kritičkim glasovima, pitanje više nije samo ko je njihov vlasnik, već koliko će biti slobodne onda kada njihovo izveštavanje bude najvažnije.",
+    imageSrc: "/news/media-independence-election.jpg",
+    imageAlt:
+      "Prazna urednička stolica pred ekranima sa izbornim grafikama, dok se preko redakcije nadvija anonimna senka.",
+  },
   {
     href: "/geopolitika/tramp-zapretio-bombardovanjem-omana-dok-istice-rok-za-sporazum-sa-iranom",
     category: "Geopolitika",
@@ -73,17 +82,6 @@ const ARTICLES = [
       "Novo upozorenje astronoma ukazuje da bi planirano lansiranje čak 1,7 miliona satelita moglo trajno da izmeni izgled noćnog neba, oteža astronomska posmatranja i poveća rizik od sudara u Zemljinoj orbiti.",
     imageSrc: "/news/vanishing-stars.jpg",
     imageAlt: "Noćno nebo prošarano tragovima satelita iznad Mlečnog puta.",
-  },
-  {
-    href: "/nasa-planeta/vise-od-1100-strucnjaka-iz-vodecih-ai-kompanija-trazi-usporavanje-razvoja-vestacke-inteligencije",
-    category: "Naša planeta",
-    title:
-      "Više od 1.100 stručnjaka iz vodećih AI kompanija traži usporavanje razvoja veštačke inteligencije",
-    description:
-      "Više od 1.100 zaposlenih i istraživača iz vodećih svetskih AI kompanija upozorava da bi automatizovani razvoj veštačke inteligencije uskoro mogao da postane brži od sposobnosti ljudi i institucija da ga razumeju, nadziru i kontrolišu.",
-    imageSrc: "/news/ai-frontier-warning.jpg",
-    imageAlt:
-      "Futuristički grad i digitalni prikaz ljudskog mozga kao simbol razvoja napredne veštačke inteligencije.",
   },
 ];
 
