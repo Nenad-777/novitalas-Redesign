@@ -158,6 +158,16 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/obavestajni-izvori/direktor-cia-u-moskvi",
+    title: "Direktor CIA u Moskvi",
+    seoTitle: "Direktor CIA u Moskvi | Novi Talas",
+    description:
+      "Direktor CIA Džon Retklif boravio je u nenajavljenoj poseti Moskvi i razgovarao sa predstavnicima ruskih obaveštajnih službi. Putin je, prema Kremlju, obavešten o rezultatima razgovora.",
+    imageSrc: "/news/john-ratcliffe-cia.jpg",
+    section: "Obaveštajni izvori",
+    datePublished: "2026-08-26",
+  },
+  {
     path: "/geopolitika/da-li-rusija-sprema-jos-300000-vojnika-za-rat-u-ukrajini",
     title: "Da li Rusija sprema još 300.000 vojnika za rat u Ukrajini?",
     seoTitle:

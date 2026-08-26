@@ -10,16 +10,26 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/da-li-rusija-sprema-jos-300000-vojnika-za-rat-u-ukrajini",
-  category: "GEOPOLITIKA",
-  title: "Da li Rusija sprema još 300.000 vojnika za rat u Ukrajini?",
+  href: "/obavestajni-izvori/direktor-cia-u-moskvi",
+  category: "OBAVEŠTAJNI IZVORI",
+  title: "Direktor CIA u Moskvi",
   description:
-    "Rat u Ukrajini mogao bi da uđe u još jednu godinu velikih vojnih operacija. Kijev tvrdi da Rusija posle septembarskih izbora za Državnu dumu namerava da mobiliše dodatnih 300.000 ljudi, dok Moskva takav plan nije potvrdila. Ako je procena tačna, brojka govori mnogo više od veličine nove mobilizacije — govori o vremenu za koje se rat planira.",
-  imageSrc: "/news/kremlin-moscow.jpg",
-  imageAlt: "Grafička ilustracija Moskovskog kremlja noću.",
+    "Džon Retklif boravio je u nenajavljenoj poseti Moskvi i razgovarao sa predstavnicima ruskih obaveštajnih službi. Vladimir Putin nije učestvovao u sastancima, ali je, prema Kremlju, obavešten o njihovim rezultatima. Sadržaj razgovora nije objavljen, ali sama činjenica da je šef CIA stigao u rusku prestonicu predstavlja redak direktan kontakt dve sile u trenutku duboke konfrontacije zbog rata u Ukrajini.",
+  imageSrc: "/news/john-ratcliffe-cia.jpg",
+  imageAlt:
+    "Direktor CIA Džon Retklif tokom sastanka u Situacionoj sobi Bele kuće.",
 };
 
 const ARTICLES = [
+  {
+    href: "/geopolitika/da-li-rusija-sprema-jos-300000-vojnika-za-rat-u-ukrajini",
+    category: "Geopolitika",
+    title: "Da li Rusija sprema još 300.000 vojnika za rat u Ukrajini?",
+    description:
+      "Rat u Ukrajini mogao bi da uđe u još jednu godinu velikih vojnih operacija. Kijev tvrdi da Rusija posle septembarskih izbora za Državnu dumu namerava da mobiliše dodatnih 300.000 ljudi, dok Moskva takav plan nije potvrdila. Ako je procena tačna, brojka govori mnogo više od veličine nove mobilizacije — govori o vremenu za koje se rat planira.",
+    imageSrc: "/news/kremlin-moscow.jpg",
+    imageAlt: "Grafička ilustracija Moskovskog kremlja noću.",
+  },
   {
     href: "/srbija/pravi-test-bice-izbori-sta-promene-na-vrhu-znace-za-n1-novu-danas-i-radar",
     category: "Srbija",
@@ -72,16 +82,6 @@ const ARTICLES = [
     imageSrc: "/news/ceuta-border-fence.jpg",
     imageAlt:
       "Granična ograda koja razdvaja špansku enklavu Seutu od teritorije Maroka.",
-  },
-  {
-    href: "/nasa-planeta/ko-ce-ugasiti-zvezde-astronomi-upozoravaju-da-bi-17-miliona-satelita-moglo-trajno-da-promeni-nocno-nebo",
-    category: "Naša planeta",
-    title:
-      "Ko će ugasiti zvezde? Astronomi upozoravaju da bi 1,7 miliona satelita moglo trajno da promeni noćno nebo",
-    description:
-      "Novo upozorenje astronoma ukazuje da bi planirano lansiranje čak 1,7 miliona satelita moglo trajno da izmeni izgled noćnog neba, oteža astronomska posmatranja i poveća rizik od sudara u Zemljinoj orbiti.",
-    imageSrc: "/news/vanishing-stars.jpg",
-    imageAlt: "Noćno nebo prošarano tragovima satelita iznad Mlečnog puta.",
   },
 ];
 

@@ -10,6 +10,15 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/obavestajni-izvori/direktor-cia-u-moskvi",
+    img: "/news/john-ratcliffe-cia.jpg",
+    alt: "Direktor CIA Džon Retklif tokom sastanka u Situacionoj sobi Bele kuće.",
+    title: "Direktor CIA u Moskvi",
+    description:
+      "Džon Retklif boravio je u nenajavljenoj poseti Moskvi i razgovarao sa predstavnicima ruskih obaveštajnih službi. Vladimir Putin nije učestvovao u sastancima, ali je, prema Kremlju, obavešten o njihovim rezultatima. Sadržaj razgovora nije objavljen, ali sama činjenica da je šef CIA stigao u rusku prestonicu predstavlja redak direktan kontakt dve sile u trenutku duboke konfrontacije zbog rata u Ukrajini.",
+    date: "26. avgust 2026.",
+  },
+  {
     href: "/obavestajni-izvori/sta-se-to-dogadja-u-evropi-priprema-za-rat-bez-fronta",
     img: "/news/europe-war-without-front.jpg",
     alt: "Naftna platforma na otvorenom moru kao simbol ranjivosti evropske energetske i kritične infrastrukture.",
