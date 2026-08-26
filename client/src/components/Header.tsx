@@ -59,7 +59,7 @@ export default function Header() {
   const { theme, toggleTheme } = useTheme();
   const isDark = theme === "dark";
 
-  const handleMobileSearch = (event: FormEvent<HTMLFormElement>) => {
+  const handleSearch = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const query = searchQuery.trim();
     if (!query) return;
@@ -110,7 +110,7 @@ export default function Header() {
             <WaveDivider isDark={isDark} desktop />
           </div>
 
-          <div className="hidden lg:flex items-center justify-end gap-6 w-[35%]">
+          <div className="hidden lg:flex items-center justify-end gap-4 w-[35%]">
             {navItems.slice(2).map((item) => (
               <Link
                 key={item.label}
@@ -121,6 +121,26 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
+
+            <form
+              onSubmit={handleSearch}
+              className="flex items-center rounded-md border overflow-hidden"
+              style={{ borderColor: isDark ? "rgba(255,255,255,0.14)" : "rgba(26,42,58,0.18)" }}
+            >
+              <label htmlFor="desktop-search" className="sr-only">Pretraga</label>
+              <input
+                id="desktop-search"
+                type="search"
+                value={searchQuery}
+                onChange={(event) => setSearchQuery(event.target.value)}
+                placeholder="Pretraga"
+                className="w-20 xl:w-28 bg-transparent px-2 py-1.5 text-[12px] outline-none"
+                style={{ color: isDark ? "#f6f3e8" : "#1a2a3a" }}
+              />
+              <button type="submit" className="p-1.5" aria-label="Pretraži" style={{ color: isDark ? "#d9bf7a" : "#1a2a3a" }}>
+                <Search size={16} />
+              </button>
+            </form>
 
             <button
               onClick={toggleTheme}
@@ -176,7 +196,7 @@ export default function Header() {
           </nav>
 
           <form
-            onSubmit={handleMobileSearch}
+            onSubmit={handleSearch}
             className="mt-5 pt-4"
             style={{ borderTop: isDark ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(0,0,0,0.08)" }}
           >

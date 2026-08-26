@@ -2,94 +2,14 @@ import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
-
-interface SearchArticle {
-  href: string;
-  category: string;
-  title: string;
-  description: string;
-  imageSrc?: string;
-  imageAlt?: string;
-}
-
-const ARTICLES: SearchArticle[] = [
-  {
-    href: "/geopolitika/mundijal-na-granici-fudbal-vize-i-politika-moci",
-    category: "Geopolitika",
-    title: "Mundijal na granici: fudbal, vize i politika moći",
-    description:
-      "Dok FIFA slavi najveći fudbalski spektakl na svetu, američka vizna politika, ratne tenzije i pitanje ko uopšte ima pravo da učestvuje na Svetskom prvenstvu već su deo turnira.",
-    imageSrc: "/news/world-cup-visas.jpg",
-    imageAlt: "Mundijal, vize i geopolitika na granici",
-  },
-  {
-    href: "/nasa-planeta/zasto-ljudi-kada-lutaju-cesto-skrecu-ulevo",
-    category: "Naša planeta",
-    title: "Zašto ljudi, kada lutaju, često skreću ulevo?",
-    description:
-      "Kada ljudi izgube spoljne orijentire, njihovo kretanje često ne ide pravom linijom, već blagim lukom — neretko ulevo.",
-    imageSrc: "/news/human-walking-left.jpg",
-    imageAlt: "Ljudi koji hodaju kroz otvoren prostor",
-  },
-  {
-    href: "/geopolitika/eu-migration-rules-2026",
-    category: "Geopolitika",
-    title: "Nova migraciona pravila Evropske unije ulaze u primenu",
-    description:
-      "Novi evropski pakt menja pravila za azil, granice i deportacije, uz zajedničke procedure i sistem solidarnosti.",
-    imageSrc: "/news/eu-flags.jpg",
-    imageAlt: "Zastave Evropske unije",
-  },
-  {
-    href: "/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan",
-    category: "Geopolitika",
-    title:
-      "SAD i Iran blizu sporazuma: Pakistan tvrdi da je tekst dogovoren, Teheran još oprezan",
-    description:
-      "Pakistan tvrdi da su SAD i Iran usaglasili tekst mirovnog sporazuma, dok Teheran poručuje da konačna odluka još nije doneta.",
-    imageSrc: "/news/peace-for-iran.jpg",
-    imageAlt: "SAD i Iran pregovaraju o sporazumu",
-  },
-  {
-    href: "/geopolitika/tramp-pokrenuo-udare-na-iran-nakon-obaranja-americkog-helikoptera",
-    category: "Geopolitika",
-    title: "KRIZA SAD–IRAN",
-    description:
-      "SAD izvele novu seriju udara na ciljeve u Iranu dok Teheran najavljuje odgovor.",
-    imageSrc: "/news/usa-iran-red-line.jpg",
-    imageAlt: "Kriza SAD–Iran i vojni udari na ciljeve u Iranu",
-  },
-  {
-    href: "/nasa-planeta/nasa-predstavila-posadu-artemis-iii",
-    category: "Naša planeta",
-    title: "NASA predstavila posadu misije Artemis III",
-    description:
-      "Povratak ljudi na Mesec ulazi u novu fazu — NASA je objavila posadu misije Artemis III.",
-    imageSrc: "/news/artemis-nasa-3.jpg",
-    imageAlt: "NASA Artemis III posada",
-  },
-];
-
-function normalizeSearchText(value: string) {
-  return value
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLocaleLowerCase("sr-Latn");
-}
+import { searchArticles } from "../../../shared/articleSearch";
 
 export default function Pretraga() {
   const { theme } = useTheme();
   const isDark = theme === "dark";
-  const query = new URLSearchParams(window.location.search).get("q")?.trim() ?? "";
-  const normalizedQuery = normalizeSearchText(query);
-
-  const results = query
-    ? ARTICLES.filter((article) =>
-        normalizeSearchText(
-          `${article.title} ${article.description} ${article.category} ${article.href}`,
-        ).includes(normalizedQuery),
-      )
-    : [];
+  const query =
+    new URLSearchParams(window.location.search).get("q")?.trim() ?? "";
+  const results = searchArticles(query);
 
   return (
     <div
@@ -125,11 +45,20 @@ export default function Pretraga() {
                 Rezultati za: “{query}”
               </p>
             )}
+            {query && (
+              <p
+                className="mt-1 text-[13px]"
+                style={{ color: isDark ? "#9a978f" : "#6b7280" }}
+              >
+                {results.length}{" "}
+                {results.length === 1 ? "rezultat" : "rezultata"}
+              </p>
+            )}
           </div>
 
           {query && results.length > 0 && (
             <div className="flex flex-col">
-              {results.map((article) => (
+              {results.map(article => (
                 <article
                   key={article.href}
                   className="py-6 first:pt-0 border-b"
@@ -186,6 +115,17 @@ export default function Pretraga() {
               }}
             >
               Nema rezultata za traženi pojam.
+            </p>
+          )}
+          {!query && (
+            <p
+              className="py-8 text-[16px]"
+              style={{
+                fontFamily: "'Lora', Georgia, serif",
+                color: isDark ? "#bcb7a6" : "#555",
+              }}
+            >
+              Unesite pojam za pretragu.
             </p>
           )}
         </section>
