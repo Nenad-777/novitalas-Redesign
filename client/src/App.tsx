@@ -90,6 +90,7 @@ import NemackaCurenjeInformacija from "./pages/nemacka-curenje-informacija";
 import KazakstanSpijun from "./pages/kazakstan-spijun";
 import GermanyBNDReformArticle from "./pages/GermanyBNDReformArticle";
 import EuropeWarWithoutFrontArticle from "./pages/EuropeWarWithoutFrontArticle";
+import CIADirectorMoscowArticle from "./pages/CIADirectorMoscowArticle";
 
 import ObavestajniArticle from "./pages/ObavestajniArticle";
 import ObavestajniIndex from "./pages/ObavestajniIndex";
@@ -628,6 +629,11 @@ function Router() {
             OBAVEŠTAJNI IZVORI
            ========================= */}
         <Route path="/obavestajni-izvori" component={ObavestajniIndex} />
+
+        <Route
+          path="/obavestajni-izvori/direktor-cia-u-moskvi"
+          component={CIADirectorMoscowArticle}
+        />
 
         <Route
           path="/obavestajni-izvori/sta-se-to-dogadja-u-evropi-priprema-za-rat-bez-fronta"
