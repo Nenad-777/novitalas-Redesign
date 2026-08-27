@@ -91,6 +91,7 @@ import KazakstanSpijun from "./pages/kazakstan-spijun";
 import GermanyBNDReformArticle from "./pages/GermanyBNDReformArticle";
 import EuropeWarWithoutFrontArticle from "./pages/EuropeWarWithoutFrontArticle";
 import CIADirectorMoscowArticle from "./pages/CIADirectorMoscowArticle";
+import RatcliffeMoscowMissionArticle from "./pages/RatcliffeMoscowMissionArticle";
 
 import ObavestajniArticle from "./pages/ObavestajniArticle";
 import ObavestajniIndex from "./pages/ObavestajniIndex";
@@ -629,6 +630,11 @@ function Router() {
             OBAVEŠTAJNI IZVORI
            ========================= */}
         <Route path="/obavestajni-izvori" component={ObavestajniIndex} />
+
+        <Route
+          path="/obavestajni-izvori/retklifova-misija-u-moskvi-dobija-nove-obrise"
+          component={RatcliffeMoscowMissionArticle}
+        />
 
         <Route
           path="/obavestajni-izvori/direktor-cia-u-moskvi"

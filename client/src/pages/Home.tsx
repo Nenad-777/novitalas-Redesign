@@ -22,6 +22,16 @@ const HERO_ARTICLE = {
 
 const ARTICLES = [
   {
+    href: "/obavestajni-izvori/retklifova-misija-u-moskvi-dobija-nove-obrise",
+    category: "Obaveštajni izvori",
+    title: "RETKLIFOVA MISIJA U MOSKVI DOBIJA NOVE OBRISE",
+    description:
+      "Dan nakon što je potvrđena nenajavljena poseta direktora CIA Džona Retklifa Moskvi, pojavili su se prvi konkretniji podaci o njegovim razgovorima. Šef ruske Spoljne obaveštajne službe Sergej Nariškin potvrdio je da se lično sastao sa Retklifom, dok američki mediji navode da je jedna od tema bilo upozorenje Moskvi da ne pokušava eskalaciju prema članicama NATO-a. Donald Tramp takvu interpretaciju, međutim, javno odbacuje.",
+    imageSrc: "/news/ratcliffe-moscow-red-line.jpg",
+    imageAlt:
+      "Grafička ilustracija tajne američke misije u Moskvi: zvaničnik prelazi crvenu liniju na aerodromskoj pisti dok se u pozadini nalazi vojni transportni avion.",
+  },
+  {
     href: "/geopolitika/da-li-rusija-sprema-jos-300000-vojnika-za-rat-u-ukrajini",
     category: "Geopolitika",
     title: "Da li Rusija sprema još 300.000 vojnika za rat u Ukrajini?",
@@ -400,6 +410,7 @@ export default function Home() {
                   <SmallArticleCard variant="tile" {...ARTICLES[3]} />
                   <SmallArticleCard variant="tile" {...ARTICLES[4]} />
                   <SmallArticleCard variant="tile" {...ARTICLES[5]} />
+                  <SmallArticleCard variant="tile" {...ARTICLES[6]} />
                 </div>
               </div>
             </FadeIn>
@@ -475,6 +486,7 @@ export default function Home() {
                 <DesktopTileStory article={ARTICLES[3]} />
                 <DesktopTileStory article={ARTICLES[4]} />
                 <DesktopTileStory article={ARTICLES[5]} />
+                <DesktopTileStory article={ARTICLES[6]} />
               </section>
             </FadeIn>
           </div>
