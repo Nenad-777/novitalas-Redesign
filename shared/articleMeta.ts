@@ -158,6 +158,17 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/obavestajni-izvori/retklifova-misija-u-moskvi-dobija-nove-obrise",
+    title: "RETKLIFOVA MISIJA U MOSKVI DOBIJA NOVE OBRISE",
+    seoTitle: "Retklifova misija u Moskvi dobija nove obrise | Novi Talas",
+    description:
+      "Sergej Nariškin potvrdio je direktan sastanak sa direktorom CIA Džonom Retklifom, dok američki mediji tvrde da je Moskvi preneto upozorenje zbog moguće eskalacije prema NATO-u.",
+    imageSrc: "/news/ratcliffe-moscow-red-line.jpg",
+    datePublished: "2026-08-27",
+    section: "Obaveštajni izvori",
+    keywords: "Retklif, Moskva, CIA, Nariškin, Narisnikin, NATO",
+  },
+  {
     path: "/obavestajni-izvori/direktor-cia-u-moskvi",
     title: "Direktor CIA u Moskvi",
     seoTitle: "Direktor CIA u Moskvi | Novi Talas",

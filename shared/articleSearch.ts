@@ -9,6 +9,7 @@ export interface SearchArticle {
   imageSrc?: string;
   imageAlt?: string;
   publishedAt?: string;
+  keywords?: string;
 }
 
 const CATEGORY_BY_SEGMENT: Record<string, string> = {
@@ -36,6 +37,7 @@ export const articleSearchIndex: SearchArticle[] = Array.from(
         imageSrc: article.imageSrc,
         imageAlt: article.title,
         publishedAt: article.datePublished,
+        keywords: article.keywords,
       },
     ]),
     ...Object.entries(seoData).map(
@@ -70,12 +72,14 @@ function relevance(article: SearchArticle, query: string): number {
   const category = normalizeSearchText(article.category);
   const description = normalizeSearchText(article.description);
   const href = normalizeSearchText(article.href);
+  const keywords = normalizeSearchText(article.keywords ?? "");
 
   if (title === query) return 600;
   if (title.startsWith(query)) return 500;
   if (title.includes(query)) return 400;
   if (category.includes(query)) return 300;
   if (description.includes(query)) return 200;
+  if (keywords.includes(query)) return 150;
   if (href.includes(query)) return 100;
   return 0;
 }

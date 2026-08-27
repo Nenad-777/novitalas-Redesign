@@ -38,6 +38,15 @@ describe("article search", () => {
     }
   );
 
+  it.each(["Retklif", "Moskva", "CIA", "Narisnikin", "Nariškin", "NATO"])(
+    "finds the Retklif Moscow article for %s",
+    query => {
+      expect(searchArticles(query).map(article => article.href)).toContain(
+        "/obavestajni-izvori/retklifova-misija-u-moskvi-dobija-nove-obrise"
+      );
+    }
+  );
+
   it("returns an empty list for an empty query", () => {
     expect(searchArticles("  ")).toEqual([]);
   });
