@@ -24,7 +24,7 @@ const ARTICLES = [
   {
     href: "/obavestajni-izvori/retklifova-misija-u-moskvi-dobija-nove-obrise",
     category: "Obaveštajni izvori",
-    title: "RETKLIFOVA MISIJA U MOSKVI DOBIJA NOVE OBRISE",
+    title: "Retklifova misija u Moskvi dobija nove obrise",
     description:
       "Dan nakon što je potvrđena nenajavljena poseta direktora CIA Džona Retklifa Moskvi, pojavili su se prvi konkretniji podaci o njegovim razgovorima. Šef ruske Spoljne obaveštajne službe Sergej Nariškin potvrdio je da se lično sastao sa Retklifom, dok američki mediji navode da je jedna od tema bilo upozorenje Moskvi da ne pokušava eskalaciju prema članicama NATO-a. Donald Tramp takvu interpretaciju, međutim, javno odbacuje.",
     imageSrc: "/news/ratcliffe-moscow-red-line.jpg",
