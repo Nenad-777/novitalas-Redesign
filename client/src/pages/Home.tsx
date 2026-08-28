@@ -22,6 +22,15 @@ const HERO_ARTICLE = {
 
 const ARTICLES = [
   {
+    href: "/geopolitika/srbija-act-vasington-beograd",
+    category: "Svet · Analiza",
+    title: "SRBIJA Act: Da li Vašington menja pravila odnosa sa Beogradom?",
+    description:
+      "H.R. 10183, poznat kao SRBIJA Act, povezuje američki odnos prema Srbiji sa demokratijom, vladavinom prava, korupcijom i odnosima Beograda sa Rusijom, Kinom i Iranom.",
+    imageSrc: "/news/srbija-act-us-house-chamber.jpg",
+    imageAlt: "Sala Predstavničkog doma Kongresa SAD.",
+  },
+  {
     href: "/obavestajni-izvori/retklifova-misija-u-moskvi-dobija-nove-obrise",
     category: "Obaveštajni izvori",
     title: "Retklifova misija u Moskvi dobija nove obrise",

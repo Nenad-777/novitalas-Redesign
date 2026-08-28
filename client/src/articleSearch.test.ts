@@ -15,7 +15,13 @@ describe("article search", () => {
     expect(
       new Set(articleSearchIndex.map(article => article.category))
     ).toEqual(
-      new Set(["Geopolitika", "Srbija", "Obaveštajni izvori", "Naša planeta"])
+      new Set([
+        "Geopolitika",
+        "Srbija",
+        "Svet",
+        "Obaveštajni izvori",
+        "Naša planeta",
+      ])
     );
   });
 

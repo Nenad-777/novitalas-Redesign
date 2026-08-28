@@ -158,6 +158,19 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/srbija-act-vasington-beograd",
+    title: "SRBIJA Act: Da li Vašington menja pravila odnosa sa Beogradom?",
+    seoTitle: "SRBIJA Act: Da li Vašington menja pravila odnosa sa Beogradom?",
+    description:
+      "H.R. 10183, poznat kao SRBIJA Act, povezuje američki odnos prema Srbiji sa demokratijom, vladavinom prava, korupcijom i odnosima Beograda sa Rusijom, Kinom i Iranom.",
+    imageSrc: "/news/srbija-act-us-house-chamber.jpg",
+    datePublished: "2026-08-28",
+    author: "Hadži Nenad Maričić",
+    section: "Svet",
+    keywords:
+      "SRBIJA Act, H.R. 10183, Srbija, SAD, Vašington, Beograd, demokratija, vladavina prava",
+  },
+  {
     path: "/obavestajni-izvori/retklifova-misija-u-moskvi-dobija-nove-obrise",
     title: "RETKLIFOVA MISIJA U MOSKVI DOBIJA NOVE OBRISE",
     seoTitle: "Retklifova misija u Moskvi dobija nove obrise | Novi Talas",
