@@ -18,6 +18,14 @@ type Article = {
 
 const ARTICLES: Article[] = [
   {
+    href: "/geopolitika/srbija-act-vasington-beograd",
+    title: "SRBIJA Act: Da li Vašington menja pravila odnosa sa Beogradom?",
+    description:
+      "H.R. 10183, poznat kao SRBIJA Act, povezuje američki odnos prema Srbiji sa demokratijom, vladavinom prava, korupcijom i odnosima Beograda sa Rusijom, Kinom i Iranom.",
+    imageSrc: "/news/srbija-act-us-house-chamber.jpg",
+    imageAlt: "Sala Predstavničkog doma Kongresa SAD.",
+  },
+  {
     href: "/geopolitika/da-li-rusija-sprema-jos-300000-vojnika-za-rat-u-ukrajini",
     title: "Da li Rusija sprema još 300.000 vojnika za rat u Ukrajini?",
     description:
