@@ -4,7 +4,7 @@ const ARTICLE = {
   path: "/geopolitika/srbija-act-vasington-beograd",
   title: "SRBIJA Act: Da li Vašington menja pravila odnosa sa Beogradom?",
   dateLabel: "28. AVGUST 2026.",
-  authorLabel: "Hadži Nenad Maričić",
+  authorLabel: "",
   deck: "U američkom Kongresu pojavio se predlog koji bi mogao da promeni kriterijume po kojima se grade odnosi Sjedinjenih Država i Srbije. H.R. 10183, poznat kao SRBIJA Act, povezuje buduće produbljivanje saradnje sa Beogradom sa stanjem demokratije, vladavinom prava, korupcijom i javnim nabavkama, dok Srbiju istovremeno posmatra u širem kontekstu američkog strateškog nadmetanja sa Rusijom, Kinom i Iranom. Predlog je tek na početku kongresne procedure, ali je politička logika koja stoji iza njega vredna pažnje.",
   imageSrc: "/news/srbija-act-us-house-chamber.jpg",
   imageAlt: "Sala Predstavničkog doma Kongresa SAD.",
