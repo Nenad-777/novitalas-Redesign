@@ -19,6 +19,15 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/svet-ce-gotovo-izvesno-preci-granicu-od-1-5-stepeni",
+    img: "/news/global-warming-1-5-degree-threshold.jpg",
+    alt: "Grafička ilustracija Zemlje koja prelazi simboličnu granicu globalnog zagrevanja",
+    imageCredit: "Ilustracija: Novi Talas",
+    title: "Svet će gotovo izvesno preći granicu od 1,5 stepeni",
+    description:
+      "UNEP ocenjuje da se prekoračenje ključne granice globalnog zagrevanja više ne može realno izbeći. Pariski cilj ne nestaje, ali se menja pitanje: koliko ćemo tu granicu prekoračiti, koliko dugo ćemo iznad nje ostati i možemo li se vratiti ispod nje?",
+  },
+  {
     href: "/nasa-planeta/ko-ce-ugasiti-zvezde-astronomi-upozoravaju-da-bi-17-miliona-satelita-moglo-trajno-da-promeni-nocno-nebo",
     img: "/news/vanishing-stars.jpg",
     alt: "Noćno nebo prošarano tragovima satelita iznad Mlečnog puta.",

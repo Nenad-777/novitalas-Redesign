@@ -158,6 +158,18 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/svet-ce-gotovo-izvesno-preci-granicu-od-1-5-stepeni",
+    title: "Svet će gotovo izvesno preći granicu od 1,5 stepeni",
+    seoTitle:
+      "Svet će gotovo izvesno preći granicu od 1,5 stepeni | Novi Talas",
+    description:
+      "UNEP ocenjuje da se prekoračenje granice globalnog zagrevanja od 1,5 stepeni više ne može realno izbeći. Svet ulazi u novu fazu klimatske politike.",
+    imageSrc: "/news/global-warming-1-5-degree-threshold.jpg",
+    datePublished: "2026-09-02",
+    author: "Novi Talas",
+    section: "Naša planeta",
+  },
+  {
     path: "/geopolitika/srbija-act-vasington-beograd",
     title: "SRBIJA Act: Da li Vašington menja pravila odnosa sa Beogradom?",
     seoTitle: "SRBIJA Act: Da li Vašington menja pravila odnosa sa Beogradom?",

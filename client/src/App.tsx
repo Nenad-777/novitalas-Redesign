@@ -260,6 +260,7 @@ import PlanetaOstajeBezDahaArticle from "./pages/planeta-ostaje-bez-daha-kiseoni
 import RevolucijaUBorbiProtivRakaCrisprArticle from "./pages/revolucija-u-borbi-protiv-raka-crispr-koji-ne-popravlja-gene-vec-unistava-celije-tumora";
 import FrontierAiSlowdownArticle from "./pages/FrontierAiSlowdownArticle";
 import VanishingStarsArticle from "./pages/VanishingStarsArticle";
+import GlobalWarmingThresholdArticle from "./pages/GlobalWarmingThresholdArticle";
 import CeutaMigrationCrisisArticle from "./pages/CeutaMigrationCrisisArticle";
 import DanubeNuclearCrisisArticle from "./pages/DanubeNuclearCrisisArticle";
 import TrumpOmanThreatArticle from "./pages/TrumpOmanThreatArticle";
@@ -771,6 +772,10 @@ function Router() {
         {/* =========================
             NAŠA PLANETA
            ========================= */}
+        <Route
+          path="/nasa-planeta/svet-ce-gotovo-izvesno-preci-granicu-od-1-5-stepeni"
+          component={GlobalWarmingThresholdArticle}
+        />
         <Route
           path="/nasa-planeta/ko-ce-ugasiti-zvezde-astronomi-upozoravaju-da-bi-17-miliona-satelita-moglo-trajno-da-promeni-nocno-nebo"
           component={VanishingStarsArticle}
