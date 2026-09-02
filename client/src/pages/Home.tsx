@@ -10,17 +10,27 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/obavestajni-izvori/direktor-cia-u-moskvi",
-  category: "OBAVEŠTAJNI IZVORI",
-  title: "Direktor CIA u Moskvi",
+  href: "/nasa-planeta/svet-ce-gotovo-izvesno-preci-granicu-od-1-5-stepeni",
+  category: "Naša planeta",
+  title: "Svet će gotovo izvesno preći granicu od 1,5 stepeni",
   description:
-    "Džon Retklif boravio je u nenajavljenoj poseti Moskvi i razgovarao sa predstavnicima ruskih obaveštajnih službi. Vladimir Putin nije učestvovao u sastancima, ali je, prema Kremlju, obavešten o njihovim rezultatima. Sadržaj razgovora nije objavljen, ali sama činjenica da je šef CIA stigao u rusku prestonicu predstavlja redak direktan kontakt dve sile u trenutku duboke konfrontacije zbog rata u Ukrajini.",
-  imageSrc: "/news/john-ratcliffe-cia.jpg",
+    "UNEP ocenjuje da se prekoračenje ključne granice globalnog zagrevanja više ne može realno izbeći. Pariski cilj ne nestaje, ali se menja pitanje koliko ćemo tu granicu prekoračiti i koliko dugo ćemo iznad nje ostati.",
+  imageSrc: "/news/global-warming-1-5-degree-threshold.jpg",
   imageAlt:
-    "Direktor CIA Džon Retklif tokom sastanka u Situacionoj sobi Bele kuće.",
+    "Grafička ilustracija Zemlje koja prelazi simboličnu granicu globalnog zagrevanja",
 };
 
 const ARTICLES = [
+  {
+    href: "/obavestajni-izvori/direktor-cia-u-moskvi",
+    category: "OBAVEŠTAJNI IZVORI",
+    title: "Direktor CIA u Moskvi",
+    description:
+      "Džon Retklif boravio je u nenajavljenoj poseti Moskvi i razgovarao sa predstavnicima ruskih obaveštajnih službi. Vladimir Putin nije učestvovao u sastancima, ali je, prema Kremlju, obavešten o njihovim rezultatima. Sadržaj razgovora nije objavljen, ali sama činjenica da je šef CIA stigao u rusku prestonicu predstavlja redak direktan kontakt dve sile u trenutku duboke konfrontacije zbog rata u Ukrajini.",
+    imageSrc: "/news/john-ratcliffe-cia.jpg",
+    imageAlt:
+      "Direktor CIA Džon Retklif tokom sastanka u Situacionoj sobi Bele kuće.",
+  },
   {
     href: "/geopolitika/srbija-act-vasington-beograd",
     category: "Svet · Analiza",
@@ -420,6 +430,7 @@ export default function Home() {
                   <SmallArticleCard variant="tile" {...ARTICLES[4]} />
                   <SmallArticleCard variant="tile" {...ARTICLES[5]} />
                   <SmallArticleCard variant="tile" {...ARTICLES[6]} />
+                  <SmallArticleCard variant="tile" {...ARTICLES[7]} />
                 </div>
               </div>
             </FadeIn>
@@ -496,6 +507,7 @@ export default function Home() {
                 <DesktopTileStory article={ARTICLES[4]} />
                 <DesktopTileStory article={ARTICLES[5]} />
                 <DesktopTileStory article={ARTICLES[6]} />
+                <DesktopTileStory article={ARTICLES[7]} />
               </section>
             </FadeIn>
           </div>
