@@ -8,6 +8,7 @@ const navItems = [
   { label: "Obaveštajni izvori", href: "/obavestajni-izvori" },
   { label: "Srbija", href: "/srbija" },
   { label: "Naša planeta", href: "/nasa-planeta" },
+  { label: "SOFIA", href: "/sofia" },
 ];
 
 function MastheadLogo({ isDark }: { isDark: boolean }) {
