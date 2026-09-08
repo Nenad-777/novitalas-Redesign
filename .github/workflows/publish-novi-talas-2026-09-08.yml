@@ -1,0 +1,26 @@
+name: Publish Novi Talas 2026-09-08
+
+on:
+  push:
+    paths:
+      - '.publish/READY'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Publish approved articles
+        run: python3 .publish/publish.py
+      - name: Commit publication
+        run: |
+          git config user.name "Novi Talas Publisher"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Publish maritime order and Pachocki AI stories"
+          git push origin HEAD:main
