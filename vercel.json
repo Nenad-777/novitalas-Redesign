@@ -1,5 +1,5 @@
 {
-  "buildCommand": "python3 .publish/publish.py && pnpm run build",
+  "buildCommand": "pnpm run build",
   "headers": [
     {
       "source": "/og/(.*)",
