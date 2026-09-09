@@ -21,6 +21,7 @@ export default function RenoirHeistArticle() {
       imageSrc="https://upload.wikimedia.org/wikipedia/commons/e/ec/Renoir_-_Portrait_de_Madame_Colonna_Romano%2C_non_dat%C3%A9.jpg"
       imageAlt="Pjer-Ogist Renoar, Portret gospođe Kolona Romano, jedna od dve slike koje se i dalje traže."
       imageCredit="Pjer-Ogist Renoar, Portret gospođe Kolona Romano / Wikimedia Commons, CC BY-SA 4.0"
+      imageHeightClass="h-auto"
       imageFirst={true}
       paragraphs={PARAGRAPHS}
       backHref="/nasa-planeta"
