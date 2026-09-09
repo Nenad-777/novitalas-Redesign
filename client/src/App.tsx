@@ -195,6 +195,7 @@ import IzboriNepravilnostiKrivicnaOdgovornost from "./pages/izbori-nepravilnosti
 import IzboriRezultati from "./pages/izbori-rezultati";
 
 import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
+import RenoirHeistArticle from "./pages/RenoirHeistArticle";
 import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
 import SpilbergUpozoravaHolivudPublikaTraziOriginalneFilmove from "./pages/spilberg-upozorava-holivud-publika-trazi-originalne-filmove";
 import UmetnostKojaDiseTeamlabTokio from "./pages/umetnost-koja-dise-teamlab-tokio";
@@ -809,6 +810,11 @@ function Router() {
         <Route
           path="/nasa-planeta/anthropic-upozorava-da-li-razvoj-vestacke-inteligencije-postaje-brzi-od-nase-sposobnosti-da-je-kontrolisemo"
           component={AnthropicAIGovernanceArticle}
+        />
+
+        <Route
+          path="/nasa-planeta/ko-krade-renoara-ako-ne-moze-da-ga-proda"
+          component={RenoirHeistArticle}
         />
 
         <Route path="/nasa-planeta" component={NasaPlanetaIndex} />
