@@ -19,6 +19,16 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/ko-krade-renoara-ako-ne-moze-da-ga-proda",
+    img: "https://upload.wikimedia.org/wikipedia/commons/e/ec/Renoir_-_Portrait_de_Madame_Colonna_Romano%2C_non_dat%C3%A9.jpg",
+    alt: "Pjer-Ogist Renoar, Portret gospođe Kolona Romano, jedna od dve slike koje se i dalje traže.",
+    imageCredit:
+      "Pjer-Ogist Renoar, Portret gospođe Kolona Romano / Wikimedia Commons, CC BY-SA 4.0",
+    title: "Ko krade Renoara ako ne može da ga proda?",
+    description:
+      "Dvojica lopova odnela su četiri Renoarove slike iz muzeja na Azurnoj obali. Dve su pronađene, dve su nestale. Ali prava misterija je čemu služi krađa dela koje je gotovo nemoguće prodati.",
+  },
+  {
     href: "/nasa-planeta/svet-ce-gotovo-izvesno-preci-granicu-od-1-5-stepeni",
     img: "/news/global-warming-1-5-degree-threshold.jpg",
     alt: "Grafička ilustracija Zemlje koja prelazi simboličnu granicu globalnog zagrevanja",
