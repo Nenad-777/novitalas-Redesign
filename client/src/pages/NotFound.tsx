@@ -3,14 +3,20 @@ import { Card, CardContent } from "@/components/ui/card";
 import { AlertCircle, Home } from "lucide-react";
 import { useLocation } from "wouter";
 import ZastoLjudiKadaLutajuCestoSkrecuUlevo from "./zasto-ljudi-kada-lutaju-cesto-skrecu-ulevo";
+import SofiaProject from "./SofiaProject";
 
 const WALKING_LEFT_PATH = "/nasa-planeta/zasto-ljudi-kada-lutaju-cesto-skrecu-ulevo";
+const SOFIA_PATHS = new Set(["/sofia", "/sofia/001"]);
 
 export default function NotFound() {
   const [location, setLocation] = useLocation();
 
   if (location === WALKING_LEFT_PATH) {
     return <ZastoLjudiKadaLutajuCestoSkrecuUlevo />;
+  }
+
+  if (SOFIA_PATHS.has(location)) {
+    return <SofiaProject />;
   }
 
   const handleGoHome = () => {
