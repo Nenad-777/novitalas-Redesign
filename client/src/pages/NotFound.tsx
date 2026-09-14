@@ -4,8 +4,11 @@ import { AlertCircle, Home } from "lucide-react";
 import { useLocation } from "wouter";
 import ZastoLjudiKadaLutajuCestoSkrecuUlevo from "./zasto-ljudi-kada-lutaju-cesto-skrecu-ulevo";
 import SofiaProject from "./SofiaProject";
+import SwedenElection2026Article from "./SwedenElection2026Article";
 
 const WALKING_LEFT_PATH = "/nasa-planeta/zasto-ljudi-kada-lutaju-cesto-skrecu-ulevo";
+const SWEDEN_ELECTION_PATH =
+  "/geopolitika/ko-dolazi-na-vlast-u-svedskoj-levica-vodi-za-samo-tri-mandata";
 const SOFIA_PATHS = new Set(["/sofia", "/sofia/001"]);
 
 export default function NotFound() {
@@ -13,6 +16,10 @@ export default function NotFound() {
 
   if (location === WALKING_LEFT_PATH) {
     return <ZastoLjudiKadaLutajuCestoSkrecuUlevo />;
+  }
+
+  if (location === SWEDEN_ELECTION_PATH) {
+    return <SwedenElection2026Article />;
   }
 
   if (SOFIA_PATHS.has(location)) {
