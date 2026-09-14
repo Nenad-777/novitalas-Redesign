@@ -18,6 +18,16 @@ type Article = {
 
 const ARTICLES: Article[] = [
   {
+    href: "/geopolitika/ko-dolazi-na-vlast-u-svedskoj-levica-vodi-za-samo-tri-mandata",
+    title: "Ko dolazi na vlast u Švedskoj? Levica vodi za samo tri mandata",
+    description:
+      "Opozicioni blok Magdalene Andersson ima 176 prema 173 mandata u novom parlamentu. Ali razlika je toliko mala da Švedska još nema pobednika, a formiranje nove vlade moglo bi da bude teže od samih izbora.",
+    imageSrc:
+      "https://upload.wikimedia.org/wikipedia/commons/6/69/Magdalena_Andersson_Gothenburg_2026-08-24_02.jpg",
+    imageAlt:
+      "Magdalena Andersson tokom posete učenicima u Geteborgu, 24. avgusta 2026.",
+  },
+  {
     href: "/geopolitika/srbija-act-vasington-beograd",
     title: "SRBIJA Act: Da li Vašington menja pravila odnosa sa Beogradom?",
     description:
