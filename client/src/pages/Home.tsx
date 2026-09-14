@@ -10,18 +10,29 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const HERO_ARTICLE = {
-  href: "/nasa-planeta/ko-krade-renoara-ako-ne-moze-da-ga-proda",
-  category: "KULTURA",
-  title: "Ko krade Renoara ako ne može da ga proda?",
+  href: "/geopolitika/ko-dolazi-na-vlast-u-svedskoj-levica-vodi-za-samo-tri-mandata",
+  category: "GEOPOLITIKA · EVROPA",
+  title: "Ko dolazi na vlast u Švedskoj? Levica vodi za samo tri mandata",
   description:
-    "Dvojica lopova odnela su četiri Renoarove slike iz muzeja na Azurnoj obali. Dve su pronađene, dve su nestale. Ali prava misterija je čemu služi krađa dela koje je gotovo nemoguće prodati.",
+    "Opozicioni blok Magdalene Andersson ima 176 prema 173 mandata u novom parlamentu. Ali razlika je toliko mala da Švedska još nema pobednika, a formiranje nove vlade moglo bi da bude teže od samih izbora.",
   imageSrc:
-    "https://upload.wikimedia.org/wikipedia/commons/e/ec/Renoir_-_Portrait_de_Madame_Colonna_Romano%2C_non_dat%C3%A9.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/6/69/Magdalena_Andersson_Gothenburg_2026-08-24_02.jpg",
   imageAlt:
-    "Pjer-Ogist Renoar, Portret gospođe Kolona Romano, jedna od dve slike koje se i dalje traže.",
+    "Magdalena Andersson tokom posete učenicima u Geteborgu, 24. avgusta 2026.",
 };
 
 const ARTICLES = [
+  {
+    href: "/nasa-planeta/ko-krade-renoara-ako-ne-moze-da-ga-proda",
+    category: "KULTURA",
+    title: "Ko krade Renoara ako ne može da ga proda?",
+    description:
+      "Dvojica lopova odnela su četiri Renoarove slike iz muzeja na Azurnoj obali. Dve su pronađene, dve su nestale. Ali prava misterija je čemu služi krađa dela koje je gotovo nemoguće prodati.",
+    imageSrc:
+      "https://upload.wikimedia.org/wikipedia/commons/e/ec/Renoir_-_Portrait_de_Madame_Colonna_Romano%2C_non_dat%C3%A9.jpg",
+    imageAlt:
+      "Pjer-Ogist Renoar, Portret gospođe Kolona Romano, jedna od dve slike koje se i dalje traže.",
+  },
   {
     href: "/nasa-planeta/svet-ce-gotovo-izvesno-preci-granicu-od-1-5-stepeni",
     category: "Naša planeta",
@@ -91,16 +102,6 @@ const ARTICLES = [
     imageSrc: "/news/airplane-oman.jpg",
     imageAlt:
       "Američki vojni avion iznad Ormuskog moreuza, dok tanker plovi ispod planinske obale Omana.",
-  },
-  {
-    href: "/obavestajni-izvori/sta-se-to-dogadja-u-evropi-priprema-za-rat-bez-fronta",
-    category: "Obaveštajni izvori",
-    title: "Šta se to događa u Evropi: priprema za rat bez fronta?",
-    description:
-      "Poljska i baltičke države pojačavaju zaštitu elektrana, brana, gasnih skladišta i druge ključne infrastrukture. Među scenarijima koje razmatraju obaveštajne službe nalazi se i mogućnost napada čije bi poreklo bilo namerno prikriveno.",
-    imageSrc: "/news/europe-war-without-front.jpg",
-    imageAlt:
-      "Naftna platforma na otvorenom moru kao simbol ranjivosti evropske energetske i kritične infrastrukture.",
   },
 ];
 
