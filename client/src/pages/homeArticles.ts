@@ -1,4 +1,7 @@
-export const HOME_ARTICLES = [
+// Homepage rotation contract:
+// keep exactly eight secondary stories. On every new publication, prepend the
+// previous HERO here and let the oldest secondary story fall off automatically.
+const HOME_ARTICLE_CANDIDATES = [
   {
     href: "/geopolitika/ko-dolazi-na-vlast-u-svedskoj-levica-vodi-za-samo-tri-mandata",
     category: "GEOPOLITIKA · EVROPA",
@@ -81,3 +84,5 @@ export const HOME_ARTICLES = [
       "Prazna urednička stolica pred ekranima sa izbornim grafikama, dok se preko redakcije nadvija anonimna senka.",
   },
 ] as const;
+
+export const HOME_ARTICLES = HOME_ARTICLE_CANDIDATES.slice(0, 8);
