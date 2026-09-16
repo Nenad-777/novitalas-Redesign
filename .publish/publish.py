@@ -1,105 +1,100 @@
 from pathlib import Path
-import base64
 
 ROOT = Path('.')
-PUB = ROOT / '.publish'
+PATH = "/geopolitika/amerika-prvi-put-javno-potvrdila-imamo-oruzje-u-orbiti"
+IMAGE = "https://media.defense.gov/2026/Sep/15/2003997876/2000/2000/0/260914-F-JJ904-1095.JPG"
+TITLE = "Amerika prvi put javno potvrdila: imamo oružje u orbiti"
+DECK = "SAD su prvi put otvoreno potvrdile da već imaju oružane sisteme raspoređene u Zemljinoj orbiti. Pentagon ne otkriva šta tačno mogu da urade, dok Kina upozorava da bi ovaj potez mogao da ubrza novu trku u naoružanju u svemiru."
 
+article = '''import ArticleTemplate from "@/components/ArticleTemplate";
 
-def replace_once(text: str, old: str, new: str, label: str) -> str:
-    if new in text:
-        return text
-    if old not in text:
-        raise SystemExit(f'Could not find patch marker: {label}')
-    return text.replace(old, new, 1)
+const PATH =
+  "/geopolitika/amerika-prvi-put-javno-potvrdila-imamo-oruzje-u-orbiti";
 
-# Decode approved visuals.
-news = ROOT / 'client/public/news'
-news.mkdir(parents=True, exist_ok=True)
-for prefix, target in [
-    ('maritime.part.', news / 'pomorski-poredak-2026.jpg'),
-    ('ai.part.', news / 'pachocki-alien-mind-2026.jpg'),
-]:
-    parts = sorted(PUB.glob(prefix + '*'))
-    if not parts:
-        raise SystemExit(f'Missing image chunks for {prefix}')
-    payload = ''.join(p.read_text() for p in parts)
-    target.write_bytes(base64.b64decode(payload))
+const PARAGRAPHS = [
+  "Američki sekretar Ratnog vazduhoplovstva Troy Meink izjavio je na konferenciji Air, Space & Cyber da američko Ratno vazduhoplovstvo i Space Force raspolažu sa \"on-orbit space control weapons\", odnosno sistemima za kontrolu svemira koji se već nalaze u orbiti. Američke vlasti nisu objavile njihov broj, tehničke karakteristike niti precizno objasnile na koji način mogu da deluju protiv mogućih protivnika. Američki Space Force je objavu zvanično potvrdio 15. septembra.",
+  "Javno priznanje predstavlja važnu promenu u načinu na koji Vašington govori o vojnoj upotrebi svemira. Sateliti već decenijama služe za navigaciju, komunikaciju, izviđanje i rano upozoravanje, ali je postojanje oružja raspoređenog direktno u orbiti do sada bilo tema o kojoj se govorilo mnogo opreznije. Pentagon sada poručuje da je cilj novih sposobnosti zaštita američkih svemirskih sistema i odvraćanje protivnika, dok detalji ostaju poverljivi.",
+  "Reakcije su stigle gotovo odmah. Kina je danas upozorila da američko raspoređivanje oružja u svemiru može da izazove novu međunarodnu trku u naoružanju, dok je Rusija ocenila da takav razvoj povećava rizik od sukoba koji bi mogao da ugrozi satelite od kojih zavise komunikacije, navigacija i veliki deo savremene ekonomije. Vašington, Peking i Moskva već godinama razvijaju različite sposobnosti za ometanje ili neutralisanje protivničkih satelita, ali otvoreno priznanje oružja u orbiti podiže tu konkurenciju na novi nivo.",
+  "Postoji i važna pravna nijansa. Sporazum o svemiru iz 1967. zabranjuje postavljanje nuklearnog i drugog oružja za masovno uništenje u orbitu, ali ne sadrži opštu zabranu svih konvencionalnih vojnih sistema u svemiru. Zato američko priznanje samo po sebi ne znači da je sporazum prekršen. Ali ono otvara pitanje koje je decenijama bilo uglavnom teorijsko: da li svemir iz prostora strateškog nadmetanja ulazi u eru u kojoj će države tamo otvoreno raspoređivati oružje?",
+];
 
-# App routes/imports.
+export default function UsOrbitalWeaponsArticle() {
+  return (
+    <ArticleTemplate
+      path={PATH}
+      sectionLabel="GEOPOLITIKA · SVEMIR"
+      title="Amerika prvi put javno potvrdila: imamo oružje u orbiti"
+      dateLabel="16. SEPTEMBAR 2026."
+      deck="SAD su prvi put otvoreno potvrdile da već imaju oružane sisteme raspoređene u Zemljinoj orbiti. Pentagon ne otkriva šta tačno mogu da urade, dok Kina upozorava da bi ovaj potez mogao da ubrza novu trku u naoružanju u svemiru."
+      imageSrc="https://media.defense.gov/2026/Sep/15/2003997876/2000/2000/0/260914-F-JJ904-1095.JPG"
+      imageAlt="Američki sekretar Ratnog vazduhoplovstva Troy Meink govori na konferenciji Air, Space & Cyber 14. septembra 2026."
+      imageCredit="U.S. Air Force photo / Andy Morataya — Public Domain"
+      imageFirst={true}
+      paragraphs={PARAGRAPHS}
+      backHref="/geopolitika"
+      backLabel="← Nazad na Geopolitiku"
+    />
+  );
+}
+'''
+(ROOT / 'client/src/pages/UsOrbitalWeaponsArticle.tsx').write_text(article)
+
+# App import and route.
 app_path = ROOT / 'client/src/App.tsx'
 app = app_path.read_text()
-app = replace_once(
-    app,
-    'import SrbijaActVasingtonBeograd from "./pages/srbija-act-vasington-beograd";\n',
-    'import SrbijaActVasingtonBeograd from "./pages/srbija-act-vasington-beograd";\nimport MaritimeOrderArticle from "./pages/MaritimeOrderArticle";\n',
-    'maritime import',
-)
-app = replace_once(
-    app,
-    'import FrontierAiSlowdownArticle from "./pages/FrontierAiSlowdownArticle";\n',
-    'import FrontierAiSlowdownArticle from "./pages/FrontierAiSlowdownArticle";\nimport PachockiAlienMindArticle from "./pages/PachockiAlienMindArticle";\n',
-    'AI import',
-)
-app = replace_once(
-    app,
-    '''        <Route\n          path="/geopolitika/srbija-act-vasington-beograd"\n          component={SrbijaActVasingtonBeograd}\n        />\n''',
-    '''        <Route\n          path="/geopolitika/srbija-act-vasington-beograd"\n          component={SrbijaActVasingtonBeograd}\n        />\n        <Route\n          path="/geopolitika/poredak-koji-je-drzao-svet-na-okupu-pocinje-da-puca"\n          component={MaritimeOrderArticle}\n        />\n''',
-    'maritime route',
-)
-app = replace_once(
-    app,
-    '        <Route path="/nasa-planeta" component={NasaPlanetaIndex} />\n',
-    '''        <Route\n          path="/nasa-planeta/pachocki-alien-mind-kontrola-vestacke-inteligencije"\n          component={PachockiAlienMindArticle}\n        />\n\n        <Route path="/nasa-planeta" component={NasaPlanetaIndex} />\n''',
-    'AI route',
-)
+import_line = 'import UsOrbitalWeaponsArticle from "./pages/UsOrbitalWeaponsArticle";\n'
+if import_line not in app:
+    preferred_marker = 'import SwedenElection2026Article from "./pages/SwedenElection2026Article";\n'
+    fallback_marker = 'import RenoirHeistArticle from "./pages/RenoirHeistArticle";\n'
+    marker = preferred_marker if preferred_marker in app else fallback_marker
+    if marker not in app:
+        raise SystemExit('Article import marker not found')
+    app = app.replace(marker, marker + import_line, 1)
+if PATH not in app:
+    marker = '        <Route path="/geopolitika" component={GeopolitikaIndex} />\n'
+    route = '''        <Route\n          path="/geopolitika/amerika-prvi-put-javno-potvrdila-imamo-oruzje-u-orbiti"\n          component={UsOrbitalWeaponsArticle}\n        />\n\n'''
+    if marker not in app:
+        raise SystemExit('Geopolitika route marker not found')
+    app = app.replace(marker, route + marker, 1)
 app_path.write_text(app)
 
-# Homepage: new maritime hero + Pachocki as first item in Najnovije.
+# Homepage: orbital weapons story becomes hero; Sweden moves to first secondary card.
 home_path = ROOT / 'client/src/pages/Home.tsx'
 home = home_path.read_text()
-start = home.index('const HERO_ARTICLE = {')
-articles = home.index('const ARTICLES = [', start)
-hero = '''const HERO_ARTICLE = {\n  href: "/geopolitika/poredak-koji-je-drzao-svet-na-okupu-pocinje-da-puca",\n  category: "Svet · Analiza",\n  title: "Poredak koji je držao svet na okupu počinje da puca",\n  description:\n    "Osamnaest velikih pomorskih država upozorava da ratovi, sankcije, flote iz senke i borba za ključne moreuze više nisu prolazni poremećaji. Počinje da se menja sistem po kojem su svetska mora funkcionisala decenijama.",\n  imageSrc: "/news/pomorski-poredak-2026.jpg",\n  imageAlt:\n    "Veliki trgovački brodovi prolaze kroz uski morski prolaz u sumrak.",\n};\n\n'''
-home = home[:start] + hero + home[articles:]
-ai_card = '''const ARTICLES = [\n  {\n    href: "/nasa-planeta/pachocki-alien-mind-kontrola-vestacke-inteligencije",\n    category: "Naša planeta · Tehnologija",\n    title: "Upozorenje iz samog vrha OpenAI-ja",\n    description:\n      "Glavni naučnik OpenAI-ja Jakub Pachocki upozorava da nijedna laboratorija još nije dovoljno rešila problem usklađivanja i nadzora da bi još dugo odgovorno nastavila razvoj maksimalnom brzinom.",\n    imageSrc: "/news/pachocki-alien-mind-2026.jpg",\n    imageAlt:\n      "Čovek pred ogromnom apstraktnom mrežom koja simbolizuje naprednu veštačku inteligenciju.",\n  },\n'''
-# Avoid duplicate if workflow is ever re-run.
-if '/nasa-planeta/pachocki-alien-mind-kontrola-vestacke-inteligencije' not in home[home.index('const ARTICLES = ['):home.index('function useFadeIn')]:
-    home = home.replace('const ARTICLES = [\n', ai_card, 1)
+hero_start = home.index('const HERO_ARTICLE = {')
+articles_start = home.index('const ARTICLES = [', hero_start)
+new_hero = '''const HERO_ARTICLE = {\n  href: "/geopolitika/amerika-prvi-put-javno-potvrdila-imamo-oruzje-u-orbiti",\n  category: "GEOPOLITIKA · SVEMIR",\n  title: "Amerika prvi put javno potvrdila: imamo oružje u orbiti",\n  description:\n    "SAD su prvi put otvoreno potvrdile da već imaju oružane sisteme raspoređene u Zemljinoj orbiti. Pentagon ne otkriva šta tačno mogu da urade, dok Kina upozorava na novu trku u naoružanju u svemiru.",\n  imageSrc:\n    "https://media.defense.gov/2026/Sep/15/2003997876/2000/2000/0/260914-F-JJ904-1095.JPG",\n  imageAlt:\n    "Američki sekretar Ratnog vazduhoplovstva Troy Meink govori na konferenciji Air, Space & Cyber 14. septembra 2026.",\n};\n\n'''
+home = home[:hero_start] + new_hero + home[articles_start:]
+articles_block = home[home.index('const ARTICLES = ['):home.index('function useFadeIn')]
+if '/geopolitika/ko-dolazi-na-vlast-u-svedskoj-levica-vodi-za-samo-tri-mandata' not in articles_block:
+    sweden_card = '''const ARTICLES = [\n  {\n    href: "/geopolitika/ko-dolazi-na-vlast-u-svedskoj-levica-vodi-za-samo-tri-mandata",\n    category: "GEOPOLITIKA · EVROPA",\n    title: "Ko dolazi na vlast u Švedskoj? Levica vodi za samo tri mandata",\n    description:\n      "Opozicioni blok Magdalene Andersson ima 176 prema 173 mandata u novom parlamentu. Ali razlika je toliko mala da Švedska još nema pobednika, a formiranje nove vlade moglo bi da bude teže od samih izbora.",\n    imageSrc:\n      "https://upload.wikimedia.org/wikipedia/commons/6/69/Magdalena_Andersson_Gothenburg_2026-08-24_02.jpg",\n    imageAlt:\n      "Magdalena Andersson tokom posete učenicima u Geteborgu, 24. avgusta 2026.",\n  },\n'''
+    home = home.replace('const ARTICLES = [\n', sweden_card, 1)
 home_path.write_text(home)
 
-# Section indexes.
+# Geopolitika index: newest story first.
 geo_path = ROOT / 'client/src/pages/GeopolitikaIndex.tsx'
 geo = geo_path.read_text()
-geo_entry = '''const ARTICLES: Article[] = [\n  {\n    href: "/geopolitika/poredak-koji-je-drzao-svet-na-okupu-pocinje-da-puca",\n    title: "Poredak koji je držao svet na okupu počinje da puca",\n    description:\n      "Osamnaest velikih pomorskih država upozorava da ratovi, sankcije, flote iz senke i borba za ključne moreuze više nisu prolazni poremećaji globalne trgovine.",\n    imageSrc: "/news/pomorski-poredak-2026.jpg",\n    imageAlt: "Veliki trgovački brodovi prolaze kroz uski morski prolaz u sumrak.",\n  },\n'''
-if '/geopolitika/poredak-koji-je-drzao-svet-na-okupu-pocinje-da-puca' not in geo:
-    geo = geo.replace('const ARTICLES: Article[] = [\n', geo_entry, 1)
+if PATH not in geo:
+    marker = 'const ARTICLES: Article[] = [\n'
+    entry = '''const ARTICLES: Article[] = [\n  {\n    href: "/geopolitika/amerika-prvi-put-javno-potvrdila-imamo-oruzje-u-orbiti",\n    title: "Amerika prvi put javno potvrdila: imamo oružje u orbiti",\n    description:\n      "SAD su prvi put otvoreno potvrdile da već imaju oružane sisteme raspoređene u Zemljinoj orbiti. Pentagon ne otkriva šta tačno mogu da urade, dok Kina upozorava na novu trku u naoružanju u svemiru.",\n    imageSrc:\n      "https://media.defense.gov/2026/Sep/15/2003997876/2000/2000/0/260914-F-JJ904-1095.JPG",\n    imageAlt:\n      "Američki sekretar Ratnog vazduhoplovstva Troy Meink govori na konferenciji Air, Space & Cyber 14. septembra 2026.",\n  },\n'''
+    if marker not in geo:
+        raise SystemExit('Geopolitika ARTICLES marker not found')
+    geo = geo.replace(marker, entry, 1)
 geo_path.write_text(geo)
 
-nasa_path = ROOT / 'client/src/pages/NasaPlanetaIndex.tsx'
-nasa = nasa_path.read_text()
-nasa_entry = '''const ARTICLES: NasaPlanetaArticle[] = [\n  {\n    href: "/nasa-planeta/pachocki-alien-mind-kontrola-vestacke-inteligencije",\n    img: "/news/pachocki-alien-mind-2026.jpg",\n    alt: "Čovek pred ogromnom apstraktnom mrežom koja simbolizuje naprednu veštačku inteligenciju.",\n    imageCredit: "Ilustracija: Novi Talas",\n    title: "Upozorenje iz samog vrha OpenAI-ja: još ne znamo kako da kontrolišemo ono što gradimo",\n    description:\n      "Glavni naučnik OpenAI-ja Jakub Pachocki upozorava da nijedna laboratorija još nije dovoljno rešila problem usklađivanja i nadzora da bi još dugo odgovorno nastavila razvoj maksimalnom brzinom.",\n  },\n'''
-if '/nasa-planeta/pachocki-alien-mind-kontrola-vestacke-inteligencije' not in nasa:
-    nasa = nasa.replace('const ARTICLES: NasaPlanetaArticle[] = [\n', nasa_entry, 1)
-nasa_path.write_text(nasa)
-
-# Static SEO / share metadata.
+# SEO metadata.
 meta_path = ROOT / 'shared/articleMeta.ts'
 meta = meta_path.read_text()
-marker = 'export const articleMeta: ArticleStaticMeta[] = [\n'
-entries = '''export const articleMeta: ArticleStaticMeta[] = [\n  {\n    path: "/geopolitika/poredak-koji-je-drzao-svet-na-okupu-pocinje-da-puca",\n    title: "Poredak koji je držao svet na okupu počinje da puca",\n    description:\n      "Osamnaest velikih pomorskih država upozorava da ratovi, sankcije, flote iz senke i borba za ključne moreuze više nisu prolazni poremećaji. Počinje da se menja sistem po kojem su svetska mora funkcionisala decenijama.",\n    imageSrc: "/news/pomorski-poredak-2026.jpg",\n    datePublished: "2026-09-08",\n    author: "Novi Talas",\n    section: "Svet · Analiza",\n  },\n  {\n    path: "/nasa-planeta/pachocki-alien-mind-kontrola-vestacke-inteligencije",\n    title: "Upozorenje iz samog vrha OpenAI-ja: još ne znamo kako da kontrolišemo ono što gradimo",\n    description:\n      "Glavni naučnik OpenAI-ja Jakub Pachocki upozorava da nijedna laboratorija još nije dovoljno rešila problem usklađivanja i nadzora da bi još dugo odgovorno nastavila razvoj maksimalnom brzinom.",\n    imageSrc: "/news/pachocki-alien-mind-2026.jpg",\n    datePublished: "2026-09-08",\n    author: "Novi Talas",\n    section: "Naša planeta · Tehnologija",\n  },\n'''
-if '/geopolitika/poredak-koji-je-drzao-svet-na-okupu-pocinje-da-puca' not in meta:
+if PATH not in meta:
+    marker = 'export const articleMeta: ArticleStaticMeta[] = [\n'
+    entry = '''export const articleMeta: ArticleStaticMeta[] = [\n  {\n    path: "/geopolitika/amerika-prvi-put-javno-potvrdila-imamo-oruzje-u-orbiti",\n    title: "Amerika prvi put javno potvrdila: imamo oružje u orbiti",\n    description:\n      "SAD su prvi put otvoreno potvrdile da već imaju oružane sisteme raspoređene u Zemljinoj orbiti. Pentagon ne otkriva šta tačno mogu da urade, dok Kina upozorava da bi ovaj potez mogao da ubrza novu trku u naoružanju u svemiru.",\n    imageSrc: "https://media.defense.gov/2026/Sep/15/2003997876/2000/2000/0/260914-F-JJ904-1095.JPG",\n    datePublished: "2026-09-16",\n    author: "Novi Talas",\n    section: "Geopolitika · Svemir",\n    keywords: "SAD, svemir, oružje u orbiti, Space Force, Troy Meink, Kina, Rusija, svemirsko naoružanje",\n  },\n'''
     if marker not in meta:
         raise SystemExit('articleMeta marker not found')
-    meta = meta.replace(marker, entries, 1)
+    meta = meta.replace(marker, entry, 1)
 meta_path.write_text(meta)
 
-# Remove temporary publication helpers, including this workflow, from the final commit.
-for p in sorted(PUB.glob('*')):
-    p.unlink()
-try:
-    PUB.rmdir()
-except OSError:
-    pass
-wf = ROOT / '.github/workflows/publish-novi-talas-2026-09-08.yml'
-if wf.exists():
-    wf.unlink()
+# Make the publisher inert after this approved publication. A future publication
+# requires an explicit new preparation step before READY can do anything.
+Path('.publish/publish.py').write_text(
+    '# No-op. Publication payload consumed. A new exact OBJAVA is required before preparing another payload.\n'
+)
