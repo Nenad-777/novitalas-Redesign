@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { Link } from "wouter";
 import { useTheme } from "@/contexts/ThemeContext";
-import GeopolitikaIndexLegacy from "./GeopolitikaIndex";
+import GeopolitikaIndexLegacy from "./GeopolitikaIndexLegacy";
 
 const ORBITAL = {
   href: "/geopolitika/amerika-prvi-put-javno-potvrdila-imamo-oruzje-u-orbiti",
