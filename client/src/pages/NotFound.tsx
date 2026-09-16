@@ -5,10 +5,13 @@ import { useLocation } from "wouter";
 import ZastoLjudiKadaLutajuCestoSkrecuUlevo from "./zasto-ljudi-kada-lutaju-cesto-skrecu-ulevo";
 import SofiaProject from "./SofiaProject";
 import SwedenElection2026Article from "./SwedenElection2026Article";
+import UsOrbitalWeaponsArticle from "./UsOrbitalWeaponsArticle";
 
 const WALKING_LEFT_PATH = "/nasa-planeta/zasto-ljudi-kada-lutaju-cesto-skrecu-ulevo";
 const SWEDEN_ELECTION_PATH =
   "/geopolitika/ko-dolazi-na-vlast-u-svedskoj-levica-vodi-za-samo-tri-mandata";
+const US_ORBITAL_WEAPONS_PATH =
+  "/geopolitika/amerika-prvi-put-javno-potvrdila-imamo-oruzje-u-orbiti";
 const SOFIA_PATHS = new Set(["/sofia", "/sofia/001"]);
 
 export default function NotFound() {
@@ -20,6 +23,10 @@ export default function NotFound() {
 
   if (location === SWEDEN_ELECTION_PATH) {
     return <SwedenElection2026Article />;
+  }
+
+  if (location === US_ORBITAL_WEAPONS_PATH) {
+    return <UsOrbitalWeaponsArticle />;
   }
 
   if (SOFIA_PATHS.has(location)) {
