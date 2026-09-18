@@ -3,6 +3,17 @@
 // previous HERO here and let the oldest secondary story fall off automatically.
 const HOME_ARTICLE_CANDIDATES = [
   {
+    href: "/geopolitika/da-li-se-menja-mapa-ujedinjenog-kraljevstva",
+    category: "GEOPOLITIKA · EVROPA",
+    title:
+      "Da li se menja mapa Ujedinjenog Kraljevstva? Tri nacionalna pokreta zajedno otvorila pitanje samoopredeljenja",
+    description:
+      "Lideri SNP-a, Plaid Cymru i Sinn Féina potpisali su u Kardifu zajednički memorandum o samoopredeljenju. Dokument ne znači izlazak iz UK, ali ustavno pitanje ponovo stavlja u centar britanske politike.",
+    imageSrc: "/news/uk-self-determination-flags.jpg",
+    imageAlt:
+      "Zastave Škotske i Velsa uz Ulster Banner, simbol koji se često koristi za predstavljanje Severne Irske, na jarbolima pod otvorenim nebom.",
+  },
+  {
     href: "/geopolitika/amerika-prvi-put-javno-potvrdila-imamo-oruzje-u-orbiti",
     category: "GEOPOLITIKA · SVEMIR",
     title: "Amerika prvi put javno potvrdila: imamo oružje u orbiti",

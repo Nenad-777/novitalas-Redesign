@@ -19,6 +19,15 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/misu-ugradjen-deo-ljudskog-mozga-naucnici-otvorili-novu-eru-istrazivanja",
+    img: "/news/mouse-human-brain-organoid.png",
+    alt: "Ilustracija preseka glave miša sa fluorescentno označenim moždanim strukturama i zeleno istaknutim ljudskim moždanim organoidom.",
+    imageCredit: "Ilustracija: Novi talas / AI",
+    title: "Mišu ugrađen deo ljudskog mozga: naučnici otvorili novu eru istraživanja",
+    description:
+      "Ljudski moždani organoidi ugrađeni su u genetski izmenjene miševe i povezali se sa njihovim nervnim sistemom, stvarajući novi model za proučavanje neuroloških bolesti.",
+  },
+  {
     href: "/nasa-planeta/ko-krade-renoara-ako-ne-moze-da-ga-proda",
     img: "https://upload.wikimedia.org/wikipedia/commons/e/ec/Renoir_-_Portrait_de_Madame_Colonna_Romano%2C_non_dat%C3%A9.jpg",
     alt: "Pjer-Ogist Renoar, Portret gospođe Kolona Romano, jedna od dve slike koje se i dalje traže.",

@@ -196,6 +196,7 @@ import IzboriNepravilnostiKrivicnaOdgovornost from "./pages/izbori-nepravilnosti
 import IzboriRezultati from "./pages/izbori-rezultati";
 
 import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
+import MouseHumanBrainArticle from "./pages/MouseHumanBrainArticle";
 import RenoirHeistArticle from "./pages/RenoirHeistArticle";
 import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
 import SpilbergUpozoravaHolivudPublikaTraziOriginalneFilmove from "./pages/spilberg-upozorava-holivud-publika-trazi-originalne-filmove";
@@ -820,6 +821,11 @@ function Router() {
         <Route
           path="/nasa-planeta/ko-krade-renoara-ako-ne-moze-da-ga-proda"
           component={RenoirHeistArticle}
+        />
+
+        <Route
+          path="/nasa-planeta/misu-ugradjen-deo-ljudskog-mozga-naucnici-otvorili-novu-eru-istrazivanja"
+          component={MouseHumanBrainArticle}
         />
 
         <Route path="/nasa-planeta" component={NasaPlanetaIndex} />

@@ -11,15 +11,14 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/da-li-se-menja-mapa-ujedinjenog-kraljevstva",
-  category: "GEOPOLITIKA · EVROPA",
-  title:
-    "Da li se menja mapa Ujedinjenog Kraljevstva? Tri nacionalna pokreta zajedno otvorila pitanje samoopredeljenja",
+  href: "/nasa-planeta/misu-ugradjen-deo-ljudskog-mozga-naucnici-otvorili-novu-eru-istrazivanja",
+  category: "NAŠA PLANETA · NAUKA",
+  title: "Mišu ugrađen deo ljudskog mozga: naučnici otvorili novu eru istraživanja",
   description:
-    "Lideri SNP-a, Plaid Cymru i Sinn Féina potpisali su u Kardifu zajednički memorandum o samoopredeljenju. Dokument ne znači izlazak iz UK, ali ustavno pitanje ponovo stavlja u centar britanske politike.",
-  imageSrc: "/news/uk-self-determination-flags.jpg",
+    "Stanfordovi istraživači ugradili su ljudske moždane organoide u genetski izmenjene miševe, stvarajući novi model za proučavanje neuroloških bolesti i testiranje budućih terapija.",
+  imageSrc: "/news/mouse-human-brain-organoid.png",
   imageAlt:
-    "Zastave Škotske i Velsa uz Ulster Banner, simbol koji se često koristi za predstavljanje Severne Irske, na jarbolima pod otvorenim nebom.",
+    "Ilustracija preseka glave miša sa fluorescentno označenim moždanim strukturama i zeleno istaknutim ljudskim moždanim organoidom.",
 };
 
 const ARTICLES = HOME_ARTICLES;

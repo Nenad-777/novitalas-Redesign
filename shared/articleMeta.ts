@@ -158,6 +158,19 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/misu-ugradjen-deo-ljudskog-mozga-naucnici-otvorili-novu-eru-istrazivanja",
+    title: "Mišu ugrađen deo ljudskog mozga: naučnici otvorili novu eru istraživanja",
+    seoTitle: "Mišu ugrađen deo ljudskog mozga: naučnici otvorili novu eru istraživanja | Novi Talas",
+    description:
+      "Stanfordovi istraživači ugradili su ljudske moždane organoide u genetski izmenjene miševe, stvarajući novi model za proučavanje neuroloških bolesti i testiranje terapija.",
+    imageSrc: "/news/mouse-human-brain-organoid.png",
+    datePublished: "2026-09-18",
+    author: "Novi Talas",
+    section: "Naša planeta",
+    keywords:
+      "ljudski mozak, miš, organoid, Stanford, neurologija, Nature, autizam, epilepsija, cerebralna paraliza",
+  },
+  {
     path: "/geopolitika/da-li-se-menja-mapa-ujedinjenog-kraljevstva",
     title:
       "Da li se menja mapa Ujedinjenog Kraljevstva? Tri nacionalna pokreta zajedno otvorila pitanje samoopredeljenja",
