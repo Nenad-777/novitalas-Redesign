@@ -11,15 +11,15 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/amerika-prvi-put-javno-potvrdila-imamo-oruzje-u-orbiti",
-  category: "GEOPOLITIKA · SVEMIR",
-  title: "Amerika prvi put javno potvrdila: imamo oružje u orbiti",
+  href: "/geopolitika/da-li-se-menja-mapa-ujedinjenog-kraljevstva",
+  category: "GEOPOLITIKA · EVROPA",
+  title:
+    "Da li se menja mapa Ujedinjenog Kraljevstva? Tri nacionalna pokreta zajedno otvorila pitanje samoopredeljenja",
   description:
-    "SAD su prvi put otvoreno potvrdile da već imaju oružane sisteme raspoređene u Zemljinoj orbiti. Pentagon ne otkriva šta tačno mogu da urade, dok Kina upozorava na novu trku u naoružanju u svemiru.",
-  imageSrc:
-    "https://media.defense.gov/2026/Sep/15/2003997876/2000/2000/0/260914-F-JJ904-1095.JPG",
+    "Lideri SNP-a, Plaid Cymru i Sinn Féina potpisali su u Kardifu zajednički memorandum o samoopredeljenju. Dokument ne znači izlazak iz UK, ali ustavno pitanje ponovo stavlja u centar britanske politike.",
+  imageSrc: "/news/uk-self-determination-flags.jpg",
   imageAlt:
-    "Američki sekretar Ratnog vazduhoplovstva Troy Meink govori na konferenciji Air, Space & Cyber 14. septembra 2026.",
+    "Zastave Škotske i Velsa uz Ulster Banner, simbol koji se često koristi za predstavljanje Severne Irske, na jarbolima pod otvorenim nebom.",
 };
 
 const ARTICLES = HOME_ARTICLES;

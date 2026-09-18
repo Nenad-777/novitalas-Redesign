@@ -4,24 +4,42 @@ import { Link } from "wouter";
 import { useTheme } from "@/contexts/ThemeContext";
 import GeopolitikaIndexLegacy from "./GeopolitikaIndexLegacy";
 
-const ORBITAL = {
-  href: "/geopolitika/amerika-prvi-put-javno-potvrdila-imamo-oruzje-u-orbiti",
-  title: "Amerika prvi put javno potvrdila: imamo oružje u orbiti",
-  description:
-    "SAD su prvi put otvoreno potvrdile da već imaju oružane sisteme raspoređene u Zemljinoj orbiti. Pentagon ne otkriva šta tačno mogu da urade, dok Kina upozorava na novu trku u naoružanju u svemiru.",
-  imageSrc:
-    "https://media.defense.gov/2026/Sep/15/2003997876/2000/2000/0/260914-F-JJ904-1095.JPG",
-  imageAlt:
-    "Američki sekretar Ratnog vazduhoplovstva Troy Meink govori na konferenciji Air, Space & Cyber 14. septembra 2026.",
-};
+const FEATURED = [
+  {
+    href: "/geopolitika/da-li-se-menja-mapa-ujedinjenog-kraljevstva",
+    title:
+      "Da li se menja mapa Ujedinjenog Kraljevstva? Tri nacionalna pokreta zajedno otvorila pitanje samoopredeljenja",
+    description:
+      "SNP, Plaid Cymru i Sinn Féin potpisali su u Kardifu memorandum o samoopredeljenju. Dokument ne znači izlazak iz UK, ali otvara zajedničko ustavno pitanje za Škotsku, Vels i Severnu Irsku.",
+    imageSrc: "/news/uk-self-determination-flags.jpg",
+    imageAlt:
+      "Zastave Škotske i Velsa uz Ulster Banner, simbol koji se često koristi za predstavljanje Severne Irske, na jarbolima pod otvorenim nebom.",
+  },
+  {
+    href: "/geopolitika/amerika-prvi-put-javno-potvrdila-imamo-oruzje-u-orbiti",
+    title: "Amerika prvi put javno potvrdila: imamo oružje u orbiti",
+    description:
+      "SAD su prvi put otvoreno potvrdile da već imaju oružane sisteme raspoređene u Zemljinoj orbiti. Pentagon ne otkriva šta tačno mogu da urade, dok Kina upozorava na novu trku u naoružanju u svemiru.",
+    imageSrc:
+      "https://media.defense.gov/2026/Sep/15/2003997876/2000/2000/0/260914-F-JJ904-1095.JPG",
+    imageAlt:
+      "Američki sekretar Ratnog vazduhoplovstva Troy Meink govori na konferenciji Air, Space & Cyber 14. septembra 2026.",
+  },
+] as const;
 
-function FeaturedOrbitalStory() {
+function FeaturedStory({
+  story,
+  priority = false,
+}: {
+  story: (typeof FEATURED)[number];
+  priority?: boolean;
+}) {
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
   return (
     <article>
-      <Link href={ORBITAL.href} className="no-underline">
+      <Link href={story.href} className="no-underline">
         <div
           className="border mb-4 overflow-hidden"
           style={{
@@ -30,10 +48,11 @@ function FeaturedOrbitalStory() {
           }}
         >
           <img
-            src={ORBITAL.imageSrc}
-            alt={ORBITAL.imageAlt}
+            src={story.imageSrc}
+            alt={story.imageAlt}
             className="w-full h-[260px] md:h-[360px] object-cover object-center block"
             decoding="async"
+            loading={priority ? "eager" : "lazy"}
           />
         </div>
 
@@ -45,7 +64,7 @@ function FeaturedOrbitalStory() {
             color: isDark ? "#e0ddd5" : "#111",
           }}
         >
-          {ORBITAL.title}
+          {story.title}
         </h2>
         <p
           className="mt-2 text-[15px] leading-[1.6]"
@@ -54,7 +73,7 @@ function FeaturedOrbitalStory() {
             color: isDark ? "#9a978f" : "#555",
           }}
         >
-          {ORBITAL.description}
+          {story.description}
         </p>
         <div
           className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]"
@@ -67,6 +86,16 @@ function FeaturedOrbitalStory() {
         </div>
       </Link>
     </article>
+  );
+}
+
+function FeaturedStories() {
+  return (
+    <div className="space-y-10">
+      {FEATURED.map((story, index) => (
+        <FeaturedStory key={story.href} story={story} priority={index === 0} />
+      ))}
+    </div>
   );
 }
 
@@ -98,7 +127,7 @@ export default function GeopolitikaIndexWithOrbital() {
   return (
     <>
       <GeopolitikaIndexLegacy />
-      {host ? createPortal(<FeaturedOrbitalStory />, host) : null}
+      {host ? createPortal(<FeaturedStories />, host) : null}
     </>
   );
 }

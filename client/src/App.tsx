@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Russia300000TroopsArticle from "./pages/Russia300000TroopsArticle";
 import Pretraga from "./pages/Pretraga";
 import GeopolitikaIndex from "./pages/GeopolitikaIndex";
+import UkSelfDeterminationArticle from "./pages/UkSelfDeterminationArticle";
 import GeopolitikaIran from "./pages/GeopolitikaIran";
 import GeopolitikaArticle from "./pages/GeopolitikaArticle";
 import LuksuzniRajIliGubitakObale from "./pages/luksuzni-raj-ili-gubitak-obale";
@@ -308,6 +309,10 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/da-li-se-menja-mapa-ujedinjenog-kraljevstva"
+          component={UkSelfDeterminationArticle}
+        />
         <Route
           path="/geopolitika/srbija-act-vasington-beograd"
           component={SrbijaActVasingtonBeograd}

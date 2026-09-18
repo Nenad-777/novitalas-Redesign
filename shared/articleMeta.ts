@@ -158,6 +158,20 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/da-li-se-menja-mapa-ujedinjenog-kraljevstva",
+    title:
+      "Da li se menja mapa Ujedinjenog Kraljevstva? Tri nacionalna pokreta zajedno otvorila pitanje samoopredeljenja",
+    seoTitle: "Da li se menja mapa Ujedinjenog Kraljevstva? | Novi Talas",
+    description:
+      "SNP, Plaid Cymru i Sinn Féin potpisali su u Kardifu memorandum o samoopredeljenju za Škotsku, Vels i Severnu Irsku.",
+    imageSrc: "/news/uk-self-determination-flags.jpg",
+    datePublished: "2026-09-18",
+    author: "Novi Talas",
+    section: "Geopolitika",
+    keywords:
+      "Ujedinjeno Kraljevstvo, Škotska, Vels, Severna Irska, SNP, Plaid Cymru, Sinn Féin, samoopredeljenje, Kardif",
+  },
+  {
     path: "/nasa-planeta/svet-ce-gotovo-izvesno-preci-granicu-od-1-5-stepeni",
     title: "Svet će gotovo izvesno preći granicu od 1,5 stepeni",
     seoTitle:

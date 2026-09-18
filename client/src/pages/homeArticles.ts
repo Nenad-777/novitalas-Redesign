@@ -3,6 +3,17 @@
 // previous HERO here and let the oldest secondary story fall off automatically.
 const HOME_ARTICLE_CANDIDATES = [
   {
+    href: "/geopolitika/amerika-prvi-put-javno-potvrdila-imamo-oruzje-u-orbiti",
+    category: "GEOPOLITIKA · SVEMIR",
+    title: "Amerika prvi put javno potvrdila: imamo oružje u orbiti",
+    description:
+      "SAD su prvi put otvoreno potvrdile da već imaju oružane sisteme raspoređene u Zemljinoj orbiti. Pentagon ne otkriva šta tačno mogu da urade, dok Kina upozorava na novu trku u naoružanju u svemiru.",
+    imageSrc:
+      "https://media.defense.gov/2026/Sep/15/2003997876/2000/2000/0/260914-F-JJ904-1095.JPG",
+    imageAlt:
+      "Američki sekretar Ratnog vazduhoplovstva Troy Meink govori na konferenciji Air, Space & Cyber 14. septembra 2026.",
+  },
+  {
     href: "/geopolitika/ko-dolazi-na-vlast-u-svedskoj-levica-vodi-za-samo-tri-mandata",
     category: "GEOPOLITIKA · EVROPA",
     title: "Ko dolazi na vlast u Švedskoj? Levica vodi za samo tri mandata",
