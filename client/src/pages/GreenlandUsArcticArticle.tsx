@@ -18,9 +18,9 @@ export default function GreenlandUsArcticArticle() {
       title="Amerika nije dobila Grenland. Dobija ono zbog čega ga je želela"
       dateLabel="19. SEPTEMBAR 2026."
       deck="Sjedinjene Države, Danska i Grenland pripremaju sporazum koji bi trebalo da dodatno ojača američko vojno prisustvo na Arktiku. Suverenitet nad ostrvom se ne menja, ali se menja njegova strateška uloga u svetu u kojem sever više nije periferija geopolitike."
-      imageSrc="https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/6000/6695/greenland_tmo_2006177_lrg.jpg?crop=faces%2Cfocalpoint&fit=clip&h=4400&w=3400"
-      imageAlt="Satelitski snimak Grenlanda i njegove ledene ploče."
-      imageCredit="Foto: NASA Earth Observatory"
+      imageSrc="/news/greenland-us-arctic.jpg"
+      imageAlt="Editorial ilustracija Grenlanda sa diskretnim radarskim lukovima koji sugerišu američko strateško prisustvo na Arktiku."
+      imageCredit="Ilustracija: Novi Talas"
       imageFirst={true}
       paragraphs={PARAGRAPHS}
       backHref="/geopolitika"
