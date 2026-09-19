@@ -325,7 +325,7 @@ export default function Home() {
               className="editorial-divider mb-5"
               style={{ borderColor: isDark ? "#2a2a2e" : "#e5e5e5" }}
             />
-            <FadeIn className="mb-10">
+            <div className="mb-10">
               <div className="flex flex-col gap-5">
                 <SmallArticleCard {...ARTICLES[0]} />
                 <hr className="editorial-divider" />
@@ -341,7 +341,7 @@ export default function Home() {
                   <SmallArticleCard variant="tile" {...ARTICLES[7]} />
                 </div>
               </div>
-            </FadeIn>
+            </div>
           </div>
 
           <div className="hidden md:block">
