@@ -158,6 +158,19 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/amerika-nije-dobila-grenland-dobija-ono-zbog-cega-ga-je-zelela",
+    title: "Amerika nije dobila Grenland. Dobija ono zbog čega ga je želela",
+    seoTitle: "Amerika nije dobila Grenland. Dobija ono zbog čega ga je želela | Novi Talas",
+    description:
+      "SAD, Danska i Grenland pripremaju sporazum o jačanju bezbednosti na Arktiku. Suverenitet nad ostrvom se ne menja, ali njegova strateška uloga ubrzano raste.",
+    imageSrc: "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/6000/6695/greenland_tmo_2006177_lrg.jpg?crop=faces%2Cfocalpoint&fit=clip&h=4400&w=3400",
+    datePublished: "2026-09-19",
+    author: "Novi Talas",
+    section: "Geopolitika",
+    keywords:
+      "Grenland, SAD, Danska, Arktik, Donald Tramp, NATO, Pituffik, bezbednost, geopolitika, Kina, Rusija",
+  },
+  {
     path: "/nasa-planeta/misu-ugradjen-deo-ljudskog-mozga-naucnici-otvorili-novu-eru-istrazivanja",
     title: "Mišu ugrađen deo ljudskog mozga: naučnici otvorili novu eru istraživanja",
     seoTitle: "Mišu ugrađen deo ljudskog mozga: naučnici otvorili novu eru istraživanja | Novi Talas",
