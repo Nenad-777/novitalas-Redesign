@@ -163,7 +163,7 @@ export const articleMeta: ArticleStaticMeta[] = [
     seoTitle: "Amerika nije dobila Grenland. Dobija ono zbog čega ga je želela | Novi Talas",
     description:
       "SAD, Danska i Grenland pripremaju sporazum o jačanju bezbednosti na Arktiku. Suverenitet nad ostrvom se ne menja, ali njegova strateška uloga ubrzano raste.",
-    imageSrc: "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/6000/6695/greenland_tmo_2006177_lrg.jpg?crop=faces%2Cfocalpoint&fit=clip&h=4400&w=3400",
+    imageSrc: "/news/greenland-us-arctic.jpg",
     datePublished: "2026-09-19",
     author: "Novi Talas",
     section: "Geopolitika",
