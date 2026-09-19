@@ -3,6 +3,16 @@
 // previous HERO here and let the oldest secondary story fall off automatically.
 const HOME_ARTICLE_CANDIDATES = [
   {
+    href: "/nasa-planeta/misu-ugradjen-deo-ljudskog-mozga-naucnici-otvorili-novu-eru-istrazivanja",
+    category: "NAŠA PLANETA · NAUKA",
+    title: "Mišu ugrađen deo ljudskog mozga: naučnici otvorili novu eru istraživanja",
+    description:
+      "Stanfordovi istraživači ugradili su ljudske moždane organoide u genetski izmenjene miševe, stvarajući novi model za proučavanje neuroloških bolesti i testiranje budućih terapija.",
+    imageSrc: "/news/mouse-human-brain-organoid.png",
+    imageAlt:
+      "Ilustracija preseka glave miša sa fluorescentno označenim moždanim strukturama i zeleno istaknutim ljudskim moždanim organoidom.",
+  },
+  {
     href: "/geopolitika/da-li-se-menja-mapa-ujedinjenog-kraljevstva",
     category: "GEOPOLITIKA · EVROPA",
     title:

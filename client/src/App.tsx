@@ -12,6 +12,7 @@ import Russia300000TroopsArticle from "./pages/Russia300000TroopsArticle";
 import Pretraga from "./pages/Pretraga";
 import GeopolitikaIndex from "./pages/GeopolitikaIndex";
 import UkSelfDeterminationArticle from "./pages/UkSelfDeterminationArticle";
+import GreenlandUsArcticArticle from "./pages/GreenlandUsArcticArticle";
 import GeopolitikaIran from "./pages/GeopolitikaIran";
 import GeopolitikaArticle from "./pages/GeopolitikaArticle";
 import LuksuzniRajIliGubitakObale from "./pages/luksuzni-raj-ili-gubitak-obale";
@@ -310,6 +311,10 @@ function Router() {
         {/* =========================
             GEOPOLITIKA
            ========================= */}
+        <Route
+          path="/geopolitika/amerika-nije-dobila-grenland-dobija-ono-zbog-cega-ga-je-zelela"
+          component={GreenlandUsArcticArticle}
+        />
         <Route
           path="/geopolitika/da-li-se-menja-mapa-ujedinjenog-kraljevstva"
           component={UkSelfDeterminationArticle}

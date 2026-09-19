@@ -11,14 +11,13 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 const HERO_ARTICLE = {
-  href: "/nasa-planeta/misu-ugradjen-deo-ljudskog-mozga-naucnici-otvorili-novu-eru-istrazivanja",
-  category: "NAŠA PLANETA · NAUKA",
-  title: "Mišu ugrađen deo ljudskog mozga: naučnici otvorili novu eru istraživanja",
+  href: "/geopolitika/amerika-nije-dobila-grenland-dobija-ono-zbog-cega-ga-je-zelela",
+  category: "GEOPOLITIKA · ARKTIK",
+  title: "Amerika nije dobila Grenland. Dobija ono zbog čega ga je želela",
   description:
-    "Stanfordovi istraživači ugradili su ljudske moždane organoide u genetski izmenjene miševe, stvarajući novi model za proučavanje neuroloških bolesti i testiranje budućih terapija.",
-  imageSrc: "/news/mouse-human-brain-organoid.png",
-  imageAlt:
-    "Ilustracija preseka glave miša sa fluorescentno označenim moždanim strukturama i zeleno istaknutim ljudskim moždanim organoidom.",
+    "SAD, Danska i Grenland pripremaju sporazum o jačanju bezbednosti na Arktiku. Suverenitet ostaje nepromenjen, dok strateška važnost ostrva ubrzano raste.",
+  imageSrc: "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/6000/6695/greenland_tmo_2006177_lrg.jpg?crop=faces%2Cfocalpoint&fit=clip&h=4400&w=3400",
+  imageAlt: "Satelitski snimak Grenlanda i njegove ledene ploče.",
 };
 
 const ARTICLES = HOME_ARTICLES;
