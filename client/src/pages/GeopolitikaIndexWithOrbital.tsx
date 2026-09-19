@@ -10,8 +10,8 @@ const FEATURED = [
     title: "Amerika nije dobila Grenland. Dobija ono zbog čega ga je želela",
     description:
       "SAD, Danska i Grenland pripremaju sporazum o jačanju bezbednosti na Arktiku. Suverenitet se ne menja, ali strateška važnost ostrva ubrzano raste.",
-    imageSrc: "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/6000/6695/greenland_tmo_2006177_lrg.jpg?crop=faces%2Cfocalpoint&fit=clip&h=4400&w=3400",
-    imageAlt: "Satelitski snimak Grenlanda i njegove ledene ploče.",
+    imageSrc: "/news/greenland-us-arctic.jpg",
+    imageAlt: "Editorial ilustracija Grenlanda sa diskretnim radarskim lukovima koji sugerišu američko strateško prisustvo na Arktiku.",
   },
   {
     href: "/geopolitika/da-li-se-menja-mapa-ujedinjenog-kraljevstva",
