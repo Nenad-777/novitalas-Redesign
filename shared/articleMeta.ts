@@ -158,6 +158,19 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/tacka-bez-povratka-ai",
+    title: "TAČKA BEZ POVRATKA",
+    seoTitle: "Tačka bez povratka: ko će kontrolisati veštačku inteligenciju? | Novi Talas",
+    description:
+      "Kralj Čarls upozorava na egzistencijalne rizike, dok sumnje u tempo razvoja i mogućnost kontrole AI-ja sve češće dolaze iz samih vodećih laboratorija.",
+    imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Prince_Charles_%288398765111%29.jpg",
+    datePublished: "2026-09-20",
+    author: "Novi Talas",
+    section: "Naša planeta",
+    keywords:
+      "veštačka inteligencija, AI, kralj Čarls, OpenAI, Anthropic, AI bezbednost, kontrola AI, egzistencijalni rizik",
+  },
+  {
     path: "/geopolitika/amerika-nije-dobila-grenland-dobija-ono-zbog-cega-ga-je-zelela",
     title: "Amerika nije dobila Grenland. Dobija ono zbog čega ga je želela",
     seoTitle: "Amerika nije dobila Grenland. Dobija ono zbog čega ga je želela | Novi Talas",
