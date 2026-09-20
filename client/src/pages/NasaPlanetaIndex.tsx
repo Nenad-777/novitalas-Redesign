@@ -19,6 +19,15 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/tacka-bez-povratka-ai",
+    img: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Prince_Charles_%288398765111%29.jpg",
+    alt: "Tadašnji princ Čarls tokom posete Aberdyfiju u Velsu, 27. juna 2011.",
+    imageCredit: "Peter Broster / Wikimedia Commons, CC BY 2.0",
+    title: "TAČKA BEZ POVRATKA",
+    description:
+      "Kralj Čarls upozorava na egzistencijalne rizike, dok se sumnje u tempo razvoja sve češće čuju iz samih vodećih AI laboratorija.",
+  },
+  {
     href: "/nasa-planeta/misu-ugradjen-deo-ljudskog-mozga-naucnici-otvorili-novu-eru-istrazivanja",
     img: "/news/mouse-human-brain-organoid.png",
     alt: "Ilustracija preseka glave miša sa fluorescentno označenim moždanim strukturama i zeleno istaknutim ljudskim moždanim organoidom.",
