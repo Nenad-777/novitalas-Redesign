@@ -23,7 +23,7 @@ const ARTICLES: NasaPlanetaArticle[] = [
     img: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Prince_Charles_%288398765111%29.jpg",
     alt: "Tadašnji princ Čarls tokom posete Aberdyfiju u Velsu, 27. juna 2011.",
     imageCredit: "Peter Broster / Wikimedia Commons, CC BY 2.0",
-    title: "TAČKA BEZ POVRATKA",
+    title: "Tačka bez povratka",
     description:
       "Kralj Čarls upozorava na egzistencijalne rizike, dok se sumnje u tempo razvoja sve češće čuju iz samih vodećih AI laboratorija.",
   },
