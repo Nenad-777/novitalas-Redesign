@@ -159,7 +159,7 @@ export function buildJsonLd(meta: {
 export const articleMeta: ArticleStaticMeta[] = [
   {
     path: "/nasa-planeta/tacka-bez-povratka-ai",
-    title: "TAČKA BEZ POVRATKA",
+    title: "Tačka bez povratka",
     seoTitle: "Tačka bez povratka: ko će kontrolisati veštačku inteligenciju? | Novi Talas",
     description:
       "Kralj Čarls upozorava na egzistencijalne rizike, dok sumnje u tempo razvoja i mogućnost kontrole AI-ja sve češće dolaze iz samih vodećih laboratorija.",
