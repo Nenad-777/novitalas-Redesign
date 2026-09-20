@@ -3,6 +3,16 @@
 // previous HERO here and let the oldest secondary story fall off automatically.
 const HOME_ARTICLE_CANDIDATES = [
   {
+    href: "/geopolitika/amerika-nije-dobila-grenland-dobija-ono-zbog-cega-ga-je-zelela",
+    category: "GEOPOLITIKA · ARKTIK",
+    title: "Amerika nije dobila Grenland. Dobija ono zbog čega ga je želela",
+    description:
+      "SAD, Danska i Grenland pripremaju sporazum o jačanju bezbednosti na Arktiku. Suverenitet ostaje nepromenjen, dok strateška važnost ostrva ubrzano raste.",
+    imageSrc: "/news/greenland-us-arctic.jpg",
+    imageAlt:
+      "Editorial ilustracija Grenlanda sa diskretnim radarskim lukovima koji sugerišu američko strateško prisustvo na Arktiku.",
+  },
+  {
     href: "/nasa-planeta/misu-ugradjen-deo-ljudskog-mozga-naucnici-otvorili-novu-eru-istrazivanja",
     category: "NAŠA PLANETA · NAUKA",
     title: "Mišu ugrađen deo ljudskog mozga: naučnici otvorili novu eru istraživanja",
