@@ -52,6 +52,24 @@ const PARAGRAPHS = [
         >
           The Royal Family
         </a>
+        . Fotografija:{" "}
+        <a
+          href="https://commons.wikimedia.org/wiki/File:Prince_Charles_(8398765111).jpg"
+          target="_blank"
+          rel="noreferrer"
+          className="underline"
+        >
+          Peter Broster / Wikimedia Commons
+        </a>
+        ,{" "}
+        <a
+          href="https://creativecommons.org/licenses/by/2.0/"
+          target="_blank"
+          rel="noreferrer"
+          className="underline"
+        >
+          CC BY 2.0
+        </a>
         .
       </>
     ),
@@ -66,6 +84,11 @@ export default function TackaBezPovratkaAiArticle() {
       title="TAČKA BEZ POVRATKA"
       dateLabel="20. SEPTEMBAR 2026."
       deck="Ljudi koji stvaraju najmoćnije sisteme veštačke inteligencije počeli su javno da upozoravaju na njihove rizike. Pitanje više nije samo šta AI može da uradi, nego da li će čovek još moći da ga kontroliše."
+      imageSrc="https://upload.wikimedia.org/wikipedia/commons/6/6d/Prince_Charles_%288398765111%29.jpg"
+      imageAlt="Tadašnji princ Čarls tokom posete Aberdyfiju u Velsu, 27. juna 2011."
+      imageCredit="Foto: Peter Broster / Wikimedia Commons / CC BY 2.0"
+      imageFirst={true}
+      imageHeightClass="h-[300px] md:h-[500px]"
       paragraphs={PARAGRAPHS}
       backHref="/nasa-planeta"
       backLabel="← Nazad na Našu planetu"
