@@ -81,7 +81,7 @@ export default function TackaBezPovratkaAiArticle() {
     <ArticleTemplate
       path={PATH}
       sectionLabel="NAŠA PLANETA · AI"
-      title="TAČKA BEZ POVRATKA"
+      title="Tačka bez povratka"
       dateLabel="20. SEPTEMBAR 2026."
       deck="Ljudi koji stvaraju najmoćnije sisteme veštačke inteligencije počeli su javno da upozoravaju na njihove rizike. Pitanje više nije samo šta AI može da uradi, nego da li će čovek još moći da ga kontroliše."
       imageSrc="https://upload.wikimedia.org/wikipedia/commons/6/6d/Prince_Charles_%288398765111%29.jpg"
