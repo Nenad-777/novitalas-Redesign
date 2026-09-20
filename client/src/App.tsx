@@ -197,6 +197,7 @@ import IzboriNepravilnostiKrivicnaOdgovornost from "./pages/izbori-nepravilnosti
 import IzboriRezultati from "./pages/izbori-rezultati";
 
 import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
+import TackaBezPovratkaAiArticle from "./pages/TackaBezPovratkaAiArticle";
 import MouseHumanBrainArticle from "./pages/MouseHumanBrainArticle";
 import RenoirHeistArticle from "./pages/RenoirHeistArticle";
 import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
@@ -791,6 +792,11 @@ function Router() {
         <Route
           path="/nasa-planeta/ko-ce-ugasiti-zvezde-astronomi-upozoravaju-da-bi-17-miliona-satelita-moglo-trajno-da-promeni-nocno-nebo"
           component={VanishingStarsArticle}
+        />
+
+        <Route
+          path="/nasa-planeta/tacka-bez-povratka-ai"
+          component={TackaBezPovratkaAiArticle}
         />
 
         <Route
