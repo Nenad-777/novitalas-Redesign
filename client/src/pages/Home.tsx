@@ -16,8 +16,8 @@ const HERO_ARTICLE = {
   title: "Tačka bez povratka",
   description:
     "Kralj Čarls upozorava na egzistencijalne rizike, dok sumnje i upozorenja sve češće dolaze iz samih kompanija koje razvijaju najnaprednije AI modele.",
-  imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Prince_Charles_%288398765111%29.jpg",
-  imageAlt: "Tadašnji princ Čarls tokom posete Aberdyfiju u Velsu, 27. juna 2011.",
+  imageSrc: "/news/king-charles-ai-point-of-no-return.webp",
+  imageAlt: "Digitalna editorial ilustracija kralja Čarlsa uz globalnu mrežu kao simbol rizika i kontrole veštačke inteligencije.",
 };
 
 const ARTICLES = HOME_ARTICLES;
