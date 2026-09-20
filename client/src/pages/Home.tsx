@@ -11,13 +11,13 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 const HERO_ARTICLE = {
-  href: "/nasa-planeta/tacka-bez-povratka-ai",
-  category: "NAŠA PLANETA · AI",
-  title: "TAČKA BEZ POVRATKA",
+  href: "/geopolitika/amerika-nije-dobila-grenland-dobija-ono-zbog-cega-ga-je-zelela",
+  category: "GEOPOLITIKA · ARKTIK",
+  title: "Amerika nije dobila Grenland. Dobija ono zbog čega ga je želela",
   description:
-    "Kralj Čarls upozorava na egzistencijalne rizike, dok sumnje i upozorenja sve češće dolaze iz samih kompanija koje razvijaju najnaprednije AI modele.",
-  imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Prince_Charles_%288398765111%29.jpg",
-  imageAlt: "Kralj Čarls tokom neformalne javne posete u Velsu 2011. godine.",
+    "SAD, Danska i Grenland pripremaju sporazum o jačanju bezbednosti na Arktiku. Suverenitet ostaje nepromenjen, dok strateška važnost ostrva ubrzano raste.",
+  imageSrc: "/news/greenland-us-arctic.jpg",
+  imageAlt: "Editorial ilustracija Grenlanda sa diskretnim radarskim lukovima koji sugerišu američko strateško prisustvo na Arktiku.",
 };
 
 const ARTICLES = HOME_ARTICLES;
