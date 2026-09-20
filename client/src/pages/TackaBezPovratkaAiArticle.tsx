@@ -30,50 +30,6 @@ const PARAGRAPHS = [
       </>
     ),
   },
-  {
-    type: "paragraph" as const,
-    content: (
-      <>
-        Izvori:{" "}
-        <a
-          href="https://www.reuters.com/business/media-telecom/ten-days-that-changed-course-ai-2026-09-19/"
-          target="_blank"
-          rel="noreferrer"
-          className="underline"
-        >
-          Reuters
-        </a>
-        {" · "}
-        <a
-          href="https://www.royal.uk/news-and-activity/2026-09-17/the-kings-speech-at-the-ai-summit-in-scotland"
-          target="_blank"
-          rel="noreferrer"
-          className="underline"
-        >
-          The Royal Family
-        </a>
-        . Fotografija:{" "}
-        <a
-          href="https://commons.wikimedia.org/wiki/File:Prince_Charles_(8398765111).jpg"
-          target="_blank"
-          rel="noreferrer"
-          className="underline"
-        >
-          Peter Broster / Wikimedia Commons
-        </a>
-        ,{" "}
-        <a
-          href="https://creativecommons.org/licenses/by/2.0/"
-          target="_blank"
-          rel="noreferrer"
-          className="underline"
-        >
-          CC BY 2.0
-        </a>
-        .
-      </>
-    ),
-  },
 ];
 
 export default function TackaBezPovratkaAiArticle() {
