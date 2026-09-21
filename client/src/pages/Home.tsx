@@ -11,13 +11,13 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 const HERO_ARTICLE = {
-  href: "/nasa-planeta/tacka-bez-povratka-ai",
-  category: "NAŠA PLANETA · AI",
-  title: "Tačka bez povratka",
+  href: "/geopolitika/afd-menja-politicku-mapu-nemacke-ruski-gas-se-vraca-u-igru",
+  category: "GEOPOLITIKA · NEMAČKA",
+  title: "AfD menja političku mapu Nemačke — a ruski gas se vraća u igru",
   description:
-    "Kralj Čarls upozorava na egzistencijalne rizike, dok sumnje i upozorenja sve češće dolaze iz samih kompanija koje razvijaju najnaprednije AI modele.",
-  imageSrc: "/news/king-charles-ai-point-of-no-return.webp",
-  imageAlt: "Digitalna editorial ilustracija kralja Čarlsa uz globalnu mrežu kao simbol rizika i kontrole veštačke inteligencije.",
+    "AfD je sa 38,2 odsto pobedio u Meklenburgu-Zapadnoj Pomeraniji. U isto vreme, ruski gas i Nord Stream vraćaju se u nemačku političku raspravu.",
+  imageSrc: "/news/afd-weidel-germany.jpg",
+  imageAlt: "Minimalistički editorial vizual Alis Vajdel, nemačke zastave i obeležja AfD-a.",
 };
 
 const ARTICLES = HOME_ARTICLES;
