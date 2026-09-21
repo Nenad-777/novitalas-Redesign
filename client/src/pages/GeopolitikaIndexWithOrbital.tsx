@@ -6,6 +6,14 @@ import GeopolitikaIndexLegacy from "./GeopolitikaIndexLegacy";
 
 const FEATURED = [
   {
+    href: "/geopolitika/afd-menja-politicku-mapu-nemacke-ruski-gas-se-vraca-u-igru",
+    title: "AfD menja političku mapu Nemačke — a ruski gas se vraća u igru",
+    description:
+      "AfD je sa 38,2 odsto pobedio u Meklenburgu-Zapadnoj Pomeraniji, dok se ruski gas i Nord Stream vraćaju u nemačku političku raspravu.",
+    imageSrc: "/news/afd-weidel-germany.jpg",
+    imageAlt: "Minimalistički editorial vizual Alis Vajdel, nemačke zastave i obeležja AfD-a.",
+  },
+  {
     href: "/geopolitika/amerika-nije-dobila-grenland-dobija-ono-zbog-cega-ga-je-zelela",
     title: "Amerika nije dobila Grenland. Dobija ono zbog čega ga je želela",
     description:
