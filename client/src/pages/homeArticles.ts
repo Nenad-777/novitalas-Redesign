@@ -3,6 +3,16 @@
 // previous HERO here and let the oldest secondary story fall off automatically.
 const HOME_ARTICLE_CANDIDATES = [
   {
+    href: "/nasa-planeta/tacka-bez-povratka-ai",
+    category: "NAŠA PLANETA · AI",
+    title: "Tačka bez povratka",
+    description:
+      "Kralj Čarls upozorava na egzistencijalne rizike, dok sumnje i upozorenja sve češće dolaze iz samih kompanija koje razvijaju najnaprednije AI modele.",
+    imageSrc: "/news/king-charles-ai-point-of-no-return.webp",
+    imageAlt:
+      "Digitalna editorial ilustracija kralja Čarlsa uz globalnu mrežu kao simbol rizika i kontrole veštačke inteligencije.",
+  },
+  {
     href: "/geopolitika/amerika-nije-dobila-grenland-dobija-ono-zbog-cega-ga-je-zelela",
     category: "GEOPOLITIKA · ARKTIK",
     title: "Amerika nije dobila Grenland. Dobija ono zbog čega ga je želela",
