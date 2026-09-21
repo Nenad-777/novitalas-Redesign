@@ -158,6 +158,19 @@ export function buildJsonLd(meta: {
  */
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/afd-menja-politicku-mapu-nemacke-ruski-gas-se-vraca-u-igru",
+    title: "AfD menja političku mapu Nemačke — a ruski gas se vraća u igru",
+    seoTitle: "AfD menja političku mapu Nemačke — a ruski gas se vraća u igru | Novi Talas",
+    description:
+      "AfD je sa 38,2 odsto pobedio u Meklenburgu-Zapadnoj Pomeraniji, dok se ruski gas i Nord Stream vraćaju u nemačku političku raspravu.",
+    imageSrc: "/news/afd-weidel-germany.jpg",
+    datePublished: "2026-09-21",
+    author: "Novi Talas",
+    section: "Geopolitika",
+    keywords:
+      "AfD, Nemačka, Alice Weidel, Mecklenburg-Vorpommern, CDU, Friedrich Merz, Rusija, ruski gas, Nord Stream, Kirill Dmitriev",
+  },
+  {
     path: "/nasa-planeta/tacka-bez-povratka-ai",
     title: "Tačka bez povratka",
     seoTitle: "Tačka bez povratka: ko će kontrolisati veštačku inteligenciju? | Novi Talas",
