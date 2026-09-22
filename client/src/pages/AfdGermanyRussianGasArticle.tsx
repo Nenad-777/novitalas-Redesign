@@ -25,8 +25,8 @@ export default function AfdGermanyRussianGasArticle() {
       dateLabel="21. SEPTEMBAR 2026."
       authorLabel=""
       deck="AfD je sa 38,2 odsto glasova pobedio u Meklenburgu-Zapadnoj Pomeraniji, dok je CDU prvi put ostao bez mesta u jednom nemačkom pokrajinskom parlamentu. Samo dva dana ranije pojavila se vest o pripremama za razgovore AfD-a i ruskog izaslanika o mogućem povratku ruskog gasa."
-      imageSrc="/news/afd-weidel-final.webp?v=20260922-1412"
-      imageAlt="Alis Vajdel ispred nemačke zastave i obeležja AfD-a."
+      imageSrc="/news/afd-weidel-final.webp"
+      imageAlt="Alis Vajdel uz nemačku zastavu i obeležja AfD-a."
       imageCredit="Ilustracija: Novi Talas / AI"
       imageFirst={true}
       imageHeightClass="h-auto"
