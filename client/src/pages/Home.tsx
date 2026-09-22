@@ -11,7 +11,7 @@ import { HOME_ARTICLES } from "./homeArticles";
 const HERO_ARTICLE = {
   href: "/geopolitika/afd-menja-politicku-mapu-nemacke-ruski-gas-se-vraca-u-igru",
   category: "GEOPOLITIKA · NEMAČKA",
-  title: "AfD menja političku mapu Nemačke — a ruski gas se vraća u igru",
+  title: "AfD menja političku mapu Nemačke, a ruski gas se vraća u igru",
   description: "AfD je sa 38,2 odsto pobedio u Meklenburgu-Zapadnoj Pomeraniji. U isto vreme, ruski gas i Nord Stream vraćaju se u nemačku političku raspravu.",
   imageSrc: "/news/afd-weidel.jpg",
   imageAlt: "Alis Vajdel uz nemačku zastavu i obeležja AfD-a.",
