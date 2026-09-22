@@ -99,8 +99,8 @@ export function buildJsonLd(meta: {
 export const articleMeta: ArticleStaticMeta[] = [
   {
     path: "/geopolitika/afd-menja-politicku-mapu-nemacke-ruski-gas-se-vraca-u-igru",
-    title: "AfD menja političku mapu Nemačke — a ruski gas se vraća u igru",
-    seoTitle: "AfD menja političku mapu Nemačke — a ruski gas se vraća u igru | Novi Talas",
+    title: "AfD menja političku mapu Nemačke, a ruski gas se vraća u igru",
+    seoTitle: "AfD menja političku mapu Nemačke, a ruski gas se vraća u igru | Novi Talas",
     description: "AfD je sa 38,2 odsto pobedio u Meklenburgu-Zapadnoj Pomeraniji, dok se ruski gas i Nord Stream vraćaju u nemačku političku raspravu.",
     imageSrc: "/news/afd-weidel.jpg",
     datePublished: "2026-09-21",
