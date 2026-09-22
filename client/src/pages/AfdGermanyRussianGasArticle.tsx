@@ -21,7 +21,7 @@ export default function AfdGermanyRussianGasArticle() {
     <ArticleTemplate
       path={PATH}
       sectionLabel="GEOPOLITIKA · NEMAČKA"
-      title="AfD menja političku mapu Nemačke — a ruski gas se vraća u igru"
+      title="AfD menja političku mapu Nemačke, a ruski gas se vraća u igru"
       dateLabel="21. SEPTEMBAR 2026."
       authorLabel=""
       deck="AfD je sa 38,2 odsto glasova pobedio u Meklenburgu-Zapadnoj Pomeraniji, dok je CDU prvi put ostao bez mesta u jednom nemačkom pokrajinskom parlamentu. Samo dva dana ranije pojavila se vest o pripremama za razgovore AfD-a i ruskog izaslanika o mogućem povratku ruskog gasa."
