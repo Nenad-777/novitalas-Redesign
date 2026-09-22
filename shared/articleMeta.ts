@@ -163,7 +163,7 @@ export const articleMeta: ArticleStaticMeta[] = [
     seoTitle: "AfD menja političku mapu Nemačke — a ruski gas se vraća u igru | Novi Talas",
     description:
       "AfD je sa 38,2 odsto pobedio u Meklenburgu-Zapadnoj Pomeraniji, dok se ruski gas i Nord Stream vraćaju u nemačku političku raspravu.",
-    imageSrc: "/news/afd-weidel-final.webp",
+    imageSrc: "/news/afd-weidel-germany.jpg",
     datePublished: "2026-09-21",
     author: "Novi Talas",
     section: "Geopolitika",
