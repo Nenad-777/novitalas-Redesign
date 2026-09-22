@@ -13,7 +13,7 @@ const HERO_ARTICLE = {
   category: "GEOPOLITIKA · NEMAČKA",
   title: "AfD menja političku mapu Nemačke — a ruski gas se vraća u igru",
   description: "AfD je sa 38,2 odsto pobedio u Meklenburgu-Zapadnoj Pomeraniji. U isto vreme, ruski gas i Nord Stream vraćaju se u nemačku političku raspravu.",
-  imageSrc: "/news/afd-weidel-germany.jpg",
+  imageSrc: "/news/afd-weidel.jpg",
   imageAlt: "Alis Vajdel uz nemačku zastavu i obeležja AfD-a.",
 };
 const ARTICLES = HOME_ARTICLES;
