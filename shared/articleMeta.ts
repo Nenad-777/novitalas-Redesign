@@ -98,6 +98,17 @@ export function buildJsonLd(meta: {
 
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/pred-razgovore-trampa-i-sija-amerika-ostaje-zavisna-od-kineskih-kriticnih-minerala",
+    title: "Pred razgovore Trampa i Sija: Amerika ostaje zavisna od kineskih kritičnih minerala",
+    seoTitle: "Pred razgovore Trampa i Sija: Amerika ostaje zavisna od kineskih kritičnih minerala | Novi Talas",
+    description: "Kina kontroliše ključne delove lanca retkih zemalja potrebnih američkoj industriji, tehnologiji i odbrani. Pred razgovore Trampa i Sija, američka zavisnost ostaje strateški problem.",
+    imageSrc: "https://upload.wikimedia.org/wikipedia/commons/0/08/President_Donald_Trump_participates_in_a_bilateral_meeting_with_Chinese_President_Xi_Jinping_at_the_Gimhae_International_Airport_terminal_%2854889568887%29.jpg",
+    datePublished: "2026-09-24",
+    author: "Novi Talas",
+    section: "Geopolitika",
+    keywords: "Donald Tramp, Si Đinping, Kina, SAD, kritični minerali, retke zemlje, itrijum, trgovina, tehnologija",
+  },
+  {
     path: "/geopolitika/afd-menja-politicku-mapu-nemacke-ruski-gas-se-vraca-u-igru",
     title: "AfD menja političku mapu Nemačke, a ruski gas se vraća u igru",
     seoTitle: "AfD menja političku mapu Nemačke, a ruski gas se vraća u igru | Novi Talas",
