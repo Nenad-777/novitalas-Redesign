@@ -37,6 +37,7 @@ import PraguePublicMediaProtestArticle from "./pages/PraguePublicMediaProtestArt
 import CrimeaDroneAttacksArticle from "./pages/CrimeaDroneAttacksArticle";
 import NovaOrbitaSrpskeDiplomatije from "./pages/nova-orbita-srpske-diplomatije-zasto-se-beograd-priblizava-vasingtonu-bas-sada";
 import SrbijaActVasingtonBeograd from "./pages/srbija-act-vasington-beograd";
+import TrumpXiCriticalMineralsArticle from "./pages/TrumpXiCriticalMineralsArticle";
 import OdPrimirjaDoNovihUdaraSadIran from "./pages/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana";
 
 import UkrajinaCetiriGodine from "./pages/ukrajina-cetiri-godine-rata";
@@ -328,6 +329,10 @@ function Router() {
         <Route
           path="/geopolitika/srbija-act-vasington-beograd"
           component={SrbijaActVasingtonBeograd}
+        />
+        <Route
+          path="/geopolitika/pred-razgovore-trampa-i-sija-amerika-ostaje-zavisna-od-kineskih-kriticnih-minerala"
+          component={TrumpXiCriticalMineralsArticle}
         />
         <Route
           path="/geopolitika/tramp-zapretio-bombardovanjem-omana-dok-istice-rok-za-sporazum-sa-iranom"
