@@ -3,6 +3,15 @@
 // previous HERO here and let the oldest secondary story fall off automatically.
 const HOME_ARTICLE_CANDIDATES = [
   {
+    href: "/geopolitika/afd-menja-politicku-mapu-nemacke-ruski-gas-se-vraca-u-igru",
+    category: "GEOPOLITIKA · NEMAČKA",
+    title: "AfD menja političku mapu Nemačke, a ruski gas se vraća u igru",
+    description:
+      "AfD je sa 38,2 odsto pobedio u Meklenburgu-Zapadnoj Pomeraniji. U isto vreme, ruski gas i Nord Stream vraćaju se u nemačku političku raspravu.",
+    imageSrc: "/news/afd-weidel.jpg",
+    imageAlt: "Alis Vajdel uz nemačku zastavu i obeležja AfD-a.",
+  },
+  {
     href: "/nasa-planeta/tacka-bez-povratka-ai",
     category: "NAŠA PLANETA · AI",
     title: "Tačka bez povratka",
