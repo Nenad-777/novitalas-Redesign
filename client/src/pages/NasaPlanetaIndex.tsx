@@ -19,6 +19,15 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/tarantino-je-napisao-novi-film-fincer-ga-je-rezirao",
+    img: "https://img.youtube.com/vi/RjEZaUBbUvU/maxresdefault.jpg",
+    alt: "Brad Pitt kao Cliff Booth u zvaničnom Netflix trejleru.",
+    imageCredit: "Video thumbnail: Netflix / zvanični YouTube kanal",
+    title: "Tarantino je napisao novi film. Finčer ga je režirao",
+    description:
+      "Brad Pitt se vraća kao Cliff Booth. Tarantino potpisuje scenario, David Fincher režiju, a prvi puni trejler otkriva Holivud 1977. godine.",
+  },
+  {
     href: "/nasa-planeta/tacka-bez-povratka-ai",
     img: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Prince_Charles_%288398765111%29.jpg",
     alt: "Tadašnji princ Čarls tokom posete Aberdyfiju u Velsu, 27. juna 2011.",
