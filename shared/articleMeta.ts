@@ -98,6 +98,17 @@ export function buildJsonLd(meta: {
 
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/tarantino-je-napisao-novi-film-fincer-ga-je-rezirao",
+    title: "Tarantino je napisao novi film. Finčer ga je režirao",
+    seoTitle: "Tarantino je napisao novi film. Finčer ga je režirao | Novi Talas",
+    description: "Brad Pitt se vraća kao Cliff Booth. Quentin Tarantino potpisuje scenario, David Fincher režiju, a Netflix je objavio prvi puni trejler.",
+    imageSrc: "https://img.youtube.com/vi/RjEZaUBbUvU/maxresdefault.jpg",
+    datePublished: "2026-09-25",
+    author: "Novi Talas",
+    section: "Kultura",
+    keywords: "Quentin Tarantino, David Fincher, Brad Pitt, Cliff Booth, Netflix, film, trailer, Holivud",
+  },
+  {
     path: "/geopolitika/pred-razgovore-trampa-i-sija-amerika-ostaje-zavisna-od-kineskih-kriticnih-minerala",
     title: "Pred razgovore Trampa i Sija: Amerika ostaje zavisna od kineskih kritičnih minerala",
     seoTitle: "Pred razgovore Trampa i Sija: Amerika ostaje zavisna od kineskih kritičnih minerala | Novi Talas",

@@ -9,13 +9,13 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/pred-razgovore-trampa-i-sija-amerika-ostaje-zavisna-od-kineskih-kriticnih-minerala",
-  category: "GEOPOLITIKA · SAD–KINA",
-  title: "Pred razgovore Trampa i Sija: Amerika ostaje zavisna od kineskih kritičnih minerala",
-  description: "Kina kontroliše ključne delove lanca retkih zemalja potrebnih američkoj industriji, tehnologiji i odbrani. Ta zavisnost ulazi u središte razgovora u Vašingtonu.",
-  imageSrc: "https://upload.wikimedia.org/wikipedia/commons/0/08/President_Donald_Trump_participates_in_a_bilateral_meeting_with_Chinese_President_Xi_Jinping_at_the_Gimhae_International_Airport_terminal_%2854889568887%29.jpg",
-  imageAlt: "Donald Tramp i Si Đinping sa američkom i kineskom delegacijom tokom bilateralnog sastanka u Busanu 2025.",
-};
+  href: "/nasa-planeta/tarantino-je-napisao-novi-film-fincer-ga-je-rezirao",
+  category: "VIDEO · KULTURA",
+  title: "Tarantino je napisao novi film. Finčer ga je režirao",
+  description: "Brad Pitt se vraća kao Cliff Booth. Tarantino potpisuje scenario, David Fincher režiju, a prvi puni trejler otkriva Holivud 1977. godine.",
+  imageSrc: "https://img.youtube.com/vi/RjEZaUBbUvU/maxresdefault.jpg",
+  imageAlt: "Brad Pitt kao Cliff Booth u zvaničnom Netflix trejleru.",
+}
 const ARTICLES = HOME_ARTICLES;
 function useFadeIn(){const ref=useRef<HTMLDivElement>(null);const[visible,setVisible]=useState(false);useEffect(()=>{const el=ref.current;if(!el)return;const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);o.unobserve(el)}},{threshold:.1});o.observe(el);return()=>o.disconnect()},[]);return{ref,visible}}
 function FadeIn({children,className=""}:{children:React.ReactNode;className?:string}){const{ref,visible}=useFadeIn();return <div ref={ref} className={className} style={{opacity:visible?1:0,transform:visible?"translateY(0)":"translateY(16px)",transition:"opacity 0.7s ease, transform 0.7s ease"}}>{children}</div>}

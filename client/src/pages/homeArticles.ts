@@ -3,6 +3,15 @@
 // previous HERO here and let the oldest secondary story fall off automatically.
 const HOME_ARTICLE_CANDIDATES = [
   {
+    href: "/geopolitika/pred-razgovore-trampa-i-sija-amerika-ostaje-zavisna-od-kineskih-kriticnih-minerala",
+    category: "GEOPOLITIKA · SAD–KINA",
+    title: "Pred razgovore Trampa i Sija: Amerika ostaje zavisna od kineskih kritičnih minerala",
+    description:
+      "Kina kontroliše ključne delove lanca retkih zemalja potrebnih američkoj industriji, tehnologiji i odbrani. Ta zavisnost ulazi u središte razgovora u Vašingtonu.",
+    imageSrc: "https://upload.wikimedia.org/wikipedia/commons/0/08/President_Donald_Trump_participates_in_a_bilateral_meeting_with_Chinese_President_Xi_Jinping_at_the_Gimhae_International_Airport_terminal_%2854889568887%29.jpg",
+    imageAlt: "Donald Tramp i Si Đinping sa američkom i kineskom delegacijom tokom bilateralnog sastanka u Busanu 2025.",
+  },
+  {
     href: "/geopolitika/afd-menja-politicku-mapu-nemacke-ruski-gas-se-vraca-u-igru",
     category: "GEOPOLITIKA · NEMAČKA",
     title: "AfD menja političku mapu Nemačke, a ruski gas se vraća u igru",

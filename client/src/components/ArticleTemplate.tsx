@@ -54,6 +54,7 @@ type ArticleTemplateProps = {
   imageCredit?: string;
   imageHeightClass?: string;
   imageFirst?: boolean;
+  videoHero?: { youtubeId: string; title: string; credit?: string };
   paragraphs: ArticleParagraph[];
   infoBox?: InfoBox;
   backHref: string;
@@ -72,6 +73,7 @@ export default function ArticleTemplate({
   imageCredit,
   imageHeightClass = "h-[260px] md:h-[420px]",
   imageFirst = false,
+  videoHero,
   paragraphs,
   infoBox,
   backHref,
@@ -100,8 +102,24 @@ export default function ArticleTemplate({
         style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
       >
         <article className="max-w-[860px] mx-auto px-5">
+          {/* Video hero */}
+          {imageFirst && videoHero ? (
+            <div className="mb-8">
+              <div className="relative w-full aspect-video overflow-hidden border" style={{ borderColor: isDark ? "#2a2a2e" : "#eee", backgroundColor: "#000" }}>
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${videoHero.youtubeId}?rel=0`}
+                  title={videoHero.title}
+                  className="absolute inset-0 w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  referrerPolicy="strict-origin-when-cross-origin"
+                />
+              </div>
+              {videoHero.credit ? <ImageCaption credit={videoHero.credit} /> : null}
+            </div>
+          ) : null}
           {/* Slika pre naslova */}
-          {imageFirst && imageSrc ? (
+          {imageFirst && imageSrc && !videoHero ? (
             <div className="mb-8">
               <div
                 className="border overflow-hidden"
@@ -187,7 +205,7 @@ export default function ArticleTemplate({
           ) : null}
 
           {/* Slika */}
-          {!imageFirst && imageSrc ? (
+          {!imageFirst && imageSrc && !videoHero ? (
             <div className="mt-8">
               <div
                 className="border overflow-hidden"
