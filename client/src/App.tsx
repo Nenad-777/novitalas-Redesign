@@ -202,6 +202,7 @@ import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
 import TackaBezPovratkaAiArticle from "./pages/TackaBezPovratkaAiArticle";
 import MouseHumanBrainArticle from "./pages/MouseHumanBrainArticle";
 import RenoirHeistArticle from "./pages/RenoirHeistArticle";
+import CliffBoothVideoArticle from "./pages/CliffBoothVideoArticle";
 import AlmaSkrivenoJezgro from "./pages/alma-skriveno-jezgro";
 import SpilbergUpozoravaHolivudPublikaTraziOriginalneFilmove from "./pages/spilberg-upozorava-holivud-publika-trazi-originalne-filmove";
 import UmetnostKojaDiseTeamlabTokio from "./pages/umetnost-koja-dise-teamlab-tokio";
@@ -940,6 +941,11 @@ function Router() {
         <Route
           path="/nasa-planeta/artemis-ii-fotografije-dubokog-svemira"
           component={ArtemisIIFotografijeDubokogSvemira}
+        />
+
+        <Route
+          path="/nasa-planeta/tarantino-je-napisao-novi-film-fincer-ga-je-rezirao"
+          component={CliffBoothVideoArticle}
         />
 
         <Route path="/nasa-planeta/moon-ring" component={MoonRing} />
