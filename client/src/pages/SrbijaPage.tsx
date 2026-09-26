@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  dijasporaGlasanje: "/news/glasanje-dijaspora-3-oktobar.jpg",
   mediaIndependence: "/news/media-independence-election.jpg",
   lostRepublic: "/news/lost-republic.jpg",
   slomMedjunarodni: "/news/slom-medjunarodni.jpg",
@@ -60,6 +61,22 @@ export default function SrbijaPage() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <article className="md:col-span-2">
+              <Link href="/srbija/vazno-za-gradjane-srbije-u-inostranstvu-rok-za-prijavu-za-glasanje-istice-3-oktobra-u-ponoc" className="no-underline">
+                <div className="border mb-4 overflow-hidden" style={{ borderColor: isDark ? "#2a2a2e" : "#eee", backgroundColor: isDark ? "#1a1c22" : "#f7f7f7" }}>
+                  <img src={IMAGES.dijasporaGlasanje} alt="Editorial ilustracija glasanja građana Srbije u inostranstvu." className="w-full h-[260px] md:h-[420px] object-cover object-center block" decoding="async" />
+                </div>
+                <span className="kicker">SRBIJA · IZBORI</span>
+                <h2 className="mt-2 text-[26px] md:text-[34px] font-bold leading-[1.2]" style={{ fontFamily: "'Playfair Display', serif", color: isDark ? "#e0ddd5" : "#111" }}>
+                  Važno za građane Srbije u inostranstvu: Rok za prijavu za glasanje ističe 3. oktobra u ponoć
+                </h2>
+                <p className="mt-3 text-[16px] leading-[1.65]" style={{ fontFamily: "'Crimson Pro', serif", color: isDark ? "#9a978f" : "#555" }}>
+                  Studenti u blokadi traže hitnu reakciju MSP-a i RIK-a zbog prijavljenih problema sa zahtevima birača iz više država. Rok za prijavu ističe 3. oktobra u ponoć.
+                </p>
+                <div className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]" style={{ fontFamily: "'Source Sans 3', sans-serif", color: isDark ? "#d9bf7a" : "#8B0000" }}>Otvori tekst →</div>
+              </Link>
+            </article>
+
             <article className="md:col-span-2">
               <Link
                 href="/srbija/pravi-test-bice-izbori-sta-promene-na-vrhu-znace-za-n1-novu-danas-i-radar"

@@ -1,0 +1,28 @@
+import ArticleTemplate from "@/components/ArticleTemplate";
+
+const ARTICLE = {
+  path: "/srbija/vazno-za-gradjane-srbije-u-inostranstvu-rok-za-prijavu-za-glasanje-istice-3-oktobra-u-ponoc",
+  title: "Važno za građane Srbije u inostranstvu: Rok za prijavu za glasanje ističe 3. oktobra u ponoć",
+  dateLabel: "26. SEPTEMBAR 2026.",
+  authorLabel: "",
+  deck: "Studenti u blokadi zatražili su danas hitnu reakciju Ministarstva spoljnih poslova i Republičke izborne komisije zbog problema koje građani Srbije iz više zemalja prijavljuju prilikom prijavljivanja za glasanje u inostranstvu. Do isteka roka ostalo je još samo nekoliko dana.",
+  imageSrc: "/news/glasanje-dijaspora-3-oktobar.jpg",
+  imageAlt: "Editorial ilustracija glasanja građana Srbije u inostranstvu sa glasačkim listićem i zastavama zemalja dijaspore.",
+  imageCredit: "Ilustracija: Novi Talas",
+  paragraphs: [
+    { type: "paragraph" as const, content: <>Studenti navode da im se javljaju građani iz više država koji još nisu dobili odgovor na podnete zahteve, nailaze na probleme u komunikaciji sa diplomatsko-konzularnim predstavništvima ili dobijaju različite informacije o postupku prijavljivanja. Među zemljama koje pominju su Nemačka, Kipar, Kina, Ujedinjeno Kraljevstvo, Ujedinjeni Arapski Emirati, Italija, Indonezija, Singapur i Češka, kao i još nekoliko evropskih država. Od MSP-a i RIK-a zatražili su da hitno objave koliko je zahteva za glasanje u inostranstvu primljeno, koliko ih je obrađeno i koliko još čeka na obradu.</> },
+    { type: "paragraph" as const, content: <>Za građane Srbije koji žive ili će se na dan izbora nalaziti van zemlje najvažnija informacija je jednostavna: <strong>rok za prijavu za glasanje u inostranstvu ističe 3. oktobra 2026. godine u ponoć.</strong> Taj datum navode i Ministarstvo državne uprave i lokalne samouprave i Ministarstvo spoljnih poslova. Reč je o roku za podnošenje zahteva da se u Jedinstveni birački spisak upiše podatak da će birač glasati u inostranstvu.</> },
+    { type: "paragraph" as const, content: <><a href="https://mduls.gov.rs/obavestenja/obavestava-birace-koji-imaju-boraviste-u-inostranstvu-o-ostvarivanju-birackog-prava-na-izborima-koji-ce-biti-odrzani-25-oktobra-2026-godine/?script=lat" target="_blank" rel="noreferrer">Zvanično obaveštenje MDULS-a za birače u inostranstvu</a><br/><a href="https://msp.gov.rs/lat/mediji/vesti/izbori-prijavljivanje-za-glasanje-u-inostranstvu" target="_blank" rel="noreferrer">Zvanično obaveštenje Ministarstva spoljnih poslova</a></> },
+    { type: "paragraph" as const, content: <>Prijava se podnosi preko diplomatsko-konzularnog predstavništva Srbije. U zahtevu se navode osnovni lični podaci, podaci o prebivalištu u Srbiji i mestu boravka u inostranstvu. Pošto ambasade i konzulati objavljuju praktična uputstva za podnošenje zahteva i kontakt podatke, najbolje je proveriti zvaničnu stranicu predstavništva kojem se obraćate.</> },
+    { type: "paragraph" as const, content: <>Pre prijave važno je proveriti i da li ste upisani u Jedinstveni birački spisak. To je moguće učiniti elektronski preko zvaničnog sistema Ministarstva državne uprave i lokalne samouprave. Za proveru su potrebni JMBG i registarski broj lične karte.</> },
+    { type: "paragraph" as const, content: <><a href="https://upit.birackispisak.gov.rs/" target="_blank" rel="noreferrer">Provera upisa u Jedinstveni birački spisak</a></> },
+    { type: "paragraph" as const, content: <>Ako građanin sa biračkim pravom nije upisan u Jedinstveni birački spisak, preko diplomatsko-konzularnog predstavništva može istovremeno podneti zahtev za upis u birački spisak i zahtev da bude evidentirano da će glasati u inostranstvu.</> },
+    { type: "paragraph" as const, content: <>Građani koji su zahtev već poslali, a još nisu dobili odgovor, mogu da provere njegov status kod ambasade ili konzulata kojem su zahtev podneli.</> },
+    { type: "paragraph" as const, content: <><em>Napomena: Informacije o postupku prijavljivanja u ovom tekstu zasnovane su na zvaničnim obaveštenjima Ministarstva državne uprave i lokalne samouprave i Ministarstva spoljnih poslova dostupnim 26. septembra 2026. Za konkretan način podnošenja zahteva i aktuelne kontakt podatke treba proveriti zvanično uputstvo nadležnog diplomatsko-konzularnog predstavništva Republike Srbije.</em></> },
+    { type: "paragraph" as const, content: <><strong>Do izbora ima još vremena. Do prijave za glasanje u inostranstvu — mnogo manje. Za građane Srbije van zemlje koji žele da glasaju, datum koji sada treba zapamtiti je 3. oktobar u ponoć.</strong></> },
+  ],
+};
+
+export default function DijasporaGlasanjeArticle() {
+  return <ArticleTemplate path={ARTICLE.path} sectionLabel="Srbija" title={ARTICLE.title} dateLabel={ARTICLE.dateLabel} authorLabel={ARTICLE.authorLabel} deck={ARTICLE.deck} imageSrc={ARTICLE.imageSrc} imageAlt={ARTICLE.imageAlt} imageCredit={ARTICLE.imageCredit} imageFirst={true} imageHeightClass="h-auto" paragraphs={ARTICLE.paragraphs} backHref="/srbija" backLabel="← Nazad na Srbiju" />;
+}

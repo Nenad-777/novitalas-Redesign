@@ -9,12 +9,12 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 const HERO_ARTICLE = {
-  href: "/nasa-planeta/tarantino-je-napisao-novi-film-fincer-ga-je-rezirao",
-  category: "VIDEO · KULTURA",
-  title: "Tarantino je napisao novi film. Finčer ga je režirao",
-  description: "Brad Pitt se vraća kao Cliff Booth. Tarantino potpisuje scenario, David Fincher režiju, a prvi puni trejler otkriva Holivud 1977. godine.",
-  imageSrc: "https://img.youtube.com/vi/RjEZaUBbUvU/maxresdefault.jpg",
-  imageAlt: "Brad Pitt kao Cliff Booth u zvaničnom Netflix trejleru.",
+  href: "/srbija/vazno-za-gradjane-srbije-u-inostranstvu-rok-za-prijavu-za-glasanje-istice-3-oktobra-u-ponoc",
+  category: "SRBIJA · IZBORI",
+  title: "Važno za građane Srbije u inostranstvu: Rok za prijavu za glasanje ističe 3. oktobra u ponoć",
+  description: "Studenti u blokadi traže hitnu reakciju MSP-a i RIK-a zbog prijavljenih problema sa zahtevima birača iz više država. Evo šta građani u inostranstvu treba da znaju pre isteka roka.",
+  imageSrc: "/news/glasanje-dijaspora-3-oktobar.jpg",
+  imageAlt: "Editorial ilustracija glasanja građana Srbije u inostranstvu.",
 }
 const ARTICLES = HOME_ARTICLES;
 function useFadeIn(){const ref=useRef<HTMLDivElement>(null);const[visible,setVisible]=useState(false);useEffect(()=>{const el=ref.current;if(!el)return;const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);o.unobserve(el)}},{threshold:.1});o.observe(el);return()=>o.disconnect()},[]);return{ref,visible}}

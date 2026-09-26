@@ -98,6 +98,18 @@ export function buildJsonLd(meta: {
 
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/srbija/vazno-za-gradjane-srbije-u-inostranstvu-rok-za-prijavu-za-glasanje-istice-3-oktobra-u-ponoc",
+    title: "Važno za građane Srbije u inostranstvu: Rok za prijavu za glasanje ističe 3. oktobra u ponoć",
+    seoTitle: "Glasanje u inostranstvu: rok za prijavu ističe 3. oktobra | Novi Talas",
+    description: "Studenti u blokadi traže hitnu reakciju MSP-a i RIK-a zbog prijavljenih problema sa zahtevima birača u inostranstvu. Rok za prijavu ističe 3. oktobra 2026. u ponoć.",
+    imageSrc: "/news/glasanje-dijaspora-3-oktobar.jpg",
+    datePublished: "2026-09-26",
+    author: "Novi Talas",
+    section: "Srbija",
+    keywords: "glasanje u inostranstvu, dijaspora, izbori Srbija 2026, birački spisak, MSP, RIK, MDULS, 3. oktobar",
+  },
+
+  {
     path: "/nasa-planeta/tarantino-je-napisao-novi-film-fincer-ga-je-rezirao",
     title: "Tarantino je napisao novi film. Finčer ga je režirao",
     seoTitle: "Tarantino je napisao novi film. Finčer ga je režirao | Novi Talas",

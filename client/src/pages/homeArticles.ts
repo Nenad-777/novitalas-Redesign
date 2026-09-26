@@ -3,6 +3,15 @@
 // previous HERO here and let the oldest secondary story fall off automatically.
 const HOME_ARTICLE_CANDIDATES = [
   {
+    href: "/nasa-planeta/tarantino-je-napisao-novi-film-fincer-ga-je-rezirao",
+    category: "VIDEO · KULTURA",
+    title: "Tarantino je napisao novi film. Finčer ga je režirao",
+    description: "Brad Pitt se vraća kao Cliff Booth. Tarantino potpisuje scenario, David Fincher režiju, a prvi puni trejler otkriva Holivud 1977. godine.",
+    imageSrc: "https://img.youtube.com/vi/RjEZaUBbUvU/maxresdefault.jpg",
+    imageAlt: "Brad Pitt kao Cliff Booth u zvaničnom Netflix trejleru.",
+  },
+
+  {
     href: "/geopolitika/pred-razgovore-trampa-i-sija-amerika-ostaje-zavisna-od-kineskih-kriticnih-minerala",
     category: "GEOPOLITIKA · SAD–KINA",
     title: "Pred razgovore Trampa i Sija: Amerika ostaje zavisna od kineskih kritičnih minerala",

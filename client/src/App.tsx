@@ -38,6 +38,7 @@ import CrimeaDroneAttacksArticle from "./pages/CrimeaDroneAttacksArticle";
 import NovaOrbitaSrpskeDiplomatije from "./pages/nova-orbita-srpske-diplomatije-zasto-se-beograd-priblizava-vasingtonu-bas-sada";
 import SrbijaActVasingtonBeograd from "./pages/srbija-act-vasington-beograd";
 import TrumpXiCriticalMineralsArticle from "./pages/TrumpXiCriticalMineralsArticle";
+import DijasporaGlasanjeArticle from "./pages/DijasporaGlasanjeArticle";
 import OdPrimirjaDoNovihUdaraSadIran from "./pages/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana";
 
 import UkrajinaCetiriGodine from "./pages/ukrajina-cetiri-godine-rata";
@@ -334,6 +335,10 @@ function Router() {
         <Route
           path="/geopolitika/pred-razgovore-trampa-i-sija-amerika-ostaje-zavisna-od-kineskih-kriticnih-minerala"
           component={TrumpXiCriticalMineralsArticle}
+        />
+        <Route
+          path="/srbija/vazno-za-gradjane-srbije-u-inostranstvu-rok-za-prijavu-za-glasanje-istice-3-oktobra-u-ponoc"
+          component={DijasporaGlasanjeArticle}
         />
         <Route
           path="/geopolitika/tramp-zapretio-bombardovanjem-omana-dok-istice-rok-za-sporazum-sa-iranom"
