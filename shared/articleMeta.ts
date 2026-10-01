@@ -98,6 +98,18 @@ export function buildJsonLd(meta: {
 
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/srbija-act-stigao-i-u-senat-wilson-podrzao-inicijativu-i-ponovo-otvorio-pitanje-izbora-u-srbiji",
+    title: "SRBIJA Act stigao i u Senat: Wilson podržao inicijativu i ponovo otvorio pitanje izbora u Srbiji",
+    seoTitle: "SRBIJA Act stigao i u Senat: Wilson podržao inicijativu | Novi Talas",
+    description: "U Senatu SAD uveden je S. 5611, uz dvostranačku podršku Grassleyja i Blumenthala. Joe Wilson je inicijativu javno povezao sa SRBIJA Act-om i ponovo otvorio pitanje izbora u Srbiji.",
+    imageSrc: "https://upload.wikimedia.org/wikipedia/commons/a/a6/US_Senate_Session_Chamber.jpg",
+    datePublished: "2026-10-01",
+    author: "Novi Talas",
+    section: "Geopolitika",
+    keywords: "SRBIJA Act, S. 5611, H.R. 10183, Joe Wilson, Chuck Grassley, Richard Blumenthal, Senat SAD, Srbija, izbori, EPP, SNS",
+  },
+
+  {
     path: "/srbija/vazno-za-gradjane-srbije-u-inostranstvu-rok-za-prijavu-za-glasanje-istice-3-oktobra-u-ponoc",
     title: "Važno za građane Srbije u inostranstvu: Rok za prijavu za glasanje ističe 3. oktobra u ponoć",
     seoTitle: "Glasanje u inostranstvu: rok za prijavu ističe 3. oktobra | Novi Talas",
