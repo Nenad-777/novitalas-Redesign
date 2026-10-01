@@ -219,70 +219,122 @@
     };
 
     // Ambient sound: generated locally. No external audio file, no tracking.
-    let ctx, master, nodes=[], soundOn=false, shimmerTimer;
+    let ctx, master, soundOn=false, shimmerTimer;
+
     async function startSound(){
-      if(ctx){ await ctx.resume(); master.gain.setTargetAtTime(.055,ctx.currentTime,.8); soundOn=true; updateSoundButton(); return; }
-      const AC=window.AudioContext||window.webkitAudioContext;
+      const AC = window.AudioContext || window.webkitAudioContext;
       if(!AC) return;
-      ctx=new AC();
-      master=ctx.createGain(); master.gain.value=0.0001; master.connect(ctx.destination);
 
-      const compressor=ctx.createDynamicsCompressor();
-      compressor.threshold.value=-24; compressor.knee.value=20; compressor.ratio.value=4;
-      compressor.connect(master);
+      if(!ctx){
+        ctx = new AC();
+        master = ctx.createGain();
+        master.gain.value = 0.0001;
+        master.connect(ctx.destination);
+      }
 
-      const freqs=[55,82.5,110,164.81,220];
-      freqs.forEach((f,i)=>{
-        const osc=ctx.createOscillator(), g=ctx.createGain(), pan=ctx.createStereoPanner();
-        osc.type=i<2?"sine":"triangle"; osc.frequency.value=f;
-        g.gain.value=i<2?.035:.009;
-        pan.pan.value=(i%2?1:-1)*(.12+i*.07);
-        osc.connect(g).connect(pan).connect(compressor); osc.start();
-        nodes.push(osc,g,pan);
+      if(ctx.state === "suspended") await ctx.resume();
+
+      // A clearly audible "entry signal" so iPhone users immediately know sound started.
+      const now = ctx.currentTime;
+      const entry = ctx.createGain();
+      entry.gain.setValueAtTime(0.0001, now);
+      entry.gain.exponentialRampToValueAtTime(0.11, now + 0.05);
+      entry.gain.exponentialRampToValueAtTime(0.0001, now + 2.8);
+      entry.connect(master);
+
+      [146.83, 220, 329.63].forEach((f, i)=>{
+        const o = ctx.createOscillator();
+        const g = ctx.createGain();
+        o.type = i === 0 ? "sine" : "triangle";
+        o.frequency.value = f;
+        g.gain.value = i === 0 ? 0.34 : 0.18;
+        o.connect(g).connect(entry);
+        o.start(now + i * 0.08);
+        o.stop(now + 2.9);
       });
 
-      // soft filtered noise bed
-      const buffer=ctx.createBuffer(1,ctx.sampleRate*2,ctx.sampleRate);
-      const data=buffer.getChannelData(0);
-      for(let i=0;i<data.length;i++) data[i]=(Math.random()*2-1)*.16;
-      const noise=ctx.createBufferSource(); noise.buffer=buffer; noise.loop=true;
-      const filter=ctx.createBiquadFilter(); filter.type="lowpass"; filter.frequency.value=420;
-      const ng=ctx.createGain(); ng.gain.value=.012;
-      noise.connect(filter).connect(ng).connect(compressor); noise.start();
-      nodes.push(noise,filter,ng);
+      // Warm evolving drone.
+      if(!window.__sofiaAmbientStarted){
+        window.__sofiaAmbientStarted = true;
 
-      // sparse high harmonic "breaths"
-      shimmerTimer=setInterval(()=>{
-        if(!soundOn || !ctx) return;
-        const o=ctx.createOscillator(), g=ctx.createGain(), p=ctx.createStereoPanner();
-        const pool=[329.63,392,440,493.88,659.25];
-        o.type="sine"; o.frequency.value=pool[Math.floor(Math.random()*pool.length)];
-        p.pan.value=Math.random()*1.4-.7;
-        const now=ctx.currentTime;
-        g.gain.setValueAtTime(.0001,now);
-        g.gain.exponentialRampToValueAtTime(.007,now+1.8);
-        g.gain.exponentialRampToValueAtTime(.0001,now+6);
-        o.connect(g).connect(p).connect(compressor); o.start(now); o.stop(now+6.1);
-      },5200);
+        const compressor = ctx.createDynamicsCompressor();
+        compressor.threshold.value = -28;
+        compressor.knee.value = 18;
+        compressor.ratio.value = 3;
+        compressor.connect(master);
 
-      soundOn=true;
-      master.gain.exponentialRampToValueAtTime(.055,ctx.currentTime+2.2);
+        const freqs = [55, 82.5, 110, 164.81, 220];
+        freqs.forEach((f,i)=>{
+          const osc = ctx.createOscillator();
+          const g = ctx.createGain();
+          const pan = ctx.createStereoPanner();
+          osc.type = i < 2 ? "sine" : "triangle";
+          osc.frequency.value = f;
+          g.gain.value = i < 2 ? 0.055 : 0.018;
+          pan.pan.value = (i % 2 ? 1 : -1) * (0.10 + i * 0.06);
+          osc.connect(g).connect(pan).connect(compressor);
+          osc.start();
+        });
+
+        const buffer = ctx.createBuffer(1, ctx.sampleRate * 2, ctx.sampleRate);
+        const data = buffer.getChannelData(0);
+        for(let i=0;i<data.length;i++) data[i] = (Math.random()*2-1)*0.16;
+        const noise = ctx.createBufferSource();
+        const filter = ctx.createBiquadFilter();
+        const ng = ctx.createGain();
+        noise.buffer = buffer;
+        noise.loop = true;
+        filter.type = "lowpass";
+        filter.frequency.value = 560;
+        ng.gain.value = 0.014;
+        noise.connect(filter).connect(ng).connect(compressor);
+        noise.start();
+
+        shimmerTimer = setInterval(()=>{
+          if(!soundOn || !ctx) return;
+          const o = ctx.createOscillator();
+          const g = ctx.createGain();
+          const p = ctx.createStereoPanner();
+          const pool = [293.66, 329.63, 392, 440, 493.88, 659.25];
+          o.type = "sine";
+          o.frequency.value = pool[Math.floor(Math.random()*pool.length)];
+          p.pan.value = Math.random()*1.4-.7;
+          const t = ctx.currentTime;
+          g.gain.setValueAtTime(0.0001,t);
+          g.gain.exponentialRampToValueAtTime(0.016,t+1.2);
+          g.gain.exponentialRampToValueAtTime(0.0001,t+5.8);
+          o.connect(g).connect(p).connect(compressor);
+          o.start(t);
+          o.stop(t+6);
+        }, 4200);
+      }
+
+      soundOn = true;
+      master.gain.cancelScheduledValues(now);
+      master.gain.setValueAtTime(Math.max(master.gain.value, 0.0001), now);
+      master.gain.exponentialRampToValueAtTime(0.22, now + 0.35);
       updateSoundButton();
     }
+
     function updateSoundButton(){
       $("soundBtn").classList.add("show");
-      $("soundBtn").textContent=soundOn?"SOUND ON":"SOUND OFF";
-      $("soundBtn").setAttribute("aria-label",soundOn?"Utišaj zvuk":"Uključi zvuk");
+      $("soundBtn").textContent = soundOn ? "SOUND ON" : "SOUND OFF";
+      $("soundBtn").setAttribute("aria-label", soundOn ? "Utišaj zvuk" : "Uključi zvuk");
     }
-    $("soundBtn").onclick=()=>{
+
+    $("soundBtn").onclick = async ()=>{
       if(!ctx) return;
-      soundOn=!soundOn;
-      master.gain.setTargetAtTime(soundOn?.055:.0001,ctx.currentTime,.25);
+      if(ctx.state === "suspended") await ctx.resume();
+      soundOn = !soundOn;
+      const t = ctx.currentTime;
+      master.gain.cancelScheduledValues(t);
+      master.gain.setTargetAtTime(soundOn ? 0.22 : 0.0001, t, 0.08);
       updateSoundButton();
     };
 
-    $("enterBtn").onclick=async()=>{
-      await startSound();
+    $("enterBtn").onclick = ()=>{
+      // startSound is intentionally called directly inside the user's tap handler for iOS/Safari.
+      startSound().catch(()=>{});
       show("manifest");
     };
 
