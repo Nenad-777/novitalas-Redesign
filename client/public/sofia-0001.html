@@ -4,372 +4,406 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="robots" content="noindex,nofollow,noarchive,nosnippet" />
-  <meta name="theme-color" content="#05070a" />
-  <title>SOFIA // PARTICIPANT 0001</title>
+  <meta name="theme-color" content="#030508" />
+  <title>SOFIA // Experiment 0001</title>
   <style>
     :root{
-      --bg:#040609;
-      --ink:#eef4f2;
-      --muted:#8d9b99;
-      --line:rgba(220,240,235,.16);
-      --glow:#a4ffe3;
-      --glow2:#93b7ff;
-      --panel:rgba(8,13,17,.64);
+      --bg:#030508; --ink:#f3f7f5; --muted:#8b9995; --dim:#596763;
+      --line:rgba(221,244,237,.14); --mint:#9ff4da; --blue:#98b8ff;
+      --panel:rgba(7,11,15,.72); --danger:#ffcabf;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);
+      font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
     body{overflow-x:hidden}
     button,textarea,input{font:inherit}
     button{color:inherit}
-    #field{position:fixed;inset:0;width:100%;height:100%;opacity:.72;pointer-events:none}
-    .veil{
-      position:fixed;inset:0;pointer-events:none;
-      background:
-        radial-gradient(circle at 50% 35%,rgba(128,255,219,.08),transparent 32%),
-        radial-gradient(circle at 72% 68%,rgba(112,145,255,.07),transparent 28%),
-        linear-gradient(to bottom,rgba(3,6,8,.18),rgba(3,6,8,.9));
-    }
-    .shell{position:relative;z-index:2;min-height:100svh;display:flex;flex-direction:column;padding:max(22px,env(safe-area-inset-top)) 22px max(24px,env(safe-area-inset-bottom))}
-    .top{display:flex;align-items:center;justify-content:space-between;gap:16px;letter-spacing:.22em;font-size:10px;color:rgba(238,244,242,.55);text-transform:uppercase}
-    .sigil{display:flex;align-items:center;gap:9px}
-    .dot{width:7px;height:7px;border-radius:50%;background:var(--glow);box-shadow:0 0 18px rgba(164,255,227,.75)}
-    .sound{border:1px solid var(--line);background:rgba(255,255,255,.02);border-radius:999px;padding:8px 11px;cursor:pointer;display:none}
-    .sound.show{display:block}
-    main{flex:1;display:grid;place-items:center;padding:48px 0}
-    .stage{width:min(760px,100%);text-align:center}
-    .eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:rgba(238,244,242,.48);margin-bottom:22px}
-    h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(56px,14vw,132px);line-height:.88;margin:0;letter-spacing:-.055em}
-    .halo{
-      background:linear-gradient(120deg,#f8fbfa 10%,#a4ffe3 48%,#9ebcff 82%);
-      -webkit-background-clip:text;background-clip:text;color:transparent;
-      text-shadow:0 0 42px rgba(164,255,227,.08)
-    }
-    .sub{margin:26px auto 0;max-width:610px;color:#b9c4c1;font-size:clamp(16px,2.7vw,21px);line-height:1.6;font-weight:300}
-    .enter{margin-top:42px;border:1px solid rgba(164,255,227,.35);background:rgba(164,255,227,.035);border-radius:999px;padding:15px 25px;letter-spacing:.18em;text-transform:uppercase;font-size:12px;cursor:pointer;box-shadow:0 0 0 rgba(164,255,227,0);transition:.35s ease}
-    .enter:hover{transform:translateY(-1px);border-color:rgba(164,255,227,.7);box-shadow:0 0 36px rgba(164,255,227,.08)}
-    .micro{margin-top:16px;color:#66726f;font-size:11px;line-height:1.5}
+    #field{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.72}
+    .veil{position:fixed;inset:0;pointer-events:none;background:
+      radial-gradient(circle at 50% 34%,rgba(117,255,216,.09),transparent 30%),
+      radial-gradient(circle at 75% 70%,rgba(112,145,255,.08),transparent 25%),
+      linear-gradient(to bottom,rgba(3,5,8,.08),rgba(3,5,8,.92))}
+    .shell{position:relative;z-index:2;min-height:100svh;display:flex;flex-direction:column;
+      padding:max(20px,env(safe-area-inset-top)) 20px max(22px,env(safe-area-inset-bottom))}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:12px;
+      font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#7d8b87}
+    .brand{display:flex;gap:9px;align-items:center}
+    .orb{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 18px rgba(159,244,218,.8)}
+    .audioBox{display:flex;align-items:center;gap:8px}
+    .audioState{font-size:9px;letter-spacing:.18em;color:#66736f}
+    .audioBtn{border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:999px;padding:8px 11px;cursor:pointer}
+    .progressWrap{position:fixed;z-index:5;left:20px;right:20px;bottom:max(14px,env(safe-area-inset-bottom));height:2px;background:rgba(255,255,255,.07)}
+    .progress{height:100%;width:0;background:linear-gradient(90deg,var(--mint),var(--blue));transition:width .5s ease}
+    main{flex:1;display:grid;place-items:center;padding:52px 0 58px}
+    .screen{width:min(780px,100%);text-align:center}
     .hidden{display:none!important}
-    .fade{animation:fade .9s ease both}
+    .fade{animation:fade .7s ease both}
     @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-    .sequence{max-width:680px;margin:0 auto}
-    .lineword{font-family:Georgia,"Times New Roman",serif;font-size:clamp(27px,5.5vw,50px);line-height:1.18;font-weight:400;margin:0 0 24px;color:#eef5f2}
-    .lineword.muted{color:#8d9a97}
-    .idchip{display:inline-flex;align-items:center;gap:10px;margin:26px 0 12px;border:1px solid var(--line);border-radius:999px;padding:9px 13px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#aeb9b7}
-    .idchip i{display:block;width:6px;height:6px;border-radius:50%;background:var(--glow);box-shadow:0 0 12px rgba(164,255,227,.8)}
-    .card{text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,5vw,38px);box-shadow:0 24px 80px rgba(0,0,0,.3);backdrop-filter:blur(18px)}
-    .stepmark{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#71817d;margin-bottom:18px}
-    .question{font-family:Georgia,"Times New Roman",serif;font-size:clamp(28px,5.5vw,44px);line-height:1.14;font-weight:400;margin:0 0 22px}
-    textarea{width:100%;min-height:150px;resize:vertical;border:0;border-bottom:1px solid rgba(220,240,235,.18);background:transparent;color:#f4f8f7;outline:none;padding:8px 0 14px;font-size:18px;line-height:1.55}
-    textarea::placeholder{color:#53615e}
-    .row{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:24px;flex-wrap:wrap}
-    .next{border:1px solid rgba(164,255,227,.28);background:rgba(164,255,227,.06);border-radius:999px;padding:12px 18px;cursor:pointer;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
-    .next:disabled{opacity:.32;cursor:not-allowed}
-    .back{border:0;background:transparent;color:#66726f;cursor:pointer;font-size:12px}
-    .confidence{display:grid;gap:18px}
-    .meterline{display:flex;align-items:baseline;justify-content:space-between}
-    .percent{font-family:Georgia,serif;font-size:48px;font-variant-numeric:tabular-nums}
-    .hint{color:#788582;font-size:12px}
-    input[type="range"]{width:100%;accent-color:#a4ffe3}
-    .receipt{text-align:left}
-    .receipt h2{font-family:Georgia,serif;font-size:clamp(34px,7vw,64px);font-weight:400;letter-spacing:-.03em;margin:0 0 14px}
-    .receipt .lead{font-size:17px;line-height:1.6;color:#aeb9b7;margin:0 0 26px}
-    .record{border-top:1px solid var(--line);padding:18px 0}
-    .record small{display:block;color:#63716e;text-transform:uppercase;letter-spacing:.16em;font-size:9px;margin-bottom:8px}
-    .record p{margin:0;font-family:Georgia,serif;font-size:20px;line-height:1.45}
-    .seal{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#6f7d7a;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
-    footer{display:flex;justify-content:center;color:#485552;font-size:10px;letter-spacing:.13em;text-transform:uppercase;text-align:center}
-    @media(max-width:600px){.shell{padding-left:18px;padding-right:18px}.top{font-size:9px}.card{border-radius:20px}.sound{padding:7px 9px}}
+    .eyebrow{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#66736f;margin-bottom:18px}
+    h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:400}
+    h1{font-size:clamp(58px,15vw,128px);line-height:.88;letter-spacing:-.055em;margin:0}
+    .halo{background:linear-gradient(115deg,#fff 10%,var(--mint) 50%,var(--blue) 88%);
+      color:transparent;background-clip:text;-webkit-background-clip:text}
+    .introText{font-family:Georgia,serif;font-size:clamp(22px,4vw,38px);line-height:1.28;
+      max-width:720px;margin:25px auto 0;color:#d9e1de}
+    .sub{max-width:610px;margin:18px auto 0;color:#91a09c;font-size:15px;line-height:1.65}
+    .cta{margin-top:34px;border:1px solid rgba(159,244,218,.38);background:rgba(159,244,218,.045);
+      border-radius:999px;padding:15px 22px;letter-spacing:.16em;text-transform:uppercase;font-size:11px;cursor:pointer}
+    .cta:hover{border-color:rgba(159,244,218,.72)}
+    .micro{margin-top:13px;color:#55625e;font-size:10px;line-height:1.5}
+    .soundtest{margin-top:18px;border:0;background:transparent;text-decoration:underline;text-underline-offset:4px;
+      color:#8ea09b;font-size:12px;cursor:pointer}
+    .card{text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:24px;
+      padding:clamp(22px,5vw,38px);backdrop-filter:blur(18px);box-shadow:0 28px 100px rgba(0,0,0,.34)}
+    .step{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#65736f;margin-bottom:18px}
+    .question{font-size:clamp(29px,5.3vw,46px);line-height:1.12;margin:0 0 20px}
+    .prompt{font-size:14px;line-height:1.55;color:#81908c;margin:0 0 18px}
+    textarea{width:100%;min-height:128px;border:0;border-bottom:1px solid rgba(220,240,235,.18);
+      color:#eef4f2;background:transparent;outline:none;resize:vertical;padding:8px 0 14px;font-size:17px;line-height:1.55}
+    textarea::placeholder{color:#4c5b57}
+    .two,.three{display:grid;gap:16px}
+    .two{grid-template-columns:1fr 1fr}
+    .three{grid-template-columns:repeat(3,1fr)}
+    .mini{border:1px solid var(--line);border-radius:18px;padding:16px;background:rgba(255,255,255,.018)}
+    .mini label{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.18em;color:#71807c;margin-bottom:8px}
+    .mini textarea{min-height:110px;font-size:15px}
+    .row{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:22px}
+    .next,.back{cursor:pointer}
+    .next{border:1px solid rgba(159,244,218,.32);background:rgba(159,244,218,.055);
+      border-radius:999px;padding:11px 17px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+    .next:disabled{opacity:.3;cursor:not-allowed}
+    .back{border:0;background:transparent;color:#61706c;font-size:12px}
+    .meter{display:grid;gap:16px}
+    .meterHead{display:flex;justify-content:space-between;align-items:end}
+    .percent{font-family:Georgia,serif;font-size:52px}
+    input[type=range]{width:100%;accent-color:var(--mint)}
+    .choicegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .choice{border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.018);
+      padding:16px;text-align:left;cursor:pointer;color:#b9c4c0}
+    .choice.active{border-color:rgba(159,244,218,.55);background:rgba(159,244,218,.06);color:#effaf6}
+    .timer{font-family:Georgia,serif;font-size:72px;margin:10px 0;color:#dfe7e4}
+    .breath{width:116px;height:116px;border-radius:50%;margin:22px auto;border:1px solid rgba(159,244,218,.35);
+      background:radial-gradient(circle,rgba(159,244,218,.13),rgba(159,244,218,.01));
+      animation:breathe 8s ease-in-out infinite;box-shadow:0 0 60px rgba(159,244,218,.07)}
+    @keyframes breathe{0%,100%{transform:scale(.82);opacity:.6}50%{transform:scale(1.08);opacity:1}}
+    .mirror{text-align:left}
+    .mirror h2{font-size:clamp(36px,7vw,68px);letter-spacing:-.035em;margin:0 0 10px}
+    .mirrorLead{color:#a6b3af;line-height:1.6;margin:0 0 25px}
+    .insight{border-top:1px solid var(--line);padding:18px 0}
+    .insight small{display:block;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#62716d;margin-bottom:7px}
+    .insight p{margin:0;font-family:Georgia,serif;font-size:19px;line-height:1.48}
+    .blind{margin-top:22px;border:1px solid rgba(159,244,218,.28);border-radius:18px;padding:18px;
+      background:rgba(159,244,218,.045)}
+    .blind b{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mint);margin-bottom:8px}
+    .blind p{margin:0;color:#d6e1dd;line-height:1.55}
+    .finalPhrase{font-family:Georgia,serif;font-size:clamp(29px,5vw,48px);line-height:1.2;margin:0 0 16px}
+    .seal{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:18px;margin-top:24px;border-top:1px solid var(--line);
+      color:#64726e;font-size:9px;letter-spacing:.14em;text-transform:uppercase}
+    footer{text-align:center;color:#3f4b48;font-size:9px;letter-spacing:.13em;text-transform:uppercase}
+    .audioWarning{display:none;margin:16px auto 0;max-width:540px;color:#d6b9b1;font-size:12px;line-height:1.5}
+    .audioWarning.show{display:block}
+    @media(max-width:680px){
+      .two,.three,.choicegrid{grid-template-columns:1fr}
+      .top{font-size:8px}.card{border-radius:20px}.shell{padding-left:16px;padding-right:16px}
+      .progressWrap{left:16px;right:16px}.timer{font-size:58px}
+    }
     @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#field{display:none}}
   </style>
 </head>
 <body>
-  <canvas id="field" aria-hidden="true"></canvas>
-  <div class="veil" aria-hidden="true"></div>
+  <audio id="ambience" src="https://dnznrvs05pmza.cloudfront.net/audio_sfx/0213c9c4-85d0-4646-9a79-ee10b1b69548/SOFIA_Entry_Ambience.mp3?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMGNlODM5YjlkZWM0NWI4ZSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MDkyNjUyMX0.3yyTHC1QPw6LBxxFVxIFyewqSZWymtQvletmWAZojKo" preload="auto" loop playsinline></audio>
+  <canvas id="field" aria-hidden="true"></canvas><div class="veil" aria-hidden="true"></div>
 
   <div class="shell">
     <header class="top">
-      <div class="sigil"><span class="dot"></span><span>SOFIA / PRIVATE PROTOTYPE</span></div>
-      <button id="soundBtn" class="sound" type="button" aria-label="Utišaj zvuk">SOUND ON</button>
+      <div class="brand"><span class="orb"></span><span>SOFIA / EXPERIMENT 0001</span></div>
+      <div class="audioBox"><span id="audioState" class="audioState">AUDIO READY</span><button id="audioBtn" class="audioBtn" type="button">SOUND</button></div>
     </header>
 
     <main>
-      <section id="intro" class="stage fade">
-        <div class="eyebrow">An instrument for seeing how you think</div>
+      <section id="s0" class="screen fade">
+        <div class="eyebrow">Participant 0001 · private prototype</div>
         <h1 class="halo">SOFIA</h1>
-        <p class="sub">Ne da misli umesto tebe. Ne da te ubedi. Da napravi jednu novu stvar: povratnu spregu između tvog uverenja i stvarnosti.</p>
-        <button id="enterBtn" class="enter" type="button">ENTER SOFIA</button>
-        <div class="micro">Zvuk počinje tek nakon dodira. Veoma tih ambijentalni signal.</div>
+        <p class="introText">Ovo nije upitnik. Ovo je prvi pokušaj da tehnologija postane ogledalo između tebe i sopstvenog mišljenja.</p>
+        <p class="sub">Trajanje: oko 8–12 minuta. Neće ti reći šta da misliš. Pokušaće da napravi prostor u kojem jasnije vidiš šta znaš, šta pretpostavljaš i šta možda ne primećuješ.</p>
+        <button id="enter" class="cta">ENTER SOFIA + SOUND</button>
+        <button id="soundTest" class="soundtest">Testiraj zvuk pre početka</button>
+        <div id="audioWarning" class="audioWarning">iPhone nije dozvolio zvuk automatski. Dodirni dugme SOUND gore desno; ako je telefon u Silent režimu, pojačaj Media Volume.</div>
       </section>
 
-      <section id="manifest" class="stage sequence hidden">
-        <p class="lineword">Neću ti reći šta da misliš.</p>
-        <p class="lineword muted">Pokušaću da ti pokažem kako misliš.</p>
-        <div class="idchip"><i></i> Participant 0001</div>
-        <p class="sub">Prvi zapis neće biti objavljen niti poslat na server. Ostaje samo na ovom uređaju.</p>
-        <button id="beginBtn" class="enter" type="button">POČNI PRVI EPISTEMIC LOOP</button>
-      </section>
-
-      <section id="step1" class="stage hidden">
-        <div class="card fade">
-          <div class="stepmark">01 / 04 — CLAIM</div>
-          <h2 class="question">Šta trenutno veruješ da je istina?</h2>
-          <textarea id="belief" placeholder="Jedna stvar koja ti je zaista važna. O sebi, poslu, svetu, odnosu, budućnosti…"></textarea>
-          <div class="row">
-            <span class="hint">Ne tražimo „dobar“ odgovor. Samo stvarni.</span>
-            <button id="to2" class="next" disabled>Nastavi</button>
-          </div>
+      <section id="s1" class="screen hidden">
+        <div class="card fade" style="text-align:center">
+          <div class="step">00 — ARRIVAL</div>
+          <h2 class="question">Pre nego što počnemo: primeti da si ovde.</h2>
+          <div class="breath"></div>
+          <div id="count" class="timer">20</div>
+          <p class="prompt">Ne pokušavaj ništa da postigneš. Samo tri sporija udaha. Zvuk nije „frekvencija za višu svest“ — samo prostor koji smanjuje buku oko pitanja.</p>
+          <button id="skipArrival" class="back">preskoči čekanje</button>
         </div>
       </section>
 
-      <section id="step2" class="stage hidden">
+      <section id="s2" class="screen hidden">
         <div class="card fade">
-          <div class="stepmark">02 / 04 — CONFIDENCE</div>
+          <div class="step">01 — ATTENTION</div>
+          <h2 class="question">Šta ti trenutno najviše zauzima um?</h2>
+          <p class="prompt">Ne mora biti „velika tema“. Napiši ono što se vraća kada prestaneš da se zabavljaš drugim stvarima.</p>
+          <textarea id="attention" placeholder="Trenutno mi se najčešće vraća…"></textarea>
+          <div class="row"><span></span><button id="n2" class="next" disabled>Nastavi</button></div>
+        </div>
+      </section>
+
+      <section id="s3" class="screen hidden">
+        <div class="card fade">
+          <div class="step">02 — CLAIM</div>
+          <h2 class="question">Koju tvrdnju o tome trenutno smatraš istinitom?</h2>
+          <p class="prompt">Pretvori osećaj ili priču u jednu rečenicu koja može biti tačna ili netačna.</p>
+          <textarea id="claim" placeholder="Verujem da…"></textarea>
+          <div class="row"><button class="back" data-back="s2">← Nazad</button><button id="n3" class="next" disabled>Nastavi</button></div>
+        </div>
+      </section>
+
+      <section id="s4" class="screen hidden">
+        <div class="card fade">
+          <div class="step">03 — CALIBRATION</div>
           <h2 class="question">Koliko si siguran?</h2>
-          <div class="confidence">
-            <div class="meterline"><span class="hint">0 = samo mogućnost · 100 = gotovo izvesno</span><strong id="pct" class="percent">70%</strong></div>
+          <div class="meter">
+            <div class="meterHead"><span class="prompt">Ne „koliko jako osećaš“, nego koliko bi se kladio da je tvrdnja tačna.</span><strong id="pct" class="percent">70%</strong></div>
             <input id="confidence" type="range" min="1" max="99" value="70" />
           </div>
-          <div class="row">
-            <button class="back" data-back="step1">← Nazad</button>
-            <button id="to3" class="next">Nastavi</button>
-          </div>
+          <div class="row"><button class="back" data-back="s3">← Nazad</button><button class="next" data-next="s5">Nastavi</button></div>
         </div>
       </section>
 
-      <section id="step3" class="stage hidden">
+      <section id="s5" class="screen hidden">
         <div class="card fade">
-          <div class="stepmark">03 / 04 — FALSIFIER</div>
-          <h2 class="question">Šta bi promenilo tvoje mišljenje?</h2>
-          <textarea id="falsifier" placeholder="Koji dokaz, događaj ili ishod bi trebalo da te natera da preispitaš ovaj stav?"></textarea>
-          <div class="row">
-            <button class="back" data-back="step2">← Nazad</button>
-            <button id="to4" class="next" disabled>Nastavi</button>
+          <div class="step">04 — SEPARATION</div>
+          <h2 class="question">Razdvoji tri stvari koje um često spoji u jednu.</h2>
+          <div class="three">
+            <div class="mini"><label>Šta znam</label><textarea id="facts" placeholder="Proverljive činjenice…"></textarea></div>
+            <div class="mini"><label>Šta zaključujem</label><textarea id="inference" placeholder="Moje tumačenje…"></textarea></div>
+            <div class="mini"><label>Šta osećam</label><textarea id="feeling" placeholder="Strah, želja, bes, nada…"></textarea></div>
           </div>
+          <div class="row"><button class="back" data-back="s4">← Nazad</button><button id="n5" class="next" disabled>Nastavi</button></div>
         </div>
       </section>
 
-      <section id="step4" class="stage hidden">
+      <section id="s6" class="screen hidden">
         <div class="card fade">
-          <div class="stepmark">04 / 04 — REALITY TEST</div>
-          <h2 class="question">Kako će stvarnost moći da odgovori?</h2>
-          <textarea id="prediction" placeholder="Ako je tvoje uverenje tačno, šta bi trebalo da se dogodi ili postane vidljivo?"></textarea>
-          <div class="row">
-            <button class="back" data-back="step3">← Nazad</button>
-            <button id="sealBtn" class="next" disabled>Zapečati zapis</button>
-          </div>
+          <div class="step">05 — DISTANCE</div>
+          <h2 class="question">Da ti istu priču ispriča osoba koju voliš — šta bi joj rekao?</h2>
+          <p class="prompt">Ovo pitanje namerno menja udaljenost između tebe i problema.</p>
+          <textarea id="outside" placeholder="Rekao bih joj…"></textarea>
+          <div class="row"><button class="back" data-back="s5">← Nazad</button><button id="n6" class="next" disabled>Nastavi</button></div>
         </div>
       </section>
 
-      <section id="done" class="stage hidden">
-        <div class="card receipt fade">
-          <div class="stepmark">SOFIA / FIRST LOOP</div>
-          <h2>Zapis je zapečaćen.</h2>
-          <p class="lead">Ne ocenjujemo da li si „u pravu“. Sačuvaćemo ono što si mislio <em>pre</em> nego što saznaš ishod. Kasnije se vraćamo stvarnosti.</p>
-          <div class="record"><small>Claim</small><p id="rBelief"></p></div>
-          <div class="record"><small>Confidence</small><p id="rConfidence"></p></div>
-          <div class="record"><small>What would change my mind</small><p id="rFalsifier"></p></div>
-          <div class="record"><small>Reality test</small><p id="rPrediction"></p></div>
+      <section id="s7" class="screen hidden">
+        <div class="card fade">
+          <div class="step">06 — ALTERNATIVE MODEL</div>
+          <h2 class="question">Koje je najozbiljnije objašnjenje koje bi moglo da bude tačno umesto tvog?</h2>
+          <p class="prompt">Ne karikatura protivnika. Najjača verzija alternative.</p>
+          <textarea id="alternative" placeholder="Moguće je i da…"></textarea>
+          <div class="row"><button class="back" data-back="s6">← Nazad</button><button id="n7" class="next" disabled>Nastavi</button></div>
+        </div>
+      </section>
+
+      <section id="s8" class="screen hidden">
+        <div class="card fade">
+          <div class="step">07 — IDENTITY</div>
+          <h2 class="question">Ako bi se ispostavilo da grešiš — šta bi u tebi bilo najviše pogođeno?</h2>
+          <div class="choicegrid">
+            <button class="choice" data-id="image">slika o sebi</button>
+            <button class="choice" data-id="control">osećaj kontrole</button>
+            <button class="choice" data-id="belonging">pripadnost / odnos</button>
+            <button class="choice" data-id="future">plan za budućnost</button>
+          </div>
+          <textarea id="identityText" placeholder="Ili napiši svojim rečima…" style="margin-top:18px"></textarea>
+          <div class="row"><button class="back" data-back="s7">← Nazad</button><button id="n8" class="next" disabled>Nastavi</button></div>
+        </div>
+      </section>
+
+      <section id="s9" class="screen hidden">
+        <div class="card fade">
+          <div class="step">08 — FALSIFIER</div>
+          <h2 class="question">Šta bi stvarno promenilo tvoje mišljenje?</h2>
+          <p class="prompt">Ako ne postoji odgovor na ovo pitanje, stav možda više nije hipoteza nego identitet.</p>
+          <textarea id="falsifier" placeholder="Promenio bih mišljenje ako…"></textarea>
+          <div class="row"><button class="back" data-back="s8">← Nazad</button><button id="n9" class="next" disabled>Nastavi</button></div>
+        </div>
+      </section>
+
+      <section id="s10" class="screen hidden">
+        <div class="card fade">
+          <div class="step">09 — TIME HORIZON</div>
+          <h2 class="question">Zamisli sebe za godinu dana. Šta bi voleo da si večeras primetio na vreme?</h2>
+          <textarea id="future" placeholder="Voleo bih da sam primetio…"></textarea>
+          <div class="row"><button class="back" data-back="s9">← Nazad</button><button id="n10" class="next" disabled>Prikaži ogledalo</button></div>
+        </div>
+      </section>
+
+      <section id="s11" class="screen hidden">
+        <div class="card mirror fade">
+          <div class="step">SOFIA — MIRROR 0001</div>
+          <h2>Ovo si ti rekao.</h2>
+          <p class="mirrorLead">SOFIA za sada ne donosi zaključak umesto tebe. Vraća ti strukturu tvog sopstvenog mišljenja — stvari koje si uneo u različitim trenucima, sada stavljene jednu pored druge.</p>
+          <div class="insight"><small>Ono što ti okupira pažnju</small><p id="mAttention"></p></div>
+          <div class="insight"><small>Tvoja tvrdnja · sigurnost</small><p><span id="mClaim"></span> <em id="mConf"></em></p></div>
+          <div class="insight"><small>Činjenice / tumačenje</small><p><span id="mFacts"></span> → <span id="mInference"></span></p></div>
+          <div class="insight"><small>Spoljašnja perspektiva</small><p id="mOutside"></p></div>
+          <div class="insight"><small>Najjača alternativa</small><p id="mAlt"></p></div>
+          <div class="insight"><small>Šta bi promenilo mišljenje</small><p id="mFalsifier"></p></div>
+          <div class="blind"><b>Moguća slepa tačka</b><p id="blindText"></p></div>
+          <div class="row"><button class="back" data-back="s10">← Nazad</button><button id="n11" class="next">Završi krug</button></div>
+        </div>
+      </section>
+
+      <section id="s12" class="screen hidden">
+        <div class="card fade">
+          <div class="step">EPISTEMIC LOOP 0001 — SEALED</div>
+          <p class="finalPhrase">Svest možda ne raste kada dobiješ više odgovora. Možda raste kada preciznije vidiš sopstveno pitanje.</p>
+          <p class="sub" style="margin-left:0">Tvoj prvi zapis je sačuvan samo u ovom browseru. Sledeća verzija SOFIA-e treba da ume da se vrati ovom zapisu kada stvarnost donese nove podatke — i da meri kako se tvoje mišljenje menja kroz vreme.</p>
           <div class="seal"><span id="stamp"></span><span>PARTICIPANT 0001 · LOCAL ONLY</span></div>
         </div>
       </section>
     </main>
 
-    <footer>SOFIA PROJECT · EXPERIMENT 0001 · NO ADS · NO FEED · NO PERSUASION</footer>
+    <footer>NO FEED · NO ADS · NO SCORE · NO PERSUASION · HUMAN DECIDES</footer>
+    <div class="progressWrap"><div id="progress" class="progress"></div></div>
   </div>
 
   <script>
-    const sections = ["intro","manifest","step1","step2","step3","step4","done"];
-    const $ = (id) => document.getElementById(id);
+    const ids=[..."0123456789"].map(()=>null);
+    const screens=["s0","s1","s2","s3","s4","s5","s6","s7","s8","s9","s10","s11","s12"];
+    const $=id=>document.getElementById(id);
+    let current=0, identityChoice="";
+    const audio=$("ambience");
+
     function show(id){
-      sections.forEach(s=>$(s).classList.toggle("hidden", s!==id));
+      screens.forEach(s=>$(s).classList.toggle("hidden",s!==id));
+      current=screens.indexOf(id);
+      $("progress").style.width=(Math.max(0,current-1)/(screens.length-2)*100)+"%";
       window.scrollTo({top:0,behavior:"smooth"});
     }
 
-    const belief=$("belief"), falsifier=$("falsifier"), prediction=$("prediction");
-    belief.addEventListener("input",()=> $("to2").disabled = belief.value.trim().length < 8);
-    falsifier.addEventListener("input",()=> $("to4").disabled = falsifier.value.trim().length < 5);
-    prediction.addEventListener("input",()=> $("sealBtn").disabled = prediction.value.trim().length < 5);
+    async function playAudio(){
+      try{
+        audio.volume=.58;
+        await audio.play();
+        $("audioState").textContent="AUDIO ON";
+        $("audioWarning").classList.remove("show");
+        return true;
+      }catch(e){
+        $("audioState").textContent="AUDIO BLOCKED";
+        $("audioWarning").classList.add("show");
+        return false;
+      }
+    }
+    $("audioBtn").onclick=async()=>{
+      if(audio.paused){await playAudio()}else{audio.pause();$("audioState").textContent="AUDIO OFF"}
+    };
+    $("soundTest").onclick=async()=>{
+      const ok=await playAudio();
+      if(ok){setTimeout(()=>{if(current===0){audio.pause();$("audioState").textContent="AUDIO READY"}},4500)}
+    };
+    $("enter").onclick=async()=>{await playAudio();show("s1");startArrival()};
 
-    $("beginBtn").onclick=()=>show("step1");
-    $("to2").onclick=()=>show("step2");
-    $("to3").onclick=()=>show("step3");
-    $("to4").onclick=()=>show("step4");
+    let arrivalInt;
+    function startArrival(){
+      let n=20;$("count").textContent=n;
+      clearInterval(arrivalInt);
+      arrivalInt=setInterval(()=>{n--;$("count").textContent=n;if(n<=0){clearInterval(arrivalInt);show("s2")}},1000);
+    }
+    $("skipArrival").onclick=()=>{clearInterval(arrivalInt);show("s2")};
+
     document.querySelectorAll("[data-back]").forEach(b=>b.onclick=()=>show(b.dataset.back));
+    document.querySelectorAll("[data-next]").forEach(b=>b.onclick=()=>show(b.dataset.next));
 
+    const gates=[
+      ["attention","n2",8],["claim","n3",8],["outside","n6",5],["alternative","n7",5],
+      ["falsifier","n9",5],["future","n10",5]
+    ];
+    gates.forEach(([field,btn,min])=>$(field).addEventListener("input",()=>$(btn).disabled=$(field).value.trim().length<min));
+    ["facts","inference","feeling"].forEach(id=>$(id).addEventListener("input",()=>{
+      $("n5").disabled=!("facts inference feeling".split(" ").every(x=>$(x).value.trim().length>=2))
+    }));
+
+    $("n2").onclick=()=>show("s3");
+    $("n3").onclick=()=>show("s4");
     const slider=$("confidence");
-    slider.addEventListener("input",()=> $("pct").textContent=slider.value+"%");
+    slider.oninput=()=>{$("pct").textContent=slider.value+"%"};
 
-    $("sealBtn").onclick=()=>{
-      const record={
+    document.querySelectorAll(".choice").forEach(b=>b.onclick=()=>{
+      document.querySelectorAll(".choice").forEach(x=>x.classList.remove("active"));
+      b.classList.add("active"); identityChoice=b.dataset.id; $("n8").disabled=false;
+    });
+    $("identityText").oninput=()=>{$("n8").disabled=$("identityText").value.trim().length<3&&!identityChoice};
+    $("n5").onclick=()=>show("s6");
+    $("n6").onclick=()=>show("s7");
+    $("n7").onclick=()=>show("s8");
+    $("n8").onclick=()=>show("s9");
+    $("n9").onclick=()=>show("s10");
+
+    function buildBlindSpot(d){
+      const conf=Number(d.confidence);
+      const pieces=[];
+      if(conf>=85) pieces.push("Tvoja sigurnost je veoma visoka. Uporedi je sa količinom proverljivih činjenica koje si naveo.");
+      if(d.identityChoice||d.identityText) pieces.push("Ovaj stav dodiruje nešto što ti je identitetski važno; to ne znači da je netačan, ali može povećati cenu promene mišljenja.");
+      if(d.feeling.length>d.facts.length*1.4) pieces.push("Emocionalni deo opisa je opširniji od činjeničnog. Vredi proveriti da li osećanje popunjava praznine u informacijama.");
+      if(d.alternative.length<d.claim.length*.7) pieces.push("Alternativno objašnjenje je kraće i manje razrađeno od tvoje početne tvrdnje. Možda još nisi dao drugoj hipotezi jednaku šansu.");
+      if(!pieces.length) pieces.push("Najvažnija pukotina trenutno nije očigledna. Ali već si odvojio činjenice od tumačenja i imenovao uslov pod kojim bi promenio mišljenje — to je mesto za sledeću proveru.");
+      return pieces.join(" ");
+    }
+
+    $("n10").onclick=()=>{
+      const d=collect();
+      $("mAttention").textContent=d.attention;
+      $("mClaim").textContent=d.claim;
+      $("mConf").textContent="("+d.confidence+"% sigurnosti)";
+      $("mFacts").textContent=d.facts;
+      $("mInference").textContent=d.inference;
+      $("mOutside").textContent=d.outside;
+      $("mAlt").textContent=d.alternative;
+      $("mFalsifier").textContent=d.falsifier;
+      $("blindText").textContent=buildBlindSpot(d);
+      show("s11");
+    };
+
+    function collect(){
+      return {
         participant:"0001",
-        belief:belief.value.trim(),
+        attention:$("attention").value.trim(),
+        claim:$("claim").value.trim(),
         confidence:Number(slider.value),
-        falsifier:falsifier.value.trim(),
-        prediction:prediction.value.trim(),
+        facts:$("facts").value.trim(),
+        inference:$("inference").value.trim(),
+        feeling:$("feeling").value.trim(),
+        outside:$("outside").value.trim(),
+        alternative:$("alternative").value.trim(),
+        identityChoice,
+        identityText:$("identityText").value.trim(),
+        falsifier:$("falsifier").value.trim(),
+        future:$("future").value.trim(),
         createdAt:new Date().toISOString(),
-        version:1
+        version:2
       };
-      localStorage.setItem("sofia_epistemic_loop_0001",JSON.stringify(record));
-      $("rBelief").textContent=record.belief;
-      $("rConfidence").textContent=record.confidence+"%";
-      $("rFalsifier").textContent=record.falsifier;
-      $("rPrediction").textContent=record.prediction;
-      $("stamp").textContent=new Intl.DateTimeFormat("sr-RS",{dateStyle:"medium",timeStyle:"short"}).format(new Date(record.createdAt));
-      show("done");
+    }
+
+    $("n11").onclick=()=>{
+      const d=collect();
+      d.blindSpot=buildBlindSpot(d);
+      localStorage.setItem("sofia_epistemic_loop_0001_v2",JSON.stringify(d));
+      $("stamp").textContent=new Intl.DateTimeFormat("sr-RS",{dateStyle:"medium",timeStyle:"short"}).format(new Date(d.createdAt));
+      show("s12");
     };
 
-    // Ambient sound: generated locally. No external audio file, no tracking.
-    let ctx, master, soundOn=false, shimmerTimer;
-
-    async function startSound(){
-      const AC = window.AudioContext || window.webkitAudioContext;
-      if(!AC) return;
-
-      if(!ctx){
-        ctx = new AC();
-        master = ctx.createGain();
-        master.gain.value = 0.0001;
-        master.connect(ctx.destination);
-      }
-
-      if(ctx.state === "suspended") await ctx.resume();
-
-      // A clearly audible "entry signal" so iPhone users immediately know sound started.
-      const now = ctx.currentTime;
-      const entry = ctx.createGain();
-      entry.gain.setValueAtTime(0.0001, now);
-      entry.gain.exponentialRampToValueAtTime(0.11, now + 0.05);
-      entry.gain.exponentialRampToValueAtTime(0.0001, now + 2.8);
-      entry.connect(master);
-
-      [146.83, 220, 329.63].forEach((f, i)=>{
-        const o = ctx.createOscillator();
-        const g = ctx.createGain();
-        o.type = i === 0 ? "sine" : "triangle";
-        o.frequency.value = f;
-        g.gain.value = i === 0 ? 0.34 : 0.18;
-        o.connect(g).connect(entry);
-        o.start(now + i * 0.08);
-        o.stop(now + 2.9);
-      });
-
-      // Warm evolving drone.
-      if(!window.__sofiaAmbientStarted){
-        window.__sofiaAmbientStarted = true;
-
-        const compressor = ctx.createDynamicsCompressor();
-        compressor.threshold.value = -28;
-        compressor.knee.value = 18;
-        compressor.ratio.value = 3;
-        compressor.connect(master);
-
-        const freqs = [55, 82.5, 110, 164.81, 220];
-        freqs.forEach((f,i)=>{
-          const osc = ctx.createOscillator();
-          const g = ctx.createGain();
-          const pan = ctx.createStereoPanner();
-          osc.type = i < 2 ? "sine" : "triangle";
-          osc.frequency.value = f;
-          g.gain.value = i < 2 ? 0.055 : 0.018;
-          pan.pan.value = (i % 2 ? 1 : -1) * (0.10 + i * 0.06);
-          osc.connect(g).connect(pan).connect(compressor);
-          osc.start();
-        });
-
-        const buffer = ctx.createBuffer(1, ctx.sampleRate * 2, ctx.sampleRate);
-        const data = buffer.getChannelData(0);
-        for(let i=0;i<data.length;i++) data[i] = (Math.random()*2-1)*0.16;
-        const noise = ctx.createBufferSource();
-        const filter = ctx.createBiquadFilter();
-        const ng = ctx.createGain();
-        noise.buffer = buffer;
-        noise.loop = true;
-        filter.type = "lowpass";
-        filter.frequency.value = 560;
-        ng.gain.value = 0.014;
-        noise.connect(filter).connect(ng).connect(compressor);
-        noise.start();
-
-        shimmerTimer = setInterval(()=>{
-          if(!soundOn || !ctx) return;
-          const o = ctx.createOscillator();
-          const g = ctx.createGain();
-          const p = ctx.createStereoPanner();
-          const pool = [293.66, 329.63, 392, 440, 493.88, 659.25];
-          o.type = "sine";
-          o.frequency.value = pool[Math.floor(Math.random()*pool.length)];
-          p.pan.value = Math.random()*1.4-.7;
-          const t = ctx.currentTime;
-          g.gain.setValueAtTime(0.0001,t);
-          g.gain.exponentialRampToValueAtTime(0.016,t+1.2);
-          g.gain.exponentialRampToValueAtTime(0.0001,t+5.8);
-          o.connect(g).connect(p).connect(compressor);
-          o.start(t);
-          o.stop(t+6);
-        }, 4200);
-      }
-
-      soundOn = true;
-      master.gain.cancelScheduledValues(now);
-      master.gain.setValueAtTime(Math.max(master.gain.value, 0.0001), now);
-      master.gain.exponentialRampToValueAtTime(0.22, now + 0.35);
-      updateSoundButton();
-    }
-
-    function updateSoundButton(){
-      $("soundBtn").classList.add("show");
-      $("soundBtn").textContent = soundOn ? "SOUND ON" : "SOUND OFF";
-      $("soundBtn").setAttribute("aria-label", soundOn ? "Utišaj zvuk" : "Uključi zvuk");
-    }
-
-    $("soundBtn").onclick = async ()=>{
-      if(!ctx) return;
-      if(ctx.state === "suspended") await ctx.resume();
-      soundOn = !soundOn;
-      const t = ctx.currentTime;
-      master.gain.cancelScheduledValues(t);
-      master.gain.setTargetAtTime(soundOn ? 0.22 : 0.0001, t, 0.08);
-      updateSoundButton();
-    };
-
-    $("enterBtn").onclick = ()=>{
-      // startSound is intentionally called directly inside the user's tap handler for iOS/Safari.
-      startSound().catch(()=>{});
-      show("manifest");
-    };
-
-    // Subtle visual field
-    const canvas=$("field"), c=canvas.getContext("2d");
-    let stars=[], w=0,h=0,dpr=1;
-    function resize(){
-      dpr=Math.min(devicePixelRatio||1,2); w=innerWidth; h=innerHeight;
-      canvas.width=w*dpr; canvas.height=h*dpr; canvas.style.width=w+"px";canvas.style.height=h+"px";
-      c.setTransform(dpr,0,0,dpr,0,0);
-      const count=Math.min(120,Math.floor((w*h)/11000));
-      stars=Array.from({length:count},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.3+.2,a:Math.random()*.6+.08,v:Math.random()*.08+.01}));
-    }
-    function frame(t){
-      c.clearRect(0,0,w,h);
-      for(const s of stars){
-        const pulse=.65+.35*Math.sin(t*.00055+s.x*.01);
-        c.beginPath(); c.arc(s.x,s.y,s.r,0,Math.PI*2);
-        c.fillStyle="rgba(180,230,220,"+(s.a*pulse)+")"; c.fill();
-        s.y-=s.v; if(s.y<-4){s.y=h+4;s.x=Math.random()*w}
-      }
-      requestAnimationFrame(frame);
-    }
+    // visual field
+    const canvas=$("field"),c=canvas.getContext("2d");let stars=[],w=0,h=0,dpr=1;
+    function resize(){dpr=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;canvas.width=w*dpr;canvas.height=h*dpr;
+      canvas.style.width=w+"px";canvas.style.height=h+"px";c.setTransform(dpr,0,0,dpr,0,0);
+      stars=Array.from({length:Math.min(130,Math.floor(w*h/10000))},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.2+.2,a:Math.random()*.55+.06,v:Math.random()*.07+.012}))}
+    function frame(t){c.clearRect(0,0,w,h);for(const s of stars){const p=.65+.35*Math.sin(t*.00055+s.x*.01);c.beginPath();c.arc(s.x,s.y,s.r,0,Math.PI*2);
+      c.fillStyle="rgba(180,230,220,"+(s.a*p)+")";c.fill();s.y-=s.v;if(s.y<-3){s.y=h+3;s.x=Math.random()*w}}requestAnimationFrame(frame)}
     addEventListener("resize",resize);resize();requestAnimationFrame(frame);
-
-    // Restore a completed local record if one exists.
-    try{
-      const saved=JSON.parse(localStorage.getItem("sofia_epistemic_loop_0001")||"null");
-      if(saved){
-        belief.value=saved.belief||"";
-        slider.value=saved.confidence||70; $("pct").textContent=slider.value+"%";
-        falsifier.value=saved.falsifier||"";
-        prediction.value=saved.prediction||"";
-      }
-    }catch{}
   </script>
 </body>
 </html>
