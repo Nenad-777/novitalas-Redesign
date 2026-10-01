@@ -39,6 +39,7 @@ import NovaOrbitaSrpskeDiplomatije from "./pages/nova-orbita-srpske-diplomatije-
 import SrbijaActVasingtonBeograd from "./pages/srbija-act-vasington-beograd";
 import TrumpXiCriticalMineralsArticle from "./pages/TrumpXiCriticalMineralsArticle";
 import DijasporaGlasanjeArticle from "./pages/DijasporaGlasanjeArticle";
+import SrbijaActSenateArticle from "./pages/SrbijaActSenateArticle";
 import OdPrimirjaDoNovihUdaraSadIran from "./pages/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana";
 
 import UkrajinaCetiriGodine from "./pages/ukrajina-cetiri-godine-rata";
@@ -331,6 +332,10 @@ function Router() {
         <Route
           path="/geopolitika/srbija-act-vasington-beograd"
           component={SrbijaActVasingtonBeograd}
+        />
+        <Route
+          path="/geopolitika/srbija-act-stigao-i-u-senat-wilson-podrzao-inicijativu-i-ponovo-otvorio-pitanje-izbora-u-srbiji"
+          component={SrbijaActSenateArticle}
         />
         <Route
           path="/geopolitika/pred-razgovore-trampa-i-sija-amerika-ostaje-zavisna-od-kineskih-kriticnih-minerala"
