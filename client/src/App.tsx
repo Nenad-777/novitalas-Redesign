@@ -1014,10 +1014,10 @@ function Router() {
         <Route path="/izdanje/februar-2026" component={IzdanjeFebruar2026} />
 
         {/* 404 */}
+        <Route path="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" component={VucicZapadCentriMociArticle} />
         <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
-              <Route path="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" component={VucicZapadCentriMociArticle} />
-</Switch>
+      </Switch>
     </>
   );
 }
