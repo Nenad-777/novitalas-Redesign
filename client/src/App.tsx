@@ -112,6 +112,7 @@ import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 import MediaIndependenceElectionArticle from "./pages/MediaIndependenceElectionArticle";
 import PotpuniSlomVuciceveMedjunarodneReputacije from "./pages/potpuni-slom-vuciceve-medjunarodne-reputacije";
+import VucicZapadCentriMociArticle from "./pages/VucicZapadCentriMociArticle";
 
 /* ✅ NOVA VEST — Geopolitika */
 import MadjarskaOgranicenjeMandataOrban from "./pages/madjarska-ogranicenje-mandata-orban";
@@ -1015,7 +1016,8 @@ function Router() {
         {/* 404 */}
         <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
-      </Switch>
+              <Route path="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" component={VucicZapadCentriMociArticle} />
+</Switch>
     </>
   );
 }
