@@ -37,7 +37,9 @@ export default {
         404
       );
     const configured = Boolean(
-      process.env.VERCEL_OIDC_TOKEN || process.env.AI_GATEWAY_API_KEY
+      process.env.VERCEL_OIDC_TOKEN ||
+        process.env.AI_GATEWAY_API_KEY ||
+        request.headers.has("x-vercel-oidc-token")
     );
     if (request.method === "GET")
       return json({
