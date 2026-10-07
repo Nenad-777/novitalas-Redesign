@@ -156,12 +156,26 @@ export default {
         typeof error === "object" && error !== null && "statusCode" in error
           ? Number(error.statusCode)
           : 0;
-      const details = typeof error === "object" && error !== null
-        ? ["message", "responseBody", "type"].map(key => String((error as Record<string, unknown>)[key] || "")).join(" ")
-        : "";
+      const diagnosticParts: string[] = [];
+      let current: unknown = error;
+      for (let depth = 0; depth < 3 && typeof current === "object" && current !== null; depth++) {
+        const record = current as Record<string, unknown>;
+        for (const key of ["message", "responseBody", "type", "response", "data"]) {
+          const value = record[key];
+          if (typeof value === "string") diagnosticParts.push(value);
+          else if (value && typeof value === "object") {
+            try { diagnosticParts.push(JSON.stringify(value)); } catch { /* No diagnostic content is required. */ }
+          }
+        }
+        current = record.cause;
+      }
+      const details = diagnosticParts.join(" ");
       // Inspect only known error markers in memory; never expose the upstream error text.
       const reason = /customer_verification_required/i.test(details) ? "CUSTOMER_VERIFICATION_REQUIRED"
         : /zero.data.retention|zdr/i.test(details) ? "ZDR_UNAVAILABLE"
+        : /restricted access|no_providers_available|routing rule|allowlist|deny.rule/i.test(details) ? "TEAM_POLICY_RESTRICTION"
+        : /credit|billing|payment|budget/i.test(details) ? "BILLING_REQUIRED"
+        : /access.denied|forbidden|blocked/i.test(details) ? "ACCESS_DENIED"
         : /oidc|authentication|unauthorized/i.test(details) ? "AUTHENTICATION_REQUIRED"
         : "UPSTREAM_ACCESS";
       const code =
