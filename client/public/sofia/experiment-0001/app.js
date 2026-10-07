@@ -214,6 +214,12 @@ async function transform(intervention, replacement = "") {
 }
 
 function entry() {
+  if (!service?.available) return el(
+    "section", { class: "entry fade-in" }, eyebrow("EXPERIMENT 0001"),
+    el("h1", {}, service ? "AI veza još nije spremna." : "Proveravam dostupnost."),
+    text(service?.message || "Pre unosa misli proveravamo da li je obrada omogućena.", "intro"),
+    text("Ovde se ništa ne naplaćuje kroz interfejs. Eksperiment ne koristi Vercel AI Gateway.", "fine")
+  );
   const input = el("textarea", {
     id: "thought",
     class: "thought-input",
@@ -255,7 +261,7 @@ function entry() {
     ),
     start,
     text(
-      "Misao se obrađuje uz pravilo bez zadržavanja sadržaja. Ostaje u memoriji ove stranice do završetka ili osvežavanja.",
+      "Misao se obrađuje preko Groq servisa sa uključenim režimom bez zadržavanja sadržaja. Ostaje u memoriji ove stranice do završetka ili osvežavanja.",
       "fine privacy-note"
     ),
     service?.available === false
@@ -741,11 +747,12 @@ window.addEventListener("pageshow", event => {
 render();
 fetch("/api/sofia-shift", { cache: "no-store", credentials: "same-origin" })
   .then(async response => {
-    if (!response.ok) return;
+    if (!response.ok) throw new Error("UNAVAILABLE");
     service = await response.json();
     document.documentElement.dataset.build = service.commit || "local";
     if (state.phase === "entry" && !state.thought) render();
   })
   .catch(() => {
-    /* No thought content or errors are logged. Submission offers a retry. */
+    service = { available: false, message: "Veza sa preview-om nije dostupna. Otvori važeći privatni link i pokušaj ponovo." };
+    if (state.phase === "entry") render();
   });

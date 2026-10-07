@@ -1,4 +1,5 @@
-import { generateText, Output } from "ai";
+import { z } from "zod";
+import { generatePrivateStructure, freeProviderReady } from "../server/sofia/groq.js";
 import {
   DraftSchema,
   InputSchema,
@@ -36,17 +37,14 @@ export default {
         },
         404
       );
-    const configured = Boolean(
-      process.env.VERCEL_OIDC_TOKEN ||
-        process.env.AI_GATEWAY_API_KEY ||
-        request.headers.has("x-vercel-oidc-token")
-    );
+    const configured = freeProviderReady();
     if (request.method === "GET")
       return json({
         experiment: "0001",
         available: configured,
         commit: process.env.VERCEL_GIT_COMMIT_SHA || "local",
-        retention: "memory-only; gateway-zdr-required",
+        retention: "memory-only; groq-zdr-required",
+        message: configured ? null : "Besplatna AI veza još nije povezana. Unos je isključen dok ne završimo aktivaciju.",
       });
     if (request.method !== "POST")
       return json({ message: "Metod nije podržan." }, 405);
@@ -66,7 +64,7 @@ export default {
         {
           code: "AI_NOT_CONFIGURED",
           message:
-            "AI veza za ovaj preview još nije aktivirana. Tvoja misao nije poslata AI pružaocu.",
+            "Besplatna AI veza još nije povezana. Tvoja misao nije poslata AI pružaocu.",
         },
         503
       );
@@ -107,33 +105,12 @@ export default {
           { message: "Prvo izaberi ili ispravi moguću pretpostavku." },
           400
         );
-      const options = {
-        // Confirmed in the live gateway catalog, 2026-10-07; supports structured outputs and ZDR routing.
-        model: process.env.SOFIA_AI_MODEL || "openai/gpt-6.1-sol",
-        system: INSTRUMENT,
-        maxOutputTokens: 6500,
-        maxRetries: 0,
-        reasoning: "medium" as const,
-        abortSignal: AbortSignal.any([
-          request.signal,
-          AbortSignal.timeout(65000),
-        ]),
-        telemetry: {
-          isEnabled: false,
-          recordInputs: false,
-          recordOutputs: false,
-        },
-        providerOptions: {
-          gateway: { zeroDataRetention: true },
-          openai: { store: false },
-        },
-      };
+      const signal = AbortSignal.any([request.signal, AbortSignal.timeout(65000)]);
       if (input.action === "model") {
-        const { output } = await generateText({
-          ...options,
-          output: Output.object({ schema: DraftSchema }),
-          prompt: `${MODEL_TASK}\nPARTICIPANT DATA (JSON):\n${JSON.stringify(input)}`,
-        });
+        const output = DraftSchema.parse(await generatePrivateStructure(
+          INSTRUMENT, `${MODEL_TASK}\nPARTICIPANT DATA (JSON):\n${JSON.stringify(input)}`,
+          z.toJSONSchema(DraftSchema), signal
+        ));
         return json({
           model: selectShift(
             output,
@@ -143,11 +120,10 @@ export default {
           ),
         });
       }
-      const { output } = await generateText({
-        ...options,
-        output: Output.object({ schema: TransformationSchema }),
-        prompt: `${SHIFT_TASK}\nPARTICIPANT DATA AND PROVISIONAL MODEL (JSON):\n${JSON.stringify(input)}`,
-      });
+      const output = TransformationSchema.parse(await generatePrivateStructure(
+        INSTRUMENT, `${SHIFT_TASK}\nPARTICIPANT DATA AND PROVISIONAL MODEL (JSON):\n${JSON.stringify(input)}`,
+        z.toJSONSchema(TransformationSchema), signal
+      ));
       return json({ result: validateTransformation(input, output) });
     } catch (error) {
       // Never log SDK errors: they can contain prompts, request bodies, or generated personal text.
@@ -156,28 +132,6 @@ export default {
         typeof error === "object" && error !== null && "statusCode" in error
           ? Number(error.statusCode)
           : 0;
-      const diagnosticParts: string[] = [];
-      let current: unknown = error;
-      for (let depth = 0; depth < 3 && typeof current === "object" && current !== null; depth++) {
-        const record = current as Record<string, unknown>;
-        for (const key of ["message", "responseBody", "type", "response", "data"]) {
-          const value = record[key];
-          if (typeof value === "string") diagnosticParts.push(value);
-          else if (value && typeof value === "object") {
-            try { diagnosticParts.push(JSON.stringify(value)); } catch { /* No diagnostic content is required. */ }
-          }
-        }
-        current = record.cause;
-      }
-      const details = diagnosticParts.join(" ");
-      // Inspect only known error markers in memory; never expose the upstream error text.
-      const reason = /customer_verification_required/i.test(details) ? "CUSTOMER_VERIFICATION_REQUIRED"
-        : /zero.data.retention|zdr/i.test(details) ? "ZDR_UNAVAILABLE"
-        : /restricted access|no_providers_available|routing rule|allowlist|deny.rule/i.test(details) ? "TEAM_POLICY_RESTRICTION"
-        : /credit|billing|payment|budget/i.test(details) ? "BILLING_REQUIRED"
-        : /access.denied|forbidden|blocked/i.test(details) ? "ACCESS_DENIED"
-        : /oidc|authentication|unauthorized/i.test(details) ? "AUTHENTICATION_REQUIRED"
-        : "UPSTREAM_ACCESS";
       const code =
         status === 401 || status === 403
           ? "AI_ACCESS_REQUIRED"
@@ -188,13 +142,13 @@ export default {
               : "AI_UNAVAILABLE";
       const message =
         code === "AI_ACCESS_REQUIRED"
-          ? "AI pristup ili režim bez zadržavanja sadržaja još nije omogućen za ovaj preview. Analiza je zaustavljena."
+          ? "Besplatna AI veza nije aktivna. Potrebno je proveriti ključ i pristup modelu."
           : code === "AI_CREDITS_REQUIRED"
-            ? "AI obrada trenutno nema raspoloživ budžet. Analiza je zaustavljena."
+            ? "Besplatna AI obrada trenutno nije dostupna. Nije uključen drugi servis."
             : code === "AI_BUSY"
-              ? "AI veza je trenutno zauzeta. Pokušaj ponovo za trenutak."
+              ? "Dostignut je limit besplatnog servisa. Pokušaj kasnije; nema automatskog prelaska na drugi servis."
               : "Nisam dobila dovoljno pouzdan odgovor. Pokušaj ponovo ili završi eksperiment.";
-      return json({ code, message, reason, upstreamStatus: status }, 503);
+      return json({ code, message }, 503);
     }
   },
 };
