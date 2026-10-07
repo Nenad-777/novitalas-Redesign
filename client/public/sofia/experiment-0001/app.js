@@ -502,6 +502,13 @@ function showEditor(mode) {
 }
 
 function setComparison(before) {
+  const parts = [...root.querySelectorAll("[data-node]")];
+  const positions = new Map(
+    parts.map(node => {
+      node.getAnimations().forEach(animation => animation.cancel());
+      return [node, node.getBoundingClientRect()];
+    })
+  );
   state.before = before;
   const shifted = !before;
   root
@@ -519,13 +526,43 @@ function setComparison(before) {
           unchanged: "OPSTAJE",
           conditional: "SADA JE USLOVNO",
           unsupported: "BEZ OVOG OSLONCA",
-        }[change.state]
+        }[change.state] +
+        " · " +
+        kindLabels[original.kind]
       : kindLabels[original.kind];
     const reason = node.querySelector(".part-reason");
     reason.textContent = shifted ? change.why : "";
     reason.classList.toggle("hidden", !shifted);
   });
+  const order = { unchanged: 0, conditional: 1, unsupported: 2 };
+  const arranged = [...parts].sort((a, b) => {
+    if (shifted) {
+      const difference = order[a.dataset.state] - order[b.dataset.state];
+      if (difference) return difference;
+    }
+    return (
+      state.model.nodes.findIndex(n => n.id === a.dataset.node) -
+      state.model.nodes.findIndex(n => n.id === b.dataset.node)
+    );
+  });
+  root.querySelector(".structure").append(...arranged);
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    for (const node of parts) {
+      const first = positions.get(node);
+      const last = node.getBoundingClientRect();
+      const x = first.left - last.left;
+      const y = first.top - last.top;
+      if (Math.abs(x) + Math.abs(y) > 1)
+        node.animate(
+          [{ transform: `translate(${x}px, ${y}px)` }, { transform: "none" }],
+          { duration: 900, easing: "cubic-bezier(.2,.75,.2,1)" }
+        );
+    }
+  }
   const support = root.querySelector(".hinge");
+  support
+    .querySelectorAll(":scope > .connection, :scope > .anchor, :scope > .fine")
+    .forEach(node => node.classList.toggle("hidden", shifted));
   support.classList.toggle(
     "extracted",
     shifted && state.intervention === "remove"

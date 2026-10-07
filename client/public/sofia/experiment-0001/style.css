@@ -349,15 +349,19 @@ footer {
   border-top-color: var(--accent);
 }
 .structure[data-shifted="true"] .part[data-state="unsupported"] {
-  transform: translate(12px, 24px) rotate(1deg);
-  opacity: 0.55;
+  grid-column: 2 / -1;
+  margin-top: 28px;
+  opacity: 0.76;
   border-top: 1px dashed var(--line);
 }
 .structure[data-shifted="true"] .part[data-state="conditional"] {
-  transform: translate(10px, 14px);
+  grid-column: 2 / -1;
+  margin-top: 16px;
   border-top: 1px dashed var(--accent);
 }
 .structure[data-shifted="true"] .part[data-state="unchanged"] {
+  grid-column: 1 / 3;
+  max-width: 570px;
   border-top-style: solid;
 }
 .hinge {
@@ -690,11 +694,14 @@ dialog::backdrop {
     padding: 14px 23px;
     font-size: 10px;
   }
-  .structure[data-shifted="true"] .part[data-state="unsupported"] {
-    transform: translate(5px, 17px) rotate(0.7deg);
-  }
+  .structure[data-shifted="true"] .part[data-state="unsupported"],
   .structure[data-shifted="true"] .part[data-state="conditional"] {
-    transform: translate(5px, 10px);
+    grid-column: 1 / -1;
+    margin-left: 26px;
+  }
+  .structure[data-shifted="true"] .part[data-state="unchanged"] {
+    grid-column: 1 / -1;
+    max-width: 88%;
   }
   .editor {
     padding-left: 14px;

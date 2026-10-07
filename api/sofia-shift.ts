@@ -156,6 +156,14 @@ export default {
         typeof error === "object" && error !== null && "statusCode" in error
           ? Number(error.statusCode)
           : 0;
+      const details = typeof error === "object" && error !== null
+        ? ["message", "responseBody", "type"].map(key => String((error as Record<string, unknown>)[key] || "")).join(" ")
+        : "";
+      // Inspect only known error markers in memory; never expose the upstream error text.
+      const reason = /customer_verification_required/i.test(details) ? "CUSTOMER_VERIFICATION_REQUIRED"
+        : /zero.data.retention|zdr/i.test(details) ? "ZDR_UNAVAILABLE"
+        : /oidc|authentication|unauthorized/i.test(details) ? "AUTHENTICATION_REQUIRED"
+        : "UPSTREAM_ACCESS";
       const code =
         status === 401 || status === 403
           ? "AI_ACCESS_REQUIRED"
@@ -172,7 +180,7 @@ export default {
             : code === "AI_BUSY"
               ? "AI veza je trenutno zauzeta. Pokušaj ponovo za trenutak."
               : "Nisam dobila dovoljno pouzdan odgovor. Pokušaj ponovo ili završi eksperiment.";
-      return json({ code, message }, 503);
+      return json({ code, message, reason, upstreamStatus: status }, 503);
     }
   },
 };
