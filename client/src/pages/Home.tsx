@@ -9,12 +9,12 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 const HERO_ARTICLE = {
-  href: "/geopolitika/srbija-act-stigao-i-u-senat-wilson-podrzao-inicijativu-i-ponovo-otvorio-pitanje-izbora-u-srbiji",
-  category: "GEOPOLITIKA · SAD–SRBIJA",
-  title: "SRBIJA Act stigao i u Senat: Wilson podržao inicijativu i ponovo otvorio pitanje izbora u Srbiji",
-  description: "U Senatu SAD uveden je S. 5611, uz dvostranačku podršku Grassleyja i Blumenthala. Joe Wilson je inicijativu javno povezao sa SRBIJA Act-om i ponovo otvorio pitanje izbora u Srbiji.",
-  imageSrc: "https://upload.wikimedia.org/wikipedia/commons/a/a6/US_Senate_Session_Chamber.jpg",
-  imageAlt: "Sala Senata Sjedinjenih Američkih Država tokom zasedanja.",
+  href: "/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci",
+  category: "SRBIJA · ANALIZA",
+  title: "Vučić i Zapad: optužbe za autokratiju stigle su u centre moći",
+  description: "Godinama su Kosovo, regionalna stabilnost i geopolitika držali pitanja demokratije, slobode medija i vladavine prava u Srbiji u drugom planu odnosa sa Zapadom. Danas su optužbe za autoritarizam stigle mnogo dalje.",
+  imageSrc: "/news/vucic-zapad-centri-moci.webp",
+  imageAlt: "Prazna konferencijska stolica u evropskoj institucionalnoj sali sa zastavama Evropske unije.",
 }
 const ARTICLES = HOME_ARTICLES;
 function useFadeIn(){const ref=useRef<HTMLDivElement>(null);const[visible,setVisible]=useState(false);useEffect(()=>{const el=ref.current;if(!el)return;const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);o.unobserve(el)}},{threshold:.1});o.observe(el);return()=>o.disconnect()},[]);return{ref,visible}}

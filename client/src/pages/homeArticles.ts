@@ -3,6 +3,14 @@
 // previous HERO here and let the oldest secondary story fall off automatically.
 const HOME_ARTICLE_CANDIDATES = [
   {
+    href: "/geopolitika/srbija-act-stigao-i-u-senat-wilson-podrzao-inicijativu-i-ponovo-otvorio-pitanje-izbora-u-srbiji",
+    category: "GEOPOLITIKA · SAD–SRBIJA",
+    title: "SRBIJA Act stigao i u Senat: Wilson podržao inicijativu i ponovo otvorio pitanje izbora u Srbiji",
+    description: "U Senatu SAD uveden je S. 5611, uz dvostranačku podršku Grassleyja i Blumenthala. Joe Wilson je inicijativu javno povezao sa SRBIJA Act-om i ponovo otvorio pitanje izbora u Srbiji.",
+    imageSrc: "https://upload.wikimedia.org/wikipedia/commons/a/a6/US_Senate_Session_Chamber.jpg",
+    imageAlt: "Sala Senata Sjedinjenih Američkih Država tokom zasedanja.",
+  },
+  {
     href: "/srbija/vazno-za-gradjane-srbije-u-inostranstvu-rok-za-prijavu-za-glasanje-istice-3-oktobra-u-ponoc",
     category: "SRBIJA · IZBORI",
     title: "Važno za građane Srbije u inostranstvu: Rok za prijavu za glasanje ističe 3. oktobra u ponoć",
