@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
+  vucicZapad: "/news/vucic-zapad-centri-moci.webp",
   dijasporaGlasanje: "/news/glasanje-dijaspora-3-oktobar.jpg",
   mediaIndependence: "/news/media-independence-election.jpg",
   lostRepublic: "/news/lost-republic.jpg",
@@ -61,6 +62,18 @@ export default function SrbijaPage() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <article className="md:col-span-2">
+              <Link href="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" className="no-underline">
+                <div className="border mb-4 overflow-hidden" style={{ borderColor: isDark ? "#2a2a2e" : "#eee", backgroundColor: isDark ? "#1a1c22" : "#f7f7f7" }}>
+                  <img src={IMAGES.vucicZapad} alt="Prazna konferencijska stolica u evropskoj institucionalnoj sali sa zastavama Evropske unije." className="w-full h-[260px] md:h-[420px] object-cover object-center block" decoding="async" />
+                </div>
+                <span className="kicker">SRBIJA · ANALIZA</span>
+                <h2 className="mt-2 text-[26px] md:text-[34px] font-bold leading-[1.2]" style={{ fontFamily: "'Playfair Display', serif", color: isDark ? "#e0ddd5" : "#111" }}>Vučić i Zapad: optužbe za autokratiju stigle su u centre moći</h2>
+                <p className="mt-3 text-[16px] leading-[1.65]" style={{ fontFamily: "'Crimson Pro', serif", color: isDark ? "#9a978f" : "#555" }}>Godinama su Kosovo, regionalna stabilnost i geopolitika držali pitanja demokratije, slobode medija i vladavine prava u Srbiji u drugom planu odnosa sa Zapadom. Danas su optužbe za autoritarizam stigle mnogo dalje.</p>
+                <div className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]" style={{ fontFamily: "'Source Sans 3', sans-serif", color: isDark ? "#d9bf7a" : "#8B0000" }}>Otvori tekst →</div>
+              </Link>
+            </article>
+
             <article className="md:col-span-2">
               <Link href="/srbija/vazno-za-gradjane-srbije-u-inostranstvu-rok-za-prijavu-za-glasanje-istice-3-oktobra-u-ponoc" className="no-underline">
                 <div className="border mb-4 overflow-hidden" style={{ borderColor: isDark ? "#2a2a2e" : "#eee", backgroundColor: isDark ? "#1a1c22" : "#f7f7f7" }}>
