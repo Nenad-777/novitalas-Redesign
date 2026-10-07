@@ -96,7 +96,7 @@ export function buildJsonLd(meta: {
   return jsonLd;
 }
 
-export const articleMeta: ArticleStaticMeta[
+export const articleMeta: ArticleStaticMeta[] = [
   {
     path: "/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci",
     title: "Vučić i Zapad: optužbe za autokratiju stigle su u centre moći",
@@ -107,7 +107,8 @@ export const articleMeta: ArticleStaticMeta[
     author: "Novi Talas",
     section: "Srbija",
     keywords: "Aleksandar Vučić, Zapad, autokratija, demokratija, sloboda medija, EPP, Evropski parlament, SRBIJA Act, Amnesty, Reporteri bez granica",
-  },] = [
+  },
+
   {
     path: "/geopolitika/srbija-act-stigao-i-u-senat-wilson-podrzao-inicijativu-i-ponovo-otvorio-pitanje-izbora-u-srbiji",
     title: "SRBIJA Act stigao i u Senat: Wilson podržao inicijativu i ponovo otvorio pitanje izbora u Srbiji",
