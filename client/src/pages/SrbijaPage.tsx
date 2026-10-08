@@ -62,6 +62,7 @@ export default function SrbijaPage() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <article className="md:col-span-2"><Link href="/srbija/francuska-protesti-arte-srpski-studenti" className="no-underline"><img src="/news/francuska-studenti-arte.svg" alt="Grafika Novi Talas: Francuska na nogama" className="w-full h-[260px] md:h-[420px] object-cover mb-4" /><span className="kicker">SVET · FRANCUSKA</span><h2 className="mt-2 text-[26px] md:text-[34px] font-bold leading-[1.2]" style={{fontFamily:"Playfair Display, Georgia, serif"}}>Francuska na nogama, a na ARTE-u se govori o srpskim studentima</h2><p className="mt-3 text-[16px] leading-[1.65]">Dok Francusku potresaju protesti mladih, Noé Girardot-Champsaur u javnoj objavi povodom gostovanja na ARTE-u ukazuje na iskustvo srpskih studenata i njihov politički odgovor vlastima.</p><div className="mt-3 text-[12px] font-semibold uppercase">Otvori tekst →</div></Link></article>
             <article className="md:col-span-2">
               <Link href="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" className="no-underline">
                 <div className="border mb-4 overflow-hidden" style={{ borderColor: isDark ? "#2a2a2e" : "#eee", backgroundColor: isDark ? "#1a1c22" : "#f7f7f7" }}>
