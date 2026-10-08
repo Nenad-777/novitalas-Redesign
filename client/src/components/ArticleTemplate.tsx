@@ -54,6 +54,7 @@ type ArticleTemplateProps = {
   imageCredit?: string;
   imageHeightClass?: string;
   imageFirst?: boolean;
+  imageBeforeDeck?: boolean;
   videoHero?: { youtubeId: string; title: string; credit?: string };
   paragraphs: ArticleParagraph[];
   infoBox?: InfoBox;
@@ -73,6 +74,7 @@ export default function ArticleTemplate({
   imageCredit,
   imageHeightClass = "h-[260px] md:h-[420px]",
   imageFirst = false,
+  imageBeforeDeck = false,
   videoHero,
   paragraphs,
   infoBox,
@@ -188,8 +190,18 @@ export default function ArticleTemplate({
             </p>
           ) : null}
 
-          {/* Podeli vest */}
-          <ShareButton />
+          {/* Slika odmah posle datuma, pre uvoda */}
+          {imageBeforeDeck && !imageFirst && imageSrc && !videoHero ? (
+            <figure className="mt-7 mb-7">
+              <div className="border overflow-hidden" style={{ borderColor: isDark ? "#2a2a2e" : "#eee", backgroundColor: isDark ? "#1a1c22" : "#f7f7f7" }}>
+                <img src={imageSrc} alt={imageAlt} className={`w-full ${imageHeightClass} object-cover object-center block`} decoding="async" />
+              </div>
+              <ImageCaption credit={imageCredit} />
+            </figure>
+          ) : null}
+
+          {/* Podeli vest (ispod uvoda kada fotografija otvara članak) */}
+          {!imageBeforeDeck ? <ShareButton /> : null}
 
           {/* Lead / deck */}
           {deck ? (
@@ -204,8 +216,10 @@ export default function ArticleTemplate({
             </p>
           ) : null}
 
+          {imageBeforeDeck ? <ShareButton /> : null}
+
           {/* Slika */}
-          {!imageFirst && imageSrc && !videoHero ? (
+          {!imageFirst && !imageBeforeDeck && imageSrc && !videoHero ? (
             <div className="mt-8">
               <div
                 className="border overflow-hidden"
