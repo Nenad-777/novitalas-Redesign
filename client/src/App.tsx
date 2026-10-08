@@ -113,6 +113,7 @@ import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
 import MediaIndependenceElectionArticle from "./pages/MediaIndependenceElectionArticle";
 import PotpuniSlomVuciceveMedjunarodneReputacije from "./pages/potpuni-slom-vuciceve-medjunarodne-reputacije";
 import VucicZapadCentriMociArticle from "./pages/VucicZapadCentriMociArticle";
+import FrancuskaProtestiArteStudenti from "./pages/FrancuskaProtestiArteStudenti";
 
 /* ✅ NOVA VEST — Geopolitika */
 import MadjarskaOgranicenjeMandataOrban from "./pages/madjarska-ogranicenje-mandata-orban";
@@ -1012,6 +1013,8 @@ function Router() {
            ========================= */}
         <Route path="/arhiva/februar-2026" component={ArhivaFebruar2026} />
         <Route path="/izdanje/februar-2026" component={IzdanjeFebruar2026} />
+
+        <Route path="/srbija/francuska-protesti-arte-srpski-studenti" component={FrancuskaProtestiArteStudenti} />
 
         {/* 404 */}
         <Route path="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" component={VucicZapadCentriMociArticle} />
