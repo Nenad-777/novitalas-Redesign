@@ -9,12 +9,12 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 const HERO_ARTICLE = {
-  href: "/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci",
-  category: "SRBIJA · ANALIZA",
-  title: "Vučić i Zapad: optužbe za autokratiju stigle su u centre moći",
-  description: "Godinama su Kosovo, regionalna stabilnost i geopolitika držali pitanja demokratije, slobode medija i vladavine prava u Srbiji u drugom planu odnosa sa Zapadom. Danas su optužbe za autoritarizam stigle mnogo dalje.",
-  imageSrc: "/news/vucic-zapad-centri-moci.webp",
-  imageAlt: "Prazna konferencijska stolica u evropskoj institucionalnoj sali sa zastavama Evropske unije.",
+  href: "/srbija/francuska-protesti-arte-srpski-studenti",
+  category: "SVET · FRANCUSKA",
+  title: "Francuska na nogama, a na ARTE-u se govori o srpskim studentima",
+  description: "Dok Francusku potresaju protesti mladih, Noé Girardot-Champsaur u javnoj objavi povodom gostovanja na ARTE-u ukazuje na iskustvo srpskih studenata i njihov politički odgovor vlastima.",
+  imageSrc: "/news/francuska-studenti-arte.svg",
+  imageAlt: "Grafički vizual Novi Talas: Francuska na nogama.",
 }
 const ARTICLES = HOME_ARTICLES;
 function useFadeIn(){const ref=useRef<HTMLDivElement>(null);const[visible,setVisible]=useState(false);useEffect(()=>{const el=ref.current;if(!el)return;const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);o.unobserve(el)}},{threshold:.1});o.observe(el);return()=>o.disconnect()},[]);return{ref,visible}}
