@@ -13,7 +13,7 @@ const HERO_ARTICLE = {
   category: "SVET · FRANCUSKA",
   title: "Francuska na nogama, a na ARTE-u se govori o srpskim studentima",
   description: "Dok Francusku potresaju protesti mladih, Noé Girardot-Champsaur u javnoj objavi povodom gostovanja na ARTE-u ukazuje na iskustvo srpskih studenata i njihov politički odgovor vlastima.",
-  imageSrc: "/news/francuska-studenti-arte.svg",
+  imageSrc: "https://d2jqrm6oza8nb6.cloudfront.net/datasets/8f22fe66-3fa0-4217-9ad2-4d27bf3b1b60.jpeg?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiM2Q1YmUwMTY0NmMzZmE1NiIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MTY1MjExOH0.XTbE1zLMsRfbs1HLLseOPJBv7geHalNBG25wUQ2s2rw",
   imageAlt: "Grafički vizual Novi Talas: Francuska na nogama.",
 }
 const ARTICLES = HOME_ARTICLES;
