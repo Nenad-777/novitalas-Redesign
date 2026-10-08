@@ -35,6 +35,7 @@ export default function VucicZapadCentriMociArticle() {
     dateLabel="7. OKTOBAR 2026."
     deck="Godinama su Kosovo, regionalna stabilnost i geopolitika držali pitanja demokratije, slobode medija i vladavine prava u Srbiji u drugom planu odnosa sa Zapadom. Danas su optužbe za autoritarizam stigle mnogo dalje: od vodećih zapadnih medija i evropskih institucija do rasprave unutar EPP-a i američkog Kongresa."
     imageSrc={IMAGE_SRC}
+    imageBeforeDeck
     imageAlt="Prazna konferencijska stolica u savremenoj evropskoj institucionalnoj sali, sa zastavama Evropske unije u pozadini."
     imageCredit="Ilustracija: Novi Talas"
     paragraphs={PARAGRAPHS}
