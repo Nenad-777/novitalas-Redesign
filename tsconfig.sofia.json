@@ -1,5 +1,9 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["api/sofia-shift.ts", "server/sofia/**/*.ts"],
+  "include": [
+    "api/sofia-shift.ts",
+    "api/sofia-beyond.ts",
+    "server/sofia/**/*.ts"
+  ],
   "compilerOptions": { "incremental": false }
 }
