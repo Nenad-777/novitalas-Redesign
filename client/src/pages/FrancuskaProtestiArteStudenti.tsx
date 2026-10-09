@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 const paragraphs = [
-"Dok Francusku potresaju protesti srednjoškolaca i studenata, iskustvo studentskog pokreta u Srbiji našlo se u francuskoj javnoj debati. Noé Girardot-Champsaur, gost emisije „28 minutes“ televizije ARTE, u objavi povodom svog gostovanja ukazao je na politički odgovor srpskih studenata vlastima koje nisu reagovale na njihove zahteve.",
+"Dok Francusku potresaju protesti srednjoškolaca i studenata, iskustvo studentskog pokreta u Srbiji našlo se u francuskoj javnoj debati. Noé Girardot-Champsaur, francuski politički analitičar i stručnjak za komunikacije, gost emisije „28 minutes“ televizije ARTE, u objavi povodom svog gostovanja ukazao je na politički odgovor srpskih studenata vlastima koje nisu reagovale na njihove zahteve.",
 "„Vlada bi trebalo da obrati pažnju na zahteve srednjoškolaca. U Srbiji, suočeni sa vladom koja je ostala gluva na demonstracije, studenti su formirali građansku listu koja danas dostiže 44 odsto u anketama“, napisao je Girardot-Champsaur na Instagramu. Podatak od 44 odsto navodimo kao njegovu tvrdnju, ne kao nezavisno potvrđen rezultat istraživanja.",
 {type:"heading" as const,text:"Pariz: protesti i sukobi sa policijom"},
 "Protesti zbog stanja u obrazovanju nastavili su se 8. oktobra. Francuski mediji izvestili su o blokadama škola i sukobima u Parizu, gde je na Trgu Bastilje policija upotrebila vodeni top. Organizatori zahtevaju više nastavnika, bolje uslove školovanja i promene obrazovne politike.",
