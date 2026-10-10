@@ -107,6 +107,7 @@ import KinaSpyBrodovi from "./pages/kina-spy-brodovi";
 import CiaPokrenulaKampanju from "./pages/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira";
 import PrviBrifing from "./pages/prvi-brifing";
 import SrbijaPage from "./pages/SrbijaPage";
+import ODIHRInterimReport2026 from "./pages/ODIHRInterimReport2026";
 import SerbiaLostRepublicArticle from "./pages/SerbiaLostRepublicArticle";
 import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
@@ -1015,6 +1016,8 @@ function Router() {
            ========================= */}
         <Route path="/arhiva/februar-2026" component={ArhivaFebruar2026} />
         <Route path="/izdanje/februar-2026" component={IzdanjeFebruar2026} />
+
+        <Route path="/srbija/izbori-25-oktobra-odihr-biracki-spisak-kontrola-kampanje" component={ODIHRInterimReport2026} />
 
         <Route path="/srbija/francuska-protesti-arte-srpski-studenti" component={FrancuskaProtestiArteStudenti} />
 
