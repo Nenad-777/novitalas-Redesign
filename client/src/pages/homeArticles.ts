@@ -2,6 +2,14 @@
 // keep exactly eight secondary stories. On every new publication, prepend the
 // previous HERO here and let the oldest secondary story fall off automatically.
 const HOME_ARTICLE_CANDIDATES = [
+  {
+    href: "/srbija/francuska-protesti-arte-srpski-studenti",
+    category: "SVET · FRANCUSKA",
+    title: "Francuska na nogama, a na ARTE-u se govori o srpskim studentima",
+    description: "Dok Francusku potresaju protesti mladih, Noé Girardot-Champsaur u javnoj objavi povodom gostovanja na ARTE-u ukazuje na iskustvo srpskih studenata i njihov politički odgovor vlastima.",
+    imageSrc: "/news/france-serbian-protests.jpg",
+    imageAlt: "Grafički vizual Novi Talas: Francuska na nogama."
+  },
   { href: "/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci", category: "SRBIJA · ANALIZA", title: "Vučić i Zapad: optužbe za autokratiju stigle su u centre moći", description: "Optužbe za autoritarizam stigle su od vodećih zapadnih medija do evropskih institucija i američkog Kongresa.", imageSrc: "/news/vucic-zapad-centri-moci.webp", imageAlt: "Evropska institucionalna sala sa zastavama EU." },
   {
     href: "/geopolitika/srbija-act-stigao-i-u-senat-wilson-podrzao-inicijativu-i-ponovo-otvorio-pitanje-izbora-u-srbiji",
