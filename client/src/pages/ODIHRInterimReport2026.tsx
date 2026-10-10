@@ -1,4 +1,5 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
+import { ODIHR_IMAGE } from "@/assets/odihrImage";
 
 const PATH = "/srbija/izbori-25-oktobra-odihr-biracki-spisak-kontrola-kampanje";
 
@@ -10,7 +11,7 @@ export default function ODIHRInterimReport2026() {
       title="Izbori 25. oktobra: ODIHR upozorava na probleme sa biračkim spiskom i kontrolom kampanje"
       dateLabel="10. OKTOBAR 2026."
       deck="Međunarodni posmatrači ukazuju na otvorena pitanja o tačnosti biračkog spiska, korišćenju javnih sredstava i nadzoru medija. Prvi izveštaj Komisije za reviziju biračkog spiska očekuje se tek nakon izbora."
-      imageSrc="/news/odihr-izbori-2026.webp"
+      imageSrc={ODIHR_IMAGE}
       imageAlt="Ilustracija izbornog procesa u Srbiji: glasačka kutija sa listićima, birački spisak i zastava Srbije."
       imageCredit="Vizual: Novi Talas / AI ilustracija"
       imageFirst={true}
