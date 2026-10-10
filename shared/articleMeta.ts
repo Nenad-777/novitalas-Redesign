@@ -98,6 +98,17 @@ export function buildJsonLd(meta: {
 
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/nasa-planeta/dzonatan-kornjaca-194-godine-tajna-dugovecnosti",
+    title: "Živi već 194 godine, a njegove ćelije kriju moguću tajnu dugovečnosti",
+    seoTitle: "Živi već 194 godine, a njegove ćelije kriju moguću tajnu dugovečnosti | Novi Talas",
+    description: "Najstarija poznata živa kopnena životinja na svetu postala je predmet izuzetnog naučnog istraživanja. Analiza DNK Džonatana otkriva moguće mehanizme dugovečnosti.",
+    imageSrc: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Jonathan_Tortoise_2022.jpg",
+    datePublished: "2026-10-10",
+    author: "Novi Talas",
+    section: "Naša planeta",
+    keywords: "Džonatan, 194 godina, kornjača, dugovečnost, genetika, epigenetika, mitohondrije, DNK, Sveta Jelena, Science Advances",
+  },
+  {
     path: "/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci",
     title: "Vučić i Zapad: optužbe za autokratiju stigle su u centre moći",
     seoTitle: "Vučić i Zapad: optužbe za autokratiju stigle su u centre moći | Novi Talas",
