@@ -7,13 +7,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
+import { ODIHR_IMAGE } from "@/assets/odihrImage";
 
 const HERO_ARTICLE = {
   href: "/srbija/izbori-25-oktobra-odihr-biracki-spisak-kontrola-kampanje",
   category: "SRBIJA · IZBORI",
   title: "Izbori 25. oktobra: ODIHR upozorava na probleme sa biračkim spiskom i kontrolom kampanje",
   description: "Međunarodni posmatrači ukazuju na otvorena pitanja o tačnosti biračkog spiska, korišćenju javnih sredstava i nadzoru medija. Prvi izveštaj Komisije za reviziju biračkog spiska očekuje se tek nakon izbora.",
-  imageSrc: "/news/odihr-izbori-2026.webp",
+  imageSrc: ODIHR_IMAGE,
   imageAlt: "Glasačka kutija, birački spisak i srpska zastava — AI ilustracija Novi Talas.",
 };
 
