@@ -9,12 +9,12 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 const HERO_ARTICLE = {
-  href: "/srbija/francuska-protesti-arte-srpski-studenti",
-  category: "SVET · FRANCUSKA",
-  title: "Francuska na nogama, a na ARTE-u se govori o srpskim studentima",
-  description: "Dok Francusku potresaju protesti mladih, Noé Girardot-Champsaur u javnoj objavi povodom gostovanja na ARTE-u ukazuje na iskustvo srpskih studenata i njihov politički odgovor vlastima.",
-  imageSrc: "/news/france-serbian-protests.jpg",
-  imageAlt: "Grafički vizual Novi Talas: Francuska na nogama.",
+  href: "/nasa-planeta/dzonatan-kornjaca-194-godine-tajna-dugovecnosti",
+  category: "NAŠA PLANETA · NAUKA",
+  title: "Živi već 194 godine, a njegove ćelije kriju moguću tajnu dugovečnosti",
+  description: "Džinovska kornjača Džonatan ima 194 godine. Njegov DNK i epigenom otkrivaju moguće mehanizme izuzetne dugovečnosti.",
+  imageSrc: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Jonathan_Tortoise_2022.jpg",
+  imageAlt: "Džonatan, najstarija poznata živa kopnena životinja na ostrvu Sveta Jelena.",
 }
 const ARTICLES = HOME_ARTICLES;
 function useFadeIn(){const ref=useRef<HTMLDivElement>(null);const[visible,setVisible]=useState(false);useEffect(()=>{const el=ref.current;if(!el)return;const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);o.unobserve(el)}},{threshold:.1});o.observe(el);return()=>o.disconnect()},[]);return{ref,visible}}
