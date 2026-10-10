@@ -3,6 +3,14 @@
 // previous HERO here and let the oldest secondary story fall off automatically.
 const HOME_ARTICLE_CANDIDATES = [
   {
+    href: "/nasa-planeta/dzonatan-kornjaca-194-godine-tajna-dugovecnosti",
+    category: "NAŠA PLANETA · NAUKA",
+    title: "Živi već 194 godine, a njegove ćelije kriju moguću tajnu dugovečnosti",
+    description: "Džinovska kornjača Džonatan ima 194 godine. Njegov DNK i epigenom otkrivaju moguće mehanizme izuzetne dugovečnosti.",
+    imageSrc: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Jonathan_Tortoise_2022.jpg",
+    imageAlt: "Džonatan, najstarija poznata živa kopnena životinja na ostrvu Sveta Jelena.",
+  },
+  {
     href: "/srbija/francuska-protesti-arte-srpski-studenti",
     category: "SVET · FRANCUSKA",
     title: "Francuska na nogama, a na ARTE-u se govori o srpskim studentima",

@@ -6,6 +6,7 @@
  */
 
 import { Link } from "wouter";
+import { ODIHR_IMAGE } from "@/assets/odihrImage";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -62,6 +63,17 @@ export default function SrbijaPage() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <article className="md:col-span-2">
+              <Link href="/srbija/izbori-25-oktobra-odihr-biracki-spisak-kontrola-kampanje" className="no-underline">
+                <img src={ODIHR_IMAGE} alt="Izbori u Srbiji: glasačka kutija, birački spisak i zastava — AI ilustracija." className="w-full h-[260px] md:h-[420px] object-cover mb-4" />
+                <span className="kicker">SRBIJA · IZBORI</span>
+                <h2 className="mt-2 text-[26px] md:text-[34px] font-bold leading-[1.2]" style={{fontFamily:"'Playfair Display', Georgia, serif"}}>
+                  Izbori 25. oktobra: ODIHR upozorava na probleme sa biračkim spiskom i kontrolom kampanje
+                </h2>
+                <p className="mt-3 text-[16px] leading-[1.65]">Međunarodni posmatrači ukazuju na pitanja tačnosti biračkog spiska, korišćenja javnih sredstava i nadzora medija. Prvi izveštaj komisije za reviziju spiska očekuje se tek posle izbora.</p>
+                <div className="mt-3 text-[12px] font-semibold uppercase">Otvori tekst →</div>
+              </Link>
+            </article>
             <article className="md:col-span-2"><Link href="/srbija/francuska-protesti-arte-srpski-studenti" className="no-underline"><img src="/news/france-serbian-protests.jpg" alt="Grafika Novi Talas: Francuska na nogama" className="w-full h-[260px] md:h-[420px] object-cover mb-4" /><span className="kicker">SVET · FRANCUSKA</span><h2 className="mt-2 text-[26px] md:text-[34px] font-bold leading-[1.2]" style={{fontFamily:"Playfair Display, Georgia, serif"}}>Francuska na nogama, a na ARTE-u se govori o srpskim studentima</h2><p className="mt-3 text-[16px] leading-[1.65]">Dok Francusku potresaju protesti mladih, Noé Girardot-Champsaur u javnoj objavi povodom gostovanja na ARTE-u ukazuje na iskustvo srpskih studenata i njihov politički odgovor vlastima.</p><div className="mt-3 text-[12px] font-semibold uppercase">Otvori tekst →</div></Link></article>
             <article className="md:col-span-2">
               <Link href="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" className="no-underline">
