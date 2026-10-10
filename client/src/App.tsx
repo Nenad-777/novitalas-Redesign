@@ -203,6 +203,7 @@ import IzboriNepravilnostiKrivicnaOdgovornost from "./pages/izbori-nepravilnosti
 import IzboriRezultati from "./pages/izbori-rezultati";
 
 import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
+import DzonatanDugovecnostArticle from "./pages/dzonatan-kornjaca-194-godine-tajna-dugovecnosti";
 import TackaBezPovratkaAiArticle from "./pages/TackaBezPovratkaAiArticle";
 import MouseHumanBrainArticle from "./pages/MouseHumanBrainArticle";
 import RenoirHeistArticle from "./pages/RenoirHeistArticle";
@@ -808,6 +809,7 @@ function Router() {
         {/* =========================
             NAŠA PLANETA
            ========================= */}
+        <Route path="/nasa-planeta/dzonatan-kornjaca-194-godine-tajna-dugovecnosti" component={DzonatanDugovecnostArticle} />
         <Route
           path="/nasa-planeta/svet-ce-gotovo-izvesno-preci-granicu-od-1-5-stepeni"
           component={GlobalWarmingThresholdArticle}

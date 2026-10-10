@@ -19,6 +19,14 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/dzonatan-kornjaca-194-godine-tajna-dugovecnosti",
+    img: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Jonathan_Tortoise_2022.jpg",
+    alt: "Džonatan, najstarija poznata živa kopnena životinja, na ostrvu Sveta Jelena.",
+    imageCredit: "Kevin Gepford / Wikimedia Commons / CC BY-SA 4.0; kadar prilagođen prikazu.",
+    title: "Živi već 194 godine, a njegove ćelije kriju moguću tajnu dugovečnosti",
+    description: "Najstarija poznata živa kopnena životinja na svetu postala je predmet izuzetnog naučnog istraživanja. Analiza DNK Džonatana otkriva moguće mehanizme dugovečnosti.",
+  },
+  {
     href: "/nasa-planeta/tarantino-je-napisao-novi-film-fincer-ga-je-rezirao",
     img: "https://img.youtube.com/vi/RjEZaUBbUvU/maxresdefault.jpg",
     alt: "Brad Pitt kao Cliff Booth u zvaničnom Netflix trejleru.",
