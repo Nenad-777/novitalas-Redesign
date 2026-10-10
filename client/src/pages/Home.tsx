@@ -9,13 +9,14 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 const HERO_ARTICLE = {
-  href: "/nasa-planeta/dzonatan-kornjaca-194-godine-tajna-dugovecnosti",
-  category: "NAŠA PLANETA · NAUKA",
-  title: "Živi već 194 godine, a njegove ćelije kriju moguću tajnu dugovečnosti",
-  description: "Džinovska kornjača Džonatan ima 194 godine. Njegov DNK i epigenom otkrivaju moguće mehanizme izuzetne dugovečnosti.",
-  imageSrc: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Jonathan_Tortoise_2022.jpg",
-  imageAlt: "Džonatan, najstarija poznata živa kopnena životinja na ostrvu Sveta Jelena.",
-}
+  href: "/srbija/izbori-25-oktobra-odihr-biracki-spisak-kontrola-kampanje",
+  category: "SRBIJA · IZBORI",
+  title: "Izbori 25. oktobra: ODIHR upozorava na probleme sa biračkim spiskom i kontrolom kampanje",
+  description: "Međunarodni posmatrači ukazuju na otvorena pitanja o tačnosti biračkog spiska, korišćenju javnih sredstava i nadzoru medija. Prvi izveštaj Komisije za reviziju biračkog spiska očekuje se tek nakon izbora.",
+  imageSrc: "/news/odihr-izbori-2026.webp",
+  imageAlt: "Glasačka kutija, birački spisak i srpska zastava — AI ilustracija Novi Talas.",
+};
+
 const ARTICLES = HOME_ARTICLES;
 function useFadeIn(){const ref=useRef<HTMLDivElement>(null);const[visible,setVisible]=useState(false);useEffect(()=>{const el=ref.current;if(!el)return;const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);o.unobserve(el)}},{threshold:.1});o.observe(el);return()=>o.disconnect()},[]);return{ref,visible}}
 function FadeIn({children,className=""}:{children:React.ReactNode;className?:string}){const{ref,visible}=useFadeIn();return <div ref={ref} className={className} style={{opacity:visible?1:0,transform:visible?"translateY(0)":"translateY(16px)",transition:"opacity 0.7s ease, transform 0.7s ease"}}>{children}</div>}
