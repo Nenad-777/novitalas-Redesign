@@ -7,15 +7,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
-import { ODIHR_IMAGE } from "@/assets/odihrImage";
 
 const HERO_ARTICLE = {
-  href: "/srbija/izbori-25-oktobra-odihr-biracki-spisak-kontrola-kampanje",
-  category: "SRBIJA · IZBORI",
-  title: "Izbori 25. oktobra: ODIHR upozorava na probleme sa biračkim spiskom i kontrolom kampanje",
-  description: "Međunarodni posmatrači ukazuju na otvorena pitanja o tačnosti biračkog spiska, korišćenju javnih sredstava i nadzoru medija. Prvi izveštaj Komisije za reviziju biračkog spiska očekuje se tek nakon izbora.",
-  imageSrc: ODIHR_IMAGE,
-  imageAlt: "Glasačka kutija, birački spisak i srpska zastava — AI ilustracija Novi Talas.",
+ href:"/geopolitika/napad-na-aerodrom-u-rijadu-12-poginulih-vise-od-300-povredjenih",
+ category:"GEOPOLITIKA · BLISKI ISTOK",
+ title:"Napad na aerodrom u Rijadu: 12 poginulih, više od 300 povređenih",
+ description:"Saudijska Arabija optužila je jemenske Hute, koje podržava Iran, za raketni napad na međunarodni aerodrom u Rijadu. Američki predsednik Donald Tramp izjavio je da Vašington razmatra uključivanje u vojne operacije protiv Huta.",
+ imageSrc:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Saudi_Arabia_%28152%29_%288886427334%29.jpg",
+ imageAlt:"Avion na aerodromu u Rijadu, arhivska fotografija iz 2013.",
 };
 
 const ARTICLES = HOME_ARTICLES;
