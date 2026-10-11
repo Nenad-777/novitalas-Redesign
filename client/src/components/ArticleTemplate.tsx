@@ -51,7 +51,7 @@ type ArticleTemplateProps = {
   deck?: string;
   imageSrc?: string;
   imageAlt?: string;
-  imageCredit?: string;
+  imageCredit?: ReactNode;
   imageHeightClass?: string;
   imageFirst?: boolean;
   imageBeforeDeck?: boolean;
