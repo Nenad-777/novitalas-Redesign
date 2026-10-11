@@ -2,6 +2,8 @@
 // keep exactly eight secondary stories. On every new publication, prepend the
 // previous HERO here and let the oldest secondary story fall off automatically.
 const HOME_ARTICLE_CANDIDATES = [
+  { href:"/srbija/izbori-25-oktobra-odihr-biracki-spisak-kontrola-kampanje", category:"SRBIJA · IZBORI", title:"Izbori 25. oktobra: ODIHR upozorava na probleme sa biračkim spiskom i kontrolom kampanje", description:"Međunarodni posmatrači ukazuju na otvorena pitanja o biračkom spisku i nadzoru kampanje.", imageSrc:"/news/glasanje-dijaspora-3-oktobar.jpg", imageAlt:"Arhivska ilustracija izbora u Srbiji." },
+
   {
     href: "/nasa-planeta/dzonatan-kornjaca-194-godine-tajna-dugovecnosti",
     category: "NAŠA PLANETA · NAUKA",
