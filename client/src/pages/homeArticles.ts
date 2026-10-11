@@ -2,6 +2,14 @@
 // keep exactly eight secondary stories. On every new publication, prepend the
 // previous HERO here and let the oldest secondary story fall off automatically.
 const HOME_ARTICLE_CANDIDATES = [
+  {
+ href:"/geopolitika/napad-na-aerodrom-u-rijadu-12-poginulih-vise-od-300-povredjenih",
+ category:"GEOPOLITIKA · BLISKI ISTOK",
+ title:"Napad na aerodrom u Rijadu: 12 poginulih, više od 300 povređenih",
+ description:"Saudijska Arabija optužila je jemenske Hute, koje podržava Iran, za raketni napad na međunarodni aerodrom u Rijadu. Američki predsednik Donald Tramp izjavio je da Vašington razmatra uključivanje u vojne operacije protiv Huta.",
+ imageSrc:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Saudi_Arabia_%28152%29_%288886427334%29.jpg",
+ imageAlt:"Avion na aerodromu u Rijadu, arhivska fotografija iz 2013.",
+},
   { href:"/srbija/izbori-25-oktobra-odihr-biracki-spisak-kontrola-kampanje", category:"SRBIJA · IZBORI", title:"Izbori 25. oktobra: ODIHR upozorava na probleme sa biračkim spiskom i kontrolom kampanje", description:"Međunarodni posmatrači ukazuju na otvorena pitanja o biračkom spisku i nadzoru kampanje.", imageSrc:"/news/glasanje-dijaspora-3-oktobar.jpg", imageAlt:"Arhivska ilustracija izbora u Srbiji." },
 
   {
