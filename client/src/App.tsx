@@ -8,6 +8,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
 import Home from "./pages/Home";
+import RiyadhAirportArticle from "./pages/RiyadhAirportArticle";
 import Russia300000TroopsArticle from "./pages/Russia300000TroopsArticle";
 import Pretraga from "./pages/Pretraga";
 import GeopolitikaIndex from "./pages/GeopolitikaIndex";
@@ -1024,6 +1025,7 @@ function Router() {
         {/* 404 */}
         <Route path="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" component={VucicZapadCentriMociArticle} />
         <Route path="/404" component={NotFound} />
+        <Route path="/geopolitika/napad-na-aerodrom-u-rijadu-12-poginulih-vise-od-300-povredjenih" component={RiyadhAirportArticle} />
         <Route component={NotFound} />
       </Switch>
     </>
