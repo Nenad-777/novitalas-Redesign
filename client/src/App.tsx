@@ -103,6 +103,7 @@ import RatcliffeMoscowMissionArticle from "./pages/RatcliffeMoscowMissionArticle
 
 import ObavestajniArticle from "./pages/ObavestajniArticle";
 import ObavestajniIndex from "./pages/ObavestajniIndex";
+import BNDHanningEspionage2026Article from "./pages/BNDHanningEspionage2026Article";
 import BritanijaZakonStraneProxyMreze from "./pages/britanija-zakon-strane-proxy-mreze";
 import KinaSpyBrodovi from "./pages/kina-spy-brodovi";
 import CiaPokrenulaKampanju from "./pages/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira";
@@ -674,6 +675,7 @@ function Router() {
         {/* =========================
             OBAVEŠTAJNI IZVORI
            ========================= */}
+        <Route path="/obavestajni-izvori/spijunska-afera-nemacka-evropske-sluzbe-strahuju-za-tajne" component={BNDHanningEspionage2026Article} />
         <Route path="/obavestajni-izvori" component={ObavestajniIndex} />
 
         <Route
