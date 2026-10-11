@@ -1,5 +1,7 @@
+import type { ReactNode } from "react";
+
 type ImageCaptionProps = {
-  credit?: string;
+  credit?: ReactNode;
 };
 
 export default function ImageCaption({ credit }: ImageCaptionProps) {

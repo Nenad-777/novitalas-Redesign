@@ -10,6 +10,14 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/obavestajni-izvori/spijunska-afera-nemacka-evropske-sluzbe-strahuju-za-tajne",
+    img: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Zentrale_des_Bundesnachrichtendienst%2C_Berlin.jpg",
+    alt: "Sedište nemačke spoljne obaveštajne službe BND u Berlinu, arhivska fotografija.",
+    title: "Špijunska afera u Nemačkoj: evropske službe strahuju za svoje tajne",
+    description: "Posle hapšenja bivšeg direktora BND-a Augusta Haninga evropske partnerske službe proveravaju da li su kompromitovane i informacije koje su razmenjivale sa Nemačkom.",
+    date: "11. oktobar 2026.",
+  },
+  {
     href: "/obavestajni-izvori/retklifova-misija-u-moskvi-dobija-nove-obrise",
     img: "/news/ratcliffe-moscow-red-line.jpg",
     alt: "Grafička ilustracija tajne američke misije u Moskvi: zvaničnik prelazi crvenu liniju na aerodromskoj pisti dok se u pozadini nalazi vojni transportni avion.",
