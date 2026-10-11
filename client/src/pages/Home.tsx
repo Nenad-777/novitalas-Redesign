@@ -9,12 +9,12 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 const HERO_ARTICLE = {
- href:"/geopolitika/napad-na-aerodrom-u-rijadu-12-poginulih-vise-od-300-povredjenih",
- category:"GEOPOLITIKA · BLISKI ISTOK",
- title:"Napad na aerodrom u Rijadu: 12 poginulih, više od 300 povređenih",
- description:"Saudijska Arabija optužila je jemenske Hute, koje podržava Iran, za raketni napad na međunarodni aerodrom u Rijadu. Američki predsednik Donald Tramp izjavio je da Vašington razmatra uključivanje u vojne operacije protiv Huta.",
- imageSrc:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Saudi_Arabia_%28152%29_%288886427334%29.jpg",
- imageAlt:"Avion na aerodromu u Rijadu, arhivska fotografija iz 2013.",
+  href: "/obavestajni-izvori/spijunska-afera-nemacka-evropske-sluzbe-strahuju-za-tajne",
+  category: "OBAVEŠTAJNI IZVORI · NEMAČKA",
+  title: "Špijunska afera u Nemačkoj: evropske službe strahuju za svoje tajne",
+  description: "Posle hapšenja bivšeg šefa BND-a Augusta Haninga evropske obaveštajne službe procenjuju da li su ugroženi poverljivi podaci razmenjivani sa Berlinom.",
+  imageSrc: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Zentrale_des_Bundesnachrichtendienst%2C_Berlin.jpg",
+  imageAlt: "Sedište nemačke obaveštajne službe BND u Berlinu, arhivski snimak iz 2017.",
 };
 
 const ARTICLES = HOME_ARTICLES;
