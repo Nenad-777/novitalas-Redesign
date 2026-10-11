@@ -98,6 +98,17 @@ export function buildJsonLd(meta: {
 
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/obavestajni-izvori/spijunska-afera-nemacka-evropske-sluzbe-strahuju-za-tajne",
+    title: "Špijunska afera u Nemačkoj: evropske službe strahuju za svoje tajne",
+    seoTitle: "Špijunska afera u Nemačkoj: evropske službe strahuju za svoje tajne | Novi Talas",
+    description: "Hapšenje bivšeg direktora BND-a Augusta Haninga pokrenulo je procene evropskih obaveštajnih službi o mogućem ugrožavanju poverljivih informacija koje su razmenjivane sa Berlinom.",
+    imageSrc: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Zentrale_des_Bundesnachrichtendienst%2C_Berlin.jpg",
+    datePublished: "2026-10-11",
+    author: "Novi Talas",
+    section: "Obaveštajni izvori",
+    keywords: "BND, August Hanning, Nemačka, obaveštajne službe, Reuters, državne tajne, špijunaža, Evropa",
+  },
+  {
     path: "/nasa-planeta/dzonatan-kornjaca-194-godine-tajna-dugovecnosti",
     title: "Živi već 194 godine, a njegove ćelije kriju moguću tajnu dugovečnosti",
     seoTitle: "Živi već 194 godine, a njegove ćelije kriju moguću tajnu dugovečnosti | Novi Talas",
