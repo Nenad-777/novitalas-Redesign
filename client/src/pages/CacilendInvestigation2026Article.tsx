@@ -13,7 +13,7 @@ export default function CacilendInvestigation2026Article() {
       deck="Sve više glasova zahteva od tužilaštva da ispita navode o organizovanju plaćenih grupa, mogućoj zloupotrebi državnih resursa i ulozi policije tokom protesta u Beogradu."
       imageSrc={CACILEND_ISTRAGA_IMAGE}
       imageAlt="Autorska fotografija masovnog protesta u Beogradu 15. marta 2025: ljudi i srpske zastave na ulici."
-      imageCredit="Foto: Nenad Maričić / Beograd, 15. mart 2025. Arhivski snimak protesta; fotografija ne prikazuje sam sporni incident."
+      imageCredit="Foto: Nenad Maričić"
       imageFirst={true}
       imageHeightClass="h-auto"
       paragraphs={[
