@@ -110,6 +110,7 @@ import CiaPokrenulaKampanju from "./pages/cia-pokrenula-kampanju-za-regrutovanje
 import PrviBrifing from "./pages/prvi-brifing";
 import SrbijaPage from "./pages/SrbijaPage";
 import ODIHRInterimReport2026 from "./pages/ODIHRInterimReport2026";
+import CacilendInvestigation2026Article from "./pages/CacilendInvestigation2026Article";
 import SerbiaLostRepublicArticle from "./pages/SerbiaLostRepublicArticle";
 import SrbijaPolarizacija from "./pages/SrbijaPolarizacija";
 import SrbijaMarsZaPravosudje from "./pages/SrbijaMarsZaPravosudje";
@@ -746,6 +747,7 @@ function Router() {
         {/* =========================
             SRBIJA
            ========================= */}
+        <Route path="/srbija/posle-svedocenja-o-cacilendu-i-15-martu-sve-glasniji-zahtevi-za-istragom" component={CacilendInvestigation2026Article} />
         <Route path="/srbija" component={SrbijaPage} />
         <Route
           path="/srbija/pravi-test-bice-izbori-sta-promene-na-vrhu-znace-za-n1-novu-danas-i-radar"
