@@ -3,6 +3,14 @@
 // previous HERO here and let the oldest secondary story fall off automatically.
 const HOME_ARTICLE_CANDIDATES = [
   {
+    href: "/obavestajni-izvori/spijunska-afera-nemacka-evropske-sluzbe-strahuju-za-tajne",
+    category: "OBAVEŠTAJNI IZVORI · NEMAČKA",
+    title: "Špijunska afera u Nemačkoj: evropske službe strahuju za svoje tajne",
+    description: "Posle hapšenja bivšeg šefa BND-a Augusta Haninga evropske obaveštajne službe procenjuju da li su ugroženi poverljivi podaci razmenjivani sa Berlinom.",
+    imageSrc: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Zentrale_des_Bundesnachrichtendienst%2C_Berlin.jpg",
+    imageAlt: "Sedište nemačke obaveštajne službe BND u Berlinu.",
+  },
+  {
  href:"/geopolitika/napad-na-aerodrom-u-rijadu-12-poginulih-vise-od-300-povredjenih",
  category:"GEOPOLITIKA · BLISKI ISTOK",
  title:"Napad na aerodrom u Rijadu: 12 poginulih, više od 300 povređenih",

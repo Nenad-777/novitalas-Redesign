@@ -64,6 +64,18 @@ export default function SrbijaPage() {
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <article className="md:col-span-2">
+              <Link href="/srbija/posle-svedocenja-o-cacilendu-i-15-martu-sve-glasniji-zahtevi-za-istragom" className="no-underline">
+                <img src="/news/cacilend-15-mart-2025-nenad-maricic.avif" alt="Fotografija protesta u Beogradu 15. marta 2025. godine." className="w-full h-[260px] md:h-[420px] object-cover mb-4" />
+                <span className="kicker">SRBIJA · ISTRAŽIVANJE</span>
+                <h2 className="mt-2 text-[26px] md:text-[34px] font-bold leading-[1.2]" style={{fontFamily:"'Playfair Display', Georgia, serif"}}>
+                  Posle svedočenja o Ćacilendu i događajima 15. marta 2025. godine, sve glasniji zahtevi za istragom
+                </h2>
+                <p className="mt-3 text-[16px] leading-[1.65]">Sve više glasova zahteva od tužilaštva da ispita navode o organizovanju plaćenih grupa, mogućoj zloupotrebi državnih resursa i ulozi policije tokom protesta u Beogradu.</p>
+                <div className="mt-3 text-[12px] font-semibold uppercase">Otvori tekst →</div>
+              </Link>
+            </article>
+
+            <article className="md:col-span-2">
               <Link href="/srbija/izbori-25-oktobra-odihr-biracki-spisak-kontrola-kampanje" className="no-underline">
                 <img src={ODIHR_IMAGE} alt="Izbori u Srbiji: glasačka kutija, birački spisak i zastava — AI ilustracija." className="w-full h-[260px] md:h-[420px] object-cover mb-4" />
                 <span className="kicker">SRBIJA · IZBORI</span>

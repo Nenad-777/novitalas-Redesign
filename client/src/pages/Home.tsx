@@ -9,12 +9,12 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 const HERO_ARTICLE = {
-  href: "/obavestajni-izvori/spijunska-afera-nemacka-evropske-sluzbe-strahuju-za-tajne",
-  category: "OBAVEŠTAJNI IZVORI · NEMAČKA",
-  title: "Špijunska afera u Nemačkoj: evropske službe strahuju za svoje tajne",
-  description: "Posle hapšenja bivšeg šefa BND-a Augusta Haninga evropske obaveštajne službe procenjuju da li su ugroženi poverljivi podaci razmenjivani sa Berlinom.",
-  imageSrc: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Zentrale_des_Bundesnachrichtendienst%2C_Berlin.jpg",
-  imageAlt: "Sedište nemačke obaveštajne službe BND u Berlinu, arhivski snimak iz 2017.",
+  href: "/srbija/posle-svedocenja-o-cacilendu-i-15-martu-sve-glasniji-zahtevi-za-istragom",
+  category: "SRBIJA · ISTRAŽIVANJE",
+  title: "Posle svedočenja o Ćacilendu i događajima 15. marta 2025. godine, sve glasniji zahtevi za istragom",
+  description: "Sve više glasova zahteva od tužilaštva da ispita navode o organizovanju plaćenih grupa, mogućoj zloupotrebi državnih resursa i ulozi policije tokom protesta u Beogradu.",
+  imageSrc: "/news/cacilend-15-mart-2025-nenad-maricic.avif",
+  imageAlt: "Autorska fotografija protesta u Beogradu 15. marta 2025. godine.",
 };
 
 const ARTICLES = HOME_ARTICLES;
