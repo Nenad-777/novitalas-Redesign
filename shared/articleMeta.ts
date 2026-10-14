@@ -101,7 +101,7 @@ export const articleMeta: ArticleStaticMeta[] = [
     path: "/srbija/posle-svedocenja-o-cacilendu-i-15-martu-sve-glasniji-zahtevi-za-istragom",
     title: "Posle svedočenja o Ćacilendu i događajima 15. marta 2025. godine, sve glasniji zahtevi za istragom",
     description: "Sve više glasova zahteva od tužilaštva da ispita navode o organizovanju plaćenih grupa, mogućoj zloupotrebi državnih resursa i ulozi policije tokom protesta u Beogradu.",
-    imageSrc: "/news/cacilend-15-mart-2025-nenad-maricic.webp",
+    imageSrc: "/news/cacilend-15-mart-2025-nenad-maricic.avif",
     datePublished: "2026-10-14",
     author: "Novi Talas",
     section: "Srbija",

@@ -65,7 +65,7 @@ export default function SrbijaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <article className="md:col-span-2">
               <Link href="/srbija/posle-svedocenja-o-cacilendu-i-15-martu-sve-glasniji-zahtevi-za-istragom" className="no-underline">
-                <img src="/news/cacilend-15-mart-2025-nenad-maricic.webp" alt="Fotografija protesta u Beogradu 15. marta 2025. godine." className="w-full h-[260px] md:h-[420px] object-cover mb-4" />
+                <img src="/news/cacilend-15-mart-2025-nenad-maricic.avif" alt="Fotografija protesta u Beogradu 15. marta 2025. godine." className="w-full h-[260px] md:h-[420px] object-cover mb-4" />
                 <span className="kicker">SRBIJA · ISTRAŽIVANJE</span>
                 <h2 className="mt-2 text-[26px] md:text-[34px] font-bold leading-[1.2]" style={{fontFamily:"'Playfair Display', Georgia, serif"}}>
                   Posle svedočenja o Ćacilendu i događajima 15. marta 2025. godine, sve glasniji zahtevi za istragom

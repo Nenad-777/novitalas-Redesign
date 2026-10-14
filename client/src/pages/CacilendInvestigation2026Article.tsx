@@ -1,7 +1,7 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 
 export const CACILEND_ISTRAGA_PATH = "/srbija/posle-svedocenja-o-cacilendu-i-15-martu-sve-glasniji-zahtevi-za-istragom";
-export const CACILEND_ISTRAGA_IMAGE = "/news/cacilend-15-mart-2025-nenad-maricic.webp";
+export const CACILEND_ISTRAGA_IMAGE = "/news/cacilend-15-mart-2025-nenad-maricic.avif";
 
 export default function CacilendInvestigation2026Article() {
   return (
