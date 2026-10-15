@@ -13,7 +13,7 @@ const HERO_ARTICLE = {
   category: "SRBIJA · IZBORI",
   title: "Vilson upozorio na beloruski scenario: Svet će pratiti izbore u Srbiji",
   description: "Američki kongresmen razgovarao je sa predstavnicima CRTE o izbornim uslovima u Srbiji. Posmatrači upozoravaju na nasilje, pritiske i neravnopravnu kampanju.",
-  imageSrc: "/news/wilson-crta-editorial.svg",
+  imageSrc: "",
   imageAlt: "Grafička ilustracija Džoa Vilsona i Narodne skupštine Srbije.",
 };
 
