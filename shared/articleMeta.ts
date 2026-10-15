@@ -97,7 +97,7 @@ export function buildJsonLd(meta: {
 }
 
 export const articleMeta: ArticleStaticMeta[] = [
-  { path: "/srbija/vilson-upozorio-na-beloruski-scenario-svet-ce-pratiti-izbore-u-srbiji", title: "Vilson upozorio na beloruski scenario: Svet će pratiti izbore u Srbiji", description: "Američki kongresmen razgovarao je sa predstavnicima CRTE o izbornim uslovima u Srbiji. Posmatrači upozoravaju na nasilje, pritiske na birače i neravnopravnu kampanju.", imageSrc: "/news/izbori-odgovornost.jpg", datePublished: "2026-10-15", author: "Novi Talas", section: "Srbija", keywords: "Džo Vilson, Joe Wilson, CRTA, Srbija, izbori 25. oktobar, demokratija, SRBIJA Act" },
+  { path: "/srbija/vilson-upozorio-na-beloruski-scenario-svet-ce-pratiti-izbore-u-srbiji", title: "Vilson upozorio na beloruski scenario: Svet će pratiti izbore u Srbiji", description: "Američki kongresmen razgovarao je sa predstavnicima CRTE o izbornim uslovima u Srbiji. Posmatrači upozoravaju na nasilje, pritiske na birače i neravnopravnu kampanju.", imageSrc: "/news/wilson-crta-editorial.svg", datePublished: "2026-10-15", author: "Novi Talas", section: "Srbija", keywords: "Džo Vilson, Joe Wilson, CRTA, Srbija, izbori 25. oktobar, demokratija, SRBIJA Act" },
   {
     path: "/srbija/posle-svedocenja-o-cacilendu-i-15-martu-sve-glasniji-zahtevi-za-istragom",
     title: "Posle svedočenja o Ćacilendu i događajima 15. marta 2025. godine, sve glasniji zahtevi za istragom",
