@@ -3,7 +3,7 @@
 // previous HERO here and let the oldest secondary story fall off automatically.
 const HOME_ARTICLE_CANDIDATES = [
   {
-    href: "/srbija/posle-svedocenja-o-cacilendu-i-dogadjajima-15-marta-2025-sve-glasniji-zahtevi-za-istragom",
+    href: "/srbija/posle-svedocenja-o-cacilendu-i-15-martu-sve-glasniji-zahtevi-za-istragom",
     category: "SRBIJA · ISTRAŽIVANJE",
     title: "Posle svedočenja o Ćacilendu i događajima 15. marta 2025. godine, sve glasniji zahtevi za istragom",
     description: "Sve više glasova zahteva od tužilaštva da ispita navode o organizovanju plaćenih grupa, mogućoj zloupotrebi državnih resursa i ulozi policije tokom protesta u Beogradu.",
