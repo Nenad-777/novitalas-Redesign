@@ -8,6 +8,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
 import Home from "./pages/Home";
+import WilsonCrtaElectionArticle from "./pages/WilsonCrtaElectionArticle";
 import RiyadhAirportArticle from "./pages/RiyadhAirportArticle";
 import Russia300000TroopsArticle from "./pages/Russia300000TroopsArticle";
 import Pretraga from "./pages/Pretraga";
@@ -315,6 +316,7 @@ function Router() {
       <Switch>
         {/* Home */}
         <Route path="/" component={Home} />
+        <Route path="/srbija/vilson-upozorio-na-beloruski-scenario-svet-ce-pratiti-izbore-u-srbiji" component={WilsonCrtaElectionArticle} />
         <Route
           path="/geopolitika/da-li-rusija-sprema-jos-300000-vojnika-za-rat-u-ukrajini"
           component={Russia300000TroopsArticle}
