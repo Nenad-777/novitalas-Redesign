@@ -9,12 +9,12 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 const HERO_ARTICLE = {
-  href: "/srbija/posle-svedocenja-o-cacilendu-i-15-martu-sve-glasniji-zahtevi-za-istragom",
-  category: "SRBIJA · ISTRAŽIVANJE",
-  title: "Posle svedočenja o Ćacilendu i događajima 15. marta 2025. godine, sve glasniji zahtevi za istragom",
-  description: "Sve više glasova zahteva od tužilaštva da ispita navode o organizovanju plaćenih grupa, mogućoj zloupotrebi državnih resursa i ulozi policije tokom protesta u Beogradu.",
-  imageSrc: "/news/cacilend-15-mart-2025-nenad-maricic.avif",
-  imageAlt: "Autorska fotografija protesta u Beogradu 15. marta 2025. godine.",
+  href: "/srbija/vilson-upozorio-na-beloruski-scenario-svet-ce-pratiti-izbore-u-srbiji",
+  category: "SRBIJA · IZBORI",
+  title: "Vilson upozorio na beloruski scenario: Svet će pratiti izbore u Srbiji",
+  description: "Američki kongresmen razgovarao je sa predstavnicima CRTE o izbornim uslovima u Srbiji. Posmatrači upozoravaju na nasilje, pritiske i neravnopravnu kampanju.",
+  imageSrc: "/news/wilson-crta-editorial.svg",
+  imageAlt: "Grafička ilustracija Džoa Vilsona i Narodne skupštine Srbije.",
 };
 
 const ARTICLES = HOME_ARTICLES;
