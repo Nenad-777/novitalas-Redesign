@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 import { ArrowRight, Bookmark, BookOpen, Globe2, Search, Waves, X } from "lucide-react";
 import { HOME_ARTICLE_CANDIDATES } from "./homeArticles";
-import { searchArticles } from "../../../shared/articleSearch";
+import { searchArticles, articleSearchIndex } from "../../../shared/articleSearch";
 import "./homeNext.css";
 
 type Story = {
@@ -24,7 +24,7 @@ const HERO: Story = {
   title: "Bela kuća ograničila satelitsku vezu Ukrajini: ko je izdao nalog i zašto?",
   description: "Reuters navodi da je nalog za ograničenje vojnog sistema Starshield stigao iz Bele kuće. Identitet nalogodavca nije poznat, a pristup je kasnije obnovljen.",
   imageSrc: "/news/starshield-approved.jpg",
-  imageAlt: "Urednička ilustracija ukrajinskog vojnika sa satelitskim terminalom.",
+  imageAlt: "AI ilustracija ukrajinskog vojnika sa satelitskim terminalom.",
 };
 
 const TOPICS: Topic[] = ["Sve", "Geopolitika", "Obaveštajni izvori", "Srbija", "Naša planeta"];
@@ -126,7 +126,7 @@ export default function HomeNext() {
     return pool.filter(item => topic === "Sve" || topicFor(item.href) === topic).slice(0, 18);
   }, [topic, query]);
   const contextLinks = useMemo(() => relatedStories(featured), [featured]);
-  const savedStories = saved.map(href => stories.find(item => item.href === href)).filter((item): item is Story => Boolean(item));
+  const savedStories = saved.map(href => articleSearchIndex.find(item => item.href === href) ?? stories.find(item => item.href === href)).filter((item): item is Story => Boolean(item));
 
   return (
     <div className="ntx-root">
