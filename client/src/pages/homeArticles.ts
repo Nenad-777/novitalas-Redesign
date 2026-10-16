@@ -3,6 +3,14 @@
 // previous HERO here and let the oldest secondary story fall off automatically.
 const HOME_ARTICLE_CANDIDATES = [
   {
+    href: "/nasa-planeta/najstariji-brodolom-kekova-turska-4700-godina",
+    category: "NAŠA PLANETA · ARHEOLOGIJA",
+    title: "Najstariji poznati brodolom na svetu pronađen kod Turske: teret ležao na dnu skoro pet milenijuma",
+    description: "Kod ostrva Kekova na jugu Turske arheolozi su pronašli ostatke brodoloma starog između 4.400 i 4.700 godina.",
+    imageSrc: "/news/kekova-shipwreck-illustration.svg",
+    imageAlt: "Urednička ilustracija brodoloma kod Kekove.",
+  },
+  {
     href: "/srbija/vilson-upozorio-na-beloruski-scenario-svet-ce-pratiti-izbore-u-srbiji",
     category: "SRBIJA · IZBORI",
     title: "Vilson upozorio na beloruski scenario: Svet će pratiti izbore u Srbiji",
