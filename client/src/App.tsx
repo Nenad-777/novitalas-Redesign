@@ -208,6 +208,7 @@ import IzboriNepravilnostiKrivicnaOdgovornost from "./pages/izbori-nepravilnosti
 import IzboriRezultati from "./pages/izbori-rezultati";
 
 import NasaPlanetaIndex from "./pages/NasaPlanetaIndex";
+import KekovaShipwreckArticle from "./pages/KekovaShipwreckArticle";
 import DzonatanDugovecnostArticle from "./pages/dzonatan-kornjaca-194-godine-tajna-dugovecnosti";
 import TackaBezPovratkaAiArticle from "./pages/TackaBezPovratkaAiArticle";
 import MouseHumanBrainArticle from "./pages/MouseHumanBrainArticle";
@@ -817,6 +818,7 @@ function Router() {
         {/* =========================
             NAŠA PLANETA
            ========================= */}
+        <Route path="/nasa-planeta/najstariji-brodolom-kekova-turska-4700-godina" component={KekovaShipwreckArticle} />
         <Route path="/nasa-planeta/dzonatan-kornjaca-194-godine-tajna-dugovecnosti" component={DzonatanDugovecnostArticle} />
         <Route
           path="/nasa-planeta/svet-ce-gotovo-izvesno-preci-granicu-od-1-5-stepeni"
