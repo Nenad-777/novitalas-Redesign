@@ -1,12 +1,31 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
-const paragraphs=[
-  "Prema istraživanju agencije Reuters, instrukcija za ograničavanje rada vojnog satelitskog sistema Starshield, koji ukrajinske snage koriste za komunikaciju i operacije bespilotnih letelica, potekla je iz Bele kuće. Reuters se poziva na dvojicu američkih zvaničnika i jednog zapadnog zvaničnika upoznatog sa odlukom. Oni navode da je rukovodstvo Pentagona dobilo poruku da usluga za ukrajinsku vojsku mora biti usporena.",
-  "Sagovornici Reutersa nisu identifikovali osobu koja je donela odluku, niti one koji su je sproveli. Na pitanje agencije, visoki američki zvaničnik izjavio je da predsednik Donald Tramp nije izdao takav zahtev. Bela kuća nije odgovorila da li je zahtev mogao doći od nekog drugog člana administracije.",
-  "Ukrajinski vojni predstavnici prethodnih dana prijavili su probleme u radu satelitskih terminala postavljenih na objektima koji se brzo kreću. Prema njihovim navodima, ograničenja su otežala napadne misije protiv ruskih snaga na okupiranoj teritoriji i rad presretačkih dronova koji se koriste za obaranje ruskih bespilotnih letelica. Predstavnik ukrajinskog Ministarstva odbrane rekao je Reutersu da terminali ponovo rade u pokretu, ali do brzine od približno 160 kilometara na sat.",
-  "Associated Press izveštava da je privremeni poremećaj doveo do neuspelih misija i gubitka pojedinih dronova. Britanski ministar odbrane izjavio je da ga je američki kolega obavestio da je pristup obnovljen. Ipak, ostaje nejasno da li su sva ograničenja uklonjena i pod kojim uslovima će sistem ubuduće raditi.",
-  "Starshield je sistem koji je kompanija SpaceX razvila za državne i bezbednosne korisnike, oslanjajući se na satelitsku mrežu Starlink. Ilon Mask je izjavio da je sistem Starshield pod kontrolom američke države i da o ograničenjima njegovog korišćenja odlučuju američke vojne vlasti i, na najvišem nivou, predsednik.",
-  "Ograničenja su uvedena u vreme pojačanih nesuglasica Vašingtona i Kijeva. Američka administracija tražila je od Ukrajine da obustavi napade na ruske rafinerije, koje povezuje sa rastom cena energenata. Reuters navodi da je Vašington u razgovorima sa ukrajinskim zvaničnicima izražavao nezadovoljstvo nastavkom tih napada. Međutim, nije utvrđeno da je ograničavanje Starshielda neposredno naređeno zbog rafinerija.",
-  "Slučaj otvara šire bezbednosno pitanje: koliko su savremene vojne operacije zavisne od satelitske infrastrukture koju kontrolišu strani partneri. U trenutku kada se takva veza koristi i za koordinaciju i za upravljanje bespilotnim letelicama, promena uslova pristupa može imati neposredne operativne posledice.",
-  "Izvori: Reuters, Erin Banco i Gram Slattery, 15. oktobar 2026. (23.07 UTC): https://www.reuters.com/world/europe/order-limit-starshield-ukraine-came-inside-white-house-sources-say-2026-10-15/ ; Associated Press, 16. oktobar 2026: https://apnews.com/article/c4e78116472c1808f077e078442dde76"
+
+// Redakcijski provereno prema Reutersu 15.10.2026:
+// https://www.reuters.com/world/europe/order-limit-starshield-ukraine-came-inside-white-house-sources-say-2026-10-15/
+// i Associated Pressu 16.10.2026:
+// https://apnews.com/article/c4e78116472c1808f077e078442dde76
+const paragraphs = [
+  "Instrukcija da se ograniči rad satelitskog sistema Starshield, koji ukrajinska vojska koristi za komunikaciju i operacije bespilotnih letelica, potekla je iz Bele kuće, objavio je Reuters pozivajući se na dvojicu američkih i jednog zapadnog zvaničnika. Prema njihovim navodima, rukovodstvu Pentagona preneto je da usluga mora biti usporena. Izvori nisu identifikovali osobu koja je izdala nalog. Visoki američki zvaničnik rekao je Reutersu da predsednik Donald Tramp nije naložio ograničenje, dok Bela kuća nije razjasnila da li je odluka došla od drugog člana administracije.",
+  "Posledice su se osetile na ukrajinskom ratištu. Vojni predstavnici naveli su da su ograničenja satelitske veze otežala operacije napadnih i presretačkih dronova, naročito pri većim brzinama kretanja. Associated Press izveštava o neuspelim misijama i izgubljenim letelicama tokom privremenog prekida. Pristup sistemu je zatim obnovljen, ali ostaju pitanja da li su sva ograničenja uklonjena i koji će uslovi ubuduće važiti.",
+  "Odluka je doneta u trenutku napetosti između Vašingtona i Kijeva zbog ukrajinskih napada na rusku naftnu infrastrukturu. Američka administracija tražila je njihovo obustavljanje, povezujući napade sa cenama energenata. Ipak, Reuters nije utvrdio da je ograničenje Starshielda neposredno uvedeno zbog napada na rafinerije; takvu uzročno-posledičnu vezu zasad nije moguće predstaviti kao činjenicu.",
+  "Starshield, vojna i državna usluga kompanije SpaceX zasnovana na tehnologiji satelitske mreže Starlink, nije isto što i civilni Starlink. Ilon Mask je naveo da uslove rada vojnog sistema određuju američke vlasti. Ovaj slučaj zato otvara šire pitanje savremenog ratovanja: ko kontroliše ključne komunikacione mreže kada od njih zavise koordinacija jedinica, upravljanje dronovima i bezbednost ljudi na terenu?"
 ];
-export default function StarshieldWhiteHouseArticle(){return <ArticleTemplate path="/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina" sectionLabel="Obaveštajni izvori · Geopolitika" title="Reuters: Naredba za ograničavanje ukrajinskog vojnog satelitskog sistema potekla iz Bele kuće" dateLabel="16. OKTOBAR 2026." authorLabel="Novi Talas" deck="Prema izvorima Reutersa, Pentagon je dobio instrukciju da ograniči rad sistema Starshield, koji ukrajinska vojska koristi za komunikaciju i upravljanje bespilotnim letelicama. Nije utvrđeno ko je doneo odluku." imageSrc="/news/starshield-white-house-editorial.svg" imageAlt="Urednička grafička ilustracija Bele kuće i satelitske komunikacione mreže, ne prikazuje stvarni događaj." imageCredit="Grafička ilustracija: Novi Talas. Ne predstavlja fotografiju događaja." imageFirst={true} imageHeightClass="h-auto" paragraphs={paragraphs} backHref="/obavestajni-izvori" backLabel="← Nazad na Obaveštajne izvore"/>;}
+
+export default function StarshieldWhiteHouseArticle() {
+  return <ArticleTemplate
+    path="/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina"
+    sectionLabel="Obaveštajni izvori · Geopolitika"
+    title="Bela kuća ograničila satelitsku vezu Ukrajini: ko je izdao nalog i zašto?"
+    dateLabel="16. OKTOBAR 2026."
+    authorLabel="Novi Talas"
+    deck="Prema istraživanju Reutersa, nalog za ograničavanje satelitskog sistema Starshield stigao je iz Bele kuće, ali nije utvrđeno ko ga je izdao. Odluka je poremetila vojne operacije Ukrajine i otvorila pitanje kontrole nad infrastrukturom savremenog rata."
+    imageSrc="/news/starshield-approved.jpg"
+    imageAlt="AI ilustracija ukrajinskog vojnika sa satelitskim terminalom na položaju u sumrak."
+    imageCredit="AI ilustracija / Novi Talas"
+    imageFirst={true}
+    imageHeightClass="h-auto aspect-video"
+    paragraphs={paragraphs}
+    backHref="/obavestajni-izvori"
+    backLabel="← Nazad na Obaveštajne izvore"
+  />;
+}

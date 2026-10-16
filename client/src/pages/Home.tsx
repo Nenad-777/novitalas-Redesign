@@ -9,12 +9,12 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 const HERO_ARTICLE = {
-  href: "/nasa-planeta/najstariji-brodolom-kekova-turska-4700-godina",
-  category: "NAŠA PLANETA · ARHEOLOGIJA",
-  title: "Najstariji poznati brodolom na svetu pronađen kod Turske: teret ležao na dnu skoro pet milenijuma",
-  description: "Kod ostrva Kekova na jugu Turske arheolozi su pronašli ostatke brodoloma starog između 4.400 i 4.700 godina. Istraživači smatraju da bi mogao biti najstariji poznati brodolom na svetu.",
-  imageSrc: "/news/kekova-shipwreck-illustration.svg",
-  imageAlt: "AI ilustracija amfora i kamenog sidra na morskom dnu, inspirisana otkrićem brodoloma kod Kekove.",
+  href: "/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina",
+  category: "OBAVEŠTAJNI IZVORI · SAD–UKRAJINA",
+  title: "Bela kuća ograničila satelitsku vezu Ukrajini: ko je izdao nalog i zašto?",
+  description: "Reuters navodi da je nalog za ograničenje vojnog sistema Starshield stigao iz Bele kuće. Identitet nalogodavca nije poznat, a pristup je kasnije obnovljen.",
+  imageSrc: "/news/starshield-approved.jpg",
+  imageAlt: "AI ilustracija ukrajinskog vojnika sa satelitskim terminalom na položaju u sumrak.",
 };
 
 const ARTICLES = HOME_ARTICLES;
