@@ -1,7 +1,7 @@
 // Homepage rotation contract:
 // keep exactly eight secondary stories. On every new publication, prepend the
 // previous HERO here and let the oldest secondary story fall off automatically.
-const HOME_ARTICLE_CANDIDATES = [
+export const HOME_ARTICLE_CANDIDATES = [
   {
     href: "/nasa-planeta/najstariji-brodolom-kekova-turska-4700-godina",
     category: "NAŠA PLANETA · ARHEOLOGIJA",
