@@ -3,6 +3,15 @@
 // previous HERO here and let the oldest secondary story fall off automatically.
 const HOME_ARTICLE_CANDIDATES = [
   {
+    href: "/srbija/vilson-upozorio-na-beloruski-scenario-svet-ce-pratiti-izbore-u-srbiji",
+    category: "SRBIJA · IZBORI",
+    title: "Vilson upozorio na beloruski scenario: Svet će pratiti izbore u Srbiji",
+    description: "Američki kongresmen razgovarao je sa predstavnicima CRTE o izbornim uslovima u Srbiji. Posmatrači upozoravaju na nasilje, pritiske i neravnopravnu kampanju.",
+    imageSrc: "/news/wilson-crta-approved.webp",
+    imageAlt: "Urednički kolaž: Džo Vilson levo i Narodna skupština Srbije desno.",
+  },
+
+  {
     href: "/srbija/posle-svedocenja-o-cacilendu-i-15-martu-sve-glasniji-zahtevi-za-istragom",
     category: "SRBIJA · ISTRAŽIVANJE",
     title: "Posle svedočenja o Ćacilendu i događajima 15. marta 2025. godine, sve glasniji zahtevi za istragom",
