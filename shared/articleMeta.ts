@@ -97,6 +97,17 @@ export function buildJsonLd(meta: {
 }
 
 export const articleMeta: ArticleStaticMeta[] = [
+  {
+    path: "/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina",
+    title: "Bela kuća ograničila satelitsku vezu Ukrajini: ko je izdao nalog i zašto?",
+    description: "Reuters navodi da je nalog za ograničenje vojnog sistema Starshield stigao iz Bele kuće. Identitet nalogodavca nije poznat, a pristup je kasnije obnovljen.",
+    imageSrc: "/news/starshield-approved.jpg",
+    datePublished: "2026-10-16",
+    author: "Novi Talas",
+    section: "Obaveštajni izvori",
+    keywords: "Bela kuća, White House, Starshield, Starlink, SpaceX, Reuters, Ukrajina, SAD, satelitske komunikacije",
+  },
+
   {"path":"/srbija/izbori-25-oktobra-odihr-biracki-spisak-kontrola-kampanje","title":"Izbori 25. oktobra: ODIHR upozorava na probleme sa biračkim spiskom i kontrolom kampanje","description":"Međunarodni posmatrači ukazuju na otvorena pitanja o tačnosti biračkog spiska, korišćenju javnih sredstava i nadzoru medija.","imageSrc":"/news/odihr-approved-full.webp","datePublished":"2026-10-10","author":"Novi Talas","section":"Srbija"},
   { path: "/nasa-planeta/najstariji-brodolom-kekova-turska-4700-godina", title: "Najstariji poznati brodolom na svetu pronađen kod Turske: teret ležao na dnu skoro pet milenijuma", description: "Kod ostrva Kekova na jugu Turske arheolozi su pronašli ostatke brodoloma starog između 4.400 i 4.700 godina. Istraživači smatraju da bi mogao biti najstariji poznati brodolom na svetu.", imageSrc: "/news/kekova-approved-full.webp", datePublished: "2026-10-16", author: "Novi Talas", section: "Naša planeta", keywords: "Kekova, Turska, brodolom, arheologija, 4700 godina, bronzano doba, amfore, Mediteran" },
 

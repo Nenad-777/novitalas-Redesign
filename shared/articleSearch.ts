@@ -1,3 +1,4 @@
+import { HOME_ARTICLE_CANDIDATES } from "../client/src/pages/homeArticles";
 import { articleMeta } from "./articleMeta";
 import { seoData } from "./seo";
 
@@ -27,6 +28,17 @@ function categoryFromPath(path: string): string {
 /** The same two registries used by SEO pages and the sitemap are the search source. */
 export const articleSearchIndex: SearchArticle[] = Array.from(
   new Map<string, SearchArticle>([
+    ...HOME_ARTICLE_CANDIDATES.map((article): [string, SearchArticle] => [
+      article.href,
+      {
+        href: article.href,
+        category: categoryFromPath(article.href),
+        title: article.title,
+        description: article.description,
+        imageSrc: article.imageSrc,
+        imageAlt: article.imageAlt,
+      },
+    ]),
     ...articleMeta.map((article): [string, SearchArticle] => [
       article.path,
       {
@@ -57,11 +69,22 @@ export const articleSearchIndex: SearchArticle[] = Array.from(
   ]).values()
 );
 
+/** Serbian Cyrillic queries and Latin queries resolve to the same article text. */
+const CYRILLIC_TO_LATIN: Record<string, string> = {
+  а: "a", б: "b", в: "v", г: "g", д: "d", ђ: "dj",
+  е: "e", ж: "z", з: "z", и: "i", ј: "j", к: "k",
+  л: "l", љ: "lj", м: "m", н: "n", њ: "nj",
+  о: "o", п: "p", р: "r", с: "s", т: "t",
+  ћ: "c", у: "u", ф: "f", х: "h", ц: "c",
+  ч: "c", џ: "dz", ш: "s",
+};
+
 export function normalizeSearchText(value: string): string {
   return value
+    .toLocaleLowerCase("sr")
+    .replace(/[абвгдђежзијклљмнњопрстћуфхцчџш]/g, letter => CYRILLIC_TO_LATIN[letter] ?? letter)
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
-    .toLocaleLowerCase("sr-Latn")
     .replace(/đ/g, "dj")
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
