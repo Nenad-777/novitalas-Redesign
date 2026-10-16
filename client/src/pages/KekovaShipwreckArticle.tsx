@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 const PATH = "/nasa-planeta/najstariji-brodolom-kekova-turska-4700-godina";
-const IMAGE_SRC = "/news/kekova-shipwreck-illustration.svg";
+const IMAGE_SRC = "/news/kekova-approved-full.webp";
 const PARAGRAPHS = [
   "Arheolozi koji istražuju podmorje kod ostrva Kekova, u blizini južne obale Turske, pronašli su tragove brodoloma starog između 4.400 i 4.700 godina. Lokalitet je na dubini od oko 30 metara. Prema proceni turskih istraživača, reč je o najstarijem poznatom brodolomu, a naučni rad na nalazištu i dalje traje.",
   "Na mestu potonuća pronađene su amfore, velike keramičke posude za skladištenje i transport robe, kao i kamena sidra. Drveni trup broda nije sačuvan, pa su arheolozi starost nalazišta određivali poređenjem oblika keramike sa predmetima iz ranog bronzanog doba. Starost su dodatno potkrepili sidra i drugi predmeti pronađeni na morskom dnu.",
@@ -21,7 +21,7 @@ export default function KekovaShipwreckArticle() {
     imageAlt="AI ilustracija amfora i kamenog sidra na morskom dnu, inspirisana otkrićem brodoloma kod Kekove."
     imageCredit="Ilustracija: Novi talas / AI generisano. Nije fotografija arheološkog nalazišta."
     imageFirst={true}
-    imageHeightClass="h-auto aspect-video"
+    imageHeightClass="h-auto"
     paragraphs={PARAGRAPHS}
     backHref="/nasa-planeta"
     backLabel="← Nazad na Našu planetu"

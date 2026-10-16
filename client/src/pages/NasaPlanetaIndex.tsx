@@ -20,7 +20,7 @@ type NasaPlanetaArticle = {
 const ARTICLES: NasaPlanetaArticle[] = [
   {
     href: "/nasa-planeta/najstariji-brodolom-kekova-turska-4700-godina",
-    img: "/news/kekova-shipwreck-illustration.svg",
+    img: "/news/kekova-approved-full.webp",
     alt: "AI ilustracija amfora i kamenog sidra na morskom dnu, inspirisana otkrićem brodoloma kod Kekove.",
     imageCredit: "Ilustracija: Novi talas / AI generisano",
     title: "Najstariji poznati brodolom na svetu pronađen kod Turske: teret ležao na dnu skoro pet milenijuma",

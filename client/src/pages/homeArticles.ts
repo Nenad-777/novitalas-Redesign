@@ -7,7 +7,7 @@ const HOME_ARTICLE_CANDIDATES = [
     category: "NAŠA PLANETA · ARHEOLOGIJA",
     title: "Najstariji poznati brodolom na svetu pronađen kod Turske: teret ležao na dnu skoro pet milenijuma",
     description: "Kod ostrva Kekova na jugu Turske arheolozi su pronašli ostatke brodoloma starog između 4.400 i 4.700 godina.",
-    imageSrc: "/news/kekova-shipwreck-illustration.svg",
+    imageSrc: "/news/kekova-approved-full.webp",
     imageAlt: "Urednička ilustracija brodoloma kod Kekove.",
   },
   {
@@ -43,7 +43,7 @@ const HOME_ARTICLE_CANDIDATES = [
  imageSrc:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Saudi_Arabia_%28152%29_%288886427334%29.jpg",
  imageAlt:"Avion na aerodromu u Rijadu, arhivska fotografija iz 2013.",
 },
-  { href:"/srbija/izbori-25-oktobra-odihr-biracki-spisak-kontrola-kampanje", category:"SRBIJA · IZBORI", title:"Izbori 25. oktobra: ODIHR upozorava na probleme sa biračkim spiskom i kontrolom kampanje", description:"Međunarodni posmatrači ukazuju na otvorena pitanja o biračkom spisku i nadzoru kampanje.", imageSrc:"/news/glasanje-dijaspora-3-oktobar.jpg", imageAlt:"Arhivska ilustracija izbora u Srbiji." },
+  { href:"/srbija/izbori-25-oktobra-odihr-biracki-spisak-kontrola-kampanje", category:"SRBIJA · IZBORI", title:"Izbori 25. oktobra: ODIHR upozorava na probleme sa biračkim spiskom i kontrolom kampanje", description:"Međunarodni posmatrači ukazuju na otvorena pitanja o biračkom spisku i nadzoru kampanje.", imageSrc:"/news/odihr-approved-full.webp", imageAlt:"Ilustracija izbornog procesa u Srbiji: glasačka kutija, birački spisak i zastava Srbije." },
 
   {
     href: "/nasa-planeta/dzonatan-kornjaca-194-godine-tajna-dugovecnosti",
