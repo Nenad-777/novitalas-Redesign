@@ -10,6 +10,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import WilsonCrtaElectionArticle from "./pages/WilsonCrtaElectionArticle";
 import RiyadhAirportArticle from "./pages/RiyadhAirportArticle";
+import StarshieldWhiteHouseArticle from "./pages/StarshieldWhiteHouseArticle";
 import Russia300000TroopsArticle from "./pages/Russia300000TroopsArticle";
 import Pretraga from "./pages/Pretraga";
 import GeopolitikaIndex from "./pages/GeopolitikaIndex";
@@ -1030,6 +1031,7 @@ function Router() {
 
         <Route path="/srbija/francuska-protesti-arte-srpski-studenti" component={FrancuskaProtestiArteStudenti} />
 
+        <Route path="/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina" component={StarshieldWhiteHouseArticle} />
         {/* 404 */}
         <Route path="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" component={VucicZapadCentriMociArticle} />
         <Route path="/404" component={NotFound} />
