@@ -632,9 +632,9 @@ function ArticleCard({
         </h2>
 
         <p
-          className="mt-2 text-[15px] leading-[1.6]"
+          className="mt-2 nt-section-teaser"
           style={{
-            fontFamily: "'Crimson Pro', serif",
+            fontFamily: "'Lora', Georgia, serif",
             color: isDark ? "#9a978f" : "#555",
           }}
         >

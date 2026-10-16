@@ -63,7 +63,7 @@ export default function SrbijaPage() {
 
           {/* LIST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <article className="md:col-span-2"><Link href="/srbija/vilson-upozorio-na-beloruski-scenario-svet-ce-pratiti-izbore-u-srbiji" className="no-underline"><img src="/news/wilson-crta-approved.webp" alt="Urednički kolaž: Džo Vilson levo i Narodna skupština Srbije desno." width={1536} height={864} className="w-full h-auto mb-4" /><span className="kicker">SRBIJA · IZBORI</span><h2 className="mt-2 text-[26px] md:text-[34px] font-bold leading-[1.2]">Vilson upozorio na beloruski scenario: Svet će pratiti izbore u Srbiji</h2><p className="mt-3 text-[16px] leading-[1.65]">Američki kongresmen razgovarao je sa predstavnicima CRTE o izbornim uslovima u Srbiji.</p><div className="mt-3 text-[12px] font-semibold uppercase">Otvori tekst →</div></Link></article>
+            <article className="md:col-span-2"><Link href="/srbija/vilson-upozorio-na-beloruski-scenario-svet-ce-pratiti-izbore-u-srbiji" className="no-underline"><img src="/news/wilson-crta-approved.webp" alt="Urednički kolaž: Džo Vilson levo i Narodna skupština Srbije desno." width={1536} height={864} className="w-full h-auto mb-4" /><span className="kicker">SRBIJA · IZBORI</span><h2 className="mt-2 text-[26px] md:text-[34px] font-bold leading-[1.2]">Vilson upozorio na beloruski scenario: Svet će pratiti izbore u Srbiji</h2><p className="mt-3 nt-section-teaser nt-section-teaser--lead">Američki kongresmen razgovarao je sa predstavnicima CRTE o izbornim uslovima u Srbiji.</p><div className="mt-3 text-[12px] font-semibold uppercase">Otvori tekst →</div></Link></article>
             <article className="md:col-span-2">
               <Link href="/srbija/posle-svedocenja-o-cacilendu-i-15-martu-sve-glasniji-zahtevi-za-istragom" className="no-underline">
                 <img src="/news/cacilend-15-mart-2025-nenad-maricic.avif" alt="Fotografija protesta u Beogradu 15. marta 2025. godine." className="w-full h-[260px] md:h-[420px] object-cover mb-4" />
@@ -71,7 +71,7 @@ export default function SrbijaPage() {
                 <h2 className="mt-2 text-[26px] md:text-[34px] font-bold leading-[1.2]" style={{fontFamily:"'Playfair Display', Georgia, serif"}}>
                   Posle svedočenja o Ćacilendu i događajima 15. marta 2025. godine, sve glasniji zahtevi za istragom
                 </h2>
-                <p className="mt-3 text-[16px] leading-[1.65]">Sve više glasova zahteva od tužilaštva da ispita navode o organizovanju plaćenih grupa, mogućoj zloupotrebi državnih resursa i ulozi policije tokom protesta u Beogradu.</p>
+                <p className="mt-3 nt-section-teaser nt-section-teaser--lead">Sve više glasova zahteva od tužilaštva da ispita navode o organizovanju plaćenih grupa, mogućoj zloupotrebi državnih resursa i ulozi policije tokom protesta u Beogradu.</p>
                 <div className="mt-3 text-[12px] font-semibold uppercase">Otvori tekst →</div>
               </Link>
             </article>
@@ -83,11 +83,11 @@ export default function SrbijaPage() {
                 <h2 className="mt-2 text-[26px] md:text-[34px] font-bold leading-[1.2]" style={{fontFamily:"'Playfair Display', Georgia, serif"}}>
                   Izbori 25. oktobra: ODIHR upozorava na probleme sa biračkim spiskom i kontrolom kampanje
                 </h2>
-                <p className="mt-3 text-[16px] leading-[1.65]">Međunarodni posmatrači ukazuju na pitanja tačnosti biračkog spiska, korišćenja javnih sredstava i nadzora medija. Prvi izveštaj komisije za reviziju spiska očekuje se tek posle izbora.</p>
+                <p className="mt-3 nt-section-teaser nt-section-teaser--lead">Međunarodni posmatrači ukazuju na pitanja tačnosti biračkog spiska, korišćenja javnih sredstava i nadzora medija. Prvi izveštaj komisije za reviziju spiska očekuje se tek posle izbora.</p>
                 <div className="mt-3 text-[12px] font-semibold uppercase">Otvori tekst →</div>
               </Link>
             </article>
-            <article className="md:col-span-2"><Link href="/srbija/francuska-protesti-arte-srpski-studenti" className="no-underline"><img src="/news/france-serbian-protests.jpg" alt="Grafika Novi Talas: Francuska na nogama" className="w-full h-[260px] md:h-[420px] object-cover mb-4" /><span className="kicker">SVET · FRANCUSKA</span><h2 className="mt-2 text-[26px] md:text-[34px] font-bold leading-[1.2]" style={{fontFamily:"Playfair Display, Georgia, serif"}}>Francuska na nogama, a na ARTE-u se govori o srpskim studentima</h2><p className="mt-3 text-[16px] leading-[1.65]">Dok Francusku potresaju protesti mladih, Noé Girardot-Champsaur u javnoj objavi povodom gostovanja na ARTE-u ukazuje na iskustvo srpskih studenata i njihov politički odgovor vlastima.</p><div className="mt-3 text-[12px] font-semibold uppercase">Otvori tekst →</div></Link></article>
+            <article className="md:col-span-2"><Link href="/srbija/francuska-protesti-arte-srpski-studenti" className="no-underline"><img src="/news/france-serbian-protests.jpg" alt="Grafika Novi Talas: Francuska na nogama" className="w-full h-[260px] md:h-[420px] object-cover mb-4" /><span className="kicker">SVET · FRANCUSKA</span><h2 className="mt-2 text-[26px] md:text-[34px] font-bold leading-[1.2]" style={{fontFamily:"Playfair Display, Georgia, serif"}}>Francuska na nogama, a na ARTE-u se govori o srpskim studentima</h2><p className="mt-3 nt-section-teaser nt-section-teaser--lead">Dok Francusku potresaju protesti mladih, Noé Girardot-Champsaur u javnoj objavi povodom gostovanja na ARTE-u ukazuje na iskustvo srpskih studenata i njihov politički odgovor vlastima.</p><div className="mt-3 text-[12px] font-semibold uppercase">Otvori tekst →</div></Link></article>
             <article className="md:col-span-2">
               <Link href="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" className="no-underline">
                 <div className="border mb-4 overflow-hidden" style={{ borderColor: isDark ? "#2a2a2e" : "#eee", backgroundColor: isDark ? "#1a1c22" : "#f7f7f7" }}>
@@ -95,7 +95,7 @@ export default function SrbijaPage() {
                 </div>
                 <span className="kicker">SRBIJA · ANALIZA</span>
                 <h2 className="mt-2 text-[26px] md:text-[34px] font-bold leading-[1.2]" style={{ fontFamily: "'Playfair Display', serif", color: isDark ? "#e0ddd5" : "#111" }}>Vučić i Zapad: optužbe za autokratiju stigle su u centre moći</h2>
-                <p className="mt-3 text-[16px] leading-[1.65]" style={{ fontFamily: "'Crimson Pro', serif", color: isDark ? "#9a978f" : "#555" }}>Godinama su Kosovo, regionalna stabilnost i geopolitika držali pitanja demokratije, slobode medija i vladavine prava u Srbiji u drugom planu odnosa sa Zapadom. Danas su optužbe za autoritarizam stigle mnogo dalje.</p>
+                <p className="mt-3 nt-section-teaser nt-section-teaser--lead" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#9a978f" : "#555" }}>Godinama su Kosovo, regionalna stabilnost i geopolitika držali pitanja demokratije, slobode medija i vladavine prava u Srbiji u drugom planu odnosa sa Zapadom. Danas su optužbe za autoritarizam stigle mnogo dalje.</p>
                 <div className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]" style={{ fontFamily: "'Source Sans 3', sans-serif", color: isDark ? "#d9bf7a" : "#8B0000" }}>Otvori tekst →</div>
               </Link>
             </article>
@@ -109,7 +109,7 @@ export default function SrbijaPage() {
                 <h2 className="mt-2 text-[26px] md:text-[34px] font-bold leading-[1.2]" style={{ fontFamily: "'Playfair Display', serif", color: isDark ? "#e0ddd5" : "#111" }}>
                   Važno za građane Srbije u inostranstvu: Rok za prijavu za glasanje ističe 3. oktobra u ponoć
                 </h2>
-                <p className="mt-3 text-[16px] leading-[1.65]" style={{ fontFamily: "'Crimson Pro', serif", color: isDark ? "#9a978f" : "#555" }}>
+                <p className="mt-3 nt-section-teaser nt-section-teaser--lead" style={{ fontFamily: "'Lora', Georgia, serif", color: isDark ? "#9a978f" : "#555" }}>
                   Studenti u blokadi traže hitnu reakciju MSP-a i RIK-a zbog prijavljenih problema sa zahtevima birača iz više država. Rok za prijavu ističe 3. oktobra u ponoć.
                 </p>
                 <div className="mt-3 text-[12px] font-semibold uppercase tracking-[0.08em]" style={{ fontFamily: "'Source Sans 3', sans-serif", color: isDark ? "#d9bf7a" : "#8B0000" }}>Otvori tekst →</div>
@@ -149,9 +149,9 @@ export default function SrbijaPage() {
                 </h2>
 
                 <p
-                  className="mt-2 text-[15px] leading-[1.6]"
+                  className="mt-2 nt-section-teaser"
                   style={{
-                    fontFamily: "'Crimson Pro', serif",
+                    fontFamily: "'Lora', Georgia, serif",
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
@@ -208,9 +208,9 @@ export default function SrbijaPage() {
                 </h2>
 
                 <p
-                  className="mt-2 text-[15px] leading-[1.6]"
+                  className="mt-2 nt-section-teaser"
                   style={{
-                    fontFamily: "'Crimson Pro', serif",
+                    fontFamily: "'Lora', Georgia, serif",
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
@@ -262,9 +262,9 @@ export default function SrbijaPage() {
                 </h2>
 
                 <p
-                  className="mt-2 text-[15px] leading-[1.6]"
+                  className="mt-2 nt-section-teaser"
                   style={{
-                    fontFamily: "'Crimson Pro', serif",
+                    fontFamily: "'Lora', Georgia, serif",
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
@@ -317,9 +317,9 @@ export default function SrbijaPage() {
                 </h2>
 
                 <p
-                  className="mt-2 text-[15px] leading-[1.6]"
+                  className="mt-2 nt-section-teaser"
                   style={{
-                    fontFamily: "'Crimson Pro', serif",
+                    fontFamily: "'Lora', Georgia, serif",
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
@@ -374,9 +374,9 @@ export default function SrbijaPage() {
                 </h2>
 
                 <p
-                  className="mt-2 text-[15px] leading-[1.6]"
+                  className="mt-2 nt-section-teaser"
                   style={{
-                    fontFamily: "'Crimson Pro', serif",
+                    fontFamily: "'Lora', Georgia, serif",
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
@@ -431,9 +431,9 @@ export default function SrbijaPage() {
                 </h2>
 
                 <p
-                  className="mt-2 text-[15px] leading-[1.6]"
+                  className="mt-2 nt-section-teaser"
                   style={{
-                    fontFamily: "'Crimson Pro', serif",
+                    fontFamily: "'Lora', Georgia, serif",
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
@@ -484,9 +484,9 @@ export default function SrbijaPage() {
                 </h2>
 
                 <p
-                  className="mt-2 text-[15px] leading-[1.6]"
+                  className="mt-2 nt-section-teaser"
                   style={{
-                    fontFamily: "'Crimson Pro', serif",
+                    fontFamily: "'Lora', Georgia, serif",
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
@@ -539,9 +539,9 @@ export default function SrbijaPage() {
                 </h2>
 
                 <p
-                  className="mt-2 text-[15px] leading-[1.6]"
+                  className="mt-2 nt-section-teaser"
                   style={{
-                    fontFamily: "'Crimson Pro', serif",
+                    fontFamily: "'Lora', Georgia, serif",
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
@@ -591,9 +591,9 @@ export default function SrbijaPage() {
                 </h2>
 
                 <p
-                  className="mt-2 text-[15px] leading-[1.6]"
+                  className="mt-2 nt-section-teaser"
                   style={{
-                    fontFamily: "'Crimson Pro', serif",
+                    fontFamily: "'Lora', Georgia, serif",
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
@@ -646,9 +646,9 @@ export default function SrbijaPage() {
                 </h2>
 
                 <p
-                  className="mt-2 text-[15px] leading-[1.6]"
+                  className="mt-2 nt-section-teaser"
                   style={{
-                    fontFamily: "'Crimson Pro', serif",
+                    fontFamily: "'Lora', Georgia, serif",
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
@@ -701,9 +701,9 @@ export default function SrbijaPage() {
                 </h2>
 
                 <p
-                  className="mt-2 text-[15px] leading-[1.6]"
+                  className="mt-2 nt-section-teaser"
                   style={{
-                    fontFamily: "'Crimson Pro', serif",
+                    fontFamily: "'Lora', Georgia, serif",
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
@@ -756,9 +756,9 @@ export default function SrbijaPage() {
                 </h2>
 
                 <p
-                  className="mt-2 text-[15px] leading-[1.6]"
+                  className="mt-2 nt-section-teaser"
                   style={{
-                    fontFamily: "'Crimson Pro', serif",
+                    fontFamily: "'Lora', Georgia, serif",
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
@@ -810,9 +810,9 @@ export default function SrbijaPage() {
                 </h2>
 
                 <p
-                  className="mt-2 text-[15px] leading-[1.6]"
+                  className="mt-2 nt-section-teaser"
                   style={{
-                    fontFamily: "'Crimson Pro', serif",
+                    fontFamily: "'Lora', Georgia, serif",
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
@@ -863,9 +863,9 @@ export default function SrbijaPage() {
                 </h2>
 
                 <p
-                  className="mt-2 text-[15px] leading-[1.6]"
+                  className="mt-2 nt-section-teaser"
                   style={{
-                    fontFamily: "'Crimson Pro', serif",
+                    fontFamily: "'Lora', Georgia, serif",
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >

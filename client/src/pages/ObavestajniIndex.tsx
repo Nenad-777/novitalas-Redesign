@@ -216,9 +216,9 @@ export default function ObavestajniIndex() {
                 </h2>
 
                 <p
-                  className="mt-3 text-[16px] md:text-[18px] leading-[1.6]"
+                  className="mt-3 nt-section-teaser nt-section-teaser--lead"
                   style={{
-                    fontFamily: "'Crimson Pro', serif",
+                    fontFamily: "'Lora', Georgia, serif",
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
@@ -280,9 +280,9 @@ export default function ObavestajniIndex() {
                     </h3>
 
                     <p
-                      className="mt-2 text-[15px] leading-[1.6]"
+                      className="mt-2 nt-section-teaser"
                       style={{
-                        fontFamily: "'Crimson Pro', serif",
+                        fontFamily: "'Lora', Georgia, serif",
                         color: isDark ? "#9a978f" : "#555",
                       }}
                     >

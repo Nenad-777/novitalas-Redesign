@@ -294,3 +294,28 @@ main article blockquote {
 .dark .photo-credit {
   color: #6b6760;
 }
+
+
+/* Rubrike: kratki opisi vesti imaju isti font kao ostatak portala.
+   Ova ciljana pravila ispravljaju staro "main article p" nasleđivanje,
+   bez menjanja tipografije punih članaka ili fotografskih potpisa. */
+main article p.nt-section-teaser {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+main article p.nt-section-teaser--lead {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  main article p.nt-section-teaser {
+    font-size: 16px;
+  }
+
+  main article p.nt-section-teaser--lead {
+    font-size: 18px;
+  }
+}
