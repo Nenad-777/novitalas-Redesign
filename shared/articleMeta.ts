@@ -97,6 +97,8 @@ export function buildJsonLd(meta: {
 }
 
 export const articleMeta: ArticleStaticMeta[] = [
+  { path: "/nasa-planeta/najstariji-brodolom-kekova-turska-4700-godina", title: "Najstariji poznati brodolom na svetu pronađen kod Turske: teret ležao na dnu skoro pet milenijuma", description: "Kod ostrva Kekova na jugu Turske arheolozi su pronašli ostatke brodoloma starog između 4.400 i 4.700 godina. Istraživači smatraju da bi mogao biti najstariji poznati brodolom na svetu.", imageSrc: "/news/kekova-shipwreck-illustration.svg", datePublished: "2026-10-16", author: "Novi Talas", section: "Naša planeta", keywords: "Kekova, Turska, brodolom, arheologija, 4700 godina, bronzano doba, amfore, Mediteran" },
+
   { path: "/srbija/vilson-upozorio-na-beloruski-scenario-svet-ce-pratiti-izbore-u-srbiji", title: "Vilson upozorio na beloruski scenario: Svet će pratiti izbore u Srbiji", description: "Američki kongresmen razgovarao je sa predstavnicima CRTE o izbornim uslovima u Srbiji. Posmatrači upozoravaju na nasilje, pritiske na birače i neravnopravnu kampanju.", imageSrc: "/news/wilson-crta-approved.webp", datePublished: "2026-10-15", author: "Novi Talas", section: "Srbija", keywords: "Džo Vilson, Joe Wilson, CRTA, Srbija, izbori 25. oktobar, demokratija, SRBIJA Act" },
   {
     path: "/srbija/posle-svedocenja-o-cacilendu-i-15-martu-sve-glasniji-zahtevi-za-istragom",

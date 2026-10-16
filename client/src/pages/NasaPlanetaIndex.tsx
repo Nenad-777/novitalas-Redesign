@@ -19,6 +19,15 @@ type NasaPlanetaArticle = {
 
 const ARTICLES: NasaPlanetaArticle[] = [
   {
+    href: "/nasa-planeta/najstariji-brodolom-kekova-turska-4700-godina",
+    img: "/news/kekova-shipwreck-illustration.svg",
+    alt: "AI ilustracija amfora i kamenog sidra na morskom dnu, inspirisana otkrićem brodoloma kod Kekove.",
+    imageCredit: "Ilustracija: Novi talas / AI generisano",
+    title: "Najstariji poznati brodolom na svetu pronađen kod Turske: teret ležao na dnu skoro pet milenijuma",
+    description: "Kod ostrva Kekova arheolozi su otkrili drevne amfore i sidra koji otkrivaju tragove pomorske trgovine u ranom bronzanom dobu.",
+  },
+
+  {
     href: "/nasa-planeta/dzonatan-kornjaca-194-godine-tajna-dugovecnosti",
     img: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Jonathan_Tortoise_2022.jpg",
     alt: "Džonatan, najstarija poznata živa kopnena životinja, na ostrvu Sveta Jelena.",

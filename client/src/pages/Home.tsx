@@ -9,12 +9,12 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 const HERO_ARTICLE = {
-  href: "/srbija/vilson-upozorio-na-beloruski-scenario-svet-ce-pratiti-izbore-u-srbiji",
-  category: "SRBIJA · IZBORI",
-  title: "Vilson upozorio na beloruski scenario: Svet će pratiti izbore u Srbiji",
-  description: "Američki kongresmen razgovarao je sa predstavnicima CRTE o izbornim uslovima u Srbiji. Posmatrači upozoravaju na nasilje, pritiske i neravnopravnu kampanju.",
-  imageSrc: "/news/wilson-crta-approved.webp",
-  imageAlt: "Urednički kolaž: Džo Vilson levo i Narodna skupština Srbije desno.",
+  href: "/nasa-planeta/najstariji-brodolom-kekova-turska-4700-godina",
+  category: "NAŠA PLANETA · ARHEOLOGIJA",
+  title: "Najstariji poznati brodolom na svetu pronađen kod Turske: teret ležao na dnu skoro pet milenijuma",
+  description: "Kod ostrva Kekova na jugu Turske arheolozi su pronašli ostatke brodoloma starog između 4.400 i 4.700 godina. Istraživači smatraju da bi mogao biti najstariji poznati brodolom na svetu.",
+  imageSrc: "/news/kekova-shipwreck-illustration.svg",
+  imageAlt: "AI ilustracija amfora i kamenog sidra na morskom dnu, inspirisana otkrićem brodoloma kod Kekove.",
 };
 
 const ARTICLES = HOME_ARTICLES;
