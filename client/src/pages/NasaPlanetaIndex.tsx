@@ -501,9 +501,9 @@ export default function NasaPlanetaIndex() {
                 </h2>
 
                 <p
-                  className="mt-3 text-[17px] md:text-[19px] leading-[1.65]"
+                  className="mt-3 nt-section-teaser nt-section-teaser--lead"
                   style={{
-                    fontFamily: "'Crimson Pro', serif",
+                    fontFamily: "'Lora', Georgia, serif",
                     color: isDark ? "#9a978f" : "#555",
                   }}
                 >
