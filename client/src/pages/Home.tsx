@@ -9,12 +9,12 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 const HERO_ARTICLE = {
-  href: "/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina",
-  category: "OBAVEŠTAJNI IZVORI · SAD–UKRAJINA",
-  title: "Reuters: Naredba za ograničavanje ukrajinskog vojnog satelitskog sistema potekla iz Bele kuće",
-  description: "Tri izvora upoznata sa odlukom navode da je Pentagon dobio instrukciju da ograniči Starshield. Ukrajinska vojska prijavila je probleme sa dronovima; nije utvrđeno ko je izdao naredbu.",
-  imageSrc: "/news/starshield-white-house-editorial.svg",
-  imageAlt: "Urednička ilustracija Bele kuće i satelitskih komunikacija, ne prikazuje stvarni događaj.",
+  href: "/nasa-planeta/najstariji-brodolom-kekova-turska-4700-godina",
+  category: "NAŠA PLANETA · ARHEOLOGIJA",
+  title: "Najstariji poznati brodolom na svetu pronađen kod Turske: teret ležao na dnu skoro pet milenijuma",
+  description: "Kod ostrva Kekova na jugu Turske arheolozi su pronašli ostatke brodoloma starog između 4.400 i 4.700 godina. Istraživači smatraju da bi mogao biti najstariji poznati brodolom na svetu.",
+  imageSrc: "/news/kekova-shipwreck-illustration.svg",
+  imageAlt: "AI ilustracija amfora i kamenog sidra na morskom dnu, inspirisana otkrićem brodoloma kod Kekove.",
 };
 
 const ARTICLES = HOME_ARTICLES;
