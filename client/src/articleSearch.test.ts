@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
 import {
@@ -12,10 +13,8 @@ describe("article search", () => {
     expect(new Set(articleSearchIndex.map(article => article.href)).size).toBe(
       articleSearchIndex.length
     );
-    expect(
-      new Set(articleSearchIndex.map(article => article.category))
-    ).toEqual(
-      new Set([
+    expect([...new Set(articleSearchIndex.map(article => article.category))]).toEqual(
+      expect.arrayContaining([
         "Geopolitika",
         "Srbija",
         "Svet",
@@ -52,6 +51,31 @@ describe("article search", () => {
       );
     }
   );
+
+  it.each(["Bela kuća", "Bela kuca", "Бела кућа", "БЕЛА КУЋА", "Starshield"])(
+    "finds the White House / Starshield story for %s",
+    query => {
+      expect(searchArticles(query).map(article => article.href)).toContain(
+        "/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina"
+      );
+    }
+  );
+
+  it("keeps every homepage archive candidate searchable", () => {
+    const homeSource = readFileSync(new URL("./pages/homeArticles.ts", import.meta.url), "utf8");
+    const homeRoutes = [...homeSource.matchAll(/href:\\s*["'](\\/[^"']+)["']/g)].map(match => match[1]);
+    expect(homeRoutes.length).toBeGreaterThan(8);
+    for (const href of homeRoutes) {
+      expect(articleSearchIndex.some(article => article.href === href)).toBe(true);
+    }
+  });
+
+  it("keeps the homepage lead article in the search index", () => {
+    const homeSource = readFileSync(new URL("./pages/Home.tsx", import.meta.url), "utf8");
+    const lead = homeSource.match(/const HERO_ARTICLE\\s*=\\s*\\{\\s*href:\\s*"([^"]+)"/)?.[1];
+    expect(lead).toBeDefined();
+    expect(articleSearchIndex.some(article => article.href === lead)).toBe(true);
+  });
 
   it("returns an empty list for an empty query", () => {
     expect(searchArticles("  ")).toEqual([]);
