@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
+import { HOME_ARTICLE_CANDIDATES } from "./pages/homeArticles";
 
 import {
   articleSearchIndex,
@@ -62,17 +63,15 @@ describe("article search", () => {
   );
 
   it("keeps every homepage archive candidate searchable", () => {
-    const homeSource = readFileSync(new URL("./pages/homeArticles.ts", import.meta.url), "utf8");
-    const homeRoutes = [...homeSource.matchAll(/href:\\s*["'](\\/[^"']+)["']/g)].map(match => match[1]);
-    expect(homeRoutes.length).toBeGreaterThan(8);
-    for (const href of homeRoutes) {
-      expect(articleSearchIndex.some(article => article.href === href)).toBe(true);
+    expect(HOME_ARTICLE_CANDIDATES.length).toBeGreaterThan(8);
+    for (const article of HOME_ARTICLE_CANDIDATES) {
+      expect(articleSearchIndex.some(indexed => indexed.href === article.href)).toBe(true);
     }
   });
 
   it("keeps the homepage lead article in the search index", () => {
     const homeSource = readFileSync(new URL("./pages/Home.tsx", import.meta.url), "utf8");
-    const lead = homeSource.match(/const HERO_ARTICLE\\s*=\\s*\\{\\s*href:\\s*"([^"]+)"/)?.[1];
+    const lead = homeSource.match(/const HERO_ARTICLE\s*=\s*\{\s*href:\s*"([^"]+)"/)?.[1];
     expect(lead).toBeDefined();
     expect(articleSearchIndex.some(article => article.href === lead)).toBe(true);
   });
