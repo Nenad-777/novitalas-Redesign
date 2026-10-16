@@ -10,6 +10,14 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
   {
+    href: "/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina",
+    img: "/news/starshield-approved.jpg",
+    alt: "AI ilustracija ukrajinskog vojnika sa satelitskim terminalom na položaju u sumrak.",
+    title: "Bela kuća ograničila satelitsku vezu Ukrajini: ko je izdao nalog i zašto?",
+    description: "Reuters navodi da je nalog za ograničenje vojnog sistema Starshield stigao iz Bele kuće. Identitet nalogodavca nije poznat, a pristup je kasnije obnovljen.",
+    date: "16. oktobar 2026.",
+  },
+  {
     href: "/obavestajni-izvori/spijunska-afera-nemacka-evropske-sluzbe-strahuju-za-tajne",
     img: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Zentrale_des_Bundesnachrichtendienst%2C_Berlin.jpg",
     alt: "Sedište nemačke spoljne obaveštajne službe BND u Berlinu, arhivska fotografija.",
