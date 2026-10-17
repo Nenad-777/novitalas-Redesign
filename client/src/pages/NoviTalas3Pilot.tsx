@@ -29,6 +29,8 @@ const STORIES:Story[] = [
   {id:"srbijaact",section:"Geopolitika",title:"SRBIJA Act stigao i u Senat: Wilson podržao inicijativu",deck:"U Senatu SAD predstavljen je predlog S. 5611. To ne znači da je usvojen zakon.",date:"1. oktobar 2026.",image:"https://upload.wikimedia.org/wikipedia/commons/a/a6/US_Senate_Session_Chamber.jpg",alt:"Sala Senata Sjedinjenih Država",credit:"U.S. Senate Photo Studio / Wikimedia Commons — Public Domain",href:"/geopolitika/srbija-act-stigao-i-u-senat-wilson-podrzao-inicijativu-i-ponovo-otvorio-pitanje-izbora-u-srbiji",Component:SrbijaActSenateArticle},
   {id:"renoir",section:"Kultura",title:"Ko krade Renoara ako ne može da ga proda?",deck:"Misterija nestalih slika i paradoks umetničkih dela koja je gotovo nemoguće prodati.",date:"9. septembar 2026.",image:"https://upload.wikimedia.org/wikipedia/commons/e/ec/Renoir_-_Portrait_de_Madame_Colonna_Romano%2C_non_dat%C3%A9.jpg",alt:"Pjer-Ogist Renoar, Portret gospođe Kolona Romano",credit:"Renoar / Wikimedia Commons, CC BY-SA 4.0",href:"/nasa-planeta/ko-krade-renoara-ako-ne-moze-da-ga-proda",Component:RenoirHeistArticle},
 ];
+const RAIL_IDS=["starshield","kekova","vilson","grenland","renoir","bnd","vucic","djonatan","srbijaact"];
+const RAIL_STORIES=RAIL_IDS.map(id=>STORIES.find(story=>story.id===id)!).filter(Boolean);
 const byId=(id:string|null)=>STORIES.find(s=>s.id===id)||null;
 const NAV=[
   {label:"Geopolitika",id:"geopolitika"},
@@ -57,6 +59,9 @@ export default function NoviTalas3Pilot(){
   const [searchValue,setSearchValue]=useState("");
   const [menuOpen,setMenuOpen]=useState(false);
   const [shareText,setShareText]=useState("");
+  const [railIndex,setRailIndex]=useState(0);
+  const railRef=useRef<HTMLDivElement>(null);
+  const triggerImage=useRef<HTMLImageElement|null>(null);
   const readerRef=useRef<HTMLDivElement>(null);
   const backRef=useRef<HTMLButtonElement>(null);
   const busy=useRef(false);
@@ -84,7 +89,7 @@ export default function NoviTalas3Pilot(){
     if(busy.current||current.current===next)return;
     const old=current.current;
     if(!old&&next)lastScroll.current=window.scrollY;
-    const source=focusImage(old||next||"",Boolean(old));
+    const source=old ? focusImage(old,true) : (triggerImage.current?.isConnected ? triggerImage.current : focusImage(next||"",false));
     const start=source?.getBoundingClientRect();
     let ghost:HTMLImageElement|null=null;
     if(source&&start&&start.width>30&&prefersMotion()&&start.bottom>0&&start.top<innerHeight){
@@ -96,7 +101,7 @@ export default function NoviTalas3Pilot(){
     if(!next){window.scrollTo({top:lastScroll.current,behavior:"instant"});}
     if(next&&readerRef.current)readerRef.current.scrollTop=0;
     requestAnimationFrame(()=>{
-      const destination=focusImage(old||next||"",Boolean(next));
+      const destination=next ? focusImage(next,true) : (triggerImage.current?.isConnected ? triggerImage.current : focusImage(old||"",false));
       const end=destination?.getBoundingClientRect();
       if(!ghost||!destination||!start||!end||end.width<30||typeof ghost.animate!=="function"){
         ghost?.remove();if(next)backRef.current?.focus({preventScroll:true});return;
@@ -112,8 +117,9 @@ export default function NoviTalas3Pilot(){
       });
     });
   }
-  function openStory(id:string){
+  function openStory(id:string, source?:HTMLImageElement|null){
     if(!byId(id)||busy.current)return;
+    triggerImage.current=source||null;
     window.history.pushState({nt3:true},"",PATH+"?clanak="+encodeURIComponent(id));
     transition(id);
   }
@@ -134,8 +140,19 @@ export default function NoviTalas3Pilot(){
     try{if(navigator.share)await navigator.share({url,title:story.title});else{await navigator.clipboard.writeText(url);setShareText("Link je kopiran.");}}
     catch(err){if((err as Error).name!=="AbortError")setShareText(url);}
   }
+  function updateRailIndex(){
+    const el=railRef.current;if(!el)return;
+    const thumb=el.querySelector<HTMLElement>(".nt3-rail-thumb");
+    const step=thumb ? thumb.getBoundingClientRect().width+7 : 72;
+    setRailIndex(Math.max(0,Math.min(RAIL_STORIES.length-1,Math.round(el.scrollLeft/step))));
+  }
+  function moveRail(){
+    const el=railRef.current;if(!el)return;
+    const thumb=el.querySelector<HTMLElement>(".nt3-rail-thumb");
+    el.scrollBy({left:Math.max(150,(thumb?.getBoundingClientRect().width||65)*2+14),behavior:prefersMotion()?"smooth":"auto"});
+  }
   const storyBtn=(s:Story,kind:string,element:ReactNode)=>
-    <button key={s.id+"-"+kind} type="button" onClick={()=>openStory(s.id)} className={"nt3-story nt3-story-"+kind} aria-label={"Pročitaj: "+s.title}>{element}</button>;
+    <button key={s.id+"-"+kind} type="button" onClick={e=>openStory(s.id,e.currentTarget.querySelector("img"))} className={"nt3-story nt3-story-"+kind} aria-label={"Pročitaj: "+s.title}>{element}</button>;
 
   return <div className="nt3" data-nt3-pilot>
     <header className="nt3-header">
@@ -159,6 +176,20 @@ export default function NoviTalas3Pilot(){
           <div className="nt3-hero-photo"><img src={STORIES[0].image} data-nt3-id={STORIES[0].id} alt={STORIES[0].alt} fetchPriority="high"/></div>
           <div className="nt3-hero-headline"><span className="nt3-kicker">OBAVEŠTAJNI IZVORI</span><h1>Bela kuća ograničila satelitsku vezu Ukrajini</h1><p>Ko je izdao nalog i zašto?</p><span className="nt3-cta">Pročitaj vest <ArrowUpRight size={17}/></span></div>
         </>)}
+        <section className="nt3-story-rail" aria-label="Izbor vesti na naslovnoj">
+          <div className="nt3-story-rail-head">
+            <span>IZBOR REDAKCIJE</span>
+            <div className="nt3-story-rail-meta">
+              <span aria-live="off">{String(railIndex+1).padStart(2,"0")} / {String(RAIL_STORIES.length).padStart(2,"0")}</span>
+              <button type="button" onClick={moveRail} aria-label="Prikaži sledeće vesti" title="Sledeće vesti"><ArrowRight size={20}/></button>
+            </div>
+          </div>
+          <div className="nt3-story-rail-track" ref={railRef} onScroll={updateRailIndex} role="group" aria-label="Prevuci da vidiš druge vesti">
+            {RAIL_STORIES.map((item,i)=><button className="nt3-rail-thumb" type="button" key={item.id} onClick={e=>openStory(item.id,e.currentTarget.querySelector("img"))} aria-label={"Pročitaj vest: "+item.title} title={item.title}>
+              <img src={item.image} alt="" loading={i<5?"eager":"lazy"}/>
+            </button>)}
+          </div>
+        </section>
         <div className="nt3-feature-grid">
           {STORIES.slice(1,3).map((s,i)=>storyBtn(s,"feature",<>
             <div className="nt3-feature-photo"><img src={s.image} data-nt3-id={s.id} alt={s.alt} loading="lazy"/></div>
