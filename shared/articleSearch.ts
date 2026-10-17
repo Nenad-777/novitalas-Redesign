@@ -11,6 +11,8 @@ export interface SearchArticle {
   imageSrc?: string;
   imageAlt?: string;
   publishedAt?: string;
+  /** Month-only archive precision; do not invent an unknown publication day. */
+  publishedMonth?: string;
   keywords?: string;
 }
 
