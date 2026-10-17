@@ -227,7 +227,6 @@ export default function OpenEditionPilot() {
       <main className="oe-main">
         <div className="oe-edition-heading">
           <span className="oe-kicker">IZDANJE 001 <span className="oe-sep">/</span> PET PRIČA</span>
-          <p>Jedan prostor. Mnogo otkrića.</p>
         </div>
 
         <div className="oe-opening-grid">
@@ -253,7 +252,6 @@ export default function OpenEditionPilot() {
                 <ArrowUpRight size={16} className="oe-side-arrow"/>
               </button>
             )}
-            <div className="oe-side-footer">Istraži izdanje u svom ritmu.</div>
           </aside>
         </div>
 
@@ -264,11 +262,7 @@ export default function OpenEditionPilot() {
           </div>
         </div>
 
-        <section className="oe-section-intro" aria-label="Otkrivaj dalje">
-          <span className="oe-kicker">ODABRANO ZA OVO IZDANJE</span>
-          <h2>Pet priča. Pet različitih pogleda na svet.</h2>
-          <p>Ne moraš da ih čitaš redom. Zastani tamo gde te nešto zainteresuje.</p>
-        </section>
+        <div className="oe-chapter-heading" aria-hidden="true">JOŠ U IZDANJU</div>
 
         <div className="oe-scenes">
           <article id="oe-scene-kekova" className="oe-feature oe-feature-image">
@@ -302,15 +296,15 @@ export default function OpenEditionPilot() {
             <small className="oe-credit">{STORIES[4].credit}</small>
           </article>
         </div>
-        <div className="oe-issue-end"><span>◊</span><p>Kraj izdanja. Otkrij nešto novo, kad god poželiš.</p><button type="button" onClick={() => setOverview(true)}>Sve priče <ArrowRight size={17}/></button></div>
+        <div className="oe-issue-end"><button type="button" onClick={() => setOverview(true)}>Sve priče <ArrowRight size={17}/></button></div>
       </main>
-      <footer className="oe-footer"><Wordmark small/><span>Pilot istraživačkog interfejsa · Novi Talas</span><a href="https://novitalas.org">Poseti postojeći sajt <ArrowUpRight size={14}/></a></footer>
+      <footer className="oe-footer"><Wordmark small/><a href="https://novitalas.org">Postojeći sajt <ArrowUpRight size={14}/></a></footer>
 
       {overview && <div className="oe-overlay" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setOverview(false); }}>
         <section className="oe-overview" role="dialog" aria-modal="true" aria-label="Sve priče u izdanju">
           <div className="oe-overview-header"><Wordmark small/><button type="button" ref={overviewCloseRef} aria-label="Zatvori pregled" onClick={() => setOverview(false)}><X size={22}/></button></div>
           <div className="oe-overview-body">
-            <span className="oe-kicker">OTVORENO IZDANJE · 17. OKTOBAR 2026.</span><h2>U ovom izdanju</h2><p>Pet priča. Odaberi bilo koju, bez zadatog redosleda.</p>
+            <span className="oe-kicker">OTVORENO IZDANJE · 17. OKTOBAR 2026.</span><h2>U ovom izdanju</h2>
             <div className="oe-overview-list">{STORIES.map((story, index) => <button type="button" key={story.id} onClick={() => openStory(story.id)}>
               <span className="oe-overview-number">0{index + 1}</span><img src={story.image} alt="" loading="lazy"/><span className="oe-overview-copy"><small>{story.category}</small><strong>{story.title}</strong><em>{story.date}</em></span><ArrowUpRight size={19}/>
             </button>)}</div>
@@ -328,10 +322,10 @@ export default function OpenEditionPilot() {
         <div className="oe-reader-scroll" ref={readerScrollRef}>
           <div className="oe-reader-article"><EditionEmbedContext.Provider value={true}><ReaderComponent/></EditionEmbedContext.Provider></div>
           {selected.id !== "renoir" && <section className="oe-reader-discovery" aria-label="Predlog iz arhive">
-            <span className="oe-discovery-kicker">MOŽDA ĆE TE ZANIMATI I OVO</span>
+            <span className="oe-discovery-kicker">IZ ARHIVE</span>
             <button type="button" className="oe-discovery-link" onClick={() => openStory("renoir")}>
               <img src={STORIES[4].image} alt="" loading="lazy"/>
-              <span><small>IZ ARHIVE · 9. SEPTEMBAR 2026.</small><strong>{STORIES[4].title}</strong><em>Jedna sasvim drugačija priča iz sveta umetnosti.</em><b>Otkrij priču <ArrowUpRight size={15}/></b></span>
+              <span><small>9. SEPTEMBAR 2026.</small><strong>{STORIES[4].title}</strong><b>Pročitaj priču <ArrowUpRight size={15}/></b></span>
             </button>
           </section>}
           <div className="oe-reader-finish"><button type="button" onClick={closeReader}><BookOpen size={18}/> Nazad na izdanje</button><a href={"https://novitalas.org" + selected.href} target="_blank" rel="noopener noreferrer">Originalni članak <ArrowUpRight size={15}/></a></div>
