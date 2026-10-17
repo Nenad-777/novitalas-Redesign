@@ -174,6 +174,96 @@
 .nt3-category-note{font-size:12px;line-height:1.6;color:#77716a;margin:20px 0}
 .nt3-category-original{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;text-decoration:none;border-bottom:1px solid var(--nt-wine);padding-bottom:5px;color:var(--nt-wine)}
 .nt3-category-return{display:flex;align-items:center;gap:7px;background:transparent;border:0;padding:30px 0 0;font-size:12px;font-weight:800}
+/* Iteration 04 — editorial magazine shelf directly beneath the lead story.
+   Distinct from the tiny editorial news thumbnail rail beneath it. */
+.nt3 .nt3-issues-carousel{
+  margin:0 0 0;
+  padding:28px 0 31px;
+  scroll-margin-top:20px;
+  background:transparent;
+  color:var(--nt-ink);
+  border-top:1px solid var(--nt-line);
+}
+.nt3 .nt3-issues-carousel .nt3-issues-top{
+  max-width:none;margin:0 0 24px;padding:0;
+  border:0;align-items:end;gap:15px;
+}
+.nt3 .nt3-issues-carousel .nt3-issues-top>div>span{
+  color:var(--nt-wine);font-size:10px;letter-spacing:.14em;
+}
+.nt3 .nt3-issues-carousel .nt3-issues-top h2{
+  font:700 clamp(27px,5.6vw,40px)/1.1 var(--nt-serif);
+  letter-spacing:-.047em;margin:10px 0 0;
+}
+.nt3 .nt3-issues-carousel .nt3-issues-top p{
+  font:400 12px/1.55 "Lora",Georgia,serif;
+  color:var(--nt-gray);margin:8px 0 0;
+}
+.nt3 .nt3-issues-carousel .nt3-issues-top>a{
+  font-size:11px;color:var(--nt-wine);align-self:center;
+  border-bottom:1px solid currentColor;padding-bottom:4px;
+}
+.nt3-issues-carousel-head{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:12px;margin-bottom:13px;
+  font-size:9px;font-weight:800;letter-spacing:.14em;color:#7c746d;
+}
+.nt3-issues-carousel-controls{display:flex;align-items:center;gap:15px}
+.nt3-issues-carousel-controls button{
+  display:grid;place-items:center;padding:4px 0 4px 7px;
+  border:0;background:transparent;color:var(--nt-ink);
+}
+.nt3 .nt3-issues-carousel .nt3-issue-track{
+  max-width:none;margin:0;display:flex;gap:15px;
+  overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:1px;
+  overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;padding:2px 2px 16px;
+}
+.nt3 .nt3-issues-carousel .nt3-issue-track::-webkit-scrollbar{display:none}
+.nt3 .nt3-issues-carousel .nt3-issue-card{
+  flex:0 0 clamp(175px,48vw,235px);width:clamp(175px,48vw,235px);
+  min-width:0;scroll-snap-align:start;transition:transform .28s ease;
+}
+.nt3 .nt3-issues-carousel .nt3-issue-cover{
+  aspect-ratio:3/4;box-shadow:0 10px 20px #15223727;
+}
+.nt3 .nt3-issues-carousel .nt3-issue-logo{
+  font-size:clamp(16px,3.6vw,22px);top:7%;
+}
+.nt3 .nt3-issues-carousel .nt3-issue-lettering{
+  bottom:7%;left:8%;right:7%;gap:4px;
+}
+.nt3 .nt3-issues-carousel .nt3-issue-lettering small{
+  font-size:9px;letter-spacing:.11em;
+}
+.nt3 .nt3-issues-carousel .nt3-issue-lettering strong{
+  font-size:clamp(25px,5.8vw,35px);line-height:1.04;
+}
+.nt3 .nt3-issues-carousel .nt3-issue-lettering em{
+  font-size:15px;
+}
+.nt3 .nt3-issues-carousel .nt3-issue-label{
+  margin-top:13px;font-size:10px;letter-spacing:.04em;
+  display:flex;align-items:center;justify-content:space-between;
+  color:var(--nt-ink);
+}
+.nt3 .nt3-issues-carousel .nt3-issue-label svg{color:var(--nt-wine)}
+.nt3 .nt3-issues-carousel+.nt3-story-rail{margin-top:4px}
+@media(min-width:700px){
+  .nt3 .nt3-issues-carousel{padding:37px 0 36px}
+  .nt3 .nt3-issues-carousel .nt3-issues-top{margin-bottom:28px}
+  .nt3 .nt3-issues-carousel .nt3-issue-track{gap:25px}
+  .nt3 .nt3-issues-carousel .nt3-issue-card{flex-basis:clamp(215px,22vw,290px);width:clamp(215px,22vw,290px)}
+  .nt3 .nt3-issues-carousel .nt3-issue-lettering strong{font-size:clamp(29px,3vw,42px)}
+  .nt3 .nt3-issues-carousel .nt3-issue-logo{font-size:clamp(18px,2.3vw,27px)}
+}
+@media(min-width:1150px){
+  .nt3-issues-carousel-controls button{display:none}
+}
+@media(max-width:360px){
+  .nt3 .nt3-issues-carousel .nt3-issues-top h2{font-size:26px}
+  .nt3 .nt3-issues-carousel .nt3-issues-top>a{font-size:10px}
+}
 @media(min-width:700px){
   .nt3-category-inner{padding:55px 37px 90px}
   .nt3-category-header{padding:0 37px;height:82px}
