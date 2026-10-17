@@ -11,7 +11,7 @@ type MonthView = MonthData & { articles: Story[] };
 
 const MONTHS: MonthData[] = [
   { id: "2026-10", name: "OKTOBAR", year: "2026", coverHref: "/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina", coverImage: "/news/starshield-approved.jpg", coverTitle: "Bela kuća ograničila satelitsku vezu Ukrajini", alt: "AI ilustracija ukrajinskog vojnika i satelitskog terminala u sumrak", credit: "AI ilustracija / Novi Talas", description: "Obaveštajni izvori" },
-  { id: "2026-09", name: "SEPTEMBAR", year: "2026", coverHref: "/geopolitika/amerika-nije-dobila-grenland-dobija-ono-zbog-cega-ga-je-zelela", coverImage: "/news/greenland-us-arctic.jpg", coverTitle: "Amerika nije dobila Grenland", alt: "Urednička ilustracija arktičkog pejzaža Grenlanda", credit: "Ilustracija / Novi Talas", description: "Geopolitika" },
+  { id: "2026-09", name: "SEPTEMBAR", year: "2026", coverHref: "/geopolitika/afd-menja-politicku-mapu-nemacke-ruski-gas-se-vraca-u-igru", coverImage: "/news/afd-weidel.jpg", coverTitle: "AfD menja političku mapu Nemačke", alt: "Urednički vizual uz analizu političkog uspona AfD u Nemačkoj", credit: "Vizual iz postojeće objave / Novi Talas", description: "Geopolitika" },
   { id: "2026-02", name: "FEBRUAR", year: "2026", coverHref: "/nasa-planeta/alma-skriveno-jezgro", coverImage: "/alma-mlecni-put.jpg", coverTitle: "Najveća ALMA mapa Mlečnog puta", alt: "Svemirska vizuelizacija astronomskog posmatranja s ALMA teleskopa", credit: "Vizual iz postojećeg teksta / Novi Talas", description: "Naša planeta" },
 ];
 
