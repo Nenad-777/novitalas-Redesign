@@ -144,6 +144,14 @@
   .mm-reader-top .mm-wordmark{display:none}
   .mm-reader-top{grid-template-columns:1fr auto}
 }
+@media(max-width:699px){
+  /* Keep long Serbian month names legible on two-column covers. */
+  .mm-cover:not(:first-child) .mm-cover-bottom {left:10px;right:8px;bottom:13px}
+  .mm-cover:not(:first-child) .mm-cover-bottom strong {font-size:clamp(17px,4.05vw,25px);letter-spacing:-.063em;overflow-wrap:normal}
+  .mm-cover:not(:first-child) .mm-cover-bottom em {font-size:13px}
+  .mm-cover:not(:first-child) .mm-cover-bottom small {font-size:8px;letter-spacing:.06em}
+  .mm-cover:not(:first-child) .mm-cover-masthead {font-size:clamp(12px,3vw,19px)}
+}
 @media(prefers-reduced-motion:reduce){
   .mm *,.mm *::before,.mm *::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
 }
