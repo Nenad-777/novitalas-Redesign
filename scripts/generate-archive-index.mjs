@@ -118,3 +118,5 @@ mkdirSync(dirname(output),{recursive:true});
 writeFileSync(output,JSON.stringify(collected,null,2)+"\n");
 writeFileSync(reportPath,JSON.stringify({generatedAt:new Date().toISOString(),totalRoutes:routeMap.size,recovered:collected.length,missingDate:unresolved.filter(x=>x.reason?.includes("date")).length,missingImages:unresolved.filter(x=>x.reason?.includes("image")).length,unresolved},null,2)+"\n");
 console.log("[NOVI TALAS ARCHIVE] routed="+routeMap.size+" recovered="+collected.length+" unresolved="+unresolved.length+" (no inferred dates)");
+
+// Archive catalog is regenerated before each build.
