@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ComponentType, type FormEvent } from "react";
+import { useEffect, useRef, useState, type ComponentType, type FormEvent, type ReactNode } from "react";
 import { flushSync } from "react-dom";
 import { ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, Menu, Search, Share2, X } from "lucide-react";
 import { EditionEmbedContext } from "@/contexts/EditionEmbedContext";
@@ -134,7 +134,7 @@ export default function NoviTalas3Pilot(){
     try{if(navigator.share)await navigator.share({url,title:story.title});else{await navigator.clipboard.writeText(url);setShareText("Link je kopiran.");}}
     catch(err){if((err as Error).name!=="AbortError")setShareText(url);}
   }
-  const storyBtn=(s:Story,kind:string,element:React.ReactNode)=>
+  const storyBtn=(s:Story,kind:string,element:ReactNode)=>
     <button key={s.id+"-"+kind} type="button" onClick={()=>openStory(s.id)} className={"nt3-story nt3-story-"+kind} aria-label={"Pročitaj: "+s.title}>{element}</button>;
 
   return <div className="nt3" data-nt3-pilot>
