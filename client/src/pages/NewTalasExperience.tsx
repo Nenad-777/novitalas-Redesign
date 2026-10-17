@@ -37,7 +37,7 @@ const VERIFIED_COVERS:Record<string,string> = {
 };
 const issues:Issue[] = MONTH_NAMES.map((name,i)=>{
   const id="2026-"+String(i+2).padStart(2,"0");
-  const articles=knownArticles.filter(a=>published(a) && a.publishedAt!.startsWith(id)).sort(chronological);
+  const articles=knownArticles.filter(a=>(published(a) && a.publishedAt!.startsWith(id)) || (!published(a) && a.publishedMonth===id)).sort(chronological);
   const cover=articles.find(a=>a.href===VERIFIED_COVERS[id])||articles.find(a=>Boolean(a.imageSrc))||null;
   return {id,name,articles,cover};
 }).reverse();
@@ -94,7 +94,7 @@ function IssueCover({issue}:{issue:Issue}){
 }
 function StoryCard({article}:{article:Article}){
   return <article className="nx-story-card">
-    <a href={article.href} className="nx-story-photo"><img src={article.imageSrc||"/news/svet-dnevni.jpg"} alt={article.imageAlt||article.title} loading="lazy"/></a>
+    <a href={article.href} className={"nx-story-photo"+(!article.imageSrc?" nx-story-typographic":"")}>{article.imageSrc?<img src={article.imageSrc} alt={article.imageAlt||article.title} loading="lazy"/>:<span className="nx-story-placeholder"><strong>NOVI TALAS</strong><small>{sectionLabel(article)}</small></span>}</a>
     <div className="nx-story-text"><LabelLink href={sectionHref(article)}>{sectionLabel(article)}</LabelLink><h3><a href={article.href}>{article.title}</a></h3><p>{article.description}</p></div>
   </article>;
 }
@@ -123,7 +123,7 @@ function Home(){
     </FocusCarousel>
     <div className="nx-rubrics-title"><span className="nx-eyebrow">TEME KOJE PRATIMO</span><h2>Rubrike</h2></div>
     {SECTIONS.map(section=>{
-      const articles=knownArticles.filter(a=>sectionHref(a)==="/"+section.slug && a.imageSrc && published(a)).sort(chronological).slice(0,10);
+      const articles=knownArticles.filter(a=>sectionHref(a)==="/"+section.slug && published(a)).sort(chronological).slice(0,10);
       return articles.length?<FocusCarousel key={section.slug} title={section.title} eyebrow={section.deck} actionHref={"/"+section.slug} className="nx-section-carousel">
         {articles.map(article=><StoryCard key={article.href} article={article}/>)}
       </FocusCarousel>:null;
@@ -133,7 +133,7 @@ function Home(){
 function SectionLanding({slug}:{slug:string}){
   const section=SECTIONS.find(s=>s.slug===slug);
   if(!section)return <Home/>;
-  const articles=knownArticles.filter(a=>sectionHref(a)==="/"+slug && a.imageSrc).sort(chronological);
+  const articles=knownArticles.filter(a=>sectionHref(a)==="/"+slug).sort(chronological);
   const dated=articles.filter(published);
   const undated=articles.filter(a=>!published(a));
   return <main className="nx-main nx-library"><div className="nx-library-intro"><span className="nx-eyebrow">NOVI TALAS / RUBRIKA</span><h1>{section.title}</h1><p>{section.deck}</p></div>{articles.length?<>{dated.length>0&&<FocusCarousel eyebrow="NAJNOVIJE IZ RUBRIKE · OD NAJNOVIJEG" title="Hronološki" actionHref="/izdanja" actionText="Mesečna izdanja">{dated.slice(0,10).map(a=><StoryCard key={a.href} article={a}/>)}</FocusCarousel>}<div className="nx-section-grid">{dated.map(a=><StoryCard key={a.href} article={a}/>)}</div>{undated.length>0&&<section className="nx-undated"><h2>Datum u proveri</h2><p>Ovi tekstovi ostaju dostupni, ali ih ne svrstavamo među najnovije bez potvrđenog datuma.</p><div className="nx-section-grid">{undated.map(a=><StoryCard key={a.href} article={a}/>)}</div></section>}</>:<div className="nx-empty">Arhiva ove rubrike je u dopuni.</div>}</main>;
