@@ -119,7 +119,8 @@ for(const [href,component] of routeMap) {
   }
   title=normalize(title);
   description=normalize(description);
-  imageSrc=normalize(imageSrc);
+  // Do not collapse internal filename spaces: a legacy CRISPR asset uses four.
+  imageSrc=typeof imageSrc==='string'?imageSrc.trim():'';
   const publishedAt=isoFromText(dateText);
   const publishedMonth=!publishedAt?monthPrecision(dateText):null;
   const localImg=imageSrc.startsWith("/")?resolve(root,"client/public",imageSrc.slice(1)):null;
