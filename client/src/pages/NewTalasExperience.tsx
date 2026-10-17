@@ -12,7 +12,8 @@ const SECTIONS = [
   { label:"Geopolitika", slug:"geopolitika", title:"Geopolitika", deck:"Velike sile, granice i svet u promeni." },
   { label:"Srbija", slug:"srbija", title:"Srbija", deck:"Događaji, odluke i društvo." },
   { label:"Obaveštajni izvori", slug:"obavestajni-izvori", title:"Obaveštajni izvori", deck:"Informacije, uticaj i moć." },
-  { label:"Naša planeta", slug:"nasa-planeta", title:"Naša planeta", deck:"Nauka, kultura, istorija i otkrića." }
+  { label:"Naša planeta", slug:"nasa-planeta", title:"Naša planeta", deck:"Nauka, priroda, istorija i otkrića." },
+  { label:"Kultura", slug:"kultura", title:"Kultura", deck:"Umetnost, književnost, film i stvaralaštvo." }
 ] as const;
 const HERO = {
   href:"/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina",
@@ -41,7 +42,8 @@ const issues:Issue[] = MONTH_NAMES.map((name,i)=>{
   const cover=articles.find(a=>a.href===VERIFIED_COVERS[id])||articles.find(a=>Boolean(a.imageSrc))||null;
   return {id,name,articles,cover};
 }).reverse();
-function sectionHref(a:Article){const part=a.href.split("/")[1];return SECTIONS.find(s=>s.slug===part)?.slug ? "/"+part : "/nasa-planeta";}
+const CULTURE_ARTICLES=new Set(["/nasa-planeta/ko-krade-renoara-ako-ne-moze-da-ga-proda","/nasa-planeta/umetnost-koja-dise-teamlab-tokio","/nasa-planeta/tarantino-je-napisao-novi-film-fincer-ga-je-rezirao"]);
+function sectionHref(a:Article){if(CULTURE_ARTICLES.has(a.href) || /^kultura$/i.test(a.category)) return "/kultura";const part=a.href.split("/")[1];return SECTIONS.find(s=>s.slug===part)?.slug ? "/"+part : "/nasa-planeta";}
 function sectionLabel(a:Article){return SECTIONS.find(s=>"/"+s.slug===sectionHref(a))?.label || a.category || "Novi talas";}
 function Brand(){return <span className="nx-brand">NOVI <em>TALAS</em></span>}
 function WaveSignal(){return <span className="nx-wave-divider" aria-hidden="true"><i/><svg viewBox="0 0 120 24" role="presentation"><path d="M2 12 H34 C41 12 41 7 45 7 C50 7 49 18 53 18 C58 18 56 4 60 4 C64 4 62 20 67 20 C72 20 72 12 80 12 H118" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg><i/></span>}
