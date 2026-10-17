@@ -138,6 +138,7 @@ export default function NoviTalas3Pilot(){
   }
   function openSection(id:string, from?:HTMLElement|null){
     if(!NAV.some(n=>n.id===id)||busy.current)return;
+    if(section===id)return;
     sectionReturn.current=from||null;
     setMenuOpen(false);
     window.history.pushState({nt3section:true},"",PATH+"?rubrika="+encodeURIComponent(id));
@@ -258,7 +259,7 @@ export default function NoviTalas3Pilot(){
       <section className="nt3-issues" id="nt3-izdanja" aria-label="Mesečni magazini">
         <div className="nt3-issues-top"><div><span>ARHIVA NOVOG TALASA</span><h2>Izdanja</h2></div><a href="/magazini-lab">Svi magazini <ArrowUpRight size={17}/></a></div>
         <div className="nt3-issue-grid">{MONTHS.map((m,i)=><a href={"/magazini-lab?mesec="+m.id} key={m.id} className="nt3-issue-card">
-          <span className="nt3-issue-cover"><img src={m.image} alt={m.alt} loading={i===0?"eager":"lazy"}/><span className="nt3-issue-shade"/><span className="nt3-issue-logo">NOVI <b>TALAS</b></span><span className="nt3-issue-lettering"><small>{m.kind}</small><strong>{m.month}</strong><em>{m.year}</em></span></span>
+          <span className="nt3-issue-cover"><img src={m.image} alt={m.alt} loading={i===0?"eager":"lazy"}/><span className="nt3-issue-shade"/><span className="nt3-issue-logo">NOVI <b>TALAS</b></span><span className="nt3-issue-lettering"><small>MESEČNO IZDANJE</small><strong>{m.month}</strong><em>{m.year}</em></span></span>
           <span className="nt3-issue-label">{m.month} {m.year}. <ArrowUpRight size={16}/></span>
         </a>)}</div>
       </section>
@@ -267,7 +268,7 @@ export default function NoviTalas3Pilot(){
 
 
     {chosenSection&&<div className="nt3-category-view" role="dialog" aria-modal={!story} aria-label={"Rubrika "+chosenSection.label}>
-      <div className="nt3-category-header"><button type="button" onClick={closeSection}><ArrowLeft size={19}/> Naslovna</button><Wordmark small/><button type="button" onClick={()=>{setSection(null);window.history.replaceState(null,"",PATH);}} aria-label="Zatvori rubriku"><X size={21}/></button></div>
+      <div className="nt3-category-header"><button type="button" onClick={closeSection}><ArrowLeft size={19}/> Naslovna</button><Wordmark small/><button type="button" onClick={closeSection} aria-label="Zatvori rubriku"><X size={21}/></button></div>
       <div className="nt3-category-scroll" ref={sectionRef} key={chosenSection.id}>
         <div className="nt3-category-inner">
           <div className="nt3-category-eyebrow">NOVI TALAS / RUBRIKE</div>
