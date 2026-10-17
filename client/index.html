@@ -10,6 +10,57 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1"
     />
+    <!-- Experimental 0.48s cinematic entrance, independent of React / all routes. -->
+    <link rel="preload" as="image" href="/news/nt3-cinematic-opening-720.webp" media="(max-width: 650px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/news/nt3-cinematic-opening-1200.webp" media="(min-width: 651px)" fetchpriority="high" />
+    <style>
+      #nt3-opening {
+        position: fixed;
+        inset: 0;
+        z-index: 2147483000;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        background: #030d1e;
+        pointer-events: none;
+        opacity: 1;
+        visibility: visible;
+      }
+      #nt3-opening picture {
+        display: block;
+        width: 100vw;
+        max-height: 100vh;
+        max-height: 100dvh;
+        transform: scale(.965);
+        transform-origin: 52% 50%;
+        will-change: transform;
+      }
+      #nt3-opening img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 100vh;
+        max-height: 100dvh;
+        object-fit: contain;
+      }
+      #nt3-opening.nt3-opening-go {
+        animation: nt3-curtain-out 480ms cubic-bezier(.2,.65,.3,1) both;
+      }
+      #nt3-opening.nt3-opening-go picture {
+        animation: nt3-poster-zoom 480ms cubic-bezier(.15,.65,.3,1) both;
+      }
+      @keyframes nt3-poster-zoom {
+        from { transform: scale(.965); }
+        to { transform: scale(1.085); }
+      }
+      @keyframes nt3-curtain-out {
+        0%, 44% { opacity: 1; visibility: visible; }
+        100% { opacity: 0; visibility: hidden; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #nt3-opening { display: none !important; }
+      }
+    </style>
     <title>NOVI TALAS — Vaš prozor u svet</title>
     <meta
       name="description"
@@ -52,7 +103,39 @@
   </head>
 
   <body>
+    <div id="nt3-opening" aria-hidden="true">
+      <picture>
+        <source srcset="/news/nt3-cinematic-opening-720.webp" media="(max-width: 650px)" />
+        <img src="/news/nt3-cinematic-opening-1200.webp" width="1200" height="630" alt="" decoding="sync" fetchpriority="high" />
+      </picture>
+    </div>
     <div id="root"></div>
+    <script>
+      // Start the very brief zoom as soon as the destination page is mounted.
+      // An upper timeout prevents a broken app from leaving the intro on-screen.
+      (() => {
+        const opening = document.getElementById("nt3-opening");
+        const root = document.getElementById("root");
+        if (!opening || !root) return;
+        let started = false;
+        let observer;
+        const reveal = () => {
+          if (started) return;
+          started = true;
+          if (observer) observer.disconnect();
+          requestAnimationFrame(() => opening.classList.add("nt3-opening-go"));
+        };
+        if (root.childElementCount) {
+          reveal();
+        } else {
+          observer = new MutationObserver(() => {
+            if (root.childElementCount) reveal();
+          });
+          observer.observe(root, { childList: true });
+          setTimeout(reveal, 1400);
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
     <script
       defer
