@@ -66,6 +66,8 @@ export default function NoviTalas3Pilot(){
   const [shareText,setShareText]=useState("");
   const [railIndex,setRailIndex]=useState(0);
   const railRef=useRef<HTMLDivElement>(null);
+  const [issueIndex,setIssueIndex]=useState(0);
+  const issuesRef=useRef<HTMLDivElement>(null);
   const triggerImage=useRef<HTMLImageElement|null>(null);
   const readerRef=useRef<HTMLDivElement>(null);
   const backRef=useRef<HTMLButtonElement>(null);
@@ -175,6 +177,23 @@ export default function NoviTalas3Pilot(){
     const step=thumb ? thumb.getBoundingClientRect().width+7 : 72;
     setRailIndex(Math.max(0,Math.min(RAIL_STORIES.length-1,Math.round(el.scrollLeft/step))));
   }
+  function updateIssueIndex(){
+    const el=issuesRef.current;if(!el)return;
+    const first=el.querySelector<HTMLElement>(".nt3-issue-card");
+    if(!first)return;
+    const gap=parseFloat(getComputedStyle(el).gap)||14;
+    setIssueIndex(Math.max(0,Math.min(MONTHS.length-1,Math.round(el.scrollLeft/(first.getBoundingClientRect().width+gap)))));
+  }
+  function moveIssues(){
+    const el=issuesRef.current;if(!el)return;
+    const first=el.querySelector<HTMLElement>(".nt3-issue-card");
+    if(!first)return;
+    const gap=parseFloat(getComputedStyle(el).gap)||14;
+    const step=first.getBoundingClientRect().width+gap;
+    const target=issueIndex>=MONTHS.length-1?0:issueIndex+1;
+    el.scrollTo({left:target*step,behavior:prefersMotion()?"smooth":"instant"});
+    setIssueIndex(target);
+  }
   function moveRail(){
     const el=railRef.current;if(!el)return;
     const thumb=el.querySelector<HTMLElement>(".nt3-rail-thumb");
@@ -205,9 +224,28 @@ export default function NoviTalas3Pilot(){
           <div className="nt3-hero-photo"><img src={STORIES[0].image} data-nt3-id={STORIES[0].id} alt={STORIES[0].alt} fetchPriority="high"/></div>
           <div className="nt3-hero-headline">{categoryLabel("Obaveštajni izvori")}<h1>Bela kuća ograničila satelitsku vezu Ukrajini</h1><p>Ko je izdao nalog i zašto?</p><span className="nt3-cta">Pročitaj vest <ArrowUpRight size={17}/></span></div>
         </>)}
+        <section className="nt3-issues nt3-issues-carousel" id="nt3-izdanja" aria-label="Mesečni magazini Novog talasa">
+          <div className="nt3-issues-top">
+            <div><span>ARHIVA NOVOG TALASA</span><h2>Mesečna izdanja</h2><p>Svaki mesec. Jedna naslovna priča. Čitav svet tema.</p></div>
+            <a href="/magazini-lab">Sva izdanja <ArrowUpRight size={17}/></a>
+          </div>
+          <div className="nt3-issues-carousel-head">
+            <span>LISTAJ MAGAZINE</span>
+            <div className="nt3-issues-carousel-controls">
+              <span aria-live="polite">{String(issueIndex+1).padStart(2,"0")} / {String(MONTHS.length).padStart(2,"0")}</span>
+              <button type="button" onClick={moveIssues} aria-label="Sledeće mesečno izdanje"><ArrowRight size={20}/></button>
+            </div>
+          </div>
+          <div className="nt3-issue-grid nt3-issue-track" ref={issuesRef} onScroll={updateIssueIndex} role="group" aria-label="Mesečna izdanja, prevuci ulevo za sledeće">
+            {MONTHS.map((m,i)=><a href={"/magazini-lab?mesec="+m.id} key={m.id} className="nt3-issue-card" aria-label={"Otvori magazin "+m.month.toLowerCase()+" "+m.year}>
+              <span className="nt3-issue-cover"><img src={m.image} alt={m.alt} loading={i===0?"eager":"lazy"}/><span className="nt3-issue-shade"/><span className="nt3-issue-logo">NOVI <b>TALAS</b></span><span className="nt3-issue-lettering"><small>MESEČNO IZDANJE</small><strong>{m.month}</strong><em>{m.year}</em></span></span>
+              <span className="nt3-issue-label">{m.month} {m.year}. <ArrowUpRight size={16}/></span>
+            </a>)}
+          </div>
+        </section>
         <section className="nt3-story-rail" aria-label="Izbor vesti na naslovnoj">
           <div className="nt3-story-rail-head">
-            <span>IZBOR REDAKCIJE</span>
+            <span>IZBOR REDAKCIJE · VESTI</span>
             <div className="nt3-story-rail-meta">
               <span aria-live="off">{String(railIndex+1).padStart(2,"0")} / {String(RAIL_STORIES.length).padStart(2,"0")}</span>
               <button type="button" onClick={moveRail} aria-label="Prikaži sledeće vesti" title="Sledeće vesti"><ArrowRight size={20}/></button>
@@ -256,13 +294,6 @@ export default function NoviTalas3Pilot(){
         </section>
       </div>
 
-      <section className="nt3-issues" id="nt3-izdanja" aria-label="Mesečni magazini">
-        <div className="nt3-issues-top"><div><span>ARHIVA NOVOG TALASA</span><h2>Izdanja</h2></div><a href="/magazini-lab">Svi magazini <ArrowUpRight size={17}/></a></div>
-        <div className="nt3-issue-grid">{MONTHS.map((m,i)=><a href={"/magazini-lab?mesec="+m.id} key={m.id} className="nt3-issue-card">
-          <span className="nt3-issue-cover"><img src={m.image} alt={m.alt} loading={i===0?"eager":"lazy"}/><span className="nt3-issue-shade"/><span className="nt3-issue-logo">NOVI <b>TALAS</b></span><span className="nt3-issue-lettering"><small>MESEČNO IZDANJE</small><strong>{m.month}</strong><em>{m.year}</em></span></span>
-          <span className="nt3-issue-label">{m.month} {m.year}. <ArrowUpRight size={16}/></span>
-        </a>)}</div>
-      </section>
     </main>
     <footer className="nt3-footer"><Wordmark small/><div><a href="/magazini-lab">Izdanja</a><a href="https://novitalas.org">Postojeći sajt <ArrowUpRight size={15}/></a></div></footer>
 
