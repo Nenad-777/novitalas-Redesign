@@ -39,7 +39,7 @@ function FocusCarousel({children,title,eyebrow,actionHref,actionText="Pogledaj s
   function go(delta:number){
     const el=rail.current;if(!el)return;
     const target=Math.max(0,Math.min(count-1,active+delta));
-    el.children[target]?.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"instant":"smooth",block:"nearest",inline:"center"});
+    el.children[target]?.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"nearest",inline:"center"});
     setActive(target);
   }
   useEffect(()=>{
@@ -116,6 +116,12 @@ function Home(){
     })}
   </main></>;
 }
+function SectionLanding({slug}:{slug:string}){
+  const section=SECTIONS.find(s=>s.slug===slug);
+  if(!section)return <Home/>;
+  const articles=knownArticles.filter(a=>sectionHref(a)==="/"+slug && a.imageSrc).sort((a,b)=>(b.publishedAt||"").localeCompare(a.publishedAt||""));
+  return <main className="nx-main nx-library"><div className="nx-library-intro"><span className="nx-eyebrow">NOVI TALAS / RUBRIKA</span><h1>{section.title}</h1><p>{section.deck}</p></div>{articles.length?<><FocusCarousel eyebrow="NAJNOVIJE IZ RUBRIKE" title="Izdvajamo" actionHref="/izdanja" actionText="Mesečna izdanja">{articles.slice(0,10).map(a=><StoryCard key={a.href} article={a}/>)}</FocusCarousel><div className="nx-section-grid">{articles.map(a=><StoryCard key={a.href} article={a}/>)}</div></>:<div className="nx-empty">Arhiva ove rubrike je u dopuni.</div>}</main>;
+}
 function Library(){return <main className="nx-main nx-library"><div className="nx-library-intro"><span className="nx-eyebrow">NOVI TALAS / ARHIVA</span><h1>Biblioteka izdanja</h1><p>Svaki mesec. Jedna korica. Čitav svet tema.</p></div><div className="nx-library-grid">{issues.map(issue=><IssueCover key={issue.id} issue={issue}/>)}</div><p className="nx-archive-note">Arhiva se dopunjava na osnovu potvrđenih datuma objavljivanja. Nepotpuni metapodaci ne znače da tekst nije objavljen.</p></main>}
 function Edition({id}:{id:string}){
   const issue=issues.find(i=>i.id===id);
@@ -124,7 +130,7 @@ function Edition({id}:{id:string}){
   return <main className="nx-main nx-edition">
     <a className="nx-back" href="/izdanja"><ArrowLeft size={17}/> Sva izdanja</a>
     <div className="nx-edition-heading"><span className="nx-eyebrow">MESEČNO IZDANJE · 2026.</span><h1>{issue.name}</h1><p>{issue.articles.length?issue.articles.length+" evidentiranih tekstova sa potvrđenim datumom objavljivanja":"Arhiva ovog meseca je u proveri."}</p></div>
-    {issue.cover&&<a className="nx-edition-lead" href={issue.cover.href}><img src={issue.cover.imageSrc} alt={issue.cover.imageAlt||issue.cover.title}/><span><LabelLink href={sectionHref(issue.cover)}>{sectionLabel(issue.cover)}</LabelLink><h2>{issue.cover.title}</h2><span className="nx-edition-open">Pročitaj <ArrowUpRight size={18}/></span></span></a>}
+    {issue.cover&&<div className="nx-edition-lead"><a href={issue.cover.href}><img src={issue.cover.imageSrc} alt={issue.cover.imageAlt||issue.cover.title}/></a><span><LabelLink href={sectionHref(issue.cover)}>{sectionLabel(issue.cover)}</LabelLink><h2><a href={issue.cover.href}>{issue.cover.title}</a></h2><a href={issue.cover.href} className="nx-edition-open">Pročitaj <ArrowUpRight size={18}/></a></span></div>}
     {sections.map(s=><FocusCarousel key={s.slug} title={s.title} eyebrow="U OVOM IZDANJU" actionHref={"/"+s.slug}>{s.articles.map(a=><StoryCard key={a.href} article={a}/>)}</FocusCarousel>)}
     {!issue.articles.length&&<div className="nx-empty">Nećemo dodeljivati tekstove ovom mesecu bez potvrđenog datuma. Sadržaj će se pojaviti po završetku inventara.</div>}
   </main>;
@@ -132,5 +138,5 @@ function Edition({id}:{id:string}){
 export default function NewTalasExperience(){
   const path=typeof window!=="undefined"?window.location.pathname:"/";
   useEffect(()=>{document.title=path==="/"?"Novi Talas — Priče koje ostaju":path==="/izdanja"?"Mesečna izdanja | Novi Talas":"Izdanje | Novi Talas"},[path]);
-  return <div className="nx"><Header/>{path==="/izdanja"?<Library/>:path.startsWith("/izdanja/")?<Edition id={path.split("/")[2]}/>:<Home/>}<Footer/></div>;
+  return <div className="nx"><Header/>{path==="/izdanja"?<Library/>:path.startsWith("/izdanja/")?<Edition id={path.split("/")[2]}/>:SECTIONS.some(s=>"/"+s.slug===path)?<SectionLanding slug={path.slice(1)}/>:<Home/>}<Footer/></div>;
 }
