@@ -323,6 +323,10 @@ function Router() {
         <Route path="/izdanje-lab" component={OpenEditionPilot} />
         <Route path="/magazini-lab" component={MonthlyMagazinesPilot} />
         <Route path="/izdanja" component={NewTalasExperience} />
+        <Route path="/geopolitika" component={NewTalasExperience} />
+        <Route path="/srbija" component={NewTalasExperience} />
+        <Route path="/obavestajni-izvori" component={NewTalasExperience} />
+        <Route path="/nasa-planeta" component={NewTalasExperience} />
         <Route path="/izdanja/:month" component={NewTalasExperience} />
         <Route path="/" component={NewTalasExperience} />
         <Route path="/srbija/vilson-upozorio-na-beloruski-scenario-svet-ce-pratiti-izbore-u-srbiji" component={WilsonCrtaElectionArticle} />
