@@ -52,9 +52,14 @@ function focusImage(id:string, reader:boolean){
     : Array.from(document.querySelectorAll<HTMLImageElement>("img[data-nt3-id]")).find(el=>el.dataset.nt3Id===id)||null;
 }
 function normQuery(){return new URLSearchParams(window.location.search).get("clanak");}
+function normSection(){const v=new URLSearchParams(window.location.search).get("rubrika");return NAV.some(n=>n.id===v)?v:null;}
+function sectionId(label:string){return NAV.find(n=>n.label===label)?.id||null;}
 
 export default function NoviTalas3Pilot(){
   const [active,setActive]=useState<string|null>(()=>byId(normQuery())?.id||null);
+  const [section,setSection]=useState<string|null>(()=>normSection());
+  const sectionRef=useRef<HTMLDivElement>(null);
+  const sectionReturn=useRef<HTMLElement|null>(null);
   const [searchOpen,setSearchOpen]=useState(false);
   const [searchValue,setSearchValue]=useState("");
   const [menuOpen,setMenuOpen]=useState(false);
@@ -69,6 +74,8 @@ export default function NoviTalas3Pilot(){
   const current=useRef(active);
   current.current=active;
   const story=byId(active);
+  const chosenSection=NAV.find(n=>n.id===section)||null;
+  const sectionStories=chosenSection?STORIES.filter(s=>s.section===chosenSection.label):[];
   const Reader=story?.Component;
   useEffect(()=>{
     const robots=document.querySelector<HTMLMetaElement>('meta[name="robots"]'),created=!robots;
@@ -77,10 +84,10 @@ export default function NoviTalas3Pilot(){
     const title=document.title;document.title="Novi Talas 3.0 — naslovna · Pilot";
     return()=>{if(created)el.remove();else if(old===null)el.removeAttribute("content");else el.content=old;document.title=title;};
   },[]);
-  useEffect(()=>{if(!story)return;const old=document.body.style.overflow;document.body.style.overflow="hidden";return()=>{document.body.style.overflow=old;};},[story]);
+  useEffect(()=>{if(!story&&!section)return;const old=document.body.style.overflow;document.body.style.overflow="hidden";return()=>{document.body.style.overflow=old;};},[story,section]);
   useEffect(()=>{
-    const onPop=()=>transition(byId(normQuery())?.id||null);
-    const onKey=(event:KeyboardEvent)=>{if(event.key==="Escape"){if(current.current)closeStory();else setMenuOpen(false);}};
+    const onPop=()=>{setSection(normSection());transition(byId(normQuery())?.id||null);};
+    const onKey=(event:KeyboardEvent)=>{if(event.key==="Escape"){if(current.current)closeStory();else if(normSection())closeSection();else setMenuOpen(false);}};
     window.addEventListener("popstate",onPop);window.addEventListener("keydown",onKey);
     return()=>{window.removeEventListener("popstate",onPop);window.removeEventListener("keydown",onKey);};
   });
@@ -120,17 +127,38 @@ export default function NoviTalas3Pilot(){
   function openStory(id:string, source?:HTMLImageElement|null){
     if(!byId(id)||busy.current)return;
     triggerImage.current=source||null;
-    window.history.pushState({nt3:true},"",PATH+"?clanak="+encodeURIComponent(id));
+    const q=new URLSearchParams();if(section)q.set("rubrika",section);q.set("clanak",id);
+    window.history.pushState({nt3:true},"",PATH+"?"+q.toString());
     transition(id);
   }
   function closeStory(){
     if(busy.current)return;
     if(window.history.state?.nt3)window.history.back();
-    else{window.history.replaceState(null,"",PATH);transition(null);}
+    else{window.history.replaceState(null,"",PATH+(section?"?rubrika="+section:""));transition(null);}
+  }
+  function openSection(id:string, from?:HTMLElement|null){
+    if(!NAV.some(n=>n.id===id)||busy.current)return;
+    sectionReturn.current=from||null;
+    setMenuOpen(false);
+    window.history.pushState({nt3section:true},"",PATH+"?rubrika="+encodeURIComponent(id));
+    setSection(id);
+    requestAnimationFrame(()=>{if(sectionRef.current)sectionRef.current.scrollTop=0;});
+  }
+  function closeSection(){
+    if(window.history.state?.nt3section)window.history.back();
+    else{window.history.replaceState(null,"",PATH);setSection(null);}
+    requestAnimationFrame(()=>sectionReturn.current?.focus({preventScroll:true}));
+  }
+  function categoryLabel(label:string){
+    const id=sectionId(label);if(!id)return <span className="nt3-kicker">{label.toUpperCase()}</span>;
+    return <span className="nt3-kicker nt3-clickable-kicker" role="link" tabIndex={0}
+      aria-label={"Otvori rubriku "+label}
+      onClick={e=>{e.stopPropagation();openSection(id,e.currentTarget);}}
+      onKeyDown={e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();e.stopPropagation();openSection(id,e.currentTarget);}}}>{label.toUpperCase()} <ArrowUpRight size={12}/></span>;
   }
   function scrollToSection(id:string){
-    setMenuOpen(false);
-    document.getElementById("nt3-"+id)?.scrollIntoView({behavior:prefersMotion()?"smooth":"instant",block:"start"});
+    if(id==="izdanja"){setMenuOpen(false);document.getElementById("nt3-izdanja")?.scrollIntoView({behavior:prefersMotion()?"smooth":"instant",block:"start"});return;}
+    openSection(id,document.activeElement instanceof HTMLElement?document.activeElement:null);
   }
   function search(event:FormEvent<HTMLFormElement>){
     event.preventDefault();if(searchValue.trim())window.location.href="/pretraga?q="+encodeURIComponent(searchValue.trim());
@@ -152,7 +180,7 @@ export default function NoviTalas3Pilot(){
     el.scrollBy({left:Math.max(150,(thumb?.getBoundingClientRect().width||65)*2+14),behavior:prefersMotion()?"smooth":"auto"});
   }
   const storyBtn=(s:Story,kind:string,element:ReactNode)=>
-    <button key={s.id+"-"+kind} type="button" onClick={e=>openStory(s.id,e.currentTarget.querySelector("img"))} className={"nt3-story nt3-story-"+kind} aria-label={"Pročitaj: "+s.title}>{element}</button>;
+    <div key={s.id+"-"+kind} role="button" tabIndex={0} onKeyDown={e=>{if(e.target===e.currentTarget&&(e.key==="Enter"||e.key===" ")){e.preventDefault();openStory(s.id,e.currentTarget.querySelector("img"));}}} onClick={e=>openStory(s.id,e.currentTarget.querySelector("img"))} className={"nt3-story nt3-story-"+kind} aria-label={"Pročitaj: "+s.title}>{element}</div>;
 
   return <div className="nt3" data-nt3-pilot>
     <header className="nt3-header">
@@ -174,7 +202,7 @@ export default function NoviTalas3Pilot(){
         <div className="nt3-front-kicker"><span>NASLOVNA</span><span>17 / 10 / 2026</span></div>
         {storyBtn(STORIES[0],"lead",<>
           <div className="nt3-hero-photo"><img src={STORIES[0].image} data-nt3-id={STORIES[0].id} alt={STORIES[0].alt} fetchPriority="high"/></div>
-          <div className="nt3-hero-headline"><span className="nt3-kicker">OBAVEŠTAJNI IZVORI</span><h1>Bela kuća ograničila satelitsku vezu Ukrajini</h1><p>Ko je izdao nalog i zašto?</p><span className="nt3-cta">Pročitaj vest <ArrowUpRight size={17}/></span></div>
+          <div className="nt3-hero-headline">{categoryLabel("Obaveštajni izvori")}<h1>Bela kuća ograničila satelitsku vezu Ukrajini</h1><p>Ko je izdao nalog i zašto?</p><span className="nt3-cta">Pročitaj vest <ArrowUpRight size={17}/></span></div>
         </>)}
         <section className="nt3-story-rail" aria-label="Izbor vesti na naslovnoj">
           <div className="nt3-story-rail-head">
@@ -193,7 +221,7 @@ export default function NoviTalas3Pilot(){
         <div className="nt3-feature-grid">
           {STORIES.slice(1,3).map((s,i)=>storyBtn(s,"feature",<>
             <div className="nt3-feature-photo"><img src={s.image} data-nt3-id={s.id} alt={s.alt} loading="lazy"/></div>
-            <div className="nt3-feature-info"><span className="nt3-kicker">{s.section.toUpperCase()}</span><h2>{s.title}</h2><span className="nt3-feature-action">Pročitaj <ArrowUpRight size={16}/></span></div>
+            <div className="nt3-feature-info">{categoryLabel(s.section)}<h2>{s.title}</h2><span className="nt3-feature-action">Pročitaj <ArrowUpRight size={16}/></span></div>
           </>))}
         </div>
       </section>
@@ -201,7 +229,7 @@ export default function NoviTalas3Pilot(){
       <div className="nt3-rubrics">
         <div className="nt3-part-title"><span>RUBRIKE</span></div>
         <section className="nt3-rubric nt3-rubric-geopolitika" id="nt3-geopolitika">
-          <div className="nt3-section-heading"><h2>Geopolitika</h2><a href="https://novitalas.org/geopolitika">Sve iz rubrike <ArrowUpRight size={17}/></a></div>
+          <div className="nt3-section-heading"><h2><button type="button" className="nt3-rubric-link" onClick={e=>openSection("geopolitika",e.currentTarget)}>Geopolitika <ArrowUpRight size={20}/></button></h2><button type="button" className="nt3-rubric-all" onClick={e=>openSection("geopolitika",e.currentTarget)}>Otvori rubriku <ArrowUpRight size={17}/></button></div>
           <div className="nt3-geop-grid">
             {storyBtn(STORIES[6],"geop",<><img src={STORIES[6].image} data-nt3-id="grenland" alt={STORIES[6].alt} loading="lazy"/><span className="nt3-geop-content"><small>IZ ARHIVE · 19. SEPTEMBAR 2026.</small><strong>{STORIES[6].title}</strong><em>Pročitaj priču <ArrowUpRight size={15}/></em></span></>)}
             {storyBtn(STORIES[7],"geop-aside",<><img src={STORIES[7].image} data-nt3-id="srbijaact" alt={STORIES[7].alt} loading="lazy"/><span><small>1. OKTOBAR 2026.</small><strong>{STORIES[7].title}</strong><em>Pročitaj <ArrowUpRight size={15}/></em></span></>)}
@@ -209,20 +237,20 @@ export default function NoviTalas3Pilot(){
         </section>
 
         <section className="nt3-rubric" id="nt3-obavestajni-izvori">
-          <div className="nt3-section-heading"><h2>Obaveštajni izvori</h2><a href="https://novitalas.org/obavestajni-izvori">Sve iz rubrike <ArrowUpRight size={17}/></a></div>
+          <div className="nt3-section-heading"><h2><button type="button" className="nt3-rubric-link" onClick={e=>openSection("obavestajni-izvori",e.currentTarget)}>Obaveštajni izvori <ArrowUpRight size={20}/></button></h2><button type="button" className="nt3-rubric-all" onClick={e=>openSection("obavestajni-izvori",e.currentTarget)}>Otvori rubriku <ArrowUpRight size={17}/></button></div>
           {storyBtn(STORIES[3],"rubric-line",<><img src={STORIES[3].image} data-nt3-id="bnd" alt={STORIES[3].alt} loading="lazy"/><span><small>{STORIES[3].date}</small><strong>{STORIES[3].title}</strong><em>Pročitaj <ArrowUpRight size={16}/></em></span></>)}
         </section>
         <section className="nt3-rubric" id="nt3-srbija">
-          <div className="nt3-section-heading"><h2>Srbija</h2><a href="https://novitalas.org/srbija">Sve iz rubrike <ArrowUpRight size={17}/></a></div>
+          <div className="nt3-section-heading"><h2><button type="button" className="nt3-rubric-link" onClick={e=>openSection("srbija",e.currentTarget)}>Srbija <ArrowUpRight size={20}/></button></h2><button type="button" className="nt3-rubric-all" onClick={e=>openSection("srbija",e.currentTarget)}>Otvori rubriku <ArrowUpRight size={17}/></button></div>
           {storyBtn(STORIES[4],"rubric-line",<><img src={STORIES[4].image} data-nt3-id="vucic" alt={STORIES[4].alt} loading="lazy"/><span><small>{STORIES[4].date}</small><strong>{STORIES[4].title}</strong><em>Pročitaj <ArrowUpRight size={16}/></em></span></>)}
         </section>
         <section className="nt3-rubric" id="nt3-nasa-planeta">
-          <div className="nt3-section-heading"><h2>Naša planeta</h2><a href="https://novitalas.org/nasa-planeta">Sve iz rubrike <ArrowUpRight size={17}/></a></div>
+          <div className="nt3-section-heading"><h2><button type="button" className="nt3-rubric-link" onClick={e=>openSection("nasa-planeta",e.currentTarget)}>Naša planeta <ArrowUpRight size={20}/></button></h2><button type="button" className="nt3-rubric-all" onClick={e=>openSection("nasa-planeta",e.currentTarget)}>Otvori rubriku <ArrowUpRight size={17}/></button></div>
           {storyBtn(STORIES[5],"rubric-line",<><img src={STORIES[5].image} data-nt3-id="djonatan" alt={STORIES[5].alt} loading="lazy"/><span><small>{STORIES[5].date}</small><strong>{STORIES[5].title}</strong><em>Pročitaj <ArrowUpRight size={16}/></em></span></>)}
         </section>
         <section className="nt3-rubric nt3-rubric-culture" id="nt3-kultura">
-          <div className="nt3-section-heading"><h2>Kultura</h2><span>ODABRANA PRIČA</span></div>
-          {storyBtn(STORIES[8],"culture",<><div className="nt3-culture-img"><img src={STORIES[8].image} data-nt3-id="renoir" alt={STORIES[8].alt} loading="lazy"/></div><div className="nt3-culture-text"><span className="nt3-kicker">IZ ARHIVE · 9. SEPTEMBAR 2026.</span><h3>Ko krade Renoara ako ne može da ga proda?</h3><span className="nt3-cta">Pročitaj priču <ArrowUpRight size={16}/></span></div></>)}
+          <div className="nt3-section-heading"><h2><button type="button" className="nt3-rubric-link" onClick={e=>openSection("kultura",e.currentTarget)}>Kultura <ArrowUpRight size={20}/></button></h2><button type="button" className="nt3-rubric-all" onClick={e=>openSection("kultura",e.currentTarget)}>Otvori rubriku <ArrowUpRight size={17}/></button></div>
+          {storyBtn(STORIES[8],"culture",<><div className="nt3-culture-img"><img src={STORIES[8].image} data-nt3-id="renoir" alt={STORIES[8].alt} loading="lazy"/></div><div className="nt3-culture-text">{categoryLabel("Kultura")}<span className="nt3-culture-date">IZ ARHIVE · 9. SEPTEMBAR 2026.</span><h3>Ko krade Renoara ako ne može da ga proda?</h3><span className="nt3-cta">Pročitaj priču <ArrowUpRight size={16}/></span></div></>)}
           <small className="nt3-image-credit">{STORIES[8].credit}</small>
         </section>
       </div>
@@ -237,11 +265,38 @@ export default function NoviTalas3Pilot(){
     </main>
     <footer className="nt3-footer"><Wordmark small/><div><a href="/magazini-lab">Izdanja</a><a href="https://novitalas.org">Postojeći sajt <ArrowUpRight size={15}/></a></div></footer>
 
+
+    {chosenSection&&<div className="nt3-category-view" role="dialog" aria-modal={!story} aria-label={"Rubrika "+chosenSection.label}>
+      <div className="nt3-category-header"><button type="button" onClick={closeSection}><ArrowLeft size={19}/> Naslovna</button><Wordmark small/><button type="button" onClick={()=>{setSection(null);window.history.replaceState(null,"",PATH);}} aria-label="Zatvori rubriku"><X size={21}/></button></div>
+      <div className="nt3-category-scroll" ref={sectionRef} key={chosenSection.id}>
+        <div className="nt3-category-inner">
+          <div className="nt3-category-eyebrow">NOVI TALAS / RUBRIKE</div>
+          <h1>{chosenSection.label}</h1>
+          <div className="nt3-category-rule"/>
+          {sectionStories[0]&&<button className="nt3-category-lead" type="button" onClick={e=>openStory(sectionStories[0].id,e.currentTarget.querySelector("img"))}>
+            <span className="nt3-category-lead-photo"><img src={sectionStories[0].image} alt={sectionStories[0].alt}/></span>
+            <span className="nt3-category-lead-text"><small>{sectionStories[0].date.toUpperCase()}</small><strong>{sectionStories[0].title}</strong><em>{sectionStories[0].deck}</em><span>Pročitaj priču <ArrowUpRight size={16}/></span></span>
+          </button>}
+          <div className="nt3-category-carousel">
+            <div className="nt3-category-carousel-title"><span>PRIČE IZ RUBRIKE</span><span>{String(sectionStories.length).padStart(2,"0")} PRIČA · PREVLAČENJE <ArrowRight size={17}/></span></div>
+            <div className="nt3-category-track">
+              {sectionStories.map(s=><button type="button" key={s.id} className="nt3-category-card" onClick={e=>openStory(s.id,e.currentTarget.querySelector("img"))}>
+                <img src={s.image} alt={s.alt} loading="lazy"/>
+                <span className="nt3-category-card-info"><small>{s.date.toUpperCase()}</small><strong>{s.title}</strong><em>Pročitaj <ArrowUpRight size={14}/></em></span>
+              </button>)}
+            </div>
+          </div>
+          <p className="nt3-category-note">Pilot prikazuje odabrane priče. Rubrike na postojećem sajtu sadrže i ostale objavljene tekstove.</p>
+          {chosenSection.id!=="kultura"&&<a className="nt3-category-original" href={"https://novitalas.org/"+chosenSection.id} target="_blank" rel="noopener noreferrer">Svi tekstovi rubrike na postojećem sajtu <ArrowUpRight size={16}/></a>}
+          <button type="button" className="nt3-category-return" onClick={closeSection}><ArrowLeft size={18}/> Nazad na naslovnu</button>
+        </div>
+      </div>
+    </div>}
     {story&&Reader&&<div className="nt3-reader" role="dialog" aria-modal="true" aria-label={"Članak: "+story.title}>
-      <header className="nt3-reader-top"><button ref={backRef} type="button" onClick={closeStory}><ArrowLeft size={20}/><span>Nazad na naslovnu</span></button><Wordmark small/><button type="button" onClick={share} aria-label="Podeli originalni članak"><Share2 size={19}/></button></header>
+      <header className="nt3-reader-top"><button ref={backRef} type="button" onClick={closeStory}><ArrowLeft size={20}/><span>{chosenSection?"Nazad u rubriku":"Nazad na naslovnu"}</span></button><Wordmark small/><button type="button" onClick={share} aria-label="Podeli originalni članak"><Share2 size={19}/></button></header>
       <div className="nt3-reader-scroll" ref={readerRef}>
         <div className="nt3-article-layer"><EditionEmbedContext.Provider value={true}><Reader/></EditionEmbedContext.Provider></div>
-        <div className="nt3-reader-bottom"><button type="button" onClick={closeStory}><BookOpen size={18}/> Nazad na naslovnu</button><a href={"https://novitalas.org"+story.href} target="_blank" rel="noopener noreferrer">Originalni tekst <ArrowUpRight size={16}/></a></div>
+        <div className="nt3-reader-bottom"><button type="button" onClick={closeStory}><BookOpen size={18}/> {chosenSection?"Nazad u rubriku":"Nazad na naslovnu"}</button><a href={"https://novitalas.org"+story.href} target="_blank" rel="noopener noreferrer">Originalni tekst <ArrowUpRight size={16}/></a></div>
       </div>
       {shareText&&<p className="nt3-share-status" role="status">{shareText}</p>}
     </div>}
