@@ -136,6 +136,7 @@ export default function MonthlyMagazinesPilot() {
     // Choose matching visual anchor in both old and new states.
     const source =
       oldStory ? findImg("reader") :
+      oldMonth && nextStory ? findImg("story-card", nextStory) :
       oldMonth ? findImg("month-cover") :
       findImg("library-cover", nextMonth);
     const oldRect = source?.getBoundingClientRect();
@@ -164,6 +165,7 @@ export default function MonthlyMagazinesPilot() {
     requestAnimationFrame(() => {
       const target =
         nextStory ? findImg("reader") :
+        oldStory && nextMonth ? findImg("story-card", oldStory) :
         nextMonth ? findImg("month-cover") :
         findImg("library-cover", oldMonth);
       if (!fly || !oldRect || !target || !supportsAnimation() || typeof fly.animate !== "function") {
