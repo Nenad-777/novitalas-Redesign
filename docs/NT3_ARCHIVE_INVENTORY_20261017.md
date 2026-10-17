@@ -129,3 +129,29 @@
 - `/nasa-planeta/na-marsu-otkrivene-molekule-povezane-sa-poreklom-zivota`
 - `/nasa-planeta/ai-superaplikacija`
 - `/nasa-planeta/psihologija-dosada`
+
+---
+
+## Status nakon automatskog arhiviranja — 17. oktobar 2026.
+
+**Ovaj odeljak ažurira početno stanje prikazano iznad.** Prethodna brojka od 85 neindeksiranih ruta bila je rezultat starog statičkog sistema, pre generatora.
+
+- Novi `scripts/generate-archive-index.mjs` skenira **157 ruta članaka** pri izgradnji sajta.
+- Iz izvornog koda direktno izvučeno je **146 arhivskih zapisa** sa potvrđenim datumom (ili eksplicitno navedenim mesecom), naslovom i originalnom vezom.
+- Pregledani izvorni meseci: februar 1, mart 36, april 25, maj 16, jun 28, jul 9, avgust 10, septembar 10, oktobar 11.
+- Brojevi se odnose **samo na automatski izvučene izvore**; postojeći SEO i urednički registri dodatno popunjavaju arhivu, uz prioritet već odobrenih zapisa.
+- `/nasa-planeta/artemis-live` predstavlja arhivsku navigacionu stranicu, ne pojedinačnu vest, te se namerno ne dodeljuje jednom datumu.
+- Preostale oznake za pregled uključuju stare tekstove sa datumom u posebnim registrima i članke bez odgovarajuće fotografije. Kada slike nema, koristi se tipografska kartica, ne tuđa ili proizvoljna fotografija.
+- Članak o izložbi teamLab ima potvrđen samo **april 2026.** i uvrštava se u taj mesec bez izmišljanja dana.
+- Popravljena je obrada istorijske putanje do CRISPR fotografije koja sadrži razmake u nazivu fajla.
+- Pet rubrika je sačuvano, uključujući `Kultura`, i mesečna izdanja koriste originalne URL adrese tekstova.
+
+### Preostale obavezne provere pre spajanja
+
+1. Vizuelna provera fotografija i naslovnica na telefonu, posebno rezolucije septembarske korice.
+2. Provera svakog izuzetka iz `shared/archiveExtracted.report.json` nastalog prilikom izgradnje.
+3. Uporedna provera sa postojećim SEO registrima da se ne mešaju datum događaja i datum objavljivanja.
+4. Hronološki redosled u svakoj rubrici; tekst sa samo mesecom poznatim ne treba lažno datirati na prvi dan u mesecu.
+5. Test navigacije, pretrage, deljenja, povratka iz članka i pravila rotacije naslovne pri komandi OBJAVA.
+
+**Zaštita produkcije:** sve izmene su i dalje na izolovanoj grani `feature/novi-talas-magazine-experience-20261017`; postojeći `main` nije zamenjen.
