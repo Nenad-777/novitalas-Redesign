@@ -28,6 +28,16 @@ function categoryFromPath(path: string): string {
   return CATEGORY_BY_SEGMENT[path.split("/")[1]] ?? "Novi Talas";
 }
 
+const RECOVERED_DATES = new Map<string,{publishedAt?:string;publishedMonth?:string}>(
+  (sourceRecovered as SearchArticle[]).map(article=>[article.href,{publishedAt:article.publishedAt,publishedMonth:article.publishedMonth}])
+);
+// Historical February 2026 archive explicitly lists these entries by month,
+// without documenting a day. Preserve month precision instead of inventing 01.
+const EDITORIAL_MONTH_ONLY:Record<string,string> = {
+  "/geopolitika/nova-bezbednosna-arhitektura":"2026-02",
+  "/obavestajni-izvori/rat-senki":"2026-02",
+};
+
 /** The same two registries used by SEO pages and the sitemap are the search source. */
 export const articleSearchIndex: SearchArticle[] = Array.from(
   new Map<string, SearchArticle>([
@@ -72,7 +82,12 @@ export const articleSearchIndex: SearchArticle[] = Array.from(
       ]
     ),
   ]).values()
-);
+).map(article=>({
+  ...article,
+  // Higher-priority editorial entries can omit dates; keep source evidence.
+  publishedAt:article.publishedAt||RECOVERED_DATES.get(article.href)?.publishedAt,
+  publishedMonth:article.publishedMonth||RECOVERED_DATES.get(article.href)?.publishedMonth||EDITORIAL_MONTH_ONLY[article.href]
+}));
 
 /** Serbian Cyrillic queries and Latin queries resolve to the same article text. */
 const CYRILLIC_TO_LATIN: Record<string, string> = {
@@ -122,8 +137,8 @@ export function searchArticles(query: string): SearchArticle[] {
     .sort(
       (a, b) =>
         b.score - a.score ||
-        (b.article.publishedAt ?? "").localeCompare(
-          a.article.publishedAt ?? ""
+        (b.article.publishedAt ?? b.article.publishedMonth ?? "").localeCompare(
+          a.article.publishedAt ?? a.article.publishedMonth ?? ""
         ) ||
         a.article.title.localeCompare(b.article.title, "sr")
     )
