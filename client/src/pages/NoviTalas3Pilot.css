@@ -158,6 +158,10 @@
   .nt3-reader-top{height:77px;padding:0 37px}
   .nt3-article-layer>div>main{padding-top:47px!important}
 }
+@media(max-width:699px){
+  .nt3-nav-open{flex-wrap:wrap;white-space:normal;gap:2px 19px;padding:8px 0 15px}
+  .nt3-nav-open button{padding:9px 0}
+}
 @media(max-width:360px){
   .nt3 .nt3-wordmark{font-size:27px}
   .nt3-edition-date span:last-child{font-size:7px;letter-spacing:0}
