@@ -4,7 +4,8 @@ import ImageCaption from "@/components/ImageCaption";
 import ShareButton from "@/components/ShareButton";
 import SeoMeta from "@/components/SeoMeta";
 import { useTheme } from "@/contexts/ThemeContext";
-import type { ReactNode } from "react";
+import { useContext, type ReactNode } from "react";
+import { EditionEmbedContext } from "@/contexts/EditionEmbedContext";
 
 type ArticleInlineImage = {
   type: "image";
@@ -82,6 +83,7 @@ export default function ArticleTemplate({
   backLabel,
 }: ArticleTemplateProps) {
   const { theme } = useTheme();
+  const embedded = useContext(EditionEmbedContext);
   const isDark = theme === "dark";
 
   return (
@@ -89,7 +91,7 @@ export default function ArticleTemplate({
       className="min-h-screen flex flex-col transition-colors duration-300"
       style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
     >
-      {path && (
+      {path && !embedded && (
         <SeoMeta
           path={path}
           title={title}
@@ -97,7 +99,7 @@ export default function ArticleTemplate({
           imageSrc={imageSrc}
         />
       )}
-      <Header />
+      {!embedded && <Header />}
 
       <main
         className="py-12 md:py-16 flex-1"
@@ -373,8 +375,8 @@ export default function ArticleTemplate({
             </div>
           ) : null}
 
-          {/* Back */}
-          <div className="mt-12">
+          {/* Back is controlled by the edition shell when embedded. */}
+          {!embedded && <div className="mt-12">
             <a
               href={backHref}
               className="inline-flex items-center gap-2 text-[13px] font-semibold tracking-[0.08em] uppercase no-underline"
@@ -385,11 +387,11 @@ export default function ArticleTemplate({
             >
               {backLabel}
             </a>
-          </div>
+          </div>}
         </article>
       </main>
 
-      <Footer />
+      {!embedded && <Footer />}
     </div>
   );
 }
