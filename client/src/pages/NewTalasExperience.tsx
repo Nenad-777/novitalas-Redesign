@@ -2,6 +2,8 @@ import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Search, Menu, X } from "lucide-react";
 import { articleSearchIndex, type SearchArticle } from "../../../shared/articleSearch";
 import { articleMeta } from "../../../shared/articleMeta";
+import { HOME_ARTICLES } from "./homeArticles";
+import { HERO_ARTICLE } from "./Home";
 import { seoData } from "../../../shared/seo";
 import "./NewTalasExperience.css";
 
@@ -15,13 +17,12 @@ const SECTIONS = [
   { label:"Naša planeta", slug:"nasa-planeta", title:"Naša planeta", deck:"Nauka, priroda, istorija i otkrića." },
   { label:"Kultura", slug:"kultura", title:"Kultura", deck:"Umetnost, književnost, film i stvaralaštvo." }
 ] as const;
+// Keep the existing OBJAVA workflow as the canonical source for the lead.
 const HERO = {
-  href:"/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina",
-  title:"Bela kuća ograničila satelitsku vezu Ukrajini",
-  deck:"Ko je izdao nalog i zašto?",
-  image:"/news/starshield-approved.jpg",
-  category:"Obaveštajni izvori",
-  categoryHref:"/obavestajni-izvori"
+  ...HERO_ARTICLE,
+  image:HERO_ARTICLE.imageSrc,
+  deck:HERO_ARTICLE.description,
+  categoryHref:"/"+HERO_ARTICLE.href.split("/")[1],
 };
 const isIsoDate = (value?:string) => Boolean(value && /^\d{4}-\d{2}-\d{2}$/.test(value));
 const verifiedDates = new Map<string,string>();
@@ -34,7 +35,9 @@ const chronological = (a:Article,b:Article) => (b.publishedAt||"").localeCompare
 // from the repository and the newer diaspora thumbnail is only 7.9 KB.
 // Use a documented September story with an existing full-size (2.5 MB) asset.
 const VERIFIED_COVERS:Record<string,string> = {
-  "2026-09":"/geopolitika/afd-menja-politicku-mapu-nemacke-ruski-gas-se-vraca-u-igru"
+  "2026-09":"/geopolitika/afd-menja-politicku-mapu-nemacke-ruski-gas-se-vraca-u-igru",
+  "2026-02":"/nasa-planeta/alma-skriveno-jezgro",
+  "2026-10":"/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina"
 };
 const issues:Issue[] = MONTH_NAMES.map((name,i)=>{
   const id="2026-"+String(i+2).padStart(2,"0");
@@ -110,7 +113,7 @@ function Header(){
 }
 function Footer(){return <footer className="nx-footer"><Brand/><span>Veritas ante omnia · Vaš prozor u svet</span><a href="/izdanja">Biblioteka izdanja <ArrowUpRight size={16}/></a></footer>}
 function Home(){
-  const selection=knownArticles.filter(a=>published(a) && a.href!==HERO.href && Boolean(a.imageSrc)).sort(chronological).slice(0,8);
+  const selection=HOME_ARTICLES.map(article=>knownArticles.find(a=>a.href===article.href) || ({...article,category:article.category} as Article)).filter(a=>a.href!==HERO.href).sort(chronological).slice(0,8);
   return <><main className="nx-main">
     <div className="nx-intro"><span className="nx-eyebrow">NOVI TALAS / NASLOVNA</span><span>SVET U KONTEKSTU</span></div>
     <section className="nx-hero">
