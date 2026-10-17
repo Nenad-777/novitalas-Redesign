@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
-const HERO_ARTICLE = {
+export const HERO_ARTICLE = {
   href: "/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina",
   category: "OBAVEŠTAJNI IZVORI · SAD–UKRAJINA",
   title: "Bela kuća ograničila satelitsku vezu Ukrajini: ko je izdao nalog i zašto?",
