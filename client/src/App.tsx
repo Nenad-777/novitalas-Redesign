@@ -8,6 +8,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
 import Home from "./pages/Home";
+import OpenEditionPilot from "./pages/OpenEditionPilot";
 import WilsonCrtaElectionArticle from "./pages/WilsonCrtaElectionArticle";
 import RiyadhAirportArticle from "./pages/RiyadhAirportArticle";
 import StarshieldWhiteHouseArticle from "./pages/StarshieldWhiteHouseArticle";
@@ -317,6 +318,7 @@ function Router() {
 
       <Switch>
         {/* Home */}
+        <Route path="/izdanje-lab" component={OpenEditionPilot} />
         <Route path="/" component={Home} />
         <Route path="/srbija/vilson-upozorio-na-beloruski-scenario-svet-ce-pratiti-izbore-u-srbiji" component={WilsonCrtaElectionArticle} />
         <Route
