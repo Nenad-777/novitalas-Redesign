@@ -51,3 +51,17 @@ Sadašnji pilot koristi **ograničen skup** trenutno postojećih vesti i ne zame
 
 **Urednički princip:** *Naslovna je živa. Rubrike su jasne. Magazini čuvaju istoriju. Prelazi povezuju iskustvo.*
 (Interna napomena, ne reklamni slogan na sajtu.)
+
+## Iteracija 03a — vraćanje male foto-trake ispod naslovne (urednička reakcija)
+
+Urednik je eksplicitno odabrao element koji se najviše dopao u prvom pilotu: **horizontalni niz malih fotografija odmah posle glavne naslovne priče**. Novi objedinjeni pilot zadržava glavne uredničke scene, sve rubrike i zasebne mesečne magazine, ali vraća taj pregled po sledećim pravilima:
+
+- Jedinstvena foto-traka **IZBOR REDAKCIJE** pod naslovnom; prvih pet kadrova zadržava omiljeni vizuelni kontrast: Starshield, Kekova, Vilson, Grenland, Renoar. Dodatne priče dostupne su prevlačenjem.
+- Foto-traka je ručni horizontalni karusel, **bez autoplay-a**. I na malom ekranu vidi se više fotografija odjednom i jasno kontrolno dugme za sledeće.
+- Svaka fotografija predstavlja pravu priču i jednim dodirom otvara **pun originalni članak**, bez posrednog „odaberi pa još jednom klikni“.
+- Shared-photo transition koristi **fotografiju koju je čitalac stvarno dodirnuo**, ne drugu kopiju iste fotografije na donjem delu naslovne; povratak čuva mesto.
+- Traka predstavlja izabrane **vesti**, a **mesečni magazini** ostaju svoj zaseban deo niže na naslovnoj. Ta dva nivoa arhitekture se ne mešaju.
+- Rubrike Geopolitika, Obaveštajni izvori, Srbija i Naša planeta, sa izdvojenom Kulturom, ostaju vidljive i netaknute.
+- Ovo je estetska/UX iteracija u eksperimentalnoj grani, bez izmene produkcije. Konačni efekat i dalje zahteva probu na iPhone-u.
+
+Ne dodavati marketinške slogane, suvišne instrukcije, automatsko listanje ili dekorativne numeričke korake čitaocu.
