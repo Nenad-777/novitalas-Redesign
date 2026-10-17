@@ -76,7 +76,7 @@ function normalize(value) {
   return value?.replace(/\s+/g," ").trim() ?? "";
 }
 const imports=new Map([...app.matchAll(/import\s+([A-Za-z0-9_]+)\s+from\s+["']\.\/pages\/([^"']+)["']/g)].map(m=>[m[1],m[2]]));
-const routeNodes=[...app.matchAll(/<Route\s+path=["']([^"']+)["']\s+component=\{([A-Za-z0-9_]+)\}/g)];
+const routeNodes=[...app.matchAll(/<Route\s+path=["']([^"']+)["']\s+component=\{\s*([A-Za-z0-9_]+)\s*\}/g)];
 const routeMap=new Map();
 for(const [,href,component] of routeNodes) if(routePattern.test(href)&&imports.has(component)&&!routeMap.has(href))routeMap.set(href,component);
 
