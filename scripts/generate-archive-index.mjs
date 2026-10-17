@@ -50,6 +50,28 @@ function isoFromText(raw) {
   if(dt.getUTCMonth()!==month-1||dt.getUTCDate()!==day)return null;
   return "2026-"+String(month).padStart(2,"0")+"-"+String(day).padStart(2,"0");
 }
+
+function objectField(source,objectName,field){
+  if(!/^(ARTICLE|OLD_ARTICLE)$/.test(objectName))return null;
+  const start=source.search(new RegExp("\\bconst\\s+"+objectName+"\\s*=\\s*\\{"));
+  if(start<0)return null;
+  const stop=source.indexOf("paragraphs:",start);
+  const header=source.slice(start,stop>start?stop:start+4500);
+  const m=header.match(new RegExp("\\b"+field+"\\s*:\\s*(?:\"([^\"]+)\"|'([^']+)')"));
+  return m?.[1]||m?.[2]||null;
+}
+function monthPrecision(text){
+  if(!text)return null;
+  const m=text.trim().match(/^([A-Za-zČĆŠĐŽčćšđž]+)\s+2026\.$/i);
+  const month=m&&months[m[1].toLowerCase()];
+  return month?"2026-"+String(month).padStart(2,"0"):null;
+}
+function headline(source){
+  const m=source.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i);
+  if(!m||/\{[^}]+\}/.test(m[1]))return null;
+  return m[1].replace(/<[^>]*>/g,"").trim()||null;
+}
+
 function normalize(value) {
   return value?.replace(/\s+/g," ").trim() ?? "";
 }
@@ -76,7 +98,8 @@ for(const [href,component] of routeMap) {
     for(const field of ["title","dateLabel","datePublished","imageSrc","deck","description","imageAlt"]){
       const rx=new RegExp("\\b"+field+"\\s*=\\s*\\{([A-Za-z_][A-Za-z0-9_]*)\\}");
       const id=template.match(rx)?.[1];
-      const val=id?literal(source,id):null;
+      const member=template.match(new RegExp("\\b"+field+"\\s*=\\s*\\{(ARTICLE|OLD_ARTICLE)\\."+field+"\\}"));
+      const val=id?literal(source,id):member?objectField(source,member[1],field):null;
       if(!val)continue;
       if(field==="title")title=val;
       else if(field==="dateLabel"||field==="datePublished")dateText=val;
@@ -86,41 +109,44 @@ for(const [href,component] of routeMap) {
     }
   } else {
     // Non-template historical pages use explicit editorial constants.
-    title=literal(source,"TITLE");
-    imageSrc=literal(source,"IMAGE_SRC");
-    description=literal(source,"DECK")||literal(source,"DESCRIPTION");
+    title=literal(source,"TITLE")||headline(source);
+    imageSrc=literal(source,"IMAGE_SRC")||prop(source,"imageSrc");
+    description=literal(source,"DECK")||literal(source,"DESCRIPTION")||prop(source,"description");
     const dateMarker=source.match(/\{\s*\/\*\s*Datum\s*\*\/\s*\}([\s\S]{0,1000})/i)?.[1];
     // Only a visibly labelled date is eligible, never dates embedded in body text.
-    dateText=dateMarker?.match(/\b\d{1,2}\.\s*[A-Za-zČĆŠĐŽčćšđž]+\s+2026\./)?.[0]||null;
+    dateText=literal(source,"dateLabel")||dateMarker?.match(/\b\d{1,2}\.\s*[A-Za-zČĆŠĐŽčćšđž]+\s+2026\./)?.[0]||null;
+    if(!dateText&&title&&isoFromText(title))dateText=title;
   }
   title=normalize(title);
   description=normalize(description);
   imageSrc=normalize(imageSrc);
   const publishedAt=isoFromText(dateText);
+  const publishedMonth=!publishedAt?monthPrecision(dateText):null;
   const localImg=imageSrc.startsWith("/")?resolve(root,"client/public",imageSrc.slice(1)):null;
   const imagePresent=!!imageSrc && (!localImg || existsSync(localImg));
   checked.push({href,file,hasDate:!!publishedAt,hasTitle:!!title,hasImage:!!imageSrc,imagePresent});
-  if(!publishedAt || !title || !imageSrc) {
-    unresolved.push({href,file,reason:[!publishedAt&&"missing_verified_publication_date",!title&&"missing_title",!imageSrc&&"missing_image"].filter(Boolean).join(",")});
+  if((!publishedAt&&!publishedMonth) || !title) {
+    unresolved.push({href,file,reason:[!publishedAt&&!publishedMonth&&"missing_verified_publication_date",!title&&"missing_title"].filter(Boolean).join(",")});
     continue;
   }
   // Missing image files are flagged, not silently replaced with unrelated art.
-  if(!imagePresent) unresolved.push({href,file,reason:"source_image_missing; metadata_indexed_without_replacing_image",imageSrc});
+  if(!imagePresent) unresolved.push({href,file,reason:imageSrc?"source_image_missing; metadata_indexed_without_replacing_image":"no_source_image; text_only_card",imageSrc});
   const category=href.split("/")[1];
   const section={"geopolitika":"Geopolitika","srbija":"Srbija","obavestajni-izvori":"Obaveštajni izvori","nasa-planeta":"Naša planeta"}[category];
   collected.push({
     href,category:section,title,description,
-    imageSrc,imageAlt:normalize(imageAlt)||title,publishedAt
+    ...(imageSrc?{imageSrc,imageAlt:normalize(imageAlt)||title}:{}),
+    ...(publishedAt?{publishedAt}:{publishedMonth})
   });
 }
-collected.sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt)||a.href.localeCompare(b.href));
+collected.sort((a,b)=>(b.publishedAt||b.publishedMonth).localeCompare(a.publishedAt||a.publishedMonth)||a.href.localeCompare(b.href));
 mkdirSync(dirname(output),{recursive:true});
 writeFileSync(output,JSON.stringify(collected,null,2)+"\n");
 writeFileSync(reportPath,JSON.stringify({generatedAt:new Date().toISOString(),totalRoutes:routeMap.size,recovered:collected.length,missingDate:unresolved.filter(x=>x.reason?.includes("date")).length,missingImages:unresolved.filter(x=>x.reason?.includes("image")).length,unresolved},null,2)+"\n");
 console.log("[NOVI TALAS ARCHIVE] routed="+routeMap.size+" recovered="+collected.length+" unresolved="+unresolved.length+" (no inferred dates)");
 
 const monthlyTotals = {};
-for (const article of collected) { const month=article.publishedAt.slice(0,7);monthlyTotals[month]=(monthlyTotals[month]||0)+1; }
+for (const article of collected) { const month=(article.publishedAt||article.publishedMonth).slice(0,7);monthlyTotals[month]=(monthlyTotals[month]||0)+1; }
 console.log("[NT3 ARCHIVE MONTHS]",JSON.stringify(monthlyTotals));
 for (const pending of unresolved) console.log("[NT3 ARCHIVE REVIEW]",pending.href,pending.reason);
 // Archive catalog is regenerated before each build.
