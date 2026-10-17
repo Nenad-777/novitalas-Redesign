@@ -135,3 +135,9 @@
  .nx-wave-divider{width:135px}
  .nx-head-actions{gap:8px}
 }
+
+/* A missing historical photograph must never be replaced with a misleading one. */
+.nx-story-photo.nx-story-typographic{background:linear-gradient(135deg,#24344a 0%,#152237 62%,#812440 120%);display:flex;align-items:center;justify-content:center;padding:24px;color:#fff}
+.nx-story-placeholder{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;width:100%}
+.nx-story-placeholder strong{font-family:var(--nx-serif);font-size:clamp(19px,3vw,29px);letter-spacing:-.05em;white-space:nowrap}
+.nx-story-placeholder small{font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;border-top:1px solid #ffffff77;padding-top:13px}
