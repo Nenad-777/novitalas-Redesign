@@ -1,0 +1,53 @@
+# NOVI TALAS 3.0 — PILOT 03: INTEGRISANA NASLOVNA, RUBRIKE I MAGAZINI
+
+**Status:** dizajnerski preview, bez objavljivanja ili spajanja u produkciju.  
+**Datum:** 17. oktobar 2026.  
+**Ruta:** `/novi-talas-3-lab`, izdvojen od glavnog sajta.  
+**Povezana eksperimentalna biblioteka:** `/magazini-lab`.  
+**Grana:** `experiment/novi-talas-3-home-rubrike-20261017` iz prethodne grane za mesečne magazine.
+
+## Šta je novo
+
+Kombinovane su smernice korisnika iz PR-ova za:
+- čistu uredničku naslovnu s prirodnom smenom različitih kompozicija,
+- **jasno imenovane rubrike i vidljive rubričke naslove**, i na iPhone-u,
+- **mesečne magazine kao izdvojenu biblioteku**, ne zamenu za NASLOVNU,
+- diskretan **shared-photo transition** iz naslovne priče u članak i nazad na isto mesto.
+
+Naslovna sadrži jedno dominantno uredničko otvaranje (Starshield), dve istaknute priče (Kekova i Vilson), zatim rubrike: Geopolitika, Obaveštajni izvori, Srbija, Naša planeta i urednički prostor za Kulturu. Četiri produkciono definisane rubrike zadržavaju postojeće naslove i kanonske linkove. Kultura je vidljiva kao oblast sadržaja, ali nije predstavljena kao već postojeća peta samostalna produkciona ruta.
+
+Priče su stvarne, izvorni naslovni vizuali su korišćeni direktno iz postojećeg sajta; potpuni postojeći članci se čitaju preko postojećih React komponenti i opt-in `EditionEmbedContext`. Članci su i dalje dostupni preko svojih kanonskih URL-ova, sa deljenjem.
+
+Korisnik ima na naslovnoj diskretno smeštenu biblioteku tri magazina sa fotografijama iz članaka stvarno objavljenih u tim mesecima: oktobar, septembar i februar 2026. „Svi magazini“ vodi na postojeći Pilot 02, gde se može testirati efekat korica → mesec → članak → nazad.
+
+## Važno ograničenje
+
+**Naslovna i biblioteka mesečnih magazina trenutno su dve povezane, zasebne pilot rute.** Naslovna → magazin radi kao normalan web-link, **još nema jedinstvenog shared-photo prelaza preko tih različitih ruta**. Međutim, iz same naslovne → članak → nazad i unutar eksperimentalne biblioteke → mesečno izdanje → članak → nazad koriste se pokreti kad god ih okruženje podržava.
+
+Nije ispitano da li je tranzicija ugodna na realnom iPhone-u; potvrda Vercel READY odnosi se samo na uspešnu izgradnju aplikacije. Instagram in-app browser može promeniti ponašanje.
+
+Sadašnji pilot koristi **ograničen skup** trenutno postojećih vesti i ne zamenjuje produkciono uredničko pravilo 1 glavna + 8 sekundarnih, ne daje kompletan arhivski indeks svih meseci i ne zamenjuje workflow OBJAVA. Konačna implementacija treba da očuva sve rubrike, sve naslove i sve arhivske tekstove, uključujući postojeće SEO rute. Korice su vizuelni kandidati, nisu konačno odobrene naslovnice.
+
+## Test na telefonu — urednički pregled
+
+1. Otvori `/novi-talas-3-lab`, oceni **prvi ekran naslovne** i lakoću pronalaženja rubrika.
+2. Prevuci vodoravno kroz traku rubrika (ili otvori meni); tapni na „Geopolitika“ ili „Srbija“, proveri da li se prirodno dolazi do te rubrike.
+3. Dodirni naslovnu priču o Starshieldu: potvrdi da je originalna fotografija prešla u članak i da je čitav tekst odmah dostupan.
+4. Iz članka se vrati na naslovnu: proveri da li se položaj skrolovanja i vizuelna orijentacija vraćaju bez skoka.
+5. Otvori Kekovu, Vilsona i jednu priču iz rubrika: svaki tekst mora raditi samostalno.
+6. Skroluj do odeljka **Izdanja**: proveri da magazini imaju jasno odvojenu funkciju od naslovne i da su njihovi meseci i godine čitljivi i na malom telefonu.
+7. Otvori „Svi magazini“: testiraj biblioteku, otvaranje korice, članak, vraćanje na mesec, pa povratak na biblioteku.
+8. Vrati se u glavnu pilotsku naslovnu iz browser istorije; proveri normalan Back.
+9. Uključi iOS *Reduce Motion*: ništa ne sme postati neupotrebljivo.
+10. Ne praviti konačne produkcione odluke dok nisu provereni iPhone Safari, Instagram webview, VoiceOver, promenjena veličina slova i realna brzina uređaja.
+
+## Obavezne zaštite
+
+- Nema izmena `main`, produkcionog domena, samih članaka, fotografija, potpisâ, SEO-a i komandnog workflow-a OBJAVA.
+- U pilota se čita iz postojeće baze članaka i njihovih React komponenti.
+- Ne stvarati neutemeljene političke uzročne veze, simulirane novosti ili lažnu hiperaktuelnost arhivskih vesti.
+- Pristupačnost i reducirani pokret imaju prednost nad atraktivnom animacijom.
+- Nema dodatnih motiva ili rečenica poput „Kraj izdanja...“, niti mešanja sa SOFIA eksperimentima.
+
+**Urednički princip:** *Naslovna je živa. Rubrike su jasne. Magazini čuvaju istoriju. Prelazi povezuju iskustvo.*
+(Interna napomena, ne reklamni slogan na sajtu.)
