@@ -1,4 +1,5 @@
 import { HOME_ARTICLE_CANDIDATES } from "../client/src/pages/homeArticles";
+import sourceRecovered from "./archiveExtracted.json";
 import { articleMeta } from "./articleMeta";
 import { seoData } from "./seo";
 
@@ -28,6 +29,8 @@ function categoryFromPath(path: string): string {
 /** The same two registries used by SEO pages and the sitemap are the search source. */
 export const articleSearchIndex: SearchArticle[] = Array.from(
   new Map<string, SearchArticle>([
+    // Machine-extracted records have lowest priority; curated registries override them.
+    ...(sourceRecovered as SearchArticle[]).map((item): [string, SearchArticle] => [item.href, item]),
     ...HOME_ARTICLE_CANDIDATES.map((article): [string, SearchArticle] => [
       article.href,
       {
