@@ -174,6 +174,26 @@
 .nt3-category-note{font-size:12px;line-height:1.6;color:#77716a;margin:20px 0}
 .nt3-category-original{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;text-decoration:none;border-bottom:1px solid var(--nt-wine);padding-bottom:5px;color:var(--nt-wine)}
 .nt3-category-return{display:flex;align-items:center;gap:7px;background:transparent;border:0;padding:30px 0 0;font-size:12px;font-weight:800}
+/* Iteration 05 — high-contrast white magazine cover typography.
+   The light carousel container previously caused navy text to inherit onto photographs. */
+.nt3 .nt3-issues-carousel .nt3-issue-cover .nt3-issue-logo,
+.nt3 .nt3-issues-carousel .nt3-issue-cover .nt3-issue-lettering {
+  color:#fffaf4;
+  text-shadow:0 2px 9px rgba(0,0,0,.83),0 1px 2px rgba(0,0,0,.9);
+}
+.nt3 .nt3-issues-carousel .nt3-issue-cover .nt3-issue-logo b{
+  color:#ffd5dc;
+}
+.nt3 .nt3-issues-carousel .nt3-issue-cover .nt3-issue-shade{
+  background:linear-gradient(180deg,rgba(4,12,25,.63) 0%,rgba(4,12,25,.14) 32%,rgba(4,12,25,.1) 46%,rgba(4,12,25,.78) 100%);
+}
+.nt3 .nt3-issues-carousel .nt3-issue-cover .nt3-issue-lettering small{
+  color:#f8eee9;
+}
+.nt3 .nt3-issues-carousel .nt3-issue-cover .nt3-issue-lettering em{
+  color:#fffaf4;
+}
+
 /* Iteration 04 — editorial magazine shelf directly beneath the lead story.
    Distinct from the tiny editorial news thumbnail rail beneath it. */
 .nt3 .nt3-issues-carousel{
