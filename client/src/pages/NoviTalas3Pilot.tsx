@@ -182,7 +182,7 @@ export default function NoviTalas3Pilot(){
     const first=el.querySelector<HTMLElement>(".nt3-issue-card");
     if(!first)return;
     const gap=parseFloat(getComputedStyle(el).gap)||14;
-    setIssueIndex(Math.max(0,Math.min(MONTHS.length-1,Math.round(el.scrollLeft/(first.getBoundingClientRect().width+gap)))));
+    setIssueIndex(Math.max(0,Math.min(MONTHS.length-1,Math.round((el.scrollLeft+(el.clientWidth-first.getBoundingClientRect().width)/2)/(first.getBoundingClientRect().width+gap)))));
   }
   function moveIssues(){
     const el=issuesRef.current;if(!el)return;
@@ -191,7 +191,7 @@ export default function NoviTalas3Pilot(){
     const gap=parseFloat(getComputedStyle(el).gap)||14;
     const step=first.getBoundingClientRect().width+gap;
     const target=issueIndex>=MONTHS.length-1?0:issueIndex+1;
-    el.scrollTo({left:target*step,behavior:prefersMotion()?"smooth":"instant"});
+    el.scrollTo({left:target*step-(el.clientWidth-first.getBoundingClientRect().width)/2,behavior:prefersMotion()?"smooth":"instant"});
     setIssueIndex(target);
   }
   function moveRail(){
