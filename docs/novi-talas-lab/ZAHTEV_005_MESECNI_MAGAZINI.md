@@ -70,6 +70,38 @@ Za pilot mesečnih magazina treba posebno demonstrirati:
 4. Povratak na biblioteku na isto mesto.
 5. Postojeće rubrike, arhivu, pretragu i SEO očuvane.
 
+## Obavezni dizajnerski princip: TRANSITIONS — kontinuitet pri otvaranju i zatvaranju
+
+**Odluka urednika, 17. oktobar 2026:** u punom redizajnu prelazi (*transitions*) ne smeju se zaboraviti niti ostaviti kao kozmetički dodatak pri kraju. Njihova svrha je da **otvaranje vesti i kretanje između izdanja postane estetski zadovoljstvo**, uz potpuno prirodnu orijentaciju. Ovo je visoki prioritet budućeg prototipa i prihvatnog testiranja, **nije tvrdnja da je učinak na zadovoljstvo već empirijski dokazan na Novom talasu**.
+
+### Tri povezana prelaza (jedinstven vizuelni jezik)
+
+1. **Biblioteka mesečnih korica → magazin:** dodir izabrane korice; ta korica se vizuelno razvija u uvodnu scenu pripadajućeg mesečnog izdanja, sa prepoznatljivom slikom koja čuva kontinuitet. Nema zasebnog „loading intro“ koraka niti glumljenja okretanja 3D stranice.
+2. **Pregled mesečnog magazina → pun članak:** slika i naslov iz konkretne scene imaju diskretan zajednički vizuelni kontinuitet prema čitalačkoj strani. Čitalac može da čita odmah; animacija ne krije tekst i nije preduslov za navigaciju.
+3. **Članak → nazad u isti magazin → biblioteka:** povratna tranzicija vraća korisnika na **isti članak u pregledu, istu poziciju skrolovanja i isti izabrani mesec**, bez „teleportovanja“ na vrh. Browser Back, direktne veze i deljenje rade očekivano.
+
+### Kvalitet pokreta
+
+- Elegantan, kratak, smiren, sa prirodnim easingom; **pokret treba da objašnjava prostorni odnos, ne da demonstrira tehniku**.
+- Trajanje i krive kretanja odabrati posle probe na pravom iPhone-u; kao početnu hipotezu za mikroprelaze može se ispitati oko 180–300 ms, ali ovo **nije obavezna brojka** niti naučno dokazani optimum.
+- Bez automatskog listanja, paralaksa, nepotrebnog zuma, bljeskova, zumiranja cele stranice, čekanja na animaciju ili opterećivanja glavnog thread-a.
+- **Izbor odmah reaguje na dodir** i navigacija ostaje funkcionalna kada su animacije isključene ili nepodržane.
+- Poštovati `prefers-reduced-motion`; alternativa može biti neposredna zamena prikaza bez kretanja.
+- Koristiti mogućnosti nativne platforme samo uz proveru kompatibilnosti; ako je View Transitions API podržan, razmotriti ga kao progresivno poboljšanje, a ne obaveznu zavisnost. CSS ili jednostavni prelaz su prihvatljivi fallback.
+- Ne menjati sadržaj članaka, izvore, datume, SEO i kanonske URL-ove zbog efekta animacije.
+
+### Kriterijumi prihvatanja
+
+- [ ] Otvaranje korice jasno pokazuje da pripadamo istom mesečnom izdanju.
+- [ ] Otvaranje članka zaista stvara osećaj kontinuiteta iz prikazane uredničke scene, bez dodatnog koraka.
+- [ ] Vraćanje iz članka restaurira baš prethodnu poziciju i fokus; vraćanje na biblioteku čuva izabrani mesec.
+- [ ] Na iPhone-u sa Instagram in-app preglednikom i Safarijem nema treperenja, seckanja, blokiranja dodira ili naglog skakanja rasporeda.
+- [ ] Na Androidu, desktopu, sa većim fontovima i VoiceOver-om sve radi i kada je motion isključen.
+- [ ] U kratkom korisničkom testu odvojeno pitati koliko je prelaz prijatan i koliko je jasan; ne zaključivati zadovoljstvo samo iz estetske makete.
+- [ ] Ako neki prelaz na konkretnom uređaju stvara smetnju ili degradira navigaciju, treba ga pojednostaviti ili ukloniti za taj slučaj, bez ukidanja osnovne ideje.
+
+**Sažeto interno pravilo:** `Korica se otvara u magazin → magazin se otvara u članak → zatvaranjem se vraćamo tačno tamo gde smo bili.` Ne prikazivati ovo kao promotivni slogan korisnicima.
+
 ## Validacija pre produkcije
 
 - Za svaki mesec postoji jedna i samo jedna izabrana cover slika, iz odgovarajuće vesti.
