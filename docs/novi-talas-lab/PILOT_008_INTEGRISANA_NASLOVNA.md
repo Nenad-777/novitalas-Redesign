@@ -65,3 +65,17 @@ Urednik je eksplicitno odabrao element koji se najviše dopao u prvom pilotu: **
 - Ovo je estetska/UX iteracija u eksperimentalnoj grani, bez izmene produkcije. Konačni efekat i dalje zahteva probu na iPhone-u.
 
 Ne dodavati marketinške slogane, suvišne instrukcije, automatsko listanje ili dekorativne numeričke korake čitaocu.
+
+## Iteracija 03b — klikabilne rubrike i redizajn njihovih pregleda
+
+- Nazivi rubrika u horizontalnoj navigaciji otvaraju **poseban pregled rubrike**, ne samo skok na odeljak naslovne.
+- Naslovi rubrika na samoj naslovnoj i tekstualne oznake rubrika u glavnoj i sekundarnim pričama takođe otvaraju isti pregled.
+- Svaki pregled ima jasan naziv rubrike, veliku vodeću priču i **ručno prevlačivi horizontalni karusel fotografija i naslova**. Nema autoplay-a.
+- Iz karusela se direktno ulazi u originalni članak; povratak čuva rubriku. Dugme za povratak na naslovnu je stalno dostupno.
+- Za rubrike sa postojećim produkcionim kategorijama nalazi se i link „Svi tekstovi rubrike na postojećem sajtu“. Pilot ne prikazuje čitavu arhivu i ne sme da glumi da je ima.
+- „Kultura“ je u pilotu urednička kategorija sa jednom dostupnom pričom; nije predstavljena kao već postojeća zasebna produkciona ruta.
+- Oznake na koricama magazina preimenovane su u „MESEČNO IZDANJE“ da ne budu nekonzistentni neklikabilni nazivi rubrika.
+- URL-ovi probnih rubrika koriste `/novi-talas-3-lab?rubrika=<slug>`, a članak u okviru rubrike `?rubrika=<slug>&clanak=<id>`; nema promene postojećih javnih ruta.
+- Testirati povratak browser back, klik na rubriku unutar kartice, direktno otvaranje linka rubrike i iPhone/Instagram webview. `prefers-reduced-motion` ostaje podržan.
+
+**Produkcioni zahtevi za sledeću fazu:** vezati rubrike za stvarnu kompletnu bazu članaka, sa uredničkim redosledom, SEO canonical URL-ovima i funkcionalnom pretragom; ne praviti zasebnu produkcionu kategoriju Kultura bez uredničke odluke.
