@@ -8,6 +8,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
 import Home from "./pages/Home";
+import NewTalasExperience from "./pages/NewTalasExperience";
 import OpenEditionPilot from "./pages/OpenEditionPilot";
 import MonthlyMagazinesPilot from "./pages/MonthlyMagazinesPilot";
 import WilsonCrtaElectionArticle from "./pages/WilsonCrtaElectionArticle";
@@ -321,7 +322,9 @@ function Router() {
         {/* Home */}
         <Route path="/izdanje-lab" component={OpenEditionPilot} />
         <Route path="/magazini-lab" component={MonthlyMagazinesPilot} />
-        <Route path="/" component={Home} />
+        <Route path="/izdanja" component={NewTalasExperience} />
+        <Route path="/izdanja/:month" component={NewTalasExperience} />
+        <Route path="/" component={NewTalasExperience} />
         <Route path="/srbija/vilson-upozorio-na-beloruski-scenario-svet-ce-pratiti-izbore-u-srbiji" component={WilsonCrtaElectionArticle} />
         <Route
           path="/geopolitika/da-li-rusija-sprema-jos-300000-vojnika-za-rat-u-ukrajini"
