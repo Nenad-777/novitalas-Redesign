@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Search, Menu, X } from "lucide-react";
 import { articleSearchIndex, type SearchArticle } from "../../../shared/articleSearch";
-import { HOME_ARTICLES } from "./homeArticles";
+import { articleMeta } from "../../../shared/articleMeta";
+import { seoData } from "../../../shared/seo";
 import "./NewTalasExperience.css";
 
 type Article = SearchArticle;
@@ -21,16 +22,29 @@ const HERO = {
   category:"Obaveštajni izvori",
   categoryHref:"/obavestajni-izvori"
 };
-const published = (a:Article) => typeof a.publishedAt==="string" && /^2026-\d{2}-\d{2}$/.test(a.publishedAt);
-const knownArticles = Array.from(new Map(articleSearchIndex.filter(a=>a.href && a.title && a.href.startsWith("/") && a.href.split("/").length>2).map(a=>[a.href,a])).values());
+const isIsoDate = (value?:string) => Boolean(value && /^\\d{4}-\\d{2}-\\d{2}$/.test(value));
+const verifiedDates = new Map<string,string>();
+Object.entries(seoData).forEach(([href,meta])=>{if(isIsoDate(meta.datePublished)) verifiedDates.set(href,meta.datePublished!);});
+articleMeta.forEach(meta=>{if(isIsoDate(meta.datePublished)) verifiedDates.set(meta.path,meta.datePublished!);});
+const knownArticles:Article[] = Array.from(new Map<string,Article>(articleSearchIndex.filter(a=>a.href && a.title && a.href.startsWith("/") && a.href.split("/").length>2).map(a=>[a.href,{...a,publishedAt:verifiedDates.get(a.href)||a.publishedAt}])).values());
+const published = (a:Article) => isIsoDate(a.publishedAt);
+const chronological = (a:Article,b:Article) => (b.publishedAt||"").localeCompare(a.publishedAt||"") || a.title.localeCompare(b.title,"sr");
+// Editorial cover selection: September's previously used Greenland asset is absent
+// from the repository and the newer diaspora thumbnail is only 7.9 KB.
+// Use a documented September story with an existing full-size (2.5 MB) asset.
+const VERIFIED_COVERS:Record<string,string> = {
+  "2026-09":"/geopolitika/afd-menja-politicku-mapu-nemacke-ruski-gas-se-vraca-u-igru"
+};
 const issues:Issue[] = MONTH_NAMES.map((name,i)=>{
   const id="2026-"+String(i+2).padStart(2,"0");
-  const articles=knownArticles.filter(a=>published(a) && a.publishedAt!.startsWith(id)).sort((a,b)=>b.publishedAt!.localeCompare(a.publishedAt!));
-  return {id,name,articles,cover:articles.find(a=>Boolean(a.imageSrc))||null};
+  const articles=knownArticles.filter(a=>published(a) && a.publishedAt!.startsWith(id)).sort(chronological);
+  const cover=articles.find(a=>a.href===VERIFIED_COVERS[id])||articles.find(a=>Boolean(a.imageSrc))||null;
+  return {id,name,articles,cover};
 }).reverse();
 function sectionHref(a:Article){const part=a.href.split("/")[1];return SECTIONS.find(s=>s.slug===part)?.slug ? "/"+part : "/nasa-planeta";}
 function sectionLabel(a:Article){return SECTIONS.find(s=>"/"+s.slug===sectionHref(a))?.label || a.category || "Novi talas";}
 function Brand(){return <span className="nx-brand">NOVI <em>TALAS</em></span>}
+function WaveSignal(){return <span className="nx-wave-divider" aria-hidden="true"><i/><svg viewBox="0 0 120 24" role="presentation"><path d="M2 12 H34 C41 12 41 7 45 7 C50 7 49 18 53 18 C58 18 56 4 60 4 C64 4 62 20 67 20 C72 20 72 12 80 12 H118" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg><i/></span>}
 function LabelLink({href,children}:{href:string;children:ReactNode}){return <a className="nx-label-link" href={href}>{children} <ArrowUpRight size={13} aria-hidden="true"/></a>}
 function FocusCarousel({children,title,eyebrow,actionHref,actionText="Pogledaj sve",className=""}:{children:ReactNode[];title?:string;eyebrow?:string;actionHref?:string;actionText?:string;className?:string}){
   const rail=useRef<HTMLDivElement>(null);
@@ -87,14 +101,14 @@ function StoryCard({article}:{article:Article}){
 function Header(){
   const [open,setOpen]=useState(false);
   return <header className="nx-header">
-    <div className="nx-topline"><span>NEZAVISNI INFORMATIVNO-ANALITIČKI MAGAZIN</span><span>BEOGRAD · 2026.</span></div>
-    <div className="nx-masthead"><a href="/" aria-label="Novi talas, naslovna"><Brand/></a><div className="nx-head-actions"><a href="/izdanja">IZDANJA</a><a href="/pretraga" aria-label="Pretraga"><Search size={21}/></a><button type="button" onClick={()=>setOpen(v=>!v)} aria-label={open?"Zatvori meni":"Otvori meni"} aria-expanded={open}>{open?<X size={24}/>:<Menu size={24}/>}</button></div></div>
+    <div className="nx-topline"><span>VERITAS ANTE OMNIA</span><span>NEZAVISNI INFORMATIVNO-ANALITIČKI MAGAZIN</span></div>
+    <div className="nx-masthead"><a className="nx-identity" href="/" aria-label="Novi talas, naslovna"><Brand/><span className="nx-tagline">Vaš prozor u svet</span><WaveSignal/></a><div className="nx-head-actions"><a href="/izdanja">IZDANJA</a><a href="/pretraga" aria-label="Pretraga"><Search size={21}/></a><button type="button" onClick={()=>setOpen(v=>!v)} aria-label={open?"Zatvori meni":"Otvori meni"} aria-expanded={open}>{open?<X size={24}/>:<Menu size={24}/>}</button></div></div>
     <nav className={"nx-nav "+(open?"nx-nav-open":"")} aria-label="Rubrike">{SECTIONS.map(s=><a key={s.slug} href={"/"+s.slug}>{s.label}</a>)}<a href="/izdanja">Mesečna izdanja</a></nav>
   </header>;
 }
-function Footer(){return <footer className="nx-footer"><Brand/><span>Priče koje ostaju.</span><a href="/izdanja">Biblioteka izdanja <ArrowUpRight size={16}/></a></footer>}
+function Footer(){return <footer className="nx-footer"><Brand/><span>Veritas ante omnia · Vaš prozor u svet</span><a href="/izdanja">Biblioteka izdanja <ArrowUpRight size={16}/></a></footer>}
 function Home(){
-  const selection=HOME_ARTICLES.slice(0,8) as Article[];
+  const selection=knownArticles.filter(a=>published(a) && a.href!==HERO.href && Boolean(a.imageSrc)).sort(chronological).slice(0,8);
   return <><main className="nx-main">
     <div className="nx-intro"><span className="nx-eyebrow">NOVI TALAS / NASLOVNA</span><span>SVET U KONTEKSTU</span></div>
     <section className="nx-hero">
@@ -109,7 +123,7 @@ function Home(){
     </FocusCarousel>
     <div className="nx-rubrics-title"><span className="nx-eyebrow">TEME KOJE PRATIMO</span><h2>Rubrike</h2></div>
     {SECTIONS.map(section=>{
-      const articles=knownArticles.filter(a=>sectionHref(a)==="/"+section.slug && a.imageSrc).sort((a,b)=>(b.publishedAt||"").localeCompare(a.publishedAt||"")).slice(0,10);
+      const articles=knownArticles.filter(a=>sectionHref(a)==="/"+section.slug && a.imageSrc && published(a)).sort(chronological).slice(0,10);
       return articles.length?<FocusCarousel key={section.slug} title={section.title} eyebrow={section.deck} actionHref={"/"+section.slug} className="nx-section-carousel">
         {articles.map(article=><StoryCard key={article.href} article={article}/>)}
       </FocusCarousel>:null;
@@ -119,8 +133,10 @@ function Home(){
 function SectionLanding({slug}:{slug:string}){
   const section=SECTIONS.find(s=>s.slug===slug);
   if(!section)return <Home/>;
-  const articles=knownArticles.filter(a=>sectionHref(a)==="/"+slug && a.imageSrc).sort((a,b)=>(b.publishedAt||"").localeCompare(a.publishedAt||""));
-  return <main className="nx-main nx-library"><div className="nx-library-intro"><span className="nx-eyebrow">NOVI TALAS / RUBRIKA</span><h1>{section.title}</h1><p>{section.deck}</p></div>{articles.length?<><FocusCarousel eyebrow="NAJNOVIJE IZ RUBRIKE" title="Izdvajamo" actionHref="/izdanja" actionText="Mesečna izdanja">{articles.slice(0,10).map(a=><StoryCard key={a.href} article={a}/>)}</FocusCarousel><div className="nx-section-grid">{articles.map(a=><StoryCard key={a.href} article={a}/>)}</div></>:<div className="nx-empty">Arhiva ove rubrike je u dopuni.</div>}</main>;
+  const articles=knownArticles.filter(a=>sectionHref(a)==="/"+slug && a.imageSrc).sort(chronological);
+  const dated=articles.filter(published);
+  const undated=articles.filter(a=>!published(a));
+  return <main className="nx-main nx-library"><div className="nx-library-intro"><span className="nx-eyebrow">NOVI TALAS / RUBRIKA</span><h1>{section.title}</h1><p>{section.deck}</p></div>{articles.length?<>{dated.length>0&&<FocusCarousel eyebrow="NAJNOVIJE IZ RUBRIKE · OD NAJNOVIJEG" title="Hronološki" actionHref="/izdanja" actionText="Mesečna izdanja">{dated.slice(0,10).map(a=><StoryCard key={a.href} article={a}/>)}</FocusCarousel>}<div className="nx-section-grid">{dated.map(a=><StoryCard key={a.href} article={a}/>)}</div>{undated.length>0&&<section className="nx-undated"><h2>Datum u proveri</h2><p>Ovi tekstovi ostaju dostupni, ali ih ne svrstavamo među najnovije bez potvrđenog datuma.</p><div className="nx-section-grid">{undated.map(a=><StoryCard key={a.href} article={a}/>)}</div></section>}</>:<div className="nx-empty">Arhiva ove rubrike je u dopuni.</div>}</main>;
 }
 function Library(){return <main className="nx-main nx-library"><div className="nx-library-intro"><span className="nx-eyebrow">NOVI TALAS / ARHIVA</span><h1>Biblioteka izdanja</h1><p>Svaki mesec. Jedna korica. Čitav svet tema.</p></div><div className="nx-library-grid">{issues.map(issue=><IssueCover key={issue.id} issue={issue}/>)}</div><p className="nx-archive-note">Arhiva se dopunjava na osnovu potvrđenih datuma objavljivanja. Nepotpuni metapodaci ne znače da tekst nije objavljen.</p></main>}
 function Edition({id}:{id:string}){
