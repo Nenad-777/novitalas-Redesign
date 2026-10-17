@@ -22,7 +22,7 @@ const HERO = {
   category:"Obaveštajni izvori",
   categoryHref:"/obavestajni-izvori"
 };
-const isIsoDate = (value?:string) => Boolean(value && /^\\d{4}-\\d{2}-\\d{2}$/.test(value));
+const isIsoDate = (value?:string) => Boolean(value && /^\d{4}-\d{2}-\d{2}$/.test(value));
 const verifiedDates = new Map<string,string>();
 Object.entries(seoData).forEach(([href,meta])=>{if(isIsoDate(meta.datePublished)) verifiedDates.set(href,meta.datePublished!);});
 articleMeta.forEach(meta=>{if(isIsoDate(meta.datePublished)) verifiedDates.set(meta.path,meta.datePublished!);});
