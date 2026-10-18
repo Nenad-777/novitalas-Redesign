@@ -10,52 +10,102 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1"
     />
-    <!-- Experimental 0.48s cinematic entrance, independent of React / all routes. -->
-    <link rel="preload" as="image" href="/news/nt3-cinematic-opening-720.webp" media="(max-width: 650px)" fetchpriority="high" />
-    <link rel="preload" as="image" href="/news/nt3-cinematic-opening-1200.webp" media="(min-width: 651px)" fetchpriority="high" />
+    <!-- Experimental cinematic fullscreen fade; HTML-level entry for any directly loaded route. -->
+    <link rel="preload" as="image" href="/news/nt3-cinematic-opening-720.webp" media="(max-width: 900px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/news/nt3-cinematic-opening-1200.webp" media="(min-width: 901px)" fetchpriority="high" />
     <style>
       #nt3-opening {
         position: fixed;
         inset: 0;
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
         z-index: 2147483000;
-        display: grid;
-        place-items: center;
         overflow: hidden;
-        background: #030d1e;
+        background: #020c1c;
         pointer-events: none;
         opacity: 1;
-        visibility: visible;
+        transition: opacity 790ms cubic-bezier(.33, 0, .5, 1);
+        isolation: isolate;
       }
-      #nt3-opening picture {
+      #nt3-opening picture,
+      #nt3-opening picture img {
         display: block;
-        width: 100vw;
-        max-height: 100vh;
-        max-height: 100dvh;
-        transform: scale(.965);
-        transform-origin: 52% 50%;
-        will-change: transform;
-      }
-      #nt3-opening img {
-        display: block;
+        position: absolute;
+        inset: 0;
         width: 100%;
-        height: auto;
-        max-height: 100vh;
-        max-height: 100dvh;
-        object-fit: contain;
+        height: 100%;
       }
-      #nt3-opening.nt3-opening-go {
-        animation: nt3-curtain-out 480ms cubic-bezier(.2,.65,.3,1) both;
+      #nt3-opening picture img {
+        object-fit: cover;
+        object-position: center center;
+        opacity: 0;
+        transform: scale(1.005);
+        transform-origin: 56% 52%;
+        transition:
+          opacity 220ms ease-out,
+          transform 1200ms cubic-bezier(.22, .72, .28, 1);
       }
-      #nt3-opening.nt3-opening-go picture {
-        animation: nt3-poster-zoom 480ms cubic-bezier(.15,.65,.3,1) both;
+      #nt3-opening.nt3-image-ready picture img {
+        opacity: 1;
       }
-      @keyframes nt3-poster-zoom {
-        from { transform: scale(.965); }
-        to { transform: scale(1.085); }
+      #nt3-opening .nt3-opening-vignette {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(2, 10, 22, .03) 10%, rgba(2, 10, 22, .04) 62%, rgba(2, 10, 22, .3) 100%);
+        opacity: 0;
+        transition: opacity 220ms ease-out;
       }
-      @keyframes nt3-curtain-out {
-        0%, 44% { opacity: 1; visibility: visible; }
-        100% { opacity: 0; visibility: hidden; }
+      #nt3-opening.nt3-image-ready .nt3-opening-vignette {
+        opacity: 1;
+      }
+      #nt3-opening.nt3-opening-fade {
+        opacity: 0;
+      }
+      #nt3-opening.nt3-opening-fade picture img {
+        transform: scale(1.055);
+      }
+      #nt3-opening .nt3-opening-mobile-brand { display: none; }
+      @media (max-width: 900px) and (orientation: portrait) {
+        #nt3-opening picture img {
+          object-position: 88% center;
+          transform-origin: 88% 50%;
+        }
+        #nt3-opening .nt3-opening-vignette {
+          background: linear-gradient(180deg, rgba(2, 10, 24, .14) 0%, transparent 36%, rgba(2, 10, 24, .3) 62%, rgba(2, 10, 24, .82) 100%);
+        }
+        #nt3-opening .nt3-opening-mobile-brand {
+          display: flex;
+          position: absolute;
+          bottom: calc(10vh + env(safe-area-inset-bottom, 0px));
+          left: clamp(24px, 7vw, 52px);
+          right: 20px;
+          flex-direction: column;
+          gap: 11px;
+          color: #fff;
+          opacity: 0;
+          transform: translateY(8px);
+          transition: opacity 330ms ease-out 80ms, transform 400ms ease-out 80ms;
+          text-shadow: 0 2px 18px rgba(0, 4, 18, .72);
+        }
+        #nt3-opening.nt3-image-ready .nt3-opening-mobile-brand {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        #nt3-opening .nt3-opening-mobile-brand strong {
+          font-family: "Playfair Display", Georgia, serif;
+          font-weight: 700;
+          font-size: clamp(32px, 9.7vw, 64px);
+          letter-spacing: -.052em;
+          line-height: 1.02;
+          white-space: nowrap;
+        }
+        #nt3-opening .nt3-opening-mobile-brand span {
+          font-family: "Lora", Georgia, serif;
+          font-style: italic;
+          font-size: clamp(16px, 4vw, 22px);
+          letter-spacing: .035em;
+        }
       }
       @media (prefers-reduced-motion: reduce) {
         #nt3-opening { display: none !important; }
@@ -105,35 +155,80 @@
   <body>
     <div id="nt3-opening" aria-hidden="true">
       <picture>
-        <source srcset="/news/nt3-cinematic-opening-720.webp" media="(max-width: 650px)" />
-        <img src="/news/nt3-cinematic-opening-1200.webp" width="1200" height="630" alt="" decoding="sync" fetchpriority="high" />
+        <source srcset="/news/nt3-cinematic-opening-720.webp" media="(max-width: 900px)" />
+        <img src="/news/nt3-cinematic-opening-1200.webp" width="1200" height="630" alt="" decoding="async" fetchpriority="high" />
       </picture>
+      <div class="nt3-opening-vignette"></div>
+      <div class="nt3-opening-mobile-brand">
+        <strong>NOVI TALAS</strong>
+        <span>Vaš prozor u svet</span>
+      </div>
     </div>
     <div id="root"></div>
     <script>
-      // Start the very brief zoom as soon as the destination page is mounted.
-      // An upper timeout prevents a broken app from leaving the intro on-screen.
       (() => {
-        const opening = document.getElementById("nt3-opening");
+        const intro = document.getElementById("nt3-opening");
         const root = document.getElementById("root");
-        if (!opening || !root) return;
+        const image = intro && intro.querySelector("img");
+        if (!intro || !root || !image) return;
+
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (prefersReducedMotion) { intro.remove(); return; }
+
+        let readyImage = false;
+        let readyPage = root.childElementCount > 0;
         let started = false;
-        let observer;
-        const reveal = () => {
-          if (started) return;
-          started = true;
-          if (observer) observer.disconnect();
-          requestAnimationFrame(() => opening.classList.add("nt3-opening-go"));
+        let rootObserver;
+        let holdTimer;
+        let removeTimer;
+
+        const finish = () => {
+          if (rootObserver) rootObserver.disconnect();
+          window.clearTimeout(holdTimer);
+          window.clearTimeout(removeTimer);
+          intro.remove();
         };
-        if (root.childElementCount) {
-          reveal();
-        } else {
-          observer = new MutationObserver(() => {
-            if (root.childElementCount) reveal();
+        const showWhenReady = () => {
+          if (started || !readyImage || !readyPage) return;
+          started = true;
+          intro.classList.add("nt3-image-ready");
+          // Allow the hero to settle into view, then dissolve the entire screen.
+          holdTimer = window.setTimeout(() => {
+            intro.classList.add("nt3-opening-fade");
+            removeTimer = window.setTimeout(finish, 850);
+          }, 440);
+        };
+        const imageLoaded = () => {
+          if (readyImage || !intro.isConnected) return;
+          readyImage = true;
+          showWhenReady();
+        };
+        const imageFailed = () => finish();
+
+        if (!readyPage) {
+          rootObserver = new MutationObserver(() => {
+            if (root.childElementCount > 0) {
+              readyPage = true;
+              rootObserver.disconnect();
+              showWhenReady();
+            }
           });
-          observer.observe(root, { childList: true });
-          setTimeout(reveal, 1400);
+          rootObserver.observe(root, { childList: true });
         }
+
+        image.addEventListener("error", imageFailed, { once: true });
+        if (image.complete && image.naturalWidth > 0) {
+          imageLoaded();
+        } else if (image.decode) {
+          image.decode().then(imageLoaded, () => {
+            if (image.complete && image.naturalWidth > 0) imageLoaded();
+          });
+        } else {
+          image.addEventListener("load", imageLoaded, { once: true });
+        }
+
+        // A missing asset or failed page can never leave a full-screen mask.
+        window.setTimeout(finish, 3000);
       })();
     </script>
     <script type="module" src="/src/main.tsx"></script>
