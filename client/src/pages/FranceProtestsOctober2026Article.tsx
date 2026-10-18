@@ -3,7 +3,7 @@ import ArticleTemplate from "@/components/ArticleTemplate";
 // Autentična fotografija Jorgea Jaramilla, 17.10.2026.
 // Izvor: Wikimedia Commons, CC BY-SA 4.0. Nije generisana niti zamenjena.
 // Direktan link na fotografiju u rezoluciji 1280 px (originalni snimak 9504 px).
-export const FRANCE_PROTESTS_IMAGE = "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Paris_riots%2C_17_October_2026_-_Crowd_facing_Place_de_la_R%C3%A9publique_in_tear_gas_-_JJxFile_0012.jpg/1280px-Paris_riots%2C_17_October_2026_-_Crowd_facing_Place_de_la_R%C3%A9publique_in_tear_gas_-_JJxFile_0012.jpg";
+export const FRANCE_PROTESTS_IMAGE = "/news/france-protests-paris-jj-20261017.jpg";
 export const FRANCE_PROTESTS_PATH = "/geopolitika/francuska-se-suocava-sa-velikom-drustvenom-i-politickom-krizom";
 
 const paragraphs = [
