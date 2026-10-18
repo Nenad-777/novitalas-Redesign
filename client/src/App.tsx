@@ -15,7 +15,6 @@ import WilsonCrtaElectionArticle from "./pages/WilsonCrtaElectionArticle";
 import RiyadhAirportArticle from "./pages/RiyadhAirportArticle";
 import StarshieldWhiteHouseArticle from "./pages/StarshieldWhiteHouseArticle";
 import Russia300000TroopsArticle from "./pages/Russia300000TroopsArticle";
-import Pretraga from "./pages/Pretraga";
 import GeopolitikaIndex from "./pages/GeopolitikaIndex";
 import UkSelfDeterminationArticle from "./pages/UkSelfDeterminationArticle";
 import GreenlandUsArcticArticle from "./pages/GreenlandUsArcticArticle";
@@ -335,7 +334,7 @@ function Router() {
           path="/geopolitika/da-li-rusija-sprema-jos-300000-vojnika-za-rat-u-ukrajini"
           component={Russia300000TroopsArticle}
         />
-        <Route path="/pretraga" component={Pretraga} />
+        <Route path="/pretraga" component={NewTalasExperience} />
 
         {/* =========================
             GEOPOLITIKA

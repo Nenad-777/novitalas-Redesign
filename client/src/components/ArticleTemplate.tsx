@@ -88,8 +88,8 @@ export default function ArticleTemplate({
 
   return (
     <div
-      className="min-h-screen flex flex-col transition-colors duration-300"
-      style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
+      className={embedded ? "min-h-screen flex flex-col transition-colors duration-300" : "nx-article-layout min-h-screen flex flex-col transition-colors duration-300"}
+      style={{ backgroundColor: isDark ? "#101721" : "#f8f6f1" }}
     >
       {path && !embedded && (
         <SeoMeta
@@ -102,10 +102,10 @@ export default function ArticleTemplate({
       {!embedded && <Header />}
 
       <main
-        className="py-12 md:py-16 flex-1"
-        style={{ backgroundColor: isDark ? "#111318" : "#ffffff" }}
+        className={embedded ? "py-12 md:py-16 flex-1" : "nx-article-main py-12 md:py-16 flex-1"}
+        style={{ backgroundColor: isDark ? "#101721" : "#f8f6f1" }}
       >
-        <article className="max-w-[860px] mx-auto px-5">
+        <article className={embedded ? "max-w-[860px] mx-auto px-5" : "nx-reading-article max-w-[860px] mx-auto px-5"}>
           {/* Video hero */}
           {imageFirst && videoHero ? (
             <div className="mb-8">
@@ -319,17 +319,7 @@ export default function ArticleTemplate({
                   </figure>
                 )}
 
-                {/* Separator između pasusa */}
-                {idx !== paragraphs.length - 1 && (
-                  <div
-                    style={{
-                      width: "40px",
-                      height: "2px",
-                      backgroundColor: isDark ? "#2a2a2e" : "#eee",
-                      margin: "24px 0 24px 12px",
-                    }}
-                  />
-                )}
+
               </div>
             ))}
           </div>
