@@ -15,7 +15,6 @@ import WilsonCrtaElectionArticle from "./pages/WilsonCrtaElectionArticle";
 import RiyadhAirportArticle from "./pages/RiyadhAirportArticle";
 import StarshieldWhiteHouseArticle from "./pages/StarshieldWhiteHouseArticle";
 import Russia300000TroopsArticle from "./pages/Russia300000TroopsArticle";
-import Pretraga from "./pages/Pretraga";
 import GeopolitikaIndex from "./pages/GeopolitikaIndex";
 import UkSelfDeterminationArticle from "./pages/UkSelfDeterminationArticle";
 import GreenlandUsArcticArticle from "./pages/GreenlandUsArcticArticle";
