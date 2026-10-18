@@ -286,3 +286,179 @@
   .nx-masthead .nx-head-actions > a:first-child,
   .nx-masthead .nx-head-actions > button { display: none; }
 }
+
+/* NOVI TALAS 3.0 / navigation, editorial footer, search & reading themes */
+.nx-head-actions .nx-theme-toggle{
+  display:inline-flex;align-items:center;justify-content:center;flex:0 0 43px;
+  width:43px;height:43px;min-height:43px;border:1px solid var(--nx-line);
+  border-radius:50%;background:transparent;color:var(--nx-ink);
+  transition:background .2s,border-color .2s,color .2s;
+}
+.nx-head-actions .nx-theme-toggle:hover{background:var(--nx-line)}
+.nx-head-actions .nx-theme-toggle svg{stroke-width:1.8}
+.nx .nx-tagline{white-space:nowrap}
+@media (min-width:761px){
+  .nx-masthead .nx-head-actions > button.nx-theme-toggle{display:inline-flex}
+  .nx-masthead .nx-head-actions > button.nx-menu-toggle{display:none}
+}
+@media (max-width:760px){
+  .nx-head-actions{gap:4px}
+  .nx-head-actions>a,.nx-head-actions button{width:39px;min-height:40px;flex-shrink:0}
+  .nx-head-actions .nx-theme-toggle{width:39px;height:39px;min-height:39px;flex-basis:39px}
+}
+
+/* Theme follows existing ThemeProvider and localStorage setting across old articles. */
+.dark .nx{
+  --nx-paper:#101721;
+  --nx-ink:#e9e8e3;
+  --nx-wine:#e0a9b5;
+  --nx-muted:#a9acb5;
+  --nx-line:#313b49;
+  background:var(--nx-paper);
+  color:var(--nx-ink);
+  color-scheme:dark;
+}
+.dark .nx .nx-topline,.dark .nx .nx-intro,.dark .nx .nx-rail-controls{color:#acb0b8}
+.dark .nx .nx-tagline{color:#c8c3bb}
+.dark .nx .nx-wave-divider{color:#d0a5ae}
+.dark .nx .nx-wave-divider i{background:rgba(208,165,174,.42)}
+.dark .nx .nx-hero-copy>p{color:#bab8b4}
+.dark .nx .nx-read span{background:#d4a6af;color:#131923}
+.dark .nx .nx-label-link{color:#e0a9b5!important}
+.dark .nx .nx-section-more{color:#e0a9b5!important}
+.dark .nx .nx-story-photo{background:#263345}
+.dark .nx .nx-story-photo.nx-story-typographic{background:linear-gradient(130deg,#172436,#233a53 60%,#632a46)}
+.dark .nx .nx-issue-caption svg{color:#d4a6af}
+.dark .nx .nx-back:hover,.dark .nx .nx-story-text h3 a:hover{color:#e0a9b5}
+.dark .nx .nx-hero-photo{background:#283243}
+.dark .nx .nx-head-actions .nx-theme-toggle:hover{background:#243043}
+
+/* The foot of every magazine page is now a complete editorial landmark. */
+.nx-footer{
+  max-width:none;width:100%;margin:70px 0 0;padding:0;
+  background:#0e1724;color:#eff0ed;border-top:1px solid #293744;
+}
+.nx-footer-main,.nx-footer-bottom{
+  max-width:1500px;margin-inline:auto;
+  padding-inline:clamp(20px,4vw,64px);
+}
+.nx-footer-main{
+  display:grid;grid-template-columns:1.45fr 1fr .8fr;
+  gap:clamp(35px,5vw,95px);padding-top:60px;padding-bottom:66px;
+}
+.nx-footer-identity,.nx-footer-navigation,.nx-footer-resources{
+  display:flex;flex-direction:column;align-items:flex-start;min-width:0;
+}
+.nx-footer-identity .nx-brand{
+  color:#f5f3f0;font-size:clamp(33px,3.2vw,50px);
+  letter-spacing:-.055em;line-height:1.12;
+}
+.nx-footer-identity .nx-brand em{color:#e0bac0}
+.nx-footer-identity p{
+  font-family:"Lora",Georgia,serif;font-size:clamp(15px,1.5vw,19px);
+  font-style:italic;color:#b9c0c9;margin:10px 0 13px;
+}
+.nx-footer-identity .nx-wave-divider{width:200px;color:#cf9faa}
+.nx-footer-identity .nx-wave-divider i{background:rgba(207,159,170,.45)}
+.nx-footer-kicker{
+  font-size:10px;letter-spacing:.16em;font-weight:800;
+  color:#c29da7;text-transform:uppercase;
+}
+.nx-footer-navigation>div{display:grid;grid-template-columns:1fr 1fr;gap:15px 25px;margin-top:23px}
+.nx-footer-navigation a,.nx-footer-resources>a{
+  font-size:14px;line-height:1.4;color:#e6e7e5;transition:color .2s;
+}
+.nx-footer-resources>a{display:inline-flex;align-items:center;gap:8px;margin-top:22px}
+.nx-footer-navigation a:hover,.nx-footer-resources>a:hover,.nx-footer-bottom a:hover{color:#e0bac0}
+.nx-footer-theme{
+  display:inline-flex;align-items:center;gap:9px;align-self:flex-start;
+  padding:11px 15px;margin-top:22px;border:1px solid #45505d;
+  border-radius:22px;color:#e5e7ea;background:transparent;
+  font-size:13px;
+}
+.nx-footer-theme:hover{background:#233044}
+.nx-footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
+  border-top:1px solid #303b49;padding-top:21px;padding-bottom:30px;
+  font-size:11px;font-weight:700;letter-spacing:.08em;color:#b0b7c1;
+}
+.nx-footer-bottom em{
+  font-family:"Lora",Georgia,serif;font-size:15px;letter-spacing:0;
+  font-weight:400;color:#cbc4bd;
+}
+.nx-footer-bottom>a{display:flex;align-items:center;gap:7px;font-size:12px}
+
+/* Real, keyboard-accessible search with live matches from the archive index. */
+.nx-search-page{min-height:65vh;padding-bottom:48px}
+.nx-search-heading{padding:clamp(45px,6.5vw,95px) 0 27px;max-width:920px}
+.nx-search-heading h1{
+  font-family:var(--nx-serif);font-size:clamp(48px,7vw,90px);
+  font-weight:700;letter-spacing:-.06em;line-height:1.08;margin:18px 0;
+}
+.nx-search-heading p{font-family:"Lora",Georgia,serif;font-size:18px;color:var(--nx-muted)}
+.nx-search-form{
+  display:flex;align-items:center;gap:14px;max-width:980px;
+  border:1px solid var(--nx-line);background:var(--nx-paper);
+  padding:10px 10px 10px 20px;
+}
+.nx-search-form>svg{flex-shrink:0;color:var(--nx-muted)}
+.nx-search-form input{
+  appearance:none;flex:1;min-width:0;font-size:clamp(16px,2vw,21px);
+  font-family:var(--nx-sans);color:var(--nx-ink);
+  background:transparent;outline:none;border:0;line-height:1.5;
+}
+.nx-search-form input::placeholder{color:var(--nx-muted);opacity:.85}
+.nx-search-form .nx-search-clear{
+  display:grid;place-items:center;flex-shrink:0;border:0;
+  width:38px;height:38px;background:transparent;color:var(--nx-muted);
+}
+.nx-search-submit{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:14px 18px;min-height:46px;background:var(--nx-ink);
+  border:1px solid var(--nx-ink);color:var(--nx-paper)!important;
+  font-size:13px;font-weight:800;letter-spacing:.04em;white-space:nowrap;
+}
+.nx-search-submit:hover{opacity:.88}
+.nx-search-suggestions{padding:33px 0}
+.nx-search-suggestions>div{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.nx-search-suggestions button{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid var(--nx-line);border-radius:30px;padding:9px 14px;
+  background:transparent;font-size:13px;color:var(--nx-ink);
+}
+.nx-search-suggestions button:hover{border-color:var(--nx-wine)}
+.nx-search-page .nx-footer-kicker{color:var(--nx-wine)}
+.nx-search-content{padding:35px 0}
+.nx-search-result-meta{font-size:12px;font-weight:750;letter-spacing:.07em;color:var(--nx-muted);padding-bottom:22px;border-bottom:1px solid var(--nx-line)}
+.nx-search-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:45px 25px;padding-top:31px}
+.nx-search-grid .nx-story-card{font-size:inherit;line-height:normal}
+.nx-search-grid .nx-story-card h3{font-size:clamp(21px,2vw,29px)}
+.nx-search-empty,.nx-search-note{font-family:"Lora",Georgia,serif;color:var(--nx-muted);font-size:16px;line-height:1.65;padding:20px 0}
+@media(max-width:960px){
+  .nx-footer-main{grid-template-columns:1fr 1fr;gap:40px}
+  .nx-footer-resources{grid-column:2}
+  .nx-footer-identity{grid-row:span 2}
+  .nx-search-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+  .nx-footer{margin-top:48px}
+  .nx-footer-main{grid-template-columns:1fr 1fr;gap:34px 18px;padding-top:39px;padding-bottom:36px}
+  .nx-footer-identity{grid-column:1/-1;grid-row:auto;padding-bottom:11px}
+  .nx-footer-identity .nx-brand{font-size:38px}
+  .nx-footer-identity .nx-wave-divider{width:183px}
+  .nx-footer-navigation{grid-column:1}
+  .nx-footer-navigation>div{grid-template-columns:1fr;gap:15px;margin-top:18px}
+  .nx-footer-resources{grid-column:2}
+  .nx-footer-resources>a{margin-top:16px}
+  .nx-footer-theme{margin-top:18px;padding:10px;font-size:12px}
+  .nx-footer-bottom{flex-wrap:wrap;padding-bottom:30px;gap:16px}
+  .nx-footer-bottom em{display:none}
+  .nx-search-heading{padding:36px 0 20px}
+  .nx-search-heading p{font-size:16px}
+  .nx-search-form{padding:8px 8px 8px 12px;gap:10px}
+  .nx-search-submit{padding:11px;min-height:42px;font-size:0}
+  .nx-search-submit svg{width:20px;height:20px}
+  .nx-search-grid{grid-template-columns:1fr;gap:35px}
+  .nx-search-grid .nx-story-photo{aspect-ratio:16/10}
+  .nx-search-grid .nx-story-card h3{font-size:24px}
+}
