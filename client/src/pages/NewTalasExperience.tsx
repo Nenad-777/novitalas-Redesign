@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode, type FormEvent } from "react";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Search, Menu, X, Moon, Sun } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Search, X } from "lucide-react";
 import { articleSearchIndex, searchArticles, type SearchArticle } from "../../../shared/articleSearch";
-import { useTheme } from "../contexts/ThemeContext";
+import { SECTIONS, MagazineHeader, MagazineFooter } from "../components/MagazineChrome";
 import { articleMeta } from "../../../shared/articleMeta";
 import { HOME_ARTICLES } from "./homeArticles";
 import { HERO_ARTICLE } from "./Home";
@@ -11,13 +11,7 @@ import "./NewTalasExperience.css";
 type Article = SearchArticle;
 type Issue = { id:string; name:string; articles:Article[]; cover:Article|null };
 const MONTH_NAMES = ["FEBRUAR","MART","APRIL","MAJ","JUN","JUL","AVGUST","SEPTEMBAR","OKTOBAR"];
-const SECTIONS = [
-  { label:"Geopolitika", slug:"geopolitika", title:"Geopolitika" },
-  { label:"Srbija", slug:"srbija", title:"Srbija" },
-  { label:"Obaveštajni izvori", slug:"obavestajni-izvori", title:"Obaveštajni izvori" },
-  { label:"Naša planeta", slug:"nasa-planeta", title:"Naša planeta" },
-  { label:"Kultura", slug:"kultura", title:"Kultura" }
-] as const;
+
 // Keep the existing OBJAVA workflow as the canonical source for the lead.
 const HERO = {
   ...HERO_ARTICLE,
@@ -54,8 +48,6 @@ function formatStoryCount(count:number){
   const noun=lastTwo>=11&&lastTwo<=14?"tekstova":last===1?"tekst":last>=2&&last<=4?"teksta":"tekstova";
   return count+" "+noun;
 }
-function Brand(){return <span className="nx-brand">NOVI <em>TALAS</em></span>}
-function WaveSignal(){return <span className="nx-wave-divider" aria-hidden="true"><i/><svg viewBox="0 0 120 24" role="presentation"><path d="M2 12 H34 C41 12 41 7 45 7 C50 7 49 18 53 18 C58 18 56 4 60 4 C64 4 62 20 67 20 C72 20 72 12 80 12 H118" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg><i/></span>}
 function LabelLink({href,children}:{href:string;children:ReactNode}){return <a className="nx-label-link" href={href}>{children} <ArrowUpRight size={13} aria-hidden="true"/></a>}
 function FocusCarousel({children,title,eyebrow,actionHref,actionText="Pogledaj sve",className=""}:{children:ReactNode[];title?:string;eyebrow?:string;actionHref?:string;actionText?:string;className?:string}){
   const rail=useRef<HTMLDivElement>(null);
@@ -108,26 +100,6 @@ function StoryCard({article}:{article:Article}){
     <a href={article.href} className={"nx-story-photo"+(!article.imageSrc?" nx-story-typographic":"")}>{article.imageSrc?<img src={article.imageSrc} alt={article.imageAlt||article.title} loading="lazy"/>:<span className="nx-story-placeholder"><strong>NOVI TALAS</strong><small>{sectionLabel(article)}</small></span>}</a>
     <div className="nx-story-text"><LabelLink href={sectionHref(article)}>{sectionLabel(article)}</LabelLink><h3><a href={article.href}>{article.title}</a></h3><p>{article.description}</p></div>
   </article>;
-}
-function Header(){
-  const [open,setOpen]=useState(false);
-  const {theme,toggleTheme}=useTheme();
-  return <header className="nx-header">
-    <div className="nx-topline"><span>VERITAS ANTE OMNIA</span><span>NEZAVISNI INFORMATIVNO-ANALITIČKI MAGAZIN</span></div>
-    <div className="nx-masthead"><a className="nx-identity" href="/" aria-label="Novi talas, naslovna"><Brand/><span className="nx-tagline">Vaš prozor u svet</span><WaveSignal/></a><div className="nx-head-actions"><a href="/izdanja">IZDANJA</a><a href="/pretraga" aria-label="Pretraži arhivu" title="Pretraga"><Search size={22}/></a><button className="nx-theme-toggle" type="button" onClick={toggleTheme} aria-label={theme==="dark"?"Uključi dnevni režim":"Uključi noćni režim"} title={theme==="dark"?"Dnevni režim":"Noćni režim"}>{theme==="dark"?<Sun size={22}/>:<Moon size={22}/>}</button><button className="nx-menu-toggle" type="button" onClick={()=>setOpen(v=>!v)} aria-label={open?"Zatvori meni":"Otvori meni"} aria-expanded={open}>{open?<X size={24}/>:<Menu size={24}/>}</button></div></div>
-    <nav className={"nx-nav "+(open?"nx-nav-open":"")} aria-label="Rubrike">{SECTIONS.map(s=><a key={s.slug} href={"/"+s.slug}>{s.label}</a>)}<a href="/izdanja">Mesečna izdanja</a></nav>
-  </header>;
-}
-function Footer(){
-  const {theme,toggleTheme}=useTheme();
-  return <footer className="nx-footer">
-    <div className="nx-footer-main">
-      <div className="nx-footer-identity"><a href="/" aria-label="Novi talas, naslovna"><Brand/></a><p>Vaš prozor u svet</p><WaveSignal/></div>
-      <nav className="nx-footer-navigation" aria-label="Rubrike u podnožju"><span className="nx-footer-kicker">RUBRIKE</span><div>{SECTIONS.map(section=><a key={section.slug} href={"/"+section.slug}>{section.label}</a>)}</div></nav>
-      <div className="nx-footer-resources"><span className="nx-footer-kicker">ISTRAŽITE</span><a href="/izdanja">Mesečna izdanja <ArrowUpRight size={15}/></a><a href="/pretraga">Pretraga arhive <ArrowUpRight size={15}/></a><button type="button" onClick={toggleTheme} className="nx-footer-theme">{theme==="dark"?<Sun size={16}/>:<Moon size={16}/>} {theme==="dark"?"Dnevni režim":"Noćni režim"}</button></div>
-    </div>
-    <div className="nx-footer-bottom"><span>© 2026 NOVI TALAS</span><em>Veritas ante omnia</em><a href="/">Na početak <ArrowUpRight size={15}/></a></div>
-  </footer>;
 }
 function Home(){
   const selection=HOME_ARTICLES.map(article=>knownArticles.find(a=>a.href===article.href) || ({...article,category:article.category} as Article)).filter(a=>a.href!==HERO.href).sort(chronological).slice(0,8);
@@ -211,5 +183,5 @@ function Edition({id}:{id:string}){
 export default function NewTalasExperience(){
   const path=typeof window!=="undefined"?window.location.pathname:"/";
   useEffect(()=>{document.title=path==="/"?"Novi Talas — Priče koje ostaju":path==="/pretraga"?"Pretraga | Novi Talas":path==="/izdanja"?"Mesečna izdanja | Novi Talas":SECTIONS.some(section=>"/"+section.slug===path)?"Rubrike | Novi Talas":"Izdanje | Novi Talas"},[path]);
-  return <div className="nx"><Header/>{path==="/pretraga"?<SearchLanding/>:path==="/izdanja"?<Library/>:path.startsWith("/izdanja/")?<Edition id={path.split("/")[2]}/>:SECTIONS.some(s=>"/"+s.slug===path)?<SectionLanding slug={path.slice(1)}/>:<Home/>}<Footer/></div>;
+  return <div className="nx"><MagazineHeader/>{path==="/pretraga"?<SearchLanding/>:path==="/izdanja"?<Library/>:path.startsWith("/izdanja/")?<Edition id={path.split("/")[2]}/>:SECTIONS.some(s=>"/"+s.slug===path)?<SectionLanding slug={path.slice(1)}/>:<Home/>}<MagazineFooter/></div>;
 }
