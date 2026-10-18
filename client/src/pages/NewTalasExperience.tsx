@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode, type FormEvent } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Search, Menu, X, Moon, Sun } from "lucide-react";
 import { articleSearchIndex, searchArticles, type SearchArticle } from "../../../shared/articleSearch";
 import { useTheme } from "../contexts/ThemeContext";
@@ -170,7 +170,7 @@ function SearchLanding(){
     window.addEventListener("popstate",restore);
     return ()=>window.removeEventListener("popstate",restore);
   },[]);
-  const submit=(event:React.FormEvent<HTMLFormElement>)=>{
+  const submit=(event:FormEvent<HTMLFormElement>)=>{
     event.preventDefault();
     const q=term.trim();
     const url=q?"/pretraga?q="+encodeURIComponent(q):"/pretraga";
@@ -189,7 +189,7 @@ function SearchLanding(){
       <button className="nx-search-submit" type="submit">Pretraži <ArrowRight size={17}/></button>
     </form>
     {normalized.length>=2?
-      <div className="nx-search-content"><div className="nx-search-result-meta">{matches.length?matches.length+" "+(matches.length===1?"rezultat":matches.length%10>=2&&matches.length%10<=4&&!(matches.length%100>=12&&matches.length%100<=14)?"rezultata":"rezultata"):"Nema rezultata"} za „{normalized}“</div>
+      <div className="nx-search-content"><div className="nx-search-result-meta">{matches.length?matches.length+" "+(matches.length===1?"pronađen tekst":"pronađenih tekstova"):"Nema rezultata"} za „{normalized}“</div>
         {shown.length?<><div className="nx-search-grid">{shown.map(article=><StoryCard key={article.href} article={article}/>)}</div>{shown.length<matches.length&&<p className="nx-search-note">Prikazano prvih {shown.length} rezultata. Sužavanjem pojma možete precizirati pretragu.</p>}</>:<p className="nx-search-empty">Nema pronađenih tekstova. Pokušajte drugim pojmom ili nazivom teme.</p>}
       </div>:
       <div className="nx-search-suggestions"><span className="nx-footer-kicker">PREDLOZI ZA PRETRAGU</span><div>{["Bela kuća","Srbija","Grenland","NASA","izbori"].map(q=><button type="button" key={q} onClick={()=>tryTerm(q)}>{q}<ArrowUpRight size={14}/></button>)}</div></div>}
