@@ -3,6 +3,14 @@
 // previous HERO here and let the oldest secondary story fall off automatically.
 export const HOME_ARTICLE_CANDIDATES = [
   {
+    href: "/kultura/klara-i-sunce-premijera-film-po-romanu-nobelovca-kazua-isigura",
+    category: "KULTURA · FILM",
+    title: "Premijera „Klare i Sunca“ po romanu nobelovca Kazua Išigura: Može li robot razumeti čoveka?",
+    description: "Džena Ortega tumači humanoidnog robota u filmu Taike Vaititija, snimljenom prema romanu dobitnika Nobelove nagrade za književnost. Priča o ljubavi, usamljenosti i složenom odnosu čoveka i veštačke inteligencije.",
+    imageSrc: "https://img.youtube.com/vi/wixzainceAE/maxresdefault.jpg",
+    imageAlt: "Zvanična YouTube naslovna slika trejlera filma Klara i Sunce, Sony Pictures Entertainment.",
+  },
+  {
     href: "/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina",
     category: "OBAVEŠTAJNI IZVORI · SAD–UKRAJINA",
     title: "Bela kuća ograničila satelitsku vezu Ukrajini: ko je izdao nalog i zašto?",
