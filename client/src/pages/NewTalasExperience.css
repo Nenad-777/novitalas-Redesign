@@ -465,3 +465,50 @@
 
 /* Palette contract: antique-gold dark accents, deep burgundy in daylight; no pink. */
 .dark .nx .nx-issue-brand span{color:#f5f0e8}
+
+/* Shared 3.0 masthead/footer when displayed on existing story routes.
+   The parent .nx supplies the same tokens and theme without the magazine's
+   page-sized minimum height. */
+.nx.nx-chrome-shell{min-height:0;width:100%;max-width:none;margin:0;padding:0;background:var(--nx-paper);color:var(--nx-ink)}
+.nx-chrome-header .nx-header{position:relative;z-index:35}
+.nx-chrome-footer .nx-footer{margin-top:0}
+.dark .nx-chrome-shell{background:#101721}
+.nx-chrome-shell .nx-nav{box-sizing:border-box}
+.nx-chrome-shell .nx-head-actions .nx-theme-toggle{color:var(--nx-ink)}
+
+/* Read the story in the same editorial environment as the magazine cover. */
+.nx-article-layout{
+  background:#f8f6f1; color:#152237;
+  font-family:"Lora",Georgia,serif;
+}
+.dark .nx-article-layout{background:#101721;color:#e9e8e3}
+.nx-article-layout .nx-article-main{background:inherit;flex:1;padding-top:clamp(34px,5.3vw,75px);padding-bottom:clamp(55px,6.3vw,93px)}
+.nx-article-layout .nx-reading-article{max-width:910px}
+.nx-reading-article h1{
+  font-family:"Playfair Display",Georgia,serif!important;
+  font-weight:700;letter-spacing:-.055em;
+  font-size:clamp(33px,4.5vw,63px);
+  line-height:1.095;
+  color:inherit;
+}
+.nx-reading-article .kicker{
+  font-family:"Source Sans 3",sans-serif;
+  font-size:12px;
+  color:#841b2c;
+  letter-spacing:.17em;
+  font-weight:800;
+}
+.dark .nx-reading-article .kicker{color:#c9ac70}
+.nx-reading-article img{max-width:100%}
+.nx-reading-article > div:first-child img{max-width:100%}
+.nx-reading-article [class*="photo-credit"],.nx-reading-article .photo-caption{
+  color:#777773;font-size:12px;
+}
+.dark .nx-reading-article [class*="photo-credit"],.dark .nx-reading-article .photo-caption{color:#a9acb5}
+.nx-reading-article a:focus-visible{outline:3px solid #841b2c;outline-offset:4px}
+.nx-reading-article a:not([class]){text-underline-offset:3px}
+@media(max-width:760px){
+  .nx-article-layout .nx-article-main{padding-top:34px}
+  .nx-reading-article h1{font-size:clamp(31px,8.5vw,44px);line-height:1.11}
+  .nx-reading-article .kicker{font-size:11px}
+}
