@@ -1,5 +1,5 @@
 /* NOVI TALAS 3.0 — magazine-first editorial experience */
-.nx{--nx-paper:#f8f6f1;--nx-ink:#152237;--nx-wine:#8c2342;--nx-muted:#6f6e6c;--nx-line:#ded9d1;--nx-serif:"Playfair Display","Lora",Georgia,serif;--nx-sans:"Source Sans 3",system-ui,-apple-system,sans-serif;min-height:100svh;background:var(--nx-paper);color:var(--nx-ink);font-family:var(--nx-sans);-webkit-font-smoothing:antialiased;color-scheme:light}
+.nx{--nx-paper:#f8f6f1;--nx-ink:#152237;--nx-wine:#841b2c;--nx-muted:#6f6e6c;--nx-line:#ded9d1;--nx-serif:"Playfair Display","Lora",Georgia,serif;--nx-sans:"Source Sans 3",system-ui,-apple-system,sans-serif;min-height:100svh;background:var(--nx-paper);color:var(--nx-ink);font-family:var(--nx-sans);-webkit-font-smoothing:antialiased;color-scheme:light}
 .nx *,.nx *:before,.nx *:after{box-sizing:border-box}
 .nx a{color:inherit;text-decoration:none}
 .nx button{font:inherit;cursor:pointer;color:inherit}
@@ -43,12 +43,12 @@
 .nx-rail-item{flex:0 0 min(35vw,330px);min-width:0;scroll-snap-align:center;transform:scale(.958);opacity:.83;transition:transform .52s cubic-bezier(.18,.7,.15,1),opacity .5s ease;transform-origin:center center}
 .nx-rail-item.nx-rail-active{transform:scale(1.025);opacity:1;z-index:1}
 .nx-issue{display:block;min-width:0}
-.nx-issue-art{position:relative;aspect-ratio:3/4;overflow:hidden;background:linear-gradient(145deg,#233951,#172238 56%,#8b2944);box-shadow:0 11px 25px rgba(18,30,47,.12)}
+.nx-issue-art{position:relative;aspect-ratio:3/4;overflow:hidden;background:linear-gradient(145deg,#233951,#172238 56%,#681728);box-shadow:0 11px 25px rgba(18,30,47,.12)}
 .nx-issue-art>img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.6,.2,1)}
 .nx-issue:hover .nx-issue-art>img{transform:scale(1.06)}
 .nx-issue-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,13,27,.42),transparent 40%,rgba(5,13,27,.22) 58%,rgba(5,13,27,.85));pointer-events:none}
 .nx-issue-brand{position:absolute;top:9%;left:0;right:0;text-align:center;font-family:var(--nx-serif);font-size:clamp(14px,2.2vw,23px);font-weight:800;letter-spacing:-.055em;color:#fff;text-shadow:0 2px 8px #111}
-.nx-issue-brand span{color:#ffebee}
+.nx-issue-brand span{color:#f5f0e8}
 .nx-issue-title{position:absolute;bottom:7%;left:9%;right:7%;color:#fff;display:flex;flex-direction:column;gap:7px;text-shadow:0 2px 8px #111}
 .nx-issue-title small{font-size:10px;letter-spacing:.2em;font-weight:800}
 .nx-issue-title strong{font-family:var(--nx-serif);font-size:clamp(26px,3.5vw,46px);letter-spacing:-.065em;line-height:1.04;font-weight:800;overflow-wrap:anywhere}
@@ -137,7 +137,7 @@
 }
 
 /* A missing historical photograph must never be replaced with a misleading one. */
-.nx-story-photo.nx-story-typographic{background:linear-gradient(135deg,#24344a 0%,#152237 62%,#812440 120%);display:flex;align-items:center;justify-content:center;padding:24px;color:#fff}
+.nx-story-photo.nx-story-typographic{background:linear-gradient(135deg,#24344a 0%,#152237 62%,#641b2b 120%);display:flex;align-items:center;justify-content:center;padding:24px;color:#fff}
 .nx-story-placeholder{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;width:100%}
 .nx-story-placeholder strong{font-family:var(--nx-serif);font-size:clamp(19px,3vw,29px);letter-spacing:-.05em;white-space:nowrap}
 .nx-story-placeholder small{font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;border-top:1px solid #ffffff77;padding-top:13px}
@@ -311,7 +311,7 @@
 .dark .nx{
   --nx-paper:#101721;
   --nx-ink:#e9e8e3;
-  --nx-wine:#e0a9b5;
+  --nx-wine:#c9ac70;
   --nx-muted:#a9acb5;
   --nx-line:#313b49;
   background:var(--nx-paper);
@@ -320,16 +320,16 @@
 }
 .dark .nx .nx-topline,.dark .nx .nx-intro,.dark .nx .nx-rail-controls{color:#acb0b8}
 .dark .nx .nx-tagline{color:#c8c3bb}
-.dark .nx .nx-wave-divider{color:#d0a5ae}
-.dark .nx .nx-wave-divider i{background:rgba(208,165,174,.42)}
+.dark .nx .nx-wave-divider{color:#c9ac70}
+.dark .nx .nx-wave-divider i{background:rgba(201,172,112,.42)}
 .dark .nx .nx-hero-copy>p{color:#bab8b4}
-.dark .nx .nx-read span{background:#d4a6af;color:#131923}
-.dark .nx .nx-label-link{color:#e0a9b5!important}
-.dark .nx .nx-section-more{color:#e0a9b5!important}
+.dark .nx .nx-read span{background:#c9ac70;color:#131923}
+.dark .nx .nx-label-link{color:#c9ac70!important}
+.dark .nx .nx-section-more{color:#c9ac70!important}
 .dark .nx .nx-story-photo{background:#263345}
-.dark .nx .nx-story-photo.nx-story-typographic{background:linear-gradient(130deg,#172436,#233a53 60%,#632a46)}
-.dark .nx .nx-issue-caption svg{color:#d4a6af}
-.dark .nx .nx-back:hover,.dark .nx .nx-story-text h3 a:hover{color:#e0a9b5}
+.dark .nx .nx-story-photo.nx-story-typographic{background:linear-gradient(130deg,#172436,#233a53 60%,#4a2730)}
+.dark .nx .nx-issue-caption svg{color:#c9ac70}
+.dark .nx .nx-back:hover,.dark .nx .nx-story-text h3 a:hover{color:#c9ac70}
 .dark .nx .nx-hero-photo{background:#283243}
 .dark .nx .nx-head-actions .nx-theme-toggle:hover{background:#243043}
 
@@ -353,23 +353,23 @@
   color:#f5f3f0;font-size:clamp(33px,3.2vw,50px);
   letter-spacing:-.055em;line-height:1.12;
 }
-.nx-footer-identity .nx-brand em{color:#e0bac0}
+.nx-footer-identity .nx-brand em{color:#dec58c}
 .nx-footer-identity p{
   font-family:"Lora",Georgia,serif;font-size:clamp(15px,1.5vw,19px);
   font-style:italic;color:#b9c0c9;margin:10px 0 13px;
 }
-.nx-footer-identity .nx-wave-divider{width:200px;color:#cf9faa}
-.nx-footer-identity .nx-wave-divider i{background:rgba(207,159,170,.45)}
+.nx-footer-identity .nx-wave-divider{width:200px;color:#bda06a}
+.nx-footer-identity .nx-wave-divider i{background:rgba(189,160,106,.45)}
 .nx-footer-kicker{
   font-size:10px;letter-spacing:.16em;font-weight:800;
-  color:#c29da7;text-transform:uppercase;
+  color:#c7ac77;text-transform:uppercase;
 }
 .nx-footer-navigation>div{display:grid;grid-template-columns:1fr 1fr;gap:15px 25px;margin-top:23px}
 .nx-footer-navigation a,.nx-footer-resources>a{
   font-size:14px;line-height:1.4;color:#e6e7e5;transition:color .2s;
 }
 .nx-footer-resources>a{display:inline-flex;align-items:center;gap:8px;margin-top:22px}
-.nx-footer-navigation a:hover,.nx-footer-resources>a:hover,.nx-footer-bottom a:hover{color:#e0bac0}
+.nx-footer-navigation a:hover,.nx-footer-resources>a:hover,.nx-footer-bottom a:hover{color:#dec58c}
 .nx-footer-theme{
   display:inline-flex;align-items:center;gap:9px;align-self:flex-start;
   padding:11px 15px;margin-top:22px;border:1px solid #45505d;
@@ -462,3 +462,6 @@
   .nx-search-grid .nx-story-photo{aspect-ratio:16/10}
   .nx-search-grid .nx-story-card h3{font-size:24px}
 }
+
+/* Palette contract: antique-gold dark accents, deep burgundy in daylight; no pink. */
+.dark .nx .nx-issue-brand span{color:#f5f0e8}
