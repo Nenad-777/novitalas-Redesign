@@ -15,6 +15,7 @@ import WilsonCrtaElectionArticle from "./pages/WilsonCrtaElectionArticle";
 import RiyadhAirportArticle from "./pages/RiyadhAirportArticle";
 import StarshieldWhiteHouseArticle from "./pages/StarshieldWhiteHouseArticle";
 import KlaraISuncePremijeraArticle from "./pages/KlaraISuncePremijeraArticle";
+import FranceProtestsOctober2026Article from "./pages/FranceProtestsOctober2026Article";
 import Russia300000TroopsArticle from "./pages/Russia300000TroopsArticle";
 import GeopolitikaIndex from "./pages/GeopolitikaIndex";
 import UkSelfDeterminationArticle from "./pages/UkSelfDeterminationArticle";
@@ -323,6 +324,7 @@ function Router() {
         <Route path="/izdanje-lab" component={OpenEditionPilot} />
         <Route path="/magazini-lab" component={MonthlyMagazinesPilot} />
         <Route path="/izdanja" component={NewTalasExperience} />
+        <Route path="/geopolitika/francuska-se-suocava-sa-velikom-drustvenom-i-politickom-krizom" component={FranceProtestsOctober2026Article} />
         <Route path="/geopolitika" component={NewTalasExperience} />
         <Route path="/srbija" component={NewTalasExperience} />
         <Route path="/obavestajni-izvori" component={NewTalasExperience} />
