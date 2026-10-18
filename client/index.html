@@ -54,10 +54,16 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"
-    ></script>
+    <!-- NOVI TALAS editor-only traffic measurement.
+         Privacy-friendly first-party Vercel Web Analytics; no visitor cookies.
+         Requires project owner to Enable Web Analytics in Vercel's Analytics tab.
+         The script tracks this site's real URL, including individual stories.
+         Do not put API tokens, identifiers or external tracking pixels here. -->
+    <script>
+      window.va = window.va || function () {
+        (window.vaq = window.vaq || []).push(arguments);
+      };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
   </body>
 </html>
