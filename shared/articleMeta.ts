@@ -98,6 +98,16 @@ export function buildJsonLd(meta: {
 
 export const articleMeta: ArticleStaticMeta[] = [
   {
+    path: "/geopolitika/francuska-se-suocava-sa-velikom-drustvenom-i-politickom-krizom",
+    title: "Francuska se suočava sa velikom društvenom i političkom krizom",
+    description: "Više od pola miliona građana izašlo je na ulice širom Francuske zbog rasta troškova života i nezadovoljstva javnim službama. Masovne demonstracije prerasle su u nasilne sukobe u više gradova, dodatno produbljujući krizu vlasti predsednika Emanuela Makrona.",
+    imageSrc: "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Paris_riots%2C_17_October_2026_-_Crowd_facing_Place_de_la_R%C3%A9publique_in_tear_gas_-_JJxFile_0012.jpg/1280px-Paris_riots%2C_17_October_2026_-_Crowd_facing_Place_de_la_R%C3%A9publique_in_tear_gas_-_JJxFile_0012.jpg",
+    datePublished: "2026-10-18",
+    author: "Novi Talas",
+    section: "Geopolitika",
+    keywords: "Francuska, protesti, Pariz, Emanuel Makron, Sebastijen Lekorni, socijalna kriza, Žuti prsluci, oktobar 2026"
+  },
+  {
     path: "/kultura/klara-i-sunce-premijera-film-po-romanu-nobelovca-kazua-isigura",
     title: "Premijera „Klare i Sunca“ po romanu nobelovca Kazua Išigura: Može li robot razumeti čoveka?",
     description: "Džena Ortega tumači humanoidnog robota u filmu Taike Vaititija, snimljenom prema romanu dobitnika Nobelove nagrade za književnost. Priča o ljubavi, usamljenosti i složenom odnosu čoveka i veštačke inteligencije.",
