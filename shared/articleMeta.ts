@@ -180,7 +180,7 @@ export const articleMeta: ArticleStaticMeta[] = [
     title: "Važno za građane Srbije u inostranstvu: Rok za prijavu za glasanje ističe 3. oktobra u ponoć",
     seoTitle: "Glasanje u inostranstvu: rok za prijavu ističe 3. oktobra | Novi Talas",
     description: "Studenti u blokadi traže hitnu reakciju MSP-a i RIK-a zbog prijavljenih problema sa zahtevima birača u inostranstvu. Rok za prijavu ističe 3. oktobra 2026. u ponoć.",
-    imageSrc: "/news/glasanje-dijaspora-3-oktobar.jpg",
+    imageSrc: "/news/glasanje-dijaspora-3-oktobar-hd.jpg",
     datePublished: "2026-09-26",
     author: "Novi Talas",
     section: "Srbija",

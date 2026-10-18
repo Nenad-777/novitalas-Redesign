@@ -6,7 +6,7 @@ const ARTICLE = {
   dateLabel: "26. SEPTEMBAR 2026.",
   authorLabel: "",
   deck: "Studenti u blokadi zatražili su danas hitnu reakciju Ministarstva spoljnih poslova i Republičke izborne komisije zbog problema koje građani Srbije iz više zemalja prijavljuju prilikom prijavljivanja za glasanje u inostranstvu. Do isteka roka ostalo je još samo nekoliko dana.",
-  imageSrc: "/news/glasanje-dijaspora-3-oktobar.jpg",
+  imageSrc: "/news/glasanje-dijaspora-3-oktobar-hd.jpg",
   imageAlt: "Editorial ilustracija glasanja građana Srbije u inostranstvu sa glasačkim listićem i zastavama zemalja dijaspore.",
   imageCredit: "Ilustracija: Novi Talas",
   paragraphs: [
