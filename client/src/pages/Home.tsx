@@ -9,12 +9,12 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 export const HERO_ARTICLE = {
-  href: "/kultura/klara-i-sunce-premijera-film-po-romanu-nobelovca-kazua-isigura",
-  category: "KULTURA · FILM",
-  title: "Premijera „Klare i Sunca“ po romanu nobelovca Kazua Išigura: Može li robot razumeti čoveka?",
-  description: "Džena Ortega tumači humanoidnog robota u filmu Taike Vaititija, snimljenom prema romanu dobitnika Nobelove nagrade za književnost. Priča o ljubavi, usamljenosti i složenom odnosu čoveka i veštačke inteligencije.",
-  imageSrc: "https://img.youtube.com/vi/wixzainceAE/maxresdefault.jpg",
-  imageAlt: "Zvanična YouTube naslovna slika trejlera filma Klara i Sunce, Sony Pictures Entertainment.",
+  href: "/geopolitika/francuska-se-suocava-sa-velikom-drustvenom-i-politickom-krizom",
+  category: "GEOPOLITIKA · FRANCUSKA",
+  title: "Francuska se suočava sa velikom društvenom i političkom krizom",
+  description: "Više od pola miliona građana izašlo je na ulice širom Francuske zbog rasta troškova života i nezadovoljstva javnim službama. Masovne demonstracije prerasle su u nasilne sukobe u više gradova, dodatno produbljujući krizu vlasti predsednika Emanuela Makrona.",
+  imageSrc: "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Paris_riots%2C_17_October_2026_-_Crowd_facing_Place_de_la_R%C3%A9publique_in_tear_gas_-_JJxFile_0012.jpg/1280px-Paris_riots%2C_17_October_2026_-_Crowd_facing_Place_de_la_R%C3%A9publique_in_tear_gas_-_JJxFile_0012.jpg",
+  imageAlt: "Masovni protesti na Trgu Republike u Parizu 17. oktobra 2026.",
 };
 
 const ARTICLES = HOME_ARTICLES;
