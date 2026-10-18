@@ -213,8 +213,9 @@
     justify-content: center;
     gap: clamp(22px, 3.05vw, 53px);
     padding: 17px 0;
-    font-size: 12px;
-    letter-spacing: .075em;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .055em;
   }
   .nx-intro {
     padding: 19px 0 17px;
@@ -278,4 +279,10 @@
   .nx-hero h1 { font-size: clamp(32px, 4.2vw, 43px); line-height: 1.08; }
   .nx-hero-copy > p { font-size: 17px; margin-bottom: 19px; }
   .nx-nav { justify-content: center; gap: 20px; }
+}
+
+/* Primary rubric navigation is already visible on laptop/desktop. */
+@media (min-width: 761px) {
+  .nx-masthead .nx-head-actions > a:first-child,
+  .nx-masthead .nx-head-actions > button { display: none; }
 }
