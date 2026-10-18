@@ -13,7 +13,7 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const IMAGES = {
   vucicZapad: "/news/vucic-zapad-centri-moci.webp",
-  dijasporaGlasanje: "/news/glasanje-dijaspora-3-oktobar.jpg",
+  dijasporaGlasanje: "/news/glasanje-dijaspora-3-oktobar-hd.jpg",
   mediaIndependence: "/news/media-independence-election.jpg",
   lostRepublic: "/news/lost-republic.jpg",
   slomMedjunarodni: "/news/slom-medjunarodni.jpg",

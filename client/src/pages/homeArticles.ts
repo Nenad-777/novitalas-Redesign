@@ -75,7 +75,7 @@ export const HOME_ARTICLE_CANDIDATES = [
     category: "SRBIJA · IZBORI",
     title: "Važno za građane Srbije u inostranstvu: Rok za prijavu za glasanje ističe 3. oktobra u ponoć",
     description: "Studenti u blokadi traže hitnu reakciju MSP-a i RIK-a zbog prijavljenih problema sa zahtevima birača iz više država. Evo šta građani u inostranstvu treba da znaju pre isteka roka.",
-    imageSrc: "/news/glasanje-dijaspora-3-oktobar.jpg",
+    imageSrc: "/news/glasanje-dijaspora-3-oktobar-hd.jpg",
     imageAlt: "Editorial ilustracija glasanja građana Srbije u inostranstvu.",
   },
 
