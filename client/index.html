@@ -216,6 +216,7 @@
           rootObserver.observe(root, { childList: true });
         }
 
+        image.addEventListener("load", imageLoaded, { once: true });
         image.addEventListener("error", imageFailed, { once: true });
         if (image.complete && image.naturalWidth > 0) {
           imageLoaded();
@@ -223,8 +224,6 @@
           image.decode().then(imageLoaded, () => {
             if (image.complete && image.naturalWidth > 0) imageLoaded();
           });
-        } else {
-          image.addEventListener("load", imageLoaded, { once: true });
         }
 
         // A missing asset or failed page can never leave a full-screen mask.
