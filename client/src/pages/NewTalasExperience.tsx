@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Search, Menu, X } from "lucide-react";
-import { articleSearchIndex, type SearchArticle } from "../../../shared/articleSearch";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Search, Menu, X, Moon, Sun } from "lucide-react";
+import { articleSearchIndex, searchArticles, type SearchArticle } from "../../../shared/articleSearch";
+import { useTheme } from "../contexts/ThemeContext";
 import { articleMeta } from "../../../shared/articleMeta";
 import { HOME_ARTICLES } from "./homeArticles";
 import { HERO_ARTICLE } from "./Home";
@@ -110,13 +111,24 @@ function StoryCard({article}:{article:Article}){
 }
 function Header(){
   const [open,setOpen]=useState(false);
+  const {theme,toggleTheme}=useTheme();
   return <header className="nx-header">
     <div className="nx-topline"><span>VERITAS ANTE OMNIA</span><span>NEZAVISNI INFORMATIVNO-ANALITIČKI MAGAZIN</span></div>
-    <div className="nx-masthead"><a className="nx-identity" href="/" aria-label="Novi talas, naslovna"><Brand/><span className="nx-tagline">Vaš prozor u svet</span><WaveSignal/></a><div className="nx-head-actions"><a href="/izdanja">IZDANJA</a><a href="/pretraga" aria-label="Pretraga"><Search size={21}/></a><button type="button" onClick={()=>setOpen(v=>!v)} aria-label={open?"Zatvori meni":"Otvori meni"} aria-expanded={open}>{open?<X size={24}/>:<Menu size={24}/>}</button></div></div>
+    <div className="nx-masthead"><a className="nx-identity" href="/" aria-label="Novi talas, naslovna"><Brand/><span className="nx-tagline">Vaš prozor u svet</span><WaveSignal/></a><div className="nx-head-actions"><a href="/izdanja">IZDANJA</a><a href="/pretraga" aria-label="Pretraži arhivu" title="Pretraga"><Search size={22}/></a><button className="nx-theme-toggle" type="button" onClick={toggleTheme} aria-label={theme==="dark"?"Uključi dnevni režim":"Uključi noćni režim"} title={theme==="dark"?"Dnevni režim":"Noćni režim"}>{theme==="dark"?<Sun size={22}/>:<Moon size={22}/>}</button><button className="nx-menu-toggle" type="button" onClick={()=>setOpen(v=>!v)} aria-label={open?"Zatvori meni":"Otvori meni"} aria-expanded={open}>{open?<X size={24}/>:<Menu size={24}/>}</button></div></div>
     <nav className={"nx-nav "+(open?"nx-nav-open":"")} aria-label="Rubrike">{SECTIONS.map(s=><a key={s.slug} href={"/"+s.slug}>{s.label}</a>)}<a href="/izdanja">Mesečna izdanja</a></nav>
   </header>;
 }
-function Footer(){return <footer className="nx-footer"><Brand/><span>Veritas ante omnia · Vaš prozor u svet</span><a href="/izdanja">Biblioteka izdanja <ArrowUpRight size={16}/></a></footer>}
+function Footer(){
+  const {theme,toggleTheme}=useTheme();
+  return <footer className="nx-footer">
+    <div className="nx-footer-main">
+      <div className="nx-footer-identity"><a href="/" aria-label="Novi talas, naslovna"><Brand/></a><p>Vaš prozor u svet</p><WaveSignal/></div>
+      <nav className="nx-footer-navigation" aria-label="Rubrike u podnožju"><span className="nx-footer-kicker">RUBRIKE</span><div>{SECTIONS.map(section=><a key={section.slug} href={"/"+section.slug}>{section.label}</a>)}</div></nav>
+      <div className="nx-footer-resources"><span className="nx-footer-kicker">ISTRAŽITE</span><a href="/izdanja">Mesečna izdanja <ArrowUpRight size={15}/></a><a href="/pretraga">Pretraga arhive <ArrowUpRight size={15}/></a><button type="button" onClick={toggleTheme} className="nx-footer-theme">{theme==="dark"?<Sun size={16}/>:<Moon size={16}/>} {theme==="dark"?"Dnevni režim":"Noćni režim"}</button></div>
+    </div>
+    <div className="nx-footer-bottom"><span>© 2026 NOVI TALAS</span><em>Veritas ante omnia</em><a href="/">Na početak <ArrowUpRight size={15}/></a></div>
+  </footer>;
+}
 function Home(){
   const selection=HOME_ARTICLES.map(article=>knownArticles.find(a=>a.href===article.href) || ({...article,category:article.category} as Article)).filter(a=>a.href!==HERO.href).sort(chronological).slice(0,8);
   return <><main className="nx-main">
@@ -148,6 +160,41 @@ function SectionLanding({slug}:{slug:string}){
   const undated=articles.filter(a=>!published(a));
   return <main className="nx-main nx-library"><div className="nx-library-intro"><span className="nx-eyebrow">RUBRIKA / {String(SECTIONS.findIndex(s=>s.slug===slug)+1).padStart(2,"0")}</span><h1>{section.title}</h1></div>{articles.length?<>{dated.length>0&&<FocusCarousel title="Najnovije">{dated.slice(0,10).map(a=><StoryCard key={a.href} article={a}/>)}</FocusCarousel>}<div className="nx-section-grid">{dated.map(a=><StoryCard key={a.href} article={a}/>)}</div>{undated.length>0&&<section className="nx-undated"><h2>Još iz arhive</h2><div className="nx-section-grid">{undated.map(a=><StoryCard key={a.href} article={a}/>)}</div></section>}</>:<div className="nx-empty">Arhiva ove rubrike je u dopuni.</div>}</main>;
 }
+function SearchLanding(){
+  const [term,setTerm]=useState(()=>typeof window!=="undefined" ? new URLSearchParams(window.location.search).get("q")||"" : "");
+  const normalized=term.trim();
+  const matches=useMemo(()=>normalized.length>=2?searchArticles(normalized):[],[normalized]);
+  const shown=matches.slice(0,60);
+  useEffect(()=>{
+    const restore=()=>setTerm(new URLSearchParams(window.location.search).get("q")||"");
+    window.addEventListener("popstate",restore);
+    return ()=>window.removeEventListener("popstate",restore);
+  },[]);
+  const submit=(event:React.FormEvent<HTMLFormElement>)=>{
+    event.preventDefault();
+    const q=term.trim();
+    const url=q?"/pretraga?q="+encodeURIComponent(q):"/pretraga";
+    window.history.replaceState(window.history.state,"",url);
+  };
+  const tryTerm=(q:string)=>{
+    setTerm(q);
+    window.history.replaceState(window.history.state,"","/pretraga?q="+encodeURIComponent(q));
+  };
+  return <main className="nx-main nx-search-page">
+    <div className="nx-search-heading"><span className="nx-eyebrow">NOVI TALAS / ARHIVA</span><h1>Pretraga</h1><p>Pronađite priče, teme i analize u arhivi Novog talasa.</p></div>
+    <form className="nx-search-form" role="search" onSubmit={submit}>
+      <Search size={23} aria-hidden="true"/>
+      <input type="search" name="q" value={term} onChange={event=>setTerm(event.target.value)} placeholder="Pretražite arhivu…" aria-label="Pretražite vesti i analize" autoComplete="off"/>
+      {term&&<button className="nx-search-clear" type="button" aria-label="Obriši pretragu" onClick={()=>{setTerm("");window.history.replaceState(window.history.state,"","/pretraga");}}><X size={20}/></button>}
+      <button className="nx-search-submit" type="submit">Pretraži <ArrowRight size={17}/></button>
+    </form>
+    {normalized.length>=2?
+      <div className="nx-search-content"><div className="nx-search-result-meta">{matches.length?matches.length+" "+(matches.length===1?"rezultat":matches.length%10>=2&&matches.length%10<=4&&!(matches.length%100>=12&&matches.length%100<=14)?"rezultata":"rezultata"):"Nema rezultata"} za „{normalized}“</div>
+        {shown.length?<><div className="nx-search-grid">{shown.map(article=><StoryCard key={article.href} article={article}/>)}</div>{shown.length<matches.length&&<p className="nx-search-note">Prikazano prvih {shown.length} rezultata. Sužavanjem pojma možete precizirati pretragu.</p>}</>:<p className="nx-search-empty">Nema pronađenih tekstova. Pokušajte drugim pojmom ili nazivom teme.</p>}
+      </div>:
+      <div className="nx-search-suggestions"><span className="nx-footer-kicker">PREDLOZI ZA PRETRAGU</span><div>{["Bela kuća","Srbija","Grenland","NASA","izbori"].map(q=><button type="button" key={q} onClick={()=>tryTerm(q)}>{q}<ArrowUpRight size={14}/></button>)}</div></div>}
+  </main>;
+}
 function Library(){return <main className="nx-main nx-library"><div className="nx-library-intro"><span className="nx-eyebrow">MESEČNA ARHIVA / 2026.</span><h1>Biblioteka izdanja</h1><p>Februar — oktobar 2026.</p></div><div className="nx-library-grid">{issues.map(issue=><IssueCover key={issue.id} issue={issue}/>)}</div></main>}
 function Edition({id}:{id:string}){
   const issue=issues.find(i=>i.id===id);
@@ -163,6 +210,6 @@ function Edition({id}:{id:string}){
 }
 export default function NewTalasExperience(){
   const path=typeof window!=="undefined"?window.location.pathname:"/";
-  useEffect(()=>{document.title=path==="/"?"Novi Talas — Priče koje ostaju":path==="/izdanja"?"Mesečna izdanja | Novi Talas":"Izdanje | Novi Talas"},[path]);
-  return <div className="nx"><Header/>{path==="/izdanja"?<Library/>:path.startsWith("/izdanja/")?<Edition id={path.split("/")[2]}/>:SECTIONS.some(s=>"/"+s.slug===path)?<SectionLanding slug={path.slice(1)}/>:<Home/>}<Footer/></div>;
+  useEffect(()=>{document.title=path==="/"?"Novi Talas — Priče koje ostaju":path==="/pretraga"?"Pretraga | Novi Talas":path==="/izdanja"?"Mesečna izdanja | Novi Talas":SECTIONS.some(section=>"/"+section.slug===path)?"Rubrike | Novi Talas":"Izdanje | Novi Talas"},[path]);
+  return <div className="nx"><Header/>{path==="/pretraga"?<SearchLanding/>:path==="/izdanja"?<Library/>:path.startsWith("/izdanja/")?<Edition id={path.split("/")[2]}/>:SECTIONS.some(s=>"/"+s.slug===path)?<SectionLanding slug={path.slice(1)}/>:<Home/>}<Footer/></div>;
 }
