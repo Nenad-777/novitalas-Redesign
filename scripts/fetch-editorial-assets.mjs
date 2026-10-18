@@ -6,6 +6,15 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
 const assets = [
   {
+    // Approved Wikimedia Commons photograph, Jorge Jaramillo, 17 October 2026.
+    // License CC BY-SA 4.0; original photo page linked in article credit.
+    target: resolve(root, "client/public/news/france-protests-paris-jj-20261017.jpg"),
+    sources: [
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Paris_riots%2C_17_October_2026_-_Crowd_facing_Place_de_la_R%C3%A9publique_in_tear_gas_-_JJxFile_0012.jpg/1280px-Paris_riots%2C_17_October_2026_-_Crowd_facing_Place_de_la_R%C3%A9publique_in_tear_gas_-_JJxFile_0012.jpg",
+      "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Paris_riots%2C_17_October_2026_-_Crowd_facing_Place_de_la_R%C3%A9publique_in_tear_gas_-_JJxFile_0012.jpg/960px-Paris_riots%2C_17_October_2026_-_Crowd_facing_Place_de_la_R%C3%A9publique_in_tear_gas_-_JJxFile_0012.jpg",
+    ],
+  },
+  {
     target: resolve(root, "client/public/news/mouse-human-brain-organoid.png"),
     sources: [
       "https://novitalas.org/news/mouse-human-brain-organoid.png",
