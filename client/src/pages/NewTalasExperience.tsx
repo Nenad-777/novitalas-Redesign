@@ -106,7 +106,7 @@ function Home(){
   return <><main className="nx-main">
     <div className="nx-intro"><span className="nx-eyebrow">NASLOVNA</span></div>
     <section className="nx-hero">
-      <a href={HERO.href} className="nx-hero-photo"><img src={HERO.image} alt="Urednička ilustracija ukrajinskog vojnika i satelitskog terminala" fetchPriority="high"/></a>
+      <a href={HERO.href} className="nx-hero-photo"><img src={HERO.image} alt={HERO.imageAlt} fetchPriority="high"/></a>
       <div className="nx-hero-copy"><LabelLink href={HERO.categoryHref}>{HERO.category}</LabelLink><h1><a href={HERO.href}>{HERO.title}</a></h1><p>{HERO.deck}</p><a className="nx-read" href={HERO.href}><span><ArrowRight size={21}/></span> Pročitaj priču</a></div>
     </section>
     <FocusCarousel title="Mesečna izdanja" eyebrow="ARHIVA / 2026" actionHref="/izdanja" actionText="Sva izdanja" className="nx-editions-carousel">

@@ -14,6 +14,7 @@ import MonthlyMagazinesPilot from "./pages/MonthlyMagazinesPilot";
 import WilsonCrtaElectionArticle from "./pages/WilsonCrtaElectionArticle";
 import RiyadhAirportArticle from "./pages/RiyadhAirportArticle";
 import StarshieldWhiteHouseArticle from "./pages/StarshieldWhiteHouseArticle";
+import KlaraISuncePremijeraArticle from "./pages/KlaraISuncePremijeraArticle";
 import Russia300000TroopsArticle from "./pages/Russia300000TroopsArticle";
 import GeopolitikaIndex from "./pages/GeopolitikaIndex";
 import UkSelfDeterminationArticle from "./pages/UkSelfDeterminationArticle";
@@ -326,6 +327,7 @@ function Router() {
         <Route path="/srbija" component={NewTalasExperience} />
         <Route path="/obavestajni-izvori" component={NewTalasExperience} />
         <Route path="/nasa-planeta" component={NewTalasExperience} />
+        <Route path="/kultura/klara-i-sunce-premijera-film-po-romanu-nobelovca-kazua-isigura" component={KlaraISuncePremijeraArticle} />
         <Route path="/kultura" component={NewTalasExperience} />
         <Route path="/izdanja/:month" component={NewTalasExperience} />
         <Route path="/" component={NewTalasExperience} />

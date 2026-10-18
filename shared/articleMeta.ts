@@ -97,6 +97,16 @@ export function buildJsonLd(meta: {
 }
 
 export const articleMeta: ArticleStaticMeta[] = [
+  {
+    path: "/kultura/klara-i-sunce-premijera-film-po-romanu-nobelovca-kazua-isigura",
+    title: "Premijera „Klare i Sunca“ po romanu nobelovca Kazua Išigura: Može li robot razumeti čoveka?",
+    description: "Džena Ortega tumači humanoidnog robota u filmu Taike Vaititija, snimljenom prema romanu dobitnika Nobelove nagrade za književnost. Priča o ljubavi, usamljenosti i složenom odnosu čoveka i veštačke inteligencije.",
+    imageSrc: "https://img.youtube.com/vi/wixzainceAE/maxresdefault.jpg",
+    datePublished: "2026-10-18",
+    author: "Novi Talas",
+    section: "Kultura",
+    keywords: "Klara i Sunce, Klara and the Sun, premijera, Kazuo Išiguro, Nobelova nagrada, Džena Ortega, Taika Vaititi, Londonski filmski festival, BFI, veštačka inteligencija, AI, film, robot"
+  },
   // Recovered directly from the existing article components, 17 October 2026.
   {"path":"/srbija/srbija-bez-republike-moze-li-se-obnoviti-drzava-posle-cetrnaest-godina-vlasti-sns-a","title":"Srbija bez republike: može li se obnoviti država posle četrnaest godina vlasti SNS-a?","description":"Rasprava o nepoverenju Vladi Srbije samo je povod za mnogo veće pitanje: šta se dogodilo sa zemljom u kojoj Vlada više nije stvarni centar izvršne vlasti, parlament ne kontroliše mesto na kojem se odluke donose, a institucije potvrđuju političku volju oblikovanu izvan njih?","imageSrc":"/news/lost-republic.jpg","datePublished":"2026-07-28","author":"Novi Talas","section":"Srbija"},
   {"path":"/srbija/posle-slavije-vlast-ulazi-u-fazu-politicke-nervoze","title":"Posle Slavije: vlast ulazi u fazu političke nervoze","description":"Studentski pokret pokazuje sve jasnije obrise političke artikulacije, dok vlast istovremeno pokušava da kupi vreme i spreči formiranje studentske izborne liste čiji identitet još nije poznat javnosti.","imageSrc":"/news/slavija-protest.jpg","datePublished":"2026-05-26","author":"Novi Talas","section":"Srbija"},
