@@ -13,7 +13,7 @@ export const HERO_ARTICLE = {
   category: "GEOPOLITIKA · FRANCUSKA",
   title: "Francuska se suočava sa velikom društvenom i političkom krizom",
   description: "Više od pola miliona građana izašlo je na ulice širom Francuske zbog rasta troškova života i nezadovoljstva javnim službama. Masovne demonstracije prerasle su u nasilne sukobe u više gradova, dodatno produbljujući krizu vlasti predsednika Emanuela Makrona.",
-  imageSrc: "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Paris_riots%2C_17_October_2026_-_Crowd_facing_Place_de_la_R%C3%A9publique_in_tear_gas_-_JJxFile_0012.jpg/1280px-Paris_riots%2C_17_October_2026_-_Crowd_facing_Place_de_la_R%C3%A9publique_in_tear_gas_-_JJxFile_0012.jpg",
+  imageSrc: "/news/france-protests-paris-jj-20261017.jpg",
   imageAlt: "Demonstranti na Trgu Republike u Parizu, 17. oktobar 2026. Fotografija: Jorge Jaramillo / Wikimedia Commons, CC BY-SA 4.0.",
 };
 
