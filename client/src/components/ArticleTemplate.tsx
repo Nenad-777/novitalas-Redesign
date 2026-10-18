@@ -319,17 +319,7 @@ export default function ArticleTemplate({
                   </figure>
                 )}
 
-                {/* Separator između pasusa */}
-                {idx !== paragraphs.length - 1 && (
-                  <div
-                    style={{
-                      width: "40px",
-                      height: "2px",
-                      backgroundColor: isDark ? "#2a2a2e" : "#eee",
-                      margin: "24px 0 24px 12px",
-                    }}
-                  />
-                )}
+
               </div>
             ))}
           </div>
