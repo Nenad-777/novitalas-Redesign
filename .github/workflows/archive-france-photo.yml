@@ -1,0 +1,62 @@
+name: Archive approved France photo
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/archive-france-photo.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  archive-photo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Download approved CC BY-SA photo and switch all references to local archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import pathlib, urllib.request, hashlib
+          # Original approved photograph: Jorge Jaramillo / JJxFile, Wikimedia Commons CC BY-SA 4.0
+          filename = 'Paris_riots,_17_October_2026_-_Crowd_facing_Place_de_la_République_in_tear_gas_-_JJxFile_0012.jpg'
+          from urllib.parse import quote
+          digest = hashlib.md5(filename.encode('utf-8')).hexdigest()
+          encoded = quote(filename.replace(' ', '_'), safe=',_-().')
+          url = f'https://upload.wikimedia.org/wikipedia/commons/thumb/{digest[0]}/{digest[:2]}/{encoded}/1280px-{encoded}'
+          req = urllib.request.Request(url, headers={'User-Agent':'NoviTalasEditorialArchive/1.0 (editorial image archival)'})
+          with urllib.request.urlopen(req, timeout=90) as response:
+              payload = response.read()
+          if not payload.startswith(b'\\xff\\xd8\\xff') or len(payload) < 30000:
+              raise RuntimeError(f'Invalid JPEG: {len(payload)} bytes')
+          destination = pathlib.Path('client/public/news/france-paris-protests-2026-10-17-jjxfile.jpg')
+          destination.parent.mkdir(parents=True, exist_ok=True)
+          destination.write_bytes(payload)
+          print(f'Archived photo: {destination} ({len(payload)} bytes)')
+          for name in ('client/src/pages/Home.tsx', 'client/src/pages/FranceSocialCrisisArticle.tsx', 'shared/articleMeta.ts'):
+              p = pathlib.Path(name)
+              s = p.read_text(encoding='utf-8')
+              lines = s.splitlines(keepends=True)
+              count = 0
+              for i, line in enumerate(lines):
+                  if 'thumb.wikimedia.org' in line and 'JJxFile_0012.jpg' in line:
+                      lines[i] = line.replace(line[line.index('https://thumb.wikimedia.org'):line.index('.jpg',line.index('JJxFile_0012'))+4], '/news/france-paris-protests-2026-10-17-jjxfile.jpg')
+                      count += 1
+              if count != 1:
+                  raise RuntimeError(f'Expected exactly one Wikimedia image URL in {name}, found {count}')
+              p.write_text(''.join(lines), encoding='utf-8')
+          PY
+      - name: Commit archived photo and updated references
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add client/public/news/france-paris-protests-2026-10-17-jjxfile.jpg client/src/pages/Home.tsx client/src/pages/FranceSocialCrisisArticle.tsx shared/articleMeta.ts
+          git commit -m "Archive approved France protest photograph in public/news and use local paths"
+          git push origin HEAD:main
