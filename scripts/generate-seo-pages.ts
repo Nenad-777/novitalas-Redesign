@@ -142,7 +142,7 @@ function injectSEO(
   // the og:image tag.  These are not present in the base index.html template.
   // Dimensions default to the widely-supported 1200×630 recommendation; all
   // OG images in this project are expected to match those proportions.
-  const restoredFullResolutionImage = /\/news\/(?:odihr|kekova)-approved-full\.webp$/.test(resolvedSeo.ogImage);
+  const restoredFullResolutionImage = /\/news\/(?:(?:odihr|kekova)-approved-full\.webp|ko-ce-pobediti-na-izborima-2026-10-19\.png)$/.test(resolvedSeo.ogImage);
   const extraOgImageTags = [
     `    <meta property="og:image:secure_url" content="${escapeHtml(resolvedSeo.ogImage)}" />`,
     `    <meta property="og:image:type" content="${ogImageMime}" />`,
