@@ -12,6 +12,7 @@ import NewTalasExperience from "./pages/NewTalasExperience";
 import OpenEditionPilot from "./pages/OpenEditionPilot";
 import MonthlyMagazinesPilot from "./pages/MonthlyMagazinesPilot";
 import WilsonCrtaElectionArticle from "./pages/WilsonCrtaElectionArticle";
+import KoCePobeditiNaIzborimaArticle from "./pages/KoCePobeditiNaIzborimaArticle";
 import RiyadhAirportArticle from "./pages/RiyadhAirportArticle";
 import StarshieldWhiteHouseArticle from "./pages/StarshieldWhiteHouseArticle";
 import KlaraISuncePremijeraArticle from "./pages/KlaraISuncePremijeraArticle";
@@ -1041,6 +1042,8 @@ function Router() {
            ========================= */}
         <Route path="/arhiva/februar-2026" component={ArhivaFebruar2026} />
         <Route path="/izdanje/februar-2026" component={IzdanjeFebruar2026} />
+
+        <Route path="/srbija/ko-ce-pobediti-na-izborima" component={KoCePobeditiNaIzborimaArticle} />
 
         <Route path="/srbija/izbori-25-oktobra-odihr-biracki-spisak-kontrola-kampanje" component={ODIHRInterimReport2026} />
 

@@ -9,12 +9,12 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 export const HERO_ARTICLE = {
-  href: "/geopolitika/francuska-se-suocava-sa-velikom-drustvenom-i-politickom-krizom",
-  category: "GEOPOLITIKA · FRANCUSKA",
-  title: "Francuska se suočava sa velikom društvenom i političkom krizom",
-  description: "Više od pola miliona građana izašlo je na ulice širom Francuske zbog rasta troškova života i nezadovoljstva javnim službama. Masovne demonstracije prerasle su u nasilne sukobe u više gradova, dodatno produbljujući krizu vlasti predsednika Emanuela Makrona.",
-  imageSrc: "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Paris_riots%2C_17_October_2026_-_Crowd_facing_Place_de_la_R%C3%A9publique_in_tear_gas_-_JJxFile_0012.jpg/1280px-Paris_riots%2C_17_October_2026_-_Crowd_facing_Place_de_la_R%C3%A9publique_in_tear_gas_-_JJxFile_0012.jpg",
-  imageAlt: "Masovni protesti na Trgu Republike u Parizu 17. oktobra 2026.",
+  href: "/srbija/ko-ce-pobediti-na-izborima",
+  category: "SRBIJA · ANALIZA",
+  title: "Ko će pobediti na izborima?",
+  description: "Izbori u Srbiji mogli bi da proizvedu paradoks: vlast koja osvoji većinu mandata, ali ne uspe da okonča krizu poverenja u izborni proces.",
+  imageSrc: "/news/ko-ce-pobediti-na-izborima-2026-10-19.png",
+  imageAlt: "AI urednička ilustracija: providna glasačka kutija sa listićima ispred Narodne skupštine Srbije.",
 };
 
 const ARTICLES = HOME_ARTICLES;

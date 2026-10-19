@@ -97,6 +97,7 @@ export function buildJsonLd(meta: {
 }
 
 export const articleMeta: ArticleStaticMeta[] = [
+  { path: "/srbija/ko-ce-pobediti-na-izborima", title: "Ko će pobediti na izborima?", description: "Šta ako Aleksandar Vučić 25. oktobra proglasi pobedu, a njegova vlast se već narednog jutra suoči sa mnogo težim pitanjem: koliko je takva pobeda politički održiva pred međunarodnom javnošću?", imageSrc: "/news/ko-ce-pobediti-na-izborima-2026-10-19.png", datePublished: "2026-10-19", author: "Novi Talas", section: "Srbija", keywords: "Srbija, izbori, 2026, 25. oktobar, posmatrači, legitimitet, izborni proces" },
   {
     path: "/kultura/klara-i-sunce-premijera-film-po-romanu-nobelovca-kazua-isigura",
     title: "Premijera „Klare i Sunca“ po romanu nobelovca Kazua Išigura: Može li robot razumeti čoveka?",

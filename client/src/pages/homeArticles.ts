@@ -3,6 +3,14 @@
 // previous HERO here and let the oldest secondary story fall off automatically.
 export const HOME_ARTICLE_CANDIDATES = [
   {
+  href: "/geopolitika/francuska-se-suocava-sa-velikom-drustvenom-i-politickom-krizom",
+  category: "GEOPOLITIKA · FRANCUSKA",
+  title: "Francuska se suočava sa velikom društvenom i političkom krizom",
+  description: "Više od pola miliona građana izašlo je na ulice širom Francuske zbog rasta troškova života i nezadovoljstva javnim službama. Masovne demonstracije prerasle su u nasilne sukobe u više gradova, dodatno produbljujući krizu vlasti predsednika Emanuela Makrona.",
+  imageSrc: "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Paris_riots%2C_17_October_2026_-_Crowd_facing_Place_de_la_R%C3%A9publique_in_tear_gas_-_JJxFile_0012.jpg/1280px-Paris_riots%2C_17_October_2026_-_Crowd_facing_Place_de_la_R%C3%A9publique_in_tear_gas_-_JJxFile_0012.jpg",
+  imageAlt: "Masovni protesti na Trgu Republike u Parizu 17. oktobra 2026.",
+},
+  {
     href: "/kultura/klara-i-sunce-premijera-film-po-romanu-nobelovca-kazua-isigura",
     category: "KULTURA · FILM",
     title: "Premijera „Klare i Sunca“ po romanu nobelovca Kazua Išigura: Može li robot razumeti čoveka?",
