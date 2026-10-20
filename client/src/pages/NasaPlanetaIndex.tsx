@@ -20,7 +20,7 @@ type NasaPlanetaArticle = {
 const ARTICLES: NasaPlanetaArticle[] = [
 {
   "href": "/nasa-planeta/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva",
-  "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Edward_the_third_title_page.jpg",
+  "img": "/news/shakespeare-shadow-2026-10-20.png",
   "alt": "Tipografski vizual Šekspir, Marlo, Edvard III.",
   "imageCredit": "Wikimedia Commons / javno vlasništvo.",
   "title": "Posle 430 godina otkrivena tajna Šekspirovog autorstva",
