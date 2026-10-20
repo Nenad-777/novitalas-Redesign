@@ -144,6 +144,9 @@ function injectSEO(
   // OG images in this project are expected to match those proportions.
   const restoredFullResolutionImage = /\/news\/(?:(?:odihr|kekova)-approved-full\.webp|ko-ce-pobediti-na-izborima-2026-10-19\.png)$/.test(resolvedSeo.ogImage);
   const internationalObserversImage = resolvedSeo.ogImage.endsWith("/news/medjunarodni-posmatraci-izbori-2026-10-20.jpg");
+  if (internationalObserversImage) {
+    result = result.replace(/<meta\s+property="og:image:(?:secure_url|type|width|height|alt)"[^>]*>\s*/g, "");
+  }
   const extraOgImageTags = [
     `    <meta property="og:image:secure_url" content="${escapeHtml(resolvedSeo.ogImage)}" />`,
     `    <meta property="og:image:type" content="${ogImageMime}" />`,
