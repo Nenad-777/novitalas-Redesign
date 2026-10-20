@@ -97,6 +97,15 @@ export function buildJsonLd(meta: {
 }
 
 export const articleMeta: ArticleStaticMeta[] = [
+{
+  "path": "/nasa-planeta/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva",
+  "title": "Posle 430 godina otkrivena tajna Šekspirovog autorstva",
+  "description": "Novo istraživanje britanskih univerziteta pokazuje da su Vilijam Šekspir i Kristofer Marlo zajedno napisali istorijsku dramu „Edvard III”. Nalazi donose nove dokaze o saradnji dvojice velikih dramatičara.",
+  "imageSrc": "/news/shakespeare-shadow-2026-10-20.png",
+  "datePublished": "2026-10-20",
+  "author": "Novi Talas",
+  "section": "Naša planeta"
+},
 {"path":"/srbija/sta-medjunarodni-posmatraci-vec-znaju-o-izborima-u-srbiji","title":"Šta međunarodni posmatrači već znaju o izborima u Srbiji?","description":"Pet dana pred parlamentarne izbore, međunarodne institucije već upozoravaju na ozbiljne probleme u izbornom procesu. Savet Evrope ukazuje na neravnopravne uslove, političke pritiske i rizik da deo dijaspore ostane bez mogućnosti glasanja. Prva zajednička međunarodna ocena očekuje se 26. oktobra.","imageSrc":"/news/medjunarodni-posmatraci-izbori-2026-10-20.jpg","datePublished":"2026-10-20","author":"Novi Talas","section":"Srbija","keywords":"Srbija, izbori, međunarodni posmatrači, Savet Evrope, OEBS, ODIHR, dijaspora, 26. oktobar"},
   { path: "/srbija/ko-ce-pobediti-na-izborima", title: "Ko će pobediti na izborima?", description: "Šta ako Aleksandar Vučić 25. oktobra proglasi pobedu, a njegova vlast se već narednog jutra suoči sa mnogo težim pitanjem: koliko je takva pobeda politički održiva pred međunarodnom javnošću?", imageSrc: "/news/ko-ce-pobediti-na-izborima-2026-10-19.png", datePublished: "2026-10-19", author: "Novi Talas", section: "Srbija", keywords: "Srbija, izbori, 2026, 25. oktobar, posmatrači, legitimitet, izborni proces" },
   {

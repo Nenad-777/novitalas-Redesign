@@ -512,3 +512,9 @@
   .nx-reading-article h1{font-size:clamp(31px,8.5vw,44px);line-height:1.11}
   .nx-reading-article .kicker{font-size:11px}
 }
+
+/* Preserve the approved Shakespeare composition on every editorial surface. */
+.nx a[href="/nasa-planeta/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva"].nx-hero-photo,
+.nx a[href="/nasa-planeta/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva"].nx-story-photo { aspect-ratio:16/9; }
+.nx img[src="/news/shakespeare-shadow-2026-10-20.png"] { object-fit:contain; transform:none; }
+.nx a:hover img[src="/news/shakespeare-shadow-2026-10-20.png"] { transform:none; }
