@@ -8,6 +8,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
 import MedjunarodniPosmatraciArticle from "./pages/MedjunarodniPosmatraciArticle";
+import ShakespeareMarloweArticle from "./pages/ShakespeareMarloweArticle";
 import Home from "./pages/Home";
 import NewTalasExperience from "./pages/NewTalasExperience";
 import OpenEditionPilot from "./pages/OpenEditionPilot";
@@ -837,6 +838,7 @@ function Router() {
         {/* =========================
             NAŠA PLANETA
            ========================= */}
+        <Route path="/nasa-planeta/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva" component={ShakespeareMarloweArticle} />
         <Route path="/nasa-planeta/najstariji-brodolom-kekova-turska-4700-godina" component={KekovaShipwreckArticle} />
         <Route path="/nasa-planeta/dzonatan-kornjaca-194-godine-tajna-dugovecnosti" component={DzonatanDugovecnostArticle} />
         <Route
