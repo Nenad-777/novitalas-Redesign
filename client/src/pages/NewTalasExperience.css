@@ -518,3 +518,112 @@
 .nx a[href="/nasa-planeta/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva"].nx-story-photo { aspect-ratio:16/9; }
 .nx img[src="/news/shakespeare-shadow-2026-10-20.png"] { object-fit:contain; transform:none; }
 .nx a:hover img[src="/news/shakespeare-shadow-2026-10-20.png"] { transform:none; }
+
+/* NOVI TALAS — Desktop editorial density 2026-10-21.
+   Compact first viewport, visible edition shelf, immediate stories in rubrics.
+   Scope starts above mobile breakpoints; the touch-first design remains intact. */
+.nx-desktop-editorial-note,.nx-front-desk,.nx-desktop-issue-strip,
+.nx-section-feature,.nx-library-count{display:none}
+@media (min-width:761px){
+  .nx-topline{padding-block:9px 8px;font-size:9px}
+  .nx-masthead{min-height:95px}
+  .nx-identity{padding:7px 0}
+  .nx-identity .nx-brand{font-size:clamp(35px,3.65vw,51px)}
+  .nx-tagline{font-size:clamp(12px,1.15vw,15px)}
+  .nx-wave-divider{width:clamp(150px,17vw,235px);height:14px}
+  .nx-wave-divider svg{height:13px}
+  .nx-nav{padding:11px 0;gap:clamp(14px,2.3vw,31px);font-size:12px}
+  .nx-intro{padding:13px 0 13px}
+  .nx-desktop-editorial-note{display:inline;color:var(--nx-muted);font-size:10px;font-weight:650;letter-spacing:.06em}
+  .nx-desktop-opening{display:grid;grid-template-columns:minmax(0,1fr);gap:0;padding-bottom:24px;border-bottom:1px solid var(--nx-line)}
+  .nx-hero{min-height:0;grid-template-columns:minmax(0,1.07fr) minmax(0,1fr);gap:clamp(18px,2vw,30px);align-items:stretch;padding:0;border:0}
+  .nx-hero-photo{display:block;position:relative;width:100%;height:clamp(285px,28vw,340px);min-height:0;aspect-ratio:auto;overflow:hidden}
+  .nx-hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .nx-hero-copy{min-width:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:4px 0}
+  .nx-hero h1{font-size:clamp(28px,3vw,41px);line-height:1.09;letter-spacing:-.048em;max-width:none;margin:10px 0 12px}
+  .nx-hero-copy>p{font-size:clamp(14px,1.24vw,16px);line-height:1.55;margin-bottom:15px;max-width:55ch;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+  .nx-read{font-size:13px;gap:10px}
+  .nx-read span{width:35px;height:35px}
+  .nx-read svg{width:18px;height:18px}
+  .nx-desktop-issue-strip{display:grid;grid-template-columns:minmax(140px,.72fr) minmax(0,3fr) auto;gap:20px;align-items:center;padding:17px 0 19px;border-bottom:1px solid var(--nx-line)}
+  .nx-issue-strip-title h2{font-family:var(--nx-serif);font-size:clamp(21px,1.9vw,27px);letter-spacing:-.045em;line-height:1.15;margin:6px 0 0}
+  .nx-issue-strip-items{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;min-width:0}
+  .nx-issue-teaser{display:grid;grid-template-columns:51px minmax(0,1fr) 14px;gap:9px;align-items:center;min-width:0;padding:6px 8px 6px 6px;background:color-mix(in srgb,var(--nx-paper),var(--nx-line) 18%);border:1px solid var(--nx-line);transition:border-color .2s,transform .2s}
+  .nx-issue-teaser:hover{border-color:var(--nx-wine);transform:translateY(-2px)}
+  .nx-issue-teaser-art{display:block;width:51px;height:64px;background:#26344a;overflow:hidden}
+  .nx-issue-teaser-art img{width:100%;height:100%;object-fit:cover}
+  .nx-issue-teaser-info{display:flex;flex-direction:column;gap:3px;min-width:0}
+  .nx-issue-teaser-info small{font-size:8px;font-weight:800;letter-spacing:.1em;color:var(--nx-muted)}
+  .nx-issue-teaser-info strong{font-family:var(--nx-serif);font-size:16px;letter-spacing:-.03em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .nx-issue-teaser-info>span{font-size:10px;color:var(--nx-muted)}
+  .nx-issue-teaser>svg{color:var(--nx-wine)}
+  .nx-issue-strip-all{display:inline-flex;align-items:center;gap:6px;color:var(--nx-wine)!important;font-size:11px;font-weight:800;white-space:nowrap}
+  .nx-touch-editions,.nx-touch-latest{display:none}
+  .nx-carousel{padding-block:28px 37px}
+  .nx-carousel-head h2,.nx-rubrics-title h2{font-size:clamp(28px,2.5vw,39px)}
+  .nx-carousel-head h2{margin:6px 0 2px}
+  .nx-rail-controls{margin:9px 0 7px}
+  .nx-rail-controls button{height:35px;width:37px}
+  .nx-rail-item,.nx-section-carousel .nx-rail-item{flex-basis:clamp(215px,22vw,285px)}
+  .nx-story-photo{aspect-ratio:16/10}
+  .nx-story-text{padding-top:12px}
+  .nx-story-text h3{font-size:clamp(18px,1.5vw,22px);line-height:1.2;margin:7px 0}
+  .nx-story-text p{font-size:12px;-webkit-line-clamp:2}
+  .nx-rubrics-title{padding:31px 0 0}
+  .nx-section-carousel{padding-top:24px}
+  .nx-section-more{padding-top:11px}
+  .nx-footer{margin-top:43px}
+  /* Section landing: heading and editorial content share the first viewport. */
+  .nx-library-intro{padding:24px 0 15px}
+  .nx-library-title-row{display:flex;justify-content:space-between;align-items:baseline;gap:18px}
+  .nx-library-intro h1{font-size:clamp(38px,4.1vw,55px);line-height:1.05;margin:7px 0 0;letter-spacing:-.057em}
+  .nx-library-count{display:inline;color:var(--nx-muted);font-size:12px;font-weight:700;white-space:nowrap;letter-spacing:.02em}
+  .nx-section-feature{display:grid;grid-template-columns:minmax(0,1fr);gap:17px;padding:23px 0;border-bottom:1px solid var(--nx-line)}
+  .nx-section-lead-story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(15px,2.2vw,28px);min-width:0;align-items:center}
+  .nx-section-lead-image{display:block;aspect-ratio:16/10;max-height:300px;overflow:hidden;background:#20334a;min-width:0}
+  .nx-section-lead-image img{width:100%;height:100%;object-fit:cover}
+  .nx-section-lead-placeholder{display:grid;place-items:center;height:100%;color:white;font-family:var(--nx-serif);font-size:20px}
+  .nx-section-lead-copy{min-width:0}
+  .nx-section-lead-copy h2{font-family:var(--nx-serif);font-size:clamp(25px,2.65vw,38px);letter-spacing:-.043em;line-height:1.12;margin:12px 0}
+  .nx-section-lead-copy h2 a:hover,.nx-desk-copy h3 a:hover{color:var(--nx-wine)}
+  .nx-section-lead-copy p{font-size:clamp(13px,1.16vw,15px);line-height:1.52;color:var(--nx-muted);margin:0 0 15px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+  .nx-section-lead-open{display:inline-flex;gap:8px;align-items:center;color:var(--nx-wine)!important;font-size:12px;font-weight:800}
+  .nx-front-desk-head{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:25px;padding-bottom:9px;border-bottom:1px solid var(--nx-line)}
+  .nx-front-desk-head>a{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:750;color:var(--nx-wine)!important}
+  .nx-desk-story{display:grid;grid-template-columns:22px minmax(0,1fr) 65px;gap:9px;align-items:center;min-width:0;padding:11px 0;border-bottom:1px solid var(--nx-line)}
+  .nx-desk-story:last-child{border-bottom:0}
+  .nx-desk-number{align-self:start;padding-top:3px;font-family:var(--nx-serif);font-size:13px;color:var(--nx-muted)}
+  .nx-desk-copy{min-width:0}
+  .nx-desk-copy .nx-label-link{font-size:9px;letter-spacing:.09em}
+  .nx-desk-copy h3{font-family:var(--nx-serif);font-size:clamp(14px,1.18vw,17px);line-height:1.23;letter-spacing:-.02em;margin:6px 0 0}
+  .nx-desk-thumb{display:block;width:65px;height:56px;overflow:hidden;background:#e9e2d8}
+  .nx-desk-thumb img{width:100%;height:100%;object-fit:cover}
+  .nx-section-feature-list>.nx-front-desk-head{margin-bottom:3px}
+  .nx-section-after-feature .nx-story-card:nth-child(-n+4){display:none}
+  .nx-section-after-feature:not(:has(.nx-story-card:nth-child(5))){display:none}
+  .nx-section-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 19px;padding:25px 0}
+  .nx-section-grid .nx-story-text h3{font-size:clamp(17px,1.7vw,23px)}
+}
+@media (min-width:761px) and (max-width:1179px){
+  .nx-section-feature-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+  .nx-section-feature-list>.nx-front-desk-head{grid-column:1/-1}
+  .nx-section-feature-list .nx-desk-story{grid-template-columns:20px minmax(0,1fr);align-items:start}
+  .nx-section-feature-list .nx-desk-thumb{display:none}
+  .nx-issue-strip-items{display:flex;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin}
+  .nx-issue-teaser{flex:0 0 178px}
+  .nx-issue-strip-all{font-size:10px}
+}
+@media (min-width:1180px){
+  .nx-desktop-opening{grid-template-columns:minmax(0,2.14fr) minmax(285px,.87fr);gap:28px}
+  .nx-front-desk{display:flex;flex-direction:column;min-width:0;border-left:1px solid var(--nx-line);padding-left:24px}
+  .nx-front-desk .nx-desk-story{flex:1}
+  .nx-hero-photo{height:clamp(310px,24.5vw,362px)}
+  .nx-hero h1{font-size:clamp(28px,2.65vw,39px)}
+  .nx-section-feature{grid-template-columns:minmax(0,1.9fr) minmax(295px,.84fr);gap:30px;align-items:start}
+  .nx-section-feature-solo{grid-template-columns:minmax(0,1fr)}
+  .nx-section-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media (max-width:760px){
+  .nx-desktop-editorial-note,.nx-desktop-issue-strip,.nx-front-desk,
+  .nx-section-feature,.nx-library-count{display:none!important}
+}
