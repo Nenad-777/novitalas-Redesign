@@ -9,12 +9,12 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 export const HERO_ARTICLE = {
-  "href": "/srbija/sta-medjunarodni-posmatraci-vec-znaju-o-izborima-u-srbiji",
-  "category": "SRBIJA · IZBORI",
-  "title": "Šta međunarodni posmatrači već znaju o izborima u Srbiji?",
-  "description": "Pet dana pred parlamentarne izbore, međunarodne institucije već upozoravaju na ozbiljne probleme u izbornom procesu. Savet Evrope ukazuje na neravnopravne uslove, političke pritiske i rizik da deo dijaspore ostane bez mogućnosti glasanja. Prva zajednička međunarodna ocena očekuje se 26. oktobra.",
-  "imageSrc": "/news/medjunarodni-posmatraci-izbori-2026-10-20.jpg",
-  "imageAlt": "Minimalistička digitalna mapa Evrope sa Srbijom označenom zlatnom bojom i tankim svetlosnim linijama."
+  "href": "/nasa-planeta/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva",
+  "category": "KULTURA · KNJIŽEVNOST",
+  "title": "Posle 430 godina otkrivena tajna Šekspirovog autorstva",
+  "description": "Novo istraživanje britanskih univerziteta pokazuje da su Vilijam Šekspir i Kristofer Marlo zajedno napisali istorijsku dramu „Edvard III”. Nalazi donose nove dokaze o saradnji dvojice velikih dramatičara.",
+  "imageSrc": "/news/sekspir-marlo-edvard-iii-2026-10-20.svg",
+  "imageAlt": "Tipografski vizual Šekspir, Marlo, Edvard III."
 };
 
 const ARTICLES = HOME_ARTICLES;
