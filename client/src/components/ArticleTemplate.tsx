@@ -54,6 +54,9 @@ type ArticleTemplateProps = {
   imageAlt?: string;
   imageCredit?: ReactNode;
   imageHeightClass?: string;
+  /** Optional portrait-document rendering controls, default unchanged for all other articles. */
+  imageMaxWidthPx?: number;
+  imageObjectFit?: "cover" | "contain";
   imageFirst?: boolean;
   imageBeforeDeck?: boolean;
   videoHero?: { youtubeId: string; title: string; credit?: string };
@@ -74,6 +77,8 @@ export default function ArticleTemplate({
   imageAlt = "",
   imageCredit,
   imageHeightClass = "h-[260px] md:h-[420px]",
+  imageMaxWidthPx,
+  imageObjectFit = "cover",
   imageFirst = false,
   imageBeforeDeck = false,
   videoHero,
@@ -128,6 +133,8 @@ export default function ArticleTemplate({
               <div
                 className="border overflow-hidden"
                 style={{
+                  maxWidth: imageMaxWidthPx ? `${imageMaxWidthPx}px` : undefined,
+                  marginInline: imageMaxWidthPx ? "auto" : undefined,
                   borderColor: isDark ? "#2a2a2e" : "#eee",
                   backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
                 }}
@@ -135,7 +142,7 @@ export default function ArticleTemplate({
                 <img
                   src={imageSrc}
                   alt={imageAlt}
-                  className={`w-full ${imageHeightClass} object-cover object-center block`}
+                  className={`w-full ${imageHeightClass} ${imageObjectFit === "contain" ? "object-contain" : "object-cover"} object-center block`}
                   decoding="async"
                 />
               </div>
@@ -196,7 +203,7 @@ export default function ArticleTemplate({
           {imageBeforeDeck && !imageFirst && imageSrc && !videoHero ? (
             <figure className="mt-7 mb-7">
               <div className="border overflow-hidden" style={{ borderColor: isDark ? "#2a2a2e" : "#eee", backgroundColor: isDark ? "#1a1c22" : "#f7f7f7" }}>
-                <img src={imageSrc} alt={imageAlt} className={`w-full ${imageHeightClass} object-cover object-center block`} decoding="async" />
+                <img src={imageSrc} alt={imageAlt} className={`w-full ${imageHeightClass} ${imageObjectFit === "contain" ? "object-contain" : "object-cover"} object-center block`} decoding="async" />
               </div>
               <ImageCaption credit={imageCredit} />
             </figure>
@@ -233,7 +240,7 @@ export default function ArticleTemplate({
                 <img
                   src={imageSrc}
                   alt={imageAlt}
-                  className={`w-full ${imageHeightClass} object-cover object-center block`}
+                  className={`w-full ${imageHeightClass} ${imageObjectFit === "contain" ? "object-contain" : "object-cover"} object-center block`}
                   decoding="async"
                 />
               </div>
