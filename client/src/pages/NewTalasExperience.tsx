@@ -101,17 +101,51 @@ function StoryCard({article}:{article:Article}){
     <div className="nx-story-text"><LabelLink href={sectionHref(article)}>{sectionLabel(article)}</LabelLink><h3><a href={article.href}>{article.title}</a></h3><p>{article.description}</p></div>
   </article>;
 }
+/** Concise companion headlines and issue navigation for desktop news reading. */
+function DeskBrief({article,index}:{article:Article;index:number}){
+  return <article className="nx-desk-story">
+    <span className="nx-desk-number" aria-hidden="true">{String(index+1).padStart(2,"0")}</span>
+    <div className="nx-desk-copy"><LabelLink href={sectionHref(article)}>{sectionLabel(article)}</LabelLink><h3><a href={article.href}>{article.title}</a></h3></div>
+    {article.imageSrc&&<a className="nx-desk-thumb" href={article.href} tabIndex={-1} aria-hidden="true"><img src={article.imageSrc} alt="" loading="lazy"/></a>}
+  </article>;
+}
+function IssueTeaser({issue}:{issue:Issue}){
+  return <a className="nx-issue-teaser" href={"/izdanja/"+issue.id} aria-label={"Otvori izdanje "+issue.name+" 2026"}>
+    <span className="nx-issue-teaser-art">{issue.cover?.imageSrc?<img src={issue.cover.imageSrc} alt="" loading="lazy"/>:<span aria-hidden="true">NT</span>}</span>
+    <span className="nx-issue-teaser-info"><small>IZDANJE / 2026.</small><strong>{issue.name}</strong><span>{formatStoryCount(issue.articles.length)}</span></span>
+    <ArrowUpRight size={17} aria-hidden="true"/>
+  </a>;
+}
+function SectionLead({article}:{article:Article}){
+  return <article className="nx-section-lead-story">
+    <a href={article.href} className="nx-section-lead-image">{article.imageSrc?<img src={article.imageSrc} alt={article.imageAlt||article.title} loading="lazy"/>:<span className="nx-section-lead-placeholder">NOVI TALAS</span>}</a>
+    <div className="nx-section-lead-copy"><span className="nx-eyebrow">NAJNOVIJE U RUBRICI</span><h2><a href={article.href}>{article.title}</a></h2><p>{article.description}</p><a className="nx-section-lead-open" href={article.href}>Pročitaj vest <ArrowUpRight size={16} aria-hidden="true"/></a></div>
+  </article>;
+}
 function Home(){
   const selection=HOME_ARTICLES.map(article=>knownArticles.find(a=>a.href===article.href) || ({...article,category:article.category} as Article)).filter(a=>a.href!==HERO.href).slice(0,8);
   return <><main className="nx-main">
-    <div className="nx-intro"><span className="nx-eyebrow">NASLOVNA</span></div>
-    <section className="nx-hero">
-      <a href={HERO.href} className="nx-hero-photo"><img src={HERO.image} alt={HERO.imageAlt} fetchPriority="high"/></a>
-      <div className="nx-hero-copy"><LabelLink href={HERO.categoryHref}>{HERO.category}</LabelLink><h1><a href={HERO.href}>{HERO.title}</a></h1><p>{HERO.deck}</p><a className="nx-read" href={HERO.href}><span><ArrowRight size={21}/></span> Pročitaj priču</a></div>
+    <div className="nx-intro"><span className="nx-eyebrow">NASLOVNA</span><span className="nx-desktop-editorial-note">Glavna priča · Najnovije · Izdanja</span></div>
+    <div className="nx-desktop-opening">
+      <section className="nx-hero">
+        <a href={HERO.href} className="nx-hero-photo"><img src={HERO.image} alt={HERO.imageAlt} fetchPriority="high"/></a>
+        <div className="nx-hero-copy"><LabelLink href={HERO.categoryHref}>{HERO.category}</LabelLink><h1><a href={HERO.href}>{HERO.title}</a></h1><p>{HERO.deck}</p><a className="nx-read" href={HERO.href}><span><ArrowRight size={21}/></span> Pročitaj priču</a></div>
+      </section>
+      <aside className="nx-front-desk" aria-label="Još sa naslovne strane">
+        <div className="nx-front-desk-head"><span className="nx-eyebrow">U FOKUSU</span><a href="/pretraga">Arhiva <ArrowUpRight size={15} aria-hidden="true"/></a></div>
+        {selection.slice(0,3).map((a,i)=><DeskBrief key={a.href} article={a} index={i}/>)}
+      </aside>
+    </div>
+    <section className="nx-desktop-issue-strip" aria-label="Mesečna izdanja Novog talasa">
+      <div className="nx-issue-strip-title"><span className="nx-eyebrow">ARHIVA / 2026</span><h2>Mesečna izdanja</h2></div>
+      <div className="nx-issue-strip-items">{issues.slice(0,3).map(issue=><IssueTeaser key={issue.id} issue={issue}/>)}</div>
+      <a className="nx-issue-strip-all" href="/izdanja">Sva izdanja <ArrowUpRight size={17} aria-hidden="true"/></a>
     </section>
-    <FocusCarousel title="Mesečna izdanja" eyebrow="ARHIVA / 2026" actionHref="/izdanja" actionText="Sva izdanja" className="nx-editions-carousel">
-      {issues.map(issue=><IssueCover key={issue.id} issue={issue}/>)}
-    </FocusCarousel>
+    <div className="nx-touch-editions">
+      <FocusCarousel title="Mesečna izdanja" eyebrow="ARHIVA / 2026" actionHref="/izdanja" actionText="Sva izdanja" className="nx-editions-carousel">
+        {issues.map(issue=><IssueCover key={issue.id} issue={issue}/>)}
+      </FocusCarousel>
+    </div>
     <FocusCarousel eyebrow="IZBOR REDAKCIJE" actionHref="/pretraga" actionText="Pretraži arhivu" className="nx-news-carousel">
       {selection.map(article=><StoryCard key={article.href} article={article}/>)}
     </FocusCarousel>
@@ -130,7 +164,20 @@ function SectionLanding({slug}:{slug:string}){
   const articles=knownArticles.filter(a=>sectionHref(a)==="/"+slug).sort(chronological);
   const dated=articles.filter(published);
   const undated=articles.filter(a=>!published(a));
-  return <main className="nx-main nx-library"><div className="nx-library-intro"><span className="nx-eyebrow">RUBRIKA / {String(SECTIONS.findIndex(s=>s.slug===slug)+1).padStart(2,"0")}</span><h1>{section.title}</h1></div>{articles.length?<>{dated.length>0&&<FocusCarousel title="Najnovije">{dated.slice(0,10).map(a=><StoryCard key={a.href} article={a}/>)}</FocusCarousel>}<div className="nx-section-grid">{dated.map(a=><StoryCard key={a.href} article={a}/>)}</div>{undated.length>0&&<section className="nx-undated"><h2>Još iz arhive</h2><div className="nx-section-grid">{undated.map(a=><StoryCard key={a.href} article={a}/>)}</div></section>}</>:<div className="nx-empty">Arhiva ove rubrike je u dopuni.</div>}</main>;
+  return <main className="nx-main nx-library">
+    <div className="nx-library-intro"><span className="nx-eyebrow">RUBRIKA / {String(SECTIONS.findIndex(s=>s.slug===slug)+1).padStart(2,"0")}</span>
+      <div className="nx-library-title-row"><h1>{section.title}</h1><span className="nx-library-count">{formatStoryCount(articles.length)} u arhivi</span></div>
+    </div>
+    {articles.length?<>
+      {dated.length>0&&<section className={"nx-section-feature"+(dated.length<2?" nx-section-feature-solo":"")} aria-label="Najnovije priče rubrike">
+        <SectionLead article={dated[0]}/>
+        {dated.length>1&&<div className="nx-section-feature-list"><div className="nx-front-desk-head"><span className="nx-eyebrow">JOŠ IZ RUBRIKE</span></div>{dated.slice(1,4).map((a,i)=><DeskBrief key={a.href} article={a} index={i+2}/>)}</div>}
+      </section>}
+      {dated.length>0&&<div className="nx-touch-latest"><FocusCarousel title="Najnovije">{dated.slice(0,10).map(a=><StoryCard key={a.href} article={a}/>)}</FocusCarousel></div>}
+      <div className="nx-section-grid nx-section-after-feature">{dated.map(a=><StoryCard key={a.href} article={a}/>)}</div>
+      {undated.length>0&&<section className="nx-undated"><h2>Još iz arhive</h2><div className="nx-section-grid">{undated.map(a=><StoryCard key={a.href} article={a}/>)}</div></section>}
+    </>:<div className="nx-empty">Arhiva ove rubrike je u dopuni.</div>}
+  </main>;
 }
 function SearchLanding(){
   const [term,setTerm]=useState(()=>typeof window!=="undefined" ? new URLSearchParams(window.location.search).get("q")||"" : "");
