@@ -13,8 +13,8 @@ export const HERO_ARTICLE = {
   "category": "KULTURA · KNJIŽEVNOST",
   "title": "Posle 430 godina otkrivena tajna Šekspirovog autorstva",
   "description": "Novo istraživanje britanskih univerziteta pokazuje da su Vilijam Šekspir i Kristofer Marlo zajedno napisali istorijsku dramu „Edvard III”. Nalazi donose nove dokaze o saradnji dvojice velikih dramatičara.",
-  "imageSrc": "/news/sekspir-marlo-edvard-iii-2026-10-20.svg",
-  "imageAlt": "Tipografski vizual Šekspir, Marlo, Edvard III."
+  "imageSrc": "https://commons.wikimedia.org/wiki/Special:FilePath/Edward_the_third_title_page.jpg",
+  "imageAlt": "Naslovna strana prvog izdanja drame Edvard III iz 1596."
 };
 
 const ARTICLES = HOME_ARTICLES;
