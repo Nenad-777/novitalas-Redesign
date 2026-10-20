@@ -102,7 +102,7 @@ function StoryCard({article}:{article:Article}){
   </article>;
 }
 function Home(){
-  const selection=HOME_ARTICLES.map(article=>knownArticles.find(a=>a.href===article.href) || ({...article,category:article.category} as Article)).filter(a=>a.href!==HERO.href).sort(chronological).slice(0,8);
+  const selection=HOME_ARTICLES.map(article=>knownArticles.find(a=>a.href===article.href) || ({...article,category:article.category} as Article)).filter(a=>a.href!==HERO.href).slice(0,8);
   return <><main className="nx-main">
     <div className="nx-intro"><span className="nx-eyebrow">NASLOVNA</span></div>
     <section className="nx-hero">

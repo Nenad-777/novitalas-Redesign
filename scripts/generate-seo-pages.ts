@@ -143,11 +143,12 @@ function injectSEO(
   // Dimensions default to the widely-supported 1200×630 recommendation; all
   // OG images in this project are expected to match those proportions.
   const restoredFullResolutionImage = /\/news\/(?:(?:odihr|kekova)-approved-full\.webp|ko-ce-pobediti-na-izborima-2026-10-19\.png)$/.test(resolvedSeo.ogImage);
+  const internationalObserversImage = resolvedSeo.ogImage.endsWith("/news/medjunarodni-posmatraci-izbori-2026-10-20.jpg");
   const extraOgImageTags = [
     `    <meta property="og:image:secure_url" content="${escapeHtml(resolvedSeo.ogImage)}" />`,
     `    <meta property="og:image:type" content="${ogImageMime}" />`,
-    `    <meta property="og:image:width" content="${restoredFullResolutionImage ? 1672 : 1200}" />`,
-    `    <meta property="og:image:height" content="${restoredFullResolutionImage ? 941 : 630}" />`,
+    `    <meta property="og:image:width" content="${internationalObserversImage ? 1536 : restoredFullResolutionImage ? 1672 : 1200}" />`,
+    `    <meta property="og:image:height" content="${internationalObserversImage ? 864 : restoredFullResolutionImage ? 941 : 630}" />`,
   ].join("\n");
 
   result = result.replace(

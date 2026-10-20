@@ -2,6 +2,14 @@
 // keep exactly eight secondary stories. On every new publication, prepend the
 // previous HERO here and let the oldest secondary story fall off automatically.
 export const HOME_ARTICLE_CANDIDATES = [
+{
+  href: "/srbija/ko-ce-pobediti-na-izborima",
+  category: "SRBIJA · ANALIZA",
+  title: "Ko će pobediti na izborima?",
+  description: "Izbori u Srbiji mogli bi da proizvedu paradoks: vlast koja osvoji većinu mandata, ali ne uspe da okonča krizu poverenja u izborni proces.",
+  imageSrc: "/news/ko-ce-pobediti-na-izborima-2026-10-19.png",
+  imageAlt: "AI urednička ilustracija: providna glasačka kutija sa listićima ispred Narodne skupštine Srbije.",
+},
   {
   href: "/geopolitika/francuska-se-suocava-sa-velikom-drustvenom-i-politickom-krizom",
   category: "GEOPOLITIKA · FRANCUSKA",

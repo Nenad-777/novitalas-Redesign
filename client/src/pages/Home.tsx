@@ -9,12 +9,12 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 export const HERO_ARTICLE = {
-  href: "/srbija/ko-ce-pobediti-na-izborima",
-  category: "SRBIJA · ANALIZA",
-  title: "Ko će pobediti na izborima?",
-  description: "Izbori u Srbiji mogli bi da proizvedu paradoks: vlast koja osvoji većinu mandata, ali ne uspe da okonča krizu poverenja u izborni proces.",
-  imageSrc: "/news/ko-ce-pobediti-na-izborima-2026-10-19.png",
-  imageAlt: "AI urednička ilustracija: providna glasačka kutija sa listićima ispred Narodne skupštine Srbije.",
+  "href": "/srbija/sta-medjunarodni-posmatraci-vec-znaju-o-izborima-u-srbiji",
+  "category": "SRBIJA · IZBORI",
+  "title": "Šta međunarodni posmatrači već znaju o izborima u Srbiji?",
+  "description": "Pet dana pred parlamentarne izbore, međunarodne institucije već upozoravaju na ozbiljne probleme u izbornom procesu. Savet Evrope ukazuje na neravnopravne uslove, političke pritiske i rizik da deo dijaspore ostane bez mogućnosti glasanja. Prva zajednička međunarodna ocena očekuje se 26. oktobra.",
+  "imageSrc": "/news/medjunarodni-posmatraci-izbori-2026-10-20.jpg",
+  "imageAlt": "Minimalistička digitalna mapa Evrope sa Srbijom označenom zlatnom bojom i tankim svetlosnim linijama."
 };
 
 const ARTICLES = HOME_ARTICLES;

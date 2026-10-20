@@ -7,6 +7,7 @@ import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
+import MedjunarodniPosmatraciArticle from "./pages/MedjunarodniPosmatraciArticle";
 import Home from "./pages/Home";
 import NewTalasExperience from "./pages/NewTalasExperience";
 import OpenEditionPilot from "./pages/OpenEditionPilot";
@@ -321,6 +322,7 @@ function Router() {
       <NormalizePath />
 
       <Switch>
+        <Route path="/srbija/sta-medjunarodni-posmatraci-vec-znaju-o-izborima-u-srbiji" component={MedjunarodniPosmatraciArticle} />
         {/* Home */}
         <Route path="/izdanje-lab" component={OpenEditionPilot} />
         <Route path="/magazini-lab" component={MonthlyMagazinesPilot} />
