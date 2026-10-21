@@ -27,10 +27,10 @@ const knownArticles:Article[] = Array.from(new Map<string,Article>(articleSearch
 const published = (a:Article) => isIsoDate(a.publishedAt);
 const chronological = (a:Article,b:Article) => (b.publishedAt||"").localeCompare(a.publishedAt||"") || a.title.localeCompare(b.title,"sr");
 // Cover selection references real articles published in each issue.
-// September uses the original full-resolution, neutral diaspora illustration,
+// September uses the original Greenland story artwork,
 // instead of prominently featuring a political figure.
 const VERIFIED_COVERS:Record<string,string> = {
-  "2026-09":"/srbija/vazno-za-gradjane-srbije-u-inostranstvu-rok-za-prijavu-za-glasanje-istice-3-oktobra-u-ponoc",
+  "2026-09":"/geopolitika/amerika-nije-dobila-grenland-dobija-ono-zbog-cega-ga-je-zelela",
   "2026-02":"/nasa-planeta/alma-skriveno-jezgro",
   "2026-10":"/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina"
 };
