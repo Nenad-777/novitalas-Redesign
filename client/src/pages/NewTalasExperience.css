@@ -725,3 +725,22 @@
 @media(min-width:761px){
   .nx-mobile-section-archive,.nx-mobile-discover{display:none}
 }
+
+/* September 2026: preserve the month as one intact word on every issue cover.
+   Container-relative typography scales to the actual card, not the viewport. */
+.nx-issue-art-september{container-type:inline-size}
+.nx-issue-art-september .nx-issue-title{left:7%;right:5%}
+.nx-issue-art-september .nx-issue-title strong{
+  display:block;
+  max-width:100%;
+  font-size:clamp(16px,11cqw,36px);
+  letter-spacing:-.065em;
+  line-height:1.08;
+  white-space:nowrap;
+  overflow-wrap:normal;
+  word-break:normal;
+}
+.nx-issue-teaser-september .nx-issue-teaser-info strong{
+  font-size:clamp(12px,.95vw,15px);
+  letter-spacing:-.055em;
+}
