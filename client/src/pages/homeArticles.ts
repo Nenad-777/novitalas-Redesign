@@ -3,7 +3,7 @@
 // previous HERO here and let the oldest secondary story fall off automatically.
 export const HOME_ARTICLE_CANDIDATES = [
 {
-  "href": "/nasa-planeta/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva",
+  "href": "/kultura/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva",
   "category": "KULTURA · KNJIŽEVNOST",
   "title": "Posle 430 godina otkrivena tajna Šekspirovog autorstva",
   "description": "Novo istraživanje britanskih univerziteta pokazuje da su Vilijam Šekspir i Kristofer Marlo zajedno napisali istorijsku dramu „Edvard III”. Nalazi donose nove dokaze o saradnji dvojice velikih dramatičara.",
