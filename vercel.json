@@ -4,11 +4,19 @@
     {
       "source": "/og/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     }
   ],
   "redirects": [
+    {
+      "source": "/nasa-planeta/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva",
+      "destination": "/kultura/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva",
+      "permanent": true
+    },
     {
       "source": "/talibani-otvorili-vatru-na-protest-za-prava-zena",
       "destination": "/geopolitika/talibani-otvorili-vatru-na-protest-za-prava-zena",
@@ -16,7 +24,13 @@
     }
   ],
   "rewrites": [
-    { "source": "/share/(.*)", "destination": "/share/$1" },
-    { "source": "/(.*)", "destination": "/" }
+    {
+      "source": "/share/(.*)",
+      "destination": "/share/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
   ]
 }
