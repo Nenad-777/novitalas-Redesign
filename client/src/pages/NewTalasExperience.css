@@ -733,7 +733,7 @@
 .nx-issue-art-september .nx-issue-title strong{
   display:block;
   max-width:100%;
-  font-size:clamp(16px,11cqw,36px);
+  font-size:clamp(15px,10cqw,34px);
   letter-spacing:-.065em;
   line-height:1.08;
   white-space:nowrap;
