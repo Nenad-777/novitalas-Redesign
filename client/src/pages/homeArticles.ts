@@ -3,6 +3,14 @@
 // previous HERO here and let the oldest secondary story fall off automatically.
 export const HOME_ARTICLE_CANDIDATES = [
 {
+  "href": "/srbija/sta-medjunarodni-posmatraci-vec-znaju-o-izborima-u-srbiji",
+  "category": "SRBIJA · IZBORI",
+  "title": "Šta međunarodni posmatrači već znaju o izborima u Srbiji?",
+  "description": "Pet dana pred parlamentarne izbore, međunarodne institucije već upozoravaju na ozbiljne probleme u izbornom procesu. Savet Evrope ukazuje na neravnopravne uslove, političke pritiske i rizik da deo dijaspore ostane bez mogućnosti glasanja. Prva zajednička međunarodna ocena očekuje se 26. oktobra.",
+  "imageSrc": "/news/medjunarodni-posmatraci-izbori-2026-10-20.jpg",
+  "imageAlt": "Minimalistička digitalna mapa Evrope sa Srbijom označenom zlatnom bojom i tankim svetlosnim linijama."
+},
+{
   "href": "/kultura/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva",
   "category": "KULTURA · KNJIŽEVNOST",
   "title": "Posle 430 godina otkrivena tajna Šekspirovog autorstva",
