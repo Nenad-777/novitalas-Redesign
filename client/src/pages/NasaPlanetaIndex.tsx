@@ -18,14 +18,6 @@ type NasaPlanetaArticle = {
 };
 
 const ARTICLES: NasaPlanetaArticle[] = [
-{
-  "href": "/nasa-planeta/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva",
-  "img": "/news/shakespeare-shadow-2026-10-20.png",
-  "alt": "Tipografski vizual Šekspir, Marlo, Edvard III.",
-  "imageCredit": "Wikimedia Commons / javno vlasništvo.",
-  "title": "Posle 430 godina otkrivena tajna Šekspirovog autorstva",
-  "description": "Novo istraživanje britanskih univerziteta pokazuje da su Vilijam Šekspir i Kristofer Marlo zajedno napisali istorijsku dramu „Edvard III”. Nalazi donose nove dokaze o saradnji dvojice velikih dramatičara."
-},
   {
     href: "/nasa-planeta/najstariji-brodolom-kekova-turska-4700-godina",
     img: "/news/kekova-approved-full.webp",
