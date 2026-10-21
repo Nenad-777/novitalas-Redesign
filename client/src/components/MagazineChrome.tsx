@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Search, Menu, X, Moon, Sun, ArrowUpRight } from "lucide-react";
 import { useTheme } from "../contexts/ThemeContext";
 import "../pages/NewTalasExperience.css";
@@ -20,11 +20,27 @@ function WaveSignal(){return <span className="nx-wave-divider" aria-hidden="true
 
 export function MagazineHeader(){
   const [open,setOpen]=useState(false);
+  const navRef=useRef<HTMLElement>(null);
+  const toggleRef=useRef<HTMLButtonElement>(null);
   const {theme,toggleTheme}=useTheme();
+  useEffect(()=>{
+    if(!open)return;
+    navRef.current?.querySelector<HTMLAnchorElement>("a")?.focus();
+    const onKey=(event:KeyboardEvent)=>{
+      if(event.key==="Escape"){setOpen(false);toggleRef.current?.focus();}
+    };
+    const onPointer=(event:PointerEvent)=>{
+      const target=event.target;
+      if(target instanceof Node && !navRef.current?.contains(target) && !toggleRef.current?.contains(target))setOpen(false);
+    };
+    document.addEventListener("keydown",onKey);
+    document.addEventListener("pointerdown",onPointer);
+    return ()=>{document.removeEventListener("keydown",onKey);document.removeEventListener("pointerdown",onPointer);};
+  },[open]);
   return <header className="nx-header">
     <div className="nx-topline"><span>VERITAS ANTE OMNIA</span><span>NEZAVISNI INFORMATIVNO-ANALITIČKI MAGAZIN</span></div>
-    <div className="nx-masthead"><a className="nx-identity" href="/" aria-label="Novi talas, naslovna"><Brand/><span className="nx-tagline">Vaš prozor u svet</span><WaveSignal/></a><div className="nx-head-actions"><a href="/izdanja">IZDANJA</a><a href="/pretraga" aria-label="Pretraži arhivu" title="Pretraga"><Search size={22}/></a><button className="nx-theme-toggle" type="button" onClick={toggleTheme} aria-label={theme==="dark"?"Uključi dnevni režim":"Uključi noćni režim"} title={theme==="dark"?"Dnevni režim":"Noćni režim"}>{theme==="dark"?<Sun size={22}/>:<Moon size={22}/>}</button><button className="nx-menu-toggle" type="button" onClick={()=>setOpen(v=>!v)} aria-label={open?"Zatvori meni":"Otvori meni"} aria-expanded={open}>{open?<X size={24}/>:<Menu size={24}/>}</button></div></div>
-    <nav className={"nx-nav "+(open?"nx-nav-open":"")} aria-label="Rubrike">{SECTIONS.map(s=><a key={s.slug} href={"/"+s.slug}>{s.label}</a>)}<a href="/izdanja">Mesečna izdanja</a></nav>
+    <div className="nx-masthead"><a className="nx-identity" href="/" aria-label="Novi talas, naslovna"><Brand/><span className="nx-tagline">Vaš prozor u svet</span><WaveSignal/></a><div className="nx-head-actions"><a href="/izdanja">IZDANJA</a><a href="/pretraga" aria-label="Pretraži arhivu" title="Pretraga"><Search size={22}/></a><button className="nx-theme-toggle" type="button" onClick={toggleTheme} aria-label={theme==="dark"?"Uključi dnevni režim":"Uključi noćni režim"} title={theme==="dark"?"Dnevni režim":"Noćni režim"}>{theme==="dark"?<Sun size={22}/>:<Moon size={22}/>}</button><button ref={toggleRef} className="nx-menu-toggle" type="button" onClick={()=>setOpen(v=>!v)} aria-label={open?"Zatvori meni":"Otvori meni"} aria-expanded={open} aria-controls="nx-section-navigation">{open?<X size={24}/>:<Menu size={24}/>}</button></div></div>
+    <nav ref={navRef} id="nx-section-navigation" className={"nx-nav "+(open?"nx-nav-open":"")} aria-label="Rubrike">{SECTIONS.map(s=><a key={s.slug} href={"/"+s.slug} onClick={()=>setOpen(false)} aria-current={typeof window!=="undefined"&&window.location.pathname==="/"+s.slug?"page":undefined}>{s.label}</a>)}<a href="/izdanja" onClick={()=>setOpen(false)}>Mesečna izdanja</a><a className="nx-mobile-nav-search" href="/pretraga" onClick={()=>setOpen(false)}><Search size={17} aria-hidden="true"/> Pretraga arhive</a></nav>
   </header>;
 }
 export function MagazineFooter(){
