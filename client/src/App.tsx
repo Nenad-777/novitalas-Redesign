@@ -7,6 +7,7 @@ import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
+import GardijanStudentskiPokretArticle from "./pages/GardijanStudentskiPokretArticle";
 import MedjunarodniPosmatraciArticle from "./pages/MedjunarodniPosmatraciArticle";
 import ShakespeareMarloweArticle from "./pages/ShakespeareMarloweArticle";
 import Home from "./pages/Home";
@@ -323,6 +324,7 @@ function Router() {
       <NormalizePath />
 
       <Switch>
+        <Route path="/srbija/da-li-vucic-gubi-vlast-gardijan-o-snazi-studentskog-pokreta" component={GardijanStudentskiPokretArticle} />
         <Route path="/srbija/sta-medjunarodni-posmatraci-vec-znaju-o-izborima-u-srbiji" component={MedjunarodniPosmatraciArticle} />
         {/* Home */}
         <Route path="/izdanje-lab" component={OpenEditionPilot} />

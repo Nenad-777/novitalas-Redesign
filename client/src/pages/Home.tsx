@@ -9,12 +9,12 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
 export const HERO_ARTICLE = {
-  "href": "/srbija/sta-medjunarodni-posmatraci-vec-znaju-o-izborima-u-srbiji",
+  "href": "/srbija/da-li-vucic-gubi-vlast-gardijan-o-snazi-studentskog-pokreta",
   "category": "SRBIJA · IZBORI",
-  "title": "Šta međunarodni posmatrači već znaju o izborima u Srbiji?",
-  "description": "Pet dana pred parlamentarne izbore, međunarodne institucije već upozoravaju na ozbiljne probleme u izbornom procesu. Savet Evrope ukazuje na neravnopravne uslove, političke pritiske i rizik da deo dijaspore ostane bez mogućnosti glasanja. Prva zajednička međunarodna ocena očekuje se 26. oktobra.",
-  "imageSrc": "/news/medjunarodni-posmatraci-izbori-2026-10-20.jpg",
-  "imageAlt": "Minimalistička digitalna mapa Evrope sa Srbijom označenom zlatnom bojom i tankim svetlosnim linijama."
+  "title": "Da li Vučić gubi vlast? Gardijan o snazi studentskog pokreta",
+  "description": "Četiri dana pred parlamentarne izbore, studentski pokret suočava vlast sa ozbiljnim političkim izazovom. Međutim, snaga protesta i izborna pobeda nisu isto: presudno je koliko će se podrške pretvoriti u glasove.",
+  "imageSrc": "/news/gardijan-studentski-pokret-2026-10-21.png",
+  "imageAlt": "Minimalistička ilustracija olovke i glasačkog listića sa senkom zgrade vlasti."
 };
 
 const ARTICLES = HOME_ARTICLES;
