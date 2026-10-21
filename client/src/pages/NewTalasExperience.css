@@ -744,3 +744,7 @@
   font-size:clamp(12px,.95vw,15px);
   letter-spacing:-.055em;
 }
+
+/* Preserve the complete approved Guardian illustration in the lead slot. */
+.nx-hero-photo:has(img[src="/news/gardijan-studentski-pokret-2026-10-21.png"]) { background: #f7f5ee; }
+.nx-hero-photo img[src="/news/gardijan-studentski-pokret-2026-10-21.png"] { object-fit: contain; }
