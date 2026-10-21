@@ -838,7 +838,7 @@ function Router() {
         {/* =========================
             NAŠA PLANETA
            ========================= */}
-        <Route path="/nasa-planeta/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva" component={ShakespeareMarloweArticle} />
+        <Route path="/kultura/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva" component={ShakespeareMarloweArticle} />
         <Route path="/nasa-planeta/najstariji-brodolom-kekova-turska-4700-godina" component={KekovaShipwreckArticle} />
         <Route path="/nasa-planeta/dzonatan-kornjaca-194-godine-tajna-dugovecnosti" component={DzonatanDugovecnostArticle} />
         <Route
