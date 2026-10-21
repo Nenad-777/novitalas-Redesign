@@ -514,8 +514,8 @@
 }
 
 /* Preserve the approved Shakespeare composition on every editorial surface. */
-.nx a[href="/nasa-planeta/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva"].nx-hero-photo,
-.nx a[href="/nasa-planeta/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva"].nx-story-photo { aspect-ratio:16/9; }
+.nx a[href="/kultura/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva"].nx-hero-photo,
+.nx a[href="/kultura/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva"].nx-story-photo { aspect-ratio:16/9; }
 .nx img[src="/news/shakespeare-shadow-2026-10-20.png"] { object-fit:contain; transform:none; }
 .nx a:hover img[src="/news/shakespeare-shadow-2026-10-20.png"] { transform:none; }
 
