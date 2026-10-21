@@ -110,7 +110,7 @@ function DeskBrief({article,index}:{article:Article;index:number}){
   </article>;
 }
 function IssueTeaser({issue}:{issue:Issue}){
-  return <a className="nx-issue-teaser" href={"/izdanja/"+issue.id} aria-label={"Otvori izdanje "+issue.name+" 2026"}>
+  return <a className={"nx-issue-teaser"+(issue.id==="2026-09"?" nx-issue-teaser-september":"")} href={"/izdanja/"+issue.id} aria-label={"Otvori izdanje "+issue.name+" 2026"}>
     <span className="nx-issue-teaser-art">{issue.cover?.imageSrc?<img src={issue.cover.imageSrc} alt="" loading="lazy"/>:<span aria-hidden="true">NT</span>}</span>
     <span className="nx-issue-teaser-info"><small>IZDANJE / 2026.</small><strong>{issue.name}</strong><span>{formatStoryCount(issue.articles.length)}</span></span>
     <ArrowUpRight size={17} aria-hidden="true"/>
