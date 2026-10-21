@@ -4,7 +4,7 @@ import ImageCaption from "@/components/ImageCaption";
 import ShareButton from "@/components/ShareButton";
 import SeoMeta from "@/components/SeoMeta";
 import { useTheme } from "@/contexts/ThemeContext";
-import { useContext, type ReactNode } from "react";
+import { useContext, useEffect, useRef, type ReactNode } from "react";
 import { EditionEmbedContext } from "@/contexts/EditionEmbedContext";
 
 type ArticleInlineImage = {
@@ -90,12 +90,35 @@ export default function ArticleTemplate({
   const { theme } = useTheme();
   const embedded = useContext(EditionEmbedContext);
   const isDark = theme === "dark";
+  const progressRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (embedded) return;
+    let frame = 0;
+    const update = () => {
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        frame = 0;
+        const distance = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = distance > 0 ? Math.max(0, Math.min(1, window.scrollY / distance)) : 0;
+        if (progressRef.current) progressRef.current.style.transform = "scaleX(" + progress + ")";
+      });
+    };
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+      cancelAnimationFrame(frame);
+    };
+  }, [embedded]);
 
   return (
     <div
       className={embedded ? "min-h-screen flex flex-col transition-colors duration-300" : "nx-article-layout min-h-screen flex flex-col transition-colors duration-300"}
       style={{ backgroundColor: isDark ? "#101721" : "#f8f6f1" }}
     >
+      {!embedded && <div ref={progressRef} className="nx-reading-progress" aria-hidden="true" />}
       {path && !embedded && (
         <SeoMeta
           path={path}
