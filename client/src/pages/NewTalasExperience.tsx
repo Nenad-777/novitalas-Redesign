@@ -26,11 +26,11 @@ articleMeta.forEach(meta=>{if(isIsoDate(meta.datePublished)) verifiedDates.set(m
 const knownArticles:Article[] = Array.from(new Map<string,Article>(articleSearchIndex.filter(a=>a.href && a.title && a.href.startsWith("/") && a.href.split("/").length>2).map(a=>[a.href,{...a,publishedAt:verifiedDates.get(a.href)||a.publishedAt}])).values());
 const published = (a:Article) => isIsoDate(a.publishedAt);
 const chronological = (a:Article,b:Article) => (b.publishedAt||"").localeCompare(a.publishedAt||"") || a.title.localeCompare(b.title,"sr");
-// Editorial cover selection: September's previously used Greenland asset is absent
-// from the repository and the newer diaspora thumbnail is only 7.9 KB.
-// Use a documented September story with an existing full-size (2.5 MB) asset.
+// Cover selection references real articles published in each issue.
+// September uses the original full-resolution, neutral diaspora illustration,
+// instead of prominently featuring a political figure.
 const VERIFIED_COVERS:Record<string,string> = {
-  "2026-09":"/geopolitika/afd-menja-politicku-mapu-nemacke-ruski-gas-se-vraca-u-igru",
+  "2026-09":"/srbija/vazno-za-gradjane-srbije-u-inostranstvu-rok-za-prijavu-za-glasanje-istice-3-oktobra-u-ponoc",
   "2026-02":"/nasa-planeta/alma-skriveno-jezgro",
   "2026-10":"/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina"
 };
@@ -86,7 +86,7 @@ function FocusCarousel({children,title,eyebrow,actionHref,actionText="Pogledaj s
 }
 function IssueCover({issue}:{issue:Issue}){
   return <a className="nx-issue" href={"/izdanja/"+issue.id} aria-label={"Otvori izdanje "+issue.name+" 2026"}>
-    <div className={"nx-issue-art "+(!issue.cover?"nx-issue-unverified":"")}>
+    <div className={"nx-issue-art "+(!issue.cover?"nx-issue-unverified":"")+(issue.id==="2026-09"?" nx-issue-art-september":"")}>
       {issue.cover?.imageSrc&&<img src={issue.cover.imageSrc} alt="" loading="lazy"/>}
       <div className="nx-issue-shade"/>
       <div className="nx-issue-brand">NOVI <span>TALAS</span></div>
