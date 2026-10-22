@@ -1,3 +1,4 @@
+import DzudiDencArticle from "./pages/DzudiDencArticle";
 import { useEffect } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -336,6 +337,7 @@ function Router() {
         <Route path="/nasa-planeta" component={NewTalasExperience} />
         <Route path="/kultura/klara-i-sunce-premijera-film-po-romanu-nobelovca-kazua-isigura" component={KlaraISuncePremijeraArticle} />
         <Route path="/geopolitika/francuska-se-suocava-sa-velikom-drustvenom-i-politickom-krizom" component={FranceSocialCrisisArticle} />
+        <Route path="/kultura/na-kraju-jedne-velicanstvene-karijere-dzudi-denc" component={DzudiDencArticle} />
         <Route path="/kultura" component={NewTalasExperience} />
         <Route path="/izdanja/:month" component={NewTalasExperience} />
         <Route path="/" component={NewTalasExperience} />

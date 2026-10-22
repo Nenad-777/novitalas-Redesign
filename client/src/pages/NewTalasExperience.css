@@ -748,3 +748,7 @@
 /* Preserve the complete approved Guardian illustration in the lead slot. */
 .nx-hero-photo:has(img[src="/news/gardijan-studentski-pokret-2026-10-21.png"]) { background: #f7f5ee; }
 .nx-hero-photo img[src="/news/gardijan-studentski-pokret-2026-10-21.png"] { object-fit: contain; }
+
+/* Preserve the complete approved stage photograph at every viewport size. */
+.nx-hero-photo:has(img[src="/news/dzudi-denc-paladium-2023.jpg"]) { background: #000; }
+.nx-hero-photo img[src="/news/dzudi-denc-paladium-2023.jpg"] { object-fit: contain; }

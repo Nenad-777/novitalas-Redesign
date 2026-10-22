@@ -11,7 +11,7 @@ type ArticleInlineImage = {
   type: "image";
   src: string;
   alt: string;
-  credit?: string;
+  credit?: ReactNode;
   heightClass?: string;
 };
 

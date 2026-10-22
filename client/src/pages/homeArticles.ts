@@ -2,6 +2,7 @@
 // keep exactly eight secondary stories. On every new publication, prepend the
 // previous HERO here and let the oldest secondary story fall off automatically.
 export const HOME_ARTICLE_CANDIDATES = [
+{"href": "/srbija/da-li-vucic-gubi-vlast-gardijan-o-snazi-studentskog-pokreta", "category": "SRBIJA · IZBORI", "title": "Da li Vučić gubi vlast? Gardijan o snazi studentskog pokreta", "description": "Četiri dana pred parlamentarne izbore, studentski pokret suočava vlast sa ozbiljnim političkim izazovom. Međutim, snaga protesta i izborna pobeda nisu isto: presudno je koliko će se podrške pretvoriti u glasove.", "imageSrc": "/news/gardijan-studentski-pokret-2026-10-21.png", "imageAlt": "Minimalistička ilustracija olovke i glasačkog listića sa senkom zgrade vlasti."},
 {
   "href": "/srbija/sta-medjunarodni-posmatraci-vec-znaju-o-izborima-u-srbiji",
   "category": "SRBIJA · IZBORI",
