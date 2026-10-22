@@ -97,6 +97,7 @@ export function buildJsonLd(meta: {
 }
 
 export const articleMeta: ArticleStaticMeta[] = [
+{"path": "/kultura/na-kraju-jedne-velicanstvene-karijere-dzudi-denc", "title": "Na kraju jedne veličanstvene karijere", "description": "Džudi Denč godinama je učila tekst slušajući prijatelje. Sada kaže da više ne može na scenu. Šekspirove stihove i dalje nosi u pamćenju.", "imageSrc": "/news/dzudi-denc-paladium-2023.jpg", "datePublished": "2026-10-22", "author": "Novi Talas", "section": "Kultura", "keywords": "Džudi Denč, Judi Dench, pozorište, Šekspir, soneti, Old Vik"},
 {"path":"/srbija/da-li-vucic-gubi-vlast-gardijan-o-snazi-studentskog-pokreta","title":"Da li Vučić gubi vlast? Gardijan o snazi studentskog pokreta","description":"Četiri dana pred parlamentarne izbore, studentski pokret suočava vlast sa ozbiljnim političkim izazovom. Međutim, snaga protesta i izborna pobeda nisu isto: presudno je koliko će se podrške pretvoriti u glasove.","imageSrc":"/news/gardijan-studentski-pokret-2026-10-21.png","datePublished":"2026-10-21","author":"Novi Talas","section":"Srbija","keywords":"Srbija, izbori, studenti, Gardijan, Rojters, Vučić, CRTA"},
 {
   "path": "/kultura/posle-430-godina-otkrivena-tajna-sekspirovog-autorstva",

@@ -8,14 +8,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
-export const HERO_ARTICLE = {
-  "href": "/srbija/da-li-vucic-gubi-vlast-gardijan-o-snazi-studentskog-pokreta",
-  "category": "SRBIJA · IZBORI",
-  "title": "Da li Vučić gubi vlast? Gardijan o snazi studentskog pokreta",
-  "description": "Četiri dana pred parlamentarne izbore, studentski pokret suočava vlast sa ozbiljnim političkim izazovom. Međutim, snaga protesta i izborna pobeda nisu isto: presudno je koliko će se podrške pretvoriti u glasove.",
-  "imageSrc": "/news/gardijan-studentski-pokret-2026-10-21.png",
-  "imageAlt": "Minimalistička ilustracija olovke i glasačkog listića sa senkom zgrade vlasti."
-};
+export const HERO_ARTICLE = {"href": "/kultura/na-kraju-jedne-velicanstvene-karijere-dzudi-denc", "category": "KULTURA · POZORIŠTE", "title": "Na kraju jedne veličanstvene karijere", "description": "Džudi Denč godinama je učila tekst slušajući prijatelje. Sada kaže da više ne može na scenu. Šekspirove stihove i dalje nosi u pamćenju.", "imageSrc": "/news/dzudi-denc-paladium-2023.jpg", "imageAlt": "Džudi Denč na sceni londonskog Paladijuma, pod svetlom reflektora, 5. marta 2023."};
 
 const ARTICLES = HOME_ARTICLES;
 function useFadeIn(){const ref=useRef<HTMLDivElement>(null);const[visible,setVisible]=useState(false);useEffect(()=>{const el=ref.current;if(!el)return;const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);o.unobserve(el)}},{threshold:.1});o.observe(el);return()=>o.disconnect()},[]);return{ref,visible}}
