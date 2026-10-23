@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
-export const HERO_ARTICLE = {"href": "/kultura/na-kraju-jedne-velicanstvene-karijere-dzudi-denc", "category": "KULTURA · POZORIŠTE", "title": "Na kraju jedne veličanstvene karijere", "description": "Džudi Denč godinama je učila tekst slušajući prijatelje. Sada kaže da više ne može na scenu. Šekspirove stihove i dalje nosi u pamćenju.", "imageSrc": "/news/dzudi-denc-paladium-2023.jpg", "imageAlt": "Džudi Denč na sceni londonskog Paladijuma, pod svetlom reflektora, 5. marta 2023."};
+export const HERO_ARTICLE = {"href": "/obavestajni-izvori/bec-proteruje-ruske-diplomate-moskva-najavljuje-odgovor", "category": "OBAVEŠTAJNI IZVORI", "title": "Beč proteruje ruske diplomate, Moskva najavljuje odgovor", "description": "Austrija je četvorici ruskih diplomata naložila da napuste zemlju. Među njima je i predstavnik pri OEBS-u koji se bavio vojnom bezbednošću i kontrolom naoružanja.", "imageSrc": "/news/bec-moskva-diplomate-2026-10-23.webp", "imageAlt": "Urednička ilustracija: dve prazne stolice, ravnopravno postavljene zastavice Austrije i Rusije i zatvorena fascikla na diplomatskom stolu."};
 
 const ARTICLES = HOME_ARTICLES;
 function useFadeIn(){const ref=useRef<HTMLDivElement>(null);const[visible,setVisible]=useState(false);useEffect(()=>{const el=ref.current;if(!el)return;const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);o.unobserve(el)}},{threshold:.1});o.observe(el);return()=>o.disconnect()},[]);return{ref,visible}}
