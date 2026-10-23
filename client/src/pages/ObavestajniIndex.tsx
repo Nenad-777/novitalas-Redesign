@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const ARTICLES = [
+{"href": "/obavestajni-izvori/bec-proteruje-ruske-diplomate-moskva-najavljuje-odgovor", "img": "/news/bec-moskva-diplomate-2026-10-23.webp", "alt": "Urednička ilustracija: dve prazne stolice, ravnopravno postavljene zastavice Austrije i Rusije i zatvorena fascikla na diplomatskom stolu.", "title": "Beč proteruje ruske diplomate, Moskva najavljuje odgovor", "description": "Austrija je četvorici ruskih diplomata naložila da napuste zemlju. Među njima je i predstavnik pri OEBS-u koji se bavio vojnom bezbednošću i kontrolom naoružanja.", "date": "23. oktobar 2026."},
   {
     href: "/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina",
     img: "/news/starshield-approved.jpg",

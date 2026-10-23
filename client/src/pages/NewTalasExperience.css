@@ -752,3 +752,7 @@
 /* Preserve the complete approved stage photograph at every viewport size. */
 .nx-hero-photo:has(img[src="/news/dzudi-denc-paladium-2023.jpg"]) { background: #000; }
 .nx-hero-photo img[src="/news/dzudi-denc-paladium-2023.jpg"] { object-fit: contain; }
+
+/* Preserve the complete approved diplomatic illustration. */
+.nx-hero-photo:has(img[src="/news/bec-moskva-diplomate-2026-10-23.webp"]) { aspect-ratio: 16 / 9; background: #f5f1e8; }
+.nx-hero-photo img[src="/news/bec-moskva-diplomate-2026-10-23.webp"] { object-fit: contain; }
