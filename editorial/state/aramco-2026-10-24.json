@@ -1,0 +1,14 @@
+{
+  "schema": 2,
+  "id": "aramco-2026-10-24",
+  "fingerprint": "adopted-existing-aramco-2bc113cb3da74eb817b3ba3b9b7f268c99c4472e",
+  "stage": "production-verification",
+  "imageSha": "2bc113cb3da74eb817b3ba3b9b7f268c99c4472e",
+  "imageVerified": true,
+  "pr": 551,
+  "mergeSha": "96287ce090e73e374605d78b0c86a2227355a216",
+  "deploymentId": "dpl_2eMUfqJoUUHzf65yJuXmFHeuSGh2",
+  "productionVerified": false,
+  "errors": [],
+  "note": "Adopted existing publication; final mobile/OG verification pending. Not a manifest identity for new publication."
+}
