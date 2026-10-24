@@ -143,7 +143,7 @@ function injectSEO(
   // Dimensions default to the widely-supported 1200×630 recommendation; all
   // OG images in this project are expected to match those proportions.
   const gardijanImage = resolvedSeo.ogImage.endsWith("/news/gardijan-studentski-pokret-2026-10-21.png");
-  const restoredFullResolutionImage = gardijanImage || resolvedSeo.ogImage.endsWith("/news/shakespeare-shadow-2026-10-20.png") || /\/news\/(?:(?:odihr|kekova)-approved-full\.webp|ko-ce-pobediti-na-izborima-2026-10-19\.png)$/.test(resolvedSeo.ogImage);
+  const restoredFullResolutionImage = resolvedSeo.ogImage.endsWith("/news/aramco-dhahran-2026-10-23.png") || gardijanImage || resolvedSeo.ogImage.endsWith("/news/shakespeare-shadow-2026-10-20.png") || /\/news\/(?:(?:odihr|kekova)-approved-full\.webp|ko-ce-pobediti-na-izborima-2026-10-19\.png)$/.test(resolvedSeo.ogImage);
   const internationalObserversImage = resolvedSeo.ogImage.endsWith("/news/medjunarodni-posmatraci-izbori-2026-10-20.jpg");
   if (gardijanImage || internationalObserversImage || resolvedSeo.ogImage.endsWith("/news/shakespeare-shadow-2026-10-20.png")) {
     result = result.replace(/<meta\s+property="og:image:(?:secure_url|type|width|height|alt)"[^>]*>\s*/g, "");
