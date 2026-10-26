@@ -1,1 +1,1356 @@
-[]
+[
+  {
+    "href": "/srbija/srbija-primer-celoj-evropi-nenasilni-protesti-doveli-do-politickog-preokreta",
+    "category": "Srbija",
+    "title": "Srbija primer celoj Evropi: nenasilni protesti doveli do političkog preokreta",
+    "description": "Posle gotovo dve godine studentskih i građanskih protesta, Srbija je na vanrednim parlamentarnim izborima doživela istorijsku političku promenu. Pobeda Studentske liste i priznanje izbornog poraza Aleksandra Vučića otvorili su novo poglavlje u zemlji, dok evropski mediji i zvaničnici pažljivo prate događaje koji bi mogli postati važan primer građanske mobilizacije.",
+    "imageSrc": "/news/srbija-primer-evropi-2026-10-26-og.jpg",
+    "imageAlt": "Srbija primer celoj Evropi: nenasilni protesti doveli do političkog preokreta",
+    "publishedAt": "2026-10-26"
+  },
+  {
+    "href": "/geopolitika/aramko-evakuise-sediste-rat-se-priblizava-srcu-svetske-naftne-industrije",
+    "category": "Geopolitika",
+    "title": "Aramko evakuiše sedište: rat se približava srcu svetske naftne industrije",
+    "description": "Saudijski naftni gigant naredio je zaposlenima da napuste centralu u Dahranu, nakon niza napada na energetsku i civilnu infrastrukturu. Cena nafte premašila je 115 dolara po barelu, dok sukobi na Bliskom istoku sve ozbiljnije ugrožavaju stabilnost globalnog energetskog tržišta.",
+    "imageSrc": "/news/aramco-dhahran-2026-10-23.png",
+    "imageAlt": "Akvarelna urednička ilustracija saudijske naftne infrastrukture i cevovoda u pustinji.",
+    "publishedAt": "2026-10-24"
+  },
+  {
+    "href": "/srbija/da-li-vucic-gubi-vlast-gardijan-o-snazi-studentskog-pokreta",
+    "category": "Srbija",
+    "title": "Da li Vučić gubi vlast? Gardijan o snazi studentskog pokreta",
+    "description": "Četiri dana pred parlamentarne izbore, studentski pokret suočava vlast sa ozbiljnim političkim izazovom. Međutim, snaga protesta i izborna pobeda nisu isto: presudno je koliko će se podrške pretvoriti u glasove.",
+    "imageSrc": "/news/gardijan-studentski-pokret-2026-10-21.png",
+    "imageAlt": "Minimalistička ilustracija olovke i glasačkog listića sa senkom zgrade vlasti.",
+    "publishedAt": "2026-10-21"
+  },
+  {
+    "href": "/srbija/sta-medjunarodni-posmatraci-vec-znaju-o-izborima-u-srbiji",
+    "category": "Srbija",
+    "title": "Šta međunarodni posmatrači već znaju o izborima u Srbiji?",
+    "description": "Pet dana pred parlamentarne izbore, međunarodne institucije već upozoravaju na ozbiljne probleme u izbornom procesu. Savet Evrope ukazuje na neravnopravne uslove, političke pritiske i rizik da deo dijaspore ostane bez mogućnosti glasanja. Prva zajednička međunarodna ocena očekuje se 26. oktobra.",
+    "imageSrc": "/news/medjunarodni-posmatraci-izbori-2026-10-20.jpg",
+    "imageAlt": "Minimalistička digitalna mapa Evrope sa Srbijom označenom zlatnom bojom i tankim svetlosnim linijama.",
+    "publishedAt": "2026-10-20"
+  },
+  {
+    "href": "/srbija/ko-ce-pobediti-na-izborima",
+    "category": "Srbija",
+    "title": "Ko će pobediti na izborima?",
+    "description": "Šta ako Aleksandar Vučić 25. oktobra proglasi pobedu, a njegova vlast se već narednog jutra suoči sa mnogo težim pitanjem: koliko je takva pobeda politički održiva pred međunarodnom javnošću?",
+    "imageSrc": "/news/ko-ce-pobediti-na-izborima-2026-10-19.png",
+    "imageAlt": "AI urednička ilustracija: providna glasačka kutija sa listićima ispred Narodne skupštine Srbije.",
+    "publishedAt": "2026-10-19"
+  },
+  {
+    "href": "/geopolitika/francuska-se-suocava-sa-velikom-drustvenom-i-politickom-krizom",
+    "category": "Geopolitika",
+    "title": "Francuska se suočava sa velikom društvenom i političkom krizom",
+    "description": "Više od pola miliona građana izašlo je na ulice širom Francuske zbog rasta troškova života i nezadovoljstva javnim službama. Masovne demonstracije prerasle su u nasilne sukobe u više gradova, dodatno produbljujući krizu vlasti predsednika Emanuela Makrona.",
+    "imageSrc": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Paris_riots%2C_17_October_2026_-_Crowd_facing_Place_de_la_R%C3%A9publique_in_tear_gas_-_JJxFile_0012.jpg/1280px-Paris_riots%2C_17_October_2026_-_Crowd_facing_Place_de_la_R%C3%A9publique_in_tear_gas_-_JJxFile_0012.jpg",
+    "imageAlt": "Masovni protesti na Trgu Republike u Parizu 17. oktobra 2026, demonstranti i oblaci suzavca.",
+    "publishedAt": "2026-10-18"
+  },
+  {
+    "href": "/nasa-planeta/najstariji-brodolom-kekova-turska-4700-godina",
+    "category": "Naša planeta",
+    "title": "Najstariji poznati brodolom na svetu pronađen kod Turske: teret ležao na dnu skoro pet milenijuma",
+    "description": "Kod ostrva Kekova na jugu Turske arheolozi su pronašli ostatke brodoloma starog između 4.400 i 4.700 godina. Istraživači smatraju da bi mogao biti najstariji poznati brodolom na svetu.",
+    "imageSrc": "/news/kekova-approved-full.webp",
+    "imageAlt": "AI ilustracija amfora i kamenog sidra na morskom dnu, inspirisana otkrićem brodoloma kod Kekove.",
+    "publishedAt": "2026-10-16"
+  },
+  {
+    "href": "/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina",
+    "category": "Obaveštajni izvori",
+    "title": "Bela kuća ograničila satelitsku vezu Ukrajini: ko je izdao nalog i zašto?",
+    "description": "Prema istraživanju Reutersa, nalog za ograničavanje satelitskog sistema Starshield stigao je iz Bele kuće, ali nije utvrđeno ko ga je izdao. Odluka je poremetila vojne operacije Ukrajine i otvorila pitanje kontrole nad infrastrukturom savremenog rata.",
+    "imageSrc": "/news/starshield-approved.jpg",
+    "imageAlt": "AI ilustracija ukrajinskog vojnika sa satelitskim terminalom na položaju u sumrak.",
+    "publishedAt": "2026-10-16"
+  },
+  {
+    "href": "/srbija/vilson-upozorio-na-beloruski-scenario-svet-ce-pratiti-izbore-u-srbiji",
+    "category": "Srbija",
+    "title": "Vilson upozorio na beloruski scenario: Svet će pratiti izbore u Srbiji",
+    "description": "Američki kongresmen razgovarao je sa predstavnicima CRTE o izbornim uslovima u Srbiji. Posmatrači upozoravaju na nasilje, pritiske na birače i neravnopravnu kampanju.",
+    "imageSrc": "/news/wilson-crta-approved.webp",
+    "imageAlt": "Urednički kolaž: Džo Vilson levo i Narodna skupština Srbije desno.",
+    "publishedAt": "2026-10-15"
+  },
+  {
+    "href": "/srbija/posle-svedocenja-o-cacilendu-i-15-martu-sve-glasniji-zahtevi-za-istragom",
+    "category": "Srbija",
+    "title": "Posle svedočenja o Ćacilendu i događajima 15. marta 2025. godine, sve glasniji zahtevi za istragom",
+    "description": "Sve više glasova zahteva od tužilaštva da ispita navode o organizovanju plaćenih grupa, mogućoj zloupotrebi državnih resursa i ulozi policije tokom protesta u Beogradu.",
+    "imageSrc": "/news/cacilend-15-mart-2025-nenad-maricic.avif",
+    "imageAlt": "Autorska fotografija masovnog protesta u Beogradu 15. marta 2025: ljudi i srpske zastave na ulici.",
+    "publishedAt": "2026-10-14"
+  },
+  {
+    "href": "/geopolitika/napad-na-aerodrom-u-rijadu-12-poginulih-vise-od-300-povredjenih",
+    "category": "Geopolitika",
+    "title": "Napad na aerodrom u Rijadu: 12 poginulih, više od 300 povređenih",
+    "description": "Saudijska Arabija optužila je jemenske Hute, koje podržava Iran, za raketni napad na međunarodni aerodrom u Rijadu. Američki predsednik Donald Tramp izjavio je da Vašington razmatra uključivanje u vojne operacije protiv Huta.",
+    "imageSrc": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Saudi_Arabia_%28152%29_%288886427334%29.jpg",
+    "imageAlt": "Avion kompanije Saudia na aerodromu Kralj Halid u Rijadu, arhivski snimak iz 2013.",
+    "publishedAt": "2026-10-11"
+  },
+  {
+    "href": "/obavestajni-izvori/spijunska-afera-nemacka-evropske-sluzbe-strahuju-za-tajne",
+    "category": "Obaveštajni izvori",
+    "title": "Špijunska afera u Nemačkoj: evropske službe strahuju za svoje tajne",
+    "description": "Hapšenje bivšeg direktora nemačke obaveštajne službe BND otvorilo je pitanje bezbednosti poverljivih podataka koje Berlin razmenjuje sa međunarodnim partnerima. Istraga obuhvata približno 2.000 dokumenata.",
+    "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Zentrale_des_Bundesnachrichtendienst%2C_Berlin.jpg",
+    "imageAlt": "Sedište nemačke spoljne obaveštajne službe BND u Berlinu, fotografija iz 2017. godine.",
+    "publishedAt": "2026-10-11"
+  },
+  {
+    "href": "/nasa-planeta/dzonatan-kornjaca-194-godine-tajna-dugovecnosti",
+    "category": "Naša planeta",
+    "title": "Živi već 194 godine, a njegove ćelije kriju moguću tajnu dugovečnosti",
+    "description": "Najstarija poznata živa kopnena životinja na svetu postala je predmet izuzetnog naučnog istraživanja. Analiza DNK džinovske kornjače Džonatana otkrila je mehanizme koji bi jednog dana mogli pomoći naučnicima da razumeju kako se usporava starenje.",
+    "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Jonathan_Tortoise_2022.jpg",
+    "imageAlt": "Džinovska kornjača Džonatan na travnjaku rezidencije guvernera ostrva Sveta Jelena.",
+    "publishedAt": "2026-10-10"
+  },
+  {
+    "href": "/srbija/izbori-25-oktobra-odihr-biracki-spisak-kontrola-kampanje",
+    "category": "Srbija",
+    "title": "Izbori 25. oktobra: ODIHR upozorava na probleme sa biračkim spiskom i kontrolom kampanje",
+    "description": "Međunarodni posmatrači ukazuju na otvorena pitanja o tačnosti biračkog spiska, korišćenju javnih sredstava i nadzoru medija. Prvi izveštaj Komisije za reviziju biračkog spiska očekuje se tek nakon izbora.",
+    "publishedAt": "2026-10-10"
+  },
+  {
+    "href": "/srbija/francuska-protesti-arte-srpski-studenti",
+    "category": "Srbija",
+    "title": "Francuska na nogama, a na ARTE-u se govori o srpskim studentima",
+    "description": "Dok Francusku potresaju protesti mladih, Noé Girardot-Champsaur u javnoj objavi povodom gostovanja na ARTE-u ukazuje na iskustvo srpskih studenata i njihov politički odgovor vlastima.",
+    "imageSrc": "/news/france-serbian-protests.jpg",
+    "imageAlt": "Grafički vizual Novog Talasa u bojama francuske zastave, sa naslovom Francuska na nogama.",
+    "publishedAt": "2026-10-08"
+  },
+  {
+    "href": "/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci",
+    "category": "Srbija",
+    "title": "Vučić i Zapad: optužbe za autokratiju stigle su u centre moći",
+    "description": "Godinama su Kosovo, regionalna stabilnost i geopolitika držali pitanja demokratije, slobode medija i vladavine prava u Srbiji u drugom planu odnosa sa Zapadom. Danas su optužbe za autoritarizam stigle mnogo dalje: od vodećih zapadnih medija i evropskih institucija do rasprave unutar EPP-a i američkog Kongresa.",
+    "imageSrc": "/news/vucic-zapad-centri-moci.webp",
+    "imageAlt": "Prazna konferencijska stolica u savremenoj evropskoj institucionalnoj sali, sa zastavama Evropske unije u pozadini.",
+    "publishedAt": "2026-10-07"
+  },
+  {
+    "href": "/geopolitika/srbija-act-stigao-i-u-senat-wilson-podrzao-inicijativu-i-ponovo-otvorio-pitanje-izbora-u-srbiji",
+    "category": "Geopolitika",
+    "title": "SRBIJA Act stigao i u Senat: Wilson podržao inicijativu i ponovo otvorio pitanje izbora u Srbiji",
+    "description": "U Senatu SAD uveden je S. 5611, uz dvostranačku podršku Grassleyja i Blumenthala. Joe Wilson je inicijativu javno povezao sa SRBIJA Act-om i ponovo otvorio pitanje izbora u Srbiji.",
+    "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/a/a6/US_Senate_Session_Chamber.jpg",
+    "imageAlt": "Sala Senata Sjedinjenih Američkih Država tokom zasedanja.",
+    "publishedAt": "2026-10-01"
+  },
+  {
+    "href": "/srbija/vazno-za-gradjane-srbije-u-inostranstvu-rok-za-prijavu-za-glasanje-istice-3-oktobra-u-ponoc",
+    "category": "Srbija",
+    "title": "Važno za građane Srbije u inostranstvu: Rok za prijavu za glasanje ističe 3. oktobra u ponoć",
+    "description": "Studenti u blokadi zatražili su danas hitnu reakciju Ministarstva spoljnih poslova i Republičke izborne komisije zbog problema koje građani Srbije iz više zemalja prijavljuju prilikom prijavljivanja za glasanje u inostranstvu. Do isteka roka ostalo je još samo nekoliko dana.",
+    "imageSrc": "/news/glasanje-dijaspora-3-oktobar-hd.jpg",
+    "imageAlt": "Editorial ilustracija glasanja građana Srbije u inostranstvu sa glasačkim listićem i zastavama zemalja dijaspore.",
+    "publishedAt": "2026-09-26"
+  },
+  {
+    "href": "/nasa-planeta/tarantino-je-napisao-novi-film-fincer-ga-je-rezirao",
+    "category": "Naša planeta",
+    "title": "Tarantino je napisao novi film. Finčer ga je režirao",
+    "description": "Brad Pitt se vraća kao Cliff Booth u filmu „The Further Mis-Adventures of Cliff Booth“. Prvi puni trejler otkriva kako izgleda Tarantinov svet kada iza kamere stane David Fincher.",
+    "imageSrc": "https://img.youtube.com/vi/${YOUTUBE_ID}/maxresdefault.jpg",
+    "imageAlt": "Brad Pitt kao Cliff Booth u zvaničnom trejleru Netflixa.",
+    "publishedAt": "2026-09-25"
+  },
+  {
+    "href": "/geopolitika/pred-razgovore-trampa-i-sija-amerika-ostaje-zavisna-od-kineskih-kriticnih-minerala",
+    "category": "Geopolitika",
+    "title": "Pred razgovore Trampa i Sija: Amerika ostaje zavisna od kineskih kritičnih minerala",
+    "description": "Kina kontroliše ključne delove lanca retkih zemalja potrebnih američkoj industriji, tehnologiji i odbrani. Pred razgovore Donalda Trampa i Si Đinpinga u Vašingtonu, ta zavisnost postaje jedno od centralnih pitanja odnosa dve najveće svetske ekonomije.",
+    "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/0/08/President_Donald_Trump_participates_in_a_bilateral_meeting_with_Chinese_President_Xi_Jinping_at_the_Gimhae_International_Airport_terminal_%2854889568887%29.jpg",
+    "imageAlt": "Donald Tramp i Si Đinping sa američkom i kineskom delegacijom tokom bilateralnog sastanka u Busanu 2025.",
+    "publishedAt": "2026-09-24"
+  },
+  {
+    "href": "/geopolitika/afd-menja-politicku-mapu-nemacke-ruski-gas-se-vraca-u-igru",
+    "category": "Geopolitika",
+    "title": "AfD menja političku mapu Nemačke, a ruski gas se vraća u igru",
+    "description": "AfD je sa 38,2 odsto glasova pobedio u Meklenburgu-Zapadnoj Pomeraniji, dok je CDU prvi put ostao bez mesta u jednom nemačkom pokrajinskom parlamentu. Samo dva dana ranije pojavila se vest o pripremama za razgovore AfD-a i ruskog izaslanika o mogućem povratku ruskog gasa.",
+    "imageSrc": "/news/afd-weidel.jpg",
+    "imageAlt": "Alis Vajdel uz nemačku zastavu i obeležja AfD-a.",
+    "publishedAt": "2026-09-21"
+  },
+  {
+    "href": "/nasa-planeta/tacka-bez-povratka-ai",
+    "category": "Naša planeta",
+    "title": "Tačka bez povratka",
+    "description": "Ljudi koji stvaraju najmoćnije sisteme veštačke inteligencije počeli su javno da upozoravaju na njihove rizike. Pitanje više nije samo šta AI može da uradi, nego da li će čovek još moći da ga kontroliše.",
+    "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Prince_Charles_%288398765111%29.jpg",
+    "imageAlt": "Tadašnji princ Čarls tokom posete Aberdyfiju u Velsu, 27. juna 2011.",
+    "publishedAt": "2026-09-20"
+  },
+  {
+    "href": "/geopolitika/amerika-nije-dobila-grenland-dobija-ono-zbog-cega-ga-je-zelela",
+    "category": "Geopolitika",
+    "title": "Amerika nije dobila Grenland. Dobija ono zbog čega ga je želela",
+    "description": "Sjedinjene Države, Danska i Grenland pripremaju sporazum koji bi trebalo da dodatno ojača američko vojno prisustvo na Arktiku. Suverenitet nad ostrvom se ne menja, ali se menja njegova strateška uloga u svetu u kojem sever više nije periferija geopolitike.",
+    "imageSrc": "/news/greenland-us-arctic.jpg",
+    "imageAlt": "Editorial ilustracija Grenlanda sa diskretnim radarskim lukovima koji sugerišu američko strateško prisustvo na Arktiku.",
+    "publishedAt": "2026-09-19"
+  },
+  {
+    "href": "/geopolitika/da-li-se-menja-mapa-ujedinjenog-kraljevstva",
+    "category": "Geopolitika",
+    "title": "Da li se menja mapa Ujedinjenog Kraljevstva? Tri nacionalna pokreta zajedno otvorila pitanje samoopredeljenja",
+    "description": "Lideri SNP-a, Plaid Cymru i Sinn Féina potpisali su u Kardifu zajednički memorandum kojim traže da građani Škotske, Velsa i Severne Irske sami odlučuju o svojoj ustavnoj budućnosti. Dokument ne znači izlazak iz UK, ali pokazuje da se pitanje budućnosti Ujedinjenog Kraljevstva više ne vodi samo odvojeno u Edinburgu, Kardifu i Belfastu.",
+    "imageSrc": "/news/uk-self-determination-flags.jpg",
+    "imageAlt": "Zastave Škotske i Velsa uz Ulster Banner, simbol koji se često koristi za predstavljanje Severne Irske, na jarbolima pod otvorenim nebom.",
+    "publishedAt": "2026-09-18"
+  },
+  {
+    "href": "/nasa-planeta/misu-ugradjen-deo-ljudskog-mozga-naucnici-otvorili-novu-eru-istrazivanja",
+    "category": "Naša planeta",
+    "title": "Mišu ugrađen deo ljudskog mozga: naučnici otvorili novu eru istraživanja",
+    "description": "Istraživači sa Stanforda uspeli su da u mozak genetski izmenjenih miševa ugrade ljudsko moždano tkivo uzgojeno u laboratoriji. Cilj nije stvaranje „humanizovane“ životinje, već razvoj mnogo vernijeg modela za proučavanje autizma, epilepsije, cerebralne paralize i drugih neuroloških poremećaja.",
+    "imageSrc": "/news/mouse-human-brain-organoid.png",
+    "imageAlt": "Ilustracija preseka glave miša sa fluorescentno označenim moždanim strukturama i zeleno istaknutim ljudskim moždanim organoidom.",
+    "publishedAt": "2026-09-18"
+  },
+  {
+    "href": "/nasa-planeta/ko-krade-renoara-ako-ne-moze-da-ga-proda",
+    "category": "Naša planeta",
+    "title": "Ko krade Renoara ako ne može da ga proda?",
+    "description": "Dvojica lopova odnela su četiri Renoarove slike iz muzeja na Azurnoj obali. Dve su ubrzo pronađene, dve su nestale. Ali prava misterija nije samo gde su slike, već čemu služi krađa dela koje je gotovo nemoguće prodati.",
+    "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Renoir_-_Portrait_de_Madame_Colonna_Romano%2C_non_dat%C3%A9.jpg",
+    "imageAlt": "Pjer-Ogist Renoar, Portret gospođe Kolona Romano, jedna od dve slike koje se i dalje traže.",
+    "publishedAt": "2026-09-09"
+  },
+  {
+    "href": "/nasa-planeta/svet-ce-gotovo-izvesno-preci-granicu-od-1-5-stepeni",
+    "category": "Naša planeta",
+    "title": "Svet će gotovo izvesno preći granicu od 1,5 stepeni",
+    "description": "UNEP ocenjuje da se prekoračenje ključne granice globalnog zagrevanja više ne može realno izbeći. Pariski cilj ne nestaje, ali se menja pitanje: koliko ćemo tu granicu prekoračiti, koliko dugo ćemo iznad nje ostati i možemo li se vratiti ispod nje?",
+    "imageSrc": "/news/global-warming-1-5-degree-threshold.jpg",
+    "imageAlt": "Grafička ilustracija Zemlje koja prelazi simboličnu granicu globalnog zagrevanja",
+    "publishedAt": "2026-09-02"
+  },
+  {
+    "href": "/geopolitika/srbija-act-vasington-beograd",
+    "category": "Geopolitika",
+    "title": "SRBIJA Act: Da li Vašington menja pravila odnosa sa Beogradom?",
+    "description": "U američkom Kongresu pojavio se predlog koji bi mogao da promeni kriterijume po kojima se grade odnosi Sjedinjenih Država i Srbije. H.R. 10183, poznat kao SRBIJA Act, povezuje buduće produbljivanje saradnje sa Beogradom sa stanjem demokratije, vladavinom prava, korupcijom i javnim nabavkama, dok Srbiju istovremeno posmatra u širem kontekstu američkog strateškog nadmetanja sa Rusijom, Kinom i Iranom. Predlog je tek na početku kongresne procedure, ali je politička logika koja stoji iza njega vredna pažnje.",
+    "imageSrc": "/news/srbija-act-us-house-chamber.jpg",
+    "imageAlt": "Sala Predstavničkog doma Kongresa SAD.",
+    "publishedAt": "2026-08-28"
+  },
+  {
+    "href": "/obavestajni-izvori/retklifova-misija-u-moskvi-dobija-nove-obrise",
+    "category": "Obaveštajni izvori",
+    "title": "Retklifova misija u Moskvi dobija nove obrise",
+    "description": "Dan nakon što je potvrđena nenajavljena poseta direktora CIA Džona Retklifa Moskvi, pojavili su se prvi konkretniji podaci o njegovim razgovorima. Šef ruske Spoljne obaveštajne službe Sergej Nariškin potvrdio je da se lično sastao sa Retklifom, dok američki mediji navode da je jedna od tema bilo upozorenje Moskvi da ne pokušava eskalaciju prema članicama NATO-a. Donald Tramp takvu interpretaciju, međutim, javno odbacuje.",
+    "imageSrc": "/news/ratcliffe-moscow-red-line.jpg",
+    "imageAlt": "Grafička ilustracija tajne američke misije u Moskvi: zvaničnik prelazi crvenu liniju na aerodromskoj pisti dok se u pozadini nalazi vojni transportni avion.",
+    "publishedAt": "2026-08-27"
+  },
+  {
+    "href": "/obavestajni-izvori/direktor-cia-u-moskvi",
+    "category": "Obaveštajni izvori",
+    "title": "Direktor CIA u Moskvi",
+    "description": "Džon Retklif boravio je u nenajavljenoj poseti Moskvi i razgovarao sa predstavnicima ruskih obaveštajnih službi. Vladimir Putin nije učestvovao u sastancima, ali je, prema Kremlju, obavešten o njihovim rezultatima. Sadržaj razgovora nije objavljen, ali sama činjenica da je šef CIA stigao u rusku prestonicu predstavlja redak direktan kontakt dve sile u trenutku duboke konfrontacije zbog rata u Ukrajini.",
+    "imageSrc": "/news/john-ratcliffe-cia.jpg",
+    "imageAlt": "Direktor CIA Džon Retklif tokom sastanka u Situacionoj sobi Bele kuće.",
+    "publishedAt": "2026-08-26"
+  },
+  {
+    "href": "/geopolitika/da-li-rusija-sprema-jos-300000-vojnika-za-rat-u-ukrajini",
+    "category": "Geopolitika",
+    "title": "Da li Rusija sprema još 300.000 vojnika za rat u Ukrajini?",
+    "description": "Rat u Ukrajini mogao bi da uđe u još jednu godinu velikih vojnih operacija. Kijev tvrdi da Rusija posle septembarskih izbora za Državnu dumu namerava da mobiliše dodatnih 300.000 ljudi, dok Moskva takav plan nije potvrdila. Ako je procena tačna, brojka govori mnogo više od veličine nove mobilizacije — govori o vremenu za koje se rat planira.",
+    "imageSrc": "/news/kremlin-moscow.jpg",
+    "imageAlt": "Grafička ilustracija Moskovskog kremlja noću.",
+    "publishedAt": "2026-08-23"
+  },
+  {
+    "href": "/geopolitika/tramp-zapretio-bombardovanjem-omana-dok-istice-rok-za-sporazum-sa-iranom",
+    "category": "Geopolitika",
+    "title": "Tramp zapretio bombardovanjem Omana dok ističe rok za sporazum sa Iranom",
+    "description": "Američki predsednik Donald Tramp zapretio je vojnom akcijom protiv Omana ukoliko se ta zemlja umeša u američki spor sa Iranom oko Ormuskog moreuza. Izjava dolazi upravo na dan kada ističe rok od 60 dana za postizanje sporazuma Vašingtona i Teherana, bez naznaka da su dve strane blizu dogovora.",
+    "imageSrc": "/news/airplane-oman.jpg",
+    "imageAlt": "Američki vojni avion iznad Ormuskog moreuza, dok tanker plovi ispod planinske obale Omana.",
+    "publishedAt": "2026-08-17"
+  },
+  {
+    "href": "/srbija/pravi-test-bice-izbori-sta-promene-na-vrhu-znace-za-n1-novu-danas-i-radar",
+    "category": "Srbija",
+    "title": "Pravi test biće izbori: šta promene na vrhu znače za N1, Novu, Danas i Radar?",
+    "description": "Promene u kompanijama koje stoje iza N1, Nove, Danasa i Radara otvaraju novo poglavlje posle prodaje ovih medija portugalskom Alpac Capitalu. U zemlji u kojoj su ove redakcije godinama među najvažnijim kritičkim glasovima, pitanje više nije samo ko je njihov vlasnik, već koliko će biti slobodne onda kada njihovo izveštavanje bude najvažnije.",
+    "imageSrc": "/news/media-independence-election.jpg",
+    "imageAlt": "Prazna urednička stolica pred ekranima sa izbornim grafikama, dok se preko redakcije nadvija anonimna senka.",
+    "publishedAt": "2026-08-17"
+  },
+  {
+    "href": "/obavestajni-izvori/sta-se-to-dogadja-u-evropi-priprema-za-rat-bez-fronta",
+    "category": "Obaveštajni izvori",
+    "title": "Šta se to događa u Evropi: priprema za rat bez fronta?",
+    "description": "Poljska i baltičke države pojačavaju zaštitu elektrana, brana, gasnih skladišta i druge ključne infrastrukture. Među scenarijima koje razmatraju obaveštajne službe nalazi se i mogućnost napada čije bi poreklo bilo namerno prikriveno. Rat u Ukrajini pokazao je da u savremenom sukobu nije dovoljno odbraniti granicu — ponekad je najteže utvrditi ko ju je zapravo napao.",
+    "imageSrc": "/news/europe-war-without-front.jpg",
+    "imageAlt": "Naftna platforma na otvorenom moru kao simbol ranjivosti evropske energetske i kritične infrastrukture.",
+    "publishedAt": "2026-08-12"
+  },
+  {
+    "href": "/geopolitika/istorijska-susa-ugrozila-nuklearne-elektrane-na-dunavu-rumunija-minira-stenovite-prepreke-madjarska-gasi-reaktore",
+    "category": "Geopolitika",
+    "title": "Istorijska suša ugrozila nuklearne elektrane na Dunavu: Rumunija minira stenovite prepreke, Mađarska gasi reaktore",
+    "description": "Rekordno nizak vodostaj Dunava primorao je Rumuniju i Mađarsku na vanredne mere kako bi zaštitile rad svojih nuklearnih elektrana i očuvale stabilnost elektroenergetskih sistema.",
+    "imageSrc": "/news/danube-slankamen.jpg",
+    "imageAlt": "Panoramski pogled na Dunav kod Starog Slankamena.",
+    "publishedAt": "2026-08-03"
+  },
+  {
+    "href": "/geopolitika/zasto-je-desetine-hiljada-ljudi-krenulo-ka-spaniji-kriza-u-seuti-otvara-nova-pitanja-o-granicama-evrope",
+    "category": "Geopolitika",
+    "title": "Zašto je desetine hiljada ljudi krenulo ka Španiji? Kriza u Seuti otvara nova pitanja o granicama Evrope",
+    "description": "Posle najvećeg migrantskog talasa u novijoj istoriji Seute, Španija pooštrava kontrolu granice, dok Evropa ponovo otvara raspravu o zaštiti svojih spoljašnjih granica i migrantskoj politici.",
+    "imageSrc": "/news/ceuta-border-fence.jpg",
+    "imageAlt": "Granična ograda koja razdvaja špansku enklavu Seutu od teritorije Maroka.",
+    "publishedAt": "2026-08-01"
+  },
+  {
+    "href": "/nasa-planeta/ko-ce-ugasiti-zvezde-astronomi-upozoravaju-da-bi-17-miliona-satelita-moglo-trajno-da-promeni-nocno-nebo",
+    "category": "Naša planeta",
+    "title": "Ko će ugasiti zvezde? Astronomi upozoravaju da bi 1,7 miliona satelita moglo trajno da promeni noćno nebo",
+    "description": "Novo upozorenje astronoma ukazuje da bi planirano lansiranje čak 1,7 miliona satelita moglo trajno da izmeni izgled noćnog neba, oteža astronomska posmatranja i poveća rizik od sudara u Zemljinoj orbiti.",
+    "imageSrc": "/news/vanishing-stars.jpg",
+    "imageAlt": "Noćno nebo prošarano tragovima satelita iznad Mlečnog puta.",
+    "publishedAt": "2026-08-01"
+  },
+  {
+    "href": "/nasa-planeta/vise-od-1100-strucnjaka-iz-vodecih-ai-kompanija-trazi-usporavanje-razvoja-vestacke-inteligencije",
+    "category": "Naša planeta",
+    "title": "Više od 1.100 stručnjaka iz vodećih AI kompanija traži usporavanje razvoja veštačke inteligencije",
+    "description": "Više od 1.100 zaposlenih i istraživača iz vodećih svetskih AI kompanija upozorava da bi automatizovani razvoj veštačke inteligencije uskoro mogao da postane brži od sposobnosti ljudi i institucija da ga razumeju, nadziru i kontrolišu.",
+    "imageSrc": "/news/ai-frontier-warning.jpg",
+    "imageAlt": "Futuristički grad i digitalni prikaz ljudskog mozga kao simbol razvoja napredne veštačke inteligencije.",
+    "publishedAt": "2026-07-30"
+  },
+  {
+    "href": "/nasa-planeta/revolucija-u-borbi-protiv-raka-crispr-koji-ne-popravlja-gene-vec-unistava-celije-tumora",
+    "category": "Naša planeta",
+    "title": "Revolucija u borbi protiv raka: CRISPR koji ne popravlja gene, već uništava ćelije tumora",
+    "description": "Nova istraživanja otvaraju mogućnost da se CRISPR tehnologija koristi ne samo za ispravljanje gena već i za selektivno uništavanje obolelih ćelija. Iako je put do terapije za pacijente još dug, naučnici govore o novom pravcu u razvoju preciznijih metoda lečenja raka.",
+    "imageSrc": "/news/    crispr-cancer-therapy.jpg",
+    "imageAlt": "Mikroskopska ilustracija tumorske ćelije koju napada precizno usmerena CRISPR terapija.",
+    "publishedAt": "2026-07-29"
+  },
+  {
+    "href": "/srbija/srbija-bez-republike-moze-li-se-obnoviti-drzava-posle-cetrnaest-godina-vlasti-sns-a",
+    "category": "Srbija",
+    "title": "Srbija bez republike: može li se obnoviti država posle četrnaest godina vlasti SNS-a?",
+    "description": "Rasprava o nepoverenju Vladi Srbije samo je povod za mnogo veće pitanje: šta se dogodilo sa zemljom u kojoj Vlada više nije stvarni centar izvršne vlasti, parlament ne kontroliše mesto na kojem se odluke donose, a institucije potvrđuju političku volju oblikovanu izvan njih?",
+    "imageSrc": "/news/lost-republic.jpg",
+    "imageAlt": "Minimalistička ilustracija kupole Narodne skupštine Srbije sa dugom senkom koja simbolizuje odnos između institucija i stvarne političke moći.",
+    "publishedAt": "2026-07-28"
+  },
+  {
+    "href": "/geopolitika/nova-orbita-srpske-diplomatije-zasto-se-beograd-priblizava-vasingtonu-bas-sada",
+    "category": "Geopolitika",
+    "title": "Nova orbita srpske diplomatije: zašto se Beograd približava Vašingtonu baš sada",
+    "description": "Dok Srbija prolazi kroz jednu od najdubljih društvenih i političkih kriza u poslednjoj deceniji, Beograd i Vašington otvaraju novo poglavlje međusobnih odnosa. Pokretanje Strateškog dijaloga i pristupanje Srbije sporazumima Artemis na prvi pogled deluju kao odvojeni događaji. Međutim, zajedno posmatrani, oni otkrivaju promenu koja prevazilazi svemirsku saradnju i otvara pitanje da li Srbija ulazi u novu fazu odnosa sa Sjedinjenim Državama.",
+    "imageSrc": "/news/serbia-artemis-accords.jpg",
+    "imageAlt": "Marko Đurić i zamenik administratora NASA Matt Anderson nakon potpisivanja sporazuma Artemis u sedištu NASA u Vašingtonu.",
+    "publishedAt": "2026-07-26"
+  },
+  {
+    "href": "/nasa-planeta/planeta-ostaje-bez-daha-kiseonik-nestaje-iz-okeana-jezera-i-reka",
+    "category": "Naša planeta",
+    "title": "Planeta ostaje bez daha: kiseonik nestaje iz okeana, jezera i reka",
+    "description": "Novo međunarodno istraživanje pokazuje da količina rastvorenog kiseonika ubrzano opada u okeanima, morima, rekama i jezerima, što predstavlja jednu od najvećih pretnji vodenim ekosistemima i budućnosti života na Zemlji.",
+    "imageSrc": "/news/ocean-deep.jpg",
+    "imageAlt": "Bleached coral on the seabed beneath a thinning school of fish, symbolizing the global loss of oxygen from aquatic ecosystems.",
+    "publishedAt": "2026-07-25"
+  },
+  {
+    "href": "/geopolitika/dva-moreuza-jedan-rat-sukob-sad-i-irana-ugrozava-svetske-energetske-puteve",
+    "category": "Geopolitika",
+    "title": "Dva moreuza, jedan rat: sukob SAD i Irana ugrožava svetske energetske puteve",
+    "description": "Napad Huta na saudijske tankere u Crvenom moru otvorio je drugi front na putevima svetske nafte. Dok Iran gotovo zatvara Ormuski moreuz, njegov jemenski saveznik ugrožava Bab el Mandeb — prolaz kojim je Saudijska Arabija pokušavala da zaobiđe krizu u Persijskom zalivu.",
+    "imageSrc": "/news/hormuz-bab-el-mandeb-energy-chokepoints.jpg",
+    "imageAlt": "Grafička ilustracija dva ugrožena energetska prolaza, Ormuskog moreuza i Bab el Mandeba",
+    "publishedAt": "2026-07-23"
+  },
+  {
+    "href": "/geopolitika/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana",
+    "category": "Geopolitika",
+    "title": "Od primirja do novih udara: kako je ponovo eskalirao sukob SAD i Irana",
+    "description": "Nekoliko dana nakon novih pregovora i nagoveštaja smirivanja tenzija, Bliski istok ponovo se našao na ivici ozbiljne eskalacije, dok Ormuski moreuz postaje jedna od ključnih tačaka globalne nestabilnosti.",
+    "imageSrc": "/news/hormuz-chokepoint.jpg",
+    "imageAlt": "Ormuski moreuz, strateški pomorski prolaz između Irana i Omana",
+    "publishedAt": "2026-07-16"
+  },
+  {
+    "href": "/nasa-planeta/jedno-od-sedam-svetskih-cuda-ponovo-otkriva-svoje-tajne-aleksandrijski-svetionik-izrasta-iz-mora",
+    "category": "Naša planeta",
+    "title": "Jedno od sedam svetskih čuda ponovo otkriva svoje tajne: Aleksandrijski svetionik izranja iz mora",
+    "description": "Arheolozi su iz Sredozemnog mora izvadili monumentalne kamene blokove nekadašnjeg Aleksandrijskog svetionika, otvarajući put ka njegovoj najpreciznijoj digitalnoj rekonstrukciji do sada.",
+    "imageSrc": "/news/alexandria-lighthouse-underwater-ruins.jpg",
+    "imageAlt": "Conceptual underwater illustration inspired by the archaeological remains of the Lighthouse of Alexandria",
+    "publishedAt": "2026-07-01"
+  },
+  {
+    "href": "/nasa-planeta/pol-makartni-sa-rolingstonsima-na-novom-albumu-koji-izlazi-10-jula",
+    "category": "Naša planeta",
+    "title": "Pol Makartni sa Rolingstonsima na novom albumu koji izlazi 10. jula",
+    "description": "Više od šest decenija nakon što su Bitlsi i Rolingstonsi obeležili jednu od najuzbudljivijih epoha u istoriji popularne muzike, Pol Makartni ponovo gostuje na novom studijskom albumu slavnog britanskog benda. Njihova nova saradnja predstavlja simboličan susret dve najveće institucije rok muzike.",
+    "imageSrc": "/news/paul-mccartney-rolling-stones.jpg",
+    "imageAlt": "Ilustracija Pola Makartnija i Mika Džegera povodom nove saradnje na albumu Foreign Tongues.",
+    "publishedAt": "2026-07-01"
+  },
+  {
+    "href": "/nasa-planeta/anthropic-upozorava-da-li-razvoj-vestacke-inteligencije-postaje-brzi-od-nase-sposobnosti-da-je-kontrolisemo",
+    "category": "Naša planeta",
+    "title": "Anthropic upozorava: da li razvoj veštačke inteligencije postaje brži od naše sposobnosti da je kontrolišemo?",
+    "description": "Jedna od vodećih svetskih kompanija za razvoj veštačke inteligencije upozorava da bi napredak najmoćnijih AI sistema uskoro mogao da nadmaši postojeće bezbednosne mehanizme namenjene njihovoj kontroli.",
+    "imageSrc": "/news/ai-governance-safeguards.jpg",
+    "imageAlt": "Minimalist editorial illustration about AI governance and safety",
+    "publishedAt": "2026-06-28"
+  },
+  {
+    "href": "/nasa-planeta/hiljade-vespi-preplavile-rim-povodom-80-godina-italijanske-ikone",
+    "category": "Naša planeta",
+    "title": "Hiljade Vespi preplavile Rim povodom 80 godina italijanske ikone",
+    "description": "Više hiljada vlasnika Vespi okupilo se u istorijskom centru Rima kako bi obeležili osam decenija jednog od najprepoznatljivijih simbola italijanskog dizajna, filma i urbanog života.",
+    "imageSrc": "/news/vespa-rome-80th-anniversary.jpg",
+    "imageAlt": "Watercolor editorial illustration of the 80th anniversary Vespa parade through Rome",
+    "publishedAt": "2026-06-28"
+  },
+  {
+    "href": "/obavestajni-izvori/nemacka-menja-bnd-najveca-reforma-obavestajne-sluzbe",
+    "category": "Obaveštajni izvori",
+    "title": "Nemačka menja BND: najveća reforma obaveštajne službe u poslednjim decenijama",
+    "description": "Berlin priprema najopsežniju reformu Savezne obaveštajne službe u poslednjim decenijama, sa fokusom na sajber operacije, elektronsko izviđanje i veštačku inteligenciju.",
+    "imageSrc": "/news/germany-bnd-modernization.jpg",
+    "imageAlt": "Editorial illustration about the modernization of Germany's Federal Intelligence Service (BND)",
+    "publishedAt": "2026-06-28"
+  },
+  {
+    "href": "/geopolitika/krim-u-vanrednoj-situaciji-nakon-masovnog-napada-dronovima",
+    "category": "Geopolitika",
+    "title": "Krim u vanrednoj situaciji nakon masovnog napada dronovima: rat ulazi u novu fazu",
+    "description": "Prema pisanju međunarodnih medija, ruske vlasti koje upravljaju Krimom proglasile su vanrednu situaciju nakon jednog od najvećih talasa ukrajinskih napada dronovima od početka rata.",
+    "imageSrc": "/news/crimea-drone-attacks.jpg",
+    "imageAlt": "Minimalist editorial illustration of Crimea following large-scale drone attacks",
+    "publishedAt": "2026-06-27"
+  },
+  {
+    "href": "/geopolitika/protesti-u-pragu-zbog-finansiranja-javnog-servisa",
+    "category": "Geopolitika",
+    "title": "Hiljade građana protestovale u Pragu zbog reforme finansiranja javnog servisa",
+    "description": "Plan češke vlade da promeni model finansiranja javnih medija izazvao je proteste u Pragu, otvarajući širu evropsku raspravu o nezavisnosti javnih servisa u digitalnom dobu.",
+    "imageSrc": "/news/prague-public-media-protest.jpg",
+    "imageAlt": "Editorial illustration about public broadcasting, media independence and protests in Prague",
+    "publishedAt": "2026-06-22"
+  },
+  {
+    "href": "/geopolitika/g7-nova-geopoliticka-strategija",
+    "category": "Geopolitika",
+    "title": "G7 pokreće novu geopolitičku strategiju: manje zavisnosti od Kine, veći pritisak na Rusiju i podrška sporazumu sa Iranom",
+    "description": "Lideri najrazvijenijih zapadnih ekonomija poslali su sa samita G7 poruku da ulaze u novu fazu geopolitičkog nadmetanja — kroz smanjenje zavisnosti od kineskih sirovina, nastavak podrške Ukrajini i podršku sporazumu između SAD i Irana.",
+    "imageSrc": "/news/g7-summit-evian-2026.jpg",
+    "imageAlt": "Leaders of G7 countries during the 2026 summit in Évian, France",
+    "publishedAt": "2026-06-18"
+  },
+  {
+    "href": "/geopolitika/g7-podrzala-sporazum-sad-iran",
+    "category": "Geopolitika",
+    "title": "G7 podržala sporazum SAD i Irana: otvara li se put ka trajnoj stabilizaciji Bliskog istoka?",
+    "description": "Lideri G7 podržali su sporazum Vašingtona i Teherana kojim je zaustavljena najnovija eskalacija u Persijskom zalivu, ali ostaje neizvesno da li dogovor može prerasti u trajniju stabilizaciju Bliskog istoka.",
+    "imageSrc": "/news/g7-supports-us-iran-deal.jpg",
+    "imageAlt": "Minimalist editorial illustration of G7 support for a US-Iran agreement, with a stylized Middle East map and summit table",
+    "publishedAt": "2026-06-17"
+  },
+  {
+    "href": "/geopolitika/london-kampanja-protiv-dezinformacija",
+    "category": "Geopolitika",
+    "title": "London pokreće kampanju od 7 miliona funti protiv dezinformacija",
+    "description": "Gradske vlasti tvrde da koordinisane kampanje na društvenim mrežama narušavaju ugled britanske prestonice, zbog čega je pokrenut međunarodni program za promociju Londona i suzbijanje dezinformacija.",
+    "imageSrc": "/news/london-disinformation-campaign.jpg",
+    "imageAlt": "London skyline with digital message overlays symbolizing disinformation campaigns",
+    "publishedAt": "2026-06-17"
+  },
+  {
+    "href": "/nasa-planeta/zasto-ljudi-veruju-lazima",
+    "category": "Naša planeta",
+    "title": "Zašto ljudi veruju lažima koje žele da čuju?",
+    "description": "Nova istraživanja i psihološki modeli pokazuju da ljudi ne prihvataju informacije samo na osnovu činjenica, već i na osnovu emocija, identiteta i potrebe da potvrde ono u šta već veruju.",
+    "imageSrc": "/news/confirmation-bias-mirror.jpg",
+    "imageAlt": "Minimalist mirror illustration symbolizing confirmation bias and self-deception",
+    "publishedAt": "2026-06-17"
+  },
+  {
+    "href": "/geopolitika/madjarska-ogranicenje-mandata-orban",
+    "category": "Geopolitika",
+    "title": "Kraj jedne ere: Mađarska zatvara vrata Orbanovom povratku",
+    "description": "Mađarski parlament usvojio je ustavni amandman kojim se mandat premijera ograničava na osam godina. Odluka otvara pitanje da li se završava politička epoha Viktora Orbana ili tek počinje nova faza njegove političke borbe.",
+    "imageSrc": "/news/orban-era-end-hungary.jpg",
+    "imageAlt": "Senka Viktora Orbana ispred mađarskog parlamenta, simbol kraja jedne političke ere",
+    "publishedAt": "2026-06-16"
+  },
+  {
+    "href": "/nasa-planeta/homerova-ilijada-pronadjena-u-egipatskoj-mumiji",
+    "category": "Naša planeta",
+    "title": "Posle 2.600 godina tišine, otvorena jedna od najbolje očuvanih etrurskih grobnica",
+    "description": "Pre nego što su Rimljani zavladali Mediteranom, Italijom su dominirali Etrurci. Nova grobnica stara 2.600 godina pruža redak uvid u život civilizacije koja je oblikovala svet iz kojeg je kasnije nastao Rim.",
+    "imageSrc": "/news/etrurska-bronzana-kutija.jpg",
+    "imageAlt": "Detalj etrurske bronzane kutije za čuvanje dragocenosti iz 4. veka pre nove ere",
+    "publishedAt": "2026-06-16"
+  },
+  {
+    "href": "/geopolitika/putin-govori-o-kraju-rata-ukrajina",
+    "category": "Geopolitika",
+    "title": "Tramp poručio Putinu da je spreman da pomogne u okončanju rata u Ukrajini",
+    "description": "Posle najava o smirivanju krize sa Iranom, američki predsednik pokušava da otvori i ukrajinski front diplomatije. Ali pitanje ostaje isto: može li se o miru razgovarati bez opasnosti da Ukrajina postane predmet dogovora velikih sila?",
+    "imageSrc": "/news/tramp-zelenski-oval-office.jpg",
+    "imageAlt": "Donald Tramp i Volodimir Zelenski tokom sastanka u Ovalnoj kancelariji Bele kuće",
+    "publishedAt": "2026-06-15"
+  },
+  {
+    "href": "/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan",
+    "category": "Geopolitika",
+    "title": "SAD i Iran postigli okvirni mirovni dogovor: Ormuski moreuz ponovo se otvara za svetsku trgovinu",
+    "description": "Donald Tramp je objavio da je dogovor sa Teheranom „završen” i naredio ukidanje američke pomorske blokade. Ipak, ključna pitanja — iranski nuklearni program, sankcije i dugoročne bezbednosne garancije — ostaju otvorena.",
+    "imageSrc": "/news/ormuski-moreuz-nasa.jpg",
+    "imageAlt": "Satelitski prikaz Ormuskog moreuza između Irana, Omana i Ujedinjenih Arapskih Emirata",
+    "publishedAt": "2026-06-15"
+  },
+  {
+    "href": "/nasa-planeta/sta-kratki-video-snimci-rade-decjem-mozgu",
+    "category": "Naša planeta",
+    "title": "Šta kratki video-snimci rade dečjem mozgu? Britanci pokrenuli laboratoriju da to konačno izmere",
+    "description": "Britanski Nerve Lab koristi AI, nosivo skeniranje mozga i analizu medijskog sadržaja kako bi ispitao kako tempo, boje, zvuk i kratki video-formati utiču na dečju pažnju, razumevanje i emocionalni odgovor.",
+    "imageSrc": "/news/nerve-lab-deca-ekrani-mozak.jpg",
+    "imageAlt": "Dete osvetljeno ekranom telefona, sa apstraktnim prikazom mozga i digitalnih signala",
+    "publishedAt": "2026-06-14"
+  },
+  {
+    "href": "/geopolitika/mundijal-na-granici-fudbal-vize-i-politika-moci",
+    "category": "Geopolitika",
+    "title": "Mundijal na granici: fudbal, vize i politika moći",
+    "description": "Dok FIFA slavi najveći fudbalski spektakl na svetu, američka vizna politika, ratne tenzije i pitanje ko uopšte ima pravo da učestvuje na Svetskom prvenstvu već su postali deo turnira.",
+    "imageSrc": "/news/world-cup-visas.jpg",
+    "imageAlt": "Fudbalski stadion i kontrola granice kao simbol geopolitike Mundijala",
+    "publishedAt": "2026-06-13"
+  },
+  {
+    "href": "/geopolitika/eu-migration-rules-2026",
+    "category": "Geopolitika",
+    "title": "Nova migraciona pravila Evropske unije ulaze u primenu",
+    "description": "Novi evropski pakt menja pravila za azil, granice i deportacije",
+    "imageSrc": "/news/eu-flags.jpg",
+    "imageAlt": "Zastave Evropske unije",
+    "publishedAt": "2026-06-12"
+  },
+  {
+    "href": "/geopolitika/talibani-otvorili-vatru-na-protest-za-prava-zena",
+    "category": "Geopolitika",
+    "title": "Talibani otvorili vatru na protest za prava žena",
+    "description": "",
+    "imageSrc": "/news/afganistan-woman.jpg",
+    "imageAlt": "Protest za prava žena u Avganistanu",
+    "publishedAt": "2026-06-11"
+  },
+  {
+    "href": "/geopolitika/tramp-pokrenuo-udare-na-iran-nakon-obaranja-americkog-helikoptera",
+    "category": "Geopolitika",
+    "title": "Tramp pokrenuo udare na Iran nakon obaranja američkog helikoptera",
+    "description": "Obaranje američkog vojnog helikoptera u blizini Ormuskog moreuza pokrenulo je niz vojnih i diplomatskih poteza koji su za nekoliko dana prerasli u novu otvorenu krizu između Vašingtona i Teherana.",
+    "imageSrc": "/news/usa-iran-crisis.jpg",
+    "imageAlt": "Američki i iranski vojni sudar — kriza oko Ormuskog moreuza",
+    "publishedAt": "2026-06-10"
+  },
+  {
+    "href": "/nasa-planeta/nasa-predstavila-posadu-artemis-iii",
+    "category": "Naša planeta",
+    "title": "NASA predstavila posadu misije Artemis III",
+    "description": "Povratak ljudi na Mesec ulazi u novu fazu — NASA je zvanično objavila posadu prve misije koja bi trebalo da vrati astronaute na površinu Meseca posle više od pola veka.",
+    "imageSrc": "/news/artemis-nasa-3.jpg",
+    "imageAlt": "NASA Artemis III — posada misije koja treba da vrati ljude na Mesec",
+    "publishedAt": "2026-06-10"
+  },
+  {
+    "href": "/geopolitika/nemacka-i-francuska-odustaju-od-zajednickog-borbenog-aviona",
+    "category": "Geopolitika",
+    "title": "Nemačka i Francuska odustaju od zajedničkog borbenog aviona",
+    "description": "Program FCAS, koji je trebalo da postane simbol evropske strateške autonomije i tehnološke samostalnosti, zapao je u ozbiljnu krizu nakon višegodišnjih sporova Francuske i Nemačke oko upravljanja, industrijskog vođstva i tehnoloških prava.",
+    "imageSrc": "/news/germany-france-delayed.jpg",
+    "imageAlt": "Ilustracija evropskog borbenog aviona FCAS",
+    "publishedAt": "2026-06-09"
+  },
+  {
+    "href": "/obavestajni-izvori/evropa-preispituje-oslanjanje-na-americke-obavestajne-sluzbe",
+    "category": "Obaveštajni izvori",
+    "title": "Evropa preispituje oslanjanje na američke obaveštajne službe",
+    "description": "Evropske bezbednosne i obaveštajne službe sve otvorenije izražavaju zabrinutost zbog dugogodišnje zavisnosti od američkih obaveštajnih kapaciteta. Rat u Ukrajini i neizvesnost oko spoljnopolitičkog kursa Vašingtona pokrenuli su raspravu o jačanju evropskih obaveštajnih sposobnosti.",
+    "imageSrc": "/news/europe-independent-intelligence.jpg",
+    "imageAlt": "Ilustracija — Evropa i nezavisne obaveštajne službe",
+    "publishedAt": "2026-06-09"
+  },
+  {
+    "href": "/geopolitika/luksuzni-raj-ili-gubitak-obale",
+    "category": "Geopolitika",
+    "title": "Luksuzni raj ili gubitak obale?",
+    "description": "Veliki turistički projekat na albanskoj obali ponovo otvara pitanje kako uskladiti privlačenje investicija sa zaštitom prostora i javnog interesa.",
+    "imageSrc": "/news/albania-trump-shore.jpg",
+    "imageAlt": "Ilustracija",
+    "publishedAt": "2026-06-08"
+  },
+  {
+    "href": "/geopolitika/nova-bitka-za-iran-pocinje-u-becu",
+    "category": "Geopolitika",
+    "title": "Nova bitka za Iran počinje u Beču",
+    "description": "Dok Zapad traži veću transparentnost iranskog nuklearnog programa, Rusija i Kina upozoravaju da bi novi pritisci mogli dodatno ugroziti ionako krhke pregovore o budućnosti regiona.",
+    "imageSrc": "/news/nuclear-vienna-iran.jpg",
+    "imageAlt": "Ilustracija",
+    "publishedAt": "2026-06-07"
+  },
+  {
+    "href": "/nasa-planeta/prvi-korak-ka-svetu-bez-naslednih-bolesti",
+    "category": "Naša planeta",
+    "title": "Prvi korak ka svetu bez naslednih bolesti?",
+    "description": "Naučnici su po prvi put precizno izmenili gene u ljudskim embrionima, otvarajući mogućnost lečenja naslednih bolesti, ali i novu raspravu o granicama ljudskog mešanja u sopstvenu evoluciju.",
+    "imageSrc": "/news/embryo-edit.jpg",
+    "imageAlt": "Ilustracija",
+    "publishedAt": "2026-06-06"
+  },
+  {
+    "href": "/geopolitika/evropska-industrija-pred-novim-udarom-energetske-krize",
+    "category": "Geopolitika",
+    "title": "Evropska industrija pred novim udarom energetske krize",
+    "description": "Evropska komisija upozorava da bi rast cena energije mogao ugroziti do 1,3 miliona radnih mesta, dok rat na Bliskom istoku ponovo povećava zabrinutost za stabilnost evropske privrede.",
+    "imageSrc": "/news/workers-eu.jpg",
+    "imageAlt": "Ilustracija",
+    "publishedAt": "2026-06-04"
+  },
+  {
+    "href": "/srbija/potpuni-slom-vuciceve-medjunarodne-reputacije",
+    "category": "Srbija",
+    "title": "Potpuni slom Vučićeve međunarodne reputacije",
+    "description": "Zabrana ulaska grupi državljana Srbije u Crnu Goru otvorila je pitanje međunarodnog ugleda Aleksandra Vučića i političkog sistema koji je gradio više od decenije.",
+    "imageSrc": "/news/slom-medjunarodni.jpg",
+    "imageAlt": "Ilustracija",
+    "publishedAt": "2026-06-04"
+  },
+  {
+    "href": "/geopolitika/moskva-upozorava-putina-ratna-potrosnja-postaje-neodrziva",
+    "category": "Geopolitika",
+    "title": "Moskva upozorava Putina: ratna potrošnja postaje neodrživa",
+    "description": "Ruski finansijski zvaničnici navodno upozoravaju da troškovi rata u Ukrajini sve ozbiljnije pritiskaju budžet, dok vojni vrh traži nova sredstva i odbija smanjenje odbrambenih rashoda.",
+    "imageSrc": "/news/moscow-economy-war.jpg",
+    "imageAlt": "Ilustracija",
+    "publishedAt": "2026-06-02"
+  },
+  {
+    "href": "/nasa-planeta/nvidia-ulazi-u-globalnu-trku-za-humanoidne-robote",
+    "category": "Naša planeta",
+    "title": "Nvidia ulazi u globalnu trku za humanoidne robote",
+    "description": "Američki tehnološki gigant najavio je saradnju sa proizvođačima humanoidnih robota iz Sjedinjenih Država i Evrope, dok Kina ubrzano razvija sopstvene sisteme. Počinje nova industrijska revolucija u kojoj veštačka inteligencija dobija fizički oblik.",
+    "imageSrc": "/news/ai-humnoid.jpg",
+    "imageAlt": "Ilustracija",
+    "publishedAt": "2026-06-02"
+  },
+  {
+    "href": "/geopolitika/posle-dronova-dolaze-roboti-novo-poglavlje-rata-u-ukrajini",
+    "category": "Geopolitika",
+    "title": "Posle dronova dolaze roboti: novo poglavlje rata u Ukrajini",
+    "description": "Testiranje humanoidnih robota na ukrajinskom ratištu pokazuje da se iza današnjeg sukoba odvija mnogo šira tehnološka transformacija koja bi mogla da promeni način vođenja ratova u decenijama koje dolaze.",
+    "imageSrc": "/news/robots-ukraine.jpg",
+    "imageAlt": "Ilustracija",
+    "publishedAt": "2026-05-31"
+  },
+  {
+    "href": "/geopolitika/60-dana-bliski-istok-sad-iran-dogovor",
+    "category": "Geopolitika",
+    "title": "60 dana za Bliski istok: iza pregovora SAD i Irana krije se mnogo veći dogovor",
+    "description": "Okvirni sporazum o produženju primirja između Vašingtona i Teherana mogao bi da otvori prostor za novu rundu pregovora o iranskom nuklearnom programu, sankcijama i bezbednosti Persijskog zaliva.",
+    "imageSrc": "/news/iran-usa-new-deal.jpg",
+    "imageAlt": "Ilustracija — pregovori SAD i Irana",
+    "publishedAt": "2026-05-29"
+  },
+  {
+    "href": "/nasa-planeta/nasa-anounce",
+    "category": "Naša planeta",
+    "title": "NASA najavila nove misije ka Mesecu i plan trajne baze",
+    "description": "Američka svemirska agencija predstavila je detaljan plan izgradnje trajne baze na Mesecu, uz seriju novih posadnih misija koje bi postepeno izgradile lunarnu infrastrukturu.",
+    "imageSrc": "/news/nasa-anounce.jpg",
+    "imageAlt": "Ilustracija",
+    "publishedAt": "2026-05-28"
+  },
+  {
+    "href": "/srbija/posle-slavije-vlast-ulazi-u-fazu-politicke-nervoze",
+    "category": "Srbija",
+    "title": "Posle Slavije: vlast ulazi u fazu političke nervoze",
+    "description": "Studentski pokret pokazuje sve jasnije obrise političke artikulacije, dok vlast istovremeno pokušava da kupi vreme i spreči formiranje studentske izborne liste čiji identitet još nije poznat javnosti.",
+    "imageSrc": "/news/slavija-protest.jpg",
+    "imageAlt": "Ilustracija",
+    "publishedAt": "2026-05-26"
+  },
+  {
+    "href": "/geopolitika/evropa-trazi-novu-formulu-za-ukrajinu",
+    "category": "Geopolitika",
+    "title": "Evropa traži novu formulu za Ukrajinu",
+    "description": "Berlin predlaže model pridruženog članstva bez prava glasa, dok Evropska unija pokušava da pronađe ravnotežu između političke podrške Kijevu i straha od dubokih unutrašnjih promena.",
+    "imageSrc": "/news/mertz-ukraine.jpg",
+    "imageAlt": "Evropska unija i Ukrajina u kontekstu predloga o pridruženom članstvu",
+    "publishedAt": "2026-05-22"
+  },
+  {
+    "href": "/obavestajni-izvori/spijunske-aktivnosti-ne-jenjavaju-u-evropi",
+    "category": "Obaveštajni izvori",
+    "title": "Špijunske aktivnosti ne jenjavaju u Evropi",
+    "description": "Evropske kontraobaveštajne službe beleže kontinuiran rast stranih operacija na tlu kontinenta. Nemačka je posebno izložena kineskim i ruskim naporima usmerenim ka industrijskim tajnama, vojnoj logistici i akademskim institucijama.",
+    "imageSrc": "/news/germany-police.jpg",
+    "imageAlt": "Nemačka policija na ulicama — pojačane bezbednosne mere zbog obaveštajnih pretnji",
+    "publishedAt": "2026-05-21"
+  },
+  {
+    "href": "/geopolitika/peking-izmedju-trumpa-i-putina",
+    "category": "Geopolitika",
+    "title": "Peking između Trumpa i Putina: Kina u središtu nove velike igre",
+    "description": "Putinova poseta Pekingu, samo nekoliko dana posle Trumpovog susreta sa Sijem, pokazuje da Kina postaje mesto na kome se ukrštaju ruski, američki i kineski interesi. Moskva traži potvrdu savezništva, Vašington stabilniji odnos, a Peking pokušava da zadrži prednost razgovora sa svima.",
+    "imageSrc": "/news/putin-xi.jpg",
+    "imageAlt": "Vladimir Putin i Si Đinping u Pekingu tokom susreta",
+    "publishedAt": "2026-05-17"
+  },
+  {
+    "href": "/obavestajni-izvori/britanija-zakon-strane-proxy-mreze",
+    "category": "Obaveštajni izvori",
+    "title": "Britanija sprema zakon protiv mreža stranih država",
+    "description": "London najavljuje novo zakonodavstvo kojim bi država mogla da zabrani organizacije povezane sa špijunažom, sabotažom, nasiljem i političkim uticajem stranih režima. U fokusu su proxy mreže koje deluju za račun neprijateljskih država, posebno u kontekstu iranskih aktivnosti na britanskom tlu.",
+    "imageSrc": "/news/london-spy-law.jpg",
+    "imageAlt": "Ilustracija bezbednosnog nadzora i zakonskih mera protiv stranih mreža",
+    "publishedAt": "2026-05-15"
+  },
+  {
+    "href": "/geopolitika/brics-iran-nafta-pukotine-multipolarnog-sveta",
+    "category": "Geopolitika",
+    "title": "BRICS pred velikim testom: Iran, nafta i pukotine multipolarnog sveta",
+    "description": "Sastanak ministara spoljnih poslova BRICS-a u Indiji održava se u trenutku kada rat oko Irana, kriza nafte i podele među članicama testiraju sposobnost bloka da govori jednim glasom.",
+    "imageSrc": "/news/brics-breaking.jpg",
+    "imageAlt": "Sastanak BRICS-a i geopolitička kriza oko Irana i nafte",
+    "publishedAt": "2026-05-14"
+  },
+  {
+    "href": "/geopolitika/ormuz-deli-nato-vasington-trazi-baze",
+    "category": "Geopolitika",
+    "title": "Ormuz deli NATO: Vašington traži baze, Evropa meri cenu savezništva",
+    "description": "Kriza u Ormuskom moreuzu više nije samo sukob SAD i Irana. Ona sada testira unutrašnju čvrstinu NATO-a, spremnost evropskih saveznika da podrže američke operacije i sposobnost Zapada da zaštiti ključne energetske prolaze.",
+    "imageSrc": "/news/ormuz-nato-problems.jpg",
+    "imageAlt": "Ormuski moreuz i NATO saveznici, ilustracija geopolitičke krize",
+    "publishedAt": "2026-05-08"
+  },
+  {
+    "href": "/nasa-planeta/trump-otvorio-ufo-arhive",
+    "category": "Naša planeta",
+    "title": "Trump otvorio UFO arhive: više pitanja nego odgovora",
+    "description": "Američka administracija objavila je prvu grupu ranije poverljivih dokumenata o neidentifikovanim anomalnim pojavama. Materijal uključuje snimke, fotografije i arhivske izveštaje, ali ne donosi potvrdu da je reč o vanzemaljskoj tehnologiji.",
+    "imageSrc": "/news/ufo-files.jpg",
+    "imageAlt": "Ilustracija UFO arhiva Trumpove administracije",
+    "publishedAt": "2026-05-08"
+  },
+  {
+    "href": "/geopolitika/americke-sluzbe-iran-moze-da-izdrzi-blokadu-ormuza",
+    "category": "Geopolitika",
+    "title": "Američke službe upozoravaju: Iran može da izdrži blokadu Ormuza mesecima",
+    "description": "Procena američke obaveštajne zajednice dovodi u pitanje tvrdnje Bele kuće da je Teheran blizu sloma. Iran, prema tim procenama, i dalje raspolaže značajnim raketnim i dronovskim kapacitetima, dok se kriza oko Ormuskog moreuza sve jasnije pretvara u rat izdržljivosti.",
+    "imageSrc": "/news/washington-cia.jpg",
+    "imageAlt": "Ilustracija američke obaveštajne procene i Ormuskog moreuza",
+    "publishedAt": "2026-05-07"
+  },
+  {
+    "href": "/geopolitika/pad-vlade-u-rumuniji-proevropski-zid-nato",
+    "category": "Geopolitika",
+    "title": "Pad vlade u Rumuniji: proevropski zid puca na istočnom krilu NATO-a",
+    "description": "Vlada Ilieja Bolojana pala je posle izglasavanja nepoverenja, nakon što su socijaldemokrate napustile proevropsku koaliciju i udružile glasove sa krajnjom desnicom. Kriza u Bukureštu otvara pitanje političke stabilnosti Rumunije, evropskih fondova i čvrstine istočnog krila NATO-a.",
+    "imageSrc": "/news/romania-parliament-bucharest.jpg",
+    "imageAlt": "Palata parlamenta u Bukureštu",
+    "publishedAt": "2026-05-05"
+  },
+  {
+    "href": "/geopolitika/amerika-povlaci-vojnike-iz-nemacke-nato-nepoverenje",
+    "category": "Geopolitika",
+    "title": "Amerika povlači vojnike iz Nemačke: NATO ulazi u novu eru nepoverenja",
+    "description": "Odluka Pentagona da povuče oko 5.000 američkih vojnika iz Nemačke pokazuje da američki bezbednosni kišobran nad Evropom više nije politički bezuslovan. Sporovi između Vašingtona i evropskih prestonica sada se prelivaju na samu arhitekturu NATO saveza.",
+    "imageSrc": "/news/us-german-soldiers-germany.jpg",
+    "imageAlt": "Američki i nemački vojnici tokom zajedničke vežbe u Oberlausitzu, Nemačka",
+    "publishedAt": "2026-05-01"
+  },
+  {
+    "href": "/geopolitika/svet-na-dan-1-maj-2026",
+    "category": "Geopolitika",
+    "title": "SVET NA DAN, 1. maj: Ormuz, Ukrajina i Tajvan oblikuju novu mapu pritiska",
+    "description": "Prvi maj 2026. donosi sliku sveta u kome se energetska kriza, rat u Ukrajini i američko-kinesko nadmetanje sve brže spajaju u jednu geopolitičku celinu.",
+    "imageSrc": "/news/world-1.may.jpg",
+    "imageAlt": "Geopolitička mapa pritiska: Ormuz, Ukrajina i Tajvan",
+    "publishedAt": "2026-05-01"
+  },
+  {
+    "href": "/nasa-planeta/venecijansko-bijenale-ziri-ostavka-umetnost-granice",
+    "category": "Naša planeta",
+    "title": "Može li se zabraniti umetnost zbog države iz koje dolazi?",
+    "description": "Ostavka međunarodnog žirija Venecijanskog bijenala, nekoliko dana pre otvaranja izložbe, otvorila je pitanje koje prevazilazi jedan kulturni događaj: da li umetnost treba da ostane prostor bez granica, ili se od nje danas traži da potvrdi granice koje politika povlači.",
+    "imageSrc": "/news/venice-biennale-arsenale-2024.jpg",
+    "imageAlt": "Izložbeni prostor Arsenala tokom 60. Venecijanskog bijenala 2024.",
+    "publishedAt": "2026-05-01"
+  },
+  {
+    "href": "/obavestajni-izvori/kazakstan-spijun",
+    "category": "Obaveštajni izvori",
+    "title": "Berlin u senci špijunaže: uhapšen osumnjičeni ruski agent, meta bile informacije o Ukrajini i NATO konvojima",
+    "description": "Nemački tužioci tvrde da je državljanin Kazahstana mesecima bio u kontaktu sa ruskom obaveštajnom službom i dostavljao podatke o vojnoj pomoći Ukrajini, odbrambenoj industriji i kretanju NATO konvoja.",
+    "imageSrc": "/news/kazakstan-spy.jpg",
+    "imageAlt": "Uhapšeni osumnjičeni špijun u Berlinu, kazahstanski državljanin Sergej K",
+    "publishedAt": "2026-04-29"
+  },
+  {
+    "href": "/geopolitika/nato-pod-pritiskom-od-saveza-ravnopravnih-ka-sistemu-uslovljene-lojalnosti",
+    "category": "Geopolitika",
+    "title": "NATO pod pritiskom: od saveza ravnopravnih ka sistemu uslovljene lojalnosti",
+    "description": "U Vašingtonu se sve otvorenije razmatra diferenciranje saveznika prema političkoj i vojnoj usklađenosti sa američkim prioritetima.",
+    "imageSrc": "/news/Nato-new-relations.jpg",
+    "imageAlt": "NATO savez pod pritiskom novih uslovljavanja",
+    "publishedAt": "2026-04-23"
+  },
+  {
+    "href": "/geopolitika/novac-kao-uslov-trenutak-u-kojem-se-odlucuje-pravac-srbije",
+    "category": "Geopolitika",
+    "title": "Novac kao uslov: trenutak u kojem se odlučuje pravac Srbije",
+    "description": "Evropska unija prvi put jasno povezuje finansijsku podršku sa političkim odlukama, otvarajući pitanje daljeg kursa Srbije.",
+    "imageSrc": "/news/eu-uslov.jpg",
+    "imageAlt": "Evropska unija i finansijski uslovi za političke odluke Srbije",
+    "publishedAt": "2026-04-22"
+  },
+  {
+    "href": "/nasa-planeta/na-marsu-otkrivene-molekule-povezane-sa-poreklom-zivota",
+    "category": "Naša planeta",
+    "title": "Na Marsu otkrivene molekule povezane sa poreklom života",
+    "description": "Rover Curiosity identifikovao je kompleksne organske molekule koji otvaraju nova pitanja o mogućem nastanku života na Crvenoj planeti.",
+    "imageSrc": "/news/mars-life.jpg",
+    "imageAlt": "Površina Marsa sa tragovima organskih jedinjenja",
+    "publishedAt": "2026-04-22"
+  },
+  {
+    "href": "/geopolitika/bugarska-na-raskrsnici-rumen-radev-vodi-prema-izlaznim-anketama",
+    "category": "Geopolitika",
+    "title": "Bugarska na raskrsnici: Rumen Radev vodi prema izlaznim anketama",
+    "description": "Rezultati ukazuju na moguće pomeranje spoljnopolitičkog pravca zemlje u trenutku pojačanih tenzija između Zapada i Rusije.",
+    "imageSrc": "/news/bulgaria-elections.jpg",
+    "imageAlt": "Predsednički izbori u Bugarskoj",
+    "publishedAt": "2026-04-19"
+  },
+  {
+    "href": "/geopolitika/iran-zatvara-ormuski-moreuz-svet-ulazi-u-energetsku-neizvesnost",
+    "category": "Geopolitika",
+    "title": "Iran zatvara Ormuski moreuz: svet ulazi u energetsku neizvesnost",
+    "description": "Kontrola nad ključnim pomorskim pravcem postaje instrument političkog pritiska u trenutku globalnih tenzija.",
+    "imageSrc": "/news/closed-again.jpg",
+    "imageAlt": "Ormuski moreuz pod pojačanom vojnom kontrolom",
+    "publishedAt": "2026-04-18"
+  },
+  {
+    "href": "/geopolitika/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja",
+    "category": "Geopolitika",
+    "title": "Iran otvorio Ormuski moreuz za komercijalni saobraćaj tokom primirja",
+    "description": "Teheran je saopštio da je Ormuski moreuz otvoren za komercijalni saobraćaj tokom trajanja primirja, čime je privremeno smanjena bojazan od novog udara na globalno tržište energije.",
+    "imageSrc": "/news/open-ormuz.jpg",
+    "imageAlt": "Ormuski moreuz otvoren za komercijalni saobraćaj tokom primirja",
+    "publishedAt": "2026-04-17"
+  },
+  {
+    "href": "/geopolitika/sad-odlazu-isporuke-oruzja-evropi-zbog-rata-sa-iranom",
+    "category": "Geopolitika",
+    "title": "SAD odlažu isporuke oružja Evropi zbog rata sa Iranom",
+    "description": "Sjedinjene Američke Države odlažu deo planiranih isporuka oružja evropskim saveznicima zbog pojačanih operativnih zahteva u ratu sa Iranom, potvrđuju diplomatski i bezbednosni izvori.",
+    "imageSrc": "/news/military-cargo.jpg",
+    "imageAlt": "Vojni transport i logistika na pisti uoči isporuke opreme",
+    "publishedAt": "2026-04-17"
+  },
+  {
+    "href": "/nasa-planeta/spilberg-upozorava-holivud-publika-trazi-originalne-filmove",
+    "category": "Naša planeta",
+    "title": "Spilberg upozorava Holivud: publika traži originalne filmove",
+    "description": "Stiven Spilberg poručio je na CinemaConu da Holivud mora da preispita oslanjanje na franšize i nastavke, jer publika sve više traži originalne priče.",
+    "imageSrc": "/news/spilberg.jpg",
+    "imageAlt": "Stiven Spilberg na događaju CinemaCon",
+    "publishedAt": "2026-04-16"
+  },
+  {
+    "href": "/obavestajni-izvori/prvi-brifing",
+    "category": "Obaveštajni izvori",
+    "title": "OBAVEŠTAJNI BRIFING | 15. april 2026.",
+    "description": "Sažeti obaveštajni pregled: bezbednosni pritisci u pomorskim koridorima, digitalni nadzor i diplomatski balans u regionu Persijskog zaliva.",
+    "imageSrc": "/news/security-world.jpg",
+    "imageAlt": "OBAVEŠTAJNI BRIFING | 15. april 2026.",
+    "publishedAt": "2026-04-15"
+  },
+  {
+    "href": "/geopolitika/pomeranje-tezista-orban-evropa",
+    "category": "Geopolitika",
+    "title": "POMERANJE TEŽIŠTA: Šta poraz Orbana znači za Evropu i svet",
+    "description": "Analiza političkih i geopolitičkih posledica poraza Viktora Orbana u Mađarskoj",
+    "imageSrc": "/news/magyar.jpg",
+    "imageAlt": "Viktor Orban — poraz na izborima u Mađarskoj i geopolitičke posledice",
+    "publishedAt": "2026-04-13"
+  },
+  {
+    "href": "/geopolitika/rusija-i-ukrajina-dogovorile-privremeno-primirje-za-pravoslavni-uskrs",
+    "category": "Geopolitika",
+    "title": "Rusija i Ukrajina dogovorile privremeno primirje za pravoslavni Uskrs",
+    "description": "Rusija i Ukrajina dogovorile su privremeni prekid vatre povodom pravoslavnog Uskrsa. Primirje je vremenski ograničeno i vezano za trajanje praznika, uz obostrane rezerve o njegovom sprovođenju na terenu.",
+    "imageSrc": "/news/primirje-vaskrs.jpg",
+    "imageAlt": "Ilustracija uskršnjeg primirja u ratu između Rusije i Ukrajine.",
+    "publishedAt": "2026-04-11"
+  },
+  {
+    "href": "/nasa-planeta/artemis-ii-splashdown",
+    "category": "Naša planeta",
+    "title": "Artemis II uspešno okončan: Orion se vratio na Zemlju nakon istorijskog leta oko Meseca",
+    "description": "Kapsula sa četvoročlanom posadom bezbedno je sletela u Tihi okean, završivši prvu ljudsku misiju ka Mesecu posle više od 50 godina.",
+    "imageSrc": "/news/artemis-landing.jpg",
+    "imageAlt": "Letelica Orion tokom povratka na Zemlju — misija Artemis II",
+    "publishedAt": "2026-04-11"
+  },
+  {
+    "href": "/srbija/senke-nad-ekranom-tiho-preuzimanje-ili-kontrolisano-gasenje-istine",
+    "category": "Srbija",
+    "title": "SENKE NAD EKRANOM: Tiho preuzimanje ili kontrolisano gašenje istine",
+    "description": "Proces pritiska na nezavisne medije retko je otvoren i nagao. Mnogo češće odvija se postepeno, kroz smene, promene uređivačke politike i sužavanje prostora javne reči. Slučaj N1 otvara pitanje granica takvog procesa u savremenom društvu.",
+    "imageSrc": "/news/iscezavanje-N1.jpg",
+    "imageAlt": "Ilustracija procesa nestajanja javnog prostora kroz pritisak na medije.",
+    "publishedAt": "2026-04-11"
+  },
+  {
+    "href": "/geopolitika/harg-srce-iranskog-izvoza-nafte",
+    "category": "Geopolitika",
+    "title": "Harg – srce iranskog izvoza nafte",
+    "description": "Sjedinjene Američke Države, prema dostupnim izveštajima, izvele su udare na vojne ciljeve na ostrvu Harg, ključnom energetskom čvorištu Irana u Persijskom zalivu. Reč je o tački od izuzetnog strateškog značaja za izvoz iranske nafte i za stabilnost čitavog regiona.",
+    "imageSrc": "/news/harg-oil-terminal.jpg",
+    "imageAlt": "Naftni terminal na ostrvu Harg, jednom od najvažnijih energetskih čvorišta Irana.",
+    "publishedAt": "2026-04-07"
+  },
+  {
+    "href": "/geopolitika/rusija-kina-francuska-blokirale-rezoluciju-o-otvaranju-ormuskog-moreuza",
+    "category": "Geopolitika",
+    "title": "Rusija, Kina i Francuska blokirale rezoluciju o otvaranju Ormuskog moreuza",
+    "description": "Rusija, Kina i Francuska blokirale su u Savetu bezbednosti UN rezoluciju o ponovnom otvaranju Ormuskog moreuza, jednog od ključnih svetskih energetskih prolaza. Odluka dodatno produbljuje neizvesnost u regionu Persijskog zaliva i pojačava pritisak na globalne energetske tokove.",
+    "imageSrc": "/news/un-security-council.jpg",
+    "imageAlt": "Savet bezbednosti Ujedinjenih nacija u Njujorku, gde je blokirana rezolucija o otvaranju Ormuskog moreuza.",
+    "publishedAt": "2026-04-07"
+  },
+  {
+    "href": "/nasa-planeta/artemis-ii-fotografije-dubokog-svemira",
+    "category": "Naša planeta",
+    "title": "Fotografije iz dubokog svemira: Artemis II beleži prizore sa lunarnog preleta",
+    "description": "",
+    "publishedAt": "2026-04-07"
+  },
+  {
+    "href": "/geopolitika/kina-testira-vodonicni-avion-pocetak-nove-energetske-trke-u-avijaciji",
+    "category": "Geopolitika",
+    "title": "Kina testira vodonični avion: početak nove energetske trke u avijaciji",
+    "description": "Kina je izvela prvi uspešan test megavatnog vodoničnog turboprop motora, što ukazuje na ubrzanje globalne energetske i tehnološke trke u avijaciji.",
+    "imageSrc": "/news/hydrogen-light.jpg",
+    "imageAlt": "Vodoničnim gorivnim ćelijama pogonjen avion na poletištu tokom testiranja",
+    "publishedAt": "2026-04-06"
+  },
+  {
+    "href": "/nasa-planeta/artemis-ii-rekord-udaljenosti",
+    "category": "Naša planeta",
+    "title": "Čovečanstvo najdalje od Zemlje u istoriji: Artemis II nadmašio rekord Apola 13",
+    "description": "",
+    "publishedAt": "2026-04-06"
+  },
+  {
+    "href": "/nasa-planeta/artemis-ii-uzivo-prenos-rekord",
+    "category": "Naša planeta",
+    "title": "Uživo: Artemis II obara istorijski rekord — prenos iz dubokog svemira",
+    "description": "",
+    "publishedAt": "2026-04-06"
+  },
+  {
+    "href": "/nasa-planeta/artemis-ii-orion-polovina-puta-do-meseca",
+    "category": "Naša planeta",
+    "title": "Orion više od polovine puta do Meseca: misija Artemis II u dubokom svemiru",
+    "description": "",
+    "publishedAt": "2026-04-05"
+  },
+  {
+    "href": "/geopolitika/oboren-f15e-iran-2026",
+    "category": "Geopolitika",
+    "title": "Oboren američki F-15E iznad Irana: jedan član posade spašen, drugi nestao",
+    "description": "Incident predstavlja prvi potvrđeni slučaj obaranja američkog aviona sa posadom u aktuelnom sukobu",
+    "imageSrc": "/news/f15e-iran.jpg",
+    "imageAlt": "F-15E Strike Eagle u letu",
+    "publishedAt": "2026-04-04"
+  },
+  {
+    "href": "/nasa-planeta/breaking-nasa-artemis-ii-mesec-posle-50-godina",
+    "category": "Naša planeta",
+    "title": "🚨 BREAKING: NASA ponovo šalje ljude ka Mesecu posle više od 50 godina",
+    "description": "",
+    "publishedAt": "2026-04-02"
+  },
+  {
+    "href": "/geopolitika/inflacija-evrozona-ecb-mart",
+    "category": "Geopolitika",
+    "title": "Inflacija u evrozoni ponovo iznad cilja Evropske centralne banke",
+    "description": "Rast cena energije pogurao inflaciju na 2,5 odsto, dok monetarne vlasti razmatraju sledeće korake",
+    "imageSrc": "/news/ecb-frankfurt-inflation.jpg",
+    "imageAlt": "Sedište Evropske centralne banke u Frankfurtu, Nemačka",
+    "publishedAt": "2026-04-01"
+  },
+  {
+    "href": "/nasa-planeta/umetnost-koja-dise-teamlab-tokio",
+    "category": "Naša planeta",
+    "title": "Umetnost koja diše: izložba u Tokiju koja briše granicu između čoveka i prirode",
+    "description": "U Tokiju, u četvrti Tojosu, izložba teamLab Planets menja način na koji posmatramo umetnost, prirodu i odnos čoveka prema prostoru.",
+    "imageSrc": "/news/teamlab1.jpg",
+    "imageAlt": "Interaktivna instalacija izložbe teamLab Planets u Tokiju",
+    "publishedMonth": "2026-04"
+  },
+  {
+    "href": "/srbija/izbori-rezultati",
+    "category": "Srbija",
+    "title": "Tesne razlike i smanjenje prednosti vlasti: preliminarni rezultati u deset opština",
+    "description": "Preliminarni rezultati lokalnih izbora održanih 29. marta u deset opština u Srbiji pokazuju da je vladajuća koalicija zadržala vlast u svim sredinama, ali uz vidljivo smanjene razlike i tesne odnose snaga u više opština, pri čemu su u pojedinim slučajevima odlučivali jedan ili dva odbornička mandata.",
+    "imageSrc": "/news/izbori-rezultati.jpg",
+    "imageAlt": "Tesne razlike i smanjenje prednosti vlasti: preliminarni rezultati u deset opština",
+    "publishedAt": "2026-03-30"
+  },
+  {
+    "href": "/srbija/izbori-nepravilnosti-krivicna-odgovornost",
+    "category": "Srbija",
+    "title": "Nepravilnosti na izborima: zakon predviđa krivičnu odgovornost za manipulacije",
+    "description": "Prijavljene nepravilnosti tokom izbora u Srbiji otvaraju pitanje krivične odgovornosti za manipulacije i zloupotrebe izbornog procesa.",
+    "imageSrc": "/news/izbori-odgovornost.jpg",
+    "imageAlt": "Ilustracija biračkog mesta u Srbiji tokom izbornog dana",
+    "publishedAt": "2026-03-29"
+  },
+  {
+    "href": "/geopolitika/vens-netanjahu-iran-rat",
+    "category": "Geopolitika",
+    "title": "Vens kritikovao Netanjahua zbog procena rata sa Iranom",
+    "description": "JD Vens kritikovao Benjamina Netanjahua zbog procena rata sa Iranom, ukazujući na rastuće razlike unutar savezništva.",
+    "imageSrc": "/news/vance-netanyahu.jpg",
+    "imageAlt": "JD Vens i Benjamin Netanjahu tokom sastanka u Jerusalimu",
+    "publishedAt": "2026-03-28"
+  },
+  {
+    "href": "/geopolitika/un-istraga-skola-iran",
+    "category": "Geopolitika",
+    "title": "UN traži pravdu nakon bombardovanja škole u Iranu",
+    "description": "Ujedinjene nacije traže hitnu istragu nakon bombardovanja škole u Iranu u kojem je stradalo više od 150 civila.",
+    "imageSrc": "/news/un-investigation.jpg",
+    "imageAlt": "Zastava Ujedinjenih nacija ispred sedišta UN",
+    "publishedAt": "2026-03-27"
+  },
+  {
+    "href": "/geopolitika/orban-prekid-gas-ukrajina",
+    "category": "Geopolitika",
+    "title": "Orban najavio prekid isporuke gasa Ukrajini",
+    "description": "Mađarski premijer Viktor Orban najavio postepeni prekid isporuke gasa Ukrajini, uz nove tenzije unutar Evropske unije.",
+    "imageSrc": "/news/orban-gas.jpg",
+    "imageAlt": "Viktor Orban tokom obraćanja na sastanku Evropskog saveta",
+    "publishedAt": "2026-03-25"
+  },
+  {
+    "href": "/obavestajni-izvori/nemacka-curenje-informacija",
+    "category": "Obaveštajni izvori",
+    "title": "Nemačka ograničava pristup poverljivim podacima zbog straha od curenja",
+    "description": "Nemačka ograničava pristup poverljivim podacima zbog straha od curenja ka stranim akterima i moguće infiltracije unutar sistema.",
+    "imageSrc": "/news/germany-intelligence.jpg",
+    "imageAlt": "Poverljiva fascikla na stolu u nemačkom parlamentu",
+    "publishedAt": "2026-03-25"
+  },
+  {
+    "href": "/geopolitika/meloni-referendum-italija",
+    "category": "Geopolitika",
+    "title": "Meloni priznala poraz: Italijani odbacili reformu pravosuđa",
+    "description": "Italijani su na referendumu odbacili reformu pravosuđa, a premijerka Giorgia Meloni priznala poraz.",
+    "imageSrc": "/news/meloni-referendum.jpg",
+    "imageAlt": "Giorgia Meloni tokom obraćanja nakon referenduma o reformi pravosuđa u Italiji",
+    "publishedAt": "2026-03-24"
+  },
+  {
+    "href": "/nasa-planeta/moon-ring",
+    "category": "Naša planeta",
+    "title": "Plan iz Japana: solarni prsten oko Meseca za energiju Zemlje",
+    "description": "Japanski istraživački tim predstavio je koncept izgradnje ogromnog solarnog sistema na Mesecu, koji bi mogao neprekidno da proizvodi energiju i šalje je na Zemlju.",
+    "imageSrc": "/news/moon-ring.jpg",
+    "imageAlt": "Solarni prsten oko Meseca — japanski koncept svemirske energije",
+    "publishedAt": "2026-03-24"
+  },
+  {
+    "href": "/nasa-planeta/najtoplija-decenija-planeta-un",
+    "category": "Naša planeta",
+    "title": "UN potvrdio: planeta iza sebe ima najtopliju deceniju u istoriji merenja",
+    "description": "Svetska meteorološka organizacija Ujedinjenih nacija potvrdila je da je period od 2015. do 2025. bio najtopliji otkad se vodi moderna evidencija o temperaturama.",
+    "imageSrc": "/news/world-heat.jpg",
+    "imageAlt": "Zemlja sa tankom crvenom linijom koja simbolizuje rast globalne temperature",
+    "publishedAt": "2026-03-24"
+  },
+  {
+    "href": "/geopolitika/iran-trump-ormuski-moreuz",
+    "category": "Geopolitika",
+    "title": "Iran preti zatvaranjem Ormuskog moreuza kao odgovor na Trampov ultimatum",
+    "description": "Iran preti zatvaranjem Ormuskog moreuza kao odgovor na američki ultimatum, uz rizik globalne energetske krize.",
+    "imageSrc": "/news/trump-iran.jpg",
+    "imageAlt": "Ilustracija sukoba između Donalda Trampa i Irana sa simboličnom kapljom nafte u centru, koja predstavlja globalnu energetsku i političku napetost",
+    "publishedAt": "2026-03-23"
+  },
+  {
+    "href": "/srbija/lokalni-izbori-analiza",
+    "category": "Srbija",
+    "title": "Analiza predstojećih izbora: da li je moguć početak promena?",
+    "description": "Ovi lokalni izbori u Srbiji deluju mali samo na prvi pogled. U stvarnosti, oni jasno pokazuju kako danas izgleda politička borba u zemlji.",
+    "imageSrc": "/news/lokalni-izbori.jpg",
+    "imageAlt": "Minimalistička ilustracija glasačke kutije sa bojama srpske zastave u pozadini, simbol lokalnih izbora i političkog sistema",
+    "publishedAt": "2026-03-21"
+  },
+  {
+    "href": "/geopolitika/ormuz-moreuz",
+    "category": "Geopolitika",
+    "title": "Evropske zemlje i Japan o bezbednosti Ormuskog moreuza",
+    "description": "Evropske zemlje i Japan objavili su zajedničko saopštenje o bezbednosti Ormuskog moreuza i zaštiti pomorskih ruta za snabdevanje energentima.",
+    "imageSrc": "/news/ormuz-kriza.jpg",
+    "imageAlt": "Naftni tanker prolazi kroz uski Ormuski moreuz kao simbol globalne energetske napetosti",
+    "publishedAt": "2026-03-20"
+  },
+  {
+    "href": "/nasa-planeta/ai-superaplikacija",
+    "category": "Naša planeta",
+    "title": "OpenAI razvija „superaplikaciju“ koja objedinjuje ChatGPT, Codex i browser",
+    "description": "OpenAI razvija novu desktop superaplikaciju koja objedinjuje ChatGPT, Codex i browser u jedinstveni AI sistem.",
+    "imageSrc": "/news/ai-superapp.jpg",
+    "imageAlt": "Minimalistički prikaz veštačke inteligencije kao centralnog sistema koji povezuje digitalne funkcije računara",
+    "publishedAt": "2026-03-20"
+  },
+  {
+    "href": "/nasa-planeta/psihologija-dosada",
+    "category": "Naša planeta",
+    "title": "Otkriće psihologije: zašto je najbolja stvar koju možete da uradite da ne radite ništa",
+    "description": "Postoji jedna neobična aktivnost koju smo kao vrsta nekada redovno praktikovali, a danas je izbegavamo sa gotovo dirljivom upornošću: ne raditi ništa.",
+    "imageSrc": "/news/psihologija-dosada.jpg",
+    "imageAlt": "Čovek koji sedi u tišini i gleda u daljinu — simbol mentalne odmorenosti i dosade kao produktivnog stanja",
+    "publishedAt": "2026-03-20"
+  },
+  {
+    "href": "/geopolitika/energetski-rat",
+    "category": "Geopolitika",
+    "title": "Bliski istok ulazi u energetski rat: posle napada u Zalivu nafta skače, tržišta u panici",
+    "description": "Napadi na energetsku infrastrukturu u Zalivu podižu cenu nafte i šire krizu na Evropu.",
+    "imageSrc": "/news/nafta-kriza.jpg",
+    "imageAlt": "Minimalistička ilustracija točilice za gorivo kao simbol energetske krize na Bliskom istoku",
+    "publishedAt": "2026-03-19"
+  },
+  {
+    "href": "/nasa-planeta/mars-reka",
+    "category": "Naša planeta",
+    "title": "Na Marsu otkriveni tragovi drevne reke: nova faza u potrazi za životom",
+    "description": "NASA-in rover otkrio je nove dokaze koji ukazuju da je na površini Marsa nekada postojala reka, što dodatno menja dosadašnje razumevanje istorije Crvene planete.",
+    "imageSrc": "/news/mars-reka.jpg",
+    "imageAlt": "Površina Marsa sa tragovima drevnog rečnog korita",
+    "publishedAt": "2026-03-19"
+  },
+  {
+    "href": "/geopolitika/tanker-bez-pogona",
+    "category": "Geopolitika",
+    "title": "EVROPA U TRCI SA VREMENOM: tanker bez pogona preti ekološkom katastrofom",
+    "description": "Tanker bez pogona koji prevozi naftu nekontrolisano pluta u evropskim vodama, dok evropski lideri upozoravaju na rizik ekološke katastrofe i traže hitnu koordinisanu reakciju.",
+    "imageSrc": "/news/tanker.jpg",
+    "imageAlt": "Tanker bez pogona u evropskim vodama",
+    "publishedAt": "2026-03-18"
+  },
+  {
+    "href": "/geopolitika/zapadne-sile-upozorile-izrael",
+    "category": "Geopolitika",
+    "title": "Zapadne sile upozorile Izrael - ne pokretati kopnenu ofanzivu u Libanu",
+    "description": "Zapadne zemlje upozoravaju Izrael da ne pokreće kopnenu operaciju u Libanu, uz rastući rizik regionalne eskalacije.",
+    "imageSrc": "/news/west-against-israel.jpg",
+    "imageAlt": "Zapadne sile upozorile Izrael - kopnena ofanziva u Libanu",
+    "publishedAt": "2026-03-18"
+  },
+  {
+    "href": "/srbija/akademija-novisad",
+    "category": "Srbija",
+    "title": "Grad odlučuje, studenti na ulici: Akademiji umetnosti preti gubitak prostora",
+    "description": "Odbornici odlučuju o oduzimanju prostora Akademiji umetnosti u Novom Sadu, dok studenti i profesori protestuju i upozoravaju na posledice.",
+    "imageSrc": "/news/akademija-novisad.jpg",
+    "imageAlt": "Akademija umetnosti u Novom Sadu — studenti na ulici",
+    "publishedAt": "2026-03-18"
+  },
+  {
+    "href": "/geopolitika/svetska-kriza-sve-ozbiljnija",
+    "category": "Geopolitika",
+    "title": "SVETSKA KRIZA SVE OZBILJNIJA",
+    "description": "Zašto je Ormuski moreuz tako važan",
+    "imageSrc": "/news/brodovi-kriza.jpg",
+    "imageAlt": "Brodovi u Ormuskom moreuzu — globalna energetska kriza",
+    "publishedAt": "2026-03-16"
+  },
+  {
+    "href": "/nasa-planeta/ko-je-dobio-oskara",
+    "category": "Naša planeta",
+    "title": "Ko je dobio Oskara?",
+    "description": "Dok svet tone u ratove, razaranja i očigledan pad civilizacijskih normi, ceremonija Oskara nastavlja da blista, gotovo ravnodušna prema vremenu koje izgleda poraženo.",
+    "imageSrc": "/news/oscar-world.jpg",
+    "imageAlt": "Ceremonija dodele Oskara — 98. dodela nagrada Američke filmske akademije",
+    "publishedAt": "2026-03-16"
+  },
+  {
+    "href": "/srbija/ko-je-pucao-u-srbiju",
+    "category": "Srbija",
+    "title": "Ko je pucao u Srbiju?",
+    "description": "Događaji od 15. marta i dalje predstavljaju jedno od najtežih otvorenih pitanja savremene srpske politike, ko je i čime udario na demonstrante u centru Beograda?",
+    "imageSrc": "/news/zvucni-top.jpg",
+    "imageAlt": "Zvučni top, akustično oružje upotrebljeno na protestu u Beogradu",
+    "publishedAt": "2026-03-15"
+  },
+  {
+    "href": "/nasa-planeta/kina-mozgani-implantat",
+    "category": "Naša planeta",
+    "title": "Kina odobrila prvi moždani implantat za komercijalnu upotrebu",
+    "description": "Kineske vlasti odobrile su prvi moždani implantat namenjen komercijalnoj upotrebi, čime je napravljen značajan korak u razvoju tehnologije koja omogućava direktnu komunikaciju između ljudskog mozga i računara.",
+    "imageSrc": "/news/china-brain.jpg",
+    "imageAlt": "Kina — prvi moždani implantat za komercijalnu upotrebu",
+    "publishedAt": "2026-03-14"
+  },
+  {
+    "href": "/obavestajni-izvori/cia-pokrenula-kampanju-za-regrutovanje-kineskih-vojnih-oficira",
+    "category": "Obaveštajni izvori",
+    "title": "CIA pokrenula kampanju za regrutovanje kineskih vojnih oficira",
+    "description": "Američka obaveštajna agencija objavila video na kineskom jeziku kojim cilja potencijalne izvore unutar kineske vojske i državnog aparata",
+    "imageSrc": "/news/cia-china.jpg",
+    "imageAlt": "CIA kampanja za regrutovanje kineskih vojnih oficira",
+    "publishedAt": "2026-03-14"
+  },
+  {
+    "href": "/geopolitika/biennale-rusija",
+    "category": "Geopolitika",
+    "title": "EU preti povlačenjem finansiranja Venecijanskog bijenala zbog mogućeg povratka Rusije",
+    "description": "Evropska unija zapretila je mogućnošću povlačenja finansijske podrške Venecijanskom bijenalu ukoliko Rusiji bude dozvoljen povratak na ovu prestižnu međunarodnu umetničku manifestaciju.",
+    "imageSrc": "/news/biennale-venice.jpg",
+    "imageAlt": "Venecijansko bijenale — povratak Rusije",
+    "publishedAt": "2026-03-13"
+  },
+  {
+    "href": "/srbija/tiho-gasenje-srpskih-univerziteta-na-kosovu",
+    "category": "Srbija",
+    "title": "Tiho gašenje srpskih univerziteta na Kosovu",
+    "description": "Hiljade studenata i profesora mogle bi ostati bez univerziteta dok administrativne mere postepeno onemogućavaju rad srpskih fakulteta u Kosovskoj Mitrovici.",
+    "imageSrc": "/news/kosovo-amfiteatar.jpg",
+    "imageAlt": "Amfiteatar Univerziteta u Kosovskoj Mitrovici",
+    "publishedAt": "2026-03-13"
+  },
+  {
+    "href": "/nasa-planeta/kubrick",
+    "category": "Naša planeta",
+    "title": "Stenli Kjubrik i tajna filma koji ne stari",
+    "description": "Dok se svet ponovo okreće ceremoniji Oskara, jedan reditelj i dalje stoji izvan logike nagrada i podseća nas da film može biti umetnost mišljenja.",
+    "imageSrc": "/kubrick.jpg",
+    "imageAlt": "Stenli Kjubrik — reditelj koji je promenio film",
+    "publishedAt": "2026-03-12"
+  },
+  {
+    "href": "/geopolitika/refugees-iran-un",
+    "category": "Geopolitika",
+    "title": "Rat u Iranu pokrenuo masovno raseljavanje: UN upozorava na 3,2 miliona izbeglica",
+    "description": "Agencija UN za izbeglice upozorava da se humanitarna kriza ubrzano širi dok milioni ljudi napuštaju svoje domove.",
+    "imageSrc": "/refugees-iran-un.jpg",
+    "imageAlt": "Izbeglice iz Irana — humanitarna kriza",
+    "publishedAt": "2026-03-11"
+  },
+  {
+    "href": "/geopolitika/rezerve-nafte",
+    "category": "Geopolitika",
+    "title": "IEA pokreće najveće oslobađanje naftnih rezervi u istoriji",
+    "description": "Države članice Međunarodne agencije za energiju puštaju 400 miliona barela nafte iz strateških rezervi kako bi ublažile globalni energetski šok izazvan krizom u Persijskom zalivu.",
+    "imageSrc": "/rezerve-nafte.jpg",
+    "imageAlt": "IEA — oslobađanje strateških naftnih rezervi",
+    "publishedAt": "2026-03-11"
+  },
+  {
+    "href": "/geopolitika/sad-specijalna-operacija-iran-uranijum",
+    "category": "Geopolitika",
+    "title": "SAD razmatraju specijalnu operaciju za preuzimanje iranskog uranijuma",
+    "description": "",
+    "imageSrc": "/us-special-forces-desert.jpg",
+    "imageAlt": "Američke specijalne snage u pustinjskoj operaciji",
+    "publishedAt": "2026-03-10"
+  },
+  {
+    "href": "/nasa-planeta/ai-vest-svest",
+    "category": "Naša planeta",
+    "title": "Da li je veštačka inteligencija već svesna?",
+    "description": "Direktor kompanije Anthropic izjavio je da naučnici sve ozbiljnije razmatraju mogućnost da napredni AI sistemi razviju neku vrstu svesti.",
+    "imageSrc": "/ai-supercomputer-data-center.jpg",
+    "imageAlt": "AI supercomputer data center",
+    "publishedAt": "2026-03-10"
+  },
+  {
+    "href": "/geopolitika/francuska-odbrana-ormuza",
+    "category": "Geopolitika",
+    "title": "Evropa razmatra vojnu misiju za otvaranje Ormuskog moreuza",
+    "description": "",
+    "imageSrc": "/hormuz-strait-tankers.jpg",
+    "imageAlt": "Tankeri u Ormuskom moreuzu",
+    "publishedAt": "2026-03-09"
+  },
+  {
+    "href": "/obavestajni-izvori/kina-spy-brodovi",
+    "category": "Obaveštajni izvori",
+    "title": "Kina prati američke snage na Bliskom istoku uz pomoć AI i špijunskih brodova",
+    "description": "Nova analiza zapadnih bezbednosnih službi otkriva kineske nadzorne operacije u regionu",
+    "imageSrc": "/images/obavestajni-izvori/kina-spy-ship.jpg",
+    "imageAlt": "Kineski špijunski brod — nadzor u Persijskom zalivu",
+    "publishedAt": "2026-03-09"
+  },
+  {
+    "href": "/geopolitika/velike-sile-i-kriza-u-iranu",
+    "category": "Geopolitika",
+    "title": "Velike sile i kriza u Iranu: oprezna ravnoteža Moskve i Pekinga",
+    "description": "Između podrške Teheranu i izbegavanja velikog rata",
+    "imageSrc": "/russia-china-shadows.jpg",
+    "imageAlt": "Rusija i Kina — senke velikih sila",
+    "publishedAt": "2026-03-08"
+  },
+  {
+    "href": "/nasa-planeta/naucnici-poceli-da-usmeravaju-snove",
+    "category": "Naša planeta",
+    "title": "Naučnici počeli da usmeravaju snove: novo otkriće savremene psihologije",
+    "description": "Novo istraživanje pokazuje da je moguće uticati na sadržaj snova i podstaći mozak da tokom sna kreativnije rešava probleme.",
+    "imageSrc": "/snovi-usmeravanje-snova.jpg",
+    "imageAlt": "Naučnici usmeravaju snove — mozak tokom REM faze sna",
+    "publishedAt": "2026-03-08"
+  },
+  {
+    "href": "/srbija/selo-ne-prasta-poraz-vest",
+    "category": "Srbija",
+    "title": "Selo ne prašta poraz",
+    "description": "Blokade puteva su završene, ali poljoprivrednici odlaze sa protesta bez dogovora sa državom, što otvara ozbiljno političko pitanje u zemlji čiju stabilnost vekovima nosi selo.",
+    "imageSrc": "/traktori-beograd.jpg",
+    "imageAlt": "Kolona traktora na putu ka Beogradu",
+    "publishedAt": "2026-03-06"
+  },
+  {
+    "href": "/geopolitika/ukrajina-cetiri-godine-rata",
+    "category": "Geopolitika",
+    "title": "Četiri godine rata u Ukrajini: sankcije jačaju, evropsko jedinstvo slabi",
+    "description": "",
+    "publishedAt": "2026-02-24"
+  }
+]

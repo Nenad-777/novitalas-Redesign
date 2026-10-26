@@ -1,3 +1,4 @@
+import EditorialVideo from "@/components/EditorialVideo";
 import { useEffect, useMemo, useRef, useState, type ReactNode, type FormEvent } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Search, X } from "lucide-react";
 import { articleSearchIndex, searchArticles, type SearchArticle } from "../../../shared/articleSearch";
@@ -133,7 +134,7 @@ function Home(){
     <div className="nx-intro"><span className="nx-eyebrow">NASLOVNA</span><span className="nx-desktop-editorial-note">Glavna priča · Najnovije · Izdanja</span></div>
     <div className="nx-desktop-opening">
       <section className="nx-hero">
-        <a href={HERO.href} className="nx-hero-photo"><img src={HERO.image} alt={HERO.imageAlt} fetchPriority="high"/></a>
+        <div className="nx-hero-video"><EditorialVideo src={HERO.videoSrc} poster={HERO.image} title={HERO.imageAlt}/></div>
         <div className="nx-hero-copy"><LabelLink href={HERO.categoryHref}>{HERO.category}</LabelLink><h1><a href={HERO.href}>{HERO.title}</a></h1><p>{HERO.deck}</p><a className="nx-read" href={HERO.href}><span><ArrowRight size={21}/></span> Pročitaj priču</a></div>
       </section>
       <aside className="nx-front-desk" aria-label="Još sa naslovne strane">
