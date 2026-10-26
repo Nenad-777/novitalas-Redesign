@@ -145,7 +145,7 @@ function injectSEO(
   const gardijanImage = resolvedSeo.ogImage.endsWith("/news/gardijan-studentski-pokret-2026-10-21.png");
   const restoredFullResolutionImage = resolvedSeo.ogImage.endsWith("/news/aramco-dhahran-2026-10-23.png") || gardijanImage || resolvedSeo.ogImage.endsWith("/news/shakespeare-shadow-2026-10-20.png") || /\/news\/(?:(?:odihr|kekova)-approved-full\.webp|ko-ce-pobediti-na-izborima-2026-10-19\.png)$/.test(resolvedSeo.ogImage);
   const internationalObserversImage = resolvedSeo.ogImage.endsWith("/news/medjunarodni-posmatraci-izbori-2026-10-20.jpg");
-  if (resolvedSeo.ogImage.endsWith("/news/aramco-dhahran-2026-10-23.png") || gardijanImage || internationalObserversImage || resolvedSeo.ogImage.endsWith("/news/shakespeare-shadow-2026-10-20.png")) {
+  if (resolvedSeo.ogImage.endsWith("/news/srbija-primer-evropi-2026-10-26-og.jpg") || resolvedSeo.ogImage.endsWith("/news/aramco-dhahran-2026-10-23.png") || gardijanImage || internationalObserversImage || resolvedSeo.ogImage.endsWith("/news/shakespeare-shadow-2026-10-20.png")) {
     result = result.replace(/<meta\s+property="og:image:(?:secure_url|type|width|height|alt)"[^>]*>\s*/g, "");
   }
   const extraOgImageTags = [

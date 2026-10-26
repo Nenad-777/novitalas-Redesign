@@ -1,3 +1,4 @@
+import EditorialVideo from "./EditorialVideo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ImageCaption from "@/components/ImageCaption";
@@ -59,6 +60,7 @@ type ArticleTemplateProps = {
   imageObjectFit?: "cover" | "contain";
   imageFirst?: boolean;
   imageBeforeDeck?: boolean;
+  localVideo?: { src: string; poster: string; title: string };
   videoHero?: { youtubeId: string; title: string; credit?: string };
   paragraphs: ArticleParagraph[];
   infoBox?: InfoBox;
@@ -82,6 +84,7 @@ export default function ArticleTemplate({
   imageFirst = false,
   imageBeforeDeck = false,
   videoHero,
+  localVideo,
   paragraphs,
   infoBox,
   backHref,
@@ -134,6 +137,7 @@ export default function ArticleTemplate({
         style={{ backgroundColor: isDark ? "#101721" : "#f8f6f1" }}
       >
         <article className={embedded ? "max-w-[860px] mx-auto px-5" : "nx-reading-article max-w-[860px] mx-auto px-5"}>
+          {localVideo && <div className="mb-8"><EditorialVideo {...localVideo}/></div>}
           {/* Video hero */}
           {imageFirst && videoHero ? (
             <div className="mb-8">
@@ -151,7 +155,7 @@ export default function ArticleTemplate({
             </div>
           ) : null}
           {/* Slika pre naslova */}
-          {imageFirst && imageSrc && !videoHero ? (
+          {imageFirst && imageSrc && !videoHero && !localVideo ? (
             <div className="mb-8">
               <div
                 className="border overflow-hidden"
@@ -223,7 +227,7 @@ export default function ArticleTemplate({
           ) : null}
 
           {/* Slika odmah posle datuma, pre uvoda */}
-          {imageBeforeDeck && !imageFirst && imageSrc && !videoHero ? (
+          {imageBeforeDeck && !imageFirst && imageSrc && !videoHero && !localVideo ? (
             <figure className="mt-7 mb-7">
               <div className="border overflow-hidden" style={{ borderColor: isDark ? "#2a2a2e" : "#eee", backgroundColor: isDark ? "#1a1c22" : "#f7f7f7" }}>
                 <img src={imageSrc} alt={imageAlt} className={`w-full ${imageHeightClass} ${imageObjectFit === "contain" ? "object-contain" : "object-cover"} object-center block`} decoding="async" />
@@ -251,7 +255,7 @@ export default function ArticleTemplate({
           {imageBeforeDeck ? <ShareButton /> : null}
 
           {/* Slika */}
-          {!imageFirst && !imageBeforeDeck && imageSrc && !videoHero ? (
+          {!imageFirst && !imageBeforeDeck && imageSrc && !videoHero && !localVideo ? (
             <div className="mt-8">
               <div
                 className="border overflow-hidden"

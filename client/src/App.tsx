@@ -1,3 +1,4 @@
+import SrbijaPrimerEvropiArticle from "./pages/SrbijaPrimerEvropiArticle";
 import AramcoArticle from "./pages/AramcoArticle";
 import BecMoskvaArticle from "./pages/BecMoskvaArticle";
 import DzudiDencArticle from "./pages/DzudiDencArticle";
@@ -339,6 +340,7 @@ function Router() {
         <Route path="/nasa-planeta" component={NewTalasExperience} />
         <Route path="/kultura/klara-i-sunce-premijera-film-po-romanu-nobelovca-kazua-isigura" component={KlaraISuncePremijeraArticle} />
         <Route path="/geopolitika/francuska-se-suocava-sa-velikom-drustvenom-i-politickom-krizom" component={FranceSocialCrisisArticle} />
+        <Route path="/srbija/srbija-primer-celoj-evropi-nenasilni-protesti-doveli-do-politickog-preokreta" component={SrbijaPrimerEvropiArticle} />
         <Route path="/geopolitika/aramko-evakuise-sediste-rat-se-priblizava-srcu-svetske-naftne-industrije" component={AramcoArticle} />
         <Route path="/obavestajni-izvori/bec-proteruje-ruske-diplomate-moskva-najavljuje-odgovor" component={BecMoskvaArticle} />
         <Route path="/kultura/na-kraju-jedne-velicanstvene-karijere-dzudi-denc" component={DzudiDencArticle} />
