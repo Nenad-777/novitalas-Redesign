@@ -268,4 +268,5 @@ export const articleMeta: ArticleStaticMeta[] = [
     section: "Geopolitika",
     keywords: "Francuska, protesti, Pariz, Makron, društvena kriza, javne službe, sindikati, 17. oktobar 2026",
   },
+  {"path":"/srbija/studenti-su-pobedili-sta-sad-i-kako-dalje","title":"Studenti su pobedili. Šta sad i kako dalje?","description":"Pobeda Studentske liste otvorila je novo poglavlje u Srbiji, ali promena vlasti sama po sebi ne znači i promenu sistema. U osetljivom periodu između odlazeće i buduće vlasti, odgovornost za obnovu institucija ne može ostati samo na studentima. Ona pripada i ljudima u pravosuđu, obrazovanju, kulturi, zdravstvu, medijima i javnoj upravi.","imageSrc":"/news/kako-dalje.jpg","datePublished":"2026-10-27","author":"Novi Talas","section":"Srbija","keywords":"Srbija, studenti, izbori, tranzicija, lustracija, institucije, pravna država, odgovornost"},
 ];
