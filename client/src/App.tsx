@@ -1,3 +1,4 @@
+import StudentiStaDaljeArticle from "./pages/StudentiStaDaljeArticle";
 import OdihrPosleIzboraArticle from "./pages/OdihrPosleIzboraArticle";
 import SrbijaPrimerEvropiArticle from "./pages/SrbijaPrimerEvropiArticle";
 import AramcoArticle from "./pages/AramcoArticle";
@@ -329,6 +330,7 @@ function Router() {
       <NormalizePath />
 
       <Switch>
+        <Route path="/srbija/studenti-su-pobedili-sta-sad-i-kako-dalje" component={StudentiStaDaljeArticle} />
         <Route path="/srbija/izbori-su-zavrseni-problemi-nisu-sta-je-odihr-utvrdio-o-srbiji" component={OdihrPosleIzboraArticle} />
         <Route path="/srbija/da-li-vucic-gubi-vlast-gardijan-o-snazi-studentskog-pokreta" component={GardijanStudentskiPokretArticle} />
         <Route path="/srbija/sta-medjunarodni-posmatraci-vec-znaju-o-izborima-u-srbiji" component={MedjunarodniPosmatraciArticle} />
