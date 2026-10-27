@@ -238,6 +238,6 @@ function Edition({id}:{id:string}){
 }
 export default function NewTalasExperience(){
   const path=typeof window!=="undefined"?window.location.pathname:"/";
-  useEffect(()=>{document.title=path==="/"?"Novi Talas — Priče koje ostaju":path==="/pretraga"?"Pretraga | Novi Talas":path==="/izdanja"?"Mesečna izdanja | Novi Talas":SECTIONS.some(section=>"/"+section.slug===path)?"Rubrike | Novi Talas":"Izdanje | Novi Talas"},[path]);
+  useEffect(()=>{document.title=path==="/"?"Novi Talas — Vaš prozor u svet":path==="/pretraga"?"Pretraga | Novi Talas":path==="/izdanja"?"Mesečna izdanja | Novi Talas":SECTIONS.some(section=>"/"+section.slug===path)?"Rubrike | Novi Talas":"Izdanje | Novi Talas"},[path]);
   return <div className="nx"><MagazineHeader/>{path==="/pretraga"?<SearchLanding/>:path==="/izdanja"?<Library/>:path.startsWith("/izdanja/")?<Edition id={path.split("/")[2]}/>:SECTIONS.some(s=>"/"+s.slug===path)?<SectionLanding slug={path.slice(1)}/>:<Home/>}<MagazineFooter/></div>;
 }
