@@ -239,6 +239,8 @@ export default function ArticleTemplate({
           {/* Podeli vest (ispod uvoda kada fotografija otvara članak) */}
           {!imageBeforeDeck ? <ShareButton /> : null}
 
+          {imageBeforeDeck ? <ShareButton /> : null}
+
           {/* Lead / deck */}
           {deck ? (
             <p
@@ -251,8 +253,6 @@ export default function ArticleTemplate({
               {normalizeEmDashes(deck)}
             </p>
           ) : null}
-
-          {imageBeforeDeck ? <ShareButton /> : null}
 
           {/* Slika */}
           {!imageFirst && !imageBeforeDeck && imageSrc && !videoHero && !localVideo ? (
