@@ -323,12 +323,12 @@ main article p.nt-section-teaser--lead {
 /* Article reading typography: override the older global main article p {font-size:1em} rule. */
 @media (max-width: 767px) {
   .nx-article-layout .nx-reading-article p.nt-article-deck {
-    font-size: 16px;
-    line-height: 1.58;
+    font-size: 18px;
+    line-height: 1.7;
   }
   .nx-article-layout .nx-reading-article p.nt-article-paragraph {
-    font-size: 16px;
-    line-height: 1.68;
+    font-size: 17px;
+    line-height: 1.7;
   }
   .nx-article-layout .nx-reading-article p.nt-article-first-paragraph::first-letter {
     font-size: 52px;
