@@ -319,3 +319,27 @@ main article p.nt-section-teaser--lead {
     font-size: 18px;
   }
 }
+
+/* Article reading typography: override the older global main article p {font-size:1em} rule. */
+@media (max-width: 767px) {
+  .nx-article-layout .nx-reading-article p.nt-article-deck {
+    font-size: 16px;
+    line-height: 1.58;
+  }
+  .nx-article-layout .nx-reading-article p.nt-article-paragraph {
+    font-size: 16px;
+    line-height: 1.68;
+  }
+  .nx-article-layout .nx-reading-article p.nt-article-first-paragraph::first-letter {
+    font-size: 52px;
+  }
+  .nx-article-layout .nx-reading-article h1 {
+    font-size: clamp(29px, 7.4vw, 34px);
+    line-height: 1.12;
+  }
+}
+@media (min-width: 768px) {
+  .nx-article-layout .nx-reading-article p.nt-article-deck { font-size: 20px; line-height: 1.65; }
+  .nx-article-layout .nx-reading-article p.nt-article-paragraph { font-size: 18px; line-height: 1.75; }
+  .nx-article-layout .nx-reading-article p.nt-article-first-paragraph { font-size: 20px; }
+}
