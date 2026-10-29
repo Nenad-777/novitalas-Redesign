@@ -1,3 +1,4 @@
+import Ed138Article from "./pages/Ed138Article";
 import RepeatVoting53Article from "./pages/RepeatVoting53Article";
 import IsraelElectionArticle from "./pages/IsraelElectionArticle";
 import StudentiStaDaljeArticle from "./pages/StudentiStaDaljeArticle";
@@ -345,6 +346,7 @@ function Router() {
         <Route path="/geopolitika" component={NewTalasExperience} />
         <Route path="/srbija" component={NewTalasExperience} />
         <Route path="/obavestajni-izvori" component={NewTalasExperience} />
+        <Route path="/nasa-planeta/iza-plutona-otkriven-novi-svet" component={Ed138Article} />
         <Route path="/nasa-planeta" component={NewTalasExperience} />
         <Route path="/kultura/klara-i-sunce-premijera-film-po-romanu-nobelovca-kazua-isigura" component={KlaraISuncePremijeraArticle} />
         <Route path="/geopolitika/francuska-se-suocava-sa-velikom-drustvenom-i-politickom-krizom" component={FranceSocialCrisisArticle} />

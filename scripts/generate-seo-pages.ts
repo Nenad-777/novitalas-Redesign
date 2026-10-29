@@ -144,16 +144,17 @@ function injectSEO(
   // OG images in this project are expected to match those proportions.
   const gardijanImage = resolvedSeo.ogImage.endsWith("/news/gardijan-studentski-pokret-2026-10-21.png");
   const restoredFullResolutionImage = resolvedSeo.ogImage.endsWith("/news/aramco-dhahran-2026-10-23.png") || gardijanImage || resolvedSeo.ogImage.endsWith("/news/shakespeare-shadow-2026-10-20.png") || /\/news\/(?:(?:odihr|kekova)-approved-full\.webp|ko-ce-pobediti-na-izborima-2026-10-19\.png)$/.test(resolvedSeo.ogImage);
+  const ed138Image = resolvedSeo.ogImage.endsWith("/news/ed138-2026-10-29.webp");
   const postElectionOdihrImage = resolvedSeo.ogImage.endsWith("/news/odihr-izbori-problemi-2026-10-27.jpg");
   const internationalObserversImage = resolvedSeo.ogImage.endsWith("/news/medjunarodni-posmatraci-izbori-2026-10-20.jpg");
-  if (postElectionOdihrImage || resolvedSeo.ogImage.endsWith("/news/srbija-primer-evropi-2026-10-26-og.jpg") || resolvedSeo.ogImage.endsWith("/news/aramco-dhahran-2026-10-23.png") || gardijanImage || internationalObserversImage || resolvedSeo.ogImage.endsWith("/news/shakespeare-shadow-2026-10-20.png")) {
+  if (ed138Image || postElectionOdihrImage || resolvedSeo.ogImage.endsWith("/news/srbija-primer-evropi-2026-10-26-og.jpg") || resolvedSeo.ogImage.endsWith("/news/aramco-dhahran-2026-10-23.png") || gardijanImage || internationalObserversImage || resolvedSeo.ogImage.endsWith("/news/shakespeare-shadow-2026-10-20.png")) {
     result = result.replace(/<meta\s+property="og:image:(?:secure_url|type|width|height|alt)"[^>]*>\s*/g, "");
   }
   const extraOgImageTags = [
     `    <meta property="og:image:secure_url" content="${escapeHtml(resolvedSeo.ogImage)}" />`,
     `    <meta property="og:image:type" content="${ogImageMime}" />`,
-    `    <meta property="og:image:width" content="${postElectionOdihrImage ? 1536 : internationalObserversImage ? 1536 : restoredFullResolutionImage ? 1672 : 1200}" />`,
-    `    <meta property="og:image:height" content="${postElectionOdihrImage ? 1024 : internationalObserversImage ? 864 : restoredFullResolutionImage ? 941 : 630}" />`,
+    `    <meta property="og:image:width" content="${ed138Image ? 1672 : postElectionOdihrImage ? 1536 : internationalObserversImage ? 1536 : restoredFullResolutionImage ? 1672 : 1200}" />`,
+    `    <meta property="og:image:height" content="${ed138Image ? 941 : postElectionOdihrImage ? 1024 : internationalObserversImage ? 864 : restoredFullResolutionImage ? 941 : 630}" />`,
   ].join("\n");
 
   result = result.replace(
