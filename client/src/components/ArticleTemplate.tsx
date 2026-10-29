@@ -242,7 +242,7 @@ export default function ArticleTemplate({
           {/* Lead / deck */}
           {deck ? (
             <p
-              className="mt-6 text-[18px] md:text-[20px] leading-[1.75]"
+              className="nt-article-deck mt-6 text-[18px] md:text-[20px] leading-[1.75]"
               style={{
                 fontFamily: "'Lora', serif",
                 color: isDark ? "#cfcac0" : "#222",
@@ -284,8 +284,8 @@ export default function ArticleTemplate({
                     className={
                       idx === 0
                         ? // ✅ DROP CAP (prvo slovo velikoooo, magazinski)
-                          "text-[18px] md:text-[20px] leading-[1.75] first-letter:text-[64px] first-letter:font-bold first-letter:mr-2 first-letter:float-left first-letter:leading-[0.9]"
-                        : "mt-5 text-[17px] md:text-[18px] leading-[1.8]"
+                          "nt-article-paragraph nt-article-first-paragraph text-[18px] md:text-[20px] leading-[1.75] first-letter:text-[64px] first-letter:font-bold first-letter:mr-2 first-letter:float-left first-letter:leading-[0.9]"
+                        : "nt-article-paragraph mt-5 text-[17px] md:text-[18px] leading-[1.8]"
                     }
                     style={{
                       fontFamily: "'Lora', serif",
