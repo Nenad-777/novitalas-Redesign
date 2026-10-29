@@ -1,3 +1,4 @@
+import RepeatVoting53Article from "./pages/RepeatVoting53Article";
 import IsraelElectionArticle from "./pages/IsraelElectionArticle";
 import StudentiStaDaljeArticle from "./pages/StudentiStaDaljeArticle";
 import OdihrPosleIzboraArticle from "./pages/OdihrPosleIzboraArticle";
@@ -331,6 +332,7 @@ function Router() {
       <NormalizePath />
 
       <Switch>
+        <Route path="/srbija/izbori-se-ponavljaju-na-53-biracka-mesta-evo-sta-to-znaci" component={RepeatVoting53Article} />
         <Route path="/geopolitika/netanjahu-pred-gubitkom-vlasti-izbori-bez-pobednika" component={IsraelElectionArticle} />
         <Route path="/srbija/studenti-su-pobedili-sta-sad-i-kako-dalje" component={StudentiStaDaljeArticle} />
         <Route path="/srbija/izbori-su-zavrseni-problemi-nisu-sta-je-odihr-utvrdio-o-srbiji" component={OdihrPosleIzboraArticle} />
