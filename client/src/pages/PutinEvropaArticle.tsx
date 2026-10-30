@@ -9,7 +9,7 @@ export default function PutinEvropaArticle() {
     deck={"Ruski predsednik Vladimir Putin izjavio je da je Moskva spremna za obnovu odnosa sa evropskim državama, nakon neuobičajenog telefonskog razgovora sa liderima Finske i Norveške. Istovremeno je upozorio da bi eventualni sukob Rusije i Evrope mogao imati posledice iz kojih niko ne bi izašao kao pobednik."}
     imageSrc={"/news/putin-odnosi-evropa.jpg"}
     imageAlt={"Vladimir Putin govori na forumu Valdaj 27. oktobra 2022. godine."}
-    imageHeightClass={"h-auto aspect-video"}
+    imageHeightClass={"h-auto"}
     imageObjectFit={"contain"}
     backHref={"/geopolitika"}
     backLabel={"← Geopolitika"}
