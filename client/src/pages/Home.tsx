@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
-export const HERO_ARTICLE = {"href": "/kultura/pompeja-posle-2000-godina-otkriva-tajnu-jednog-doma", "category": "KULTURA", "title": "Pompeja posle 2.000 godina otkriva tajnu jednog doma", "description": "Arheolozi su u drevnoj Pompeji rekonstruisali sadržaj drvenog ormara koji je gotovo dva milenijuma ostao zatrpan pod vulkanskim pepelom. Među pronađenim predmetima nalaze se nakit, parfemi, novac i dečje amajlije, tragovi života prekinutog erupcijom Vezuva 79. godine.", "imageSrc": "/news/pompeja-otkrice.jpg", "imageAlt": "Panorama Pompeje sa Vezuvom u pozadini."};
+export const HERO_ARTICLE = {"href": "/geopolitika/putin-ponudio-obnovu-odnosa-sa-evropom", "category": "GEOPOLITIKA", "title": "Putin ponudio obnovu odnosa sa Evropom: „Ne želimo rat“", "description": "Ruski predsednik Vladimir Putin izjavio je da je Moskva spremna za obnovu odnosa sa evropskim državama, nakon neuobičajenog telefonskog razgovora sa liderima Finske i Norveške. Istovremeno je upozorio da bi eventualni sukob Rusije i Evrope mogao imati posledice iz kojih niko ne bi izašao kao pobednik.", "imageSrc": "/news/putin-odnosi-evropa.jpg", "imageAlt": "Vladimir Putin govori na forumu Valdaj 27. oktobra 2022. godine."};
 
 const ARTICLES = HOME_ARTICLES;
 function useFadeIn(){const ref=useRef<HTMLDivElement>(null);const[visible,setVisible]=useState(false);useEffect(()=>{const el=ref.current;if(!el)return;const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);o.unobserve(el)}},{threshold:.1});o.observe(el);return()=>o.disconnect()},[]);return{ref,visible}}
