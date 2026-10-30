@@ -1,3 +1,4 @@
+import PompejaArticle from "./pages/PompejaArticle";
 import Ed138Article from "./pages/Ed138Article";
 import RepeatVoting53Article from "./pages/RepeatVoting53Article";
 import IsraelElectionArticle from "./pages/IsraelElectionArticle";
@@ -346,6 +347,7 @@ function Router() {
         <Route path="/geopolitika" component={NewTalasExperience} />
         <Route path="/srbija" component={NewTalasExperience} />
         <Route path="/obavestajni-izvori" component={NewTalasExperience} />
+        <Route path="/kultura/pompeja-posle-2000-godina-otkriva-tajnu-jednog-doma" component={PompejaArticle} />
         <Route path="/nasa-planeta/iza-plutona-otkriven-novi-svet" component={Ed138Article} />
         <Route path="/nasa-planeta" component={NewTalasExperience} />
         <Route path="/kultura/klara-i-sunce-premijera-film-po-romanu-nobelovca-kazua-isigura" component={KlaraISuncePremijeraArticle} />

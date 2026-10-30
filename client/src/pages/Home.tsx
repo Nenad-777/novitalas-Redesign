@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
-export const HERO_ARTICLE = {"href": "/nasa-planeta/iza-plutona-otkriven-novi-svet", "category": "NAŠA PLANETA", "title": "Iza Plutona otkriven novi svet: možda je reč o još jednoj patuljastoj planeti", "description": "Astronomi su otkrili udaljeno nebesko telo čiji se prečnik procenjuje na 600 do 1.500 kilometara. Dodatna posmatranja pokazaće da li Sunčev sistem dobija još jednu zvanično priznatu patuljastu planetu.", "imageSrc": "/news/ed138-2026-10-29.webp", "imageAlt": "Umetnička ilustracija udaljenog ledenog sveta."};
+export const HERO_ARTICLE = {"href": "/kultura/pompeja-posle-2000-godina-otkriva-tajnu-jednog-doma", "category": "KULTURA", "title": "Pompeja posle 2.000 godina otkriva tajnu jednog doma", "description": "Arheolozi su u drevnoj Pompeji rekonstruisali sadržaj drvenog ormara koji je gotovo dva milenijuma ostao zatrpan pod vulkanskim pepelom. Među pronađenim predmetima nalaze se nakit, parfemi, novac i dečje amajlije, tragovi života prekinutog erupcijom Vezuva 79. godine.", "imageSrc": "/news/pompeja-otkrice.jpg", "imageAlt": "Panorama Pompeje sa Vezuvom u pozadini."};
 
 const ARTICLES = HOME_ARTICLES;
 function useFadeIn(){const ref=useRef<HTMLDivElement>(null);const[visible,setVisible]=useState(false);useEffect(()=>{const el=ref.current;if(!el)return;const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);o.unobserve(el)}},{threshold:.1});o.observe(el);return()=>o.disconnect()},[]);return{ref,visible}}
