@@ -166,7 +166,7 @@ export default function ArticleTemplate({
           ) : null}
           {/* Slika pre naslova */}
           {imageFirst && imageSrc && !videoHero && !localVideo ? (
-            <div className="mb-8">
+            <div className="mb-5">
               <div
                 className="border overflow-hidden"
                 style={{
