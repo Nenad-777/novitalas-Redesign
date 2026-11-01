@@ -1,3 +1,4 @@
+import LegacyInstagramStoryShare from "./components/LegacyInstagramStoryShare";
 import FinalElectionsArticle from "./pages/FinalElectionsArticle";
 import AltaBankaArticle from "./pages/AltaBankaArticle";
 import FrankfurtNovaGeneracijaArticle from "./pages/FrankfurtNovaGeneracijaArticle";
@@ -1103,6 +1104,7 @@ export default function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <LegacyInstagramStoryShare />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

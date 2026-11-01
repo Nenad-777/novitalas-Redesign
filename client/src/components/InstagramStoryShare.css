@@ -1,0 +1,20 @@
+.nt-instagram-trigger{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin:16px 0 8px;padding:9px 14px;border:1px solid #8b0000;background:transparent;color:#8b0000;font:600 12px/1.4 'Source Sans 3',sans-serif;letter-spacing:.04em;cursor:pointer}
+.nt-instagram-trigger.nt-instagram-dark{color:#d9bf7a;border-color:#d9bf7a}
+.nt-instagram-trigger:hover{opacity:.8}
+.nt-instagram-trigger:focus-visible,.nt-story-dialog a:focus-visible,.nt-story-dialog button:focus-visible,.nt-story-dialog input:focus-visible{outline:2px solid #841b2c;outline-offset:4px}
+.nt-story-dialog{width:min(760px,calc(100vw - 24px));max-width:760px!important;max-height:calc(100dvh - 24px);overflow:auto;background:#f8f6f1;color:#222;padding:26px;border:1px solid #d4d0c8;border-radius:6px;gap:14px}
+.nt-story-dialog.nt-instagram-dark{background:#141b24;color:#eee8dd;border-color:#4d5056}
+.nt-story-title{font:700 26px/1.2 'Playfair Display',serif;padding-right:24px}
+.nt-story-close{position:absolute;right:16px;top:16px;cursor:pointer;padding:4px}
+.nt-story-help{font:400 14px/1.6 'Source Sans 3',sans-serif;color:inherit;opacity:.85;margin:0}
+.nt-story-workspace{display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);gap:24px;align-items:start}
+.nt-story-preview{background:#eae7e1;aspect-ratio:9/16;display:grid;place-items:center;color:#333;overflow:hidden}
+.nt-story-preview img{display:block;width:100%;height:auto}
+.nt-story-preview>div{padding:24px;font:400 15px/1.6 'Source Sans 3',sans-serif}
+.nt-story-actions{display:flex;flex-direction:column;gap:12px;min-width:0}
+.nt-story-action{display:flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:10px 12px;border:1px solid currentColor;color:inherit;background:transparent;border-radius:3px;font:600 14px/1.4 'Source Sans 3',sans-serif;text-decoration:none;cursor:pointer}
+.nt-story-action:disabled{opacity:.5;cursor:wait}
+.nt-story-detail{font:400 12px/1.5 'Source Sans 3',sans-serif;opacity:.75}
+.nt-story-link{width:100%;padding:10px;background:transparent;color:inherit;border:1px solid #999;border-radius:3px;font:400 16px/1.4 'Source Sans 3',sans-serif}
+.nt-story-status{font:400 14px/1.5 'Source Sans 3',sans-serif;min-height:21px;margin:0}
+@media(max-width:560px){.nt-story-dialog{padding:22px 18px}.nt-story-workspace{grid-template-columns:1fr;gap:16px}.nt-story-preview{width:155px;margin:0 auto}.nt-story-title{font-size:23px}}
