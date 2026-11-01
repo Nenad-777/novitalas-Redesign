@@ -1,3 +1,4 @@
+import FrankfurtNovaGeneracijaArticle from "./pages/FrankfurtNovaGeneracijaArticle";
 import SestDanaSrbijaArticle from "./pages/SestDanaSrbijaArticle";
 import PutinEvropaArticle from "./pages/PutinEvropaArticle";
 import PompejaArticle from "./pages/PompejaArticle";
@@ -350,6 +351,7 @@ function Router() {
         <Route path="/srbija" component={NewTalasExperience} />
         <Route path="/obavestajni-izvori" component={NewTalasExperience} />
         <Route path="/srbija/sest-dana-koji-su-promenili-srbiju" component={SestDanaSrbijaArticle} />
+        <Route path="/geopolitika/nemacka-bunt-nove-generacije-frankfurt" component={FrankfurtNovaGeneracijaArticle} />
         <Route path="/geopolitika/putin-ponudio-obnovu-odnosa-sa-evropom" component={PutinEvropaArticle} />
         <Route path="/kultura/pompeja-posle-2000-godina-otkriva-tajnu-jednog-doma" component={PompejaArticle} />
         <Route path="/nasa-planeta/iza-plutona-otkriven-novi-svet" component={Ed138Article} />
