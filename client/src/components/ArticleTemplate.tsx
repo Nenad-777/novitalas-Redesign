@@ -146,7 +146,7 @@ export default function ArticleTemplate({
         style={{ backgroundColor: isDark ? "#101721" : "#f8f6f1" }}
       >
         <article data-story-article="true" className={embedded ? "max-w-[860px] mx-auto px-5" : "nx-reading-article max-w-[860px] mx-auto px-5"}>
-          {localVideo && <div className="mb-8"><EditorialVideo {...localVideo}/>{storyButton}</div>}
+          {localVideo && <div className="mb-8"><EditorialVideo {...localVideo}/></div>}
           {/* Video hero */}
           {imageFirst && videoHero ? (
             <div className="mb-8">
@@ -161,7 +161,7 @@ export default function ArticleTemplate({
                 />
               </div>
               {videoHero.credit ? <ImageCaption credit={videoHero.credit} /> : null}
-              {storyButton}
+              
             </div>
           ) : null}
           {/* Slika pre naslova */}
@@ -184,7 +184,7 @@ export default function ArticleTemplate({
                 />
               </div>
               <ImageCaption credit={imageCredit} />
-              {storyButton}
+              
             </div>
           ) : null}
           {/* Rubrika */}
@@ -244,16 +244,15 @@ export default function ArticleTemplate({
                 <img src={imageSrc} alt={imageAlt} className={`w-full ${imageHeightClass} ${imageObjectFit === "contain" ? "object-contain" : "object-cover"} object-center block`} decoding="async" />
               </div>
               <ImageCaption credit={imageCredit} />
-              {storyButton}
+              
             </figure>
           ) : null}
 
-          {/* Podeli vest (ispod uvoda kada fotografija otvara članak) */}
-          {!imageBeforeDeck ? <ShareButton /> : null}
-
-          {imageBeforeDeck ? <ShareButton /> : null}
-
-          {!localVideo && !(imageFirst && videoHero) && !(imageSrc && !videoHero) ? storyButton : null}
+          {/* Jedinstvena grupa za deljenje, odmah ispod naslova i datuma. */}
+          <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
+            <ShareButton />
+            {storyButton}
+          </div>
 
           {/* Lead / deck */}
           {deck ? (
@@ -286,7 +285,7 @@ export default function ArticleTemplate({
                 />
               </div>
               <ImageCaption credit={imageCredit} />
-              {storyButton}
+              
             </div>
           ) : null}
 
