@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 11538)
-Total output lines: 1112
-
 import LegacyInstagramStoryShare from "./components/LegacyInstagramStoryShare";
 import FinalElectionsArticle from "./pages/FinalElectionsArticle";
 import AltaBankaArticle from "./pages/AltaBankaArticle";
@@ -321,7 +318,233 @@ import NvidiaUlaziUGlobalnuTrkuZaHumanoidneRobote from "./pages/nvidia-ulazi-u-g
 import ArhivaFebruar2026 from "./pages/ArhivaFebruar2026";
 
 /* ✅ IZDANJE — Februar 2026 (nova, odvojena stranica) */
-import IzdanjeFebruar2026 from "./p…2538 tokens truncated…om-primirja"
+import IzdanjeFebruar2026 from "./pages/IzdanjeFebruar2026";
+
+function NormalizePath() {
+  const [location, setLocation] = useLocation();
+
+  useEffect(() => {
+    if (location === "/") return;
+    const normalized = location.replace(/\/+$/, "");
+    if (normalized !== location) {
+      setLocation(normalized, { replace: true } as any);
+    }
+  }, [location, setLocation]);
+
+  return null;
+}
+
+function Router() {
+  return (
+    <>
+      <NormalizePath />
+
+      <Switch>
+        <Route path="/srbija/alta-banka-iznosenje-novca-zastita-gradjana" component={AltaBankaArticle} />
+        <Route path="/srbija/evo-rezultata-ponovljenih-izbora-pobeda-potvrdjena" component={FinalElectionsArticle} />
+        <Route path="/srbija/izbori-se-ponavljaju-na-53-biracka-mesta-evo-sta-to-znaci" component={RepeatVoting53Article} />
+        <Route path="/geopolitika/netanjahu-pred-gubitkom-vlasti-izbori-bez-pobednika" component={IsraelElectionArticle} />
+        <Route path="/srbija/studenti-su-pobedili-sta-sad-i-kako-dalje" component={StudentiStaDaljeArticle} />
+        <Route path="/srbija/izbori-su-zavrseni-problemi-nisu-sta-je-odihr-utvrdio-o-srbiji" component={OdihrPosleIzboraArticle} />
+        <Route path="/srbija/da-li-vucic-gubi-vlast-gardijan-o-snazi-studentskog-pokreta" component={GardijanStudentskiPokretArticle} />
+        <Route path="/srbija/sta-medjunarodni-posmatraci-vec-znaju-o-izborima-u-srbiji" component={MedjunarodniPosmatraciArticle} />
+        {/* Home */}
+        <Route path="/izdanje-lab" component={OpenEditionPilot} />
+        <Route path="/magazini-lab" component={MonthlyMagazinesPilot} />
+        <Route path="/izdanja" component={NewTalasExperience} />
+        <Route path="/geopolitika" component={NewTalasExperience} />
+        <Route path="/srbija" component={NewTalasExperience} />
+        <Route path="/obavestajni-izvori" component={NewTalasExperience} />
+        <Route path="/srbija/sest-dana-koji-su-promenili-srbiju" component={SestDanaSrbijaArticle} />
+        <Route path="/geopolitika/nemacka-bunt-nove-generacije-frankfurt" component={FrankfurtNovaGeneracijaArticle} />
+        <Route path="/geopolitika/putin-ponudio-obnovu-odnosa-sa-evropom" component={PutinEvropaArticle} />
+        <Route path="/kultura/pompeja-posle-2000-godina-otkriva-tajnu-jednog-doma" component={PompejaArticle} />
+        <Route path="/nasa-planeta/iza-plutona-otkriven-novi-svet" component={Ed138Article} />
+        <Route path="/nasa-planeta" component={NewTalasExperience} />
+        <Route path="/kultura/klara-i-sunce-premijera-film-po-romanu-nobelovca-kazua-isigura" component={KlaraISuncePremijeraArticle} />
+        <Route path="/geopolitika/francuska-se-suocava-sa-velikom-drustvenom-i-politickom-krizom" component={FranceSocialCrisisArticle} />
+        <Route path="/srbija/srbija-primer-celoj-evropi-nenasilni-protesti-doveli-do-politickog-preokreta" component={SrbijaPrimerEvropiArticle} />
+        <Route path="/geopolitika/aramko-evakuise-sediste-rat-se-priblizava-srcu-svetske-naftne-industrije" component={AramcoArticle} />
+        <Route path="/obavestajni-izvori/bec-proteruje-ruske-diplomate-moskva-najavljuje-odgovor" component={BecMoskvaArticle} />
+        <Route path="/kultura/na-kraju-jedne-velicanstvene-karijere-dzudi-denc" component={DzudiDencArticle} />
+        <Route path="/kultura" component={NewTalasExperience} />
+        <Route path="/izdanja/:month" component={NewTalasExperience} />
+        <Route path="/" component={NewTalasExperience} />
+        <Route path="/srbija/vilson-upozorio-na-beloruski-scenario-svet-ce-pratiti-izbore-u-srbiji" component={WilsonCrtaElectionArticle} />
+        <Route
+          path="/geopolitika/da-li-rusija-sprema-jos-300000-vojnika-za-rat-u-ukrajini"
+          component={Russia300000TroopsArticle}
+        />
+        <Route path="/pretraga" component={NewTalasExperience} />
+
+        {/* =========================
+            GEOPOLITIKA
+           ========================= */}
+        <Route
+          path="/geopolitika/afd-menja-politicku-mapu-nemacke-ruski-gas-se-vraca-u-igru"
+          component={AfdGermanyRussianGasArticle}
+        />
+        <Route
+          path="/geopolitika/amerika-nije-dobila-grenland-dobija-ono-zbog-cega-ga-je-zelela"
+          component={GreenlandUsArcticArticle}
+        />
+        <Route
+          path="/geopolitika/da-li-se-menja-mapa-ujedinjenog-kraljevstva"
+          component={UkSelfDeterminationArticle}
+        />
+        <Route
+          path="/geopolitika/srbija-act-vasington-beograd"
+          component={SrbijaActVasingtonBeograd}
+        />
+        <Route
+          path="/geopolitika/srbija-act-stigao-i-u-senat-wilson-podrzao-inicijativu-i-ponovo-otvorio-pitanje-izbora-u-srbiji"
+          component={SrbijaActSenateArticle}
+        />
+        <Route
+          path="/geopolitika/pred-razgovore-trampa-i-sija-amerika-ostaje-zavisna-od-kineskih-kriticnih-minerala"
+          component={TrumpXiCriticalMineralsArticle}
+        />
+        <Route
+          path="/srbija/vazno-za-gradjane-srbije-u-inostranstvu-rok-za-prijavu-za-glasanje-istice-3-oktobra-u-ponoc"
+          component={DijasporaGlasanjeArticle}
+        />
+        <Route
+          path="/geopolitika/tramp-zapretio-bombardovanjem-omana-dok-istice-rok-za-sporazum-sa-iranom"
+          component={TrumpOmanThreatArticle}
+        />
+
+        <Route
+          path="/geopolitika/istorijska-susa-ugrozila-nuklearne-elektrane-na-dunavu-rumunija-minira-stenovite-prepreke-madjarska-gasi-reaktore"
+          component={DanubeNuclearCrisisArticle}
+        />
+        <Route
+          path="/geopolitika/zasto-je-desetine-hiljada-ljudi-krenulo-ka-spaniji-kriza-u-seuti-otvara-nova-pitanja-o-granicama-evrope"
+          component={CeutaMigrationCrisisArticle}
+        />
+        <Route
+          path="/geopolitika/od-primirja-do-novih-udara-kako-je-ponovo-eskalirao-sukob-sad-i-irana"
+          component={OdPrimirjaDoNovihUdaraSadIran}
+        />
+        <Route
+          path="/geopolitika/mundijal-na-granici-fudbal-vize-i-politika-moci"
+          component={MundijalNaGraniciFudbalVizeIPolitikaMoci}
+        />
+        <Route
+          path="/geopolitika/sad-i-iran-blizu-sporazuma-pakistan-tvrdi-da-je-tekst-dogovoren-teheran-jos-oprezan"
+          component={
+            SadIIranBlizuSporazumaPakistanTvrdiDaJeTekstDogovorenTeheranJosOprezan
+          }
+        />
+        <Route
+          path="/geopolitika/eu-migration-rules-2026"
+          component={EuMigrationRules2026}
+        />
+        <Route
+          path="/geopolitika/luksuzni-raj-ili-gubitak-obale"
+          component={LuksuzniRajIliGubitakObale}
+        />
+        <Route
+          path="/geopolitika/tramp-pokrenuo-udare-na-iran-nakon-obaranja-americkog-helikoptera"
+          component={TrampPokrenioUdareNaIran}
+        />
+        <Route
+          path="/geopolitika/nova-bitka-za-iran-pocinje-u-becu"
+          component={NovaBitkaZaIranPocinjeUBecu}
+        />
+        <Route
+          path="/geopolitika/talibani-otvorili-vatru-na-protest-za-prava-zena"
+          component={TalibaniOtvoriliVatruNaProtestZaPravaZena}
+        />
+        <Route
+          path="/geopolitika/posle-dronova-dolaze-roboti-novo-poglavlje-rata-u-ukrajini"
+          component={PosleDronovaDolazeRoboti}
+        />
+        <Route
+          path="/geopolitika/moskva-upozorava-putina-ratna-potrosnja-postaje-neodrziva"
+          component={MoskvaUpozoravaPutinaRatnaPotrosnjaPostajeNeodrziva}
+        />
+        <Route
+          path="/geopolitika/evropska-industrija-pred-novim-udarom-energetske-krize"
+          component={EvropskaIndustrijaPredNovimUdaromEnergetskeKrize}
+        />
+
+        <Route
+          path="/geopolitika/60-dana-bliski-istok-sad-iran-dogovor"
+          component={SezdestDanaBlizkiIstokSadIranDogovor}
+        />
+
+        <Route
+          path="/geopolitika/brics-iran-nafta-pukotine-multipolarnog-sveta"
+          component={BricsIranNaftaPukotineMultipolarnogSveta}
+        />
+
+        <Route
+          path="/geopolitika/peking-izmedju-trumpa-i-putina"
+          component={PekingIzmedjuTrumpaIPutina}
+        />
+
+        <Route
+          path="/geopolitika/evropa-trazi-novu-formulu-za-ukrajinu"
+          component={EvropaTraziNovuFormuluZaUkrajinu}
+        />
+
+        <Route
+          path="/geopolitika/putin-govori-o-kraju-rata-ukrajina"
+          component={PutinGovoriOKrajuRataUkrajina}
+        />
+
+        <Route
+          path="/geopolitika/ormuz-deli-nato-vasington-trazi-baze"
+          component={OrmuzDeliNatoVasingtonTraziBaze}
+        />
+
+        <Route
+          path="/geopolitika/americke-sluzbe-iran-moze-da-izdrzi-blokadu-ormuza"
+          component={AmerickeSluzbeIranMozeDaIzdrziBlokaduOrmuza}
+        />
+
+        <Route
+          path="/geopolitika/pad-vlade-u-rumuniji-proevropski-zid-nato"
+          component={PadVladeURumuniji}
+        />
+
+        <Route
+          path="/geopolitika/amerika-povlaci-vojnike-iz-nemacke-nato-nepoverenje"
+          component={AmerikaPovlaciVojnikeIzNemacke}
+        />
+
+        <Route
+          path="/geopolitika/nemacka-i-francuska-odustaju-od-zajednickog-borbenog-aviona"
+          component={NemackaIFrancuskaOdustajuOdZajednickogBorbenogAviona}
+        />
+
+        <Route
+          path="/geopolitika/svet-na-dan-1-maj-2026"
+          component={SvetNaDan1Maj2026}
+        />
+
+        <Route
+          path="/geopolitika/nato-pod-pritiskom-od-saveza-ravnopravnih-ka-sistemu-uslovljene-lojalnosti"
+          component={NatoPodPritiskom}
+        />
+
+        <Route
+          path="/geopolitika/iran-zatvara-ormuski-moreuz-svet-ulazi-u-energetsku-neizvesnost"
+          component={IranZatvaraOrmuskiMoreuzSvetUlaziUEnergetskuNeizvesnost}
+        />
+
+        <Route
+          path="/geopolitika/bugarska-na-raskrsnici-rumen-radev-vodi-prema-izlaznim-anketama"
+          component={BugarskaNaRaskrsniciRumenRadevVodiPremaIzlaznimAnketama}
+        />
+
+        <Route
+          path="/geopolitika/novac-kao-uslov-trenutak-u-kojem-se-odlucuje-pravac-srbije"
+          component={NovacKaoUslovTrenutakUKojemSeOdlucujePravacSrbije}
+        />
+
+        <Route
+          path="/geopolitika/iran-otvorio-hormuski-moreuz-za-komercijalni-saobracaj-tokom-primirja"
           component={
             IranOtvorioHormuskiMoreuzZaKomercijalniSaobracajTokomPrimirja
           }
