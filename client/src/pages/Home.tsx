@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
-export const HERO_ARTICLE = {"href": "/geopolitika/nemacka-bunt-nove-generacije-frankfurt", "category": "GEOPOLITIKA", "title": "Nemačka pred buntom nove generacije: Šta se dogodilo u Frankfurtu?", "description": "Desetine hiljada mladih demonstrirale su širom Nemačke zahtevajući bolje obrazovanje, pristupačniji život i promene državnih prioriteta. Protesti su uglavnom protekli mirno, ali su u Frankfurtu izbili ozbiljni neredi, praćeni pljačkom prodavnica i sukobima sa policijom. Novi talas generacijskog nezadovoljstva otvorio je pitanje koliko evropske vlasti razumeju probleme mladih.", "imageSrc": "/news/frankfurt-nova-generacija.jpg", "imageAlt": "Crveno-crna urednička ilustracija podignutih pesnica ispred panorame Frankfurta, kao simbol protesta nove generacije u Nemačkoj."};
+export const HERO_ARTICLE = {"href":"/srbija/alta-banka-iznosenje-novca-zastita-gradjana","category":"SRBIJA · ISTRAŽIVANJE I ANALIZA","title":"ALTA banka: Ko je iznosio novac iz Srbije i ko će zaštititi građane?","description":"Tužilaštvo proverava transfere ALTA banke u inostranstvo. Šta se događa sa novcem građana, ruskih emigranata, zaposlenih i javnih preduzeća?","imageSrc":"/alta-national.jpg","imageAlt":"Simbolična ilustracija praznog bankarskog sefa."};
 
 const ARTICLES = HOME_ARTICLES;
 function useFadeIn(){const ref=useRef<HTMLDivElement>(null);const[visible,setVisible]=useState(false);useEffect(()=>{const el=ref.current;if(!el)return;const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);o.unobserve(el)}},{threshold:.1});o.observe(el);return()=>o.disconnect()},[]);return{ref,visible}}
