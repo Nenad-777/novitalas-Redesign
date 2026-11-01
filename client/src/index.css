@@ -320,16 +320,21 @@ main article p.nt-section-teaser--lead {
   }
 }
 
-/* Article reading typography: override the older global main article p {font-size:1em} rule. */
+/* Keep article text consistent with the September reading standard.
+   Include both plain and rich paragraphs, also inside monthly editions. */
+main article p.nt-article-deck,
+main article p.nt-article-paragraph {
+  font-size: 19px;
+  line-height: 1.8;
+}
+@media (min-width: 768px) {
+  main article p.nt-article-deck,
+  main article p.nt-article-paragraph {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+}
 @media (max-width: 767px) {
-  .nx-article-layout .nx-reading-article p.nt-article-deck {
-    font-size: 18px;
-    line-height: 1.7;
-  }
-  .nx-article-layout .nx-reading-article p.nt-article-paragraph {
-    font-size: 17px;
-    line-height: 1.7;
-  }
   .nx-article-layout .nx-reading-article p.nt-article-first-paragraph::first-letter {
     font-size: 52px;
   }
@@ -337,9 +342,4 @@ main article p.nt-section-teaser--lead {
     font-size: clamp(29px, 7.4vw, 34px);
     line-height: 1.12;
   }
-}
-@media (min-width: 768px) {
-  .nx-article-layout .nx-reading-article p.nt-article-deck { font-size: 20px; line-height: 1.65; }
-  .nx-article-layout .nx-reading-article p.nt-article-paragraph { font-size: 18px; line-height: 1.75; }
-  .nx-article-layout .nx-reading-article p.nt-article-first-paragraph { font-size: 20px; }
 }
