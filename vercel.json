@@ -25,6 +25,10 @@
   ],
   "rewrites": [
     {
+      "source": "/api/story-image",
+      "destination": "/api/story-image"
+    },
+    {
       "source": "/share/(.*)",
       "destination": "/share/$1"
     },

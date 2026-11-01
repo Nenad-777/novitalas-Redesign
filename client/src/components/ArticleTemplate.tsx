@@ -1,3 +1,4 @@
+import InstagramStoryShare from "./InstagramStoryShare";
 import EditorialVideo from "./EditorialVideo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -5,7 +6,7 @@ import ImageCaption from "@/components/ImageCaption";
 import ShareButton from "@/components/ShareButton";
 import SeoMeta from "@/components/SeoMeta";
 import { useTheme } from "@/contexts/ThemeContext";
-import { useContext, useEffect, useRef, type ReactNode } from "react";
+import { Children, isValidElement, useContext, useEffect, useRef, type ReactNode } from "react";
 import { EditionEmbedContext } from "@/contexts/EditionEmbedContext";
 
 type ArticleInlineImage = {
@@ -31,6 +32,10 @@ type ArticleParagraph =
   | ArticleInlineImage
   | ArticleSectionHeading
   | ArticleRichParagraph;
+
+function creditText(node: ReactNode): string {
+  return Children.toArray(node).map(child => typeof child === "string" || typeof child === "number" ? String(child) : isValidElement<{children?: ReactNode}>(child) ? creditText(child.props.children) : "").join("");
+}
 
 const EM_DASH_REPLACEMENT = ",";
 
@@ -93,6 +98,10 @@ export default function ArticleTemplate({
   const { theme } = useTheme();
   const embedded = useContext(EditionEmbedContext);
   const isDark = theme === "dark";
+  const story = { title, section: sectionLabel, path: path || window.location.pathname,
+    imageSrc: imageSrc || localVideo?.poster,
+    credit: creditText(imageCredit) || videoHero?.credit };
+  const storyButton = <InstagramStoryShare article={story} />;
   const progressRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (embedded) return;
@@ -136,8 +145,8 @@ export default function ArticleTemplate({
         className={embedded ? "py-12 md:py-16 flex-1" : "nx-article-main py-12 md:py-16 flex-1"}
         style={{ backgroundColor: isDark ? "#101721" : "#f8f6f1" }}
       >
-        <article className={embedded ? "max-w-[860px] mx-auto px-5" : "nx-reading-article max-w-[860px] mx-auto px-5"}>
-          {localVideo && <div className="mb-8"><EditorialVideo {...localVideo}/></div>}
+        <article data-story-article="true" className={embedded ? "max-w-[860px] mx-auto px-5" : "nx-reading-article max-w-[860px] mx-auto px-5"}>
+          {localVideo && <div className="mb-8"><EditorialVideo {...localVideo}/>{storyButton}</div>}
           {/* Video hero */}
           {imageFirst && videoHero ? (
             <div className="mb-8">
@@ -152,6 +161,7 @@ export default function ArticleTemplate({
                 />
               </div>
               {videoHero.credit ? <ImageCaption credit={videoHero.credit} /> : null}
+              {storyButton}
             </div>
           ) : null}
           {/* Slika pre naslova */}
@@ -174,6 +184,7 @@ export default function ArticleTemplate({
                 />
               </div>
               <ImageCaption credit={imageCredit} />
+              {storyButton}
             </div>
           ) : null}
           {/* Rubrika */}
@@ -233,6 +244,7 @@ export default function ArticleTemplate({
                 <img src={imageSrc} alt={imageAlt} className={`w-full ${imageHeightClass} ${imageObjectFit === "contain" ? "object-contain" : "object-cover"} object-center block`} decoding="async" />
               </div>
               <ImageCaption credit={imageCredit} />
+              {storyButton}
             </figure>
           ) : null}
 
@@ -240,6 +252,8 @@ export default function ArticleTemplate({
           {!imageBeforeDeck ? <ShareButton /> : null}
 
           {imageBeforeDeck ? <ShareButton /> : null}
+
+          {!localVideo && !(imageFirst && videoHero) && !(imageSrc && !videoHero) ? storyButton : null}
 
           {/* Lead / deck */}
           {deck ? (
@@ -272,6 +286,7 @@ export default function ArticleTemplate({
                 />
               </div>
               <ImageCaption credit={imageCredit} />
+              {storyButton}
             </div>
           ) : null}
 
