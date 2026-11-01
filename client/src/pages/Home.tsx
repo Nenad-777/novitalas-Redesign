@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
-export const HERO_ARTICLE = {"href":"/srbija/alta-banka-iznosenje-novca-zastita-gradjana","category":"SRBIJA · ISTRAŽIVANJE I ANALIZA","title":"ALTA banka: Ko je iznosio novac iz Srbije i ko će zaštititi građane?","description":"Tužilaštvo proverava transfere ALTA banke u inostranstvo. Šta se događa sa novcem građana, ruskih emigranata, zaposlenih i javnih preduzeća?","imageSrc":"/alta-national.jpg","imageAlt":"Simbolična ilustracija praznog bankarskog sefa."};
+export const HERO_ARTICLE = {"href":"/srbija/evo-rezultata-ponovljenih-izbora-pobeda-potvrdjena","category":"SRBIJA · IZBORI 2026","title":"Evo rezultata ponovljenih izbora: Pobeda potvrđena!","description":"Ponovljeno glasanje nije promenilo ishod izbora. Studentska lista, prema preliminarnim rezultatima, zadržala je oko 53 odsto glasova i projektovanih 140 mandata.","imageSrc":"/news/final-elections.jpg","imageAlt":"Urednička ilustracija glasačke kutije u zlatnoj svetlosti."};
 
 const ARTICLES = HOME_ARTICLES;
 function useFadeIn(){const ref=useRef<HTMLDivElement>(null);const[visible,setVisible]=useState(false);useEffect(()=>{const el=ref.current;if(!el)return;const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);o.unobserve(el)}},{threshold:.1});o.observe(el);return()=>o.disconnect()},[]);return{ref,visible}}
