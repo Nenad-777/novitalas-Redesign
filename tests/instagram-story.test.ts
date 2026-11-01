@@ -36,7 +36,7 @@ test('image endpoint rejects arbitrary URLs and non-GET requests before fetch', 
     const post=response();await handler({method:'POST',query:{}},post);assert.equal(post.code,405);
   } finally {globalThis.fetch=old;}
 });
-const entry = Object.entries(articleMeta).map(([path,m])=>({path,src:m.imageSrc})).concat(Object.entries(seoData).map(([path,m])=>({path,src:m.ogImage}))).find(m=>m.src.startsWith('https://upload.wikimedia.org/'))!;
+const entry = articleMeta.map(m=>({path:m.path,src:m.imageSrc})).concat(Object.entries(seoData).map(([path,m])=>({path,src:m.ogImage}))).find(m=>m.src.startsWith('https://upload.wikimedia.org/'))!;
 test('registered image returned with correct type; redirects cannot reach private networks', async()=>{
   assert(entry); const old=globalThis.fetch;
   try {

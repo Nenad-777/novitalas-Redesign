@@ -12,7 +12,7 @@ export default async function handler(req: { method?: string; query: Record<stri
   if (req.method !== 'GET') { res.setHeader('Allow','GET'); return res.status(405).send('Method not allowed'); }
   const path = req.query.path, requested = req.query.src;
   if (typeof path !== 'string' || typeof requested !== 'string') return res.status(400).send('Missing article');
-  const meta = articleMeta[path]; const seo = seoData[path];
+  const meta = articleMeta.find(article => article.path === path); const seo = seoData[path];
   const allowed = [meta?.imageSrc, seo?.ogImage].filter(Boolean);
   if (!allowed.includes(requested)) return res.status(404).send('Unregistered article image');
   const controller = new AbortController(); const timer = setTimeout(()=>controller.abort(), 10000);
