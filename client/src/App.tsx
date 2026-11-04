@@ -1,5 +1,6 @@
 import LegacyInstagramStoryShare from "./components/LegacyInstagramStoryShare";
 import FinalElectionsArticle from "./pages/FinalElectionsArticle";
+import AssociatedPressSrbijaArticle from "./pages/AssociatedPressSrbijaArticle";
 import AltaBankaArticle from "./pages/AltaBankaArticle";
 import FrankfurtNovaGeneracijaArticle from "./pages/FrankfurtNovaGeneracijaArticle";
 import SestDanaSrbijaArticle from "./pages/SestDanaSrbijaArticle";
@@ -340,6 +341,7 @@ function Router() {
       <NormalizePath />
 
       <Switch>
+        <Route path="/srbija/associated-press-o-srbiji-posle-izbora" component={AssociatedPressSrbijaArticle} />
         <Route path="/srbija/alta-banka-iznosenje-novca-zastita-gradjana" component={AltaBankaArticle} />
         <Route path="/srbija/evo-rezultata-ponovljenih-izbora-pobeda-potvrdjena" component={FinalElectionsArticle} />
         <Route path="/srbija/izbori-se-ponavljaju-na-53-biracka-mesta-evo-sta-to-znaci" component={RepeatVoting53Article} />
