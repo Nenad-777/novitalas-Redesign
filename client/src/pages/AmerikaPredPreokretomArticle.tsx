@@ -9,7 +9,7 @@ export default function AmerikaPredPreokretomArticle() {
     deck="Američki mediji projektuju da će Demokratska stranka osvojiti većinu u Predstavničkom domu Kongresa, čime bi republikanci predsednika Donalda Trampa izgubili kontrolu nad jednim od dva doma američkog parlamenta. Prema Reutersu, takav ishod mogao bi značajno da promeni odnos snaga u Vašingtonu tokom preostale dve godine Trampovog mandata."
     imageSrc="/news/capitol-night.jpg"
     imageAlt="Osvetljena zgrada američkog Kapitola u Vašingtonu u sumrak."
-    imageCredit="Foto: Carol M. Highsmith / Library of Congress / Wikimedia Commons (proveriti status prava i atribuciju na stranici originalne fotografije)."
+    imageCredit="Foto: Carol M. Highsmith / Library of Congress / Wikimedia Commons."
     imageBeforeDeck
     backHref="/geopolitika"
     backLabel="← Nazad na Geopolitiku"
