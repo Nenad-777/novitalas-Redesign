@@ -109,6 +109,9 @@ function injectSEO(html: string, route: string): string {
   const ogImageMime = mimeTypes[ext] ?? "image/jpeg";
 
   // Insert extra OG image tags for Viber/WhatsApp compatibility.
+  // Remove the homepage preview metadata before inserting article-specific tags.
+  // Duplicate OG image tags caused messaging crawlers to pick the generic image.
+  result = result.replace(/<meta\s+property="og:image:(?:secure_url|type|width|height|alt)"[^>]*>\s*/g, "");
   const extraOgImageTags = [
     `    <meta property="og:image:secure_url" content="${escapeHtml(seo.ogImage)}" />`,
     `    <meta property="og:image:type" content="${ogImageMime}" />`,
