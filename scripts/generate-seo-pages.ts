@@ -154,6 +154,9 @@ function injectSEO(
   if (frankfurtImage || sestDanaImage || putinEvropaImage || pompejaImage || ed138Image || postElectionOdihrImage || resolvedSeo.ogImage.endsWith("/news/srbija-primer-evropi-2026-10-26-og.jpg") || resolvedSeo.ogImage.endsWith("/news/aramco-dhahran-2026-10-23.png") || gardijanImage || internationalObserversImage || resolvedSeo.ogImage.endsWith("/news/shakespeare-shadow-2026-10-20.png")) {
     result = result.replace(/<meta\s+property="og:image:(?:secure_url|type|width|height|alt)"[^>]*>\s*/g, "");
   }
+  // Remove the homepage preview metadata before inserting article-specific tags.
+  // Duplicate OG image tags caused messaging crawlers to pick the generic image.
+  result = result.replace(/<meta\s+property="og:image:(?:secure_url|type|width|height|alt)"[^>]*>\s*/g, "");
   const extraOgImageTags = [
     `    <meta property="og:image:secure_url" content="${escapeHtml(resolvedSeo.ogImage)}" />`,
     `    <meta property="og:image:type" content="${ogImageMime}" />`,
