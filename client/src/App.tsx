@@ -370,6 +370,7 @@ function Router() {
         <Route path="/kultura/na-kraju-jedne-velicanstvene-karijere-dzudi-denc" component={DzudiDencArticle} />
         <Route path="/kultura" component={NewTalasExperience} />
         <Route path="/izdanja/:month" component={NewTalasExperience} />
+        <Route path="/geopolitika/amerika-pred-preokretom-demokrate-predstavnicki-dom" component={AmerikaPredPreokretomArticle} />
         <Route path="/" component={NewTalasExperience} />
         <Route path="/srbija/vilson-upozorio-na-beloruski-scenario-svet-ce-pratiti-izbore-u-srbiji" component={WilsonCrtaElectionArticle} />
         <Route
@@ -1092,7 +1093,6 @@ function Router() {
         <Route path="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" component={VucicZapadCentriMociArticle} />
         <Route path="/404" component={NotFound} />
         <Route path="/geopolitika/napad-na-aerodrom-u-rijadu-12-poginulih-vise-od-300-povredjenih" component={RiyadhAirportArticle} />
-        <Route path="/geopolitika/amerika-pred-preokretom-demokrate-predstavnicki-dom" component={AmerikaPredPreokretomArticle} />
         <Route component={NotFound} />
       </Switch>
     </>
