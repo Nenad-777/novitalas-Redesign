@@ -238,7 +238,7 @@ export default function ArticleTemplate({
           ) : null}
 
           {/* Slika odmah posle datuma, pre uvoda */}
-          {imageBeforeDeck && !imageFirst && imageSrc && !videoHero && !localVideo ? (
+          {!imageFirst && imageSrc && !videoHero && !localVideo ? (
             <figure className="mt-7 mb-7">
               <div className="border overflow-hidden" style={{ borderColor: isDark ? "#2a2a2e" : "#eee", backgroundColor: isDark ? "#1a1c22" : "#f7f7f7" }}>
                 <img src={imageSrc} alt={imageAlt} className={`w-full ${imageHeightClass} ${imageObjectFit === "contain" ? "object-contain" : "object-cover"} object-center block`} decoding="async" />
@@ -248,7 +248,7 @@ export default function ArticleTemplate({
             </figure>
           ) : null}
 
-          {/* Jedinstvena grupa za deljenje, odmah ispod naslova i datuma. */}
+          {/* Jedinstvena grupa za deljenje, odmah ispod glavne fotografije. */}
           <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
             <ShareButton />
             {storyButton}
@@ -265,28 +265,6 @@ export default function ArticleTemplate({
             >
               {normalizeEmDashes(deck)}
             </p>
-          ) : null}
-
-          {/* Slika */}
-          {!imageFirst && !imageBeforeDeck && imageSrc && !videoHero && !localVideo ? (
-            <div className="mt-8">
-              <div
-                className="border overflow-hidden"
-                style={{
-                  borderColor: isDark ? "#2a2a2e" : "#eee",
-                  backgroundColor: isDark ? "#1a1c22" : "#f7f7f7",
-                }}
-              >
-                <img
-                  src={imageSrc}
-                  alt={imageAlt}
-                  className={`w-full ${imageHeightClass} ${imageObjectFit === "contain" ? "object-contain" : "object-cover"} object-center block`}
-                  decoding="async"
-                />
-              </div>
-              <ImageCaption credit={imageCredit} />
-              
-            </div>
           ) : null}
 
           {/* Tekst */}
