@@ -1,6 +1,5 @@
 import AmerikaPredPreokretomArticle from "./pages/AmerikaPredPreokretomArticle";
 import LegacyInstagramStoryShare from "./components/LegacyInstagramStoryShare";
-import FinalElectionsArticle from "./pages/FinalElectionsArticle";
 import AssociatedPressSrbijaArticle from "./pages/AssociatedPressSrbijaArticle";
 import AltaBankaArticle from "./pages/AltaBankaArticle";
 import FrankfurtNovaGeneracijaArticle from "./pages/FrankfurtNovaGeneracijaArticle";
@@ -344,7 +343,6 @@ function Router() {
       <Switch>
         <Route path="/srbija/associated-press-o-srbiji-posle-izbora" component={AssociatedPressSrbijaArticle} />
         <Route path="/srbija/alta-banka-iznosenje-novca-zastita-gradjana" component={AltaBankaArticle} />
-        <Route path="/srbija/evo-rezultata-ponovljenih-izbora-pobeda-potvrdjena" component={FinalElectionsArticle} />
         <Route path="/srbija/izbori-se-ponavljaju-na-53-biracka-mesta-evo-sta-to-znaci" component={RepeatVoting53Article} />
         <Route path="/geopolitika/netanjahu-pred-gubitkom-vlasti-izbori-bez-pobednika" component={IsraelElectionArticle} />
         <Route path="/srbija/studenti-su-pobedili-sta-sad-i-kako-dalje" component={StudentiStaDaljeArticle} />
