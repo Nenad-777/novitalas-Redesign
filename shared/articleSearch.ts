@@ -41,6 +41,7 @@ const EDITORIAL_MONTH_ONLY:Record<string,string> = {
 /** The same two registries used by SEO pages and the sitemap are the search source. */
 export const articleSearchIndex: SearchArticle[] = Array.from(
   new Map<string, SearchArticle>([
+    ["/geopolitika/amerika-pred-preokretom-demokrate-predstavnicki-dom", { href: "/geopolitika/amerika-pred-preokretom-demokrate-predstavnicki-dom", category: "Geopolitika", title: "Amerika pred preokretom: Demokrate na putu da preuzmu Predstavnički dom", description: "Američki mediji projektuju demokratsku većinu u Predstavničkom domu. Prebrojavanje glasova još traje.", imageSrc: "/news/capitol-night.jpg", imageAlt: "Američki Kapitol u sumrak.", publishedAt: "2026-11-04" }],
     // Machine-extracted records have lowest priority; curated registries override them.
     ...(sourceRecovered as SearchArticle[]).map((item): [string, SearchArticle] => [item.href, item]),
     ...HOME_ARTICLE_CANDIDATES.map((article): [string, SearchArticle] => [
@@ -82,7 +83,7 @@ export const articleSearchIndex: SearchArticle[] = Array.from(
       ]
     ),
   ]).values()
-).map(article=>({
+).filter(article=>article.href!=="/srbija/evo-rezultata-ponovljenih-izbora-pobeda-potvrdjena").map(article=>({
   ...article,
   // Higher-priority editorial entries can omit dates; keep source evidence.
   publishedAt:article.publishedAt||RECOVERED_DATES.get(article.href)?.publishedAt,
