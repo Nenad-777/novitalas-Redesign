@@ -1,3 +1,4 @@
+import AmerikaPredPreokretomArticle from "./pages/AmerikaPredPreokretomArticle";
 import LegacyInstagramStoryShare from "./components/LegacyInstagramStoryShare";
 import FinalElectionsArticle from "./pages/FinalElectionsArticle";
 import AssociatedPressSrbijaArticle from "./pages/AssociatedPressSrbijaArticle";
@@ -1093,6 +1094,7 @@ function Router() {
         <Route path="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" component={VucicZapadCentriMociArticle} />
         <Route path="/404" component={NotFound} />
         <Route path="/geopolitika/napad-na-aerodrom-u-rijadu-12-poginulih-vise-od-300-povredjenih" component={RiyadhAirportArticle} />
+        <Route path="/geopolitika/amerika-pred-preokretom-demokrate-predstavnicki-dom" component={AmerikaPredPreokretomArticle} />
         <Route component={NotFound} />
       </Switch>
     </>
