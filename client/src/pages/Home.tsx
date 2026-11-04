@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
-export const HERO_ARTICLE = {"href":"/srbija/evo-rezultata-ponovljenih-izbora-pobeda-potvrdjena","category":"SRBIJA · IZBORI 2026","title":"Evo rezultata ponovljenih izbora: Pobeda potvrđena!","description":"Ponovljeno glasanje nije promenilo ishod izbora. Studentska lista, prema preliminarnim rezultatima, zadržala je oko 53 odsto glasova i projektovanih 140 mandata.","imageSrc":"/news/final-elections.jpg","imageAlt":"Urednička ilustracija glasačke kutije u zlatnoj svetlosti."};
+export const HERO_ARTICLE = {"href":"/srbija/associated-press-o-srbiji-posle-izbora","category":"SRBIJA · MEĐUNARODNA ŠTAMPA","title":"Associated Press o Srbiji posle izbora: Hapšenja, ostavke i promene u institucijama","description":"Američka agencija Associated Press opisuje istrage, ostavke i promene u medijima i institucijama Srbije nakon parlamentarnih izbora 25. oktobra.","imageSrc":"/news/ap-about-serbia.jpg","imageAlt":"Minimalistička urednička ilustracija Narodne skupštine Srbije."};
 
 const ARTICLES = HOME_ARTICLES;
 function useFadeIn(){const ref=useRef<HTMLDivElement>(null);const[visible,setVisible]=useState(false);useEffect(()=>{const el=ref.current;if(!el)return;const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);o.unobserve(el)}},{threshold:.1});o.observe(el);return()=>o.disconnect()},[]);return{ref,visible}}
