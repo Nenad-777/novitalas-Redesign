@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
-export const HERO_ARTICLE = {"href":"/srbija/moze-li-sud-da-ponisti-pomilovanja-aleksandra-vucica","category":"SRBIJA · PRAVOSUĐE","title":"Može li sud da poništi pomilovanja Aleksandra Vučića?","description":"Anketna komisija traži sudsko preispitivanje pomilovanja 49 osoba. Ko može da ospori predsedničke odluke i šta je u nadležnosti Upravnog suda?","imageSrc":"/news/anketna-pomilovanja.jpg","imageAlt":"Minimalistička ilustracija vage pravde, suda i zapečaćenih dokumenata."};
+export const HERO_ARTICLE = {"href":"/geopolitika/tramp-izgubio-kongres-rat-sa-iranom-ostaje","category":"GEOPOLITIKA","title":"Tramp izgubio Kongres, rat sa Iranom ostaje: Šta sada čeka svet?","description":"Demokrate su osvojile većinu u oba doma Kongresa. Tramp zadržava ovlašćenja za vođenje rata sa Iranom, a nova većina stupa na dužnost u januaru.","imageSrc":"/news/trump-lost-congres.JPG","imageAlt":"Donald Tramp u Ovalnom kabinetu Bele kuće."};
 
 const ARTICLES = HOME_ARTICLES;
 function useFadeIn(){const ref=useRef<HTMLDivElement>(null);const[visible,setVisible]=useState(false);useEffect(()=>{const el=ref.current;if(!el)return;const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);o.unobserve(el)}},{threshold:.1});o.observe(el);return()=>o.disconnect()},[]);return{ref,visible}}
