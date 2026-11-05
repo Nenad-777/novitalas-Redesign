@@ -1,3 +1,4 @@
+import KonacniRezultatiStaSlediArticle from "./pages/KonacniRezultatiStaSlediArticle";
 import TrumpLostCongressIranArticle from "./pages/TrumpLostCongressIranArticle";
 import PomilovanjaVucicaSudArticle from "./pages/PomilovanjaVucicaSudArticle";
 import AmerikaPredPreokretomArticle from "./pages/AmerikaPredPreokretomArticle";
@@ -1093,6 +1094,7 @@ function Router() {
         <Route path="/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina" component={StarshieldWhiteHouseArticle} />
         <Route path="/srbija/moze-li-sud-da-ponisti-pomilovanja-aleksandra-vucica" component={PomilovanjaVucicaSudArticle} />
         <Route path="/geopolitika/tramp-izgubio-kongres-rat-sa-iranom-ostaje" component={TrumpLostCongressIranArticle} />
+        <Route path="/srbija/konacni-rezultati-izbora-sta-sada-sledi" component={KonacniRezultatiStaSlediArticle} />
         {/* 404 */}
         <Route path="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" component={VucicZapadCentriMociArticle} />
         <Route path="/404" component={NotFound} />
