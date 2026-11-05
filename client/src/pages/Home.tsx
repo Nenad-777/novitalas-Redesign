@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
-export const HERO_ARTICLE = {"href":"/srbija/associated-press-o-srbiji-posle-izbora","category":"SRBIJA · MEĐUNARODNA ŠTAMPA","title":"Associated Press o Srbiji posle izbora: Hapšenja, ostavke i promene u institucijama","description":"Američka agencija Associated Press opisuje istrage, ostavke i promene u medijima i institucijama Srbije nakon parlamentarnih izbora 25. oktobra.","imageSrc":"/news/ap-about-serbia.jpg","imageAlt":"Minimalistička urednička ilustracija Narodne skupštine Srbije."};
+export const HERO_ARTICLE = {"href":"/srbija/moze-li-sud-da-ponisti-pomilovanja-aleksandra-vucica","category":"SRBIJA · PRAVOSUĐE","title":"Može li sud da poništi pomilovanja Aleksandra Vučića?","description":"Anketna komisija traži sudsko preispitivanje pomilovanja 49 osoba. Ko može da ospori predsedničke odluke i šta je u nadležnosti Upravnog suda?","imageSrc":"/news/anketna-pomilovanja.jpg","imageAlt":"Minimalistička ilustracija vage pravde, suda i zapečaćenih dokumenata."};
 
 const ARTICLES = HOME_ARTICLES;
 function useFadeIn(){const ref=useRef<HTMLDivElement>(null);const[visible,setVisible]=useState(false);useEffect(()=>{const el=ref.current;if(!el)return;const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);o.unobserve(el)}},{threshold:.1});o.observe(el);return()=>o.disconnect()},[]);return{ref,visible}}
