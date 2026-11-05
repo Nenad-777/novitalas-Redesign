@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
-export const HERO_ARTICLE = {"href":"/geopolitika/tramp-izgubio-kongres-rat-sa-iranom-ostaje","category":"GEOPOLITIKA","title":"Tramp izgubio Kongres, rat sa Iranom ostaje: Šta sada čeka svet?","description":"Demokrate su osvojile većinu u oba doma Kongresa. Tramp zadržava ovlašćenja za vođenje rata sa Iranom, a nova većina stupa na dužnost u januaru.","imageSrc":"/news/trump-lost-congres.JPG","imageAlt":"Donald Tramp u Ovalnom kabinetu Bele kuće."};
+export const HERO_ARTICLE = {"href":"/srbija/konacni-rezultati-izbora-sta-sada-sledi","category":"SRBIJA · INFORMATOR","title":"Konačni rezultati izbora su proglašeni: Šta sada sledi i kada Srbija dobija novu vlast?","description":"RIK je potvrdio 140 mandata Studentske liste. Objašnjavamo kada se konstituiše Skupština, kako se bira Vlada i ko do tada upravlja državom.","imageSrc":"/news/serbian-flag.jpg","imageAlt":"Akvarelna ilustracija zastave Srbije i Narodne skupštine."};
 
 const ARTICLES = HOME_ARTICLES;
 function useFadeIn(){const ref=useRef<HTMLDivElement>(null);const[visible,setVisible]=useState(false);useEffect(()=>{const el=ref.current;if(!el)return;const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);o.unobserve(el)}},{threshold:.1});o.observe(el);return()=>o.disconnect()},[]);return{ref,visible}}
