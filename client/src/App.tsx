@@ -1,3 +1,4 @@
+import PomilovanjaVucicaSudArticle from "./pages/PomilovanjaVucicaSudArticle";
 import AmerikaPredPreokretomArticle from "./pages/AmerikaPredPreokretomArticle";
 import LegacyInstagramStoryShare from "./components/LegacyInstagramStoryShare";
 import AssociatedPressSrbijaArticle from "./pages/AssociatedPressSrbijaArticle";
@@ -1089,6 +1090,7 @@ function Router() {
         <Route path="/srbija/francuska-protesti-arte-srpski-studenti" component={FrancuskaProtestiArteStudenti} />
 
         <Route path="/obavestajni-izvori/reuters-starshield-bela-kuca-ogranicenje-ukrajina" component={StarshieldWhiteHouseArticle} />
+        <Route path="/srbija/moze-li-sud-da-ponisti-pomilovanja-aleksandra-vucica" component={PomilovanjaVucicaSudArticle} />
         {/* 404 */}
         <Route path="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" component={VucicZapadCentriMociArticle} />
         <Route path="/404" component={NotFound} />
