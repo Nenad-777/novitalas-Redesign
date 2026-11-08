@@ -1,3 +1,4 @@
+import NovaSkupstinaArticle from "./pages/NovaSkupstinaArticle";
 import ZaporozjeBezNapajanjaArticle from "./pages/ZaporozjeBezNapajanjaArticle";
 import AbuDabiPregovoriArticle from "./pages/AbuDabiPregovoriArticle";
 import KonacniRezultatiStaSlediArticle from "./pages/KonacniRezultatiStaSlediArticle";
@@ -346,6 +347,7 @@ function Router() {
       <NormalizePath />
 
       <Switch>
+        <Route path="/srbija/pocinje-rad-nove-skupstine-sta-srbiju-ceka-posle-17-novembra" component={NovaSkupstinaArticle} />
         <Route path="/geopolitika/moskva-kijev-abu-dabi-pregovori" component={AbuDabiPregovoriArticle} />
         <Route path="/srbija/associated-press-o-srbiji-posle-izbora" component={AssociatedPressSrbijaArticle} />
         <Route path="/srbija/alta-banka-iznosenje-novca-zastita-gradjana" component={AltaBankaArticle} />
