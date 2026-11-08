@@ -1,3 +1,4 @@
+import AbuDabiPregovoriArticle from "./pages/AbuDabiPregovoriArticle";
 import KonacniRezultatiStaSlediArticle from "./pages/KonacniRezultatiStaSlediArticle";
 import TrumpLostCongressIranArticle from "./pages/TrumpLostCongressIranArticle";
 import PomilovanjaVucicaSudArticle from "./pages/PomilovanjaVucicaSudArticle";
@@ -344,6 +345,7 @@ function Router() {
       <NormalizePath />
 
       <Switch>
+        <Route path="/geopolitika/moskva-kijev-abu-dabi-pregovori" component={AbuDabiPregovoriArticle} />
         <Route path="/srbija/associated-press-o-srbiji-posle-izbora" component={AssociatedPressSrbijaArticle} />
         <Route path="/srbija/alta-banka-iznosenje-novca-zastita-gradjana" component={AltaBankaArticle} />
         <Route path="/srbija/izbori-se-ponavljaju-na-53-biracka-mesta-evo-sta-to-znaci" component={RepeatVoting53Article} />
