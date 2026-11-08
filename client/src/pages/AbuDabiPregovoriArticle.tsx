@@ -11,7 +11,7 @@ export default function AbuDabiPregovoriArticle() {
     imageAlt={"Panorama Abu Dabija sa savremenim neboderima uz obalu u suton."}
     imageCredit={"Abu Dabi, arhivska fotografija / Gabriele Niek / Pexels"}
     imageHeightClass={"aspect-[16/9]"}
-    imageObjectFit={"contain"}
+    imageObjectFit={"cover"}
     backHref={"/geopolitika"}
     backLabel={"← Nazad na Geopolitiku"}
     imageBeforeDeck
