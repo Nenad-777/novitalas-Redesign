@@ -1,3 +1,4 @@
+import ZaporozjeBezNapajanjaArticle from "./pages/ZaporozjeBezNapajanjaArticle";
 import AbuDabiPregovoriArticle from "./pages/AbuDabiPregovoriArticle";
 import KonacniRezultatiStaSlediArticle from "./pages/KonacniRezultatiStaSlediArticle";
 import TrumpLostCongressIranArticle from "./pages/TrumpLostCongressIranArticle";
@@ -1097,6 +1098,7 @@ function Router() {
         <Route path="/srbija/moze-li-sud-da-ponisti-pomilovanja-aleksandra-vucica" component={PomilovanjaVucicaSudArticle} />
         <Route path="/geopolitika/tramp-izgubio-kongres-rat-sa-iranom-ostaje" component={TrumpLostCongressIranArticle} />
         <Route path="/srbija/konacni-rezultati-izbora-sta-sada-sledi" component={KonacniRezultatiStaSlediArticle} />
+        <Route path="/geopolitika/zaporozje-bez-spoljasnjeg-napajanja-rezervni-generatori" component={ZaporozjeBezNapajanjaArticle} />
         {/* 404 */}
         <Route path="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" component={VucicZapadCentriMociArticle} />
         <Route path="/404" component={NotFound} />
