@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
-export const HERO_ARTICLE = {"href": "/geopolitika/moskva-kijev-abu-dabi-pregovori", "category": "GEOPOLITIKA", "title": "Moskva i Kijev šalju visoke zvaničnike u Abu Dabi: Novi pokušaj da se zaustavi rat", "description": "Rusija, Ukrajina i Sjedinjene Američke Države pripremaju novi krug pregovora, najavljen za 10. i 11. novembar u Ujedinjenim Arapskim Emiratima. Najavljene teme obuhvataju posleratne bezbednosne aranžmane, smanjenje napetosti, humanitarna pitanja i naredne korake ka okončanju rata.", "imageSrc": "/news/abu-dabi-pregovori.jpg", "imageAlt": "Panorama Abu Dabija sa savremenim neboderima uz obalu u suton."};
+export const HERO_ARTICLE = {"href":"/geopolitika/zaporozje-bez-spoljasnjeg-napajanja-rezervni-generatori","category":"GEOPOLITIKA","title":"Nuklearna elektrana Zaporožje ostala bez spoljašnjeg napajanja: Uključeni rezervni generatori","description":"Elektrana je ostala bez spoljašnjeg napajanja i prešla na rezervne dizel-generatore. Nema prijavljenog povećanja radijacije, dok se prate bezbednosni sistemi.","imageSrc":"/news/Zaporozje.JPG","imageAlt":"Arhivska panorama nuklearne elektrane Zaporožje i susedne termoelektrane."};
 
 const ARTICLES = HOME_ARTICLES;
 function useFadeIn(){const ref=useRef<HTMLDivElement>(null);const[visible,setVisible]=useState(false);useEffect(()=>{const el=ref.current;if(!el)return;const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);o.unobserve(el)}},{threshold:.1});o.observe(el);return()=>o.disconnect()},[]);return{ref,visible}}
