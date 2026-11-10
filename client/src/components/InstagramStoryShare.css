@@ -20,3 +20,21 @@
 .nt-story-link{width:100%;padding:10px;background:transparent;color:inherit;border:1px solid #999;border-radius:3px;font:400 16px/1.4 'Source Sans 3',sans-serif}
 .nt-story-status{font:400 14px/1.5 'Source Sans 3',sans-serif;min-height:21px;margin:0}
 @media(max-width:560px){.nt-story-dialog{padding:22px 18px}.nt-story-workspace{grid-template-columns:1fr;gap:16px}.nt-story-preview{width:min(240px,76vw);margin:0 auto}.nt-story-title{font-size:23px}}
+
+/* Novi talas editorial palette: wine, ivory, restrained gold. */
+.nt-story-dialog{background:#f5f0e8;color:#25212a;border:1px solid #c9b9a7;box-shadow:0 24px 75px rgba(35,15,25,.23)}
+.nt-story-dialog.nt-instagram-dark{background:#191b23;color:#f7efe4;border-color:#7e5962}
+.nt-story-title{color:#6e1f32}
+.nt-story-dialog.nt-instagram-dark .nt-story-title{color:#e8bd96}
+.nt-story-close{color:#6e1f32}
+.nt-story-preview{border:5px solid #fffaf1;outline:1px solid #bda78d;box-shadow:0 14px 34px rgba(72,29,42,.17)}
+.nt-story-action{border:1px solid #a88b8c;border-radius:6px;background:#fffaf4;color:#6e1f32;min-height:52px;transition:background .2s,color .2s,border-color .2s}
+.nt-story-action:hover{background:#f0e1dc;border-color:#6e1f32}
+.nt-story-action-primary{background:#76253a;color:#fffaf4;border-color:#76253a;box-shadow:0 5px 16px rgba(118,37,58,.18)}
+.nt-story-action-primary:hover{background:#5c182b;color:#fff;border-color:#5c182b}
+.nt-story-dialog.nt-instagram-dark .nt-story-action{background:#292832;color:#f6e7d9;border-color:#957780}
+.nt-story-dialog.nt-instagram-dark .nt-story-action-primary{background:#9e4559;color:#fff;border-color:#9e4559}
+.nt-story-link{background:#fffaf4;border-color:#cbb9ae;color:#392c31;border-radius:6px}
+.nt-story-dialog.nt-instagram-dark .nt-story-link{background:#292832;color:#f7efe4}
+.nt-story-detail{color:#795968;opacity:1}
+.nt-story-dialog.nt-instagram-dark .nt-story-detail{color:#e2c1bd}

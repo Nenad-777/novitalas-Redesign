@@ -60,7 +60,7 @@ export default function InstagramStoryShare({ article }: { article: StoryArticle
         </div>
         <div className="nt-story-actions">
           <span className="nt-story-detail">1080 × 1920 · PNG</span>
-          {result && <a className="nt-story-action" href={result.url} download={result.file.name} onClick={() => {storyTrack('instagram_story_download', path); setMessage('Ako se slika otvori u novom prikazu, zadrži prst na njoj i izaberi čuvanje slike.');}}><Download size={18} aria-hidden="true"/>Sačuvaj Story sliku</a>}
+          {result && <a className="nt-story-action nt-story-action-primary" href={result.url} download={result.file.name} onClick={() => {storyTrack('instagram_story_download', path); setMessage('Ako se slika otvori u novom prikazu, zadrži prst na njoj i izaberi čuvanje slike.');}}><Download size={18} aria-hidden="true"/>Sačuvaj Story sliku</a>}
           {canShare && <button className="nt-story-action" disabled={sharing} onClick={share}><Share2 size={18} aria-hidden="true"/>Otvori meni za deljenje</button>}
           {error && <button className="nt-story-action" onClick={() => setAttempt(n=>n+1)}>Pokušaj ponovo</button>}
           <button className="nt-story-action" onClick={copy}><Copy size={18} aria-hidden="true"/>Kopiraj link vesti</button>
