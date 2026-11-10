@@ -59,7 +59,9 @@ export async function generateStory(article: StoryArticle): Promise<Blob> {
   const ctx = canvas.getContext('2d'); if (!ctx) throw new Error('Ovaj pregledač ne podržava pripremu slike.');
   // Editorial cover: full-width photograph, readable title and an unobstructed sticker area.
   const W = 1080, H = 1920, margin = 76;
-  ctx.fillStyle = '#f7f5ef'; ctx.fillRect(0, 0, W, H);
+  ctx.fillStyle = '#f6f0e6'; ctx.fillRect(0, 0, W, H);
+  ctx.fillStyle = '#76253a'; ctx.fillRect(0, 0, W, 22);
+  ctx.fillStyle = '#c9a777'; ctx.fillRect(0, 22, W, 5);
   ctx.textBaseline = 'top';
 
   // Magazine masthead, generously spaced and high-contrast.
@@ -68,7 +70,7 @@ export async function generateStory(article: StoryArticle): Promise<Blob> {
   ctx.fillText('NOVI', margin, 150);
   const mastheadWidth = ctx.measureText('NOVI ').width;
   ctx.fillStyle = '#8d2836'; ctx.fillText('TALAS', margin + mastheadWidth, 150);
-  ctx.fillStyle = '#8d2836'; ctx.fillRect(margin, 246, W - margin * 2, 3);
+  ctx.fillStyle = '#c09a69'; ctx.fillRect(margin, 246, W - margin * 2, 3);
   ctx.fillStyle = '#8d2836';
   ctx.font = '600 24px "Lora", serif';
   ctx.fillText(article.section.toLocaleUpperCase('sr'), margin, 276);
@@ -104,13 +106,13 @@ export async function generateStory(article: StoryArticle): Promise<Blob> {
     credits.slice(0, 2).forEach((line, i) => ctx.fillText(line, margin, imageTop + imageHeight + 20 + i * 24));
   }
 
-  // Reserve a clear, Instagram-safe area for the user's interactive Link sticker.
-  ctx.fillStyle = '#8d2836';
-  ctx.fillRect(margin, 1698, 74, 3);
-  ctx.fillStyle = '#171b22';
+  // A rich footer anchors the card; the space above remains available for a Link sticker.
+  ctx.fillStyle = '#76253a'; ctx.fillRect(0, 1650, W, 270);
+  ctx.fillStyle = '#d9b98c'; ctx.fillRect(margin, 1698, 74, 3);
+  ctx.fillStyle = '#fff9ef';
   ctx.font = '700 30px "Lora", serif';
   ctx.fillText('ČITAJ NA NOVOM TALASU', margin, 1732);
-  ctx.fillStyle = '#67635e';
+  ctx.fillStyle = '#e4cbbb';
   ctx.font = '400 25px "Lora", serif';
   ctx.fillText('novitalas.org', margin, 1780);
   return new Promise((resolve, reject) => canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error('Slika nije napravljena. Pokušaj ponovo.')), 'image/png'));
