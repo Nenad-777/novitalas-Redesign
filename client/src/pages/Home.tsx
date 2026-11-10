@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
-export const HERO_ARTICLE = {"href":"/srbija/pocinje-rad-nove-skupstine-sta-srbiju-ceka-posle-17-novembra","category":"SRBIJA","title":"Počinje rad nove Skupštine: šta Srbiju čeka posle 17. novembra?","description":"Konstitutivna sednica zakazana je za 17. novembar. Objašnjavamo kako se potvrđuju mandati, bira skupštinsko rukovodstvo i formira nova Vlada.","imageSrc":"/news/skupstina-pocetak.jpg","imageAlt":"Osvetljena Narodna skupština Srbije noću."};
+export const HERO_ARTICLE = {"href":"/geopolitika/svet-pozdravlja-promene-u-srbiji-izborna-pobeda-nije-dovoljna","category":"GEOPOLITIKA","title":"Svet pozdravlja promene u Srbiji, ali upozorava: izborna pobeda nije dovoljna","description":"Politički preokret u Srbiji izazvao je reakcije Vašingtona, Brisela, Moskve i Kijeva. Međunarodni partneri prate budući pravac Beograda, dok se očekuju konkretne institucionalne reforme.","imageSrc":"/news/world-serbia.jpg","imageAlt":"Minimalistička ilustracija Beograda u središtu pažnje velikih sila."};
 
 const ARTICLES = HOME_ARTICLES;
 function useFadeIn(){const ref=useRef<HTMLDivElement>(null);const[visible,setVisible]=useState(false);useEffect(()=>{const el=ref.current;if(!el)return;const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);o.unobserve(el)}},{threshold:.1});o.observe(el);return()=>o.disconnect()},[]);return{ref,visible}}
