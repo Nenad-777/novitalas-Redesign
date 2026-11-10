@@ -57,36 +57,61 @@ export async function generateStory(article: StoryArticle): Promise<Blob> {
   const photo = await articleImage(article);
   const canvas = document.createElement('canvas'); canvas.width = 1080; canvas.height = 1920;
   const ctx = canvas.getContext('2d'); if (!ctx) throw new Error('Ovaj pregledač ne podržava pripremu slike.');
-  ctx.fillStyle = '#f8f6f1'; ctx.fillRect(0, 0, 1080, 1920);
-  ctx.textBaseline = 'top'; ctx.fillStyle = '#17202b'; ctx.font = '700 64px "Playfair Display", serif';
-  ctx.fillText('NOVI', 88, 230); const brandWidth = ctx.measureText('NOVI ').width;
-  ctx.fillStyle = '#841b2c'; ctx.fillText('TALAS', 88 + brandWidth, 230);
-  ctx.fillRect(88, 326, 904, 3);
-  ctx.font = '400 25px "Lora", serif'; ctx.fillText(article.section.toLocaleUpperCase('sr'), 88, 365, 904);
-  let size = 64; let lines: string[] = [];
-  for (; size >= 22; size -= 2) {
-    ctx.font = `700 ${size}px "Playfair Display", serif`; lines = wrapText(ctx, article.title, 904);
-    if (lines.length * size * 1.18 <= (photo ? 430 : 830)) break;
+  // Editorial cover: full-width photograph, readable title and an unobstructed sticker area.
+  const W = 1080, H = 1920, margin = 76;
+  ctx.fillStyle = '#f7f5ef'; ctx.fillRect(0, 0, W, H);
+  ctx.textBaseline = 'top';
+
+  // Magazine masthead, generously spaced and high-contrast.
+  ctx.fillStyle = '#191d24';
+  ctx.font = '700 64px "Playfair Display", serif';
+  ctx.fillText('NOVI', margin, 150);
+  const mastheadWidth = ctx.measureText('NOVI ').width;
+  ctx.fillStyle = '#8d2836'; ctx.fillText('TALAS', margin + mastheadWidth, 150);
+  ctx.fillStyle = '#8d2836'; ctx.fillRect(margin, 246, W - margin * 2, 3);
+  ctx.fillStyle = '#8d2836';
+  ctx.font = '600 24px "Lora", serif';
+  ctx.fillText(article.section.toLocaleUpperCase('sr'), margin, 276);
+
+  // Headline remains prominent even for long Serbian headlines.
+  let size = 72, lines: string[] = [];
+  for (; size >= 42; size -= 2) {
+    ctx.font = `700 ${size}px "Playfair Display", serif`;
+    lines = wrapText(ctx, article.title, W - margin * 2);
+    if (lines.length <= 5 && lines.length * size * 1.17 <= 425) break;
   }
-  if (size < 22) throw new Error('Naslov je predugačak za čitljivu Story karticu. Link možeš kopirati ispod.');
-  ctx.fillStyle = '#20201e'; lines.forEach((line, i) => ctx.fillText(line, 88, 425 + i * size * 1.18));
+  ctx.fillStyle = '#171b22';
+  ctx.font = `700 ${size}px "Playfair Display", serif`;
+  const headlineTop = 338;
+  lines.forEach((line, i) => ctx.fillText(line, margin, headlineTop + i * size * 1.17));
+
+  // A generous landscape image is the focal point; crop only to fit a consistent 16:9 frame.
+  const imageTop = Math.max(785, headlineTop + lines.length * size * 1.17 + 48);
+  const imageHeight = 540;
   if (photo) {
-    // Contain the original photograph: no distortion or cropping.
-    const ratio = Math.min(904 / photo.naturalWidth, 570 / photo.naturalHeight);
-    const w = photo.naturalWidth * ratio, h = photo.naturalHeight * ratio;
-    ctx.drawImage(photo, (1080 - w) / 2, 900 + (570 - h) / 2, w, h);
-    if (article.credit) {
-      ctx.fillStyle = '#65635e'; ctx.font = '400 18px "Lora", serif';
-      let creditSize = 18; let creditLines = wrapText(ctx, article.credit, 904);
-      while (creditLines.length * creditSize * 1.25 > 76 && creditSize > 10) {
-        creditSize--; ctx.font = `400 ${creditSize}px "Lora", serif`; creditLines = wrapText(ctx, article.credit, 904);
-      }
-      if (creditLines.length * creditSize * 1.25 > 76) throw new Error('Potpis fotografije je predugačak za karticu. Link možeš kopirati ispod.');
-      creditLines.forEach((line, i) => ctx.fillText(line, 88, 1484 + i * creditSize * 1.25));
-    }
+    const scale = Math.max(W / photo.naturalWidth, imageHeight / photo.naturalHeight);
+    const sourceW = W / scale, sourceH = imageHeight / scale;
+    ctx.drawImage(photo, (photo.naturalWidth - sourceW) / 2, (photo.naturalHeight - sourceH) / 2, sourceW, sourceH, 0, imageTop, W, imageHeight);
+  } else {
+    ctx.fillStyle = '#e6e2d9'; ctx.fillRect(0, imageTop, W, imageHeight);
   }
-  // 1570–1700 remains intentionally empty for Instagram's Link sticker.
-  ctx.fillStyle = '#841b2c'; ctx.fillRect(88, 1725, 72, 3);
-  ctx.fillStyle = '#343431'; ctx.font = '400 28px "Lora", serif'; ctx.fillText('novitalas.org', 88, 1750);
+
+  // Keep attribution legible without competing with the cover image.
+  if (article.credit) {
+    ctx.fillStyle = '#67635e';
+    ctx.font = '400 18px "Lora", serif';
+    const credits = wrapText(ctx, article.credit, W - margin * 2);
+    credits.slice(0, 2).forEach((line, i) => ctx.fillText(line, margin, imageTop + imageHeight + 20 + i * 24));
+  }
+
+  // Reserve a clear, Instagram-safe area for the user's interactive Link sticker.
+  ctx.fillStyle = '#8d2836';
+  ctx.fillRect(margin, 1698, 74, 3);
+  ctx.fillStyle = '#171b22';
+  ctx.font = '700 30px "Lora", serif';
+  ctx.fillText('ČITAJ NA NOVOM TALASU', margin, 1732);
+  ctx.fillStyle = '#67635e';
+  ctx.font = '400 25px "Lora", serif';
+  ctx.fillText('novitalas.org', margin, 1780);
   return new Promise((resolve, reject) => canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error('Slika nije napravljena. Pokušaj ponovo.')), 'image/png'));
 }
