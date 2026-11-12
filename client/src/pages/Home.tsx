@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
-export const HERO_ARTICLE = {"href":"/geopolitika/svet-pozdravlja-promene-u-srbiji-izborna-pobeda-nije-dovoljna","category":"GEOPOLITIKA","title":"Svet pozdravlja promene u Srbiji, ali upozorava: izborna pobeda nije dovoljna","description":"Politički preokret u Srbiji izazvao je reakcije Vašingtona, Brisela, Moskve i Kijeva. Međunarodni partneri prate budući pravac Beograda, dok se očekuju konkretne institucionalne reforme.","imageSrc":"/news/world-serbia.jpg","imageAlt":"Minimalistička ilustracija Beograda u središtu pažnje velikih sila."};
+export const HERO_ARTICLE = {"href": "/geopolitika/da-li-je-na-pomolu-kraj-rata", "category": "GEOPOLITIKA", "title": "Da li je na pomolu kraj rata?", "description": "Posle pregovora u Abu Dabiju, američki izaslanici doputovali su u Moskvu na razgovore sa Vladimirom Putinom. Diplomatski kontakti se intenziviraju, ali teritorijalna pitanja i bezbednosne garancije za Ukrajinu ostaju najveće prepreke mogućem mirovnom sporazumu.", "imageSrc": "/news/kraj-rata-ukrajina.jpg", "imageAlt": "Simbolička AI ilustracija pregovaračkog stola sa dokumentom i maslinovom grančicom, uz pogled na Kremlj."};
 
 const ARTICLES = HOME_ARTICLES;
 function useFadeIn(){const ref=useRef<HTMLDivElement>(null);const[visible,setVisible]=useState(false);useEffect(()=>{const el=ref.current;if(!el)return;const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setVisible(true);o.unobserve(el)}},{threshold:.1});o.observe(el);return()=>o.disconnect()},[]);return{ref,visible}}
