@@ -144,6 +144,7 @@ function injectSEO(
   // OG images in this project are expected to match those proportions.
   const gardijanImage = resolvedSeo.ogImage.endsWith("/news/gardijan-studentski-pokret-2026-10-21.png");
   const restoredFullResolutionImage = resolvedSeo.ogImage.endsWith("/news/aramco-dhahran-2026-10-23.png") || gardijanImage || resolvedSeo.ogImage.endsWith("/news/shakespeare-shadow-2026-10-20.png") || /\/news\/(?:(?:odihr|kekova)-approved-full\.webp|ko-ce-pobediti-na-izborima-2026-10-19\.png)$/.test(resolvedSeo.ogImage);
+  const krajRataImage = resolvedSeo.ogImage.endsWith("/news/kraj-rata-ukrajina.jpg");
   const abuDabiImage = resolvedSeo.ogImage.endsWith("/news/abu-dabi-pregovori.jpg");
   const frankfurtImage = resolvedSeo.ogImage.endsWith("/news/frankfurt-nova-generacija.jpg");
   const sestDanaImage = resolvedSeo.ogImage.endsWith("/news/sest-dana-srbija-analiza.jpg");
@@ -161,8 +162,8 @@ function injectSEO(
   const extraOgImageTags = [
     `    <meta property="og:image:secure_url" content="${escapeHtml(resolvedSeo.ogImage)}" />`,
     `    <meta property="og:image:type" content="${ogImageMime}" />`,
-    `    <meta property="og:image:width" content="${abuDabiImage ? 1536 : frankfurtImage ? 1536 : sestDanaImage ? 1536 : putinEvropaImage ? 1880 : pompejaImage ? 1920 : ed138Image ? 1672 : postElectionOdihrImage ? 1536 : internationalObserversImage ? 1536 : restoredFullResolutionImage ? 1672 : 1200}" />`,
-    `    <meta property="og:image:height" content="${abuDabiImage ? 1024 : frankfurtImage ? 864 : sestDanaImage ? 864 : putinEvropaImage ? 1160 : pompejaImage ? 1014 : ed138Image ? 941 : postElectionOdihrImage ? 1024 : internationalObserversImage ? 864 : restoredFullResolutionImage ? 941 : 630}" />`,
+    `    <meta property="og:image:width" content="${krajRataImage ? 1536 : abuDabiImage ? 1536 : frankfurtImage ? 1536 : sestDanaImage ? 1536 : putinEvropaImage ? 1880 : pompejaImage ? 1920 : ed138Image ? 1672 : postElectionOdihrImage ? 1536 : internationalObserversImage ? 1536 : restoredFullResolutionImage ? 1672 : 1200}" />`,
+    `    <meta property="og:image:height" content="${krajRataImage ? 864 : abuDabiImage ? 1024 : frankfurtImage ? 864 : sestDanaImage ? 864 : putinEvropaImage ? 1160 : pompejaImage ? 1014 : ed138Image ? 941 : postElectionOdihrImage ? 1024 : internationalObserversImage ? 864 : restoredFullResolutionImage ? 941 : 630}" />`,
   ].join("\n");
 
   result = result.replace(
