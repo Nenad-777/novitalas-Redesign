@@ -326,8 +326,9 @@ main article p.nt-article-deck,
 main article p.nt-article-paragraph {
   font-size: 19px;
   line-height: 1.8;
-  text-align: justify;
-  text-align-last: start;
+  text-align: left;
+  text-align-last: auto;
+  hyphens: none;
 }
 @media (min-width: 768px) {
   main article p.nt-article-deck,
