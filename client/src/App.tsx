@@ -1,4 +1,5 @@
 import KrajRataArticle from "./pages/KrajRataArticle";
+import KinaVojniManevriArticle from "./pages/KinaVojniManevriArticle";
 import SvetPozdravljaPromeneSrbijaArticle from "./pages/SvetPozdravljaPromeneSrbijaArticle";
 import NovaSkupstinaArticle from "./pages/NovaSkupstinaArticle";
 import ZaporozjeBezNapajanjaArticle from "./pages/ZaporozjeBezNapajanjaArticle";
@@ -1105,6 +1106,7 @@ function Router() {
         <Route path="/srbija/konacni-rezultati-izbora-sta-sada-sledi" component={KonacniRezultatiStaSlediArticle} />
         <Route path="/geopolitika/zaporozje-bez-spoljasnjeg-napajanja-rezervni-generatori" component={ZaporozjeBezNapajanjaArticle} />
         <Route path="/geopolitika/svet-pozdravlja-promene-u-srbiji-izborna-pobeda-nije-dovoljna" component={SvetPozdravljaPromeneSrbijaArticle} />
+        <Route path="/geopolitika/kina-vojni-manevri-tajvan-pacifik" component={KinaVojniManevriArticle} />
         {/* 404 */}
         <Route path="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" component={VucicZapadCentriMociArticle} />
         <Route path="/404" component={NotFound} />
