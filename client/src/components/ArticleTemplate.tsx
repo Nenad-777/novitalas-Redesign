@@ -145,7 +145,7 @@ export default function ArticleTemplate({
         className={embedded ? "py-12 md:py-16 flex-1" : "nx-article-main py-12 md:py-16 flex-1"}
         style={{ backgroundColor: isDark ? "#101721" : "#f8f6f1" }}
       >
-        <article data-story-article="true" className={embedded ? "max-w-[860px] mx-auto px-5" : "nx-reading-article max-w-[860px] mx-auto px-5"}>
+        <article lang="sr" data-story-article="true" className={embedded ? "max-w-[860px] mx-auto px-5" : "nx-reading-article max-w-[860px] mx-auto px-5"}>
           {localVideo && <div className="mb-8"><EditorialVideo {...localVideo}/></div>}
           {/* Video hero */}
           {imageFirst && videoHero ? (
