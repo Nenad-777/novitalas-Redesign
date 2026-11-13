@@ -326,9 +326,12 @@ main article p.nt-article-deck,
 main article p.nt-article-paragraph {
   font-size: 19px;
   line-height: 1.8;
-  text-align: left;
-  text-align-last: auto;
-  hyphens: none;
+  text-align: justify;
+  text-align-last: left;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  word-spacing: normal;
+  overflow-wrap: normal;
 }
 @media (min-width: 768px) {
   main article p.nt-article-deck,
