@@ -349,3 +349,20 @@ main article p.nt-article-paragraph {
     line-height: 1.12;
   }
 }
+
+/* Mobile: explicit Serbian discretionary breaks, independent of OS dictionaries.
+   Natural spacing is the safe default until actual rendered gaps are measured. */
+@media (max-width: 767px) {
+  main article p.nt-article-deck,
+  main article p.nt-article-paragraph {
+    text-align: start;
+    text-align-last: start;
+    -webkit-hyphens: manual;
+    hyphens: manual;
+    overflow-wrap: anywhere;
+  }
+  main article p.nt-article-deck[data-mobile-align="justify"],
+  main article p.nt-article-paragraph[data-mobile-align="justify"] {
+    text-align: justify;
+  }
+}
