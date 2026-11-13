@@ -1,3 +1,4 @@
+import NovaEraSrpskeDiplomatijeArticle from "./pages/NovaEraSrpskeDiplomatijeArticle";
 import KrajRataArticle from "./pages/KrajRataArticle";
 import KinaVojniManevriArticle from "./pages/KinaVojniManevriArticle";
 import SvetPozdravljaPromeneSrbijaArticle from "./pages/SvetPozdravljaPromeneSrbijaArticle";
@@ -1107,6 +1108,7 @@ function Router() {
         <Route path="/geopolitika/zaporozje-bez-spoljasnjeg-napajanja-rezervni-generatori" component={ZaporozjeBezNapajanjaArticle} />
         <Route path="/geopolitika/svet-pozdravlja-promene-u-srbiji-izborna-pobeda-nije-dovoljna" component={SvetPozdravljaPromeneSrbijaArticle} />
         <Route path="/geopolitika/kina-vojni-manevri-tajvan-pacifik" component={KinaVojniManevriArticle} />
+        <Route path="/geopolitika/da-li-je-pocela-nova-era-srpske-diplomatije" component={NovaEraSrpskeDiplomatijeArticle} />
         {/* 404 */}
         <Route path="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" component={VucicZapadCentriMociArticle} />
         <Route path="/404" component={NotFound} />
