@@ -27,11 +27,14 @@ type ArticleRichParagraph = {
   content: ReactNode;
 };
 
+type ArticleInlineVideo = { type: "youtube"; youtubeId: string; title: string; credit?: string };
+
 type ArticleParagraph =
   | string
   | ArticleInlineImage
   | ArticleSectionHeading
-  | ArticleRichParagraph;
+  | ArticleRichParagraph
+  | ArticleInlineVideo;
 
 function creditText(node: ReactNode): string {
   return Children.toArray(node).map(child => typeof child === "string" || typeof child === "number" ? String(child) : isValidElement<{children?: ReactNode}>(child) ? creditText(child.props.children) : "").join("");
@@ -302,6 +305,21 @@ export default function ArticleTemplate({
                   >
                     {p.text}
                   </h2>
+                ) : p.type === "youtube" ? (
+                  <figure className="mt-8 mb-8">
+                    <div className="relative w-full aspect-video overflow-hidden border" style={{borderColor: isDark ? "#2a2a2e" : "#eee", backgroundColor: "#000"}}>
+                      <iframe
+                        src={`https://www.youtube-nocookie.com/embed/${p.youtubeId}?rel=0`}
+                        title={p.title}
+                        loading="lazy"
+                        className="absolute inset-0 w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        referrerPolicy="strict-origin-when-cross-origin"
+                      />
+                    </div>
+                    {p.credit ? <ImageCaption credit={p.credit}/> : null}
+                  </figure>
                 ) : p.type === "paragraph" ? (
                   <p
                     className={
