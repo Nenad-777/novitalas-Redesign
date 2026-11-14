@@ -96,8 +96,10 @@ function IssueCover({issue}:{issue:Issue}){
   </a>;
 }
 function StoryCard({article}:{article:Article}){
+  const [imageFailed,setImageFailed]=useState(false);
+  const hasImage=Boolean(article.imageSrc)&&!imageFailed;
   return <article className="nx-story-card">
-    <a href={article.href} className={"nx-story-photo"+(!article.imageSrc?" nx-story-typographic":"")}>{article.imageSrc?<img src={article.imageSrc} alt={article.imageAlt||article.title} loading="lazy"/>:<span className="nx-story-placeholder"><strong>NOVI TALAS</strong><small>{sectionLabel(article)}</small></span>}</a>
+    <a href={article.href} className={"nx-story-photo"+(!hasImage?" nx-story-typographic":"")}>{hasImage?<img src={article.imageSrc} alt={article.imageAlt||article.title} loading="lazy" onError={()=>setImageFailed(true)}/>:<span className="nx-story-placeholder"><strong>NOVI TALAS</strong><small>{sectionLabel(article)}</small></span>}</a>
     <div className="nx-story-text"><LabelLink href={sectionHref(article)}>{sectionLabel(article)}</LabelLink><h3><a href={article.href}>{article.title}</a></h3><p>{article.description}</p></div>
   </article>;
 }
