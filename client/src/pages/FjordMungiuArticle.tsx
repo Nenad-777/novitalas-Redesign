@@ -3,11 +3,11 @@ import ArticleTemplate from "@/components/ArticleTemplate";
 export default function FjordMungiuArticle() {
   return <ArticleTemplate
     path="/kultura/kada-drzava-odlucuje-ko-je-dobar-roditelj-fjord"
-    sectionLabel="Kultura · Film"
-    title="Kada država odlučuje ko je dobar roditelj: film koji je osvojio Kan i podelio Evropu"
+    sectionLabel="Kultura · Filmska analiza"
+    title="Ko odlučuje šta je dobro za dete? Film koji Evropi postavlja neprijatno pitanje"
     dateLabel="15. NOVEMBAR 2026."
     authorLabel="Novi Talas"
-    deck="Kristijan Munđiju osvojio je drugu Zlatnu palmu filmom „Fjord“, dramom o porodici čiju decu preuzimaju norveške institucije. Gde prestaje zaštita deteta, a počinje zadiranje države u porodični život?"
+    deck="Film „Fjord“, nagrađen Zlatnom palmom u Kanu u maju 2026, otvara teško pitanje: gde prestaje zaštita deteta, a počinje zadiranje države u porodični život?"
     imageSrc="https://img.youtube.com/vi/vu9Tq0WkuYc/hqdefault.jpg"
     imageAlt="Naslovna slika zvaničnog trejlera filma Fjord, Madman Films / YouTube."
     imageCredit="Naslovna slika zvaničnog trejlera: Madman Films / YouTube. Korišćena kao udaljena YouTube naslovna slika."
@@ -16,7 +16,7 @@ export default function FjordMungiuArticle() {
     backHref="/kultura"
     backLabel="← Kultura"
     paragraphs={[
-  "Rumunski reditelj Kristijan Munđiju osvojio je Zlatnu palmu na Filmskom festivalu u Kanu 2026. godine filmom „Fjord“, pričom o porodici čiji se život menja nakon preseljenja u Norvešku. Mihaja i Lisbet, rumunsko-norveški bračni par sa petoro dece, igraju Sebastijan Sten i Renate Reinsve. U novoj sredini porodica se zbližava sa komšijama, ali se odnosi menjaju kada nastavnici primete modrice na telu njihove najstarije ćerke. Sumnja na fizičko kažnjavanje dovodi do uključivanja službi za zaštitu dece, a porodična drama prerasta u sukob različitih shvatanja roditeljstva, slobode i odgovornosti države.",
+  "Film „Fjord“ rumunskog reditelja Kristijana Munđijua osvojio je Zlatnu palmu na Filmskom festivalu u Kanu u maju 2026. godine. Nekoliko meseci kasnije, njegova priča o porodici čiji se život menja nakon preseljenja u Norvešku ostaje povod za razgovor o granicama državne intervencije. Mihaja i Lisbet, rumunsko-norveški bračni par sa petoro dece, igraju Sebastijan Sten i Renate Reinsve. U novoj sredini porodica se zbližava sa komšijama, ali se odnosi menjaju kada nastavnici primete modrice na telu njihove najstarije ćerke. Sumnja na fizičko kažnjavanje dovodi do uključivanja službi za zaštitu dece, a porodična drama prerasta u sukob različitih shvatanja roditeljstva, slobode i odgovornosti države.",
   "Film je delimično inspirisan stvarnim slučajevima iz Norveške, uključujući slučaj porodice Bodnariju iz 2015. godine, ali nije dokumentarna rekonstrukcija njihovog iskustva. Munđiju je odabrao fikcionalnu priču u kojoj publika ne dobija jednostavan odgovor o tome šta se dogodilo iza zatvorenih vrata. Upravo je to središte njegovog pristupa: ozbiljne odluke o bezbednosti dece moraju se donositi i kada informacije nisu potpune, dok predrasude i kulturne razlike mogu uticati na to kako ljudi tumače iste činjenice.",
   {
     "type": "youtube",
