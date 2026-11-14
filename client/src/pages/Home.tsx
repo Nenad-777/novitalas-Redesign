@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { useTheme } from "@/contexts/ThemeContext";
 import { HOME_ARTICLES } from "./homeArticles";
 
-export const HERO_ARTICLE = {"href":"/kultura/kada-drzava-odlucuje-ko-je-dobar-roditelj-fjord","category":"KULTURA","title":"Kada država odlučuje ko je dobar roditelj: film koji je osvojio Kan i podelio Evropu","description":"Munđijuov „Fjord“, dobitnik Zlatne palme 2026, istražuje sukob roditeljskih prava, zaštite dece i društvenih predrasuda.","imageSrc":"https://img.youtube.com/vi/vu9Tq0WkuYc/hqdefault.jpg","imageAlt":"Naslovna slika zvaničnog trejlera filma Fjord, Madman Films / YouTube."};
+export const HERO_ARTICLE = {"href":"/kultura/kada-drzava-odlucuje-ko-je-dobar-roditelj-fjord","category":"KULTURA","title":"Ko odlučuje šta je dobro za dete? Film koji Evropi postavlja neprijatno pitanje","description":"Film „Fjord“, nagrađen Zlatnom palmom u Kanu u maju 2026, otvara teško pitanje: gde prestaje zaštita deteta, a počinje zadiranje države u porodični život?","imageSrc":"https://img.youtube.com/vi/vu9Tq0WkuYc/hqdefault.jpg","imageAlt":"Naslovna slika zvaničnog trejlera filma Fjord, Madman Films / YouTube."};
 export const PREVIOUS_HERO_ARTICLE = {"href":"/geopolitika/da-li-je-pocela-nova-era-srpske-diplomatije","category":"GEOPOLITIKA","title":"Da li je počela nova era srpske diplomatije?","description":"Diplomatski kontakti Studentske liste sa predstavnicima SAD, Rusije, Italije i Kanade otvaraju pitanje nove spoljne politike Srbije.","imageSrc":"/news/srbija-nova-diplomatija.jpg","imageAlt":"Simbolička AI ilustracija zastave Srbije okružene zastavama međunarodnih partnera."};
 
 const ARTICLES = HOME_ARTICLES;
