@@ -4,10 +4,10 @@ export default function FjordMungiuArticle() {
   return <ArticleTemplate
     path="/kultura/kada-drzava-odlucuje-ko-je-dobar-roditelj-fjord"
     sectionLabel="Kultura · Filmska analiza"
-    title="Ko odlučuje šta je dobro za dete? Film koji Evropi postavlja neprijatno pitanje"
+    title="Zlatna palma stiže u Beograd: „Fjord“ otvara Festival autorskog filma"
     dateLabel="15. NOVEMBAR 2026."
     authorLabel="Novi Talas"
-    deck="Film „Fjord“, nagrađen Zlatnom palmom u Kanu u maju 2026, otvara teško pitanje: gde prestaje zaštita deteta, a počinje zadiranje države u porodični život?"
+    deck="Film „Fjord“ Kristijana Munđijua, dobitnik Zlatne palme u Kanu u maju 2026, otvoriće 32. Festival autorskog filma 20. novembra u 19 časova u MTS dvorani. Beogradska publika upoznaće priču o granicama roditeljstva i državne zaštite dece."
     imageSrc="https://img.youtube.com/vi/vu9Tq0WkuYc/hqdefault.jpg"
     imageAlt="Naslovna slika zvaničnog trejlera filma Fjord, Madman Films / YouTube."
     imageCredit="Naslovna slika zvaničnog trejlera: Madman Films / YouTube. Korišćena kao udaljena YouTube naslovna slika."
@@ -27,6 +27,6 @@ export default function FjordMungiuArticle() {
   "Munđiju je prvu Zlatnu palmu osvojio 2007. godine filmom „4 meseca, 3 nedelje i 2 dana“. I u „Fjordu“ oslanja se na duge kadrove, suzdržanu glumu i moralne dileme bez lakih razrešenja. Naspram tradicionalne religiozne porodice stoji liberalna skandinavska zajednica, ali film ne svodi njihove razlike na jednostavnu podelu na dobre i loše. Briga za decu može biti iskrena i neophodna, baš kao što strah od institucionalne moći i stereotipa može biti razumljiv. Napetost nastaje upravo zato što gledaoci ne mogu sa sigurnošću da zauzmu jednu stranu.",
   "„Fjord“ prevazilazi okvire porodične drame i otvara pitanje kako savremena evropska društva usklađuju pravo deteta na zaštitu, slobodu verskih uverenja i pravo porodice na privatnost. Film ne osporava obavezu države da reaguje na sumnju u nasilje, već istražuje koliko je teško odlučivati kada se sudare različite vrednosti, iskustva i tumačenja. Njegova najveća snaga nije u presudi koju nudi publici, već u nelagodnosti koju ostavlja: koliko smo spremni da razumemo ljude sa kojima se duboko ne slažemo?"
 ]}
-    infoBox={{title:"Izvori",items:["Festival de Cannes, zvanični sinopsis i nagrade (2026).","Norveški filmski institut, 23. maj 2026.","Associated Press, 23. maj 2026.","The Wall Street Journal, 14. novembar 2026."]}}
+    infoBox={{title:"Izvori",items:["Festival de Cannes, zvanični sinopsis i nagrade (2026).","Norveški filmski institut, 23. maj 2026.","Associated Press, 23. maj 2026.","Festival autorskog filma, zvanični program projekcije 20. novembra 2026.","Nova.rs, 12. novembar 2026."]}}
   />;
 }
