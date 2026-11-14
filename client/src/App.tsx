@@ -1,3 +1,4 @@
+import DonbasNatoArticle from "./pages/DonbasNatoArticle";
 import NovaEraSrpskeDiplomatijeArticle from "./pages/NovaEraSrpskeDiplomatijeArticle";
 import KrajRataArticle from "./pages/KrajRataArticle";
 import KinaVojniManevriArticle from "./pages/KinaVojniManevriArticle";
@@ -351,6 +352,7 @@ function Router() {
       <NormalizePath />
 
       <Switch>
+        <Route path="/geopolitika/donbas-za-nato-uslov-za-kraj-rata" component={DonbasNatoArticle} />
         <Route path="/geopolitika/da-li-je-na-pomolu-kraj-rata" component={KrajRataArticle} />
         <Route path="/srbija/pocinje-rad-nove-skupstine-sta-srbiju-ceka-posle-17-novembra" component={NovaSkupstinaArticle} />
         <Route path="/geopolitika/moskva-kijev-abu-dabi-pregovori" component={AbuDabiPregovoriArticle} />
