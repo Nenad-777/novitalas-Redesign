@@ -318,6 +318,15 @@ export default function ArticleTemplate({
                         referrerPolicy="strict-origin-when-cross-origin"
                       />
                     </div>
+                    <a
+                      href={`https://www.youtube.com/watch?v=${p.youtubeId}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-block text-[14px] underline underline-offset-4"
+                      style={{ color: isDark ? "#d9bf7a" : "#8B0000", fontFamily: "'Source Sans 3', sans-serif" }}
+                    >
+                      Pogledajte trejler na YouTube-u
+                    </a>
                     {p.credit ? <ImageCaption credit={p.credit}/> : null}
                   </figure>
                 ) : p.type === "paragraph" ? (
