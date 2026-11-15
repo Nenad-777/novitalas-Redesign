@@ -1,3 +1,5 @@
+import { hyphenateArticleNode } from "@/lib/articleHyphenation";
+import { useArticleTypography } from "@/hooks/useArticleTypography";
 import InstagramStoryShare from "./InstagramStoryShare";
 import EditorialVideo from "./EditorialVideo";
 import Header from "@/components/Header";
@@ -98,6 +100,8 @@ export default function ArticleTemplate({
   backHref,
   backLabel,
 }: ArticleTemplateProps) {
+  const { ref: articleRef, mobile } = useArticleTypography(paragraphs);
+  const readingText = (node: ReactNode) => mobile ? hyphenateArticleNode(node) : node;
   const { theme } = useTheme();
   const embedded = useContext(EditionEmbedContext);
   const isDark = theme === "dark";
@@ -148,7 +152,12 @@ export default function ArticleTemplate({
         className={embedded ? "py-12 md:py-16 flex-1" : "nx-article-main py-12 md:py-16 flex-1"}
         style={{ backgroundColor: isDark ? "#101721" : "#f8f6f1" }}
       >
-        <article lang="sr" data-story-article="true" className={embedded ? "max-w-[860px] mx-auto px-5" : "nx-reading-article max-w-[860px] mx-auto px-5"}>
+        <article ref={articleRef} lang={mobile ? "sr-Latn" : "sr"} onCopy={event => {
+          const selection = window.getSelection();
+          if (!selection || !selection.toString().includes("\u00ad")) return;
+          event.clipboardData.setData("text/plain", selection.toString().replace(/\u00ad/g, ""));
+          event.preventDefault();
+        }} data-story-article="true" className={embedded ? "max-w-[860px] mx-auto px-5" : "nx-reading-article max-w-[860px] mx-auto px-5"}>
           {localVideo && <div className="mb-8"><EditorialVideo {...localVideo}/></div>}
           {/* Video hero */}
           {imageFirst && videoHero ? (
@@ -266,7 +275,7 @@ export default function ArticleTemplate({
                 color: isDark ? "#cfcac0" : "#222",
               }}
             >
-              {normalizeEmDashes(deck)}
+              {readingText(normalizeEmDashes(deck))}
             </p>
           ) : null}
 
@@ -293,7 +302,7 @@ export default function ArticleTemplate({
                           : "#333",
                     }}
                   >
-                    {normalizeEmDashes(p)}
+                    {readingText(normalizeEmDashes(p))}
                   </p>
                 ) : p.type === "heading" ? (
                   <h2
@@ -347,7 +356,7 @@ export default function ArticleTemplate({
                           : "#333",
                     }}
                   >
-                    {p.content}
+                    {readingText(p.content)}
                   </p>
                 ) : (
                   <figure

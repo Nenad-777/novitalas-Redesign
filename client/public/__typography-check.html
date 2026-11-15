@@ -1,0 +1,11 @@
+<!doctype html><meta charset="utf-8"><title>Typography preview checks</title>
+<style>body{font:14px sans-serif;margin:12px;background:#ddd}section{display:flex;gap:15px;align-items:start}iframe{border:0;height:760px;background:white}pre{white-space:pre-wrap;width:375px;font-size:12px}button{margin:12px;padding:12px}</style>
+<div id="nav"></div><section id="frames"></section>
+<script>
+const articles=['da-li-je-pocela-nova-era-srpske-diplomatije','da-li-je-na-pomolu-kraj-rata','nova-orbita-srpske-diplomatije-zasto-se-beograd-priblizava-vasingtonu-bas-sada'];
+const selected=+(new URLSearchParams(location.search).get('article')||0);
+articles.forEach((s,i)=>{const a=document.createElement('a');a.href='?article='+i;a.textContent=s+' | ';nav.append(a)});
+[375,390,430].forEach(width=>{const box=document.createElement('div'); const label=document.createElement('h2');label.textContent=width+' px';box.append(label);const frame=document.createElement('iframe');frame.width=width;frame.src='/geopolitika/'+articles[selected];box.append(frame); const report=document.createElement('pre');box.append(report);document.getElementById("frames").append(box);
+frame.onload=async()=>{const d=frame.contentDocument;await d.fonts.ready;setTimeout(()=>{const ps=[...d.querySelectorAll('p.nt-article-deck,p.nt-article-paragraph')];let results=ps.map(p=>{let max=0;const w=d.createTreeWalker(p,4);const r=d.createRange();let n;while(n=w.nextNode()){for(let i=0;i<n.length;i++){if(n.data[i]!==' ')continue;r.setStart(n,i);r.setEnd(n,i+1);for(const rect of r.getClientRects())max=Math.max(max,rect.width)}}const s=frame.contentWindow.getComputedStyle(p);return {align:s.textAlign,maxGap:+max.toFixed(2),font:s.fontSize,line:s.lineHeight,shy:p.textContent.includes('\u00ad'),overflow:p.scrollWidth>p.clientWidth}});report.textContent=JSON.stringify({width:frame.contentWindow.innerWidth,results},null,2);ps[0]?.scrollIntoView();},800)};
+});
+</script>
