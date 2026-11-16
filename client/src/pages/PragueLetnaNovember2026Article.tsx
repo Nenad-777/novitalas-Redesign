@@ -8,9 +8,9 @@ export default function PragueLetnaNovember2026Article() {
     dateLabel="16. NOVEMBAR 2026."
     authorLabel="Novi Talas"
     deck="Stotine hiljada ljudi okupile su se 15. novembra na praškoj Letni protiv plana vlade Andreja Babiša da promeni finansiranje javnih medija. Organizatori procenjuju između 350.000 i 450.000 učesnika."
-    imageSrc="/news/ceska-protest.jpg"
+    imageSrc="https://raw.githubusercontent.com/Nenad-777/novitalas-Redesign/main/public/news/ceska-protest.jpg"
     imageAlt="Građani na protestu na Letni u Pragu 15. novembra 2026. godine."
-    imageCredit="Foto: Skot / Wikimedia Commons, CC BY-SA 4.0. Fotografija prilagođena formatu za prikaz. Izvor: https://commons.wikimedia.org/wiki/File:Letn%C3%A1_proti_4.36_(Prague,_2026-11-15)_01.jpg"
+    imageCredit="Foto: Skot / Wikimedia Commons · CC BY-SA 4.0"
     imageFirst={true}
     imageHeightClass="h-auto aspect-video"
     imageObjectFit="cover"
