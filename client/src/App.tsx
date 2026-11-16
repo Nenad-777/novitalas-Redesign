@@ -1,3 +1,4 @@
+import PragueLetnaNovember2026Article from "./pages/PragueLetnaNovember2026Article";
 import FjordMungiuArticle from "./pages/FjordMungiuArticle";
 import DonbasNatoArticle from "./pages/DonbasNatoArticle";
 import NovaEraSrpskeDiplomatijeArticle from "./pages/NovaEraSrpskeDiplomatijeArticle";
@@ -1113,6 +1114,7 @@ function Router() {
         <Route path="/geopolitika/kina-vojni-manevri-tajvan-pacifik" component={KinaVojniManevriArticle} />
         <Route path="/geopolitika/da-li-je-pocela-nova-era-srpske-diplomatije" component={NovaEraSrpskeDiplomatijeArticle} />
         <Route path="/kultura/kada-drzava-odlucuje-ko-je-dobar-roditelj-fjord" component={FjordMungiuArticle} />
+        <Route path="/geopolitika/prag-ustao-protiv-vlasti-protest-400000" component={PragueLetnaNovember2026Article} />
         {/* 404 */}
         <Route path="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" component={VucicZapadCentriMociArticle} />
         <Route path="/404" component={NotFound} />
