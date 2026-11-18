@@ -349,3 +349,18 @@ main article p.nt-article-paragraph {
     line-height: 1.12;
   }
 }
+
+/* Mobile Safari: Serbian hyphenation is not consistently available.
+   Avoid stretched spaces in narrow justified article columns. */
+@media (max-width: 767px) {
+  .nx-article-layout main article p.nt-article-deck,
+  .nx-article-layout main article p.nt-article-paragraph {
+    text-align: left;
+    text-align-last: left;
+    -webkit-hyphens: none;
+    hyphens: none;
+    word-spacing: normal;
+    letter-spacing: normal;
+    overflow-wrap: break-word;
+  }
+}
