@@ -1,5 +1,6 @@
 import PragueLetnaNovember2026Article from "./pages/PragueLetnaNovember2026Article";
 import FjordMungiuArticle from "./pages/FjordMungiuArticle";
+import TrumpXiPutinSummitArticle from "./pages/TrumpXiPutinSummitArticle";
 import DonbasNatoArticle from "./pages/DonbasNatoArticle";
 import NovaEraSrpskeDiplomatijeArticle from "./pages/NovaEraSrpskeDiplomatijeArticle";
 import KrajRataArticle from "./pages/KrajRataArticle";
@@ -354,6 +355,7 @@ function Router() {
       <NormalizePath />
 
       <Switch>
+        <Route path="/geopolitika/tramp-si-putin-susret-tri-sile" component={TrumpXiPutinSummitArticle} />
         <Route path="/geopolitika/donbas-za-nato-uslov-za-kraj-rata" component={DonbasNatoArticle} />
         <Route path="/geopolitika/da-li-je-na-pomolu-kraj-rata" component={KrajRataArticle} />
         <Route path="/srbija/pocinje-rad-nove-skupstine-sta-srbiju-ceka-posle-17-novembra" component={NovaSkupstinaArticle} />
