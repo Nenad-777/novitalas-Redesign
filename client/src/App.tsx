@@ -1,3 +1,4 @@
+import MinotaurZvjagincevArticle from "./pages/MinotaurZvjagincevArticle";
 import SrbijaNaredniKoraciArticle from "./pages/SrbijaNaredniKoraciArticle";
 import EuropeanCommissionCyberattackArticle from "./pages/EuropeanCommissionCyberattackArticle";
 import PragueLetnaNovember2026Article from "./pages/PragueLetnaNovember2026Article";
@@ -1121,6 +1122,7 @@ function Router() {
         <Route path="/geopolitika/prag-ustao-protiv-vlasti-protest-400000" component={PragueLetnaNovember2026Article} />
         <Route path="/obavestajni-izvori/sajbernapad-evropska-komisija-vestacka-inteligencija" component={EuropeanCommissionCyberattackArticle} />
         <Route path="/srbija/sta-sada-ceka-srbiju-nova-vlada-predsednicki-izbori" component={SrbijaNaredniKoraciArticle} />
+        <Route path="/kultura/andrej-zvjagincev-minotaur-beograd-festival-autorskog-filma" component={MinotaurZvjagincevArticle} />
         {/* 404 */}
         <Route path="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" component={VucicZapadCentriMociArticle} />
         <Route path="/404" component={NotFound} />
