@@ -1,3 +1,4 @@
+import DwVucicArticle from "./pages/DwVucicArticle";
 import IceAgeStoppedArticle from "./pages/IceAgeStoppedArticle";
 import MinotaurZvjagincevArticle from "./pages/MinotaurZvjagincevArticle";
 import SrbijaNaredniKoraciArticle from "./pages/SrbijaNaredniKoraciArticle";
@@ -1125,6 +1126,7 @@ function Router() {
         <Route path="/srbija/sta-sada-ceka-srbiju-nova-vlada-predsednicki-izbori" component={SrbijaNaredniKoraciArticle} />
         <Route path="/kultura/andrej-zvjagincev-minotaur-beograd-festival-autorskog-filma" component={MinotaurZvjagincevArticle} />
         <Route path="/nasa-planeta/covecanstvo-zaustavilo-ledeno-doba" component={IceAgeStoppedArticle} />
+        <Route path="/srbija/deutsche-welle-suzava-se-obruc-oko-aleksandra-vucica" component={DwVucicArticle} />
         {/* 404 */}
         <Route path="/srbija/vucic-i-zapad-optuzbe-za-autokratiju-stigle-su-u-centre-moci" component={VucicZapadCentriMociArticle} />
         <Route path="/404" component={NotFound} />
